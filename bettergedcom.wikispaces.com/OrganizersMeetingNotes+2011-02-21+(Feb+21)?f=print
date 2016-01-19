@@ -1,0 +1,880 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="search" href="http://bettergedcom.wikispaces.com/space/opensearch" type="application/opensearchdescription+xml" title="Wikispaces Search (BetterGedcom Wiki)" />
+<link rel="alternate" type="application/x-wiki" title="Edit This Page" href="/page/edit/OrganizersMeetingNotes+2011-02-21+%28Feb+21%29" />
+<link rel="alternate" title="BetterGedcom - All Changes" href="http://bettergedcom.wikispaces.com/wiki/xmla?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : OrganizersMeetingNotes 2011-02-21 (Feb 21) - Discussion" href="http://bettergedcom.wikispaces.com/message/xml/OrganizersMeetingNotes+2011-02-21+%28Feb+21%29?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : OrganizersMeetingNotes 2011-02-21 (Feb 21) - Edits" href="http://bettergedcom.wikispaces.com/page/xml/OrganizersMeetingNotes+2011-02-21+%28Feb+21%29?v=rss_2_0" type="application/rss+xml" />
+<link rel="microsummary" href="/page/microsummary/OrganizersMeetingNotes+2011-02-21+%28Feb+21%29/edits"/>
+<link rel="microsummary" href="/page/microsummary/OrganizersMeetingNotes+2011-02-21+%28Feb+21%29/messages"/>
+<meta name="robots" content="noindex" />
+<script type="text/javascript">
+  
+if (typeof ws === 'undefined') ws = {};
+ws.context = {
+  instance: {
+    id: '1',
+    url: 'wikispaces.com',
+    isMain: true,
+    supportsGoogleDocs: false,
+    isTesClassroom: false,
+  },
+  user: {
+    id: '',
+    username: '',
+    status: '',
+    locale: 'en',
+    imageUrlPrefix: 'http://www.wikispaces.com/i/user_none_',
+    isTeacher: false,
+    canAdministerWiki: false,
+  },
+  wiki: {
+    id: '5050513',
+    name: 'bettergedcom',
+    text: 'BetterGedcom',
+    module: 'B',
+    isClassroom: false,
+    isTesClassroom: false
+    ,defaultSpaceId: 5050513
+    ,isWwwWiki: false
+  },
+  project: {
+    id: '5050513',
+    name: ''
+  },
+  space: {
+    id: '5050513',
+    name: 'bettergedcom',
+    isDefaultSpace: true,
+    isDefaultTemplate: false
+  },
+
+  environment_name: 'prod',
+
+  path: {
+    object: 'page',
+    method: 'view',
+    page: 'OrganizersMeetingNotes 2011-02-21 (Feb 21)',
+    id: ''
+  },
+
+  settings: {
+    main_domain: 'wikispaces.com',
+    session_url: 'https://session.wikispaces.com/1/',
+    asset_url_prefix: 'http://www.wikispaces.com',
+    beta_features: false,
+    isMobileSite: false,
+    isUploadCapable: true,
+    can_discuss: false,
+    has_gdocs: false,
+    isDialog: false,
+    pwin: ''
+  },
+  clockSkewMillis: 1453211531593 - ((window.performance && window.performance.timing.responseStart > 0) ? window.performance.timing.responseStart : (new Date()).getTime())
+}
+
+
+// legacy javascript API variables, use the above instead
+var wikispaces_isUserLoggedIn = !!ws.context.user.id;
+var wikispaces_isMain = ws.context.instance.isMain;
+var wikispaces_username = ws.context.user.username;
+var wikispaces_spaceName = ws.context.space.name;
+var wikispaces_projectName = ws.context.project.name;
+var wikispaces_wikiName = ws.context.wiki.name;
+var wikispaces_wikiText = ws.context.wiki.text;
+var wikispaces_isDefaultSpace = ws.context.space.isDefaultSpace;
+var wikispaces_method = ws.context.path.method;
+var wikispaces_object = ws.context.path.object;
+var wikispaces_page = ws.context.path.page;
+var wikispaces_id = ws.context.path.id;
+var wikispaces_domain = ws.context.instance.url;
+var wikispaces_isUserOrganizer = false;
+var wikispaces_main_domain = ws.context.settings.asset_url_prefix;
+var wikispaces_asset_url_prefix = ws.context.settings.asset_url_prefix;
+var wikispaces_beta_features = ws.context.settings.beta_features;
+var wikispaces_isMobileSite = ws.context.settings.isMobileSite;
+var wikispaces_isUploadCapable = ws.context.settings.isUploadCapable;
+var wikispaces_can_discuss = ws.context.settings.can_discuss;
+var wikispaces_has_gdocs = ws.context.settings.has_gdocs;
+
+</script>  <title>BetterGedcom - OrganizersMeetingNotes 2011-02-21 (Feb 21)</title>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://www.wikispaces.com/_/z6371z4x/i/logo-144.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="http://www.wikispaces.com/_/j5j77xz3/i/logo-114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="http://www.wikispaces.com/_/vq8j5432/i/logo-72.png" />
+  <link rel="apple-touch-icon" href="http://www.wikispaces.com/_/38515190/i/logo-57.png" />
+  <link rel="shortcut icon" href="http://www.wikispaces.com/_/55v9k02z/i/logo-16.png" />
+  <style type="text/css">
+    #foot { margin-top: 5px; padding: 5px 0; font-family: arial,helvetica,sans-serif; font-size: 90%; line-height: 150%; clear: both; }
+    h1.pageTitle { font-family: arial,helvetica,sans-serif; }
+  </style>
+<link rel="stylesheet" href="http://bettergedcom.wikispaces.com/stylesheet/view/241807025-217420326D.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/9q897620-internal-bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/vz033906-internal.css" type="text/css" />
+<script src="http://www.wikispaces.com/s/nogz/j91xzz3x-top.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+
+  var wsGoogleAccount = 'UA-80504-1';
+  _gaq.push(['_setAccount', wsGoogleAccount]);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', 'wikispaces.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setCustomVar', 2, 'Authenticated', 'Guest', 2]);
+  _gaq.push(['_trackPageview']);
+</script></head>
+<body data-enhance="false">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+  <td valign="top">
+    <div style="padding: 10px;">
+<h1 class="pageTitle">OrganizersMeetingNotes 2011-02-21 (Feb 21)</h1>
+<div class="contentBox"><div class="innerContentBox" id="WikiContent">
+
+<script type="text/template" id="comment-footer-template">
+
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</script>
+
+<script type="text/template" id="comment-content-template">
+<div class="ws-box commentView">
+  <div class="comment-close">
+    <button type="button" class="closeme close" aria-hidden="true"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="commentHeader">
+    <p class="ws-stream-meta command-context">
+      <a class="userLink userLinkPicture" href="<%= userCreated.url %>"><img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16"></a>
+      <a href="<%= userCreated.url %>"><%= userCreated.username %></a>
+      <% if (smartDate == '__live__') { %>
+      <abbr class="timeago" title="<%= (new Date(parseInt(dateCreated, 10) * 1000)).toISOString() %>">
+        <%= dateCreated %>
+      </abbr>
+      <% } else { %>
+        <%- smartDate %>
+      <% } %>
+      <% if (ws.context.user.canAdministerWiki && ws.comments.Manager.readOnly) { %>
+        <i class="fa fa-trash-o contextual-command delete ws-tip" title="Delete Comment"></i>
+      <% } %>
+    </p>
+  </div>
+
+  <div class="commentBody">
+    <div class="commentContent">
+      <%= description %>
+    </div>
+
+      <% for(i = 0; i < replyPages.length; i++) { %>
+        <% for(var j = 0; j < replyPages[i].digests.length; j++) { %>
+      <div class="commentReply" data-id="<%= replyPages[i].digests[j].id %>">
+        <p class="ws-stream-meta command-context">
+          <a class="userLink userLinkPicture" href="<%= replyPages[i].digests[j].userCreated.url %>"><img class="userPicture" src="<%= replyPages[i].digests[j].userCreated.imageUrl %>" width="16" height="16"></a>
+          <a href="<%= replyPages[i].digests[j].userCreated.url %>"><%= replyPages[i].digests[j].userCreated.username %></a>
+          <% if (smartDate == '__live__') { %>
+          <abbr class="timeago" title="<%= (new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000)).toISOString() %>">
+            <%= new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000).toLocaleString() %>
+          </abbr>
+          <% } else { %>
+            <%- smartDate %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+          <i class="fa fa-trash-o contextual-command delete-reply ws-tip" title="Delete Reply"></i>
+          <% } %>
+          </p>
+        <div class="commentContent"><%= replyPages[i].digests[j].body %></div>
+      </div>
+        <% } %>
+      <% } %>
+
+      <form class="reply commentReply">
+        <div class="form-group">
+          <textarea name="reply" placeholder="Reply" class="form-control" /></textarea>
+        </div>
+        <div class="btn-toolbar">
+          <button type="submit" class="btn btn-primary btn-sm" name="go" value="1">Post</button>
+
+          <% if (ws.context.user.id) { %>
+            <% if (monitored) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip active" title="You are monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip" title="You are not monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+            <% if (locked) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip active" title="Replies are not allowed."><i class="fa fa-lock"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip" title="Replies are allowed."><i class="fa fa-lock"></i></button>
+            <% } %>
+          <% } %>
+
+          <i class="fa fa-spinner fa-spin spinner pull-right hidden"></i>
+        </div>
+      </form>
+   </div>
+
+   
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-composer-template">
+<div class="ws-box commentView">
+  <div class="commentComposer">
+    <div class="comment-close">
+      &nbsp;<button type="button" class="close closeme" aria-hidden="true"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="commentHeader">
+      <p class="ws-stream-meta command-context">
+        <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+        <a href="#" onclick="return false;"><%= userCreated.username %></a>
+      </p>
+    </div>
+    <div class="commentBody">
+      <textarea name="comment" class="compose form-control" placeholder="Comment"/></textarea><br/>
+      <div class="btn-toolbar">
+        <button type="button" class="btn btn-default btn-sm monitored active pull-right" style="margin-left: 6px" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-eye"></i></button>
+        <button type="button" class="btn btn-default btn-sm locked btn-toggle pull-right" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-lock"></i></button>
+        <button type="button" class="btn btn-primary btn-sm closeme">Save</button>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-proxy-template">
+<div class="comment-proxy">
+  <span class="commentUser">
+  <% if (userCreated) { %>
+    <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+  <% } else { %>
+    <img class="userPicture" src="<%= ws.context.user.imageUrlPrefix %>sm.jpg" width="16" height="16">
+  <% } %>
+  </span>
+  <span class="commentReplies"><%= 1 + _(replyPages).reduce(function(memo, page){ return memo + page.digests.length; }, 0) %></span>
+</div>
+</script>
+
+
+
+
+
+
+
+<div class="commentContainer">
+  <div class="commentSubject">
+  <div class="wiki wikiPage" id="content_view">
+  <!-- ws:start:WikiTextHeadingRule:0:&lt;h1&gt; --><h1 id="toc0"><!-- ws:end:WikiTextHeadingRule:0 --> </h1>
+ <strong>21 February 2011</strong><br />
+<strong>Organizers Meeting Transcript</strong><br />
+<br />
+<strong>2011-02-21 16:04:00 [Message] dearmyrtle -&gt; Organizers Meeting: Shall we begin?</strong><br />
+2011-02-21 16:04:06 [Message] GeneJ -&gt; Organizers Meeting: Apple Tree left our wiki today.<br />
+2011-02-21 16:04:07 [Message] GeneJ -&gt; Organizers Meeting: :(<br />
+2011-02-21 16:04:19 [Message] dearmyrtle -&gt; Organizers Meeting: hmmmmm<br />
+2011-02-21 16:04:19 [Message] Andy_Hatchett -&gt; Organizers Meeting: Hmmm.. wonder why?<br />
+2011-02-21 16:04:21 [Message] dearmyrtle -&gt; Organizers Meeting: ok<br />
+2011-02-21 16:04:26 [IP] hrworth@gmail.com: 24.0.236.135<br />
+2011-02-21 16:04:26 [Login] <!-- ws:start:WikiTextUrlEmailRule:265:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:265 --><br />
+2011-02-21 16:04:26 [Join Room] <!-- ws:start:WikiTextUrlEmailRule:266:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:266 --> -&gt; Organizers Meeting<br />
+2011-02-21 16:04:30 [Message] dearmyrtle -&gt; Organizers Meeting: I wonder why as well.<br />
+2011-02-21 16:04:39 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:04:40 [Message] TamuraJones -&gt; Organizers Meeting: I can explain that.<br />
+2011-02-21 16:04:40 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:04:46 [Message] dearmyrtle -&gt; Organizers Meeting: Do you have adenda items?<br />
+2011-02-21 16:04:47 [Message] GeneJ -&gt; Organizers Meeting: kk<br />
+2011-02-21 16:04:51 [Message] dearmyrtle -&gt; Organizers Meeting: Agenda items?<br />
+2011-02-21 16:05:00 [Message] dearmyrtle -&gt; Organizers Meeting: Gosh, this chat interface removes ALL CAPS.<br />
+2011-02-21 16:05:02 [Message] Andy_Hatchett -&gt; Organizers Meeting: &amp;lt;-- listening LOUDLY!<br />
+2011-02-21 16:05:05 [Message] dearmyrtle -&gt; Organizers Meeting: hmmm<br />
+2011-02-21 16:05:09 [Message] dearmyrtle -&gt; Organizers Meeting: Agenda items<br />
+2011-02-21 16:05:15 [Message] TamuraJones -&gt; Organizers Meeting: Oh , you want me to do so?<br />
+2011-02-21 16:05:19 [Message] dearmyrtle -&gt; Organizers Meeting: when the ALL CAPS are at the BEGINNING of a phrase.<br />
+2011-02-21 16:05:32 [Message] dearmyrtle -&gt; Organizers Meeting: NOT when then are in the middle or the end of a string.<br />
+2011-02-21 16:05:35 [Message] dearmyrtle -&gt; Organizers Meeting: interestingf.<br />
+2011-02-21 16:05:38 [Message] dearmyrtle -&gt; Organizers Meeting: Well, call me silly&amp;gt;<br />
+2011-02-21 16:05:40 [Message] GeneJ -&gt; Organizers Meeting: I'm interested, but don't want to disturb Myrt's agenda<br />
+2011-02-21 16:05:49 [Message] dearmyrtle -&gt; Organizers Meeting: ^^^^ That was posted in all caps.<br />
+2011-02-21 16:05:51 [Message] dearmyrtle -&gt; Organizers Meeting: Just exploring.<br />
+2011-02-21 16:05:52 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:05:52 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:05:53 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:06:03 [Message] TamuraJones -&gt; Organizers Meeting: It was Rysa Pitner's account.<br />
+2011-02-21 16:06:05 [Message] dearmyrtle -&gt; Organizers Meeting: I'll begin recording now.<br />
+2011-02-21 16:06:14 [Message] TamuraJones -&gt; Organizers Meeting: She has left OpenGen and AppleTree to go elsewhere.<br />
+2011-02-21 16:06:17 [Message] dearmyrtle -&gt; Organizers Meeting: oic<br />
+2011-02-21 16:06:17 [IP] louiskessler: 142.161.61.226<br />
+2011-02-21 16:06:17 [Login] louiskessler<br />
+2011-02-21 16:06:18 [Join Room] louiskessler -&gt; Chat Lobby<br />
+2011-02-21 16:06:21 [Message] dearmyrtle -&gt; Organizers Meeting: so that makes sense.<br />
+2011-02-21 16:06:23 [Message] Andy_Hatchett -&gt; Organizers Meeting: Ahhh...<br />
+2011-02-21 16:06:27 [Exit Room] louiskessler -&gt; Chat Lobby<br />
+2011-02-21 16:06:27 [Join Room] louiskessler -&gt; Organizers Meeting<br />
+2011-02-21 16:06:39 [Message] dearmyrtle -&gt; Organizers Meeting: The agenda as i see it:<br />
+2011-02-21 16:06:48 [Message] dearmyrtle -&gt; Organizers Meeting: 1. Report on location of EXCEL worksheet.<br />
+2011-02-21 16:07:06 [Message] dearmyrtle -&gt; Organizers Meeting: 2. Report that requested changes to the wiki, and notificaitons to wiki members has taken place.<br />
+2011-02-21 16:07:08 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:07:08 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:07:11 [Message] dearmyrtle -&gt; Organizers Meeting: anything else?<br />
+2011-02-21 16:07:17 [Message] Andy_Hatchett -&gt; Organizers Meeting: Yep!<br />
+2011-02-21 16:07:20 [Message] dearmyrtle -&gt; Organizers Meeting: kk?<br />
+2011-02-21 16:07:29 [Message] Andy_Hatchett -&gt; Organizers Meeting: Report on recording and where files will be :)<br />
+2011-02-21 16:07:37 [Message] dearmyrtle -&gt; Organizers Meeting: oh great.<br />
+2011-02-21 16:07:40 [Message] <!-- ws:start:WikiTextUrlEmailRule:267:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:267 --> -&gt; Organizers Meeting: Requirement ID, Brief Description, Author, Link to discussion page<br />
+2011-02-21 16:07:55 [Message] louiskessler -&gt; Organizers Meeting: I'd like to discuss the Family Search API<br />
+2011-02-21 16:07:59 [Message] dearmyrtle -&gt; Organizers Meeting: THank-you Andy. Also Andy, if you have a little bit of time afterwards, I'll train you on GoTOMeeting.<br />
+2011-02-21 16:08:08 [Message] dearmyrtle -&gt; Organizers Meeting: ok, what little we know, Louis.<br />
+2011-02-21 16:08:19 [Message] TamuraJones -&gt; Organizers Meeting: Their api or sord?<br />
+2011-02-21 16:08:29 [Message] dearmyrtle -&gt; Organizers Meeting: then let me get the first agenda item out of the way....<br />
+2011-02-21 16:08:35 [Message] TamuraJones -&gt; Organizers Meeting: Darn, yes, caps is messed up.<br />
+2011-02-21 16:08:40 [Message] louiskessler -&gt; Organizers Meeting: No. The basic idea of it. I think everybody is thinking of it in the wrong way.<br />
+2011-02-21 16:08:41 [Message] Andy_Hatchett -&gt; Organizers Meeting: ok- had unexpected family visit this week end so didn't read as much about it as I wanted to.<br />
+2011-02-21 16:09:01 [Message] dearmyrtle -&gt; Organizers Meeting: GOOGLE GROUPS no longer support uploading of files.... as of 13 Jan. But if file were currently there, they could be accessed.<br />
+2011-02-21 16:09:03 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:09:03 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:09:16 [Message] louiskessler -&gt; Organizers Meeting: What you (Pat) said earlier today bothered me ...<br />
+2011-02-21 16:09:30 [Message] Andy_Hatchett -&gt; Organizers Meeting: Myrt- you can have file here- check teh Help &quot;managing files&quot;<br />
+2011-02-21 16:09:31 [Message] dearmyrtle -&gt; Organizers Meeting: so I placed the Excel Worksheet at my Google Docs and am going to send out a notice to all wiki members<br />
+2011-02-21 16:09:35 [Message] louiskessler -&gt; Organizers Meeting: You said we're not going to wait for the Family Search API ...<br />
+2011-02-21 16:09:45 [Message] dearmyrtle -&gt; Organizers Meeting: Louis --- one second...<br />
+2011-02-21 16:09:57 [Message] dearmyrtle -&gt; Organizers Meeting: Let's get the file location thing worked on.<br />
+2011-02-21 16:10:21 [Message] dearmyrtle -&gt; Organizers Meeting: The problem, Andy with putting the file here is that we won't all have the latest version, like we do with the flexability of the GoogleDocs....<br />
+2011-02-21 16:10:31 [Message] dearmyrtle -&gt; Organizers Meeting: where even file changes made concurrently are noted.<br />
+2011-02-21 16:10:32 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:10:33 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:10:41 [Message] Andy_Hatchett -&gt; Organizers Meeting: ahh-ok<br />
+2011-02-21 16:10:47 [Message] dearmyrtle -&gt; Organizers Meeting: I haven't left my desk since this morning, working on the challenge.<br />
+2011-02-21 16:11:18 [Message] dearmyrtle -&gt; Organizers Meeting: so you will each receive an invitation to view :<br />
+2011-02-21 16:11:32 [Message] dearmyrtle -&gt; Organizers Meeting: Dang -- won't let me copy/paste URL today.<br />
+2011-02-21 16:11:34 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:11:34 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:11:43 [Message] dearmyrtle -&gt; Organizers Meeting: nuff on that... I'll get it to you before i sit down to supper.<br />
+2011-02-21 16:11:51 [Message] dearmyrtle -&gt; Organizers Meeting: Now Louis...<br />
+2011-02-21 16:11:55 [Message] GeneJ -&gt; Organizers Meeting: drag the little icon from address bar<br />
+2011-02-21 16:11:55 [Message] dearmyrtle -&gt; Organizers Meeting: let's take your topic....<br />
+2011-02-21 16:12:09 [Message] dearmyrtle -&gt; Organizers Meeting: .\<br />
+2011-02-21 16:12:10 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:12:11 [Message] GeneJ -&gt; Organizers Meeting: to the chat window<br />
+2011-02-21 16:12:20 [Message] dearmyrtle -&gt; Organizers Meeting: waiting for FamilySearch...<br />
+2011-02-21 16:12:41 [Message] dearmyrtle -&gt; Organizers Meeting: what is your concern there... this is something we discussed last week at the Developers Meeting, perhaps when you were not there... the concept of not waiting for them.<br />
+2011-02-21 16:12:42 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:12:43 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:12:47 [Message] dearmyrtle -&gt; Organizers Meeting: share your thoughts.<br />
+2011-02-21 16:12:52 [Message] dearmyrtle -&gt; Organizers Meeting: I am anxious to hear them.<br />
+2011-02-21 16:12:54 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:12:54 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:13:15 [Message] louiskessler -&gt; Organizers Meeting: What Family Search may give us is the API ...<br />
+2011-02-21 16:13:35 [Message] louiskessler -&gt; Organizers Meeting: But underlying that, they have an XML data structure ...<br />
+2011-02-21 16:13:46 [Message] dearmyrtle -&gt; Organizers Meeting: hmmmmmm<br />
+2011-02-21 16:13:57 [Message] louiskessler -&gt; Organizers Meeting: based on the GenTech model (ugh - hopefully improved ofr usability) ...<br />
+2011-02-21 16:14:13 [Message] dearmyrtle -&gt; Organizers Meeting: and your thoguht is that since they are a big player, they may sway the other programmers?<br />
+2011-02-21 16:14:21 [Message] louiskessler -&gt; Organizers Meeting: What we want is that underlying XML model they have.<br />
+2011-02-21 16:14:28 [Action] dearmyrtle -&gt; Organizers Meeting: listens<br />
+2011-02-21 16:14:33 [Message] louiskessler -&gt; Organizers Meeting: That is their data storage method.<br />
+2011-02-21 16:14:53 [Message] louiskessler -&gt; Organizers Meeting: That is basically their interpretation of the BetterGEDCOM.<br />
+2011-02-21 16:15:02 [Message] louiskessler -&gt; Organizers Meeting: Now they may or may not give us that.<br />
+2011-02-21 16:15:17 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:15:17 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:15:18 [Message] louiskessler -&gt; Organizers Meeting: But, even if they don't, the API will be a window into it.<br />
+2011-02-21 16:15:25 [Message] dearmyrtle -&gt; Organizers Meeting: oic<br />
+2011-02-21 16:15:26 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:15:26 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:15:37 [Message] louiskessler -&gt; Organizers Meeting: It will outline all the structures they allow access to.<br />
+2011-02-21 16:15:49 [Message] Andy_Hatchett -&gt; Organizers Meeting: Louise- even so there is no reason to wait on them- we can look at it when it becomes avcailable.<br />
+2011-02-21 16:15:49 [Message] louiskessler -&gt; Organizers Meeting: ... which should effectively give us everything.<br />
+2011-02-21 16:16:08 [Message] louiskessler -&gt; Organizers Meeting: They may not want everyone else to have an XML flat file with data on their machines ...<br />
+2011-02-21 16:16:30 [Message] louiskessler -&gt; Organizers Meeting: but we'll be able to build something compatible based on what we get from their API.<br />
+2011-02-21 16:16:35 [Message] dearmyrtle -&gt; Organizers Meeting: so Andy are you then thinking of the FS site specs as just another software program to compare/sync with tags like per our discussion this morning with Sandy's list?<br />
+2011-02-21 16:16:36 [Message] Andy_Hatchett -&gt; Organizers Meeting: Once they release that thing into the wild it *will* become the de-facto standard- count on it.<br />
+2011-02-21 16:17:06 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:17:06 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:17:09 [Message] louiskessler -&gt; Organizers Meeting: Absolutely. So we should take it and, assuming it's reasonably good, try to use it.<br />
+2011-02-21 16:17:10 [Message] TamuraJones -&gt; Organizers Meeting: Andy, why would any developer support another FamilySearch standard?<br />
+2011-02-21 16:17:21 [Message] dearmyrtle -&gt; Organizers Meeting: There are folks out there like Bob Velke TMG who aren't doing any FSDN stuff.<br />
+2011-02-21 16:17:22 [Message] Andy_Hatchett -&gt; Organizers Meeting: Myrt- pretty much that was my thought-yes.<br />
+2011-02-21 16:17:24 [Message] GeneJ -&gt; Organizers Meeting: :)<br />
+2011-02-21 16:17:30 [Message] louiskessler -&gt; Organizers Meeting: Well, I for one would.<br />
+2011-02-21 16:17:52 [Message] dearmyrtle -&gt; Organizers Meeting: Family Search DEvelopers Network<br />
+2011-02-21 16:17:55 [Message] louiskessler -&gt; Organizers Meeting: I want my program's data to get in and out of FamilySearch<br />
+2011-02-21 16:18:00 [Message] dearmyrtle -&gt; Organizers Meeting: he doesn't.<br />
+2011-02-21 16:18:03 [Message] Andy_Hatchett -&gt; Organizers Meeting: I'll give you one word- Ancestry. They will sign on in a heart beat.<br />
+2011-02-21 16:18:24 [Message] dearmyrtle -&gt; Organizers Meeting: so we would STILL need to work through the other software programs who choose not to sync with FS.<br />
+2011-02-21 16:18:27 [Message] TamuraJones -&gt; Organizers Meeting: Don't expect Ancestry to sign on to a system that requires all data to be given to FS.<br />
+2011-02-21 16:18:44 [Message] <!-- ws:start:WikiTextUrlEmailRule:268:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:268 --> -&gt; Organizers Meeting: Andy - Are you saying that if FS is the &quot;standard&quot; Ancestry would jump right in?<br />
+2011-02-21 16:18:49 [Message] louiskessler -&gt; Organizers Meeting: There is no way we'll be forced to go through them.<br />
+2011-02-21 16:18:52 [Message] TamuraJones -&gt; Organizers Meeting: FTM does not support FS API, and prolly never will.<br />
+2011-02-21 16:19:00 [Message] louiskessler -&gt; Organizers Meeting: But we will want to be compatible with them.<br />
+2011-02-21 16:19:09 [Message] louiskessler -&gt; Organizers Meeting: ... as best we can.<br />
+2011-02-21 16:19:30 [Message] <!-- ws:start:WikiTextUrlEmailRule:269:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:269 --> -&gt; Organizers Meeting: Louis: But FTM has a long awaited API to be developed<br />
+2011-02-21 16:19:39 [Message] <!-- ws:start:WikiTextUrlEmailRule:270:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:270 --> -&gt; Organizers Meeting: Its been in the program since 2008<br />
+2011-02-21 16:19:39 [Message] GeneJ -&gt; Organizers Meeting: BetterGEDCOM will need to be able to communicate with FS.<br />
+2011-02-21 16:19:45 [Message] dearmyrtle -&gt; Organizers Meeting: FS already has certified FS products including genealogy dastabase management programs --- Legacy, Ancestral Quest, RootsMagic --- those folks are in compliance with FS but aren't consistent with GEDCOM import and export of their own product --- except RootsMagic.<br />
+2011-02-21 16:19:55 [Message] louiskessler -&gt; Organizers Meeting: Maybe there'll be a big battle coming up. FamilySearch vs Ancestry.<br />
+2011-02-21 16:20:07 [Message] louiskessler -&gt; Organizers Meeting: It will be fun and interesting to watch.<br />
+2011-02-21 16:20:19 [Message] dearmyrtle -&gt; Organizers Meeting: oh gosh, am I glad I have a home in Virginia, then. My house is RIGHT IN THE MIDDLE of the two of them.<br />
+2011-02-21 16:20:27 [Message] TamuraJones -&gt; Organizers Meeting: There may well be an API battle, but the file format should be set by an independent organisation.<br />
+2011-02-21 16:20:44 [Message] louiskessler -&gt; Organizers Meeting: Who cares about API's. They're a dime a dozen.<br />
+2011-02-21 16:20:48 [Message] GeneJ -&gt; Organizers Meeting: Sort of our job to shine a light.<br />
+2011-02-21 16:21:11 [Message] dearmyrtle -&gt; Organizers Meeting: I think that in 14 years, FS didn't update the concept of GEDCOM end-user to end-user, and perhaps at the very least our work has brought pressure to bear.<br />
+2011-02-21 16:21:11 [Message] GeneJ -&gt; Organizers Meeting: different than what FS objectives are .. different than what<br />
+2011-02-21 16:21:24 [Message] GeneJ -&gt; Organizers Meeting: ancestry's commercial objectives are<br />
+2011-02-21 16:21:42 [Message] dearmyrtle -&gt; Organizers Meeting: I certainly hope by this coming Monday FS will permit Tom Creighton and Gordon Clarke to visit with us.<br />
+2011-02-21 16:21:45 [Message] louiskessler -&gt; Organizers Meeting: The file format has already been set by FamilySearch. They just haven't told us yet. Although it probably is (as was mentioned) related to GenTech.<br />
+2011-02-21 16:22:18 [Message] dearmyrtle -&gt; Organizers Meeting: They are already using the file format internally, I believe.<br />
+2011-02-21 16:22:26 [Message] dearmyrtle -&gt; Organizers Meeting: but it has to be updated<br />
+2011-02-21 16:22:33 [Message] dearmyrtle -&gt; Organizers Meeting: we shall see.<br />
+2011-02-21 16:22:37 [Message] louiskessler -&gt; Organizers Meeting: They'd have to be. Or they couldn't develop the API for it.<br />
+2011-02-21 16:22:46 [Message] dearmyrtle -&gt; Organizers Meeting: So Louis --- your concern is that we will do TOO MUCH WORK here at BetterGEDCOM<br />
+2011-02-21 16:23:01 [Message] dearmyrtle -&gt; Organizers Meeting: that FS may undo when it announces a GEDCOM substitute?<br />
+2011-02-21 16:23:05 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:23:06 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:23:11 [Message] TamuraJones -&gt; Organizers Meeting: Louis, about a dozen GEDCOM replacement formats have been set. Considering their handling of GEDCOM, one set by FS would be my last preference.<br />
+2011-02-21 16:23:18 [Message] louiskessler -&gt; Organizers Meeting: We need to be the coordinating committee maybe????<br />
+2011-02-21 16:23:40 [Message] dearmyrtle -&gt; Organizers Meeting: Something to bring pressure to bear, for sure.<br />
+2011-02-21 16:23:41 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:23:41 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:23:59 [Message] dearmyrtle -&gt; Organizers Meeting: How about considering that moving forward with the REQUIREMENTS CATALOG is not a waste of time<br />
+2011-02-21 16:24:11 [Message] <!-- ws:start:WikiTextUrlEmailRule:271:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:271 --> -&gt; Organizers Meeting: Louse: to coordinate what?<br />
+2011-02-21 16:24:13 [Message] dearmyrtle -&gt; Organizers Meeting: as we solidify the parameters we think are necessary for a BetterGEDCOM.<br />
+2011-02-21 16:24:17 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:24:18 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:24:28 [Message] louiskessler -&gt; Organizers Meeting: GEDCOM isn't perfect, but it has been an adopted standard by 99% of all genealogy application ... therefore it has been successful.<br />
+2011-02-21 16:24:57 [Message] TamuraJones -&gt; Organizers Meeting: You naturally meant to say that GEDCOM is a succesfull failure ;-)<br />
+2011-02-21 16:24:57 [Message] dearmyrtle -&gt; Organizers Meeting: and those 99% have picked and chosen WHICH GEDCOM traits they wish to embrace.<br />
+2011-02-21 16:25:11 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:25:12 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:25:17 [Message] dearmyrtle -&gt; Organizers Meeting: We have the mess for two reasons:<br />
+2011-02-21 16:25:27 [Message] dearmyrtle -&gt; Organizers Meeting: 1. Changes in technology since the last update of GEDCOM.<br />
+2011-02-21 16:25:29 [Message] louiskessler -&gt; Organizers Meeting: To coordinate the adoption of developed data structures into the genealogy developer community.<br />
+2011-02-21 16:25:43 [Message] <!-- ws:start:WikiTextUrlEmailRule:272:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:272 --> -&gt; Organizers Meeting: Ah, OK. Thank you<br />
+2011-02-21 16:25:46 [Message] louiskessler -&gt; Organizers Meeting: And we may want to recommend enhancements or changes.<br />
+2011-02-21 16:25:54 [Message] GeneJ -&gt; Organizers Meeting: &lt;&lt;doesn't see why progress on the requirements is in conflict with whatever FS does<br />
+2011-02-21 16:26:07 [Message] dearmyrtle -&gt; Organizers Meeting: 2. The lack of 100% compliance with GEDCOM 5.5.1 as it currently stands.<br />
+2011-02-21 16:26:10 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:26:11 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:26:23 [Message] TamuraJones -&gt; Organizers Meeting: No, Louis, BetterGEDCOM does not want to make recommendations to FS, FS wants to propose a format to BetterGEDCOM.<br />
+2011-02-21 16:26:28 [Action] dearmyrtle -&gt; Organizers Meeting: reading Louis' comments.<br />
+2011-02-21 16:26:32 [Message] louiskessler -&gt; Organizers Meeting: Maybe we can get them to take their proprietary data model which they're using anyway, and get it open sourced and make a path for the future.<br />
+2011-02-21 16:26:43 [Message] GeneJ -&gt; Organizers Meeting: @Louis, Yes!! We have good thinkers in BetterGEDCOM<br />
+2011-02-21 16:26:51 [Message] dearmyrtle -&gt; Organizers Meeting: Open sourcing is something we support --<br />
+2011-02-21 16:27:10 [Message] Andy_Hatchett -&gt; Organizers Meeting: There was no compliance enforcement- so.... and the same will be true of any new 'standard&quot; if there isn't strict enforcement.<br />
+2011-02-21 16:27:24 [Message] louiskessler -&gt; Organizers Meeting: But I don't think this forum (BetterGEDCOM) will come up with a model fast enough. It will take years. And by then it will be too late.<br />
+2011-02-21 16:27:27 [Message] dearmyrtle -&gt; Organizers Meeting: And that compliance enforcement comes from a governing body....<br />
+2011-02-21 16:28:05 [Message] dearmyrtle -&gt; Organizers Meeting: I cannot imagine the guys at FS agreeing to BG supervision. That they were not able to get ISO status<br />
+2011-02-21 16:28:09 [Message] dearmyrtle -&gt; Organizers Meeting: was to their detriment.<br />
+2011-02-21 16:28:10 [Message] GeneJ -&gt; Organizers Meeting: Still believe FS comes at this with a more macro approach. If the typical user did that, we'd all be first cousins.<br />
+2011-02-21 16:28:12 [Message] louiskessler -&gt; Organizers Meeting: GEDCOM is a self-enforced standard by the developers. It is up to them if they find it important enough to follow.<br />
+2011-02-21 16:28:27 [Message] louiskessler -&gt; Organizers Meeting: Noone can enforce the developers. They can do what they want.<br />
+2011-02-21 16:28:31 [Message] GeneJ -&gt; Organizers Meeting: You have to have mass to use some of those macro approaches<br />
+2011-02-21 16:28:34 [Message] dearmyrtle -&gt; Organizers Meeting: But that &quot;self-enforcement&quot; hasn't worked has it?<br />
+2011-02-21 16:28:58 [Message] GeneJ -&gt; Organizers Meeting: The work on the requirements really needs to be done<br />
+2011-02-21 16:28:59 [Message] dearmyrtle -&gt; Organizers Meeting: anyway --- your suggestion, Louis is that we wait before doing anything more at BetterGEDCOM?<br />
+2011-02-21 16:29:02 [Message] louiskessler -&gt; Organizers Meeting: 99% of data can transfer fine. It is the stuff (sources/citations) that wasn't perfectly defined that doesn't.<br />
+2011-02-21 16:29:10 [Message] TamuraJones -&gt; Organizers Meeting: Change / self-enforcement / creative interpretation / *<br />
+2011-02-21 16:29:44 [Message] dearmyrtle -&gt; Organizers Meeting: A completed BetterGEDCOM REQUIREMENTS CATALOG will help us evaluate the end product FS shares.<br />
+2011-02-21 16:29:49 [Message] louiskessler -&gt; Organizers Meeting: No. We should coordinate. Get all the parties talking. There's a lot of politics to happen.<br />
+2011-02-21 16:29:49 [Message] <!-- ws:start:WikiTextUrlEmailRule:273:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:273 --> -&gt; Organizers Meeting: Doesn't creattive interpretation put us back to where we are now?<br />
+2011-02-21 16:29:52 [Message] GeneJ -&gt; Organizers Meeting: Remember the first OpenGen meeting, when Gordon was there?<br />
+2011-02-21 16:30:16 [Message] GeneJ -&gt; Organizers Meeting: he said their interest was in linking pps to records .. not linking from pps to pps.<br />
+2011-02-21 16:30:18 [Message] louiskessler -&gt; Organizers Meeting: What about the bigger guys: RootsMagic, Legacy, TMG - we can get them involved.<br />
+2011-02-21 16:30:31 [Message] dearmyrtle -&gt; Organizers Meeting: right -- objectives at FS are different.<br />
+2011-02-21 16:30:58 [Message] <!-- ws:start:WikiTextUrlEmailRule:274:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:274 --> -&gt; Organizers Meeting: Louis - I think we have been trying to get them involved. Some are watching<br />
+2011-02-21 16:31:02 [Message] dearmyrtle -&gt; Organizers Meeting: RM is here, lurking, and sometimes attending. It just happens that in the last 2 weeks, Bruce's wife has lost both her father and her mother. And there have been two conferences.<br />
+2011-02-21 16:31:15 [Message] TamuraJones -&gt; Organizers Meeting: Remember that is because of different objects that FS abandoned their responsibilities as keeper of the GEDCOM standard. We don't want that to happen again.<br />
+2011-02-21 16:31:20 [Message] GeneJ -&gt; Organizers Meeting: Don't you think the work on the requirements is the kind of thing we will need to have pps talking?<br />
+2011-02-21 16:31:29 [Message] TamuraJones -&gt; Organizers Meeting: objects/objectives<br />
+2011-02-21 16:32:01 [Message] dearmyrtle -&gt; Organizers Meeting: Let's proceed with the Requirements Catalog, and when FS gets things done and decides to share, we can re-evaluate then.<br />
+2011-02-21 16:32:15 [Message] GeneJ -&gt; Organizers Meeting: Well, I sure thing the requirements is the kind of thing any group will need<br />
+2011-02-21 16:32:24 [Message] GeneJ -&gt; Organizers Meeting: to be able to assess this stuff.<br />
+2011-02-21 16:32:29 [Message] Andy_Hatchett -&gt; Organizers Meeting: To me, that sounds like teh reasonable way to go.<br />
+2011-02-21 16:32:31 [Message] GeneJ -&gt; Organizers Meeting: think<br />
+2011-02-21 16:32:34 [Message] dearmyrtle -&gt; Organizers Meeting: I've heard that FS takes a much longer time to develop, than software vendors prefer for their products.<br />
+2011-02-21 16:32:39 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:32:40 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:32:55 [Message] <!-- ws:start:WikiTextUrlEmailRule:275:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:275 --> -&gt; Organizers Meeting: From earlier today<br />
+2011-02-21 16:32:59 [Message] dearmyrtle -&gt; Organizers Meeting: Louis, I believe either way -- sooner or later, we will effectively deal with the FS factor.<br />
+2011-02-21 16:33:01 [Message] dearmyrtle -&gt; Organizers Meeting: FSF<br />
+2011-02-21 16:33:03 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:33:03 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:33:08 [Message] <!-- ws:start:WikiTextUrlEmailRule:276:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:276 --> -&gt; Organizers Meeting: I think we need the requirements page to have<br />
+2011-02-21 16:33:10 [Message] TamuraJones -&gt; Organizers Meeting: Free Software Foundation?<br />
+2011-02-21 16:33:15 [Message] GeneJ -&gt; Organizers Meeting: :)<br />
+2011-02-21 16:33:32 [Message] louiskessler -&gt; Organizers Meeting: I'm afraid FS really won't care about or notice us unless we make some waves and get more people involved.<br />
+2011-02-21 16:33:35 [Message] dearmyrtle -&gt; Organizers Meeting: What we are learning as a group in the mean time is how to work more effectively TOGETHER... and the REQUIREMENTS PAGE is our next focus.<br />
+2011-02-21 16:33:37 [Message] <!-- ws:start:WikiTextUrlEmailRule:277:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:277 --> -&gt; Organizers Meeting: RequirementID Number, Brief Description, Author and Link to a discussion page<br />
+2011-02-21 16:34:04 [Message] GeneJ -&gt; Organizers Meeting: I set up three requirment thingies today.<br />
+2011-02-21 16:34:08 [Message] <!-- ws:start:WikiTextUrlEmailRule:278:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:278 --> -&gt; Organizers Meeting: A Discussion page you be titled Requirement ID: short description<br />
+2011-02-21 16:34:13 [Message] dearmyrtle -&gt; Organizers Meeting: FS tends to be elitest from time to time... but they are getting better about working without outside talent.<br />
+2011-02-21 16:34:21 [Message] dearmyrtle -&gt; Organizers Meeting: Thanks, Russ.<br />
+2011-02-21 16:34:28 [Message] <!-- ws:start:WikiTextUrlEmailRule:279:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:279 --> -&gt; Organizers Meeting: Deatils on the Discussion Page<br />
+2011-02-21 16:34:45 [Message] <!-- ws:start:WikiTextUrlEmailRule:280:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:280 --> -&gt; Organizers Meeting: Details should be in the format that is now on the Requirements page in that table<br />
+2011-02-21 16:34:52 [Message] dearmyrtle -&gt; Organizers Meeting: yes,<br />
+2011-02-21 16:35:09 [Message] dearmyrtle -&gt; Organizers Meeting: And thanks to Geir who adapted the template on the Requirements Catalog page.<br />
+2011-02-21 16:35:21 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:35:22 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:35:25 [Message] dearmyrtle -&gt; Organizers Meeting: Anything else?<br />
+2011-02-21 16:35:27 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:35:27 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:35:41 [Message] <!-- ws:start:WikiTextUrlEmailRule:281:hrworth@gmail.com --><a class="wiki_link_ext" href="mailto:hrworth@gmail.com" rel="nofollow">hrworth@gmail.com</a><!-- ws:end:WikiTextUrlEmailRule:281 --> -&gt; Organizers Meeting: Just have that Template with Details on the Discussion Page for that requirement<br />
+2011-02-21 16:36:21 [Message] GeneJ -&gt; Organizers Meeting: Template doesn't copy over. You have to work it in text-wise.<br />
+2011-02-21 16:36:34 [Message] dearmyrtle -&gt; Organizers Meeting: Please send me an email, requesting to be added to sharing the BetterGEDCOM tags worksheet... I'll send out the announcement now.<br />
+2011-02-21 16:37:02 [Message] dearmyrtle -&gt; Organizers Meeting: Other than that, I think we've got it covered....<br />
+2011-02-21 16:37:08 [Message] dearmyrtle -&gt; Organizers Meeting: unless you've thought of something else?<br />
+2011-02-21 16:37:10 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:37:11 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:37:19 [Message] Andy_Hatchett -&gt; Organizers Meeting: ok- recording...<br />
+2011-02-21 16:37:39 [Message] dearmyrtle -&gt; Organizers Meeting: Would rather have more frequent QUICK meetings, than an infrequent long, drawn-out meetings.<br />
+2011-02-21 16:37:42 [Message] dearmyrtle -&gt; Organizers Meeting: keeps us moving along.<br />
+2011-02-21 16:37:47 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:37:48 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-02-21 16:37:51 [Message] dearmyrtle -&gt; Organizers Meeting: are we agreed?<br />
+<strong>2011-02-21 16:37:55 [Message] dearmyrtle -&gt; Organizers Meeting: ADJOURNED?</strong>
+  </div>
+
+
+  </div>
+  <div class="commentColumn WikispacesStream"><div class="WikispacesContent WikispacesBs3"><div class="commentList"></div></div></div>
+</div>
+
+  
+
+
+
+
+<script type="text/template" id="js-event-template">
+  <small>
+    <%- startDateShortFormat %>
+    <a href="<%- ws.common.pathFor('event', 'view', id) %>" class="WikispacesDialogLink">
+      <%- ws.common.truncate(title, 15) %>
+    </a>
+  </small>
+</script>
+
+<script type="text/template" id="js-reply-template">
+  <div class="tc-timeline-comment media">
+
+    <a class="pull-left userLink" href="<%- userCreated.url %>">
+      <img src="<%- userCreated.imageUrl %>" width="30" height="30" class="author-avatar" alt="" />
+    </a>
+    <div class="media-body" data-id="<%= id %>">
+      <% if (ws.context.user.canAdministerWiki) { %>
+        <i class="tc-delete-comment fa fa-trash-o contextual-command destroy-message ws-tip" title="Delete reply"></i>
+      <% } %>
+      <div class="tc-box-name-date">
+        <span class="tc-commenter"><a href="<%- userCreated.url %>"><%- userCreated.username %></a></span>
+        <% if (smartDate == '__live__') { %>
+        <abbr style="border-bottom-style: none;" class="timeago tc-comment-date" title="<%- (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+          <%- (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+        </abbr>
+        <% } else { %>
+          <abbr style="border-bottom-style: none;" class="tc-comment-date"><%- smartDate %></abbr>
+        <% } %>
+      </div>
+      <% if (body) { %>
+      <p>
+        <%= body %>
+      </p>
+      <% } %>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-share-template">
+  <div class="tc-timeline-block tc-<%= ws.stream.typeToBlockType(sharedType) %>-block" <%= (ws.stream.hideTimeline ? 'style="padding-left: 0px;"' : '') %>>
+
+    <% if (!ws.stream.hideTimeline) { %>
+      <div class="tc-timeline-icon">
+        <i class="fa fa-<%= ws.stream.typeToIcon(sharedType) %>"></i>
+      </div>
+      <div class="tc-timeline-triangle-man"></div>
+    <% } %>
+
+    <div class="tc-timeline-box" data-id="<%= id %>">
+      <div class="media">
+        <a class="pull-left userLink" href="<%- userCreated.url %>">
+          <img src="<%- userCreated.imageUrl %>" width="48" height="48" class="author-avatar media-object" alt="" />
+        </a>
+
+        <div class="media-body">
+
+          <div class="tc-stream-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <% if (ws.context.user.id) { %>
+              <li>
+                <a class="js-toggle-monitor" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-eye"></i>
+                  <span><%= monitored ? 'Start Monitoring' : 'Stop Monitoring' %></span>
+                </a>
+              </li>
+              <% } %>
+
+              <% if (ws.context.user.canAdministerWiki) { %>
+              <li>
+                <a class="js-toggle-lock" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-lock"></i>
+                  <span><%= locked ? 'Unlock Replies' : 'Lock Replies' %></span>
+                </a>
+              </li>
+              <% if (sharedType == 'discussion' || sharedType == 'comment' || sharedType == 'event') { %>
+              <li>
+                <a class="js-destroy-share" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-trash-o"></i>
+                  Delete <%= ws.stream.typeToName(sharedType) %>
+                </a>
+              </li>
+              <% } %>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="tc-timeline-box-header ws-reveal media-heading">
+              <h3 class="tc-box-title">
+              <% if (typeof adminLink !== 'undefined' && adminLink && ws.context.user.canAdministerWiki) { %>
+                <a href="<%- adminLink %>"><%- title %></a>
+              <% } else { %>
+                <%- title %>
+              <% } %>
+              <% if (typeof startDate !== 'undefined' && startDate) { %> - <%= startDateShortFormat %> <%= ws.stream.getYearFromStartDate(startDate) %><% } %>
+              </h3>
+              <div class="tc-box-name-date">
+                <% if (ws.context.instance.isTesClassroom) { %>
+                  <%- userCreated.username %>
+                <% } else { %>
+                  <a class="author-name" href="<%- userCreated.url %>"><%- userCreated.username %></a>
+                <% } %>
+                <% if (typeof recipients !== 'undefined' && recipients) { %>
+                  <i class="fa fa-angle-right"></i>
+                  <% if (typeof recipientsLink !== 'undefined') { %>
+                    <a href="<%- recipientsLink %>"><%- recipients %></a>
+                  <% } else { %>
+                    <span class="recipients"><%- recipients %></span>
+                  <% } %>
+                <% } %>
+                <% if (smartDate == '__live__') { %>
+                  <abbr style="border-bottom-style: none;" class="timeago tc-block-date" title="<%= (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+                    <%= (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+                  </abbr>
+                <% } else { %>
+                  <abbr style="border-bottom-style: none;" class="tc-block-date"><%- smartDate %></abbr>
+                <% } %>
+              </div>
+          </div>
+
+          <div class="<%= sharedType == 'comment' && !orphaned && !ws.stream.noCollapse ? 'hidden ' : '' %>tc-block-content">
+            <div class="clearfix">
+              <% if (typeof rangeActions !== 'undefined') { %>
+                <div class="tc-range-actions">
+                  <% for(var i = 0; i < rangeActions.length; i++) { %>
+                  <%= ws.stream.rangeActionTemplate(rangeActions[i]) %>
+                  <% } %>
+                </div>
+              <% } %>
+              <% if (description) { %>
+                <p><%= description %></p>
+              <% } %>
+            </div>
+          </div>
+
+          <% if (replyPages.length > 0 && !(replyPages.length === 1 && replyPages[0].digests.length === 0)) { %>
+            <div class="tc-timeline-comments">
+            <% for (var i = 0; i < replyPages.length; i++) { %>
+              <% if (i == 0 && replyPages[i].more) { %>
+                <a href="#" class="tc-show-more" onclick="ws.stream.pageReplies(<%= id %>, <%= replyPages[i].page + 1 %>); return false">Show more replies (<%= replyPages[i].more %> hidden) </a>
+              <% } else { %>
+                <div></div>
+              <% } %>
+              <% for (var j = 0; j < replyPages[i].digests.length; j++) { %>
+                <%= ws.stream.replyTemplate(replyPages[i].digests[j]) %>
+              <% } %>
+            <% } %>
+            </div>
+          <% } %>
+
+          <% if ((ws.stream.userCanPostMessage && !locked) || ws.context.user.canAdministerWiki) { %>
+          <div class="tc-add-comment media <%= ws.stream.noCollapse ? 'add-active' : ''%>">
+            <img src="<%- ws.context.user.imageUrlPrefix %>lg.jpg" width="30" height="30" class="pull-left author-avatar" alt="" />
+            <div class="media-body">
+              <textarea name="reply" placeholder="Comment" class="form-control form-control-tc ws-reveal <%= !ws.stream.noCollapse ? 'ws-unrevealed' : ''%> reply" /></textarea>
+              <button type="button" class="btn-tc btn-info-tc btn-sm-tc add-reply">Post</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-range-action-template">
+  <div>
+    <strong><%- name %></strong>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      <a href="<%- diffUrl %>">
+    <% } %>
+    <%= new Date(dateCreated * 1000).toLocaleString() %>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      </a>
+    <% } %>
+    <% if (typeof(rangeText) !== 'undefined') { %>
+      <div>
+        <span class="commentExtent">
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          <a href="<%- diffUrl %>">
+        <% } %>
+        <%= rangeText %>
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          </a>
+        <% } %>
+        </span>
+      </div>
+    <% } %>
+  </div>
+</script>
+
+<script type="text/template" id="js-stream-end-template">
+  <div class="tc-timeline-block tc-end-block">
+    <div class="tc-timeline-icon" style="margin-top: -10px;" />
+    <div class="tc-timeline-box" style="visibility: hidden;">
+      <p class="tc-box-title"></p>
+    </div>
+  </div>
+</script>
+
+<a name="discussion"></a>
+<div class="timeline WikispacesBs3 tc-timeline-embedded show-border">
+  <div class="timeline-line"></div>
+    <div id="js-share-list">
+    <div class="spinner hidden"><i class="fa fa-spinner fa-spin"></i></div>
+  </div>
+</div></div></div><div id="sentinel" style="clear:both"></div>
+    </div>
+  </td>
+</tr>
+</table>
+
+<div id="foot">
+<div class="WikiLicense WikiElement">Contributions to http://bettergedcom.wikispaces.com/ are licensed under a <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0">Creative Commons Attribution Share-Alike 3.0 License</a>. <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0"><img src="http://www.wikispaces.com/i/creativecommons/by-sa_3.0_80x15.png" width="85" height="15" alt="Creative Commons Attribution Share-Alike 3.0 License"/></a><br />Portions not contributed by visitors are Copyright 2016 Tangient LLC<br /><a href="https://www.tes.com/us/?utm_source=wikispaces&utm_medium=link&utm_campaign=US-52-footer">TES: The largest network of teachers in the world</a></div></div>
+
+
+<script type="text/template" id="dialog-template">
+<div class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+        <h4 class="modal-title"><%= header %></h4>
+      </div>
+      <div class="modal-body">
+        <%= body %>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+
+<div id="js-help-template" class="hidden">
+  <div class="ws-help">
+    <div class="js-help-controls WikispacesContent WikispacesBs3">
+      <a href="http://www.wikispaces.com/site/gettingstarted/off" class="btn btn-default hidden js-getting-started-off pull-right">Turn off "Getting Started"</a>
+      <ol class="breadcrumb">
+        <li class="js-special-breadcrumb active">
+          <a href="http://helpcenter.wikispaces.com/" data-breadcrumb="0">Home</a>
+        </li>
+        <li class="js-ellipsis hidden js-special-breadcrumb">
+          ...
+        </li>
+        <li class="js-spinner hidden js-special-breadcrumb"><i class="fa fa-spinner fa-spin"></i></li>
+      </ol>
+    </div>
+    <div class="ws-help-content wiki">Loading...</div>
+  </div>
+</div>
+</div>
+<script src="http://www.wikispaces.com/s/nogz/9vz070xj-common.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/85k7018k-stream.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/91k8z207-contentbar.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/395j1vq7-component.stream-vo.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ws.namespace('ws.attributes');
+ws.namespace('ws.stream');
+ws.attributes.DISCUSSION_COUNT = 0;
+ws.attributes.pageId = 58071342;
+ws.attributes.version = 203840338;
+ws.attributes.showEditor = false;
+ws.attributes.editUrl = "http:\/\/bettergedcom.wikispaces.com\/page\/edit\/OrganizersMeetingNotes+2011-02-21+%28Feb+21%29?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FOrganizersMeetingNotes%2B2011-02-21%2B%2528Feb%2B21%2529";
+ws.attributes.userCanEdit = false;
+ws.stream.userCanPostMessage = false;
+ws.stream.hideTimeline = true;
+ws.stream.shareSource = "http:\/\/bettergedcom.wikispaces.com\/page\/shares\/OrganizersMeetingNotes+2011-02-21+%28Feb+21%29";
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+jQuery(document).ready(function() {
+  ws.common.addJsonNotices({"warning":[],"error":[],"info":[],"success":[]});
+});
+
+jQuery(document).ready(function() {
+  ws.editor.canEdit = false;
+  var editUrl = 'http://bettergedcom.wikispaces.com/page/edit/OrganizersMeetingNotes+2011-02-21+%28Feb+21%29?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FOrganizersMeetingNotes%2B2011-02-21%2B%2528Feb%2B21%2529';
+
+  jQuery('#js-edit-from-template').change(function() {
+    window.location = ws.common.addUriParams(editUrl, [['template', jQuery(this).val()]]);
+  });
+});
+
+
+
+--></script><!-- w17 84 tot:84:84(1) mem:3:18(19) wki:1:1(1) -->
+
+</body>
+</html>

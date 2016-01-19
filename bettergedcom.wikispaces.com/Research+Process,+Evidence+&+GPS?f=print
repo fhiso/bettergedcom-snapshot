@@ -1,0 +1,720 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="search" href="http://bettergedcom.wikispaces.com/space/opensearch" type="application/opensearchdescription+xml" title="Wikispaces Search (BetterGedcom Wiki)" />
+<link rel="alternate" type="application/x-wiki" title="Edit This Page" href="/page/edit/Research+Process%2C+Evidence+%26+GPS" />
+<link rel="alternate" title="BetterGedcom - All Changes" href="http://bettergedcom.wikispaces.com/wiki/xmla?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : Research Process, Evidence &amp; GPS - Discussion" href="http://bettergedcom.wikispaces.com/message/xml/Research+Process%2C+Evidence+%26+GPS?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : Research Process, Evidence &amp; GPS - Edits" href="http://bettergedcom.wikispaces.com/page/xml/Research+Process%2C+Evidence+%26+GPS?v=rss_2_0" type="application/rss+xml" />
+<link rel="microsummary" href="/page/microsummary/Research+Process%2C+Evidence+%26+GPS/edits"/>
+<link rel="microsummary" href="/page/microsummary/Research+Process%2C+Evidence+%26+GPS/messages"/>
+<meta name="robots" content="noindex" />
+<script type="text/javascript">
+  
+if (typeof ws === 'undefined') ws = {};
+ws.context = {
+  instance: {
+    id: '1',
+    url: 'wikispaces.com',
+    isMain: true,
+    supportsGoogleDocs: false,
+    isTesClassroom: false,
+  },
+  user: {
+    id: '',
+    username: '',
+    status: '',
+    locale: 'en',
+    imageUrlPrefix: 'http://www.wikispaces.com/i/user_none_',
+    isTeacher: false,
+    canAdministerWiki: false,
+  },
+  wiki: {
+    id: '5050513',
+    name: 'bettergedcom',
+    text: 'BetterGedcom',
+    module: 'B',
+    isClassroom: false,
+    isTesClassroom: false
+    ,defaultSpaceId: 5050513
+    ,isWwwWiki: false
+  },
+  project: {
+    id: '5050513',
+    name: ''
+  },
+  space: {
+    id: '5050513',
+    name: 'bettergedcom',
+    isDefaultSpace: true,
+    isDefaultTemplate: false
+  },
+
+  environment_name: 'prod',
+
+  path: {
+    object: 'page',
+    method: 'view',
+    page: 'Research Process, Evidence & GPS',
+    id: ''
+  },
+
+  settings: {
+    main_domain: 'wikispaces.com',
+    session_url: 'https://session.wikispaces.com/1/',
+    asset_url_prefix: 'http://www.wikispaces.com',
+    beta_features: false,
+    isMobileSite: false,
+    isUploadCapable: true,
+    can_discuss: false,
+    has_gdocs: false,
+    isDialog: false,
+    pwin: ''
+  },
+  clockSkewMillis: 1453211424246 - ((window.performance && window.performance.timing.responseStart > 0) ? window.performance.timing.responseStart : (new Date()).getTime())
+}
+
+
+// legacy javascript API variables, use the above instead
+var wikispaces_isUserLoggedIn = !!ws.context.user.id;
+var wikispaces_isMain = ws.context.instance.isMain;
+var wikispaces_username = ws.context.user.username;
+var wikispaces_spaceName = ws.context.space.name;
+var wikispaces_projectName = ws.context.project.name;
+var wikispaces_wikiName = ws.context.wiki.name;
+var wikispaces_wikiText = ws.context.wiki.text;
+var wikispaces_isDefaultSpace = ws.context.space.isDefaultSpace;
+var wikispaces_method = ws.context.path.method;
+var wikispaces_object = ws.context.path.object;
+var wikispaces_page = ws.context.path.page;
+var wikispaces_id = ws.context.path.id;
+var wikispaces_domain = ws.context.instance.url;
+var wikispaces_isUserOrganizer = false;
+var wikispaces_main_domain = ws.context.settings.asset_url_prefix;
+var wikispaces_asset_url_prefix = ws.context.settings.asset_url_prefix;
+var wikispaces_beta_features = ws.context.settings.beta_features;
+var wikispaces_isMobileSite = ws.context.settings.isMobileSite;
+var wikispaces_isUploadCapable = ws.context.settings.isUploadCapable;
+var wikispaces_can_discuss = ws.context.settings.can_discuss;
+var wikispaces_has_gdocs = ws.context.settings.has_gdocs;
+
+</script>  <title>BetterGedcom - Research Process, Evidence &amp; GPS</title>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://www.wikispaces.com/_/z6371z4x/i/logo-144.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="http://www.wikispaces.com/_/j5j77xz3/i/logo-114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="http://www.wikispaces.com/_/vq8j5432/i/logo-72.png" />
+  <link rel="apple-touch-icon" href="http://www.wikispaces.com/_/38515190/i/logo-57.png" />
+  <link rel="shortcut icon" href="http://www.wikispaces.com/_/55v9k02z/i/logo-16.png" />
+  <style type="text/css">
+    #foot { margin-top: 5px; padding: 5px 0; font-family: arial,helvetica,sans-serif; font-size: 90%; line-height: 150%; clear: both; }
+    h1.pageTitle { font-family: arial,helvetica,sans-serif; }
+  </style>
+<link rel="stylesheet" href="http://bettergedcom.wikispaces.com/stylesheet/view/241807025-217420326D.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/9q897620-internal-bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/vz033906-internal.css" type="text/css" />
+<script src="http://www.wikispaces.com/s/nogz/j91xzz3x-top.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+
+  var wsGoogleAccount = 'UA-80504-1';
+  _gaq.push(['_setAccount', wsGoogleAccount]);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', 'wikispaces.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setCustomVar', 2, 'Authenticated', 'Guest', 2]);
+  _gaq.push(['_trackPageview']);
+</script></head>
+<body data-enhance="false">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+  <td valign="top">
+    <div style="padding: 10px;">
+<h1 class="pageTitle">Research Process, Evidence & GPS</h1>
+<div class="contentBox"><div class="innerContentBox" id="WikiContent">
+
+<script type="text/template" id="comment-footer-template">
+
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</script>
+
+<script type="text/template" id="comment-content-template">
+<div class="ws-box commentView">
+  <div class="comment-close">
+    <button type="button" class="closeme close" aria-hidden="true"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="commentHeader">
+    <p class="ws-stream-meta command-context">
+      <a class="userLink userLinkPicture" href="<%= userCreated.url %>"><img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16"></a>
+      <a href="<%= userCreated.url %>"><%= userCreated.username %></a>
+      <% if (smartDate == '__live__') { %>
+      <abbr class="timeago" title="<%= (new Date(parseInt(dateCreated, 10) * 1000)).toISOString() %>">
+        <%= dateCreated %>
+      </abbr>
+      <% } else { %>
+        <%- smartDate %>
+      <% } %>
+      <% if (ws.context.user.canAdministerWiki && ws.comments.Manager.readOnly) { %>
+        <i class="fa fa-trash-o contextual-command delete ws-tip" title="Delete Comment"></i>
+      <% } %>
+    </p>
+  </div>
+
+  <div class="commentBody">
+    <div class="commentContent">
+      <%= description %>
+    </div>
+
+      <% for(i = 0; i < replyPages.length; i++) { %>
+        <% for(var j = 0; j < replyPages[i].digests.length; j++) { %>
+      <div class="commentReply" data-id="<%= replyPages[i].digests[j].id %>">
+        <p class="ws-stream-meta command-context">
+          <a class="userLink userLinkPicture" href="<%= replyPages[i].digests[j].userCreated.url %>"><img class="userPicture" src="<%= replyPages[i].digests[j].userCreated.imageUrl %>" width="16" height="16"></a>
+          <a href="<%= replyPages[i].digests[j].userCreated.url %>"><%= replyPages[i].digests[j].userCreated.username %></a>
+          <% if (smartDate == '__live__') { %>
+          <abbr class="timeago" title="<%= (new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000)).toISOString() %>">
+            <%= new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000).toLocaleString() %>
+          </abbr>
+          <% } else { %>
+            <%- smartDate %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+          <i class="fa fa-trash-o contextual-command delete-reply ws-tip" title="Delete Reply"></i>
+          <% } %>
+          </p>
+        <div class="commentContent"><%= replyPages[i].digests[j].body %></div>
+      </div>
+        <% } %>
+      <% } %>
+
+      <form class="reply commentReply">
+        <div class="form-group">
+          <textarea name="reply" placeholder="Reply" class="form-control" /></textarea>
+        </div>
+        <div class="btn-toolbar">
+          <button type="submit" class="btn btn-primary btn-sm" name="go" value="1">Post</button>
+
+          <% if (ws.context.user.id) { %>
+            <% if (monitored) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip active" title="You are monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip" title="You are not monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+            <% if (locked) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip active" title="Replies are not allowed."><i class="fa fa-lock"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip" title="Replies are allowed."><i class="fa fa-lock"></i></button>
+            <% } %>
+          <% } %>
+
+          <i class="fa fa-spinner fa-spin spinner pull-right hidden"></i>
+        </div>
+      </form>
+   </div>
+
+   
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-composer-template">
+<div class="ws-box commentView">
+  <div class="commentComposer">
+    <div class="comment-close">
+      &nbsp;<button type="button" class="close closeme" aria-hidden="true"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="commentHeader">
+      <p class="ws-stream-meta command-context">
+        <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+        <a href="#" onclick="return false;"><%= userCreated.username %></a>
+      </p>
+    </div>
+    <div class="commentBody">
+      <textarea name="comment" class="compose form-control" placeholder="Comment"/></textarea><br/>
+      <div class="btn-toolbar">
+        <button type="button" class="btn btn-default btn-sm monitored active pull-right" style="margin-left: 6px" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-eye"></i></button>
+        <button type="button" class="btn btn-default btn-sm locked btn-toggle pull-right" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-lock"></i></button>
+        <button type="button" class="btn btn-primary btn-sm closeme">Save</button>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-proxy-template">
+<div class="comment-proxy">
+  <span class="commentUser">
+  <% if (userCreated) { %>
+    <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+  <% } else { %>
+    <img class="userPicture" src="<%= ws.context.user.imageUrlPrefix %>sm.jpg" width="16" height="16">
+  <% } %>
+  </span>
+  <span class="commentReplies"><%= 1 + _(replyPages).reduce(function(memo, page){ return memo + page.digests.length; }, 0) %></span>
+</div>
+</script>
+
+
+
+
+
+
+
+<div class="commentContainer">
+  <div class="commentSubject">
+  <div class="wiki wikiPage" id="content_view">
+  <!-- ws:start:WikiTextHeadingRule:3:&lt;h4&gt; --><h4 id="toc0"><a name="x---Home &gt; Research Process, Evidence &amp; GPS"></a><!-- ws:end:WikiTextHeadingRule:3 --><a class="wiki_link" href="/Home">Home</a> &gt; Research Process, Evidence &amp; GPS</h4>
+ <br />
+<!-- ws:start:WikiTextMediaRule:0:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/custom/12857488?h=0&amp;w=0&quot; class=&quot;WikiMedia WikiMediaCustom&quot; id=&quot;wikitext@@media@@type=&amp;quot;custom&amp;quot; key=&amp;quot;12857488&amp;quot;&quot; title=&quot;Custom Media&quot;/&gt; --><div id="google_translate_element"></div>
+<script type="text/javascript">
+//<![CDATA[
+function googleTranslateElementInit() {
+ new google.translate.TranslateElement({
+   pageLanguage: 'en'
+ }, 'google_translate_element');
+}
+//]]>
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
+</script><!-- ws:end:WikiTextMediaRule:0 --><br />
+<br />
+<br />
+<a href="http://bettergedcom.wikispaces.com/file/view/Page%20-%20Research%20Process%20%26%20Evidence%20%26%20GPS%2011Apr%202011.pdf">Snapshot of the page 11 Apr 2011</a> Created by Adrian<br />
+<a href="http://bettergedcom.wikispaces.com/file/view/Snapshot%20of%20Research%2BProcess%2C%2BEvidence%2B%26%2BGPS%2015may2011.pdf">Snapshot 15 May 2011</a><br />
+<a href="http://bettergedcom.wikispaces.com/file/view/ResearchProcessEvidenceGPS-v3.pdf">Snapshot 18 June 2011</a><br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:5:&lt;h1&gt; --><h1 id="toc1"><a name="Introduction"></a><!-- ws:end:WikiTextHeadingRule:5 -->Introduction</h1>
+ I have been concerned for some time that there is a gap in our analyses between the genealogical research process, the evidence &amp; conclusion model and my aspirations for a &quot;scientifically&quot; robust process and write-up. This page is an attempt to fill in that gap and define more specifically what we need - in my <em>personal</em> opinion - to be documenting and therefore what I would like to see in my ideal genealogy research software. Ultimately though, the focus of the page is less on the process, and more on driving out what data items are involved in that process, so I can be more confident about what's needed in the BetterGEDCOM Data Model.<br />
+<br />
+As with all my process descriptions, I usually don't mention whether or not software will be used at any point, because a process is about &quot;what&quot; is done, not &quot;how&quot;. Where I do mention software, it's because avoiding doing so makes the words harder to read.<br />
+<br />
+It may very well be that this page does no more than document what you, the reader, felt was obvious. If so fine, but I have satisfied myself that I have filled in the gap.<br />
+<br />
+This process researches a specific event, attribute or relationship concerning something or someone. It does not attempt to set an overall strategic direction. As a result, someone writing a family history will go through this process many times. (<em>Note - I have not yet tested this process in my mind against large-scale family reconstruction, but suspect the same steps appear - just more often</em>.)<br />
+<br />
+Inspiration for this process description has been taken from a variety of sources, credited in the text but especially from Mark Tucker's Genealogy Research Process diagram.<br />
+<br />
+See <a class="wiki_link" href="/Research+Process%2C+Evidence+%26+GPS+Definitions" target="_blank">detail on definitions</a><br />
+<br />
+See <a class="wiki_link" href="/Research+Process%2C+Evidence+%26+GPS+Data+Model" target="_blank">Data Model</a><br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:7:&lt;h2&gt; --><h2 id="toc2"><a name="Introduction-1. Set a focussed goal"></a><!-- ws:end:WikiTextHeadingRule:7 -->1. Set a focussed goal</h2>
+ Set and record a <a class="wiki_link" href="/Research+Process%2C+Evidence+%26+GPS+Definitions#Focussed%20goal" target="_blank">focussed goal</a> (e.g. “Who were the parents of X?”) (<em>c.f. Tom Jones, &quot;Inferential Genealogy&quot; course handout, 2010, Family Search</em>)<br />
+<em>Input</em><br />
+<ul><li>Current conclusions about people, things, etc</li></ul><em>Output</em><br />
+<ul><li>Focussed goal – what things or people are to be investigated? What relationships, events or attributes do we want to know about them?</li></ul><br />
+<!-- ws:start:WikiTextHeadingRule:9:&lt;h2&gt; --><h2 id="toc3"><a name="Introduction-2. Create or revise research plan"></a><!-- ws:end:WikiTextHeadingRule:9 -->2. Create or revise research plan</h2>
+ It is likely that you need to take several steps to reach the goal. So, split the necessary work into <a class="wiki_link" href="/Research+Process%2C+Evidence+%26+GPS+Definitions#Work%20portion" target="_blank">portions</a>, each of which contributes a step towards the overall goal. Each portion will have its own specific objective, which is lower-level / more detailed / more specific than the overall focussed goal. Unless the plan is deliberately intended to be only a partial plan (see below), the last step should pull everything together and provide a solution to the overall focussed goal.<br />
+<br />
+From the steps, with their own objectives, create a “reasonably exhaustive” <a name="comment-516924-open" class="range"></a>research plan<a name="comment-516924-close" class="range"></a> describing what to search for <em>and</em> how to analyse it. The research plan needs to be broad enough in time, space and people to trap potentially useful information (c.f. Tom Jones, also the Genealogical Proof Standard.) Do not be afraid to include speculative items, e.g. &quot;Anything in Chester Quarter Sessions records for the 1820s?&quot;.<br />
+<br />
+This plan starts as an initial plan - it is highly likely that it will be necessary to loop back here and create a revised plan later on in the light of information found - &quot;No plan survives first contact&quot; (<em><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Helmuth_von_Moltke_the_Elder" rel="nofollow" target="_blank">Field-Marshal Helmuth von Moltke the Elder</a></em>). Indeed, if you are uncertain of the direction your research may take, the initial plan may be only a partial plan, with the rest being defined only in the light of the first set of discoveries.<br />
+<br />
+<em>Input</em><br />
+<ul><li>Focussed goal (from previous step).</li><li>Current conclusions about people, things, etc</li><li>Useful data about types of sources to look for when looking for evidence relating to specific attribute / event values (e.g. “parents’ names can be found on Scots death certificates”) (probably this data is held elsewhere in books, magazines, on-line catalogues and research notes from archives and record offices, for instance.)</li><li>Useful data about those types of sources e.g. “pre-1837 marriages in England were always in Church of England parish churches” or “post-1837 marriage certificates in England were created by register offices and / or churches”(probably this data is held elsewhere)</li><li>Where to look for those potential sources (e.g. list of where Cheshire parish registers can be found) (probably this data is held elsewhere)</li></ul><em>Output</em><br />
+<ul><li>List of work portions, each with specific objectives and description of what is intended to be done. This describes &quot;what&quot; is intended and &quot;how&quot;. For instance, &quot;What? &quot;Find X's marriage&quot;. &quot;How? Look for all marriages in Nantwich, Acton and Wistaston between 1820 and 1840 with groom’s name = X. For each of the couples, are they found in the subsequent censuses? Does the age in the census match X?&quot;)</li><li>Location of potentially <em>relevant</em> sources (&quot;where&quot;) needed to fulfil the objectives above, forming an initial search log (e.g. &quot;Microfilms of parish registers (PRs) for Nantwich, Acton and Wistaston, at Chester Archives&quot;. This log will then be completed in the next steps to summarise what has been found.) (<em>The list of objectives and the initial log, taken together, make up a search plan</em>)</li><li>Assumptions made for each work portion – “As both X and Y live close to where they were born, according to the censuses, it is assumed that they were married reasonably close to there.” Also “It is assumed that neither of N and W were Quaker or Jewish” – these are the two exceptions to the rule about marriage in CofE church.</li></ul><br />
+<!-- ws:start:WikiTextHeadingRule:11:&lt;h2&gt; --><h2 id="toc4"><a name="Introduction-3. Carry out research"></a><!-- ws:end:WikiTextHeadingRule:11 -->3. Carry out research</h2>
+ For each of the work-portions in the research-plan, carry out the research according to the current plan. (<em>When searching for paper-based records, this step takes place in Archives, Record Offices, etc</em>. <em>When searching internet based records, this takes place at a computer terminal and the division between this and subsequent steps might tend to disappear</em>). (There are personal decisions to be made about how much to record for sources that are close to the search criteria but do not match - if it's been a long journey and you won't be back for a while, it might be tempting to record &quot;close&quot; sources for long-term storage somehow in case they turn out to be for a relative.). Important - if a search does <em>not</em> find a record - make a note of that as this will save you looking for it in the same place again. Also, the lack of a record where it might reasonably be expected to be, could be significant.<br />
+<em>Input</em><br />
+<ul><li>List of specific objectives, each with a statement of “how” I intend to fulfil each objective (from previous step)</li><li>Location of potentially <em>relevant</em> sources needed to fulfil the objectives above, forming an initial search log (from previous step)</li><li>Documented assumptions (from previous step)</li></ul><em>Output</em><br />
+<ul><li>Contents of the researched sources, documented in such a way as to be understandable (e.g. a series of marriage transcripts for people satisfying the search criteria) and with enough data to enable accurate citations, record provenance, etc.</li><li>Updated search log saying for each source, what’s been searched, what was missing, etc.</li></ul><br />
+<em>Exception</em> - if this work-portion does not contain any research work (e.g. because it is only analysis), then this step is not executed.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:13:&lt;h2&gt; --><h2 id="toc5"><a name="Introduction-3.5 Understand the Records"></a><!-- ws:end:WikiTextHeadingRule:13 -->3.5 Understand the Records</h2>
+ For each of the work-portions, check your understanding of the records that have been judged to have useful information. Understanding why a record was created will help interpret the information in it (<em>For instance, does the grant of probate say 'Personal Effects' and / or 'Real Estate' - do you understand the difference?</em>). (<em>c.f. Tom Jones, &quot;Inferential Genealogy&quot;</em>)<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:15:&lt;h2&gt; --><h2 id="toc6"><a name="Introduction-4. Select &amp; Analyse the Evidence"></a><!-- ws:end:WikiTextHeadingRule:15 --><span style="page-break-after: avoid;">4. Select &amp; Analyse the Evidence</span></h2>
+ <span style="page-break-after: avoid;">For each of the work-portions, assemble the research from this work-portion. Assess the quality of the source material. Using your research plan, select the evidence (i.e. the information that's relevant to the objective of this work portion). This evidence can come from this work-portion, previous portions <em>and</em> the evidence already in your database. Look for any patterns, matches, differences, etc. that might be meaningful. (<em>These are not meant to be sequential steps but can take place in parallel</em>)</span><br />
+Can you demonstrate (&quot;prove&quot;) that the person referred to in the evidence is the one that the objective needs? <span style="page-break-after: avoid;">Analyse the evidence to see if you can answer the questions posed by the objective for this work-portion. </span><br />
+<span style="page-break-after: avoid;">What are the conclusions for this work-portion? Is there any conflicting evidence? (<em>e.g. this looks like him but it's the wrong father</em>) Any partial progress? (<em>e.g. These are the marriages matching our couple but there is more than 1 match, so we cannot yet tell which is their marriage</em>). Any evidence that contradicts any hypothesis? (<em>e.g. Implication of complete search is that they were not married after all</em>)</span><br />
+If there are conclusions, record the analysis and conclusions for this work-portion in some form of proof summary or proof argument, referring back as necessary to previous conclusions.<br />
+<br />
+<em>Input</em><br />
+<ul><li>List of specific objectives, each with a statement of “how” I intend to fulfil each objective (from previous steps)</li><li>Contents of the researched sources, documented in such a way as to be understandable and with enough data to enable accurate citations, record provenance, etc. (from previous step).</li><li>Updated search log saying for each source, what’s been searched, what was missing, etc (from previous step)</li><li>An understanding of the nature of the researched sources (probably held elsewhere)</li></ul><em>Output</em><br />
+<ul><li>Evidence relevant to the objective(s), including evidence of identity</li><li>Proof (summary or argument) giving results of analysis and conclusions – if any (See BCG for <a class="wiki_link_ext" href="http://www.bcgcertification.org/skillbuilders/worksamples.html" rel="nofollow" target="_blank">samples</a>).</li><li>Conflicting evidence – if any</li></ul><br />
+<em>Exception</em> - if this work-portion does not contain any analysis work (e.g. because it is a portion containing only self-education), then this step is not executed.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:17:&lt;h2&gt; --><h2 id="toc7"><a name="Introduction-5. Has the Objective been met for this Work-Portion?"></a><!-- ws:end:WikiTextHeadingRule:17 -->5. Has the Objective been met for this Work-Portion?</h2>
+ If the objective for this work-portion has not been met, <em>or</em> if there is conflicting evidence that cannot be resolved, return to create new search plan with revised specific objectives (<em>Some conflicts can be accepted if they can be resolved, i.e. explained away in a plausible manner - e.g. it was 50 years after the marriage and the son giving the information was born long after that marriage</em>.)<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:19:&lt;h2&gt; --><h2 id="toc8"><a name="Introduction-5.5 Record Conclusions"></a><!-- ws:end:WikiTextHeadingRule:19 -->5.5 Record Conclusions</h2>
+ For each specific objective, if it <em>has</em> been met with <em>no</em> unresolved conflicting evidence, enter any conclusions into the genealogy application, either<br />
+<ul><li>merging these conclusions into existing people, events, objects, etc, deleting or replacing conclusions that are no longer accepted (i.e. use the &quot;conclusion-only&quot; model) or</li><li>creating new people, events, objects containing the new conclusions plus old conclusions that are still accepted (leaving the old detail there but marked up as &quot;superseded&quot;) (i.e. use the &quot;evidence conclusion model&quot;)</li></ul><br />
+<em>Exception</em> - if this work-portion did not reach any conclusions (e.g. because it is a portion containing only self-education), then this step is not executed. If this work-portion was supposed to reach a conclusion, but for some reason could not, then review if there are any other conclusions that <em>can</em> be entered into the database - e.g. &quot;We don't know his parents but we now know his occupation at date X&quot;. Ensure that such conclusions can be justified - perhaps creating a new work-portion to do so.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:21:&lt;h2&gt; --><h2 id="toc9"><a name="Introduction-6. Go onto next work portion in research plan"></a><!-- ws:end:WikiTextHeadingRule:21 -->6. Go onto next work portion in research plan</h2>
+ Go onto the next work portion in the research plan.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:23:&lt;h2&gt; --><h2 id="toc10"><a name="Introduction-7. Check overall goal has been met"></a><!-- ws:end:WikiTextHeadingRule:23 -->7. Check overall goal has been met</h2>
+ If all the objectives from all the work portions have been completed and there is <strong>no</strong> unresolved conflicting evidence, double check to see if the overall focussed goal has been met (<em>remember, in this way of working, the last portion is meant to provide the answer to that focussed goal</em>) and that all the conclusions have been entered into the genealogy application, including the final conclusions. If it has, then this research process is complete.<br />
+<br />
+If there is any unresolved conflicting evidence or if the overall focussed goal has not been met, return to create new search plan with revised specific objectives.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:25:&lt;h2&gt; --><h2 id="toc11"><a name="Introduction-Diagrammatically"></a><!-- ws:end:WikiTextHeadingRule:25 -->Diagrammatically</h2>
+ <!-- ws:start:WikiTextLocalImageRule:155:&lt;img src=&quot;/file/view/ResearchProcess-ABv3.png/232883718/ResearchProcess-ABv3.png&quot; alt=&quot;&quot; title=&quot;&quot; /&gt; --><img src="/file/view/ResearchProcess-ABv3.png/232883718/ResearchProcess-ABv3.png" alt="ResearchProcess-ABv3.png" title="ResearchProcess-ABv3.png" /><!-- ws:end:WikiTextLocalImageRule:155 --><br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:27:&lt;h2&gt; --><h2 id="toc12"><a name="Introduction-Caveats"></a><!-- ws:end:WikiTextHeadingRule:27 -->Caveats</h2>
+ I talk of &quot;proof&quot; and &quot;final conclusions&quot;. It is unlikely that proof in a complex genealogical study can reach the standard of proof required in a criminal case (&quot;beyond a reasonable doubt&quot;) - the<a class="wiki_link_ext" href="http://www.bcgcertification.org/resources/standard.html" rel="nofollow" target="_blank"> Genealogical Proof Standard</a> exists to provide criteria to judge the standard of proof obtained. Nor is any conclusion really final as the appearance of previously unsuspected information may throw everything into suspicion.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:29:&lt;h2&gt; --><h2 id="toc13"><a name="Introduction-Application Software"></a><!-- ws:end:WikiTextHeadingRule:29 -->Application Software</h2>
+ The crux of the matter is this - what do I want to see in an application? And therefore in the BetterGEDCOM Data Model? The answer is - <em>everything</em> that's recorded as an input or an output above. Actually, there are exceptions denoted above by the phrase &quot;probably this data is held elsewhere&quot; since otherwise we'd end up dumping all the text books into our applications. But after these first steps, I'd really like all that lot to go into my application.<br />
+<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:31:&lt;h2&gt; --><h2 id="toc14"><a name="Introduction-Data Analysis"></a><!-- ws:end:WikiTextHeadingRule:31 -->Data Analysis</h2>
+ First cut list of entities - excluding those already clearly covered by GEDCOM - i.e. persons, families, etc. This list is somewhat descriptive, rather than specific.<br />
+<ul><li>Focussed goal – <em>what things or people are to be investigated? What relationships, events or attributes do we want to know about them</em>?</li><li>Research Plan -<ul><li>List of work portions, each with specific objectives and description of what is intended to be done.</li><li>Initial search log containing location(s) of potentially relevant sources (&quot;<em>where</em>&quot;) needed to fulfil the objectives above. <em>This log is later updated completed to summarise what has been or what <strong>cannot</strong> be found where</em>.</li><li>Assumptions made.</li></ul></li><li>Contents of the researched sources, documented in such a way as to be understandable, and with enough data to enable accurate citations, record provenance, etc (<em>as per GEDCOM Source-entity but with extra attributes compared to current GEDCOM</em>?)</li><li>Proof argument or summary for each work portion made up of<ul><li>Evidence used in the work portion, including evidence of identity</li><li>Results of analysis</li><li>Conclusions if any</li><li>Conflicting evidence if any</li></ul></li><li>Updated values of a person / group / place etc recorded in database for each work portion</li></ul><br />
+The indented bullets are intended to imply a probable relationship - e.g. the higher level bullet consists of the lower level ones.<br />
+<br />
+<!-- ws:start:WikiTextLocalImageRule:156:&lt;img src=&quot;/file/view/Research-DataModel-ABv3.png/233812480/800x952/Research-DataModel-ABv3.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 952px; width: 800px;&quot; /&gt; --><img src="/file/view/Research-DataModel-ABv3.png/233812480/800x952/Research-DataModel-ABv3.png" alt="Research-DataModel-ABv3.png" title="Research-DataModel-ABv3.png" style="height: 952px; width: 800px;" /><!-- ws:end:WikiTextLocalImageRule:156 --><br />
+<em>First</em> cut of data model shown above. Notes:<br />
+<ul><li>Multiple cardinality on relationships is shown by crows-feet (a) because that's what I use and (b) because the (free) modelling tool does it like that.</li><li>Entity &quot;<a class="wiki_link" href="/Research+Process%2C+Evidence+%26+GPS+Definitions#Genealogical%20value" target="_blank">Genealogical Value</a>&quot; is meant to represent any attribute of any person, family, group, place, ship, artefact, etc. entity. Or any event or relationship involving same.</li><li>Entity &quot;Citation PAF style&quot; is meant to refer to the citation structure as encoded in GEDCOM, PAF, etc, etc., i.e. it is a piece of data that (viewed from the value that it justifies), points to a source record. It is the basis of a printed reference note citation - the title, author, publication, etc, come from the source record that this entity points to, while the page-number-with-source, quality, etc, come from this entity. Naturally this entity might need more attributes than are currently encoded in GEDCOM, PAF, etc. Like any entity, it can be reached from two directions - the comment above refers to going from the value to the entity to the source. Conversely, one can use this entity to discover, for any given source, which values are justified by this source.</li><li>I have only resolved one many-to-many relationship - that involving &quot;Genealogical Value&quot; and &quot;Source&quot;, which is resolved by the &quot;Citation PAF style&quot;.</li><li>&quot;Citation PAF style&quot; remains on the model for 2 reasons - (i) compatibility and (ii) because I feel that it could otherwise be impossible to see which bit of a source contributed to the value of the &quot;Genealogical Value&quot;. In other words, I see both this and proof / conclusion in use at the same time.</li><li>Conclusion and Evidence statements are just envisaged here to be free format text. Rightly or wrongly.</li><li>A conclusion statement may justify several values - e.g. &quot;John Doe was born to Richard Doe on 31/1/99&quot; justifies a parent's name and a birth date.</li><li>The text in the Proof, Conflicting Evidence and Conclusion entities will need to be substantial in length.</li><li>A proof gives rise to (potentially) many conclusions. Or even none if it's a disproof(?).</li><li>A conclusion comes from only 1 proof. (No reason that several proofs can't come to an <em>equivalent</em> conclusion).</li><li>A proof must arise from <em>some</em> evidence.</li><li>A piece of evidence comes from only one source. But a source contains (perhaps) many bits of evidence.</li></ul><br />
+Comments?
+  </div>
+
+
+  </div>
+  <div class="commentColumn WikispacesStream"><div class="WikispacesContent WikispacesBs3"><div class="commentList"></div></div></div>
+</div>
+
+  
+
+
+
+
+<script type="text/template" id="js-event-template">
+  <small>
+    <%- startDateShortFormat %>
+    <a href="<%- ws.common.pathFor('event', 'view', id) %>" class="WikispacesDialogLink">
+      <%- ws.common.truncate(title, 15) %>
+    </a>
+  </small>
+</script>
+
+<script type="text/template" id="js-reply-template">
+  <div class="tc-timeline-comment media">
+
+    <a class="pull-left userLink" href="<%- userCreated.url %>">
+      <img src="<%- userCreated.imageUrl %>" width="30" height="30" class="author-avatar" alt="" />
+    </a>
+    <div class="media-body" data-id="<%= id %>">
+      <% if (ws.context.user.canAdministerWiki) { %>
+        <i class="tc-delete-comment fa fa-trash-o contextual-command destroy-message ws-tip" title="Delete reply"></i>
+      <% } %>
+      <div class="tc-box-name-date">
+        <span class="tc-commenter"><a href="<%- userCreated.url %>"><%- userCreated.username %></a></span>
+        <% if (smartDate == '__live__') { %>
+        <abbr style="border-bottom-style: none;" class="timeago tc-comment-date" title="<%- (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+          <%- (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+        </abbr>
+        <% } else { %>
+          <abbr style="border-bottom-style: none;" class="tc-comment-date"><%- smartDate %></abbr>
+        <% } %>
+      </div>
+      <% if (body) { %>
+      <p>
+        <%= body %>
+      </p>
+      <% } %>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-share-template">
+  <div class="tc-timeline-block tc-<%= ws.stream.typeToBlockType(sharedType) %>-block" <%= (ws.stream.hideTimeline ? 'style="padding-left: 0px;"' : '') %>>
+
+    <% if (!ws.stream.hideTimeline) { %>
+      <div class="tc-timeline-icon">
+        <i class="fa fa-<%= ws.stream.typeToIcon(sharedType) %>"></i>
+      </div>
+      <div class="tc-timeline-triangle-man"></div>
+    <% } %>
+
+    <div class="tc-timeline-box" data-id="<%= id %>">
+      <div class="media">
+        <a class="pull-left userLink" href="<%- userCreated.url %>">
+          <img src="<%- userCreated.imageUrl %>" width="48" height="48" class="author-avatar media-object" alt="" />
+        </a>
+
+        <div class="media-body">
+
+          <div class="tc-stream-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <% if (ws.context.user.id) { %>
+              <li>
+                <a class="js-toggle-monitor" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-eye"></i>
+                  <span><%= monitored ? 'Start Monitoring' : 'Stop Monitoring' %></span>
+                </a>
+              </li>
+              <% } %>
+
+              <% if (ws.context.user.canAdministerWiki) { %>
+              <li>
+                <a class="js-toggle-lock" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-lock"></i>
+                  <span><%= locked ? 'Unlock Replies' : 'Lock Replies' %></span>
+                </a>
+              </li>
+              <% if (sharedType == 'discussion' || sharedType == 'comment' || sharedType == 'event') { %>
+              <li>
+                <a class="js-destroy-share" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-trash-o"></i>
+                  Delete <%= ws.stream.typeToName(sharedType) %>
+                </a>
+              </li>
+              <% } %>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="tc-timeline-box-header ws-reveal media-heading">
+              <h3 class="tc-box-title">
+              <% if (typeof adminLink !== 'undefined' && adminLink && ws.context.user.canAdministerWiki) { %>
+                <a href="<%- adminLink %>"><%- title %></a>
+              <% } else { %>
+                <%- title %>
+              <% } %>
+              <% if (typeof startDate !== 'undefined' && startDate) { %> - <%= startDateShortFormat %> <%= ws.stream.getYearFromStartDate(startDate) %><% } %>
+              </h3>
+              <div class="tc-box-name-date">
+                <% if (ws.context.instance.isTesClassroom) { %>
+                  <%- userCreated.username %>
+                <% } else { %>
+                  <a class="author-name" href="<%- userCreated.url %>"><%- userCreated.username %></a>
+                <% } %>
+                <% if (typeof recipients !== 'undefined' && recipients) { %>
+                  <i class="fa fa-angle-right"></i>
+                  <% if (typeof recipientsLink !== 'undefined') { %>
+                    <a href="<%- recipientsLink %>"><%- recipients %></a>
+                  <% } else { %>
+                    <span class="recipients"><%- recipients %></span>
+                  <% } %>
+                <% } %>
+                <% if (smartDate == '__live__') { %>
+                  <abbr style="border-bottom-style: none;" class="timeago tc-block-date" title="<%= (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+                    <%= (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+                  </abbr>
+                <% } else { %>
+                  <abbr style="border-bottom-style: none;" class="tc-block-date"><%- smartDate %></abbr>
+                <% } %>
+              </div>
+          </div>
+
+          <div class="<%= sharedType == 'comment' && !orphaned && !ws.stream.noCollapse ? 'hidden ' : '' %>tc-block-content">
+            <div class="clearfix">
+              <% if (typeof rangeActions !== 'undefined') { %>
+                <div class="tc-range-actions">
+                  <% for(var i = 0; i < rangeActions.length; i++) { %>
+                  <%= ws.stream.rangeActionTemplate(rangeActions[i]) %>
+                  <% } %>
+                </div>
+              <% } %>
+              <% if (description) { %>
+                <p><%= description %></p>
+              <% } %>
+            </div>
+          </div>
+
+          <% if (replyPages.length > 0 && !(replyPages.length === 1 && replyPages[0].digests.length === 0)) { %>
+            <div class="tc-timeline-comments">
+            <% for (var i = 0; i < replyPages.length; i++) { %>
+              <% if (i == 0 && replyPages[i].more) { %>
+                <a href="#" class="tc-show-more" onclick="ws.stream.pageReplies(<%= id %>, <%= replyPages[i].page + 1 %>); return false">Show more replies (<%= replyPages[i].more %> hidden) </a>
+              <% } else { %>
+                <div></div>
+              <% } %>
+              <% for (var j = 0; j < replyPages[i].digests.length; j++) { %>
+                <%= ws.stream.replyTemplate(replyPages[i].digests[j]) %>
+              <% } %>
+            <% } %>
+            </div>
+          <% } %>
+
+          <% if ((ws.stream.userCanPostMessage && !locked) || ws.context.user.canAdministerWiki) { %>
+          <div class="tc-add-comment media <%= ws.stream.noCollapse ? 'add-active' : ''%>">
+            <img src="<%- ws.context.user.imageUrlPrefix %>lg.jpg" width="30" height="30" class="pull-left author-avatar" alt="" />
+            <div class="media-body">
+              <textarea name="reply" placeholder="Comment" class="form-control form-control-tc ws-reveal <%= !ws.stream.noCollapse ? 'ws-unrevealed' : ''%> reply" /></textarea>
+              <button type="button" class="btn-tc btn-info-tc btn-sm-tc add-reply">Post</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-range-action-template">
+  <div>
+    <strong><%- name %></strong>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      <a href="<%- diffUrl %>">
+    <% } %>
+    <%= new Date(dateCreated * 1000).toLocaleString() %>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      </a>
+    <% } %>
+    <% if (typeof(rangeText) !== 'undefined') { %>
+      <div>
+        <span class="commentExtent">
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          <a href="<%- diffUrl %>">
+        <% } %>
+        <%= rangeText %>
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          </a>
+        <% } %>
+        </span>
+      </div>
+    <% } %>
+  </div>
+</script>
+
+<script type="text/template" id="js-stream-end-template">
+  <div class="tc-timeline-block tc-end-block">
+    <div class="tc-timeline-icon" style="margin-top: -10px;" />
+    <div class="tc-timeline-box" style="visibility: hidden;">
+      <p class="tc-box-title"></p>
+    </div>
+  </div>
+</script>
+
+<a name="discussion"></a>
+<div class="timeline WikispacesBs3 tc-timeline-embedded show-border">
+  <div class="timeline-line"></div>
+    <div id="js-share-list">
+    <div class="spinner hidden"><i class="fa fa-spinner fa-spin"></i></div>
+  </div>
+</div></div></div><div id="sentinel" style="clear:both"></div>
+    </div>
+  </td>
+</tr>
+</table>
+
+<div id="foot">
+<div class="WikiLicense WikiElement">Contributions to http://bettergedcom.wikispaces.com/ are licensed under a <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0">Creative Commons Attribution Share-Alike 3.0 License</a>. <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0"><img src="http://www.wikispaces.com/i/creativecommons/by-sa_3.0_80x15.png" width="85" height="15" alt="Creative Commons Attribution Share-Alike 3.0 License"/></a><br />Portions not contributed by visitors are Copyright 2016 Tangient LLC<br /><a href="https://www.tes.com/us/?utm_source=wikispaces&utm_medium=link&utm_campaign=US-52-footer">TES: The largest network of teachers in the world</a></div></div>
+
+
+<script type="text/template" id="dialog-template">
+<div class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+        <h4 class="modal-title"><%= header %></h4>
+      </div>
+      <div class="modal-body">
+        <%= body %>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+
+<div id="js-help-template" class="hidden">
+  <div class="ws-help">
+    <div class="js-help-controls WikispacesContent WikispacesBs3">
+      <a href="http://www.wikispaces.com/site/gettingstarted/off" class="btn btn-default hidden js-getting-started-off pull-right">Turn off "Getting Started"</a>
+      <ol class="breadcrumb">
+        <li class="js-special-breadcrumb active">
+          <a href="http://helpcenter.wikispaces.com/" data-breadcrumb="0">Home</a>
+        </li>
+        <li class="js-ellipsis hidden js-special-breadcrumb">
+          ...
+        </li>
+        <li class="js-spinner hidden js-special-breadcrumb"><i class="fa fa-spinner fa-spin"></i></li>
+      </ol>
+    </div>
+    <div class="ws-help-content wiki">Loading...</div>
+  </div>
+</div>
+</div>
+<script src="http://www.wikispaces.com/s/nogz/9vz070xj-common.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/85k7018k-stream.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/91k8z207-contentbar.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/395j1vq7-component.stream-vo.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ws.namespace('ws.attributes');
+ws.namespace('ws.stream');
+ws.attributes.DISCUSSION_COUNT = 140;
+ws.attributes.pageId = 62673960;
+ws.attributes.version = 308143402;
+ws.attributes.showEditor = false;
+ws.attributes.editUrl = "http:\/\/bettergedcom.wikispaces.com\/page\/edit\/Research+Process%2C+Evidence+%26+GPS?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FResearch%2BProcess%252C%2BEvidence%2B%2526%2BGPS";
+ws.attributes.userCanEdit = false;
+ws.stream.userCanPostMessage = false;
+ws.stream.hideTimeline = true;
+ws.stream.shareSource = "http:\/\/bettergedcom.wikispaces.com\/page\/shares\/Research+Process%2C+Evidence+%26+GPS";
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+jQuery(document).ready(function() {
+  ws.common.addJsonNotices({"warning":[],"error":[],"info":[],"success":[]});
+});
+
+jQuery(document).ready(function() {
+  ws.editor.canEdit = false;
+  var editUrl = 'http://bettergedcom.wikispaces.com/page/edit/Research+Process%2C+Evidence+%26+GPS?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FResearch%2BProcess%252C%2BEvidence%2B%2526%2BGPS';
+
+  jQuery('#js-edit-from-template').change(function() {
+    window.location = ws.common.addUriParams(editUrl, [['template', jQuery(this).val()]]);
+  });
+});
+
+
+
+--></script><!-- w17 77 tot:77:77(1) mem:5:23(19) wki:2:2(1) -->
+
+</body>
+</html>

@@ -1,0 +1,1343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="search" href="http://bettergedcom.wikispaces.com/space/opensearch" type="application/opensearchdescription+xml" title="Wikispaces Search (BetterGedcom Wiki)" />
+<link rel="alternate" type="application/x-wiki" title="Edit This Page" href="/page/edit/OrganizersMeetingNotes+2011-01-31+%28Jan+31%29" />
+<link rel="alternate" title="BetterGedcom - All Changes" href="http://bettergedcom.wikispaces.com/wiki/xmla?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : OrganizersMeetingNotes 2011-01-31 (Jan 31) - Discussion" href="http://bettergedcom.wikispaces.com/message/xml/OrganizersMeetingNotes+2011-01-31+%28Jan+31%29?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : OrganizersMeetingNotes 2011-01-31 (Jan 31) - Edits" href="http://bettergedcom.wikispaces.com/page/xml/OrganizersMeetingNotes+2011-01-31+%28Jan+31%29?v=rss_2_0" type="application/rss+xml" />
+<link rel="microsummary" href="/page/microsummary/OrganizersMeetingNotes+2011-01-31+%28Jan+31%29/edits"/>
+<link rel="microsummary" href="/page/microsummary/OrganizersMeetingNotes+2011-01-31+%28Jan+31%29/messages"/>
+<meta name="robots" content="noindex" />
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Ug8HVFVXGwIAXVlSDgMP"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,ee:"QJf3ax"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=t("ee").create(),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-686.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script><script type="text/javascript">
+  
+if (typeof ws === 'undefined') ws = {};
+ws.context = {
+  instance: {
+    id: '1',
+    url: 'wikispaces.com',
+    isMain: true,
+    supportsGoogleDocs: false,
+    isTesClassroom: false,
+  },
+  user: {
+    id: '',
+    username: '',
+    status: '',
+    locale: 'en',
+    imageUrlPrefix: 'http://www.wikispaces.com/i/user_none_',
+    isTeacher: false,
+    canAdministerWiki: false,
+  },
+  wiki: {
+    id: '5050513',
+    name: 'bettergedcom',
+    text: 'BetterGedcom',
+    module: 'B',
+    isClassroom: false,
+    isTesClassroom: false
+    ,defaultSpaceId: 5050513
+    ,isWwwWiki: false
+  },
+  project: {
+    id: '5050513',
+    name: ''
+  },
+  space: {
+    id: '5050513',
+    name: 'bettergedcom',
+    isDefaultSpace: true,
+    isDefaultTemplate: false
+  },
+
+  environment_name: 'prod',
+
+  path: {
+    object: 'page',
+    method: 'view',
+    page: 'OrganizersMeetingNotes 2011-01-31 (Jan 31)',
+    id: ''
+  },
+
+  settings: {
+    main_domain: 'wikispaces.com',
+    session_url: 'https://session.wikispaces.com/1/',
+    asset_url_prefix: 'http://www.wikispaces.com',
+    beta_features: false,
+    isMobileSite: false,
+    isUploadCapable: true,
+    can_discuss: false,
+    has_gdocs: false,
+    isDialog: false,
+    pwin: ''
+  },
+  clockSkewMillis: 1453211531780 - ((window.performance && window.performance.timing.responseStart > 0) ? window.performance.timing.responseStart : (new Date()).getTime())
+}
+
+
+// legacy javascript API variables, use the above instead
+var wikispaces_isUserLoggedIn = !!ws.context.user.id;
+var wikispaces_isMain = ws.context.instance.isMain;
+var wikispaces_username = ws.context.user.username;
+var wikispaces_spaceName = ws.context.space.name;
+var wikispaces_projectName = ws.context.project.name;
+var wikispaces_wikiName = ws.context.wiki.name;
+var wikispaces_wikiText = ws.context.wiki.text;
+var wikispaces_isDefaultSpace = ws.context.space.isDefaultSpace;
+var wikispaces_method = ws.context.path.method;
+var wikispaces_object = ws.context.path.object;
+var wikispaces_page = ws.context.path.page;
+var wikispaces_id = ws.context.path.id;
+var wikispaces_domain = ws.context.instance.url;
+var wikispaces_isUserOrganizer = false;
+var wikispaces_main_domain = ws.context.settings.asset_url_prefix;
+var wikispaces_asset_url_prefix = ws.context.settings.asset_url_prefix;
+var wikispaces_beta_features = ws.context.settings.beta_features;
+var wikispaces_isMobileSite = ws.context.settings.isMobileSite;
+var wikispaces_isUploadCapable = ws.context.settings.isUploadCapable;
+var wikispaces_can_discuss = ws.context.settings.can_discuss;
+var wikispaces_has_gdocs = ws.context.settings.has_gdocs;
+
+</script>  <title>BetterGedcom - OrganizersMeetingNotes 2011-01-31 (Jan 31)</title>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://www.wikispaces.com/_/z6371z4x/i/logo-144.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="http://www.wikispaces.com/_/j5j77xz3/i/logo-114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="http://www.wikispaces.com/_/vq8j5432/i/logo-72.png" />
+  <link rel="apple-touch-icon" href="http://www.wikispaces.com/_/38515190/i/logo-57.png" />
+  <link rel="shortcut icon" href="http://www.wikispaces.com/_/55v9k02z/i/logo-16.png" />
+  <style type="text/css">
+    #foot { margin-top: 5px; padding: 5px 0; font-family: arial,helvetica,sans-serif; font-size: 90%; line-height: 150%; clear: both; }
+    h1.pageTitle { font-family: arial,helvetica,sans-serif; }
+  </style>
+<link rel="stylesheet" href="http://bettergedcom.wikispaces.com/stylesheet/view/241807025-217420326D.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/9q897620-internal-bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/vz033906-internal.css" type="text/css" />
+<script src="http://www.wikispaces.com/s/nogz/j91xzz3x-top.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+
+  var wsGoogleAccount = 'UA-80504-1';
+  _gaq.push(['_setAccount', wsGoogleAccount]);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', 'wikispaces.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setCustomVar', 2, 'Authenticated', 'Guest', 2]);
+  _gaq.push(['_trackPageview']);
+</script></head>
+<body data-enhance="false">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+  <td valign="top">
+    <div style="padding: 10px;">
+<h1 class="pageTitle">OrganizersMeetingNotes 2011-01-31 (Jan 31)</h1>
+<div class="contentBox"><div class="innerContentBox" id="WikiContent">
+
+<script type="text/template" id="comment-footer-template">
+
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</script>
+
+<script type="text/template" id="comment-content-template">
+<div class="ws-box commentView">
+  <div class="comment-close">
+    <button type="button" class="closeme close" aria-hidden="true"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="commentHeader">
+    <p class="ws-stream-meta command-context">
+      <a class="userLink userLinkPicture" href="<%= userCreated.url %>"><img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16"></a>
+      <a href="<%= userCreated.url %>"><%= userCreated.username %></a>
+      <% if (smartDate == '__live__') { %>
+      <abbr class="timeago" title="<%= (new Date(parseInt(dateCreated, 10) * 1000)).toISOString() %>">
+        <%= dateCreated %>
+      </abbr>
+      <% } else { %>
+        <%- smartDate %>
+      <% } %>
+      <% if (ws.context.user.canAdministerWiki && ws.comments.Manager.readOnly) { %>
+        <i class="fa fa-trash-o contextual-command delete ws-tip" title="Delete Comment"></i>
+      <% } %>
+    </p>
+  </div>
+
+  <div class="commentBody">
+    <div class="commentContent">
+      <%= description %>
+    </div>
+
+      <% for(i = 0; i < replyPages.length; i++) { %>
+        <% for(var j = 0; j < replyPages[i].digests.length; j++) { %>
+      <div class="commentReply" data-id="<%= replyPages[i].digests[j].id %>">
+        <p class="ws-stream-meta command-context">
+          <a class="userLink userLinkPicture" href="<%= replyPages[i].digests[j].userCreated.url %>"><img class="userPicture" src="<%= replyPages[i].digests[j].userCreated.imageUrl %>" width="16" height="16"></a>
+          <a href="<%= replyPages[i].digests[j].userCreated.url %>"><%= replyPages[i].digests[j].userCreated.username %></a>
+          <% if (smartDate == '__live__') { %>
+          <abbr class="timeago" title="<%= (new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000)).toISOString() %>">
+            <%= new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000).toLocaleString() %>
+          </abbr>
+          <% } else { %>
+            <%- smartDate %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+          <i class="fa fa-trash-o contextual-command delete-reply ws-tip" title="Delete Reply"></i>
+          <% } %>
+          </p>
+        <div class="commentContent"><%= replyPages[i].digests[j].body %></div>
+      </div>
+        <% } %>
+      <% } %>
+
+      <form class="reply commentReply">
+        <div class="form-group">
+          <textarea name="reply" placeholder="Reply" class="form-control" /></textarea>
+        </div>
+        <div class="btn-toolbar">
+          <button type="submit" class="btn btn-primary btn-sm" name="go" value="1">Post</button>
+
+          <% if (ws.context.user.id) { %>
+            <% if (monitored) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip active" title="You are monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip" title="You are not monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+            <% if (locked) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip active" title="Replies are not allowed."><i class="fa fa-lock"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip" title="Replies are allowed."><i class="fa fa-lock"></i></button>
+            <% } %>
+          <% } %>
+
+          <i class="fa fa-spinner fa-spin spinner pull-right hidden"></i>
+        </div>
+      </form>
+   </div>
+
+   
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-composer-template">
+<div class="ws-box commentView">
+  <div class="commentComposer">
+    <div class="comment-close">
+      &nbsp;<button type="button" class="close closeme" aria-hidden="true"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="commentHeader">
+      <p class="ws-stream-meta command-context">
+        <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+        <a href="#" onclick="return false;"><%= userCreated.username %></a>
+      </p>
+    </div>
+    <div class="commentBody">
+      <textarea name="comment" class="compose form-control" placeholder="Comment"/></textarea><br/>
+      <div class="btn-toolbar">
+        <button type="button" class="btn btn-default btn-sm monitored active pull-right" style="margin-left: 6px" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-eye"></i></button>
+        <button type="button" class="btn btn-default btn-sm locked btn-toggle pull-right" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-lock"></i></button>
+        <button type="button" class="btn btn-primary btn-sm closeme">Save</button>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-proxy-template">
+<div class="comment-proxy">
+  <span class="commentUser">
+  <% if (userCreated) { %>
+    <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+  <% } else { %>
+    <img class="userPicture" src="<%= ws.context.user.imageUrlPrefix %>sm.jpg" width="16" height="16">
+  <% } %>
+  </span>
+  <span class="commentReplies"><%= 1 + _(replyPages).reduce(function(memo, page){ return memo + page.digests.length; }, 0) %></span>
+</div>
+</script>
+
+
+
+
+
+
+
+<div class="commentContainer">
+  <div class="commentSubject">
+  <div class="wiki wikiPage" id="content_view">
+  <!-- ws:start:WikiTextHeadingRule:0:&lt;h2&gt; --><h2 id="toc0"><a name="x-31 January Organizers Meeting"></a><!-- ws:end:WikiTextHeadingRule:0 --><strong>31 January Organizers Meeting</strong></h2>
+ <!-- ws:start:WikiTextHeadingRule:2:&lt;h2&gt; --><h2 id="toc1"><a name="x-Notes"></a><!-- ws:end:WikiTextHeadingRule:2 --><strong>Notes</strong></h2>
+ <strong>(see below for easier to read version)</strong><br />
+<br />
+2011-01-31 14:41:55 [Login] dearmyrtle<br />
+2011-01-31 14:41:55 [IP] dearmyrtle: 66.133.97.196<br />
+2011-01-31 14:41:56 [Join Room] dearmyrtle -&gt; Organizers Meeting<br />
+2011-01-31 14:45:10 [Disconnect] dearmyrtle<br />
+2011-01-31 15:48:11 [Login] dearmyrtle<br />
+2011-01-31 15:48:11 [IP] dearmyrtle: 66.133.97.196<br />
+2011-01-31 15:48:12 [Join Room] dearmyrtle -&gt; Chat Lobby<br />
+2011-01-31 15:49:38 [Exit Room] dearmyrtle -&gt; Chat Lobby<br />
+2011-01-31 15:49:38 [Join Room] dearmyrtle -&gt; Organizers Meeting<br />
+2011-01-31 15:56:18 [Join Room] Andy_Hatchett -&gt; Chat Lobby<br />
+2011-01-31 15:56:18 [Login] Andy_Hatchett<br />
+2011-01-31 15:56:18 [IP] Andy_Hatchett: 98.193.175.25<br />
+2011-01-31 15:56:32 [Exit Room] Andy_Hatchett -&gt; Chat Lobby<br />
+2011-01-31 15:56:33 [Join Room] Andy_Hatchett -&gt; Organizers Meeting<br />
+2011-01-31 15:59:27 [Login] GeneJ<br />
+2011-01-31 15:59:27 [IP] GeneJ: 68.227.232.72<br />
+2011-01-31 15:59:27 [Join Room] GeneJ -&gt; Organizers Meeting<br />
+2011-01-31 15:59:45 [Message] dearmyrtle -&gt; Organizers Meeting: Hello everyone!<br />
+2011-01-31 15:59:51 [Message] dearmyrtle -&gt; Organizers Meeting: looks like it's about that time.<br />
+2011-01-31 16:00:04 [Message] dearmyrtle -&gt; Organizers Meeting: Here's what Tamura and I have been doing this past little while....<br />
+2011-01-31 16:00:11 [Message] GeneJ -&gt; Organizers Meeting: Hi Myrt. Sorry to hear you aren't feeling well.<br />
+2011-01-31 16:00:13 [Message] dearmyrtle -&gt; Organizers Meeting: 1. Added ourselves to our Skype Contacts....<br />
+2011-01-31 16:00:14 [Message] Andy_Hatchett -&gt; Organizers Meeting: Yep.. Feeling better?<br />
+2011-01-31 16:00:26 [Message] dearmyrtle -&gt; Organizers Meeting: 2. Worked with Google Wave...<br />
+2011-01-31 16:00:47 [Message] dearmyrtle -&gt; Organizers Meeting: and we're ready to do a test of the SKYPE I don't have Andy's skype name...<br />
+2011-01-31 16:01:03 [Message] dearmyrtle -&gt; Organizers Meeting: can you give it to me, then I will add you to my contacts.<br />
+2011-01-31 16:01:06 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:01:07 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:01:10 [Login] TamuraJones<br />
+2011-01-31 16:01:10 [IP] TamuraJones: 83.163.6.84<br />
+2011-01-31 16:01:11 [Join Room] TamuraJones -&gt; Organizers Meeting<br />
+2011-01-31 16:01:22 [Message] Andy_Hatchett -&gt; Organizers Meeting: I don't Have a Skype name that I know of!<br />
+2011-01-31 16:01:25 [Login] ttwetmore<br />
+2011-01-31 16:01:25 [IP] ttwetmore: 70.19.135.34<br />
+2011-01-31 16:01:26 [Join Room] ttwetmore -&gt; Organizers Meeting<br />
+2011-01-31 16:01:31 [Message] dearmyrtle -&gt; Organizers Meeting: hello Tom...<br />
+2011-01-31 16:01:37 [Message] Andy_Hatchett -&gt; Organizers Meeting: Just use agh3rd :)<br />
+2011-01-31 16:01:45 [Message] ttwetmore -&gt; Organizers Meeting: hi<br />
+2011-01-31 16:02:00 [Message] dearmyrtle -&gt; Organizers Meeting: we're going to go over to SKYPE and test out that interface for a voice chat that can handle about 200+ attendees at no cost.<br />
+2011-01-31 16:02:11 [Message] dearmyrtle -&gt; Organizers Meeting: tom do you have a skype account?<br />
+2011-01-31 16:02:17 [Message] dearmyrtle -&gt; Organizers Meeting: My name there is DearMYRTLE<br />
+2011-01-31 16:02:34 [Message] ttwetmore -&gt; Organizers Meeting: I may; I'll have to go through some stuff to remember<br />
+2011-01-31 16:02:45 [Message] dearmyrtle -&gt; Organizers Meeting: agh3rd is not a skype name<br />
+2011-01-31 16:02:49 [Message] dearmyrtle -&gt; Organizers Meeting: sorry Andy<br />
+2011-01-31 16:03:14 [Message] dearmyrtle -&gt; Organizers Meeting: Tamura and I have been experimenting, and I find Google Wave like that program you showed me GeneJ... where we could edit in real time.<br />
+2011-01-31 16:03:22 [Message] dearmyrtle -&gt; Organizers Meeting: and see what the other one was typing.<br />
+2011-01-31 16:03:30 [Message] dearmyrtle -&gt; Organizers Meeting: and still follow it over time.<br />
+2011-01-31 16:03:39 [Message] ttwetmore -&gt; Organizers Meeting: looks like i do<br />
+2011-01-31 16:03:40 [Message] GeneJ -&gt; Organizers Meeting: kk<br />
+2011-01-31 16:03:47 [Message] Andy_Hatchett -&gt; Organizers Meeting: ok- just assign me one :) I don't even know how Skype works :)<br />
+2011-01-31 16:03:50 [Message] dearmyrtle -&gt; Organizers Meeting: GeneJ what was that program.<br />
+2011-01-31 16:04:02 [Message] dearmyrtle -&gt; Organizers Meeting: you have to download skype and register Andy.<br />
+2011-01-31 16:04:05 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:04:05 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:04:17 [Join Room] Now_Recording -&gt; Chat Lobby<br />
+2011-01-31 16:04:17 [IP] Now_Recording: 98.193.175.25<br />
+2011-01-31 16:04:17 [Login] Now_Recording<br />
+2011-01-31 16:04:19 [Message] dearmyrtle -&gt; Organizers Meeting: skype is free voice for multiple individuals<br />
+2011-01-31 16:04:21 [Exit Room] Now_Recording -&gt; Chat Lobby<br />
+2011-01-31 16:04:21 [Join Room] Now_Recording -&gt; Organizers Meeting<br />
+2011-01-31 16:04:26 [Message] GeneJ -&gt; Organizers Meeting: Andy a busy boy!!<br />
+2011-01-31 16:04:41 [Message] dearmyrtle -&gt; Organizers Meeting: I see you already have your other computer working.<br />
+2011-01-31 16:04:41 [Message] dearmyrtle -&gt; Organizers Meeting: and then video for one-to-one.<br />
+2011-01-31 16:04:50 [Message] dearmyrtle -&gt; Organizers Meeting: We actually started on time.<br />
+2011-01-31 16:05:00 [Message] TamuraJones -&gt; Organizers Meeting: There is an Andy Hatchett in Skype. Evil twin?<br />
+2011-01-31 16:05:09 [Message] dearmyrtle -&gt; Organizers Meeting: the purpose of this organizers meeting is to attempt to use SKPE<br />
+2011-01-31 16:05:13 [Message] dearmyrtle -&gt; Organizers Meeting: SKYPE<br />
+2011-01-31 16:05:25 [Message] Andy_Hatchett -&gt; Organizers Meeting: Yes- unfortunately at the earlier meeting the video recorded great but no audio for some reason :(<br />
+2011-01-31 16:05:26 [Message] dearmyrtle -&gt; Organizers Meeting: and then Google Wave to see if that free space would be useful for our purposes.<br />
+2011-01-31 16:05:35 [Message] GeneJ -&gt; Organizers Meeting: lol<br />
+2011-01-31 16:05:40 [Message] dearmyrtle -&gt; Organizers Meeting: good... I got a little teary-eyed there.<br />
+2011-01-31 16:06:05 [Message] dearmyrtle -&gt; Organizers Meeting: andy are you in th eUK?<br />
+2011-01-31 16:06:12 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:06:12 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:06:29 [Disconnect] Now_Recording<br />
+2011-01-31 16:06:30 [Message] dearmyrtle -&gt; Organizers Meeting: or someone with the exact same name out of 789 million people on Skype.<br />
+2011-01-31 16:06:45 [Join Room] Now_Recording -&gt; Chat Lobby<br />
+2011-01-31 16:06:45 [Login] Now_Recording<br />
+2011-01-31 16:06:45 [IP] Now_Recording: 98.193.175.25<br />
+2011-01-31 16:07:00 [Message] dearmyrtle -&gt; Organizers Meeting: ok so Tom, did you find your skype account name?<br />
+2011-01-31 16:07:02 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:07:02 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:07:27 [Message] dearmyrtle -&gt; Organizers Meeting: I do like the idea of getting more done during our developers meetings -- voting on what is discussed and announced as voting for the next monday.<br />
+2011-01-31 16:07:28 [Message] GeneJ -&gt; Organizers Meeting: agh3rd still not showing up when I search skype.<br />
+2011-01-31 16:07:46 [Message] ttwetmore -&gt; Organizers Meeting: ttwetmore<br />
+2011-01-31 16:08:17 [Message] Andy_Hatchett -&gt; Organizers Meeting: Am I supposed to do something- call a number or something?<br />
+2011-01-31 16:08:18 [Message] dearmyrtle -&gt; Organizers Meeting: I've scheduled a developers meeting for Monday the 7th since the 14this Valentine's day.<br />
+2011-01-31 16:08:19 [Message] dearmyrtle -&gt; Organizers Meeting: OK....<br />
+2011-01-31 16:08:23 [Message] dearmyrtle -&gt; Organizers Meeting: www.skype.com<br />
+2011-01-31 16:08:27 [Exit Room] Now_Recording -&gt; Chat Lobby<br />
+2011-01-31 16:08:27 [Join Room] Now_Recording -&gt; Organizers Meeting<br />
+2011-01-31 16:08:29 [Message] dearmyrtle -&gt; Organizers Meeting: then download the program for your platform<br />
+2011-01-31 16:08:39 [Message] GeneJ -&gt; Organizers Meeting: I found you, Tom; Tamura found me.<br />
+2011-01-31 16:08:41 [Message] dearmyrtle -&gt; Organizers Meeting: then follow the screen prompts during the install to sigh up.<br />
+2011-01-31 16:08:50 [Message] dearmyrtle -&gt; Organizers Meeting: sigh=sign up.<br />
+2011-01-31 16:08:54 [Message] dearmyrtle -&gt; Organizers Meeting: sorry...<br />
+2011-01-31 16:08:56 [Message] GeneJ -&gt; Organizers Meeting: &lt;&lt;is Marissab on Skype<br />
+2011-01-31 16:09:04 [Message] dearmyrtle -&gt; Organizers Meeting: tom I just sent you a request to add me to your contact list.<br />
+2011-01-31 16:09:07 [Message] GeneJ -&gt; Organizers Meeting: I am marissab on skype<br />
+2011-01-31 16:09:12 [Message] dearmyrtle -&gt; Organizers Meeting: And once we get andy there,<br />
+2011-01-31 16:09:15 [IP] louiskessler: 207.161.215.99<br />
+2011-01-31 16:09:15 [Login] louiskessler<br />
+2011-01-31 16:09:16 [Join Room] louiskessler -&gt; Chat Lobby<br />
+2011-01-31 16:09:23 [Join Room] louiskessler -&gt; Organizers Meeting<br />
+2011-01-31 16:09:23 [Exit Room] louiskessler -&gt; Chat Lobby<br />
+2011-01-31 16:09:53 [Message] ttwetmore -&gt; Organizers Meeting: (I have never used Skype, but it looks like I've just added three contacts)<br />
+2011-01-31 16:10:10 [Message] dearmyrtle -&gt; Organizers Meeting: Hello Louis -- we're going to experiment on Skype.<br />
+2011-01-31 16:10:14 [Message] dearmyrtle -&gt; Organizers Meeting: (WELCOME home from work!)<br />
+2011-01-31 16:10:16 [Message] dearmyrtle -&gt; Organizers Meeting: ;)<br />
+2011-01-31 16:10:36 [Message] louiskessler -&gt; Organizers Meeting: I've never used Skype either. I'll have to ask my daughter how to use it. :-)<br />
+2011-01-31 16:11:03 [Message] louiskessler -&gt; Organizers Meeting: Are you using it now for this meeting?<br />
+2011-01-31 16:11:20 [Message] dearmyrtle -&gt; Organizers Meeting: I ahve Tamura, GeneJ, Russ and Tom in a group in my contact group<br />
+2011-01-31 16:11:26 [Message] dearmyrtle -&gt; Organizers Meeting: yes louis -- do you have skype...<br />
+2011-01-31 16:11:46 [Message] dearmyrtle -&gt; Organizers Meeting: our agenda calls for experimenting with skype for larger than 16 attendees ....<br />
+2011-01-31 16:11:52 [Disconnect [ERR]] Andy_Hatchett<br />
+2011-01-31 16:11:54 [Message] dearmyrtle -&gt; Organizers Meeting: and to use the Wiki as a place to write.<br />
+2011-01-31 16:11:54 [Message] louiskessler -&gt; Organizers Meeting: No. I don't have it yet. I can go to install it now.<br />
+2011-01-31 16:11:56 [Message] Now_Recording -&gt; Organizers Meeting: ok- Firefox crashed :(<br />
+2011-01-31 16:12:00 [Message] dearmyrtle -&gt; Organizers Meeting: oh dear.<br />
+2011-01-31 16:12:13 [Message] dearmyrtle -&gt; Organizers Meeting: that was my problem with Second Life last night. Some days are just like that.<br />
+2011-01-31 16:12:22 [Message] dearmyrtle -&gt; Organizers Meeting: our goal is to find a cheaper alternative (free)<br />
+2011-01-31 16:12:41 [Message] dearmyrtle -&gt; Organizers Meeting: rather than up my attendance to 100 max for another 50 bucjs per month.<br />
+2011-01-31 16:13:00 [Message] dearmyrtle -&gt; Organizers Meeting: I jsut spoke with tom via skype...<br />
+2011-01-31 16:13:06 [Message] dearmyrtle -&gt; Organizers Meeting: so he has it working just fine.<br />
+2011-01-31 16:13:11 [Message] dearmyrtle -&gt; Organizers Meeting: didn't take long, did it?<br />
+2011-01-31 16:13:28 [Message] dearmyrtle -&gt; Organizers Meeting: Louis -- did you see our meeting notes from this morning's Developers Meeting?<br />
+2011-01-31 16:13:51 [Message] dearmyrtle -&gt; Organizers Meeting: we decided to do all voting on the wiki, so it isn't dependent on anyone's private survey monkey account -- or their schedule.<br />
+2011-01-31 16:14:00 [Message] dearmyrtle -&gt; Organizers Meeting: we also agreed on the internationalization goal.<br />
+2011-01-31 16:14:33 [Message] dearmyrtle -&gt; Organizers Meeting: we also agreed to have Mon by 5pm posting of proposed goals... (or other items to vote on)<br />
+2011-01-31 16:14:42 [Message] louiskessler -&gt; Organizers Meeting: I missed the voting item (thought you were going to do it at the developers meeting).<br />
+2011-01-31 16:14:54 [Message] louiskessler -&gt; Organizers Meeting: I saw the internationaliation goal accepted.<br />
+2011-01-31 16:14:55 [Message] dearmyrtle -&gt; Organizers Meeting: with a link to that proposal page BACK ON THE AGENDA item.<br />
+2011-01-31 16:14:58 [Message] dearmyrtle -&gt; Organizers Meeting: good.<br />
+2011-01-31 16:15:08 [Message] dearmyrtle -&gt; Organizers Meeting: so you are fairly up to speed.<br />
+2011-01-31 16:15:25 [Message] dearmyrtle -&gt; Organizers Meeting: We are attempting to make it possible for things NOT to come to a grinding halt when I am traveling.<br />
+2011-01-31 16:15:38 [Message] dearmyrtle -&gt; Organizers Meeting: I do so love to moderate --- slice through to the meat of things<br />
+2011-01-31 16:15:40 [Message] dearmyrtle -&gt; Organizers Meeting: and such<br />
+2011-01-31 16:15:47 [Message] dearmyrtle -&gt; Organizers Meeting: and see votes done in real time.<br />
+2011-01-31 16:15:58 [Message] dearmyrtle -&gt; Organizers Meeting: unfortunately few can attend developers meetings<br />
+2011-01-31 16:16:29 [Login] dearmyrtle<br />
+2011-01-31 16:16:29 [IP] dearmyrtle: 66.133.97.196<br />
+2011-01-31 16:16:30 [Join Room] dearmyrtle -&gt; Chat Lobby<br />
+2011-01-31 16:16:32 [Join Room] dearmyrtle -&gt; Organizers Meeting<br />
+2011-01-31 16:16:32 [Exit Room] dearmyrtle -&gt; Chat Lobby<br />
+2011-01-31 16:16:48 [Message] dearmyrtle -&gt; Organizers Meeting: any more skype names to add? Louis -- Andy?<br />
+2011-01-31 16:16:57 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:16:57 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:16:58 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:17:10 [Message] Now_Recording -&gt; Organizers Meeting: ok- just added agh3rd to skype.<br />
+2011-01-31 16:17:10 [Message] dearmyrtle -&gt; Organizers Meeting: GeneJ what was that website/program you showed me a while back<br />
+2011-01-31 16:17:12 [Message] dearmyrtle -&gt; Organizers Meeting: ?<br />
+2011-01-31 16:17:16 [Message] dearmyrtle -&gt; Organizers Meeting: kk andy<br />
+2011-01-31 16:17:23 [Message] dearmyrtle -&gt; Organizers Meeting: now Louis... do you have your skype name?<br />
+2011-01-31 16:17:30 [Message] GeneJ -&gt; Organizers Meeting: I'll pull it up .. believe it's typewith.me<br />
+2011-01-31 16:17:51 [Message] louiskessler -&gt; Organizers Meeting: ... still installing<br />
+2011-01-31 16:17:55 [Message] dearmyrtle -&gt; Organizers Meeting: ok<br />
+2011-01-31 16:17:57 [Message] dearmyrtle -&gt; Organizers Meeting: no problem<br />
+2011-01-31 16:18:14 [Message] dearmyrtle -&gt; Organizers Meeting: Andy -- I just sent you a request to let me add you to my contact list on Skype.<br />
+2011-01-31 16:18:20 [Message] GeneJ -&gt; Organizers Meeting: yes. <!-- ws:start:WikiTextUrlRule:733:http://typewith.me --><a class="wiki_link_ext" href="http://typewith.me" rel="nofollow">http://typewith.me</a><!-- ws:end:WikiTextUrlRule:733 --><br />
+2011-01-31 16:18:33 [Message] dearmyrtle -&gt; Organizers Meeting: and the limit on Typewith.me is HOW many at a time?<br />
+2011-01-31 16:18:50 [Message] dearmyrtle -&gt; Organizers Meeting: we are thinking Google Wave can handle a larger group viewing a page at once.<br />
+2011-01-31 16:19:02 [Message] Now_Recording -&gt; Organizers Meeting: ok- see you and Tamura<br />
+2011-01-31 16:19:03 [Message] dearmyrtle -&gt; Organizers Meeting: but I could be wrong.... wasn't it something like 25 total? GeneJ?<br />
+2011-01-31 16:19:12 [Message] GeneJ -&gt; Organizers Meeting: I don't know. You mentioned 25 earlier today<br />
+2011-01-31 16:19:52 [Message] dearmyrtle -&gt; Organizers Meeting: That numer sticks in my mind, yet their website isn't forthcoming ...let me look deeper.<br />
+2011-01-31 16:19:59 [Message] Now_Recording -&gt; Organizers Meeting: Now what? do I click caL? VIDEO CALL??<br />
+2011-01-31 16:20:06 [Message] dearmyrtle -&gt; Organizers Meeting: Andy -- wait<br />
+2011-01-31 16:20:28 [Message] Now_Recording -&gt; Organizers Meeting: Ok- i'm god at that :) har!<br />
+2011-01-31 16:20:37 [Message] dearmyrtle -&gt; Organizers Meeting: I am waiting for lewis.<br />
+2011-01-31 16:20:37 [Message] Now_Recording -&gt; Organizers Meeting: err--- good!<br />
+2011-01-31 16:20:45 [Message] dearmyrtle -&gt; Organizers Meeting: LOL<br />
+2011-01-31 16:20:47 [Message] dearmyrtle -&gt; Organizers Meeting: Louis.<br />
+2011-01-31 16:21:01 [Message] louiskessler -&gt; Organizers Meeting: Arrrgh. I hate it when both lkessler and louiskessler are taken. But my Skype name is: louis.kessler<br />
+2011-01-31 16:21:44 [Message] dearmyrtle -&gt; Organizers Meeting: okie dokey<br />
+2011-01-31 16:22:28 [Message] dearmyrtle -&gt; Organizers Meeting: ok, as soon as you can accept me as a contact, I'll add you to the list.<br />
+2011-01-31 16:22:37 [Message] dearmyrtle -&gt; Organizers Meeting: so we can practice the audio portion....<br />
+2011-01-31 16:22:47 [Message] dearmyrtle -&gt; Organizers Meeting: when all else fails come back to this room... OK everyone?<br />
+2011-01-31 16:23:30 [Message] dearmyrtle -&gt; Organizers Meeting: ok, I see RUSS and LOUIS are not online with Skype... I don't think Russ is here anyway.<br />
+2011-01-31 16:23:32 [Message] GeneJ -&gt; Organizers Meeting: 3rd party reports limit on Typewith.me is 15 persons.<br />
+2011-01-31 16:23:46 [Message] dearmyrtle -&gt; Organizers Meeting: ok --- so that puts it out of the running....<br />
+2011-01-31 16:23:55 [Message] dearmyrtle -&gt; Organizers Meeting: thanks, Genej you found that very quickly.<br />
+2011-01-31 16:23:58 [Message] dearmyrtle -&gt; Organizers Meeting: I appreciate it.<br />
+2011-01-31 16:24:08 [Message] GeneJ -&gt; Organizers Meeting: <!-- ws:start:WikiTextUrlRule:734:http://www.nabt.org/blog/2010/07/31/type-with-me/ --><a class="wiki_link_ext" href="http://www.nabt.org/blog/2010/07/31/type-with-me/" rel="nofollow">http://www.nabt.org/blog/2010/07/31/type-with-me/</a><!-- ws:end:WikiTextUrlRule:734 --><br />
+2011-01-31 16:24:25 [Message] dearmyrtle -&gt; Organizers Meeting: louis --- please accept my CONTACT invitation over on SKYPE... then await my call....<br />
+2011-01-31 16:24:42 [Message] dearmyrtle -&gt; Organizers Meeting: I'll have all of you on the call at once... so no darth vader breathing. LOL.<br />
+2011-01-31 16:25:24 [Message] dearmyrtle -&gt; Organizers Meeting: can you see where to accept my contact, Louis? (In Skype?)<br />
+2011-01-31 16:25:50 [Message] dearmyrtle -&gt; Organizers Meeting: GeneJ I wonder why your little icon is red, and the rest of us are blue?<br />
+2011-01-31 16:26:03 [Message] GeneJ -&gt; Organizers Meeting: donno<br />
+2011-01-31 16:26:06 [Message] louiskessler -&gt; Organizers Meeting: Tom tried calling me. I heard him, but I saw my mike wasn't yet connected.<br />
+2011-01-31 16:26:16 [Message] dearmyrtle -&gt; Organizers Meeting: kk<br />
+2011-01-31 16:26:17 [Message] Now_Recording -&gt; Organizers Meeting: No video without webcam right?<br />
+2011-01-31 16:26:30 [Message] dearmyrtle -&gt; Organizers Meeting: no video on group calls.<br />
+2011-01-31 16:26:45 [Message] dearmyrtle -&gt; Organizers Meeting: to my knowledge --- its limited to one on one skype calls.<br />
+2011-01-31 16:26:47 [Message] dearmyrtle -&gt; Organizers Meeting: are we ready?<br />
+2011-01-31 16:26:55 [Message] ttwetmore -&gt; Organizers Meeting: yes, I tried to call Louis, heard nothing, so hung up.<br />
+2011-01-31 16:26:59 [Message] Now_Recording -&gt; Organizers Meeting: I guess!<br />
+2011-01-31 16:27:00 [Message] ttwetmore -&gt; Organizers Meeting: ready, i think<br />
+2011-01-31 16:28:20 [Message] dearmyrtle -&gt; Organizers Meeting: ok need tamura and andy<br />
+2011-01-31 16:28:56 [Message] dearmyrtle -&gt; Organizers Meeting: come on over to skype...<br />
+2011-01-31 16:29:26 [Message] TamuraJones -&gt; Organizers Meeting: I am on Skype already...<br />
+2011-01-31 16:29:40 [Message] dearmyrtle -&gt; Organizers Meeting: i haveinitiated a call..<br />
+2011-01-31 16:29:55 [Message] Now_Recording -&gt; Organizers Meeting: I see Tamura and Myrtle- I'm there aren't I?<br />
+2011-01-31 16:30:08 [Message] TamuraJones -&gt; Organizers Meeting: Skype is not responding... LOL ...let's retry<br />
+2011-01-31 16:30:37 [Message] Now_Recording -&gt; Organizers Meeting: I see Tom with a little phone headset :)<br />
+2011-01-31 16:31:02 [Message] TamuraJones -&gt; Organizers Meeting: I am there now<br />
+2011-01-31 16:32:32 [Message] TamuraJones -&gt; Organizers Meeting: Skype &quot;not responding again&quot;...<br />
+2011-01-31 16:34:09 [Message] Now_Recording -&gt; Organizers Meeting: Welll- there was something therte for 30 seconds anyway!<br />
+2011-01-31 16:35:06 [Message] ttwetmore -&gt; Organizers Meeting: got dumped<br />
+2011-01-31 16:38:24 [Message] Now_Recording -&gt; Organizers Meeting: Dumped by Skype- again.<br />
+2011-01-31 16:39:28 [Message] GeneJ -&gt; Organizers Meeting: kk<br />
+2011-01-31 16:39:54 [Message] Now_Recording -&gt; Organizers Meeting: ok= back in room.<br />
+2011-01-31 16:40:02 [Message] dearmyrtle -&gt; Organizers Meeting: wow -- that was a bit disconcerting wasn't it?<br />
+2011-01-31 16:40:06 [Message] GeneJ -&gt; Organizers Meeting: Yes.<br />
+2011-01-31 16:40:18 [Message] dearmyrtle -&gt; Organizers Meeting: It makes my goToMeeting.com interface sound OK after all...<br />
+2011-01-31 16:40:25 [Message] TamuraJones -&gt; Organizers Meeting: I filled in the Skype feedback form<br />
+2011-01-31 16:40:39 [Message] GeneJ -&gt; Organizers Meeting: tyty Tamura<br />
+2011-01-31 16:40:45 [Message] dearmyrtle -&gt; Organizers Meeting: good for you -- it isn't good for conference calls...<br />
+2011-01-31 16:40:55 [Message] dearmyrtle -&gt; Organizers Meeting: there are telephone conference call capabilitites...<br />
+2011-01-31 16:40:59 [Message] dearmyrtle -&gt; Organizers Meeting: with other services<br />
+2011-01-31 16:41:06 [Message] louiskessler -&gt; Organizers Meeting: Do you think anyone at Skype will read the feedback form?<br />
+2011-01-31 16:41:07 [Message] dearmyrtle -&gt; Organizers Meeting: I've participated in large voice chats<br />
+2011-01-31 16:41:18 [Message] dearmyrtle -&gt; Organizers Meeting: involving placing a long distnace call.<br />
+2011-01-31 16:41:25 [Message] TamuraJones -&gt; Organizers Meeting: It is multiple choice.... adds to their statistics.<br />
+2011-01-31 16:41:49 [Message] dearmyrtle -&gt; Organizers Meeting: I don't know Louis --- today FamilySearch sent me a deluge of emails from my feedback about their website problems in my blog post Sunday. So GO FOGURE.<br />
+2011-01-31 16:41:52 [Message] dearmyrtle -&gt; Organizers Meeting: FIGURE.<br />
+2011-01-31 16:41:57 [Message] dearmyrtle -&gt; Organizers Meeting: so what shall we do?<br />
+2011-01-31 16:42:30 [Message] dearmyrtle -&gt; Organizers Meeting: If we go forward with the GoToMeeting larger meeting on my account, I'd trust several of you with logging in in my place if I were not able to attend.<br />
+2011-01-31 16:42:40 [Message] TamuraJones -&gt; Organizers Meeting: The experiment was a success. We have a definite result; Skype is not good enough.<br />
+2011-01-31 16:42:43 [Message] dearmyrtle -&gt; Organizers Meeting: I just want this group to go forward with decision making even on days when I cannot attend.<br />
+2011-01-31 16:42:46 [Message] dearmyrtle -&gt; Organizers Meeting: Good point&amp;gt;<br />
+2011-01-31 16:43:03 [Message] dearmyrtle -&gt; Organizers Meeting: thanks for participating in that tes.t<br />
+2011-01-31 16:43:05 [Message] Now_Recording -&gt; Organizers Meeting: Like I said- I'll kick in $25/ mo if some other can pick up the rest and we go to the 100 person meeting toom level.'<br />
+2011-01-31 16:43:22 [Message] dearmyrtle -&gt; Organizers Meeting: ok, Andy, I'd give you my Login info then...<br />
+2011-01-31 16:43:54 [Message] dearmyrtle -&gt; Organizers Meeting: shall we consider that as an option?<br />
+2011-01-31 16:43:59 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:43:59 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:44:02 [Message] Now_Recording -&gt; Organizers Meeting: err-- I'm not sure that I'm the &quot;run-a meeting&quot; type- if you know what I mean :)<br />
+2011-01-31 16:44:12 [Message] dearmyrtle -&gt; Organizers Meeting: not enjoying moderating?<br />
+2011-01-31 16:44:22 [Message] dearmyrtle -&gt; Organizers Meeting: you don't have to moderate -- just open the doors for people so to speak.<br />
+2011-01-31 16:44:30 [Message] GeneJ -&gt; Organizers Meeting: Does anyone have a paypal merchant account?<br />
+2011-01-31 16:44:35 [Message] dearmyrtle -&gt; Organizers Meeting: I don't.<br />
+2011-01-31 16:44:57 [Message] dearmyrtle -&gt; Organizers Meeting: I could set up a Google Checkout.<br />
+2011-01-31 16:45:01 [Message] dearmyrtle -&gt; Organizers Meeting: (I hate paypal.)<br />
+2011-01-31 16:45:02 [Message] Now_Recording -&gt; Organizers Meeting: I'll send Myrt the money direct- I won't use PayPal at all.<br />
+2011-01-31 16:45:07 [Message] dearmyrtle -&gt; Organizers Meeting: kk<br />
+2011-01-31 16:45:20 [Message] dearmyrtle -&gt; Organizers Meeting: are we agreed to go forward with the larger room?<br />
+2011-01-31 16:45:35 [Message] dearmyrtle -&gt; Organizers Meeting: I will up my membership then....<br />
+2011-01-31 16:45:37 [Message] GeneJ -&gt; Organizers Meeting: The larger room makes sense to me.<br />
+2011-01-31 16:46:12 [Message] dearmyrtle -&gt; Organizers Meeting: and andy do you agree to open the doors ???? Sounds like we need another impartial observer to moderate.<br />
+2011-01-31 16:46:23 [Message] dearmyrtle -&gt; Organizers Meeting: (my college debate team stuff is kicking in here!)<br />
+2011-01-31 16:46:33 [Message] dearmyrtle -&gt; Organizers Meeting: it is hard for me to moderate -- as I am so opinionated.<br />
+2011-01-31 16:46:36 [Message] Now_Recording -&gt; Organizers Meeting: ok- I'll open the doors ;)<br />
+2011-01-31 16:46:36 [Message] dearmyrtle -&gt; Organizers Meeting: LOL<br />
+2011-01-31 16:46:41 [Message] dearmyrtle -&gt; Organizers Meeting: thakns, Andy.<br />
+2011-01-31 16:46:51 [Message] louiskessler -&gt; Organizers Meeting: We're all opinionated.<br />
+2011-01-31 16:46:54 [Message] dearmyrtle -&gt; Organizers Meeting: I'll send you wikispaces email with my contact info<br />
+2011-01-31 16:47:05 [Message] dearmyrtle -&gt; Organizers Meeting: we need another 25$ us monthly... that is a lot of money.<br />
+2011-01-31 16:47:15 [Message] GeneJ -&gt; Organizers Meeting: afk<br />
+2011-01-31 16:47:18 [Message] Now_Recording -&gt; Organizers Meeting: LOL!! *You* are opinionated??? Have you ever read my Ancestry posts??? !!!!<br />
+2011-01-31 16:47:25 [Message] dearmyrtle -&gt; Organizers Meeting: I think the pay pal or google cart to take up the slack might help.<br />
+2011-01-31 16:47:35 [Message] dearmyrtle -&gt; Organizers Meeting: hehehehee.... I know! LOL.<br />
+2011-01-31 16:47:42 [Message] dearmyrtle -&gt; Organizers Meeting: you should read Tamura's letter to Tim.<br />
+2011-01-31 16:47:47 [Message] louiskessler -&gt; Organizers Meeting: To be honest, we shouldn't be putting in our own funds. We need a sponsor ... but still need to remain independent.<br />
+2011-01-31 16:48:01 [Message] dearmyrtle -&gt; Organizers Meeting: yes, you should see Tamura's letter.<br />
+2011-01-31 16:48:06 [Message] dearmyrtle -&gt; Organizers Meeting: to tim.<br />
+2011-01-31 16:48:18 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:48:19 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:48:19 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:48:19 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:54:40 [Message] dearmyrtle -&gt; Organizers Meeting: OK -- so should we ask OpenGen to host our meetings?<br />
+2011-01-31 16:54:47 [Message] dearmyrtle -&gt; Organizers Meeting: Vote you ALL....<br />
+2011-01-31 16:54:48 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:54:48 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:55:02 [Message] dearmyrtle -&gt; Organizers Meeting: this is the organizers meeting... we don't need full bg wiki approval.<br />
+2011-01-31 16:55:04 [Message] louiskessler -&gt; Organizers Meeting: Yes.<br />
+2011-01-31 16:55:12 [Message] GeneJ -&gt; Organizers Meeting: I vote that &quot;I can live with it&quot; if BG takes OpenGen up on generous offer.<br />
+2011-01-31 16:55:24 [Message] Now_Recording -&gt; Organizers Meeting: &amp;lt;--- can live with anything... except Skype ;)<br />
+2011-01-31 16:55:30 [Message] dearmyrtle -&gt; Organizers Meeting: good point.<br />
+2011-01-31 16:55:30 [Message] GeneJ -&gt; Organizers Meeting: LOL<br />
+2011-01-31 16:55:32 [Message] TamuraJones -&gt; Organizers Meeting: If you hadn't noticed yet, I never vote :-)<br />
+2011-01-31 16:55:50 [Message] dearmyrtle -&gt; Organizers Meeting: you are opinionated AND non-voting -- wow, what a combination.<br />
+2011-01-31 16:56:18 [Message] dearmyrtle -&gt; Organizers Meeting: I am NOW SEEING that we should ask OPENGEN if they are still willing to host our BG Developers meetings.<br />
+2011-01-31 16:56:21 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:56:21 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:56:22 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:56:22 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 16:56:27 [Message] ttwetmore -&gt; Organizers Meeting: can live with it unless it becomes clear we shouldn't<br />
+2011-01-31 16:56:28 [Message] dearmyrtle -&gt; Organizers Meeting: BEGIN log again.<br />
+2011-01-31 16:56:34 [Message] TamuraJones -&gt; Organizers Meeting: No need to vote, is there? After all, my arguments sway you all ;-)<br />
+2011-01-31 16:56:46 [Message] GeneJ -&gt; Organizers Meeting: )<br />
+2011-01-31 16:56:53 [Message] dearmyrtle -&gt; Organizers Meeting: This is the first time I have ever edited the log except to remove private comments betwene people (BTW I can see them all!)<br />
+2011-01-31 16:57:13 [Message] dearmyrtle -&gt; Organizers Meeting: (in the log!)<br />
+2011-01-31 16:57:15 [Message] dearmyrtle -&gt; Organizers Meeting: ok<br />
+2011-01-31 16:57:19 [Message] dearmyrtle -&gt; Organizers Meeting: nuff said on that.<br />
+2011-01-31 16:57:25 [Message] dearmyrtle -&gt; Organizers Meeting: then we can go forth with the various<br />
+2011-01-31 16:57:25 [Message] Now_Recording -&gt; Organizers Meeting: Edit all you want- I've got the recording ;)<br />
+2011-01-31 16:57:32 [Message] dearmyrtle -&gt; Organizers Meeting: Agenda items<br />
+2011-01-31 16:57:34 [Message] TamuraJones -&gt; Organizers Meeting: LOL<br />
+2011-01-31 16:57:47 [Message] louiskessler -&gt; Organizers Meeting: I have to leave in 5 minutes<br />
+2011-01-31 16:57:50 [Message] dearmyrtle -&gt; Organizers Meeting: will be listed by the various wiki members who make proposal pages -- and link them.<br />
+2011-01-31 16:57:51 [Message] dearmyrtle -&gt; Organizers Meeting: ok<br />
+2011-01-31 16:58:11 [Message] dearmyrtle -&gt; Organizers Meeting: and do we have any topics for consideration ... should I set up a meeting for Monday?<br />
+2011-01-31 16:58:19 [Message] dearmyrtle -&gt; Organizers Meeting: so we don't lose any time?<br />
+2011-01-31 16:58:37 [Message] dearmyrtle -&gt; Organizers Meeting: looks like most of our work will be decided in brief voting sessions<br />
+2011-01-31 16:58:41 [Message] dearmyrtle -&gt; Organizers Meeting: called developers meetings<br />
+2011-01-31 16:58:53 [Message] dearmyrtle -&gt; Organizers Meeting: with discussions on the wiki page discussion tab<br />
+2011-01-31 16:58:55 [Message] dearmyrtle -&gt; Organizers Meeting: for that topic<br />
+2011-01-31 16:59:11 [Message] Now_Recording -&gt; Organizers Meeting: Oh- one thng!<br />
+2011-01-31 16:59:16 [Message] dearmyrtle -&gt; Organizers Meeting: tom --- shall we take your GOALS for discussion this coming week?<br />
+2011-01-31 16:59:27 [Message] dearmyrtle -&gt; Organizers Meeting: or????<br />
+2011-01-31 16:59:38 [Message] dearmyrtle -&gt; Organizers Meeting: it is nearly 5pm Pacific time.<br />
+2011-01-31 16:59:50 [Message] dearmyrtle -&gt; Organizers Meeting: I can quickly add it to the agenda page.....<br />
+2011-01-31 16:59:55 [Message] Now_Recording -&gt; Organizers Meeting: Since we now know the approx size of a recorded meeting I can look for a real home for them :)<br />
+2011-01-31 16:59:57 [Message] GeneJ -&gt; Organizers Meeting: I have 500 PT meeting online.<br />
+2011-01-31 17:00:02 [Message] dearmyrtle -&gt; Organizers Meeting: or do you wish a more studied approach.<br />
+2011-01-31 17:00:04 [Message] dearmyrtle -&gt; Organizers Meeting: kk<br />
+2011-01-31 17:00:10 [Message] dearmyrtle -&gt; Organizers Meeting: looks like we need to adjourn....<br />
+2011-01-31 17:00:11 [Message] dearmyrtle -&gt; Organizers Meeting: tom -<br />
+2011-01-31 17:00:15 [Message] louiskessler -&gt; Organizers Meeting: I can make a Feb 7 or Feb 21 meeting, but not Feb 14.<br />
+2011-01-31 17:00:15 [Message] dearmyrtle -&gt; Organizers Meeting: can you hear me?<br />
+2011-01-31 17:00:17 [Message] GeneJ -&gt; Organizers Meeting: So have to run. TYTY all. Hope you feel better, Myrt.<br />
+2011-01-31 17:00:20 [Message] dearmyrtle -&gt; Organizers Meeting: (I mean see this)<br />
+2011-01-31 17:00:21 [Message] dearmyrtle -&gt; Organizers Meeting: thanks<br />
+2011-01-31 17:00:24 [Disconnect] GeneJ<br />
+2011-01-31 17:00:49 [Message] dearmyrtle -&gt; Organizers Meeting: Tom?<br />
+2011-01-31 17:00:51 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 17:00:51 [Message] dearmyrtle -&gt; Organizers Meeting: .<br />
+2011-01-31 17:00:55 [Message] dearmyrtle -&gt; Organizers Meeting: louis has to go as well.<br />
+2011-01-31 17:00:57 [Message] TamuraJones -&gt; Organizers Meeting: Ooohhhh<br />
+2011-01-31 17:01:01 [Message] dearmyrtle -&gt; Organizers Meeting: I guess this wraps it up.<br />
+2011-01-31 17:01:02 [Message] ttwetmore -&gt; Organizers Meeting: here<br />
+2011-01-31 17:01:04 [Message] louiskessler -&gt; Organizers Meeting: I work every second Monday (except when holidays mess them us), so I can make some Developer meetings.<br />
+2011-01-31 17:01:06 [Message] TamuraJones -&gt; Organizers Meeting: message I see in Skype...<br />
+2011-01-31 17:01:13 [Message] dearmyrtle -&gt; Organizers Meeting: kewl.<br />
+2011-01-31 17:01:14 [Message] TamuraJones -&gt; Organizers Meeting: The call host is using an old version of Skype.<br />
+2011-01-31 17:01:23 [Message] TamuraJones -&gt; Organizers Meeting: Might be part of the problem.<br />
+2011-01-31 17:01:33 [Message] dearmyrtle -&gt; Organizers Meeting: i just downloaded the Skype TODAY and installed it on this Windows 7.<br />
+2011-01-31 17:01:38 [Message] dearmyrtle -&gt; Organizers Meeting: so how oculd it be the old version?<br />
+2011-01-31 17:01:56 [Message] Now_Recording -&gt; Organizers Meeting: I downloaed it less than an hur ago!<br />
+2011-01-31 17:02:02 [Message] TamuraJones -&gt; Organizers Meeting: I don't know. Just relaying what it reads there.<br />
+2011-01-31 17:02:12 [Message] dearmyrtle -&gt; Organizers Meeting: OK, I won't kill the messenger.<br />
+2011-01-31 17:02:17 [Message] dearmyrtle -&gt; Organizers Meeting: interesting, but weird.<br />
+2011-01-31 17:02:19 [Message] dearmyrtle -&gt; Organizers Meeting: ok<br />
+2011-01-31 17:02:24 [Message] TamuraJones -&gt; Organizers Meeting: Ah, that is for one of the retries involving some participants.<br />
+2011-01-31 17:02:29 [Message] TamuraJones -&gt; Organizers Meeting: Some ppl have old version.<br />
+2011-01-31 17:02:50 [Message] dearmyrtle -&gt; Organizers Meeting: so if SOME people have the old version, it makes it a bad connection for everyone?<br />
+2011-01-31 17:02:54 [Message] dearmyrtle -&gt; Organizers Meeting: that is terrible.<br />
+2011-01-31 17:03:09 [Message] dearmyrtle -&gt; Organizers Meeting: hmmmm<br />
+2011-01-31 17:03:13 [Message] TamuraJones -&gt; Organizers Meeting: Everyon do Help | Check for Update...<br />
+2011-01-31 17:03:17 [Message] dearmyrtle -&gt; Organizers Meeting: well, I'll contact the OpenGen folks.<br />
+2011-01-31 17:03:23 [Message] dearmyrtle -&gt; Organizers Meeting: right.<br />
+2011-01-31 17:03:45 [Message] dearmyrtle -&gt; Organizers Meeting: &quot;You already have the latest version of Skype.&quot;<br />
+2011-01-31 17:04:08 [Message] louiskessler -&gt; Organizers Meeting: I got that message as well (host using old version) on Skype.<br />
+2011-01-31 17:04:15 [Message] dearmyrtle -&gt; Organizers Meeting: ok... I guess this wraps it up for today.<br />
+2011-01-31 17:04:15 [Message] dearmyrtle -&gt; Organizers Meeting: thanks for experimenting<br />
+2011-01-31 17:04:17 [Message] dearmyrtle -&gt; Organizers Meeting: as Tamura says --- it WAS successful... just not the outcome we desired.<br />
+2011-01-31 17:04:24 [Message] TamuraJones -&gt; Organizers Meeting: Could try with updated Skype later. Just to make sure.<br />
+2011-01-31 17:04:25 [Message] dearmyrtle -&gt; Organizers Meeting: I was the host.<br />
+2011-01-31 17:04:35 [Message] louiskessler -&gt; Organizers Meeting: Do you have the latest version?<br />
+2011-01-31 17:04:39 [Message] dearmyrtle -&gt; Organizers Meeting: yes<br />
+2011-01-31 17:04:42 [Message] ttwetmore -&gt; Organizers Meeting: getting latest now<br />
+2011-01-31 17:04:55 [Message] dearmyrtle -&gt; Organizers Meeting: I did as Tamura asked -- checked for update, and it says it is the latest.<br />
+2011-01-31 17:05:37 [Message] TamuraJones -&gt; Organizers Meeting: That message did involve Tom...<br />
+2011-01-31 17:05:50 [Message] dearmyrtle -&gt; Organizers Meeting: oic<br />
+2011-01-31 17:05:52 [Message] dearmyrtle -&gt; Organizers Meeting: kk<br />
+2011-01-31 17:05:52 [Message] louiskessler -&gt; Organizers Meeting: I've got to go now, but someone should check that Skype message on the Skype site or though Google. Maybe its something else and there is a solution.<br />
+2011-01-31 17:05:54 [Message] Now_Recording -&gt; Organizers Meeting: just let me know where to send the money ;)<br />
+2011-01-31 17:06:01 [Message] dearmyrtle -&gt; Organizers Meeting: ok<br />
+2011-01-31 17:06:04 [Message] dearmyrtle -&gt; Organizers Meeting: meeting adjourned!<br />
+2011-01-31 17:06:05 [Message] Now_Recording -&gt; Organizers Meeting: Says I have the latest update.<br />
+2011-01-31 17:06:05 [Message] ttwetmore -&gt; Organizers Meeting: now running latest skpte<br />
+2011-01-31 17:06:11 [Message] dearmyrtle -&gt; Organizers Meeting: good<br />
+2011-01-31 17:06:15 [Message] louiskessler -&gt; Organizers Meeting: Bye.<br />
+2011-01-31 17:06:17 [Message] dearmyrtle -&gt; Organizers Meeting: niters everyone!<br />
+2011-01-31 17:06:19 [Message] TamuraJones -&gt; Organizers Meeting: Bye<br />
+2011-01-31 17:06:19 [Message] ttwetmore -&gt; Organizers Meeting: bye<br />
+2011-01-31 17:06:20 [Logout] louiskessler<br />
+2011-01-31 17:06:28 [Disconnect] Now_Recording<br />
+2011-01-31 17:06:29 [Disconnect] dearmyrtle<br />
+2011-01-31 17:06:34 [Disconnect] ttwetmore<br />
+2011-01-31 17:06:35 [Disconnect] TamuraJones<br />
+<br />
+<hr />
+<!-- ws:start:WikiTextHeadingRule:4:&lt;h3&gt; --><h3 id="toc2"><a name="x-Notes-Easier to read version:"></a><!-- ws:end:WikiTextHeadingRule:4 -->Easier to read version:</h3>
+ <br />
+2011-01-31 14:41:55 [Login] dearmyrtle<br />
+2011-01-31 14:41:55 [IP] dearmyrtle: 66.133.97.196<br />
+2011-01-31 14:41:56 [Join Room] dearmyrtle -&gt; Organizers Meeting<br />
+2011-01-31 14:45:10 [Disconnect] dearmyrtle<br />
+dearmyrtle -&gt; Hello everyone!<br />
+dearmyrtle -&gt; looks like it's about that time.<br />
+dearmyrtle -&gt; Here's what Tamura and I have been doing this past little while....<br />
+GeneJ -&gt; Hi Myrt. Sorry to hear you aren't feeling well.<br />
+dearmyrtle -&gt; 1. Added ourselves to our Skype Contacts....<br />
+Andy_Hatchett -&gt; Yep.. Feeling better?<br />
+dearmyrtle -&gt; 2. Worked with Google Wave...<br />
+dearmyrtle -&gt; and we're ready to do a test of the SKYPE I don't have Andy's skype name...<br />
+dearmyrtle -&gt; can you give it to me, then I will add you to my contacts.<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+Andy_Hatchett -&gt; I don't Have a Skype name that I know of!<br />
+dearmyrtle -&gt; hello Tom...<br />
+Andy_Hatchett -&gt; Just use agh3rd :)<br />
+ttwetmore -&gt; hi<br />
+dearmyrtle -&gt; we're going to go over to SKYPE and test out that interface for a voice chat that can handle about 200+ attendees at no cost.<br />
+dearmyrtle -&gt; tom do you have a skype account?<br />
+dearmyrtle -&gt; My name there is DearMYRTLE<br />
+ttwetmore -&gt; I may; I'll have to go through some stuff to remember<br />
+dearmyrtle -&gt; agh3rd is not a skype name<br />
+dearmyrtle -&gt; sorry Andy<br />
+dearmyrtle -&gt; Tamura and I have been experimenting, and I find Google Wave like that program you showed me GeneJ... where we could edit in real time.<br />
+dearmyrtle -&gt; and see what the other one was typing.<br />
+dearmyrtle -&gt; and still follow it over time.<br />
+ttwetmore -&gt; looks like i do<br />
+GeneJ -&gt; kk<br />
+Andy_Hatchett -&gt; ok- just assign me one :) I don't even know how Skype works :)<br />
+dearmyrtle -&gt; GeneJ what was that program.<br />
+dearmyrtle -&gt; you have to download skype and register Andy.<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; skype is free voice for multiple individuals<br />
+GeneJ -&gt; Andy a busy boy!!<br />
+dearmyrtle -&gt; I see you already have your other computer working.<br />
+dearmyrtle -&gt; and then video for one-to-one.<br />
+dearmyrtle -&gt; We actually started on time.<br />
+TamuraJones -&gt; There is an Andy Hatchett in Skype. Evil twin?<br />
+dearmyrtle -&gt; the purpose of this organizers meeting is to attempt to use SKPE<br />
+dearmyrtle -&gt; SKYPE<br />
+Andy_Hatchett -&gt; Yes- unfortunately at the earlier meeting the video recorded great but no audio for some reason :(<br />
+dearmyrtle -&gt; and then Google Wave to see if that free space would be useful for our purposes.<br />
+GeneJ -&gt; lol<br />
+dearmyrtle -&gt; good... I got a little teary-eyed there.<br />
+dearmyrtle -&gt; andy are you in th eUK?<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; or someone with the exact same name out of 789 million people on Skype.<br />
+dearmyrtle -&gt; ok so Tom, did you find your skype account name?<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; I do like the idea of getting more done during our developers meetings -- voting on what is discussed and announced as voting for the next monday.<br />
+GeneJ -&gt; agh3rd still not showing up when I search skype.<br />
+ttwetmore -&gt; ttwetmore<br />
+Andy_Hatchett -&gt; Am I supposed to do something- call a number or something?<br />
+dearmyrtle -&gt; I've scheduled a developers meeting for Monday the 7th since the 14this Valentine's day.<br />
+dearmyrtle -&gt; OK....<br />
+dearmyrtle -&gt; <a class="wiki_link_ext" href="http://www.skype.com" rel="nofollow">www.skype.com</a><br />
+dearmyrtle -&gt; then download the program for your platform<br />
+GeneJ -&gt; I found you, Tom; Tamura found me.<br />
+dearmyrtle -&gt; then follow the screen prompts during the install to sigh up.<br />
+dearmyrtle -&gt; sigh=sign up.<br />
+dearmyrtle -&gt; sorry...<br />
+GeneJ -&gt; &lt;&lt;is Marissab on Skype<br />
+dearmyrtle -&gt; tom I just sent you a request to add me to your contact list.<br />
+GeneJ -&gt; I am marissab on skype<br />
+dearmyrtle -&gt; And once we get andy there,<br />
+ttwetmore -&gt; (I have never used Skype, but it looks like I've just added three contacts)<br />
+dearmyrtle -&gt; Hello Louis -- we're going to experiment on Skype.<br />
+dearmyrtle -&gt; (WELCOME home from work!)<br />
+dearmyrtle -&gt; ;)<br />
+louiskessler -&gt; I've never used Skype either. I'll have to ask my daughter how to use it. :-)<br />
+louiskessler -&gt; Are you using it now for this meeting?<br />
+dearmyrtle -&gt; I ahve Tamura, GeneJ, Russ and Tom in a group in my contact group<br />
+dearmyrtle -&gt; yes louis -- do you have skype...<br />
+dearmyrtle -&gt; our agenda calls for experimenting with skype for larger than 16 attendees ....<br />
+dearmyrtle -&gt; and to use the Wiki as a place to write.<br />
+louiskessler -&gt; No. I don't have it yet. I can go to install it now.<br />
+Now_Recording -&gt; ok- Firefox crashed :(<br />
+dearmyrtle -&gt; oh dear.<br />
+dearmyrtle -&gt; that was my problem with Second Life last night. Some days are just like that.<br />
+dearmyrtle -&gt; our goal is to find a cheaper alternative (free)<br />
+dearmyrtle -&gt; rather than up my attendance to 100 max for another 50 bucjs per month.<br />
+dearmyrtle -&gt; I jsut spoke with tom via skype...<br />
+dearmyrtle -&gt; so he has it working just fine.<br />
+dearmyrtle -&gt; didn't take long, did it?<br />
+dearmyrtle -&gt; Louis -- did you see our meeting notes from this morning's Developers Meeting?<br />
+dearmyrtle -&gt; we decided to do all voting on the wiki, so it isn't dependent on anyone's private survey monkey account -- or their schedule.<br />
+dearmyrtle -&gt; we also agreed on the internationalization goal.<br />
+dearmyrtle -&gt; we also agreed to have Mon by 5pm posting of proposed goals... (or other items to vote on)<br />
+louiskessler -&gt; I missed the voting item (thought you were going to do it at the developers meeting).<br />
+louiskessler -&gt; I saw the internationaliation goal accepted.<br />
+dearmyrtle -&gt; with a link to that proposal page BACK ON THE AGENDA item.<br />
+dearmyrtle -&gt; good.<br />
+dearmyrtle -&gt; so you are fairly up to speed.<br />
+dearmyrtle -&gt; We are attempting to make it possible for things NOT to come to a grinding halt when I am traveling.<br />
+dearmyrtle -&gt; I do so love to moderate --- slice through to the meat of things<br />
+dearmyrtle -&gt; and such<br />
+dearmyrtle -&gt; and see votes done in real time.<br />
+dearmyrtle -&gt; unfortunately few can attend developers meetings<br />
+dearmyrtle -&gt; any more skype names to add? Louis -- Andy?<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+Now_Recording -&gt; ok- just added agh3rd to skype.<br />
+dearmyrtle -&gt; GeneJ what was that website/program you showed me a while back<br />
+dearmyrtle -&gt; ?<br />
+dearmyrtle -&gt; kk andy<br />
+dearmyrtle -&gt; now Louis... do you have your skype name?<br />
+GeneJ -&gt; I'll pull it up .. believe it's typewith.me<br />
+louiskessler -&gt; ... still installing<br />
+dearmyrtle -&gt; ok<br />
+dearmyrtle -&gt; no problem<br />
+dearmyrtle -&gt; Andy -- I just sent you a request to let me add you to my contact list on Skype.<br />
+GeneJ -&gt; yes. <a class="wiki_link_ext" href="http://typewith.me" rel="nofollow">http://typewith.me</a><br />
+dearmyrtle -&gt; and the limit on Typewith.me is HOW many at a time?<br />
+dearmyrtle -&gt; we are thinking Google Wave can handle a larger group viewing a page at once.<br />
+Now_Recording -&gt; ok- see you and Tamura<br />
+dearmyrtle -&gt; but I could be wrong.... wasn't it something like 25 total? GeneJ?<br />
+GeneJ -&gt; I don't know. You mentioned 25 earlier today<br />
+dearmyrtle -&gt; That numer sticks in my mind, yet their website isn't forthcoming ...let me look deeper.<br />
+Now_Recording -&gt; Now what? do I click caL? VIDEO CALL??<br />
+dearmyrtle -&gt; Andy -- wait<br />
+Now_Recording -&gt; Ok- i'm god at that :) har!<br />
+dearmyrtle -&gt; I am waiting for lewis.<br />
+Now_Recording -&gt; err--- good!<br />
+dearmyrtle -&gt; LOL<br />
+dearmyrtle -&gt; Louis.<br />
+louiskessler -&gt; Arrrgh. I hate it when both lkessler and louiskessler are taken. But my Skype name is: louis.kessler<br />
+dearmyrtle -&gt; okie dokey<br />
+dearmyrtle -&gt; ok, as soon as you can accept me as a contact, I'll add you to the list.<br />
+dearmyrtle -&gt; so we can practice the audio portion....<br />
+dearmyrtle -&gt; when all else fails come back to this room... OK everyone?<br />
+dearmyrtle -&gt; ok, I see RUSS and LOUIS are not online with Skype... I don't think Russ is here anyway.<br />
+GeneJ -&gt; 3rd party reports limit on Typewith.me is 15 persons.<br />
+dearmyrtle -&gt; ok --- so that puts it out of the running....<br />
+dearmyrtle -&gt; thanks, Genej you found that very quickly.<br />
+dearmyrtle -&gt; I appreciate it.<br />
+GeneJ -&gt; <a class="wiki_link_ext" href="http://www.nabt.org/blog/2010/07/31/type-with-me/" rel="nofollow">http://www.nabt.org/blog/2010/07/31/type-with-me/</a><br />
+dearmyrtle -&gt; louis --- please accept my CONTACT invitation over on SKYPE... then await my call....<br />
+dearmyrtle -&gt; I'll have all of you on the call at once... so no darth vader breathing. LOL.<br />
+dearmyrtle -&gt; can you see where to accept my contact, Louis? (In Skype?)<br />
+dearmyrtle -&gt; GeneJ I wonder why your little icon is red, and the rest of us are blue?<br />
+GeneJ -&gt; donno<br />
+louiskessler -&gt; Tom tried calling me. I heard him, but I saw my mike wasn't yet connected.<br />
+dearmyrtle -&gt; kk<br />
+Now_Recording -&gt; No video without webcam right?<br />
+dearmyrtle -&gt; no video on group calls.<br />
+dearmyrtle -&gt; to my knowledge --- its limited to one on one skype calls.<br />
+dearmyrtle -&gt; are we ready?<br />
+ttwetmore -&gt; yes, I tried to call Louis, heard nothing, so hung up.<br />
+Now_Recording -&gt; I guess!<br />
+ttwetmore -&gt; ready, i think<br />
+dearmyrtle -&gt; ok need tamura and andy<br />
+dearmyrtle -&gt; come on over to skype...<br />
+TamuraJones -&gt; I am on Skype already...<br />
+dearmyrtle -&gt; i haveinitiated a call..<br />
+Now_Recording -&gt; I see Tamura and Myrtle- I'm there aren't I?<br />
+TamuraJones -&gt; Skype is not responding... LOL ...let's retry<br />
+Now_Recording -&gt; I see Tom with a little phone headset :)<br />
+TamuraJones -&gt; I am there now<br />
+TamuraJones -&gt; Skype &quot;not responding again&quot;...<br />
+Now_Recording -&gt; Welll- there was something therte for 30 seconds anyway!<br />
+ttwetmore -&gt; got dumped<br />
+Now_Recording -&gt; Dumped by Skype- again.<br />
+GeneJ -&gt; kk<br />
+Now_Recording -&gt; ok= back in room.<br />
+dearmyrtle -&gt; wow -- that was a bit disconcerting wasn't it?<br />
+GeneJ -&gt; Yes.<br />
+dearmyrtle -&gt; It makes my goToMeeting.com interface sound OK after all...<br />
+TamuraJones -&gt; I filled in the Skype feedback form<br />
+GeneJ -&gt; tyty Tamura<br />
+dearmyrtle -&gt; good for you -- it isn't good for conference calls...<br />
+dearmyrtle -&gt; there are telephone conference call capabilitites...<br />
+dearmyrtle -&gt; with other services<br />
+louiskessler -&gt; Do you think anyone at Skype will read the feedback form?<br />
+dearmyrtle -&gt; I've participated in large voice chats<br />
+dearmyrtle -&gt; involving placing a long distnace call.<br />
+TamuraJones -&gt; It is multiple choice.... adds to their statistics.<br />
+dearmyrtle -&gt; I don't know Louis --- today FamilySearch sent me a deluge of emails from my feedback about their website problems in my blog post Sunday. So GO FOGURE.<br />
+dearmyrtle -&gt; FIGURE.<br />
+dearmyrtle -&gt; so what shall we do?<br />
+dearmyrtle -&gt; If we go forward with the GoToMeeting larger meeting on my account, I'd trust several of you with logging in in my place if I were not able to attend.<br />
+TamuraJones -&gt; The experiment was a success. We have a definite result; Skype is not good enough.<br />
+dearmyrtle -&gt; I just want this group to go forward with decision making even on days when I cannot attend.<br />
+dearmyrtle -&gt; Good point&amp;gt;<br />
+dearmyrtle -&gt; thanks for participating in that tes.t<br />
+Now_Recording -&gt; Like I said- I'll kick in $25/ mo if some other can pick up the rest and we go to the 100 person meeting toom level.'<br />
+dearmyrtle -&gt; ok, Andy, I'd give you my Login info then...<br />
+dearmyrtle -&gt; shall we consider that as an option?<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+Now_Recording -&gt; err-- I'm not sure that I'm the &quot;run-a meeting&quot; type- if you know what I mean :)<br />
+dearmyrtle -&gt; not enjoying moderating?<br />
+dearmyrtle -&gt; you don't have to moderate -- just open the doors for people so to speak.<br />
+GeneJ -&gt; Does anyone have a paypal merchant account?<br />
+dearmyrtle -&gt; I don't.<br />
+dearmyrtle -&gt; I could set up a Google Checkout.<br />
+dearmyrtle -&gt; (I hate paypal.)<br />
+Now_Recording -&gt; I'll send Myrt the money direct- I won't use PayPal at all.<br />
+dearmyrtle -&gt; kk<br />
+dearmyrtle -&gt; are we agreed to go forward with the larger room?<br />
+dearmyrtle -&gt; I will up my membership then....<br />
+GeneJ -&gt; The larger room makes sense to me.<br />
+dearmyrtle -&gt; and andy do you agree to open the doors ???? Sounds like we need another impartial observer to moderate.<br />
+dearmyrtle -&gt; (my college debate team stuff is kicking in here!)<br />
+dearmyrtle -&gt; it is hard for me to moderate -- as I am so opinionated.<br />
+Now_Recording -&gt; ok- I'll open the doors ;)<br />
+dearmyrtle -&gt; LOL<br />
+dearmyrtle -&gt; thakns, Andy.<br />
+louiskessler -&gt; We're all opinionated.<br />
+dearmyrtle -&gt; I'll send you wikispaces email with my contact info<br />
+dearmyrtle -&gt; we need another 25$ us monthly... that is a lot of money.<br />
+GeneJ -&gt; afk<br />
+Now_Recording -&gt; LOL!! *You* are opinionated??? Have you ever read my Ancestry posts??? !!!!<br />
+dearmyrtle -&gt; I think the pay pal or google cart to take up the slack might help.<br />
+dearmyrtle -&gt; hehehehee.... I know! LOL.<br />
+dearmyrtle -&gt; you should read Tamura's letter to Tim.<br />
+louiskessler -&gt; To be honest, we shouldn't be putting in our own funds. We need a sponsor ... but still need to remain independent.<br />
+dearmyrtle -&gt; yes, you should see Tamura's letter.<br />
+dearmyrtle -&gt; to tim.<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; OK -- so should we ask OpenGen to host our meetings?<br />
+dearmyrtle -&gt; Vote you ALL....<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; this is the organizers meeting... we don't need full bg wiki approval.<br />
+louiskessler -&gt; Yes.<br />
+GeneJ -&gt; I vote that &quot;I can live with it&quot; if BG takes OpenGen up on generous offer.<br />
+Now_Recording -&gt; &amp;lt;--- can live with anything... except Skype ;)<br />
+dearmyrtle -&gt; good point.<br />
+GeneJ -&gt; LOL<br />
+TamuraJones -&gt; If you hadn't noticed yet, I never vote :-)<br />
+dearmyrtle -&gt; you are opinionated AND non-voting -- wow, what a combination.<br />
+dearmyrtle -&gt; I am NOW SEEING that we should ask OPENGEN if they are still willing to host our BG Developers meetings.<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+ttwetmore -&gt; can live with it unless it becomes clear we shouldn't<br />
+dearmyrtle -&gt; BEGIN log again.<br />
+TamuraJones -&gt; No need to vote, is there? After all, my arguments sway you all ;-)<br />
+GeneJ -&gt; )<br />
+dearmyrtle -&gt; This is the first time I have ever edited the log except to remove private comments betwene people (BTW I can see them all!)<br />
+dearmyrtle -&gt; (in the log!)<br />
+dearmyrtle -&gt; ok<br />
+dearmyrtle -&gt; nuff said on that.<br />
+dearmyrtle -&gt; then we can go forth with the various<br />
+Now_Recording -&gt; Edit all you want- I've got the recording ;)<br />
+dearmyrtle -&gt; Agenda items<br />
+TamuraJones -&gt; LOL<br />
+louiskessler -&gt; I have to leave in 5 minutes<br />
+dearmyrtle -&gt; will be listed by the various wiki members who make proposal pages -- and link them.<br />
+dearmyrtle -&gt; ok<br />
+dearmyrtle -&gt; and do we have any topics for consideration ... should I set up a meeting for Monday?<br />
+dearmyrtle -&gt; so we don't lose any time?<br />
+dearmyrtle -&gt; looks like most of our work will be decided in brief voting sessions<br />
+dearmyrtle -&gt; called developers meetings<br />
+dearmyrtle -&gt; with discussions on the wiki page discussion tab<br />
+dearmyrtle -&gt; for that topic<br />
+Now_Recording -&gt; Oh- one thng!<br />
+dearmyrtle -&gt; tom --- shall we take your GOALS for discussion this coming week?<br />
+dearmyrtle -&gt; or????<br />
+dearmyrtle -&gt; it is nearly 5pm Pacific time.<br />
+dearmyrtle -&gt; I can quickly add it to the agenda page.....<br />
+Now_Recording -&gt; Since we now know the approx size of a recorded meeting I can look for a real home for them :)<br />
+GeneJ -&gt; I have 500 PT meeting online.<br />
+dearmyrtle -&gt; or do you wish a more studied approach.<br />
+dearmyrtle -&gt; kk<br />
+dearmyrtle -&gt; looks like we need to adjourn....<br />
+dearmyrtle -&gt; tom -<br />
+louiskessler -&gt; I can make a Feb 7 or Feb 21 meeting, but not Feb 14.<br />
+dearmyrtle -&gt; can you hear me?<br />
+GeneJ -&gt; So have to run. TYTY all. Hope you feel better, Myrt.<br />
+dearmyrtle -&gt; (I mean see this)<br />
+dearmyrtle -&gt; thanks<br />
+dearmyrtle -&gt; Tom?<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; .<br />
+dearmyrtle -&gt; louis has to go as well.<br />
+TamuraJones -&gt; Ooohhhh<br />
+dearmyrtle -&gt; I guess this wraps it up.<br />
+ttwetmore -&gt; here<br />
+louiskessler -&gt; I work every second Monday (except when holidays mess them us), so I can make some Developer meetings.<br />
+TamuraJones -&gt; message I see in Skype...<br />
+dearmyrtle -&gt; kewl.<br />
+TamuraJones -&gt; The call host is using an old version of Skype.<br />
+TamuraJones -&gt; Might be part of the problem.<br />
+dearmyrtle -&gt; i just downloaded the Skype TODAY and installed it on this Windows 7.<br />
+dearmyrtle -&gt; so how oculd it be the old version?<br />
+Now_Recording -&gt; I downloaed it less than an hur ago!<br />
+TamuraJones -&gt; I don't know. Just relaying what it reads there.<br />
+dearmyrtle -&gt; OK, I won't kill the messenger.<br />
+dearmyrtle -&gt; interesting, but weird.<br />
+dearmyrtle -&gt; ok<br />
+TamuraJones -&gt; Ah, that is for one of the retries involving some participants.<br />
+TamuraJones -&gt; Some ppl have old version.<br />
+dearmyrtle -&gt; so if SOME people have the old version, it makes it a bad connection for everyone?<br />
+dearmyrtle -&gt; that is terrible.<br />
+dearmyrtle -&gt; hmmmm<br />
+TamuraJones -&gt; Everyon do Help | Check for Update...<br />
+dearmyrtle -&gt; well, I'll contact the OpenGen folks.<br />
+dearmyrtle -&gt; right.<br />
+dearmyrtle -&gt; &quot;You already have the latest version of Skype.&quot;<br />
+louiskessler -&gt; I got that message as well (host using old version) on Skype.<br />
+dearmyrtle -&gt; ok... I guess this wraps it up for today.<br />
+dearmyrtle -&gt; thanks for experimenting<br />
+dearmyrtle -&gt; as Tamura says --- it WAS successful... just not the outcome we desired.<br />
+TamuraJones -&gt; Could try with updated Skype later. Just to make sure.<br />
+dearmyrtle -&gt; I was the host.<br />
+louiskessler -&gt; Do you have the latest version?<br />
+dearmyrtle -&gt; yes<br />
+ttwetmore -&gt; getting latest now<br />
+dearmyrtle -&gt; I did as Tamura asked -- checked for update, and it says it is the latest.<br />
+TamuraJones -&gt; That message did involve Tom...<br />
+dearmyrtle -&gt; oic<br />
+dearmyrtle -&gt; kk<br />
+louiskessler -&gt; I've got to go now, but someone should check that Skype message on the Skype site or though Google. Maybe its something else and there is a solution.<br />
+Now_Recording -&gt; just let me know where to send the money ;)<br />
+dearmyrtle -&gt; ok<br />
+dearmyrtle -&gt; meeting adjourned!<br />
+Now_Recording -&gt; Says I have the latest update.<br />
+ttwetmore -&gt; now running latest skpte<br />
+dearmyrtle -&gt; good<br />
+louiskessler -&gt; Bye.<br />
+dearmyrtle -&gt; niters everyone!<br />
+TamuraJones -&gt; Bye<br />
+ttwetmore -&gt; bye<br />
+2011-01-31 17:06:20 [Logout] louiskessler<br />
+2011-01-31 17:06:28 [Disconnect] Now_Recording<br />
+2011-01-31 17:06:29 [Disconnect] dearmyrtle<br />
+2011-01-31 17:06:34 [Disconnect] ttwetmore<br />
+2011-01-31 17:06:35 [Disconnect] TamuraJones
+  </div>
+
+
+  </div>
+  <div class="commentColumn WikispacesStream"><div class="WikispacesContent WikispacesBs3"><div class="commentList"></div></div></div>
+</div>
+
+  
+
+
+
+
+<script type="text/template" id="js-event-template">
+  <small>
+    <%- startDateShortFormat %>
+    <a href="<%- ws.common.pathFor('event', 'view', id) %>" class="WikispacesDialogLink">
+      <%- ws.common.truncate(title, 15) %>
+    </a>
+  </small>
+</script>
+
+<script type="text/template" id="js-reply-template">
+  <div class="tc-timeline-comment media">
+
+    <a class="pull-left userLink" href="<%- userCreated.url %>">
+      <img src="<%- userCreated.imageUrl %>" width="30" height="30" class="author-avatar" alt="" />
+    </a>
+    <div class="media-body" data-id="<%= id %>">
+      <% if (ws.context.user.canAdministerWiki) { %>
+        <i class="tc-delete-comment fa fa-trash-o contextual-command destroy-message ws-tip" title="Delete reply"></i>
+      <% } %>
+      <div class="tc-box-name-date">
+        <span class="tc-commenter"><a href="<%- userCreated.url %>"><%- userCreated.username %></a></span>
+        <% if (smartDate == '__live__') { %>
+        <abbr style="border-bottom-style: none;" class="timeago tc-comment-date" title="<%- (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+          <%- (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+        </abbr>
+        <% } else { %>
+          <abbr style="border-bottom-style: none;" class="tc-comment-date"><%- smartDate %></abbr>
+        <% } %>
+      </div>
+      <% if (body) { %>
+      <p>
+        <%= body %>
+      </p>
+      <% } %>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-share-template">
+  <div class="tc-timeline-block tc-<%= ws.stream.typeToBlockType(sharedType) %>-block" <%= (ws.stream.hideTimeline ? 'style="padding-left: 0px;"' : '') %>>
+
+    <% if (!ws.stream.hideTimeline) { %>
+      <div class="tc-timeline-icon">
+        <i class="fa fa-<%= ws.stream.typeToIcon(sharedType) %>"></i>
+      </div>
+      <div class="tc-timeline-triangle-man"></div>
+    <% } %>
+
+    <div class="tc-timeline-box" data-id="<%= id %>">
+      <div class="media">
+        <a class="pull-left userLink" href="<%- userCreated.url %>">
+          <img src="<%- userCreated.imageUrl %>" width="48" height="48" class="author-avatar media-object" alt="" />
+        </a>
+
+        <div class="media-body">
+
+          <div class="tc-stream-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <% if (ws.context.user.id) { %>
+              <li>
+                <a class="js-toggle-monitor" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-eye"></i>
+                  <span><%= monitored ? 'Start Monitoring' : 'Stop Monitoring' %></span>
+                </a>
+              </li>
+              <% } %>
+
+              <% if (ws.context.user.canAdministerWiki) { %>
+              <li>
+                <a class="js-toggle-lock" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-lock"></i>
+                  <span><%= locked ? 'Unlock Replies' : 'Lock Replies' %></span>
+                </a>
+              </li>
+              <% if (sharedType == 'discussion' || sharedType == 'comment' || sharedType == 'event') { %>
+              <li>
+                <a class="js-destroy-share" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-trash-o"></i>
+                  Delete <%= ws.stream.typeToName(sharedType) %>
+                </a>
+              </li>
+              <% } %>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="tc-timeline-box-header ws-reveal media-heading">
+              <h3 class="tc-box-title">
+              <% if (typeof adminLink !== 'undefined' && adminLink && ws.context.user.canAdministerWiki) { %>
+                <a href="<%- adminLink %>"><%- title %></a>
+              <% } else { %>
+                <%- title %>
+              <% } %>
+              <% if (typeof startDate !== 'undefined' && startDate) { %> - <%= startDateShortFormat %> <%= ws.stream.getYearFromStartDate(startDate) %><% } %>
+              </h3>
+              <div class="tc-box-name-date">
+                <% if (ws.context.instance.isTesClassroom) { %>
+                  <%- userCreated.username %>
+                <% } else { %>
+                  <a class="author-name" href="<%- userCreated.url %>"><%- userCreated.username %></a>
+                <% } %>
+                <% if (typeof recipients !== 'undefined' && recipients) { %>
+                  <i class="fa fa-angle-right"></i>
+                  <% if (typeof recipientsLink !== 'undefined') { %>
+                    <a href="<%- recipientsLink %>"><%- recipients %></a>
+                  <% } else { %>
+                    <span class="recipients"><%- recipients %></span>
+                  <% } %>
+                <% } %>
+                <% if (smartDate == '__live__') { %>
+                  <abbr style="border-bottom-style: none;" class="timeago tc-block-date" title="<%= (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+                    <%= (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+                  </abbr>
+                <% } else { %>
+                  <abbr style="border-bottom-style: none;" class="tc-block-date"><%- smartDate %></abbr>
+                <% } %>
+              </div>
+          </div>
+
+          <div class="<%= sharedType == 'comment' && !orphaned && !ws.stream.noCollapse ? 'hidden ' : '' %>tc-block-content">
+            <div class="clearfix">
+              <% if (typeof rangeActions !== 'undefined') { %>
+                <div class="tc-range-actions">
+                  <% for(var i = 0; i < rangeActions.length; i++) { %>
+                  <%= ws.stream.rangeActionTemplate(rangeActions[i]) %>
+                  <% } %>
+                </div>
+              <% } %>
+              <% if (description) { %>
+                <p><%= description %></p>
+              <% } %>
+            </div>
+          </div>
+
+          <% if (replyPages.length > 0 && !(replyPages.length === 1 && replyPages[0].digests.length === 0)) { %>
+            <div class="tc-timeline-comments">
+            <% for (var i = 0; i < replyPages.length; i++) { %>
+              <% if (i == 0 && replyPages[i].more) { %>
+                <a href="#" class="tc-show-more" onclick="ws.stream.pageReplies(<%= id %>, <%= replyPages[i].page + 1 %>); return false">Show more replies (<%= replyPages[i].more %> hidden) </a>
+              <% } else { %>
+                <div></div>
+              <% } %>
+              <% for (var j = 0; j < replyPages[i].digests.length; j++) { %>
+                <%= ws.stream.replyTemplate(replyPages[i].digests[j]) %>
+              <% } %>
+            <% } %>
+            </div>
+          <% } %>
+
+          <% if ((ws.stream.userCanPostMessage && !locked) || ws.context.user.canAdministerWiki) { %>
+          <div class="tc-add-comment media <%= ws.stream.noCollapse ? 'add-active' : ''%>">
+            <img src="<%- ws.context.user.imageUrlPrefix %>lg.jpg" width="30" height="30" class="pull-left author-avatar" alt="" />
+            <div class="media-body">
+              <textarea name="reply" placeholder="Comment" class="form-control form-control-tc ws-reveal <%= !ws.stream.noCollapse ? 'ws-unrevealed' : ''%> reply" /></textarea>
+              <button type="button" class="btn-tc btn-info-tc btn-sm-tc add-reply">Post</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-range-action-template">
+  <div>
+    <strong><%- name %></strong>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      <a href="<%- diffUrl %>">
+    <% } %>
+    <%= new Date(dateCreated * 1000).toLocaleString() %>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      </a>
+    <% } %>
+    <% if (typeof(rangeText) !== 'undefined') { %>
+      <div>
+        <span class="commentExtent">
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          <a href="<%- diffUrl %>">
+        <% } %>
+        <%= rangeText %>
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          </a>
+        <% } %>
+        </span>
+      </div>
+    <% } %>
+  </div>
+</script>
+
+<script type="text/template" id="js-stream-end-template">
+  <div class="tc-timeline-block tc-end-block">
+    <div class="tc-timeline-icon" style="margin-top: -10px;" />
+    <div class="tc-timeline-box" style="visibility: hidden;">
+      <p class="tc-box-title"></p>
+    </div>
+  </div>
+</script>
+
+<a name="discussion"></a>
+<div class="timeline WikispacesBs3 tc-timeline-embedded show-border">
+  <div class="timeline-line"></div>
+    <div id="js-share-list">
+    <div class="spinner hidden"><i class="fa fa-spinner fa-spin"></i></div>
+  </div>
+</div></div></div><div id="sentinel" style="clear:both"></div>
+    </div>
+  </td>
+</tr>
+</table>
+
+<div id="foot">
+<div class="WikiLicense WikiElement">Contributions to http://bettergedcom.wikispaces.com/ are licensed under a <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0">Creative Commons Attribution Share-Alike 3.0 License</a>. <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0"><img src="http://www.wikispaces.com/i/creativecommons/by-sa_3.0_80x15.png" width="85" height="15" alt="Creative Commons Attribution Share-Alike 3.0 License"/></a><br />Portions not contributed by visitors are Copyright 2016 Tangient LLC<br /><a href="https://www.tes.com/us/?utm_source=wikispaces&utm_medium=link&utm_campaign=US-52-footer">TES: The largest network of teachers in the world</a></div></div>
+
+
+<script type="text/template" id="dialog-template">
+<div class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+        <h4 class="modal-title"><%= header %></h4>
+      </div>
+      <div class="modal-body">
+        <%= body %>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+
+<div id="js-help-template" class="hidden">
+  <div class="ws-help">
+    <div class="js-help-controls WikispacesContent WikispacesBs3">
+      <a href="http://www.wikispaces.com/site/gettingstarted/off" class="btn btn-default hidden js-getting-started-off pull-right">Turn off "Getting Started"</a>
+      <ol class="breadcrumb">
+        <li class="js-special-breadcrumb active">
+          <a href="http://helpcenter.wikispaces.com/" data-breadcrumb="0">Home</a>
+        </li>
+        <li class="js-ellipsis hidden js-special-breadcrumb">
+          ...
+        </li>
+        <li class="js-spinner hidden js-special-breadcrumb"><i class="fa fa-spinner fa-spin"></i></li>
+      </ol>
+    </div>
+    <div class="ws-help-content wiki">Loading...</div>
+  </div>
+</div>
+</div>
+<script src="http://www.wikispaces.com/s/nogz/9vz070xj-common.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/85k7018k-stream.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/91k8z207-contentbar.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/395j1vq7-component.stream-vo.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ws.namespace('ws.attributes');
+ws.namespace('ws.stream');
+ws.attributes.DISCUSSION_COUNT = 0;
+ws.attributes.pageId = 56191052;
+ws.attributes.version = 197702964;
+ws.attributes.showEditor = false;
+ws.attributes.editUrl = "http:\/\/bettergedcom.wikispaces.com\/page\/edit\/OrganizersMeetingNotes+2011-01-31+%28Jan+31%29?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FOrganizersMeetingNotes%2B2011-01-31%2B%2528Jan%2B31%2529";
+ws.attributes.userCanEdit = false;
+ws.stream.userCanPostMessage = false;
+ws.stream.hideTimeline = true;
+ws.stream.shareSource = "http:\/\/bettergedcom.wikispaces.com\/page\/shares\/OrganizersMeetingNotes+2011-01-31+%28Jan+31%29";
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+jQuery(document).ready(function() {
+  ws.common.addJsonNotices({"warning":[],"error":[],"info":[],"success":[]});
+});
+
+jQuery(document).ready(function() {
+  ws.editor.canEdit = false;
+  var editUrl = 'http://bettergedcom.wikispaces.com/page/edit/OrganizersMeetingNotes+2011-01-31+%28Jan+31%29?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FOrganizersMeetingNotes%2B2011-01-31%2B%2528Jan%2B31%2529';
+
+  jQuery('#js-edit-from-template').change(function() {
+    window.location = ws.common.addUriParams(editUrl, [['template', jQuery(this).val()]]);
+  });
+});
+
+
+
+--></script><!-- w19 89 tot:89:89(1) mem:2:17(19) wki:1:1(1) -->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"55613def96","applicationID":"10980928","transactionName":"Ml1TZBNTCkcCAkFaWAsXckUSRgtZTDdcVkA1WVZVIFEQXQwP","queueTime":0,"applicationTime":89,"ttGuid":"","agentToken":"","atts":"HhpEEltJGRhBABcJTBhF","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-686.min.js"}</script></body>
+</html>

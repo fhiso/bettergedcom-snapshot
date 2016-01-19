@@ -1,0 +1,859 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="search" href="https://bettergedcom.wikispaces.com/space/opensearch" type="application/opensearchdescription+xml" title="Wikispaces Search (BetterGedcom Wiki)" />
+<link rel="alternate" type="application/x-wiki" title="Edit This Page" href="/page/edit/FHISO+News" />
+<link rel="alternate" title="BetterGedcom - All Changes" href="https://bettergedcom.wikispaces.com/wiki/xmla?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : FHISO News - Discussion" href="https://bettergedcom.wikispaces.com/message/xml/FHISO+News?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : FHISO News - Edits" href="https://bettergedcom.wikispaces.com/page/xml/FHISO+News?v=rss_2_0" type="application/rss+xml" />
+<link rel="microsummary" href="/page/microsummary/FHISO+News/edits"/>
+<link rel="microsummary" href="/page/microsummary/FHISO+News/messages"/>
+<meta name="robots" content="noindex" />
+<script type="text/javascript">
+  
+if (typeof ws === 'undefined') ws = {};
+ws.context = {
+  instance: {
+    id: '1',
+    url: 'wikispaces.com',
+    isMain: true,
+    supportsGoogleDocs: false,
+    isTesClassroom: false,
+  },
+  user: {
+    id: '',
+    username: '',
+    status: '',
+    locale: 'en',
+    imageUrlPrefix: 'https://www.wikispaces.com/i/user_none_',
+    isTeacher: false,
+    canAdministerWiki: false,
+  },
+  wiki: {
+    id: '5050513',
+    name: 'bettergedcom',
+    text: 'BetterGedcom',
+    module: 'B',
+    isClassroom: false,
+    isTesClassroom: false
+    ,defaultSpaceId: 5050513
+    ,isWwwWiki: false
+  },
+  project: {
+    id: '5050513',
+    name: ''
+  },
+  space: {
+    id: '5050513',
+    name: 'bettergedcom',
+    isDefaultSpace: true,
+    isDefaultTemplate: false
+  },
+
+  environment_name: 'prod',
+
+  path: {
+    object: 'page',
+    method: 'view',
+    page: 'FHISO News',
+    id: ''
+  },
+
+  settings: {
+    main_domain: 'wikispaces.com',
+    session_url: 'https://session.wikispaces.com/1/',
+    asset_url_prefix: 'https://www.wikispaces.com',
+    beta_features: false,
+    isMobileSite: false,
+    isUploadCapable: true,
+    can_discuss: false,
+    has_gdocs: false,
+    isDialog: false,
+    pwin: ''
+  },
+  clockSkewMillis: 1453211548622 - ((window.performance && window.performance.timing.responseStart > 0) ? window.performance.timing.responseStart : (new Date()).getTime())
+}
+
+
+// legacy javascript API variables, use the above instead
+var wikispaces_isUserLoggedIn = !!ws.context.user.id;
+var wikispaces_isMain = ws.context.instance.isMain;
+var wikispaces_username = ws.context.user.username;
+var wikispaces_spaceName = ws.context.space.name;
+var wikispaces_projectName = ws.context.project.name;
+var wikispaces_wikiName = ws.context.wiki.name;
+var wikispaces_wikiText = ws.context.wiki.text;
+var wikispaces_isDefaultSpace = ws.context.space.isDefaultSpace;
+var wikispaces_method = ws.context.path.method;
+var wikispaces_object = ws.context.path.object;
+var wikispaces_page = ws.context.path.page;
+var wikispaces_id = ws.context.path.id;
+var wikispaces_domain = ws.context.instance.url;
+var wikispaces_isUserOrganizer = false;
+var wikispaces_main_domain = ws.context.settings.asset_url_prefix;
+var wikispaces_asset_url_prefix = ws.context.settings.asset_url_prefix;
+var wikispaces_beta_features = ws.context.settings.beta_features;
+var wikispaces_isMobileSite = ws.context.settings.isMobileSite;
+var wikispaces_isUploadCapable = ws.context.settings.isUploadCapable;
+var wikispaces_can_discuss = ws.context.settings.can_discuss;
+var wikispaces_has_gdocs = ws.context.settings.has_gdocs;
+
+</script>  <title>BetterGedcom - FHISO News</title>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www.wikispaces.com/_/z6371z4x/i/logo-144.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www.wikispaces.com/_/j5j77xz3/i/logo-114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.wikispaces.com/_/vq8j5432/i/logo-72.png" />
+  <link rel="apple-touch-icon" href="https://www.wikispaces.com/_/38515190/i/logo-57.png" />
+  <link rel="shortcut icon" href="https://www.wikispaces.com/_/55v9k02z/i/logo-16.png" />
+  <style type="text/css">
+    #foot { margin-top: 5px; padding: 5px 0; font-family: arial,helvetica,sans-serif; font-size: 90%; line-height: 150%; clear: both; }
+    h1.pageTitle { font-family: arial,helvetica,sans-serif; }
+  </style>
+<link rel="stylesheet" href="https://bettergedcom.wikispaces.com/stylesheet/view/241807025-217420326D.css" type="text/css" />
+<link rel="stylesheet" href="https://www.wikispaces.com/s/nogz/9q897620-internal-bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="https://www.wikispaces.com/s/nogz/vz033906-internal.css" type="text/css" />
+<script src="https://www.wikispaces.com/s/nogz/j91xzz3x-top.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+
+  var wsGoogleAccount = 'UA-80504-1';
+  _gaq.push(['_setAccount', wsGoogleAccount]);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', 'wikispaces.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setCustomVar', 2, 'Authenticated', 'Guest', 2]);
+  _gaq.push(['_trackPageview']);
+</script></head>
+<body data-enhance="false">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+  <td valign="top">
+    <div style="padding: 10px;">
+<h1 class="pageTitle">FHISO News</h1>
+<div class="contentBox"><div class="innerContentBox" id="WikiContent">
+
+<script type="text/template" id="comment-footer-template">
+
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</script>
+
+<script type="text/template" id="comment-content-template">
+<div class="ws-box commentView">
+  <div class="comment-close">
+    <button type="button" class="closeme close" aria-hidden="true"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="commentHeader">
+    <p class="ws-stream-meta command-context">
+      <a class="userLink userLinkPicture" href="<%= userCreated.url %>"><img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16"></a>
+      <a href="<%= userCreated.url %>"><%= userCreated.username %></a>
+      <% if (smartDate == '__live__') { %>
+      <abbr class="timeago" title="<%= (new Date(parseInt(dateCreated, 10) * 1000)).toISOString() %>">
+        <%= dateCreated %>
+      </abbr>
+      <% } else { %>
+        <%- smartDate %>
+      <% } %>
+      <% if (ws.context.user.canAdministerWiki && ws.comments.Manager.readOnly) { %>
+        <i class="fa fa-trash-o contextual-command delete ws-tip" title="Delete Comment"></i>
+      <% } %>
+    </p>
+  </div>
+
+  <div class="commentBody">
+    <div class="commentContent">
+      <%= description %>
+    </div>
+
+      <% for(i = 0; i < replyPages.length; i++) { %>
+        <% for(var j = 0; j < replyPages[i].digests.length; j++) { %>
+      <div class="commentReply" data-id="<%= replyPages[i].digests[j].id %>">
+        <p class="ws-stream-meta command-context">
+          <a class="userLink userLinkPicture" href="<%= replyPages[i].digests[j].userCreated.url %>"><img class="userPicture" src="<%= replyPages[i].digests[j].userCreated.imageUrl %>" width="16" height="16"></a>
+          <a href="<%= replyPages[i].digests[j].userCreated.url %>"><%= replyPages[i].digests[j].userCreated.username %></a>
+          <% if (smartDate == '__live__') { %>
+          <abbr class="timeago" title="<%= (new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000)).toISOString() %>">
+            <%= new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000).toLocaleString() %>
+          </abbr>
+          <% } else { %>
+            <%- smartDate %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+          <i class="fa fa-trash-o contextual-command delete-reply ws-tip" title="Delete Reply"></i>
+          <% } %>
+          </p>
+        <div class="commentContent"><%= replyPages[i].digests[j].body %></div>
+      </div>
+        <% } %>
+      <% } %>
+
+      <form class="reply commentReply">
+        <div class="form-group">
+          <textarea name="reply" placeholder="Reply" class="form-control" /></textarea>
+        </div>
+        <div class="btn-toolbar">
+          <button type="submit" class="btn btn-primary btn-sm" name="go" value="1">Post</button>
+
+          <% if (ws.context.user.id) { %>
+            <% if (monitored) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip active" title="You are monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip" title="You are not monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+            <% if (locked) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip active" title="Replies are not allowed."><i class="fa fa-lock"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip" title="Replies are allowed."><i class="fa fa-lock"></i></button>
+            <% } %>
+          <% } %>
+
+          <i class="fa fa-spinner fa-spin spinner pull-right hidden"></i>
+        </div>
+      </form>
+   </div>
+
+   
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-composer-template">
+<div class="ws-box commentView">
+  <div class="commentComposer">
+    <div class="comment-close">
+      &nbsp;<button type="button" class="close closeme" aria-hidden="true"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="commentHeader">
+      <p class="ws-stream-meta command-context">
+        <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+        <a href="#" onclick="return false;"><%= userCreated.username %></a>
+      </p>
+    </div>
+    <div class="commentBody">
+      <textarea name="comment" class="compose form-control" placeholder="Comment"/></textarea><br/>
+      <div class="btn-toolbar">
+        <button type="button" class="btn btn-default btn-sm monitored active pull-right" style="margin-left: 6px" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-eye"></i></button>
+        <button type="button" class="btn btn-default btn-sm locked btn-toggle pull-right" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-lock"></i></button>
+        <button type="button" class="btn btn-primary btn-sm closeme">Save</button>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-proxy-template">
+<div class="comment-proxy">
+  <span class="commentUser">
+  <% if (userCreated) { %>
+    <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+  <% } else { %>
+    <img class="userPicture" src="<%= ws.context.user.imageUrlPrefix %>sm.jpg" width="16" height="16">
+  <% } %>
+  </span>
+  <span class="commentReplies"><%= 1 + _(replyPages).reduce(function(memo, page){ return memo + page.digests.length; }, 0) %></span>
+</div>
+</script>
+
+
+
+
+
+
+
+<div class="commentContainer">
+  <div class="commentSubject">
+  <div class="wiki wikiPage" id="content_view">
+  <a class="wiki_link" href="http://bettergedcom.wikispaces.com/Home">Home</a> &gt; FHISO News<br />
+<br />
+<hr />
+<!-- ws:start:WikiTextLocalImageRule:19:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-brightsolid-v00-02-512.png/393215654/200x200/FHISO-FMSeal-brightsolid-v00-02-512.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 200px; width: 200px;&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-brightsolid-v00-02-512.png/393215654/200x200/FHISO-FMSeal-brightsolid-v00-02-512.png" alt="FHISO-FMSeal-brightsolid-v00-02-512.png" title="FHISO-FMSeal-brightsolid-v00-02-512.png" style="height: 200px; width: 200px;" /><!-- ws:end:WikiTextLocalImageRule:19 --><br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:0:&lt;h2&gt; --><h2 id="toc0"><a name="x-brightsolid brings a family of innovation to FHISO Founding Members"></a><!-- ws:end:WikiTextHeadingRule:0 --><strong>brightsolid brings a family of innovation to FHISO Founding Members</strong></h2>
+ <span style="color: #333333; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 12px;"><em>bright<strong>solid</strong> to collaborate in FHISO’s Creation of Data Standards for Family History</em></span><br />
+<br />
+<span style="color: #333333; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 12px;">DUNDEE, SCT (UK) and Chandler, AZ (USA) – Dec. 17, 2012 – bright<strong>solid</strong> group and Family History Information Standards Organisation, Inc. (FHISO) announced today that the bright<strong>solid</strong> group has finalised its plans to become a founding member of the organisation. As part of this process, bright<strong>solid</strong> has designated organisational member representatives, including D. Joshua Taylor and Elaine Collins. The bright<strong>solid</strong> representatives will work with other FHISO members from the global genealogical community in the development of standards for the digital representation and sharing of family history and genealogical information.</span><br />
+<br />
+<span style="color: #333333; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 12px;">&quot;<span style="font-size: 12px;">FHISO allows for an important dialogue between technologists and genealogists”, said D. Joshua Taylor, Business Development Manager of North America for bright</span><strong><span style="font-size: 12px;">solid</span></strong><span style="font-size: 12px;">, “bright</span><strong><span style="font-size: 12px;">solid</span></strong><span style="font-size: 12px;"> is happy to join this vital conversation and to collaborate with the global family history community.”</span></span><br />
+<br />
+<span style="color: #333333; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 12px;">&quot;We’re thrilled to know that Chris van der Kuyl and bright<strong>solid</strong> are supporting FHISO. We have watched this team grow and succeed. It is an honour to welcome this diversified, world-class innovator and content provider to FHISO”, said Robert Burkhead, acting FHISO Chairman. </span><br />
+<br />
+<span style="color: #333333; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 12px;">Since 1994, bright<strong>solid</strong> group has been delivering online innovation and pioneering the expansion of the genealogy market with leading family history websites including the global network of findmypast sites plus <a class="wiki_link_ext" href="http://scotlandspeople.gov.uk/" rel="nofollow">ScotlandsPeople.gov.uk</a><em>,</em> <a class="wiki_link_ext" href="http://genesreunited.co.uk/" rel="nofollow">GenesReunited.co.uk</a>, and <a class="wiki_link_ext" href="http://britishnewspaperarchive.co.uk/" rel="nofollow">britishnewspaperarchive.co.uk</a>, together servicing over 18 million registered customers worldwide. The sites connect people via their innovative family history software and deliver access to over a billion records dating as far back as 1200. Family historians can search for their ancestors among global collections, relating primarily to people with UK and Irish ancestry, of military records, census, migration, occupation directories, newspapers, as well as birth, marriage and death records. To learn more, visit the bright<strong>solid</strong> website, <a class="wiki_link_ext" href="http://www.brightsolid.com/" rel="nofollow">http://www.brightsolid.com/</a>.</span><br />
+<br />
+<span style="color: #333333; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 12px;">FHISO is a standards-developing organisation bringing the international family history and genealogical community together in a transparent, self-governing forum for the purpose of developing information standards to solve today’s interoperability issues. To learn more about FHISO or become an enquiring member, visit <a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a>.</span><br />
+<br />
+<span style="color: #333333; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 12px;"><strong>Contacts</strong></span><br />
+<span style="color: #333333; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 12px;">bright<strong>solid</strong> Data Enquiries: Elaine Collins, <a class="wiki_link_ext" href="mailto:ecollins@brightsolid.com" rel="nofollow">ecollins@brightsolid.com</a></span><br />
+<span style="color: #333333; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 12px;">FHISO General Enquiries, <a class="wiki_link_ext" href="mailto:enquiries@fhiso.org" rel="nofollow">enquiries@fhiso.org</a>; Membership enquiries, <a class="wiki_link_ext" href="mailto:membership@fhiso.org" rel="nofollow">membership@fhiso.org</a>; FHISO Media Relations, Anthony C. Proctor (<a class="wiki_link_ext" href="mailto:acproctor@fhiso.org" rel="nofollow">acproctor@fhiso.org</a>)</span><br />
+<br />
+<hr />
+<span style="color: black; font-family: 'Lucida Grande'; font-size: 16px;"><!-- ws:start:WikiTextLocalImageRule:20:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-FFHS-512.png/389069008/200x200/FHISO-FMSeal-FFHS-512.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 200px; width: 200px;&quot; align=&quot;right&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-FFHS-512.png/389069008/200x200/FHISO-FMSeal-FFHS-512.png" alt="FHISO-FMSeal-FFHS-512.png" title="FHISO-FMSeal-FFHS-512.png" style="height: 200px; width: 200px;" align="right" /><!-- ws:end:WikiTextLocalImageRule:20 --></span><br />
+<br />
+<strong><span style="color: black; font-family: 'Lucida Grande'; font-size: 16px;">Federation of Family History Societies to be FHISO Founding Member </span></strong><br />
+<br />
+<span style="color: black; font-family: 'Lucida Grande';">Lutterworth, Leicestershire (UK) and Gilbert, AZ (USA) </span><span style="color: black; font-family: 'lucida grande';" class="caps">— December 4</span><span style="color: black; font-family: 'Lucida Grande';">, 2012 — </span><span style="font-family: 'Lucida Grande';">The Federation of Family History Societies (FFHS) </span><span style="color: black; font-family: 'Lucida Grande';">and Family History Information Standards Organisation, Inc. (</span><span style="color: black; font-family: 'lucida grande';" class="caps">FHISO</span><span style="color: black; font-family: 'Lucida Grande';">) announced today that the </span><span style="font-family: 'Lucida Grande';">The Federation of Family History Societies </span><span style="color: black; font-family: 'Lucida Grande';">has finalised its plans to become a founding member of the organisation. As part of this process, FFHS has designated Malcolm Austen as its key organisational member representative. Malcolm will participate with other FHISO members from the global genealogical community in the development of standards for the digital </span><span style="font-family: 'Lucida Grande';">representation and sharing of family history and genealogical information.</span><br />
+<br />
+<span style="font-family: 'Lucida Grande';">“As family historians embrace the digital age and new technology transforms the way we research, discover and collate information about our ancestors, it is vitally important that we ensure that we adhere to the highest standards available when accessing and sharing data online. We are already seeing some of the problems emerging - incorrect citation of primary sources, confusion about where information was originally created, and issues around referencing personal archives that have been made available on the internet. The Federation of Family History Societies is therefore proud to be one of the founder members of FHISO, and will assist its work in creating the much-needed standards for genealogical data around the world”, said Dr. Nick Barratt, FFHS President.</span><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">&quot;We are a community of diverse practitioners and interests. Recognising the needs and devising solutions for our community is not a job for the few, but the many. It is an honour to welcome the Federation of Family History Societies to FHISO. Already instrumental in uniting more than 160 member societies in the United Kingdom and around the globe, FFHS brings vision and experience to FHISO. Our future is today better and brighter for their commitment&quot;, said acting FHISO Chairman, Robert Burkhead. </span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">The Federation of Family History Societies (FFHS) is an educational charity formed in 1974. Over the years, membership has grown to over 160 societies throughout the world, including national, regional and one-name groups. The Federation provides eduational opportunities and administers both the Elizabeth Simpson and Geoff Riggs awards. The Federation publishes the FFHS Ezine. FFHS has a long history of providing an authentic, audible, and respected voice for the many thousands of individual family historians. To learn more about FFHS, please visit the organisation’s website, <a class="wiki_link_ext" href="http://www.ffhs.org.uk/index.php" rel="nofollow">http://www.ffhs.org.uk/index.php</a>. </span></span><br />
+<span style="display: block; text-align: justify;"><span style="color: black; font-family: 'lucida grande';">FHISO is a standards-developing organisation bringing the international family history and genealogical community together in a transparent, self-governing forum for the purpose of developing information standards to solve today’s interoperability issues. To learn more about </span><span style="color: black; font-family: 'lucida grande';" class="caps">FHISO</span><span style="color: black; font-family: 'Lucida Grande';">, visit <a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a>.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="color: black; font-family: 'Lucida Grande';">Please join us in welcoming </span><span style="font-family: 'Lucida Grande';">the Federation of Family History Societies and Malcolm Austen to FHISO</span><span style="color: black; font-family: 'Lucida Grande';">!</span></span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 12px;">CONTACTS: </span><br />
+<span style="color: black; font-family: 'Lucida Grande'; font-size: 12px;">Federation of Family History Societies, <a class="wiki_link_ext" href="mailto:it.coordinator@ffhs.org.uk" rel="nofollow">it.coordinator@ffhs.org.uk</a> </span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 12px;">FHISO General Enquiries, <a class="wiki_link_ext" href="mailto:enquiries@fhiso.org" rel="nofollow">enquiries@fhiso.org</a>; Membership enquiries, <a class="wiki_link_ext" href="mailto:membership@fhiso.org" rel="nofollow">membership@fhiso.org</a>; FHISO Media Relations, Anthony C. Proctor </span><span style="color: blue; font-family: 'lucida grande'; font-size: 12px;"><a class="wiki_link" href="http://about.wikispaces.com/%5Cblank">(acproctor@fhiso.org</a>)</span><br />
+<br />
+<hr />
+<!-- ws:start:WikiTextLocalImageRule:21:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-FGS-512.png/377341500/200x200/FHISO-FMSeal-FGS-512.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 200px; width: 200px;&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-FGS-512.png/377341500/200x200/FHISO-FMSeal-FGS-512.png" alt="FHISO-FMSeal-FGS-512.png" title="FHISO-FMSeal-FGS-512.png" style="height: 200px; width: 200px;" /><!-- ws:end:WikiTextLocalImageRule:21 --><br />
+<br />
+<strong><span style="font-size: 12pt;">Federation of Genealogical Societies to be FHISO Founding Member</span></strong><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">Austin, TX and Gilbert, AZ </span><span style="font-family: 'Lucida Grande';" class="caps">— October 29</span><span style="font-family: 'Lucida Grande';">, 2012 — The Federation of Genealogical Societies (FGS) and Family History Information Standards Organisation, Inc. (</span><span style="font-family: 'Lucida Grande';" class="caps">FHISO</span><span style="font-family: 'Lucida Grande';">) announced today that the Federation of Genealogical Societies has finalized its plans to become a founding member of the organization. As part of this process, FGS has designated Drew Smith as its key organizational member representative. Drew will participate with other FHISO members from the global genealogical community in the development of standards for the digital representation and sharing of family history and genealogical information.</span></span><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">&quot;After RootsTech 2011, the Federation of Genealogical Societies launched a Technology Initiative and committed itself to serving as a technological role model for its member societies. By becoming a founding member of FHISO, FGS provides yet another example of this leadership role in an area of technology that significantly impacts the lives of genealogists,” said Drew Smith, an FGS Director and FGS Representative to FHISO.</span></span><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">“One of the things that distinguishes modern standards development is the diversity of interests that drive the multi-stakeholder model. FGS’s hundreds of member organizations extend across interests and borders. With today’s announcement, FGS has shown the leadership that will help make that modern model possible for all of us,” said Robert Burkhead, acting FHISO Chairman. </span></span><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">The Federation of Genealogical Societies (FGS) was founded in 1976 and represents the members of hundreds of genealogical societies. FGS links the genealogical community by helping genealogical societies strengthen and grow through resources available online, <em>FGS Forum</em> magazine (filled with articles pertaining to society management and genealogical news), and Society Strategy Series papers, covering topics about effectively operating a genealogical society. FGS also links the genealogical community through its annual conference -- four days of excellent lectures, including one full day devoted to society management topics. To learn more about the FGS, visit <a class="wiki_link_ext" href="http://www.fgs.org/" rel="nofollow">http://www.fgs.org</a>.</span></span><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">FHISO is a standards-developing organization bringing the international family history and genealogical community together in a transparent, self-governing forum for the purpose of developing information standards to solve today’s interoperability issues. To learn more about </span><span style="font-family: 'Lucida Grande';" class="caps">FHISO</span><span style="font-family: 'Lucida Grande';">, visit <a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a>.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">Please join us in welcoming the Federation of Genealogical Societies and Drew Smith to FHISO! </span></span><br />
+<br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">CONTACTS: </span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">Federation of Genealogical Societies, Drew Smith, <a class="wiki_link_ext" href="mailto:drewsmithtpa@gmail.com" rel="nofollow">drewsmithtpa@gmail.com</a> </span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">FHISO General Enquiries, <a class="wiki_link_ext" href="mailto:enquiries@fhiso.org" rel="nofollow">enquiries@fhiso.org</a>; Membership enquiries, <a class="wiki_link_ext" href="mailto:membership@fhiso.org" rel="nofollow">membership@fhiso.org</a>; FHISO Media Relations, Anthony C. Proctor </span><span style="color: blue; font-family: 'Lucida Grande'; font-size: 9pt;"><a class="wiki_link_ext" href="file:///about/blank" rel="nofollow">(acproctor@fhiso.org</a>)</span><br />
+<br />
+<hr />
+<!-- ws:start:WikiTextLocalImageRule:22:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-Coret-512.png/372172322/200x200/FHISO-FMSeal-Coret-512.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 200px; width: 200px;&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-Coret-512.png/372172322/200x200/FHISO-FMSeal-Coret-512.png" alt="FHISO-FMSeal-Coret-512.png" title="FHISO-FMSeal-Coret-512.png" style="height: 200px; width: 200px;" /><!-- ws:end:WikiTextLocalImageRule:22 --><br />
+<strong><span style="font-family: 'Lucida Grande'; font-size: 12pt;">Coret Genealogie brengt leiderschap, ervaring in de ‘FHISO Founding Member’ groep</span></strong><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">Den Haag (Nederland) en Gilbert, AZ (USA) </span><span style="font-family: 'Lucida Grande';" class="caps">— 11 oktober </span><span style="font-family: 'Lucida Grande';">2012 — Coret Genealogie en Family History Information Standards Organisation, Inc. (</span><span style="font-family: 'Lucida Grande';" class="caps">FHISO</span><span style="font-family: 'Lucida Grande';">) hebben vandaag aangekondigd dat Coret Genealogie zijn plannen heeft afgerond om stichtend lid van de organisatie te worden. Als onderdeel van dit proces heeft Coret Genealogie zijn oprichter, Bob Coret, aangewezen om de organisatie als lid te vertegenwoordigen. Bob zal, samen met andere FHISO leden uit de wereldwijde genealogische gemeenschap, participeren in de ontwikkeling van standaarden voor de digitale representatie en het delen van familiegeschiedenis en genealogische informatie.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">&quot;Ik ben ervan overtuigd dat de genealogische gemeenschap als geheel – </span><span style="color: #222222; font-family: Arial;">organisaties met en zonder winstoogmerk</span><span style="font-family: 'Lucida Grande';">, collega’s en concurrenten, ontwikkelaars en eindgebruikers – profijt hebben van standaarden. FHISO biedt ons de mogelijkheid om het inzicht van alle internationale genealogische spelers te combineren bij het ontwikkelen van standaarden op het vlak van familiegeschiedenis”, zei Bob Coret, oprichter van Coret Genealogie.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">“Coret Genealogie bouwt sinds 2003 gereedschap en netwerken in de Nederlandse genealogische gemeenschap. Of het nu gaat om inhoud of verbindingen, we hebben allemaal voordeel van Bob Coret’s ervaring en inzicht. Dat Bob zich vanuit Nederland aansluit bevordert het wereldwijde netwerk van technologen en genealogen die samenwerken om FHISO’s onafhankelijke en zelfbesturende operatie mogelijk te maken”, zei Robert Burkhead, waarnemend voorzitter van FHISO. </span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">Het Nederlandse bedrijf Coret Genealogie biedt een variëteit aan webgebaseerd genealogie gereedschap. <em>Genealogie Online</em> publiceert stambomen en door vrijwilligers gescande bronnen. De website fungeert ook als een onderzoeksgereedschap, door suggesties te geven aan deelnemende genealogen omtrent online beschikbare bronnen die gerelateerd zijn aan het eigen genealogische onderzoek en omtrent overeenkomsten tussen gepubliceerde stambomen. <em>Stamboom Forum</em> is een sociaal netwerk voor genealogen. Deze website faciliteert de uitwisseling van kennis en diensten in de Nederlandstalige genealogische gemeenschap. Het brengt ook genealogen met elkaar in contact, op basis van de familienamen die zij onderzoeken of het genealogische evenement dat zij bezoeken. Voor meer informatie over de hulpmiddelen die Coret Genealogie levert, bezoek <a class="wiki_link_ext" href="http://genealogie.coret.org/" rel="nofollow">http://genealogie.coret.org/</a> </span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">FHISO is een standaards ontwikkelende organisatie die de internationale familiegeschiedenis en genealogie gemeenschap samenbrengt in een transparant, zelfbesturend forum om informatiestandaarden te ontwikkelen om de huidige interoperabiliteitsproblemen op te lossen. Voor meer informatie over </span><span style="font-family: 'Lucida Grande';" class="caps">FHISO</span><span style="font-family: 'Lucida Grande';">, bezoek <a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a>.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">Wij nodigen u uit om Coret Genealogie en haar oprichter, Bob Coret, te verwelkomen bij FHISO!</span></span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">Contactpersonen: </span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">Coret Genealogie (Dutch and English), <a class="wiki_link_ext" href="mailto:genealogie@coret.org" rel="nofollow">genealogie@coret.org</a> </span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">FHISO General Enquiries, <a class="wiki_link_ext" href="mailto:enquiries@fhiso.org" rel="nofollow">enquiries@fhiso.org</a>; Membership enquiries, <a class="wiki_link_ext" href="mailto:membership@fhiso.org" rel="nofollow">membership@fhiso.org</a>; FHISO Media Relations, Anthony C. Proctor <span style="color: #0039c4;"><a class="wiki_link_ext" href="file:///about/blank" rel="nofollow">(acproctor@fhiso.org</a></span>)</span><br />
+<br />
+<hr />
+<!-- ws:start:WikiTextLocalImageRule:23:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-Coret-512.png/372172322/200x200/FHISO-FMSeal-Coret-512.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 200px; width: 200px;&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-Coret-512.png/372172322/200x200/FHISO-FMSeal-Coret-512.png" alt="FHISO-FMSeal-Coret-512.png" title="FHISO-FMSeal-Coret-512.png" style="height: 200px; width: 200px;" /><!-- ws:end:WikiTextLocalImageRule:23 --><br />
+<strong><span style="font-family: 'Lucida Grande'; font-size: 12pt;">Coret Genealogie brings leadership, experience to FHISO Founding Member roster</span></strong><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">The Hague (Netherlands) and Gilbert, AZ (USA) </span><span style="font-family: 'Lucida Grande';" class="caps">— October 11</span><span style="font-family: 'Lucida Grande';">, 2012 — Coret Genealogie and Family History Information Standards Organisation, Inc. (</span><span style="font-family: 'Lucida Grande';" class="caps">FHISO</span><span style="font-family: 'Lucida Grande';">) announced today that Coret Genealogie has finalised its plans to become a founding member of the organisation. As part of this process, Coret Genealogie has designated its founder, Bob Coret, to be an organisational member representative. Bob will participate with other FHISO members from the global genealogical community in the development of standards for the digital representation and sharing of family history and genealogical information.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">&quot;I am convinced that the genealogical community as a whole—profit and non-profit organisations, colleagues and competitors, developers and end-users—benefit from standards. FHISO provides the opportunity for us to combine the insight of all international genealogical players in the development of standards to support family history”, said Bob Coret, founder of Coret Genealogie.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">“Coret Genealogie has been building tools and networks in the Dutch genealogical community since 2003. Whether the subject is content or connections, we all benefit from Bob Coret’s first hand experience and insight. That Bob joins us from the Netherlands furthers the world-wide network of technologists and genealogists uniting to make FHISO’s independent and self-governing operations a reality”, said Robert Burkhead, acting FHISO Chairman. </span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">The Dutch company Coret Genealogie provides a range of web-based genealogy tools. <em>Genealogie Online</em> publishes family trees and scanned materials by volunteers. The website also acts as a research tool—offering suggestions to participating genealogists about online sources related to their genealogical research and between genealogist’s published trees. <em>Stamboom Forum</em> is a social network for genealogists. This website facilitates the exchange of knowledge and services in the Dutch speaking genealogical community. It also brings genealogists in contact with each other, based on the family names they research or the genealogical fair they visit. For more information about all tools provided by Coret Genealogie, please visit <a class="wiki_link_ext" href="http://genealogie.coret.org/en/" rel="nofollow">http://genealogie.coret.org/en/</a>.</span></span><br />
+<span style="display: block; font-family: 'lucida grande'; text-align: justify;">FHISO is a standards-developing organisation bringing the international family history and genealogical community together in a transparent, self-governing forum for the purpose of developing information standards to solve today’s interoperability issues. To learn more about</span><span style="display: block; font-family: 'lucida grande'; text-align: justify;">FHISO</span><span style="display: block; font-family: 'lucida grande'; text-align: justify;">, visit <a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a>.</span><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">Please join us in welcoming Coret Genealogie and its founder, Bob Coret, to FHISO! </span></span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">CONTACTS: </span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">Coret Genealogie (Dutch and English), <a class="wiki_link_ext" href="mailto:genealogie@coret.org" rel="nofollow">genealogie@coret.org</a> </span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">FHISO General Enquiries, <a class="wiki_link_ext" href="mailto:enquiries@fhiso.org" rel="nofollow">enquiries@fhiso.org</a>; Membership enquiries, <a class="wiki_link_ext" href="mailto:membership@fhiso.org" rel="nofollow">membership@fhiso.org</a>; FHISO Media Relations, Anthony C. Proctor <span style="color: #0039c4;"><a class="wiki_link_ext" href="file:///about/blank" rel="nofollow">(acproctor@fhiso.org</a></span>)</span><br />
+<br />
+<hr />
+<!-- ws:start:WikiTextLocalImageRule:24:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-Calico-Pie-512.png/367269608/200x200/FHISO-FMSeal-Calico-Pie-512.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 200px; width: 200px;&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-Calico-Pie-512.png/367269608/200x200/FHISO-FMSeal-Calico-Pie-512.png" alt="FHISO-FMSeal-Calico-Pie-512.png" title="FHISO-FMSeal-Calico-Pie-512.png" style="height: 200px; width: 200px;" /><!-- ws:end:WikiTextLocalImageRule:24 --><br />
+<strong><span style="font-family: 'Lucida Grande'; font-size: 12pt;">Calico Pie Limited leads the UK as a Founding Member of FHISO</span></strong><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">London (United Kingdom) and Gilbert, AZ (USA) </span><span style="font-family: 'Lucida Grande';" class="caps">— September 24</span><span style="font-family: 'Lucida Grande';">, 2012 — Calico Pie Limited and Family History Information Standards Organisation, Inc. (</span><span style="font-family: 'Lucida Grande';" class="caps">FHISO</span><span style="font-family: 'Lucida Grande';">) announced today that Calico Pie has finalised its plans to become a founding member of the organisation. As part of this process, Calico Pie has designated its founder, Simon Orde, to be an organisational member representative. Simon will participate with other FHISO members from the global genealogical community in the development of standards for the digital representation and sharing of family history and genealogical information.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">“Open standards make possible products and applications that even the creators of the standards themselves could never have imagined. Family Historian was originally built around one standard GEDCOM that has been hugely important for genealogy. We look forward to the opportunities and possibilities that future standards will bring. The emergence of FHISO is exactly what the genealogy world needs, and we are delighted and excited to be part of it”, said Calico Pie’s managing director, Simon Orde.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">“Developing international standards requires a supporting network of vendors and users that extends across the globe. Thanks to the leadership of Calico Pie and Simon Orde, our world community became better connected today in a big way. This announcement is good news for <em>Family Historian</em> users and genealogists everywhere”, said FHISO Organiser, Tony Proctor (UK and Ireland). </span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">Simon Orde founded London-based Calico Pie Limited in 1995. Its award-winning product, <em>Family Historian</em>, is the United Kingdom's leading genealogy software program. Ease of use, integrated visuals and graphics, emphasis on getting the most out of the data and bringing a balance to pre-configured and user-customisable features are just some of the goals and philosophy behind the development effort. In January 2012, <em>Family Historian 4</em> was honored with the “Best Buy” award from <em>Which? Computing.</em> To learn more about Calico Pie and <em>Family Historian</em> or to take the latest release, <em>Family Historian 5</em>, on a test drive, visit the company website, <a class="wiki_link_ext" href="http://www.family-historian.co.uk/" rel="nofollow">http://www.family-historian.co.uk</a>/.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">FHISO is a standards-developing organisation bringing the international family history and genealogical community together in a transparent, self-governing forum for the purpose of developing information standards to solve today’s interoperability issues. To learn more about </span><span style="font-family: 'Lucida Grande';" class="caps">FHISO</span><span style="font-family: 'Lucida Grande';">, visit <a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a>.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">Please join us in welcoming Calico Pie and its founder, Simon Orde, to FHISO! </span></span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">CONTACTS: </span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">Calico Pie / Family Historian, <a class="wiki_link_ext" href="mailto:info@family-historian.co.uk" rel="nofollow">info@family-historian.co.uk</a></span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">FHISO General Enquiries, <a class="wiki_link_ext" href="mailto:enquiries@fhiso.org" rel="nofollow">enquiries@fhiso.org</a>; Membership enquiries, <a class="wiki_link_ext" href="mailto:membership@fhiso.org" rel="nofollow">membership@fhiso.org</a>; FHISO Media Relations, Anthony C. Proctor <span style="color: #0039c4;"><a class="wiki_link_ext" href="file:///about/blank" rel="nofollow">(acproctor@fhiso.org</a></span>)</span><br />
+<br />
+<hr />
+<!-- ws:start:WikiTextLocalImageRule:25:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-ourFamily-ology-512.png/366820400/200x200/FHISO-FMSeal-ourFamily-ology-512.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 200px; width: 200px;&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-ourFamily-ology-512.png/366820400/200x200/FHISO-FMSeal-ourFamily-ology-512.png" alt="FHISO-FMSeal-ourFamily-ology-512.png" title="FHISO-FMSeal-ourFamily-ology-512.png" style="height: 200px; width: 200px;" /><!-- ws:end:WikiTextLocalImageRule:25 --><br />
+<strong><span style="font-family: 'Lucida Grande'; font-size: 12pt;">ourFamily•ology </span></strong><strong><span style="font-family: 'Lucida Grande'; font-size: 12pt;">adds another dimension to the list of FHISO Founding Members</span></strong><br />
+<br />
+Franklin Lakes, NJ and Gilbert, AZ — September 21, 2012 — ourFamily•ology, Inc. and Family History Information Standards Organisation, Inc. (FHISO) announced today that ourFamily•ology has finalized its plans to become a founding member of the organization. As part of this process, ourFamily•ology has designated its founder, Brandy Sacco, as an organizational member representative. Brandy will participate with other FHISO members from the global genealogical community in the development of standards for the digital representation and sharing of family history and genealogical information.<br />
+<br />
+“FHISO offers the best hope for a community-driven genealogy standard. Finally, we’ll have a place where genealogists and technologists world-wide come together to discuss the new tools and technologies that we want and need,” said Brandy Sacco, ourFamily•ology Founder.<br />
+<br />
+“Our community thrives on functionality and sharing. Innovative developers like Brandy Sacco deserve support from a modern, participatory standard development organization. Tools to help users build reliable family trees, enabling sensible privacy controls and soon to be released advanced media tagging features are examples of user functionality that Brandy has developed for ourFamily•ology. With innovators like Brandy Sacco participating in FHISO, just imagine what we’ll be able to accomplish,” said Robert Burkhead, FHISO Chairman.<br />
+<br />
+ourFamily•ology provides web-based genealogy tools to inspire hobbyists and advanced users alike to build reliable family trees that can be shared with family and friends. The innovative Progress Rating Chart allows users to visualize their progress and see the big picture. Searching and adding genealogical records from FamilySearch is a snap. Soon to be released media tagging and flexible privacy controls will make it possible for users to securely share and collaborate in exciting new ways. Website resources provide tips and insights that explain what genealogy is, how to find documents, how to conduct research, and more. As part of its core mission, ourFamily•ology believes in being a part of the genealogy community and staying abreast of new developments. For more information about ourFamily•ology or to subscribe for a free trial, please visit <a class="wiki_link_ext" href="http://www.family-genealogy.com/" rel="nofollow">http://www.Family-Genealogy.com</a>.<br />
+<br />
+FHISO is a standards-developing organization bringing the international family history and genealogical community together in a transparent, self-governing forum for the purpose of developing information standards to solve today’s interoperability issues. To learn more about FHISO, visit <a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a>.<br />
+<br />
+Please join us in welcoming ourFamily•ology and its founder, Brandy Sacco to FHISO!<br />
+<br />
+CONTACTS: ourFamily•ology, <!-- ws:start:WikiTextUrlEmailRule:742:support@ourFamilyology.com --><a class="wiki_link_ext" href="mailto:support@ourFamilyology.com" rel="nofollow">support@ourFamilyology.com</a><!-- ws:end:WikiTextUrlEmailRule:742 --><br />
+FHISO General Enquiries, enquiries@fhiso.org; Membership enquiries, membership@fhiso.org; FHISO Media Relations, Anthony C. Proctor (acproctor@fhiso.org)<br />
+<br />
+<hr />
+<!-- ws:start:WikiTextLocalImageRule:26:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-WikiTree-8b-512.png/357949088/199x199/FHISO-FMSeal-WikiTree-8b-512.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 199px; width: 199px;&quot; align=&quot;left&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-WikiTree-8b-512.png/357949088/199x199/FHISO-FMSeal-WikiTree-8b-512.png" alt="FHISO-FMSeal-WikiTree-8b-512.png" title="FHISO-FMSeal-WikiTree-8b-512.png" style="height: 199px; width: 199px;" align="left" /><!-- ws:end:WikiTextLocalImageRule:26 --><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<strong><span style="font-family: 'Lucida Grande'; font-size: 12pt;">WikiTree joins the growing list of FHISO Founding Members</span></strong><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">Croton-on-Hudson, NY and Gilbert, AZ </span><span style="font-family: 'Lucida Grande';" class="caps">— August </span><span style="font-family: 'Lucida Grande';">15, 2012 — WikiTree.com and Family History Information Standards Organisation, Inc. (</span><span style="font-family: 'Lucida Grande';" class="caps">FHISO</span><span style="font-family: 'Lucida Grande';">) announced today that WikiTree has finalized its plans to become a founding member of the organization. As part of this process, WikiTree has designated its founder, Chris Whitten, as an organizational member representative. Chris will participate with other FHISO members from the global genealogical community in the development of standards for the digital representation and sharing of family history and genealogical information.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">&quot;Although the mission of the WikiTree community is to grow a worldwide family tree, only a fraction of the world's genealogical information will ever be organized and stored on WikiTree.com. The worldwide tree is something much larger and greater than any one forum or organization. That's what makes universal standards so important. Information on WikiTree needs to fluidly connect with information elsewhere. When the FHISO team invited WikiTree to join as a founding member, I jumped at the opportunity,&quot; said WikiTree founder, Chris Whitten.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">&quot;WikiTree is a dynamic, innovative platform where community members work together to connect our ancestral families. This sense of community spirit is also important to FHISO’s development. Today’s announcement represents the innovators of one community, WikiTree, supporting the development of another, FHISO. Our many thanks to Chris Whitten for helping FHISO connect with another important market sector,” said Robert Burkhead (USA), member of the FHISO organizing team.</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">WikiTree is a community of member volunteers collaborating to develop a single world tree. By design, WikiTree sets out to balance the interests of privacy and so that everyone can share the same family tree. This dynamic, innovative approach to family history began in 2008 and has been growing ever since. Members of the WikiTree community agree to an “Honor Code” in their joint work. Chris Whitten, WikiTree founder, has made a pledge to keep the platform free. To learn more about WikiTree, visit the company website, <a class="wiki_link_ext" href="http://www.wikitree.com/" rel="nofollow">http://www.wikitree.com/</a> .</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">FHISO is a standards-developing organization bringing the international family history and genealogical community together in a transparent, democratic forum for the purpose of developing information standards to solve today’s interoperability issues. To learn more about </span><span style="font-family: 'Lucida Grande';" class="caps">FHISO</span><span style="font-family: 'Lucida Grande';">, visit <a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a> .</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">Please join us in welcoming WikiTree and Chris Whitten to FHISO! </span></span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">CONTACTS: </span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">WikiTree.com, <a class="wiki_link_ext" href="mailto:info@wikitree.com" rel="nofollow">info@wikitree.com</a></span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 9pt;">FHISO General Enquiries, <a class="wiki_link_ext" href="mailto:enquiries@fhiso.org" rel="nofollow">enquiries@fhiso.org</a>; Membership enquiries, <a class="wiki_link_ext" href="mailto:membership@fhiso.org" rel="nofollow">membership@fhiso.org</a>; FHISO Media Relations, Anthony C. Proctor <span style="color: #0039c4;"><a class="wiki_link_ext" href="file:///about/blank" rel="nofollow">(acproctor@fhiso.org</a></span>)</span><br />
+<br />
+<hr />
+<!-- ws:start:WikiTextLocalImageRule:27:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-RootsMagic-8b-256.png/355142208/204x204/FHISO-FMSeal-RootsMagic-8b-256.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 204px; width: 204px;&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-RootsMagic-8b-256.png/355142208/204x204/FHISO-FMSeal-RootsMagic-8b-256.png" alt="FHISO-FMSeal-RootsMagic-8b-256.png" title="FHISO-FMSeal-RootsMagic-8b-256.png" style="height: 204px; width: 204px;" /><!-- ws:end:WikiTextLocalImageRule:27 --><br />
+<strong><span style="font-family: 'Lucida Grande'; font-size: 12pt;">RootsMagic, Inc. to collaborate within FHISO about community standards</span></strong><br />
+<br />
+<span style="display: block; font-family: 'lucida grande'; font-size: 10.5pt; text-align: justify;">Gilbert, AZ, <span style="font-size: 10.5pt;">USA—July 27, 2012</span><span style="font-size: 10pt;">—Family History Information Standards Organisation, Inc. (</span><span style="font-size: 10pt;" class="caps">FHISO</span><span style="font-size: 10pt;">) announced today that RootsMagic, Inc., has finalized its plans to become a founding member of the organisation. As a founding member, RootsMagic will designate organisational member representatives to participate with other FHISO members from the global genealogical community in the development of standards for the digital representation and sharing of family history and genealogical information.</span></span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 10pt;">&quot;Most of us just want it to work. Within FHISO, everyone’s needs will be considered. Things will just work for more of us, more of the time. We’ll get there, thanks to support from leaders like Bruce Buzbee and Michael Booth of RootsMagic. Today’s announcement is good news for genealogists and innovators around the globe,” says FHISO Board Member, Geir Thorud (Norway).</span><br />
+<br />
+<span style="font-family: 'Lucida Grande'; font-size: 10pt;">For over 20 years, RootsMagic, Inc., has been creating family history software, starting with the popular <em>Family Origins</em> and continuing with <em>RootsMagic</em>, the award-winning genealogy software which makes researching, organizing, and sharing family history fun and easy. Over the years RootsMagic has released other programs to help people preserve and share their family history. <em>Personal Historian</em> helps users write and preserve their life stories. <em>Family Atlas</em> makes creating custom family maps fun and easy. And <em>Family Reunion Organizer</em> takes the headaches out of planning those important get-togethers. For more information about the RootsMagic family of products, visit the company website, <a class="wiki_link_ext" href="http://www.rootsmagic.com/" rel="nofollow">http://www.rootsmagic.com/</a> .</span><br />
+<br />
+<span style="display: block; font-family: 'lucida grande'; text-align: justify;">FHISO is a standards-developing organisation bringing the international family history and genealogical community together in a transparent, democratic forum for the purpose of developing information standards to solve today’s interoperability issues. To learn more about</span><span style="display: block; font-family: 'lucida grande'; text-align: justify;">FHISO, visit <a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a> .</span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande';">Please join us in welcoming RootsMagic and their member representatives to FHISO! </span></span><br />
+CONTACTS:<br />
+General enquiries – <!-- ws:start:WikiTextUrlEmailRule:743:enquiries@fhiso.org --><a class="wiki_link_ext" href="mailto:enquiries@fhiso.org" rel="nofollow">enquiries@fhiso.org</a><!-- ws:end:WikiTextUrlEmailRule:743 --><br />
+Membership enquiries – <!-- ws:start:WikiTextUrlEmailRule:744:membership@fhiso.org --><a class="wiki_link_ext" href="mailto:membership@fhiso.org" rel="nofollow">membership@fhiso.org</a><!-- ws:end:WikiTextUrlEmailRule:744 --><br />
+FHISO Media Relations - Anthony C. Proctor (acproctor@fhiso.org).<br />
+<br />
+<br />
+<hr />
+<!-- ws:start:WikiTextLocalImageRule:28:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-Ancestry-8b256.png/336811478/178x178/FHISO-FMSeal-Ancestry-8b256.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 178px; width: 178px;&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-FMSeal-Ancestry-8b256.png/336811478/178x178/FHISO-FMSeal-Ancestry-8b256.png" alt="FHISO-FMSeal-Ancestry-8b256.png" title="FHISO-FMSeal-Ancestry-8b256.png" style="height: 178px; width: 178px;" /><!-- ws:end:WikiTextLocalImageRule:28 --><br />
+<strong><span style="font-family: 'Lucida Grande'; font-size: 12pt;">Ancestry.com set to collaborate about community standards</span></strong><br />
+<br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande'; font-size: 10.5pt;">Gilbert, AZ </span><span style="font-family: 'Lucida Grande'; font-size: 10.5pt;" class="caps">USA—</span><span style="font-family: 'Lucida Grande'; font-size: 10.5pt;">May 17, 2012—Family History Information Standards Organisation, Inc. (</span><span style="font-family: 'Lucida Grande'; font-size: 10.5pt;" class="caps">FHISO</span><span style="font-family: 'Lucida Grande'; font-size: 10.5pt;">) announced today that Ancestry.com, Inc. has finalized its plans to become a founding member of the organisation. FHISO is a newly-formed international organisation created to develop standards for the digital representation of family history and genealogical information. As a founding member, Ancestry.com will designate five organisational member representatives to participate with other FHISO members from the global genealogical community.</span></span><br />
+<span style="display: block; font-family: 'lucida grande'; font-size: 10.5pt; text-align: justify;">Ancestry.com is the world's largest online family history resource, with 1.9 million paying subscribers. More than 10 billion records have been added to the site in the past 15 years. Ancestry users have created more than 34 million family trees containing approximately 4 billion profiles. In addition to its flagship site, Ancestry.com offers several localized Web sites designed to empower people to discover, preserve and share their family history.</span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande'; font-size: 10.5pt;">FHISO is a standards-setting organisation bringing the international family history and genealogical community together in a transparent, democratic forum for the purpose of developing information standards to solve today’s interoperability issues. To learn more about </span><span style="font-family: 'Lucida Grande'; font-size: 10.5pt;" class="caps">FHISO</span><span style="font-family: 'Lucida Grande'; font-size: 10.5pt;">, visit our website, <a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a> .</span></span><br />
+<span style="display: block; text-align: justify;"><span style="font-family: 'Lucida Grande'; font-size: 10.5pt;">Please join us in welcoming Ancestry.com and their member representatives to FHISO! </span></span><br />
+<span style="font-family: 'Lucida Grande'; font-size: 10.5pt;">CONTACT: </span><br />
+Anthony C. Proctor, FHISO Media Relations (acproctor at fhiso.org)<br />
+Robert M. Burkhead, FHISO Acting Chair (rmburkhead at fhiso.org)<br />
+Andrew G. Hatchett III, FHISO Acting Secretary (agh3rd at fhiso.org)<br />
+<br />
+<hr />
+<br />
+<!-- ws:start:WikiTextLocalImageRule:29:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-Seal6Main-FHISO-Hatchett-2012-568.png/325891014/169x169/FHISO-Seal6Main-FHISO-Hatchett-2012-568.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 169px; width: 169px;&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-Seal6Main-FHISO-Hatchett-2012-568.png/325891014/169x169/FHISO-Seal6Main-FHISO-Hatchett-2012-568.png" alt="FHISO-Seal6Main-FHISO-Hatchett-2012-568.png" title="FHISO-Seal6Main-FHISO-Hatchett-2012-568.png" style="height: 169px; width: 169px;" /><!-- ws:end:WikiTextLocalImageRule:29 --><br />
+<br />
+<strong><!-- ws:start:WikiTextAnchorRule:2:&lt;img src=&quot;/i/anchor.gif&quot; class=&quot;WikiAnchor&quot; alt=&quot;Anchor&quot; id=&quot;wikitext@@anchor@@Hatchett Benefactor&quot; title=&quot;Anchor: Hatchett Benefactor&quot;/&gt; --><a name="Hatchett Benefactor"></a><!-- ws:end:WikiTextAnchorRule:2 -->FHISO receives inaugural year financial pledge from Andrew G Hatchett III</strong><br />
+<br />
+<span style="background-color: #ffffff; display: block; font-family: tahoma,arial,sans-serif; text-align: left;">Gilbert, AZ USA—April 26, 2012 — Family History Information Standards Organisation, Inc. (FHISO) today announces it has received an inaugural year (2012) financial pledge from Andrew G Hatchett III that will help with specific start-up costs and certain on-going monthly operating expenses.</span><br />
+<span style="background-color: #ffffff; display: block; font-family: tahoma,arial,sans-serif; text-align: left;">An amateur genealogist for more than 50 years, Andy served in the United States Air Force and has experience in business, office management, sales and quality control. He retired from Laboratory Corporation of America in 2001 and has since been a beta tester for several software companies. Andy joined BetterGEDCOM in February 2011; in November of that year, he became part of the group organizing FHISO. He currently serves as FHISO’s acting secretary.</span><br />
+<span style="background-color: #ffffff; display: block; font-family: tahoma,arial,sans-serif; text-align: left;">FHISO is a standards-setting organisation bringing the international family history and genealogical community together in a transparent, democratic forum for the purpose of developing information standards to solve today’s interoperability issues. To learn more about FHISO, visit our website, <span style="color: #0071bd;"><a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a></span> .</span><br />
+<span style="background-color: #ffffff; display: block; font-family: tahoma,arial,sans-serif; text-align: left;">Please join us in thanking Andy for his support, and let’s all wish him a Happy Birthday!</span><br />
+<span style="background-color: #ffffff; display: block; font-family: tahoma,arial,sans-serif; text-align: left;">CONTACT:</span><br />
+<span style="background-color: #ffffff; display: block; font-family: tahoma,arial,sans-serif; text-align: left;">Anthony C. Proctor, FHISO Media Relations</span><br />
+<span style="background-color: #ffffff; font-family: tahoma,arial,sans-serif;">Robert M. Burkhead, FHISO Acting Chair</span><br />
+<span style="background-color: #ffffff; font-family: tahoma,arial,sans-serif;">Andrew G. Hatchett III, FHISO Acting Secretary</span><br />
+<br />
+<hr />
+<br />
+<!-- ws:start:WikiTextLocalImageRule:30:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/FHISO-Seal6Main-FHISO-Megan-HOA1-568.png/323720996/168x168/FHISO-Seal6Main-FHISO-Megan-HOA1-568.png&quot; alt=&quot;&quot; title=&quot;&quot; style=&quot;height: 168px; width: 168px;&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/FHISO-Seal6Main-FHISO-Megan-HOA1-568.png/323720996/168x168/FHISO-Seal6Main-FHISO-Megan-HOA1-568.png" alt="FHISO-Seal6Main-FHISO-Megan-HOA1-568.png" title="FHISO-Seal6Main-FHISO-Megan-HOA1-568.png" style="height: 168px; width: 168px;" /><!-- ws:end:WikiTextLocalImageRule:30 --><br />
+<br />
+<strong><!-- ws:start:WikiTextAnchorRule:3:&lt;img src=&quot;/i/anchor.gif&quot; class=&quot;WikiAnchor&quot; alt=&quot;Anchor&quot; id=&quot;wikitext@@anchor@@Smolenyak&quot; title=&quot;Anchor: Smolenyak&quot;/&gt; --><a name="Smolenyak"></a><!-- ws:end:WikiTextAnchorRule:3 -->FHISO receives start-up grant from Megan Smolenyak<span style="vertical-align: super;">2</span></strong><br />
+<br />
+Gilbert, AZ USA—April 18, 2012—Family History Information Standards Organisation, Inc. (FHISO) today announced that it has received a grant from Megan Smolenyak Smolenyak’s Honoring Our Ancestors Genealogical Grants. The funding will be used to help with the expense of incorporation and start-up.<br />
+<br />
+Megan Smolenyak is a genealogist, author and popular speaker. Her most recent book, <em>Hey, America, Your Roots Are Showing</em> was released in January of this year. She earlier wrote, <em>Who Do You Think You Are?: The Essential Guide to Tracing Your Family History</em>. Megan also conducts forensic research for the U.S. Army, coroners, NCIS and the FBI. To learn more about Megan, visit her website, <a class="wiki_link_ext" href="http://www.honoringourancestors.com/" rel="nofollow">http://www.honoringourancestors.com</a> .<br />
+<br />
+FHISO is a standards-setting organisation bringing the international family history and genealogical community together in a transparent, democratic forum for the purpose of developing information standards to solve today’s interoperability issues. To learn more about FHISO, visit our website, <a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a> .<br />
+<br />
+Please join us in thanking Megan!<br />
+<br />
+CONTACT:<br />
+Anthony C. Proctor, FHISO Media Relations (acproctor@fhiso.org)<br />
+Robert M. Burkhead, FHISO Acting Chair (rmburkhead@fhiso.org)<br />
+Andrew G. Hatchett III, FHISO Acting Secretary (agh3rd@fhiso.org)<br />
+<br />
+<hr />
+<!-- ws:start:WikiTextLocalImageRule:31:&lt;img src=&quot;http://bettergedcom.wikispaces.com/file/view/Graphic-for-blog-about-Tony-UK-articleX150.png/319298026/Graphic-for-blog-about-Tony-UK-articleX150.png&quot; alt=&quot;&quot; title=&quot;&quot; /&gt; --><img src="http://bettergedcom.wikispaces.com/file/view/Graphic-for-blog-about-Tony-UK-articleX150.png/319298026/Graphic-for-blog-about-Tony-UK-articleX150.png" alt="Graphic-for-blog-about-Tony-UK-articleX150.png" title="Graphic-for-blog-about-Tony-UK-articleX150.png" /><!-- ws:end:WikiTextLocalImageRule:31 --><br />
+<strong><!-- ws:start:WikiTextAnchorRule:4:&lt;img src=&quot;/i/anchor.gif&quot; class=&quot;WikiAnchor&quot; alt=&quot;Anchor&quot; id=&quot;wikitext@@anchor@@Proctor Build BetterGEDCOM&quot; title=&quot;Anchor: Proctor Build BetterGEDCOM&quot;/&gt; --><a name="Proctor Build BetterGEDCOM"></a><!-- ws:end:WikiTextAnchorRule:4 -->FHISO and BetterGEDCOM in the news</strong>. (2012-04-10)<br />
+<br />
+&quot;If we’re to become better genealogists, then we need a better storage format.” So writes our own <a class="wiki_link" href="http://bettergedcom.wikispaces.com/ACProctor">A. C. &quot;Tony&quot; Proctor</a> in “Building a BetterGEDCOM:<br />
+Building a Better World,” an article appearing in the current (April 2012) issue of <em>Your Family History</em>.<br />
+<br />
+Tony's article introduces FHISO and touches on many BetterGEDCOM discussion topics, including the need for a new format to be &quot;flexible and<br />
+accommodating &quot; toward the definition of the family unit. By golly, he managed to highlight both &quot;E&amp;C&quot; and Elizabeth Shown Mills in the same article!<br />
+<br />
+Great job, Tony.<br />
+Visit the<br />
+<span style="display: block; text-align: left;">Your Family History</span><br />
+website where you can subscribe or obtain more copies of the edition: <a class="wiki_link_ext" href="http://www.your-familyhistory.com/" rel="nofollow">http://www.your-familyhistory.com/</a>. Alternatively, FHISO have permission to post a PDF version of the full article at: <a class="wiki_link_ext" href="http://fhiso.org/blog/" rel="nofollow">http://fhiso.org/blog/</a><br />
+<br />
+<hr />
+<br />
+The following is a recompiled post, originally dated 2012-03-03.<br />
+<br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">FHISO is a standards-setting organization, and both technical and non-technical folks working (long and hard) to make this a reality. Those of us on the Developing the Organization (DTO) are (really, really) thankful for the mentoring and assistance being received--it's coming from within and beyond the BetterGEDCOM membership. We could use more help, including technical assistance, in the work to ...</span><br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">(a) build and/or arrange tools to support an extendable collaboration infrastructure (working groups, project teams, technical standing committees, etc.). The tools must support a speedy process, and thus aid in a range of circumstance (static, real-time and asynchronous).</span><br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">(b) hands-on assistance to develop materials that seed an initial set of working groups and project teams. In support of same, some particular work with the BetterGEDCOM Requirements Catalog is needed.</span><br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">(c) website design and development,</span><br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">(d) writers/content creators and, as appropriate, translators,</span><br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">(e) graphic design/promotional materials suitable for independent presentation to vendors, family historians and genealogical organizations around the globe,</span><br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">(f) technical tools and other assistance supporting outreach,</span><br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">(g) nonprofit accounting, membership and database infrastructure,</span><br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">(h) legal support to finalize things like the privacy policy and terms of use ...</span><br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">One community, one standard.</span><br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">We've got to work together “for the common good.”[1] Let’s develop the potential of FHISO as a community-owned, standards-setting organization and realize the benefits. If you can help, please contact us at fhiso *AT* fhiso *DOT* org.</span><br />
+<br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">We thank you all for your continued support.</span><br />
+<br />
+<span style="background-color: #ffffff; color: #404040; display: block; text-align: left;">[1] Dr. Bill (William L.) Smith, “FHISO: One community, one standard--feels good to me; to you?” _Examiner.com_ (<!-- ws:start:WikiTextUrlRule:741:http://www.examiner.com/genealogy-in-springfield-mo/fhiso-one-community-one-standard-feels-good-to-me-to-you --><a class="wiki_link_ext" href="http://www.examiner.com/genealogy-in-springfield-mo/fhiso-one-community-one-standard-feels-good-to-me-to-you" rel="nofollow">http://www.examiner.com/genealogy-in-springfield-mo/fhiso-one-community-one-standard-feels-good-to-me-to-you</a><!-- ws:end:WikiTextUrlRule:741 -->: published 1 March 2012)</span>
+  </div>
+
+
+  </div>
+  <div class="commentColumn WikispacesStream"><div class="WikispacesContent WikispacesBs3"><div class="commentList"></div></div></div>
+</div>
+
+  
+
+
+
+
+<script type="text/template" id="js-event-template">
+  <small>
+    <%- startDateShortFormat %>
+    <a href="<%- ws.common.pathFor('event', 'view', id) %>" class="WikispacesDialogLink">
+      <%- ws.common.truncate(title, 15) %>
+    </a>
+  </small>
+</script>
+
+<script type="text/template" id="js-reply-template">
+  <div class="tc-timeline-comment media">
+
+    <a class="pull-left userLink" href="<%- userCreated.url %>">
+      <img src="<%- userCreated.imageUrl %>" width="30" height="30" class="author-avatar" alt="" />
+    </a>
+    <div class="media-body" data-id="<%= id %>">
+      <% if (ws.context.user.canAdministerWiki) { %>
+        <i class="tc-delete-comment fa fa-trash-o contextual-command destroy-message ws-tip" title="Delete reply"></i>
+      <% } %>
+      <div class="tc-box-name-date">
+        <span class="tc-commenter"><a href="<%- userCreated.url %>"><%- userCreated.username %></a></span>
+        <% if (smartDate == '__live__') { %>
+        <abbr style="border-bottom-style: none;" class="timeago tc-comment-date" title="<%- (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+          <%- (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+        </abbr>
+        <% } else { %>
+          <abbr style="border-bottom-style: none;" class="tc-comment-date"><%- smartDate %></abbr>
+        <% } %>
+      </div>
+      <% if (body) { %>
+      <p>
+        <%= body %>
+      </p>
+      <% } %>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-share-template">
+  <div class="tc-timeline-block tc-<%= ws.stream.typeToBlockType(sharedType) %>-block" <%= (ws.stream.hideTimeline ? 'style="padding-left: 0px;"' : '') %>>
+
+    <% if (!ws.stream.hideTimeline) { %>
+      <div class="tc-timeline-icon">
+        <i class="fa fa-<%= ws.stream.typeToIcon(sharedType) %>"></i>
+      </div>
+      <div class="tc-timeline-triangle-man"></div>
+    <% } %>
+
+    <div class="tc-timeline-box" data-id="<%= id %>">
+      <div class="media">
+        <a class="pull-left userLink" href="<%- userCreated.url %>">
+          <img src="<%- userCreated.imageUrl %>" width="48" height="48" class="author-avatar media-object" alt="" />
+        </a>
+
+        <div class="media-body">
+
+          <div class="tc-stream-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <% if (ws.context.user.id) { %>
+              <li>
+                <a class="js-toggle-monitor" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-eye"></i>
+                  <span><%= monitored ? 'Start Monitoring' : 'Stop Monitoring' %></span>
+                </a>
+              </li>
+              <% } %>
+
+              <% if (ws.context.user.canAdministerWiki) { %>
+              <li>
+                <a class="js-toggle-lock" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-lock"></i>
+                  <span><%= locked ? 'Unlock Replies' : 'Lock Replies' %></span>
+                </a>
+              </li>
+              <% if (sharedType == 'discussion' || sharedType == 'comment' || sharedType == 'event') { %>
+              <li>
+                <a class="js-destroy-share" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-trash-o"></i>
+                  Delete <%= ws.stream.typeToName(sharedType) %>
+                </a>
+              </li>
+              <% } %>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="tc-timeline-box-header ws-reveal media-heading">
+              <h3 class="tc-box-title">
+              <% if (typeof adminLink !== 'undefined' && adminLink && ws.context.user.canAdministerWiki) { %>
+                <a href="<%- adminLink %>"><%- title %></a>
+              <% } else { %>
+                <%- title %>
+              <% } %>
+              <% if (typeof startDate !== 'undefined' && startDate) { %> - <%= startDateShortFormat %> <%= ws.stream.getYearFromStartDate(startDate) %><% } %>
+              </h3>
+              <div class="tc-box-name-date">
+                <% if (ws.context.instance.isTesClassroom) { %>
+                  <%- userCreated.username %>
+                <% } else { %>
+                  <a class="author-name" href="<%- userCreated.url %>"><%- userCreated.username %></a>
+                <% } %>
+                <% if (typeof recipients !== 'undefined' && recipients) { %>
+                  <i class="fa fa-angle-right"></i>
+                  <% if (typeof recipientsLink !== 'undefined') { %>
+                    <a href="<%- recipientsLink %>"><%- recipients %></a>
+                  <% } else { %>
+                    <span class="recipients"><%- recipients %></span>
+                  <% } %>
+                <% } %>
+                <% if (smartDate == '__live__') { %>
+                  <abbr style="border-bottom-style: none;" class="timeago tc-block-date" title="<%= (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+                    <%= (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+                  </abbr>
+                <% } else { %>
+                  <abbr style="border-bottom-style: none;" class="tc-block-date"><%- smartDate %></abbr>
+                <% } %>
+              </div>
+          </div>
+
+          <div class="<%= sharedType == 'comment' && !orphaned && !ws.stream.noCollapse ? 'hidden ' : '' %>tc-block-content">
+            <div class="clearfix">
+              <% if (typeof rangeActions !== 'undefined') { %>
+                <div class="tc-range-actions">
+                  <% for(var i = 0; i < rangeActions.length; i++) { %>
+                  <%= ws.stream.rangeActionTemplate(rangeActions[i]) %>
+                  <% } %>
+                </div>
+              <% } %>
+              <% if (description) { %>
+                <p><%= description %></p>
+              <% } %>
+            </div>
+          </div>
+
+          <% if (replyPages.length > 0 && !(replyPages.length === 1 && replyPages[0].digests.length === 0)) { %>
+            <div class="tc-timeline-comments">
+            <% for (var i = 0; i < replyPages.length; i++) { %>
+              <% if (i == 0 && replyPages[i].more) { %>
+                <a href="#" class="tc-show-more" onclick="ws.stream.pageReplies(<%= id %>, <%= replyPages[i].page + 1 %>); return false">Show more replies (<%= replyPages[i].more %> hidden) </a>
+              <% } else { %>
+                <div></div>
+              <% } %>
+              <% for (var j = 0; j < replyPages[i].digests.length; j++) { %>
+                <%= ws.stream.replyTemplate(replyPages[i].digests[j]) %>
+              <% } %>
+            <% } %>
+            </div>
+          <% } %>
+
+          <% if ((ws.stream.userCanPostMessage && !locked) || ws.context.user.canAdministerWiki) { %>
+          <div class="tc-add-comment media <%= ws.stream.noCollapse ? 'add-active' : ''%>">
+            <img src="<%- ws.context.user.imageUrlPrefix %>lg.jpg" width="30" height="30" class="pull-left author-avatar" alt="" />
+            <div class="media-body">
+              <textarea name="reply" placeholder="Comment" class="form-control form-control-tc ws-reveal <%= !ws.stream.noCollapse ? 'ws-unrevealed' : ''%> reply" /></textarea>
+              <button type="button" class="btn-tc btn-info-tc btn-sm-tc add-reply">Post</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-range-action-template">
+  <div>
+    <strong><%- name %></strong>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      <a href="<%- diffUrl %>">
+    <% } %>
+    <%= new Date(dateCreated * 1000).toLocaleString() %>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      </a>
+    <% } %>
+    <% if (typeof(rangeText) !== 'undefined') { %>
+      <div>
+        <span class="commentExtent">
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          <a href="<%- diffUrl %>">
+        <% } %>
+        <%= rangeText %>
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          </a>
+        <% } %>
+        </span>
+      </div>
+    <% } %>
+  </div>
+</script>
+
+<script type="text/template" id="js-stream-end-template">
+  <div class="tc-timeline-block tc-end-block">
+    <div class="tc-timeline-icon" style="margin-top: -10px;" />
+    <div class="tc-timeline-box" style="visibility: hidden;">
+      <p class="tc-box-title"></p>
+    </div>
+  </div>
+</script>
+
+<a name="discussion"></a>
+<div class="timeline WikispacesBs3 tc-timeline-embedded show-border">
+  <div class="timeline-line"></div>
+    <div id="js-share-list">
+    <div class="spinner hidden"><i class="fa fa-spinner fa-spin"></i></div>
+  </div>
+</div></div></div><div id="sentinel" style="clear:both"></div>
+    </div>
+  </td>
+</tr>
+</table>
+
+<div id="foot">
+<div class="WikiLicense WikiElement">Contributions to https://bettergedcom.wikispaces.com/ are licensed under a <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0">Creative Commons Attribution Share-Alike 3.0 License</a>. <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0"><img src="https://www.wikispaces.com/i/creativecommons/by-sa_3.0_80x15.png" width="85" height="15" alt="Creative Commons Attribution Share-Alike 3.0 License"/></a><br />Portions not contributed by visitors are Copyright 2016 Tangient LLC<br /><a href="https://www.tes.com/us/?utm_source=wikispaces&utm_medium=link&utm_campaign=US-52-footer">TES: The largest network of teachers in the world</a></div></div>
+
+
+<script type="text/template" id="dialog-template">
+<div class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+        <h4 class="modal-title"><%= header %></h4>
+      </div>
+      <div class="modal-body">
+        <%= body %>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+
+<div id="js-help-template" class="hidden">
+  <div class="ws-help">
+    <div class="js-help-controls WikispacesContent WikispacesBs3">
+      <a href="https://www.wikispaces.com/site/gettingstarted/off" class="btn btn-default hidden js-getting-started-off pull-right">Turn off "Getting Started"</a>
+      <ol class="breadcrumb">
+        <li class="js-special-breadcrumb active">
+          <a href="http://helpcenter.wikispaces.com/" data-breadcrumb="0">Home</a>
+        </li>
+        <li class="js-ellipsis hidden js-special-breadcrumb">
+          ...
+        </li>
+        <li class="js-spinner hidden js-special-breadcrumb"><i class="fa fa-spinner fa-spin"></i></li>
+      </ol>
+    </div>
+    <div class="ws-help-content wiki">Loading...</div>
+  </div>
+</div>
+</div>
+<script src="https://www.wikispaces.com/s/nogz/9vz070xj-common.min.js" type="text/javascript"></script>
+<script src="https://www.wikispaces.com/s/nogz/85k7018k-stream.min.js" type="text/javascript"></script>
+<script src="https://www.wikispaces.com/s/nogz/91k8z207-contentbar.min.js" type="text/javascript"></script>
+<script src="https://www.wikispaces.com/s/nogz/395j1vq7-component.stream-vo.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ws.namespace('ws.attributes');
+ws.namespace('ws.stream');
+ws.attributes.DISCUSSION_COUNT = 44;
+ws.attributes.pageId = 97032366;
+ws.attributes.version = 393368240;
+ws.attributes.showEditor = false;
+ws.attributes.editUrl = "https:\/\/bettergedcom.wikispaces.com\/page\/edit\/FHISO+News?goto=https%3A%2F%2Fbettergedcom.wikispaces.com%2FFHISO%2BNews";
+ws.attributes.userCanEdit = false;
+ws.stream.userCanPostMessage = false;
+ws.stream.hideTimeline = true;
+ws.stream.shareSource = "https:\/\/bettergedcom.wikispaces.com\/page\/shares\/FHISO+News";
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+jQuery(document).ready(function() {
+  ws.common.addJsonNotices({"warning":[],"error":[],"info":[],"success":[]});
+});
+
+jQuery(document).ready(function() {
+  ws.editor.canEdit = false;
+  var editUrl = 'https://bettergedcom.wikispaces.com/page/edit/FHISO+News?goto=https%3A%2F%2Fbettergedcom.wikispaces.com%2FFHISO%2BNews';
+
+  jQuery('#js-edit-from-template').change(function() {
+    window.location = ws.common.addUriParams(editUrl, [['template', jQuery(this).val()]]);
+  });
+});
+
+
+
+--></script><!-- w5 177 tot:177:177(1) mem:21:93(19) wki:1:1(1) -->
+
+</body>
+</html>

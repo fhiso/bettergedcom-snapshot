@@ -1,0 +1,1541 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="search" href="http://bettergedcom.wikispaces.com/space/opensearch" type="application/opensearchdescription+xml" title="Wikispaces Search (BetterGedcom Wiki)" />
+<link rel="alternate" type="application/x-wiki" title="Edit This Page" href="/page/edit/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29" />
+<link rel="alternate" title="BetterGedcom - All Changes" href="http://bettergedcom.wikispaces.com/wiki/xmla?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : OrganizersMeetingNotes 2011-12-13 (Dec 13) - Discussion" href="http://bettergedcom.wikispaces.com/message/xml/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : OrganizersMeetingNotes 2011-12-13 (Dec 13) - Edits" href="http://bettergedcom.wikispaces.com/page/xml/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29?v=rss_2_0" type="application/rss+xml" />
+<link rel="microsummary" href="/page/microsummary/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29/edits"/>
+<link rel="microsummary" href="/page/microsummary/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29/messages"/>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Ug8HVFVXGwIAXVlSDgMP"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,ee:"QJf3ax"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=t("ee").create(),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-686.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script><script type="text/javascript">
+  
+if (typeof ws === 'undefined') ws = {};
+ws.context = {
+  instance: {
+    id: '1',
+    url: 'wikispaces.com',
+    isMain: true,
+    supportsGoogleDocs: false,
+    isTesClassroom: false,
+  },
+  user: {
+    id: '',
+    username: '',
+    status: '',
+    locale: 'en',
+    imageUrlPrefix: 'http://www.wikispaces.com/i/user_none_',
+    isTeacher: false,
+    canAdministerWiki: false,
+  },
+  wiki: {
+    id: '5050513',
+    name: 'bettergedcom',
+    text: 'BetterGedcom',
+    module: 'B',
+    isClassroom: false,
+    isTesClassroom: false
+    ,defaultSpaceId: 5050513
+    ,isWwwWiki: false
+  },
+  project: {
+    id: '5050513',
+    name: ''
+  },
+  space: {
+    id: '5050513',
+    name: 'bettergedcom',
+    isDefaultSpace: true,
+    isDefaultTemplate: false
+  },
+
+  environment_name: 'prod',
+
+  path: {
+    object: 'page',
+    method: 'view',
+    page: 'OrganizersMeetingNotes 2011-12-13 (Dec 13)',
+    id: ''
+  },
+
+  settings: {
+    main_domain: 'wikispaces.com',
+    session_url: 'https://session.wikispaces.com/1/',
+    asset_url_prefix: 'http://www.wikispaces.com',
+    beta_features: false,
+    isMobileSite: false,
+    isUploadCapable: true,
+    can_discuss: false,
+    has_gdocs: false,
+    isDialog: false,
+    pwin: ''
+  },
+  clockSkewMillis: 1453211485013 - ((window.performance && window.performance.timing.responseStart > 0) ? window.performance.timing.responseStart : (new Date()).getTime())
+}
+
+
+// legacy javascript API variables, use the above instead
+var wikispaces_isUserLoggedIn = !!ws.context.user.id;
+var wikispaces_isMain = ws.context.instance.isMain;
+var wikispaces_username = ws.context.user.username;
+var wikispaces_spaceName = ws.context.space.name;
+var wikispaces_projectName = ws.context.project.name;
+var wikispaces_wikiName = ws.context.wiki.name;
+var wikispaces_wikiText = ws.context.wiki.text;
+var wikispaces_isDefaultSpace = ws.context.space.isDefaultSpace;
+var wikispaces_method = ws.context.path.method;
+var wikispaces_object = ws.context.path.object;
+var wikispaces_page = ws.context.path.page;
+var wikispaces_id = ws.context.path.id;
+var wikispaces_domain = ws.context.instance.url;
+var wikispaces_isUserOrganizer = false;
+var wikispaces_main_domain = ws.context.settings.asset_url_prefix;
+var wikispaces_asset_url_prefix = ws.context.settings.asset_url_prefix;
+var wikispaces_beta_features = ws.context.settings.beta_features;
+var wikispaces_isMobileSite = ws.context.settings.isMobileSite;
+var wikispaces_isUploadCapable = ws.context.settings.isUploadCapable;
+var wikispaces_can_discuss = ws.context.settings.can_discuss;
+var wikispaces_has_gdocs = ws.context.settings.has_gdocs;
+
+</script><title>BetterGedcom - OrganizersMeetingNotes 2011-12-13 (Dec 13)</title>
+<meta charset="utf-8" />
+<link rel="apple-touch-icon" sizes="144x144" href="http://www.wikispaces.com/_/z6371z4x/i/logo-144.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.wikispaces.com/_/j5j77xz3/i/logo-114.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://www.wikispaces.com/_/vq8j5432/i/logo-72.png" />
+<link rel="apple-touch-icon" href="http://www.wikispaces.com/_/38515190/i/logo-57.png" />
+<link rel="shortcut icon" href="http://www.wikispaces.com/_/55v9k02z/i/logo-16.png" />
+<style type="text/css">
+/* Standard theme styles */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+.ws-theme-header-inner,
+.ws-theme-body-inner,
+.ws-theme-footer-inner,
+.ws-theme-content-inner,
+.ws-theme-sidebar-inner {
+  position: relative;
+}
+.ws-theme-header-inner:after,
+.ws-theme-body-inner:after,
+.ws-theme-footer-inner:after,
+.ws-theme-content-inner:after,
+.ws-theme-sidebar-inner:after,
+.ws-theme-menu-inner:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.ws-theme-content, .ws-theme-sidebar {
+  overflow-x: auto;
+}
+.ws-theme-footer {
+  text-align: right;
+}
+.ws-theme-footer a, .ws-theme-footer a:hover {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .ws-theme-container {
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .ws-theme-content {
+    width: 550px;
+    min-height: 384px;
+    float: right;
+  }
+  .ws-theme-sidebar {
+    width: 200px;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .ws-theme-container {
+    width: 970px;
+  }
+  .ws-theme-content {
+    width: 770px;
+    min-height: 496px;
+  }
+}
+@media (min-width: 1200px) {
+  .ws-theme-container {
+    width: 1170px;
+  }
+  .ws-theme-content {
+    width: 970px;
+    min-height: 600px;
+  }
+}
+/* End standard theme styles */
+</style>
+<style type="text/css">
+/* Theme-specific styles */
+body {
+  background-color: #e5f4dd;
+}
+
+.ws-theme-header .WikiSearch .WikiSearchInput,
+.ws-theme-sidebar .WikiSearch .WikiSearchInput,
+.ws-theme-footer .WikiSearch .WikiSearchInput {
+  width: 100%;
+}
+
+.ws-theme-header a,
+.ws-theme-sidebar a,
+.ws-theme-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+.ws-theme-header a:hover,
+.ws-theme-sidebar a:hover,
+.ws-theme-footer a:hover {
+  text-decoration: underline;
+}
+.ws-theme-header img,
+.ws-theme-sidebar img,
+.ws-theme-footer img {
+  border: none;
+}
+
+.ws-theme-header,
+.ws-theme-sidebar {
+  display: none;
+}
+
+.ws-theme-sidebar,
+.ws-theme-footer {
+  color: #000000;
+}
+
+.ws-theme-body-inner {
+  padding: 8px 5px;
+}
+
+.ws-theme-content {
+  overflow-x: visible;
+}
+.ws-theme-content-inner {
+  background-color: #FFF;
+  padding: 15px;
+}
+
+.ws-theme-footer {
+  font-size: 12px;
+}
+.ws-theme-footer-inner {
+  padding: 0 15px 15px 15px;
+}
+.ws-theme-footer .WikiLicense img {
+  vertical-align: text-bottom;
+}
+
+@media (min-width: 768px) {
+  .ws-theme-container {
+    width: auto;
+  }
+
+  .ws-theme-header,
+  .ws-theme-sidebar {
+    display: block;
+  }
+
+  .ws-theme-header {
+    color: #FFF;
+    background: #a4d0ad url('http://www.wikispaces.com/_/94v39788/i/theme_swoop.png') no-repeat 100% -25px;
+  }
+  .ws-theme-header-inner {
+    padding: 15px 0;
+  }
+
+  .ws-theme-body-inner {
+    padding: 15px;
+  }
+
+  .ws-theme-content {
+    width: auto;
+    float: none;
+    margin-left: 215px;
+  }
+  .ws-theme-content-inner {
+    width: 100%;
+    float: left;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+  }
+
+  .ws-theme-sidebar .WikiActions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .ws-theme-sidebar .WikiActions > li {
+    padding: 2px;
+  }
+  .ws-theme-sidebar .WikiCustomNav ol {
+    padding-left: 16px;
+  }
+  .ws-theme-sidebar .WikiCustomNav ol.includePageList {
+    padding-left: 0;
+  }
+  .ws-theme-sidebar .ws-theme-nav-edit {
+    color: #666;
+    text-align: center;
+  }
+}
+/* End theme-specific styles */
+</style>
+<link rel="stylesheet" href="http://bettergedcom.wikispaces.com/stylesheet/view/241807025-217420326D.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/9q897620-internal-bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/vz033906-internal.css" type="text/css" />
+<script src="http://www.wikispaces.com/s/nogz/j91xzz3x-top.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+
+  var wsGoogleAccount = 'UA-80504-1';
+  _gaq.push(['_setAccount', wsGoogleAccount]);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', 'wikispaces.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setCustomVar', 2, 'Authenticated', 'Guest', 2]);
+  _gaq.push(['_trackPageview']);
+</script></head>
+<body><a href="#WikiContent" class="hidden sr-only sr-only-focusable">Skip to main content</a><div id="js-fixed-header-holder" class="fixed"><div class="WikispacesContent WikispacesBs3" role="banner">
+      <div id="WikispacesBanner" class="BannerDisplayed">You are not a member of this wiki. <a href="http://bettergedcom.wikispaces.com/space/join"> Join now</a>
+<script type="text/javascript">
+function dismissJoinWiki() {
+  ws.common.displayBanner(false);
+  jQuery.post("http://bettergedcom.wikispaces.com/wiki/dismissjoin");
+}
+</script> &nbsp;<a href='#' onclick='dismissJoinWiki(); return false;'>Dismiss</a></div>
+    <div class="ws-main-top-nav visible-xs">
+    <div class="navbar navbar-static-top" style="margin-bottom: 0;">
+      <div class="container">
+                <div class="navbar-header">
+          <div class="visible-xs pull-left">
+            <a href="/space/menu" class="WikispacesDialogLink btn navbar-btn">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <div class="visible-xs pull-right js-globalnav-popover-container">
+                        <a href="http://www.wikispaces.com/site/signin?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FOrganizersMeetingNotes%2B2011-12-13%2B%2528Dec%2B13%2529" class="btn navbar-btn ws-mobile-guest-username js-globalnav-popover-trigger">
+              guest
+            </a>
+                        <div class="hidden js-globalnav-popover-content">
+              <div class="WikispacesContent WikispacesBs3">
+                <div class="WikiInternalHeaderNav noHide">
+  <div class="WikiInternalHeaderNavMenu">
+                          
+                  <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/user/join?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2Fspace%2Fjoin" rel="nofollow" class="WikispacesXDomainDialogLink">Join</a></span>
+
+          <span class="divider">|</span>
+        
+        <span class="WikiInternalHeaderNavMenuArea"><a class="js-help-trigger" rel="nofollow" href="http://helpcenter.wikispaces.com/">Help</a></span>
+
+        <span class="divider">|</span>
+      
+      <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/site/signin?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FOrganizersMeetingNotes%2B2011-12-13%2B%2528Dec%2B13%2529" rel="nofollow" class="WikispacesXDomainDialogLink">Sign In</a></span>
+      </div>
+</div>              </div>
+            </div>
+          </div>
+          <div class="ws-navbar-middle-xs">
+            <div class="navbar-brand" role="navigation">
+              <a href="http://www.wikispaces.com/" class="ws-logo"></a>
+              <i class="fa fa-angle-right"></i>
+              <a href="http://bettergedcom.wikispaces.com/">BetterGedcom</a>
+                              <i class="fa fa-angle-right"></i> <a href="http://bettergedcom.wikispaces.com/home">Home</a>
+              
+            </div>
+          </div>
+                    <form action="/search/view" method="post" class="navbar-form ws-include-xs pull-left ws-navbar-search hidden-xs" role="search"><input type="hidden" name="wikispacesFormToken" value="8685902230f62217d2cf8b8c59f65b0a4886028a"/><input type="text" class="form-control search-query" name="q" value="" placeholder="Search" /> </form>
+                  </div>
+      </div>
+    </div>
+  </div>
+      <div class="hidden-xs"><div class="WikiInternalHeaderNav WikiElement floating">
+  <div class="WikiInternalHeaderNavMenu">
+                                    <span class="WikiInternalHeaderNavMenuArea guestUserName">guest</span><span class="slideMarker divider">|</span>
+        
+                  <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/user/join?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2Fspace%2Fjoin" rel="nofollow" class="WikispacesXDomainDialogLink">Join</a></span>
+
+          <span class="divider">|</span>
+        
+        <span class="WikiInternalHeaderNavMenuArea"><a class="js-help-trigger" rel="nofollow" href="http://helpcenter.wikispaces.com/">Help</a></span>
+
+        <span class="divider">|</span>
+      
+      <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/site/signin?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FOrganizersMeetingNotes%2B2011-12-13%2B%2528Dec%2B13%2529" rel="nofollow" class="WikispacesXDomainDialogLink">Sign In</a></span>
+      </div>
+</div></div>
+  </div></div><div id="js-fixed-header-offset">
+<header class="ws-theme-header" role="banner">
+  <div class="ws-theme-container">
+    <div class="ws-theme-header-inner">
+      <a href="http://bettergedcom.wikispaces.com/" class="WikiLogo WikiElement"><img src="http://bettergedcom.wikispaces.com/space/showlogo/1447724692/logo.png" alt="BetterGedcom" /></a>    </div>
+  </div>
+</header>
+
+<div class="ws-theme-body">
+  <div class="ws-theme-container">
+    <div class="ws-theme-body-inner">
+      <nav class="ws-theme-sidebar" role="navigation">
+        <div class="ws-theme-sidebar-inner">
+          <div class="ws-theme-menu">
+            <div class="ws-theme-menu-inner">
+              <ul class="WikiActions WikiElement WikiControls">
+    <li id="WikiActionHome"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="http://bettergedcom.wikispaces.com/"><i class="fa fa-home fa-fw"></i></a><a href="http://bettergedcom.wikispaces.com/">Wiki Home</a></div></li>
+    <li id="WikiActionChanges"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="/wiki/changes"><i class="fa fa-clock-o fa-fw"></i></a><a href="/wiki/changes">Recent Changes</a></div></li>
+    <li id="WikiActionPagesAndFiles"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="/space/content"><i class="fa fa-file-text-o fa-fw"></i></a><a href="/space/content">Pages and Files</a></div></li>
+    <li id="WikiActionMembers"><div class="js-member-link"><span class="WikiActionSupplemental" style="float: right;"></span><a href="/wiki/members"><i class="fa fa-user fa-fw"></i></a><a href="/wiki/members">Members</a></div></li>
+</ul>
+              <form action="/search/view" method="post" class="WikiSearch WikiElement" role="search"><input type="text" class="form-control WikiSearchInput" name="q" value="" placeholder="Search" /> </form>              <div class="WikiCustomNav WikiElement wiki"><!-- ws:start:WikiTextMediaRule:0:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/custom/15419670?h=0&amp;w=0&quot; class=&quot;WikiMedia WikiMediaCustom&quot; id=&quot;wikitext@@media@@type=&amp;quot;custom&amp;quot; key=&amp;quot;15419670&amp;quot;&quot; title=&quot;Custom Media&quot;/&gt; --><div id="clustrmaps-widget"></div>
+<script type="text/javascript">
+//<![CDATA[
+var _clustrmaps = {'url' : 'http://bettergedcom.wikispaces.com', 'user' : 1008260, 'server' : '4', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2012-04-24', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www4.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();
+//]]>
+</script><noscript><a href="http://www4.clustrmaps.com/user/a8df6284" rel="nofollow"><img src="http://www4.clustrmaps.com/stats/maps-no_clusters/bettergedcom.wikispaces.com-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript><!-- ws:end:WikiTextMediaRule:0 --><br />
+<!-- ws:start:WikiTextMediaRule:1:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/custom/20494652?h=0&amp;w=0&quot; class=&quot;WikiMedia WikiMediaCustom&quot; id=&quot;wikitext@@media@@type=&amp;quot;custom&amp;quot; key=&amp;quot;20494652&amp;quot;&quot; title=&quot;Custom Media&quot;/&gt; --><div id="google_translate_element"></div>
+<script type="text/javascript">
+//<![CDATA[
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+//]]>
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script><!-- ws:end:WikiTextMediaRule:1 --><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/FAQ">FAQ</a></strong><br />
+<br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Goals1">Goals</a></strong><br />
+. <a class="wiki_link" href="http://bettergedcom.wikispaces.com/Better+GEDCOM+Requirements+Catalog">Requirements Catalog</a><br />
+. <a class="wiki_link" href="http://bettergedcom.wikispaces.com/BG+Requirements+Catalog+Index">Requirements Catalog Index</a><br />
+<br />
+FHISO<br />
+... <a class="wiki_link" href="http://bettergedcom.wikispaces.com/Patrick+L.+Jones+remarks">Patrick L. Jones remarks</a><br />
+... <strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/FHISO+Open+Discussion">FHISO Open Discussion</a></strong><br />
+<strong>... <a class="wiki_link" href="/FHISO+News">FHISO News 2012</a></strong><br />
+<strong>... <a class="wiki_link" href="http://bettergedcom.wikispaces.com/FHISO+News+2013">FHISO News 2013</a></strong><br />
+... <strong><a class="wiki_link" href="/FHISO+Call+for+Papers">FHISO Call for papers</a></strong><br />
+<br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/MEETINGS">Meetings</a></strong><br />
+<br />
+<strong>Reference</strong><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Shortcomings+Of+GEDCOM" target="_blank">What's Wrong with GEDCOM?</a></strong><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Data">Data Models</a></strong><br />
+. <a class="wiki_link" href="http://bettergedcom.wikispaces.com/BetterGEDCOM+Comparisons">Comparisons</a><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Research+Process%2C+Evidence+%26+GPS">Research Process</a></strong><br />
+. <a class="wiki_link" href="http://bettergedcom.wikispaces.com/Genealogy+Practice+and+Methods">Genealogy Methodology</a><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Sources+and+Citations">Sources &amp; Citations</a></strong><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Personal+Names">Personal Names</a></strong><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Defining+E%26C+for+BetterGEDCOM">Defining E&amp;C</a></strong><br />
+<br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Project+Frameworks">Project Frameworks</a></strong><br />
+<strong>.</strong> <a class="wiki_link" href="http://bettergedcom.wikispaces.com/GEDCOM+X+Framework">GEDCOM X</a><br />
+<br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Definitions">Definitions</a></strong><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/BetterGEDCOM+Sandbox">Sandbox</a></strong><br />
+. <a class="wiki_link" href="http://bettergedcom.wikispaces.com/BetterGEDCOM+test+suite">Test Suite</a><br />
+<span style="cursor: pointer; margin: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"><strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Tools">Tools</a></strong></span><br />
+<br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Member+Profiles">BetterGEDCOM Member Profiles</a></strong><br />
+<br />
+<strong><a class="wiki_link_ext" href="mailto:BetterGEDCOM@gmail.com" rel="nofollow">Contact Us</a></strong><br />
+<br />
+<a class="wiki_link" href="http://bettergedcom.wikispaces.com/Archive">Archive</a><br />
+<br />
+<!-- ws:start:WikiTextIncludeRule:00:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/include/navigation?w=200&amp;h=100&quot; class=&quot;WikiMedia WikiMediaInclude&quot; id=&quot;wikitext@@include@@component=&amp;quot;navigation&amp;quot;&quot; title=&quot;Include navigation: component=&amp;quot;navigation&amp;quot;&quot; /&gt; --><div class="WikispacesNavbar" data-spaceid="5050513" data-navbarurl="/navbar">
+  <div id="WikispacesNavbarFavoritesEntry" data-entryid="16408119" class="WikispacesNavbarEntry">
+  <div class="WikispacesNavbarEntryHeader">
+        <span class="fa-fw"><i class="WikispacesNavbarToggle WikispacesNavbarPlus fa fa-caret-right"></i><i class="WikispacesNavbarToggle WikispacesNavbarMinus fa fa-caret-down"></i></span><span>Favorites&nbsp;<i class="fa fa-star"></i></span>
+  </div>
+  <div class="WikispacesNavbarEntryItems" id="WikispacesNavbarFavoritesEntryItems">
+    <span class="hidden WikispacesNavbarNum">20</span>
+<ol>
+</ol>
+  </div>
+</div>  <div id="WikispacesNavbarAllPagesEntry" data-entryid="16408121" class="WikispacesNavbarEntry WikispacesNavbarSortableEntry WikispacesNavbarRemovableEntry hidden">
+  <div class="WikispacesNavbarEntryHeader">
+        <i class="WikispacesNavbarSpinner fa fa-spinner fa-spin pull-right"></i><span class="WikispacesNavbarHeaderAction WikispacesNavbarRemoveEntry close"><i class="fa fa-times"></i></span><span class="fa-fw"><i class="WikispacesNavbarToggle WikispacesNavbarPlus fa fa-caret-right"></i><i class="WikispacesNavbarToggle WikispacesNavbarMinus fa fa-caret-down"></i></span><span>All Pages</span>
+  </div>
+  <div class="WikispacesNavbarEntryItems" id="WikispacesNavbarAllPagesEntryItems">
+    <span class="hidden WikispacesNavbarNum">20</span>
+<ol>
+</ol>
+  </div>
+</div>  <div id="WikispacesNavbarTags">
+    </div>
+  <div id="WikispacesNavbarOptions" class="WikispacesNavbarEntry WikispacesContent WikispacesBs3">
+    <div id="WikispacesNavbarOptionsEntryItems" class="WikispacesNavbarEntryItems">
+      <form class="WikispacesNavbarNewTagNavbarForm" action="/navbar/tag" method="post">
+        <div class="input-group">
+          <input type="text" name="tagName" placeholder="Tag" class="form-control" style="width: 135px;"/>
+          <div class="input-group-btn">
+            <button type="submit" name="submitTag" value="1" class="btn btn-default ws-btn-spinner"><span>Add</span></button>
+          </div>
+        </div>
+      </form>
+      <form class="WikispacesNavbarShowAllPagesForm text-center" action="/navbar/update/16408121" method="post">
+        <input type="hidden" name="status" value="A" />
+        <button type="submit" class="btn btn-default WikispacesNavbarShowAllPages ws-btn-spinner" name="go" value="1"><span>Add "All Pages"</span></button>
+        <button type="button" class="btn btn-primary WikispacesNavbarEditDone">Done</button>
+        <i class="fa fa-spinner fa-spin hidden"></i>
+      </form>
+    </div>
+  </div>
+</div><!-- ws:end:WikiTextIncludeRule:00 --><br />
+<!-- ws:start:WikiTextMediaRule:2:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/custom/24391644?h=0&amp;w=0&quot; class=&quot;WikiMedia WikiMediaCustom&quot; id=&quot;wikitext@@media@@type=&amp;quot;custom&amp;quot; key=&amp;quot;24391644&amp;quot;&quot; title=&quot;Custom Media&quot;/&gt; --><!-- Site Meter -->
+<script type="text/javascript" src="http://s47.sitemeter.com/js/counter.js?site=s47BetterGEDCOMstats">
+</script><noscript><a href="http://s47.sitemeter.com/stats.asp?site=s47BetterGEDCOMstats" target="_top" rel="nofollow"><img src="http://s47.sitemeter.com/meter.asp?site=s47BetterGEDCOMstats" alt="Site Meter" border="0" /></a></noscript><!-- Copyright (c)2009 Site Meter --><!-- ws:end:WikiTextMediaRule:2 --></div>              <div class="ws-theme-nav-edit">
+                              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="ws-theme-content" role="main">
+        <div class="ws-theme-content-inner">
+          <div class="contentBox"><div class="innerContentBox" id="WikiContent">
+
+<script type="text/template" id="comment-footer-template">
+
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</script>
+
+<script type="text/template" id="comment-content-template">
+<div class="ws-box commentView">
+  <div class="comment-close">
+    <button type="button" class="closeme close" aria-hidden="true"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="commentHeader">
+    <p class="ws-stream-meta command-context">
+      <a class="userLink userLinkPicture" href="<%= userCreated.url %>"><img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16"></a>
+      <a href="<%= userCreated.url %>"><%= userCreated.username %></a>
+      <% if (smartDate == '__live__') { %>
+      <abbr class="timeago" title="<%= (new Date(parseInt(dateCreated, 10) * 1000)).toISOString() %>">
+        <%= dateCreated %>
+      </abbr>
+      <% } else { %>
+        <%- smartDate %>
+      <% } %>
+      <% if (ws.context.user.canAdministerWiki && ws.comments.Manager.readOnly) { %>
+        <i class="fa fa-trash-o contextual-command delete ws-tip" title="Delete Comment"></i>
+      <% } %>
+    </p>
+  </div>
+
+  <div class="commentBody">
+    <div class="commentContent">
+      <%= description %>
+    </div>
+
+      <% for(i = 0; i < replyPages.length; i++) { %>
+        <% for(var j = 0; j < replyPages[i].digests.length; j++) { %>
+      <div class="commentReply" data-id="<%= replyPages[i].digests[j].id %>">
+        <p class="ws-stream-meta command-context">
+          <a class="userLink userLinkPicture" href="<%= replyPages[i].digests[j].userCreated.url %>"><img class="userPicture" src="<%= replyPages[i].digests[j].userCreated.imageUrl %>" width="16" height="16"></a>
+          <a href="<%= replyPages[i].digests[j].userCreated.url %>"><%= replyPages[i].digests[j].userCreated.username %></a>
+          <% if (smartDate == '__live__') { %>
+          <abbr class="timeago" title="<%= (new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000)).toISOString() %>">
+            <%= new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000).toLocaleString() %>
+          </abbr>
+          <% } else { %>
+            <%- smartDate %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+          <i class="fa fa-trash-o contextual-command delete-reply ws-tip" title="Delete Reply"></i>
+          <% } %>
+          </p>
+        <div class="commentContent"><%= replyPages[i].digests[j].body %></div>
+      </div>
+        <% } %>
+      <% } %>
+
+      <form class="reply commentReply">
+        <div class="form-group">
+          <textarea name="reply" placeholder="Reply" class="form-control" /></textarea>
+        </div>
+        <div class="btn-toolbar">
+          <button type="submit" class="btn btn-primary btn-sm" name="go" value="1">Post</button>
+
+          <% if (ws.context.user.id) { %>
+            <% if (monitored) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip active" title="You are monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip" title="You are not monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+            <% if (locked) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip active" title="Replies are not allowed."><i class="fa fa-lock"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip" title="Replies are allowed."><i class="fa fa-lock"></i></button>
+            <% } %>
+          <% } %>
+
+          <i class="fa fa-spinner fa-spin spinner pull-right hidden"></i>
+        </div>
+      </form>
+   </div>
+
+   
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-composer-template">
+<div class="ws-box commentView">
+  <div class="commentComposer">
+    <div class="comment-close">
+      &nbsp;<button type="button" class="close closeme" aria-hidden="true"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="commentHeader">
+      <p class="ws-stream-meta command-context">
+        <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+        <a href="#" onclick="return false;"><%= userCreated.username %></a>
+      </p>
+    </div>
+    <div class="commentBody">
+      <textarea name="comment" class="compose form-control" placeholder="Comment"/></textarea><br/>
+      <div class="btn-toolbar">
+        <button type="button" class="btn btn-default btn-sm monitored active pull-right" style="margin-left: 6px" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-eye"></i></button>
+        <button type="button" class="btn btn-default btn-sm locked btn-toggle pull-right" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-lock"></i></button>
+        <button type="button" class="btn btn-primary btn-sm closeme">Save</button>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-proxy-template">
+<div class="comment-proxy">
+  <span class="commentUser">
+  <% if (userCreated) { %>
+    <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+  <% } else { %>
+    <img class="userPicture" src="<%= ws.context.user.imageUrlPrefix %>sm.jpg" width="16" height="16">
+  <% } %>
+  </span>
+  <span class="commentReplies"><%= 1 + _(replyPages).reduce(function(memo, page){ return memo + page.digests.length; }, 0) %></span>
+</div>
+</script>
+
+<div class="ws-menu-bar WikiControls WikispacesContent WikispacesBs3">
+  
+    <h1 class="pageTitle"><a href="/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29">OrganizersMeetingNotes 2011-12-13 (Dec 13)</a></h1>
+      <div class="btn-group pull-right">
+          <span class="btn btn-default disabled tipme" title="you do not have permission to edit this page"><i class="fa fa-pencil fa-fw"></i> Edit</span>          <a class="btn btn-default tipme" title="view 1 discussion post" href="/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29#discussion"><i class="fa fa-comments fa-fw"></i> 1</a>          <a class="btn btn-default tipme" title="view 1 revision" href="/page/history/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29"><i class="fa fa-clock-o fa-fw"></i> 1</a>          <a class="btn btn-default ws-btn-more dropdown-toggle tipme" title="more options" href="/page/menu/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29"><i class="icon-height-only fa-fw"></i>&hellip;</a>        <ul class="ws-more-menu dropdown-menu dropdown-menu-right">
+              <li class=" dropdown"><a class=" ws-tag-dropdown-toggle" href="/page/tags/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29"><span class="pull-right">0</span> <i class="fa fa-tag fa-fw"></i> Tags</a>
+          <div class="dropdown-menu dropdown-menu-right ws-tag-dropdown-menu">
+          
+
+
+
+<form action="#" name="WikiTagForm" class="WikiTagForm"><input type="hidden" name="wikispacesFormToken" value="51b1be4f93741f0855cf3b70ec5e96b087d96c55"/><input type="hidden" name="wikispacesFormToken" value="51b1be4f93741f0855cf3b70ec5e96b087d96c55"/>
+  <div class="WikiTagList">
+    <i class="fa fa-tag ws-action"></i>
+        <ul class="list-unstyled">
+          <li>No tags</li>
+        </ul>
+      </div>
+  </form>      </div>
+    </li>
+              <li class="divider"></li>
+            <li class=""><a class=" WikispacesDialogLink" href="http://bettergedcom.wikispaces.com/wiki/addmonitor?monitorLink=page%3AOrganizersMeetingNotes%202011-12-13%20%28Dec%2013%29"><i class="fa fa-eye fa-fw"></i> Notify</a>
+    </li>
+        <li class=""><a class=" WikispacesDialogLink" href="/page/rss/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29"><i class="fa fa-rss fa-fw"></i> RSS</a>
+    </li>
+        <li class=""><a class="" href="/page/links/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29"><i class="fa fa-link fa-fw"></i> Backlinks</a>
+    </li>
+              <li class="divider"></li>
+            <li class=""><a class="" href="/page/code/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29"><i class="fa fa-code fa-fw"></i> Source</a>
+    </li>
+        <li class=""><a class="" href="/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29?f=print"><i class="fa fa-print fa-fw"></i> Print</a>
+    </li>
+        <li class=""><a class="" href="/page/pdf/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29"><i class="fa fa-cloud-download fa-fw"></i> Export (PDF)</a>
+    </li>
+      </ul>  </div>
+  </div>
+
+
+
+
+  <textarea class="form-control" id="autosaveContent" style="display:none;" rows="1" cols="1"></textarea>
+  <div id="autosavePrompt" style="display:none;"></div>
+
+<div class="commentContainer">
+  <div class="commentSubject">
+  <div class="wiki wikiPage" id="content_view">
+  <!-- ws:start:WikiTextHeadingRule:0:&lt;h1&gt; --><h1 id="toc0"><!-- ws:end:WikiTextHeadingRule:0 --> </h1>
+ This is the unedited transcript of the 13 Dec 2010 Organizers' Meeting that took place in the BetterGEDCOM Chat Room. Be sure to see the <a class="wiki_link" href="/BetterGEDCOM+Calendar" target="_blank">BetterGEDCOM Calendar</a> for scheduled meetings.<br />
+<br />
+2010-12-13 16:01:03 [Message] DearMYRTLE -&gt; Organizers Meeting: ===================================<br />
+2010-12-13 16:01:14 [Message] DearMYRTLE -&gt; Organizers Meeting: WELCOME to the weekly Organizer's meeting at BetterGEDCOM.<br />
+2010-12-13 16:01:21 [Message] DearMYRTLE -&gt; Organizers Meeting: our Agenda is as follows:<br />
+2010-12-13 16:01:24 [Message] DearMYRTLE -&gt; Organizers Meeting: AGENDA ITEMS: 1. Wiki Update 2. Blog Update 3. Roles Update 4. Large Meeting Update 5. OpenGen Update 6. RootsTech 2011 Update 7. New Items<br />
+2010-12-13 16:01:49 [Message] DearMYRTLE -&gt; Organizers Meeting: Will there be anything to add under &quot;new items&quot;, so I can adjust the time?<br />
+2010-12-13 16:01:50 [Message] Andy_Hatchett -&gt; Organizers Meeting: I've been in other volunteer organizations andd sooner or later they are all guilty of being so busy doing they forget to let people know what they are doing :)<br />
+2010-12-13 16:02:29 [Message] DearMYRTLE -&gt; Organizers Meeting: I'm logging this meeting... do I have you permission to post the blog in our public BetterGEDCOM wiki?<br />
+2010-12-13 16:02:34 [Message] GeneJ -&gt; Organizers Meeting: Yes<br />
+2010-12-13 16:02:38 [Message] DearMYRTLE -&gt; Organizers Meeting: blog=log.<br />
+2010-12-13 16:02:38 [Message] Andy_Hatchett -&gt; Organizers Meeting: Yes.<br />
+2010-12-13 16:02:43 [Message] DearMYRTLE -&gt; Organizers Meeting: thank=yu.<br />
+2010-12-13 16:02:56 [Message] DearMYRTLE -&gt; Organizers Meeting: Let's note that Russ is away for his daughter's birthday celebration.<br />
+2010-12-13 16:03:08 [Message] DearMYRTLE -&gt; Organizers Meeting: Since we met last week, Greg has resigned from BetterGEDCOM.<br />
+2010-12-13 16:03:17 [Message] DearMYRTLE -&gt; Organizers Meeting: Andy has joined us this afternoon/evening.<br />
+2010-12-13 16:03:18 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:03:18 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:03:25 [Message] DearMYRTLE -&gt; Organizers Meeting: Ok, Item #1 - update on wiki.<br />
+2010-12-13 16:03:40 [Message] DearMYRTLE -&gt; Organizers Meeting: I have a few things to report... and then will open this topic to the floor.<br />
+2010-12-13 16:04:01 [Message] DearMYRTLE -&gt; Organizers Meeting: . I've reconstructed several missing elements to the wiki, that disappeared over the weekend:<br />
+2010-12-13 16:04:06 [Message] DearMYRTLE -&gt; Organizers Meeting: Calendar<br />
+2010-12-13 16:04:14 [Message] DearMYRTLE -&gt; Organizers Meeting: being the most important.<br />
+2010-12-13 16:04:38 [Message] DearMYRTLE -&gt; Organizers Meeting: I also modified the chat room interface, and modified the main page to show a link to the BetterGEDCOM blog.<br />
+2010-12-13 16:04:53 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:04:54 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:05:07 [Message] DearMYRTLE -&gt; Organizers Meeting: What else on the Wiki?<br />
+2010-12-13 16:05:09 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:05:09 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:05:27 [Message] GeneJ -&gt; Organizers Meeting: I did<br />
+2010-12-13 16:05:40 [Message] GeneJ -&gt; Organizers Meeting: better on the wiki today and this weekend than I have before<br />
+2010-12-13 16:05:47 [Message] DearMYRTLE -&gt; Organizers Meeting: ;)<br />
+2010-12-13 16:05:53 [Message] GeneJ -&gt; Organizers Meeting: Subscribing to all the postings, changes, etc. has helped.<br />
+2010-12-13 16:06:04 [Message] GeneJ -&gt; Organizers Meeting: I wonder if we should suggest this to those who join?<br />
+2010-12-13 16:06:23 [Message] DearMYRTLE -&gt; Organizers Meeting: How about adding that to the main page, GeneJ?<br />
+2010-12-13 16:06:27 [Message] GeneJ -&gt; Organizers Meeting: I will<br />
+2010-12-13 16:06:32 [Message] DearMYRTLE -&gt; Organizers Meeting: thx<br />
+2010-12-13 16:06:34 [Message] GeneJ -&gt; Organizers Meeting: About the counter ...<br />
+2010-12-13 16:06:39 [Message] GeneJ -&gt; Organizers Meeting: we are sure that is lost, right/<br />
+2010-12-13 16:06:42 [Message] Andy_Hatchett -&gt; Organizers Meeting: I find getting the postings by e-mail is much easier to keep track of things than following teh actual Wiki.<br />
+2010-12-13 16:06:42 [Message] GeneJ -&gt; Organizers Meeting: right?<br />
+2010-12-13 16:07:03 [Message] DearMYRTLE -&gt; Organizers Meeting: Greg merely must share the UN &amp; PW, but he has specifically declined to do so.<br />
+2010-12-13 16:07:09 [Message] GeneJ -&gt; Organizers Meeting: (Yes Andy, I had been trying to keep track of them by site organization)<br />
+2010-12-13 16:07:29 [Message] GeneJ -&gt; Organizers Meeting: He indicated he had deleted the account.<br />
+2010-12-13 16:07:32 [Message] DearMYRTLE -&gt; Organizers Meeting: I also received the postings via email.<br />
+2010-12-13 16:07:50 [Message] GeneJ -&gt; Organizers Meeting: So that even UN and PW would not restore the history<br />
+2010-12-13 16:08:02 [Message] DearMYRTLE -&gt; Organizers Meeting: Well, that's unfortunate. We can obtain a different SiteMeter account. We just lost our history, darn in.<br />
+2010-12-13 16:08:04 [Message] DearMYRTLE -&gt; Organizers Meeting: ok.<br />
+2010-12-13 16:08:09 [Message] Andy_Hatchett -&gt; Organizers Meeting: ok- New counter time then :)<br />
+2010-12-13 16:08:15 [Message] GeneJ -&gt; Organizers Meeting: Yes.<br />
+2010-12-13 16:08:31 [Message] DearMYRTLE -&gt; Organizers Meeting: Either Russ or I will get Site Meter, and remove this generic one that is locked. We cannot read stats at all.<br />
+2010-12-13 16:08:49 [Message] DearMYRTLE -&gt; Organizers Meeting: I accept the assignment as Russ is traveling.<br />
+2010-12-13 16:08:49 [Message] DearMYRTLE -&gt; Organizers Meeting: ,<br />
+2010-12-13 16:08:50 [Message] DearMYRTLE -&gt; Organizers Meeting: ,<br />
+2010-12-13 16:09:06 [Message] DearMYRTLE -&gt; Organizers Meeting: I'd also like to mention that I posted the notice about Tamura's blog award.<br />
+2010-12-13 16:09:15 [Message] GeneJ -&gt; Organizers Meeting: Humm...<br />
+2010-12-13 16:09:20 [Message] DearMYRTLE -&gt; Organizers Meeting: but Ihave yet to do the one from the Tampa Tribune article.<br />
+2010-12-13 16:09:24 [Message] GeneJ -&gt; Organizers Meeting: maybe we should LEAVE the one that is there...<br />
+2010-12-13 16:09:31 [Message] GeneJ -&gt; Organizers Meeting: it at least has the total on it<br />
+2010-12-13 16:09:56 [Message] DearMYRTLE -&gt; Organizers Meeting: One can easily modify Site Meter to show a different than ZERO beginning total.<br />
+2010-12-13 16:09:57 [Message] GeneJ -&gt; Organizers Meeting: and ADD a new one?<br />
+2010-12-13 16:10:04 [Message] GeneJ -&gt; Organizers Meeting: kk<br />
+2010-12-13 16:10:11 [Message] GeneJ -&gt; Organizers Meeting: bear nods<br />
+2010-12-13 16:10:31 [Message] DearMYRTLE -&gt; Organizers Meeting: ok, anything more to add about the WIKI itself?<br />
+2010-12-13 16:10:44 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:10:45 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:10:56 [Message] DearMYRTLE -&gt; Organizers Meeting: If not then we'll move to 2. UPDATE ON BLOG<br />
+2010-12-13 16:10:57 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:10:57 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:11:03 [Message] DearMYRTLE -&gt; Organizers Meeting: GeneJ would you take the mic on that one?<br />
+2010-12-13 16:11:07 [Message] GeneJ -&gt; Organizers Meeting: Sure.<br />
+2010-12-13 16:11:25 [Message] GeneJ -&gt; Organizers Meeting: Russ continues to post GEDCOM information to the blog<br />
+2010-12-13 16:11:43 [Message] GeneJ -&gt; Organizers Meeting: We've covered Gramps portable, FTM, FTM (Mac), TMG and ...<br />
+2010-12-13 16:11:48 [Message] GeneJ -&gt; Organizers Meeting: I think GENBOX.<br />
+2010-12-13 16:12:09 [Message] GeneJ -&gt; Organizers Meeting: He has started to investigate error codes and person differences.<br />
+2010-12-13 16:12:10 [Message] Andy_Hatchett -&gt; Organizers Meeting: grrr! Gramps portable-YECH!<br />
+2010-12-13 16:12:34 [Message] GeneJ -&gt; Organizers Meeting: Both Russ and I have entered blogs about how and when we enter information.<br />
+2010-12-13 16:13:01 [Message] GeneJ -&gt; Organizers Meeting: Myrt has asked that I upload TMG screen shots and include links to a fabulous TMG website, Terry's Tips<br />
+2010-12-13 16:13:17 [Message] GeneJ -&gt; Organizers Meeting: The screen shots have been made, but I haven't posted them yet.<br />
+2010-12-13 16:13:23 [Message] Andy_Hatchett -&gt; Organizers Meeting: Terry' Tips is a reall GREAT site.<br />
+2010-12-13 16:13:31 [Message] GeneJ -&gt; Organizers Meeting: Yes.<br />
+2010-12-13 16:13:36 [Message] DearMYRTLE -&gt; Organizers Meeting: Reigel is very helpful.<br />
+2010-12-13 16:13:41 [Message] GeneJ -&gt; Organizers Meeting: Yes.<br />
+2010-12-13 16:14:06 [Message] GeneJ -&gt; Organizers Meeting: His site and Lee's site will be referenced when we get into sources a little more, too.<br />
+2010-12-13 16:14:17 [Message] GeneJ -&gt; Organizers Meeting: I have continued to blog about &quot;evidence&quot;<br />
+2010-12-13 16:14:35 [Message] GeneJ -&gt; Organizers Meeting: useing other than common birth indexes.<br />
+2010-12-13 16:14:41 [Message] GeneJ -&gt; Organizers Meeting: Hoping to move the dialog from the<br />
+2010-12-13 16:15:09 [Message] GeneJ -&gt; Organizers Meeting: common ... was gramma born 8 april or 18 april to those research / reasoning and evidence matters that involve<br />
+2010-12-13 16:15:24 [Message] GeneJ -&gt; Organizers Meeting: a variety of evidence (indirect, negative), etc.<br />
+2010-12-13 16:15:31 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:15:31 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:15:43 [Message] DearMYRTLE -&gt; Organizers Meeting: OK -- I see that Russ has started using a modified test database for his work. (Removing private info on his mother.) There was a comment today from an anonymous user wondering about the database.<br />
+2010-12-13 16:15:44 [Message] GeneJ -&gt; Organizers Meeting: and to show how a &quot;body&quot; of evidence is often involved in reasoned arguments.<br />
+2010-12-13 16:15:48 [Message] DearMYRTLE -&gt; Organizers Meeting: ooops sorry.<br />
+2010-12-13 16:16:06 [Message] GeneJ -&gt; Organizers Meeting: Russ is useing the TEST database from FTM.<br />
+2010-12-13 16:16:10 [Message] GeneJ -&gt; Organizers Meeting: QUESTION ...<br />
+2010-12-13 16:16:11 [Message] DearMYRTLE -&gt; Organizers Meeting: oic<br />
+2010-12-13 16:16:15 [Message] DearMYRTLE -&gt; Organizers Meeting: yes?<br />
+2010-12-13 16:16:26 [Message] GeneJ -&gt; Organizers Meeting: ANdy ... do you know if we coul use the SAMPLE project in TMG in the same way?<br />
+2010-12-13 16:16:36 [Message] GeneJ -&gt; Organizers Meeting: Would we have a copyright issue? Licensing issue?<br />
+2010-12-13 16:17:02 [Message] Andy_Hatchett -&gt; Organizers Meeting: Hmmm.. I don't know- you could always ask Bob- it is his family :)<br />
+2010-12-13 16:17:10 [Message] DearMYRTLE -&gt; Organizers Meeting: Good point.<br />
+2010-12-13 16:17:32 [Message] DearMYRTLE -&gt; Organizers Meeting: But if someone wants to re-do your tests, he have to use the same database, which comes with every TMG sold.<br />
+2010-12-13 16:17:33 [Message] GeneJ -&gt; Organizers Meeting: I hate to ask him anything ... with the hoped v8 coming out so soon.<br />
+2010-12-13 16:17:53 [Message] GeneJ -&gt; Organizers Meeting: I think Genbox has a sample project too<br />
+2010-12-13 16:18:00 [Message] GeneJ -&gt; Organizers Meeting: I can for sure ask Bill Flight.<br />
+2010-12-13 16:18:08 [Message] Andy_Hatchett -&gt; Organizers Meeting: Gene- yeah- I know what you mean- don't want ANY delays on that!<br />
+2010-12-13 16:18:15 [Message] GeneJ -&gt; Organizers Meeting: :)<br />
+2010-12-13 16:18:28 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:18:28 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:18:32 [Message] GeneJ -&gt; Organizers Meeting: I'll inquire of Bill Flight.<br />
+2010-12-13 16:18:37 [Message] DearMYRTLE -&gt; Organizers Meeting: thanks, Gene J.<br />
+2010-12-13 16:18:40 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:18:41 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:18:45 [Message] GeneJ -&gt; Organizers Meeting: It is VERY helpful if we don't have to rebuild the wheel.<br />
+2010-12-13 16:18:56 [Message] DearMYRTLE -&gt; Organizers Meeting: any more UPDATES from the BLOG?<br />
+2010-12-13 16:19:08 [Message] GeneJ -&gt; Organizers Meeting: HOWeEr, the sourcs in the FTM text database are Not going to &quot;show&quot; the problems we have<br />
+2010-12-13 16:19:14 [Message] GeneJ -&gt; Organizers Meeting: kk<br />
+2010-12-13 16:19:25 [Message] GeneJ -&gt; Organizers Meeting: ...bear blog comment ... the end<br />
+2010-12-13 16:19:32 [Message] DearMYRTLE -&gt; Organizers Meeting: Andy?<br />
+2010-12-13 16:19:51 [Message] Andy_Hatchett -&gt; Organizers Meeting: If you need a test dayabase use Royal92. ged- probably the most popular single gedcom in the world!<br />
+2010-12-13 16:20:19 [Message] DearMYRTLE -&gt; Organizers Meeting: GeneJ can you share that with Russ?<br />
+2010-12-13 16:20:26 [Message] GeneJ -&gt; Organizers Meeting: Well sourced?<br />
+2010-12-13 16:20:36 [Message] GeneJ -&gt; Organizers Meeting: Oh, yes.<br />
+2010-12-13 16:20:40 [Message] GeneJ -&gt; Organizers Meeting: He'll love this.<br />
+2010-12-13 16:20:57 [Message] Andy_Hatchett -&gt; Organizers Meeting: Can't think of anything for blog updatres- remember - I haven't even see it yet :)<br />
+2010-12-13 16:21:01 [Message] DearMYRTLE -&gt; Organizers Meeting: One problem with using another database is that it is hard to recognize when data is missing -- if it wasn't stuff you initially typed in yourself.<br />
+2010-12-13 16:21:02 [Message] GeneJ -&gt; Organizers Meeting: May I add one comment?<br />
+2010-12-13 16:21:06 [Message] DearMYRTLE -&gt; Organizers Meeting: ya!<br />
+2010-12-13 16:21:13 [Message] GeneJ -&gt; Organizers Meeting: When we TEST stuff..<br />
+2010-12-13 16:21:32 [Message] GeneJ -&gt; Organizers Meeting: we want to have a VARIETY of family circumstance and an array of evidence types.<br />
+2010-12-13 16:21:55 [Message] GeneJ -&gt; Organizers Meeting: Long story, but there aare some permenant problems or persistant<br />
+2010-12-13 16:22:13 [Message] GeneJ -&gt; Organizers Meeting: missing things in our existing software because this stpe wasn't taken years ago.<br />
+2010-12-13 16:22:15 [Message] GeneJ -&gt; Organizers Meeting: the end<br />
+2010-12-13 16:22:25 [Message] DearMYRTLE -&gt; Organizers Meeting: Good argument for using a modified or shortened version of your own database. Thank-you GeneJ.<br />
+2010-12-13 16:22:29 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:22:30 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:22:33 [Message] DearMYRTLE -&gt; Organizers Meeting: 3. Roles Update<br />
+2010-12-13 16:22:35 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:22:36 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:22:52 [Message] DearMYRTLE -&gt; Organizers Meeting: This is a sticky wicket... wondering how we can encourage another &quot;techie&quot; type to assist<br />
+2010-12-13 16:22:58 [Message] DearMYRTLE -&gt; Organizers Meeting: in the absence of Greg...<br />
+2010-12-13 16:23:19 [Message] DearMYRTLE -&gt; Organizers Meeting: someone who is prepared to help bridge the gap between us end-users and the developers/coders.<br />
+2010-12-13 16:23:24 [Message] GeneJ -&gt; Organizers Meeting: Adrian sure was helpful today<br />
+2010-12-13 16:23:29 [Message] DearMYRTLE -&gt; Organizers Meeting: yes.<br />
+2010-12-13 16:23:50 [Message] DearMYRTLE -&gt; Organizers Meeting: Perhaps one will emerge. A lot has happened since our last meeting.<br />
+2010-12-13 16:23:59 [Message] DearMYRTLE -&gt; Organizers Meeting: We cannot just draft someone.<br />
+2010-12-13 16:24:02 [Message] GeneJ -&gt; Organizers Meeting: Louis, also<br />
+2010-12-13 16:24:44 [Message] DearMYRTLE -&gt; Organizers Meeting: any one of the wiki participants might be willing... it takes someone willing to listen to all parties, not just push his/her own existing product.<br />
+2010-12-13 16:24:59 [Message] GeneJ -&gt; Organizers Meeting: Let's remember, we have lurkers, too<br />
+2010-12-13 16:25:18 [Message] DearMYRTLE -&gt; Organizers Meeting: Yes, some sure wrote to me in the last 24 hours or so...<br />
+2010-12-13 16:25:32 [Message] DearMYRTLE -&gt; Organizers Meeting: Shall we table the ROLES agenda item until next week?<br />
+2010-12-13 16:25:36 [Message] Andy_Hatchett -&gt; Organizers Meeting: Yeah- I noticed- what- 87 or so and maybe 15 posting?<br />
+2010-12-13 16:25:41 [Message] DearMYRTLE -&gt; Organizers Meeting: see what happens when the dust settles?<br />
+2010-12-13 16:26:09 [Message] DearMYRTLE -&gt; Organizers Meeting: there are also lurkers who haven't registered with the blog.<br />
+2010-12-13 16:26:11 [Message] GeneJ -&gt; Organizers Meeting: ...Except to ask if Andy has suggestions for us<br />
+2010-12-13 16:26:11 [Message] Andy_Hatchett -&gt; Organizers Meeting: Yes- I'd table til next meeting.<br />
+2010-12-13 16:26:20 [Message] DearMYRTLE -&gt; Organizers Meeting: ok -- tabled.<br />
+2010-12-13 16:26:26 [Message] DearMYRTLE -&gt; Organizers Meeting: Andy, thanks for being here today.<br />
+2010-12-13 16:26:27 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:26:28 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:26:34 [Message] GeneJ -&gt; Organizers Meeting: yes!!<br />
+2010-12-13 16:26:40 [Message] Andy_Hatchett -&gt; Organizers Meeting: My pleasure- really!<br />
+2010-12-13 16:26:57 [Message] DearMYRTLE -&gt; Organizers Meeting: I'd like to discuss the Large Meeting Update<br />
+2010-12-13 16:27:03 [Message] GeneJ -&gt; Organizers Meeting: Great<br />
+2010-12-13 16:27:18 [Message] DearMYRTLE -&gt; Organizers Meeting: and consider that it doesn't look to me like OpenGen is willing to allow BetterGEDCOM to host our own meetings over there.<br />
+2010-12-13 16:27:41 [Message] DearMYRTLE -&gt; Organizers Meeting: but perhaps this enhanced chat room will work for a while, until we reach capacity. I think it is 25.<br />
+2010-12-13 16:27:47 [Message] DearMYRTLE -&gt; Organizers Meeting: might be higher.<br />
+2010-12-13 16:27:51 [Message] DearMYRTLE -&gt; Organizers Meeting: this is about 2 hours old.<br />
+2010-12-13 16:28:07 [Message] DearMYRTLE -&gt; Organizers Meeting: but if rightnow we've only got about 15 active participants of the wiki....<br />
+2010-12-13 16:28:13 [Message] DearMYRTLE -&gt; Organizers Meeting: then we're probably going to be OK.<br />
+2010-12-13 16:28:27 [Message] Andy_Hatchett -&gt; Organizers Meeting: Myrt- since Gene and I are TMG users I see no reason it couldn't be done in the TMG chat Room if needed.<br />
+2010-12-13 16:28:35 [Message] GeneJ -&gt; Organizers Meeting: Voice would be nice, but text allows us to log<br />
+2010-12-13 16:28:38 [Message] DearMYRTLE -&gt; Organizers Meeting: how many can be there at once?<br />
+2010-12-13 16:28:47 [Message] DearMYRTLE -&gt; Organizers Meeting: we need to log our discussions.<br />
+2010-12-13 16:28:51 [Message] GeneJ -&gt; Organizers Meeting: GREAT thought, Andy<br />
+2010-12-13 16:28:59 [Message] DearMYRTLE -&gt; Organizers Meeting: since we're dealing with a wider audience ultimately.<br />
+2010-12-13 16:29:15 [Message] DearMYRTLE -&gt; Organizers Meeting: Let's work with this interface until we outgrow it.<br />
+2010-12-13 16:29:18 [Message] DearMYRTLE -&gt; Organizers Meeting: what do you think?<br />
+2010-12-13 16:29:28 [Message] GeneJ -&gt; Organizers Meeting: kk<br />
+2010-12-13 16:29:38 [Message] DearMYRTLE -&gt; Organizers Meeting: It shoudl get people in the habit of coming here.<br />
+2010-12-13 16:29:40 [Message] Andy_Hatchett -&gt; Organizers Meeting: I'm not sure but I know it used to be over 25- when 7.04 was released Bob first online chat after that had more than that I know.<br />
+2010-12-13 16:29:47 [Message] DearMYRTLE -&gt; Organizers Meeting: I've also posted the calendar as a link at the top of the CHAT page.<br />
+2010-12-13 16:29:58 [Message] DearMYRTLE -&gt; Organizers Meeting: kk<br />
+2010-12-13 16:30:24 [Message] DearMYRTLE -&gt; Organizers Meeting: I'll read more about this chat interface. It is used by Afrigeneas.org, with much success. However they may have a much more enhanced version.<br />
+2010-12-13 16:30:37 [Message] GeneJ -&gt; Organizers Meeting: Comment about agenda for LGM<br />
+2010-12-13 16:30:46 [Message] DearMYRTLE -&gt; Organizers Meeting: I had to buy two levels up from the freebie version to get the LOGGING capability.<br />
+2010-12-13 16:30:53 [Message] Andy_Hatchett -&gt; Organizers Meeting: Until we hit 25 this will work. and actually I prefer type over voice- leads to less confusion about who said what.<br />
+2010-12-13 16:30:53 [Message] GeneJ -&gt; Organizers Meeting: it's PErFeCt to set the agenda in the wiki<br />
+2010-12-13 16:31:18 [Message] GeneJ -&gt; Organizers Meeting: Where we set up a few topics, and let members add questions, etc.<br />
+2010-12-13 16:31:33 [Message] GeneJ -&gt; Organizers Meeting: Perhaps we could draw a larger audience, too<br />
+2010-12-13 16:31:38 [Message] DearMYRTLE -&gt; Organizers Meeting: hope so.<br />
+2010-12-13 16:32:08 [Message] GeneJ -&gt; Organizers Meeting: Do we want to ask participants to add a topic?<br />
+2010-12-13 16:32:10 [Message] DearMYRTLE -&gt; Organizers Meeting: How about I modify this chat room page to link to a page with our agendas -- past (with log) and<br />
+2010-12-13 16:32:20 [Message] GeneJ -&gt; Organizers Meeting: specifically one they wanna talk about.<br />
+2010-12-13 16:32:22 [Message] DearMYRTLE -&gt; Organizers Meeting: I'll have to think about that a bit.<br />
+2010-12-13 16:32:28 [Message] GeneJ -&gt; Organizers Meeting: Ohhhh that would be great.<br />
+2010-12-13 16:32:33 [Message] DearMYRTLE -&gt; Organizers Meeting: don't want to overstructure the meetings.... just have them.<br />
+2010-12-13 16:33:03 [Message] DearMYRTLE -&gt; Organizers Meeting: I do have an agenda item for the first meeting -- to AGREE ON HOW TO AGREE for a &quot;consensus of opinion&quot; when developing the new standard.<br />
+2010-12-13 16:33:18 [Message] Andy_Hatchett -&gt; Organizers Meeting: Have first half structures and 2nd half open floor ;)<br />
+2010-12-13 16:33:19 [Message] DearMYRTLE -&gt; Organizers Meeting: I cannot speak or vote, as I don't know how to do the coding... end--useritus.<br />
+2010-12-13 16:33:27 [Message] DearMYRTLE -&gt; Organizers Meeting: that's roughly it....<br />
+2010-12-13 16:33:28 [Message] GeneJ -&gt; Organizers Meeting: :}<br />
+2010-12-13 16:33:56 [Message] GeneJ -&gt; Organizers Meeting: Don't we also need to start the XML or not dialog, also?<br />
+2010-12-13 16:34:09 [Message] DearMYRTLE -&gt; Organizers Meeting: We've been holding off on scheduling the Large Group Meeting...<br />
+2010-12-13 16:34:25 [Message] DearMYRTLE -&gt; Organizers Meeting: but shall we now schedule these weekly?<br />
+2010-12-13 16:34:36 [Message] DearMYRTLE -&gt; Organizers Meeting: I think that might work more effectively.<br />
+2010-12-13 16:34:39 [Message] GeneJ -&gt; Organizers Meeting: I say yes<br />
+2010-12-13 16:34:49 [Message] DearMYRTLE -&gt; Organizers Meeting: I wonder what Russ thinks on this.<br />
+2010-12-13 16:35:01 [Message] Andy_Hatchett -&gt; Organizers Meeting: I hate to say this but... if BG has any hope to be adopted by others I think XL is about the only choice.<br />
+2010-12-13 16:35:08 [Message] DearMYRTLE -&gt; Organizers Meeting: Andy as one of the blog participants, what is your take?<br />
+2010-12-13 16:35:11 [Message] GeneJ -&gt; Organizers Meeting: He did the original survey on places and timezones<br />
+2010-12-13 16:35:18 [Message] GeneJ -&gt; Organizers Meeting: when we were going to hold it last week<br />
+2010-12-13 16:35:48 [Message] DearMYRTLE -&gt; Organizers Meeting: shall we hold the meeings weekly?<br />
+2010-12-13 16:35:53 [Message] GeneJ -&gt; Organizers Meeting: Isay yes<br />
+2010-12-13 16:36:01 [Message] DearMYRTLE -&gt; Organizers Meeting: Andy?<br />
+2010-12-13 16:36:06 [Message] GeneJ -&gt; Organizers Meeting: and from the first meeting ..<br />
+2010-12-13 16:36:19 [Message] Andy_Hatchett -&gt; Organizers Meeting: Big weekly meetings might be a drag for some people- for me personally- they would be Heaven!<br />
+2010-12-13 16:36:26 [Message] GeneJ -&gt; Organizers Meeting: IN the first meeting, that is one thing we can use for &quot;deciding&quot;<br />
+2010-12-13 16:36:38 [Message] DearMYRTLE -&gt; Organizers Meeting: well, with the agenda PREPOSTED folks will know which one to attend.<br />
+2010-12-13 16:36:57 [Message] GeneJ -&gt; Organizers Meeting: Wonder if we should<br />
+2010-12-13 16:37:02 [Message] GeneJ -&gt; Organizers Meeting: consider having them<br />
+2010-12-13 16:37:07 [Message] GeneJ -&gt; Organizers Meeting: alternate for timezones<br />
+2010-12-13 16:37:08 [Message] Andy_Hatchett -&gt; Organizers Meeting: Myrt- true, if they saw no items they were interested in that would help.<br />
+2010-12-13 16:37:13 [Message] GeneJ -&gt; Organizers Meeting: like one week ... normal ..<br />
+2010-12-13 16:37:20 [Message] GeneJ -&gt; Organizers Meeting: then one week ... extra early or late<br />
+2010-12-13 16:37:39 [Message] Andy_Hatchett -&gt; Organizers Meeting: ok-question...<br />
+2010-12-13 16:37:40 [Message] DearMYRTLE -&gt; Organizers Meeting: normal meaing US time zone?<br />
+2010-12-13 16:37:46 [Message] GeneJ -&gt; Organizers Meeting: yes<br />
+2010-12-13 16:37:53 [Message] DearMYRTLE -&gt; Organizers Meeting: GLAD you guys weren't on headsets -- I just had a huge sneeze!<br />
+2010-12-13 16:38:00 [Message] GeneJ -&gt; Organizers Meeting: lol<br />
+2010-12-13 16:38:02 [Message] DearMYRTLE -&gt; Organizers Meeting: (uncontrolable)<br />
+2010-12-13 16:38:13 [Message] Andy_Hatchett -&gt; Organizers Meeting: Do the meetings have to be during the week?<br />
+2010-12-13 16:38:14 [Message] GeneJ -&gt; Organizers Meeting: It's the dust settling<br />
+2010-12-13 16:38:24 [Message] DearMYRTLE -&gt; Organizers Meeting: LOL.<br />
+2010-12-13 16:38:31 [Message] DearMYRTLE -&gt; Organizers Meeting: How about one on weekend, and one during week?<br />
+2010-12-13 16:38:39 [Message] GeneJ -&gt; Organizers Meeting: :)<br />
+2010-12-13 16:38:39 [Message] DearMYRTLE -&gt; Organizers Meeting: every other week have one or the other?<br />
+2010-12-13 16:38:43 [Message] GeneJ -&gt; Organizers Meeting: zzi like that<br />
+2010-12-13 16:38:49 [Message] DearMYRTLE -&gt; Organizers Meeting: do you think that would help our BetterGEDCOMers?<br />
+2010-12-13 16:38:59 [Message] Andy_Hatchett -&gt; Organizers Meeting: I know Bob does two meeting on the same day for different time zones.<br />
+2010-12-13 16:39:06 [Message] GeneJ -&gt; Organizers Meeting: Yes, he does<br />
+2010-12-13 16:39:18 [Message] DearMYRTLE -&gt; Organizers Meeting: Gosh -- I don't need ANY more meetings.... LOL.<br />
+2010-12-13 16:39:38 [Message] DearMYRTLE -&gt; Organizers Meeting: It wouldhelp if the log from the first meeting was posted PRIOR to the second meeting.<br />
+2010-12-13 16:39:57 [Message] GeneJ -&gt; Organizers Meeting: Question ..<br />
+2010-12-13 16:39:59 [Message] DearMYRTLE -&gt; Organizers Meeting: ?<br />
+2010-12-13 16:40:04 [Message] GeneJ -&gt; Organizers Meeting: WHERE are we going to post logs?<br />
+2010-12-13 16:40:10 [Message] DearMYRTLE -&gt; Organizers Meeting: no problem -- on the wiki.<br />
+2010-12-13 16:40:11 [Message] GeneJ -&gt; Organizers Meeting: (including this log)<br />
+2010-12-13 16:40:12 [Message] Andy_Hatchett -&gt; Organizers Meeting: Myrt- in communications school- that is a given.<br />
+2010-12-13 16:40:14 [Message] DearMYRTLE -&gt; Organizers Meeting: will create a space.<br />
+2010-12-13 16:40:24 [Message] GeneJ -&gt; Organizers Meeting: tyty<br />
+2010-12-13 16:40:28 [Message] DearMYRTLE -&gt; Organizers Meeting: no problemo.<br />
+2010-12-13 16:40:52 [Message] DearMYRTLE -&gt; Organizers Meeting: and post a link at the top of this page to the main &quot;Meeting Logs&quot; pae.<br />
+2010-12-13 16:40:54 [Message] DearMYRTLE -&gt; Organizers Meeting: page.<br />
+2010-12-13 16:40:59 [Message] DearMYRTLE -&gt; Organizers Meeting: ..<br />
+2010-12-13 16:41:00 [Message] DearMYRTLE -&gt; Organizers Meeting: KK<br />
+2010-12-13 16:41:06 [Message] DearMYRTLE -&gt; Organizers Meeting: How about moving to the next blog topic?<br />
+2010-12-13 16:41:16 [Message] DearMYRTLE -&gt; Organizers Meeting: Meeting topic... sorry<br />
+2010-12-13 16:41:20 [Message] DearMYRTLE -&gt; Organizers Meeting: OpenGen....<br />
+2010-12-13 16:41:22 [Message] Andy_Hatchett -&gt; Organizers Meeting: Whatever you wish :)<br />
+2010-12-13 16:41:36 [Message] DearMYRTLE -&gt; Organizers Meeting: You two attended the meeting... I kept getting bounced out.<br />
+2010-12-13 16:42:11 [Message] DearMYRTLE -&gt; Organizers Meeting: My initial take is that only 8 people attended... 2 from OpenGen, 1 from FamilySearch, Greg, Andy, GeneJ, (me partially) and another person Paul.<br />
+2010-12-13 16:42:18 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:42:18 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:42:27 [Message] DearMYRTLE -&gt; Organizers Meeting: Andy let's hand you the mic<br />
+2010-12-13 16:42:33 [Message] DearMYRTLE -&gt; Organizers Meeting: what was your take on the meeting?<br />
+2010-12-13 16:42:37 [Message] Andy_Hatchett -&gt; Organizers Meeting: Yep I think that was it.<br />
+2010-12-13 16:43:12 [Message] DearMYRTLE -&gt; Organizers Meeting: Scott stated he was going to write the code...<br />
+2010-12-13 16:43:16 [Message] DearMYRTLE -&gt; Organizers Meeting: as I recall.<br />
+2010-12-13 16:43:33 [Message] DearMYRTLE -&gt; Organizers Meeting: I guess it is up to him to get people to join with him.<br />
+2010-12-13 16:43:51 [Message] DearMYRTLE -&gt; Organizers Meeting: GeneJ?<br />
+2010-12-13 16:43:52 [Message] Andy_Hatchett -&gt; Organizers Meeting: ok- My take is that their immediate goals are about the same as BG - but I'm not sure of their long term goals.<br />
+2010-12-13 16:44:22 [Message] GeneJ -&gt; Organizers Meeting: I wrote down the first two priorities were<br />
+2010-12-13 16:44:38 [Message] GeneJ -&gt; Organizers Meeting: lossless transfer and archival (same as ours)<br />
+2010-12-13 16:44:40 [Message] Andy_Hatchett -&gt; Organizers Meeting: There was a time or two where he used the word &quot;my&quot; and then backtracked to &quot;our&quot;, so I'm not sure what that says either.<br />
+2010-12-13 16:44:55 [Message] DearMYRTLE -&gt; Organizers Meeting: kk<br />
+2010-12-13 16:45:05 [Message] DearMYRTLE -&gt; Organizers Meeting: He also explained that AppleTree is funding OpenGen.<br />
+2010-12-13 16:45:15 [Message] DearMYRTLE -&gt; Organizers Meeting: or did I hear that wrong?<br />
+2010-12-13 16:45:47 [Message] GeneJ -&gt; Organizers Meeting: I wrote that down<br />
+2010-12-13 16:45:57 [Message] Andy_Hatchett -&gt; Organizers Meeting: I think it wouldn't hurt to take with them. I think both could learn from the other. Like Granny said- They can visit but they can't stay overnight!: ;)<br />
+2010-12-13 16:45:57 [Message] DearMYRTLE -&gt; Organizers Meeting: kk<br />
+2010-12-13 16:46:09 [Message] GeneJ -&gt; Organizers Meeting: LOL<br />
+2010-12-13 16:46:14 [Message] DearMYRTLE -&gt; Organizers Meeting: cute -- I think we'd love your Granny!<br />
+2010-12-13 16:46:38 [Message] GeneJ -&gt; Organizers Meeting: I made a couple other specific notes<br />
+2010-12-13 16:46:46 [Message] GeneJ -&gt; Organizers Meeting: Scott will make decisions<br />
+2010-12-13 16:47:03 [Message] GeneJ -&gt; Organizers Meeting: they will work first to define the objects and then, afterwards, to<br />
+2010-12-13 16:47:09 [Message] GeneJ -&gt; Organizers Meeting: design the &quot;model&quot;<br />
+2010-12-13 16:47:11 [Message] Andy_Hatchett -&gt; Organizers Meeting: Yes- AppleTree is funding OpenGen - as Scott said &quot;Because sombody had to&quot;.<br />
+2010-12-13 16:47:46 [Message] DearMYRTLE -&gt; Organizers Meeting: I should mention that when their meeting notice went out, a number of &quot;lurkers&quot; of BG wrote to me personally, thinking I had partnered with OpenGen. I have no authority to partner with them. I was willing to talk with them... and have invited them to post at BetterGEDCOM so folks can get to know him.<br />
+2010-12-13 16:48:22 [Message] GeneJ -&gt; Organizers Meeting: Gordon (FamilySearch) added that<br />
+2010-12-13 16:48:43 [Message] GeneJ -&gt; Organizers Meeting: they are interested in making RECORD level<br />
+2010-12-13 16:48:53 [Message] Andy_Hatchett -&gt; Organizers Meeting: Didn'r Scott say a recording of the webinar would be posted tommorrow?<br />
+2010-12-13 16:49:03 [Disconnect] DearMYRTLE<br />
+2010-12-13 16:49:21 [Message] GeneJ -&gt; Organizers Meeting: connections (to people) ... (as opposed to trees first)<br />
+2010-12-13 16:49:24 [Login] DearMYRTLE<br />
+2010-12-13 16:49:24 [IP] DearMYRTLE: 66.133.97.196<br />
+2010-12-13 16:49:25 [Join Room] DearMYRTLE -&gt; Organizers Meeting<br />
+2010-12-13 16:49:36 [Message] DearMYRTLE -&gt; Organizers Meeting: sorry -- must have hit the wrong button on my keyboard.<br />
+2010-12-13 16:49:36 [Message] GeneJ -&gt; Organizers Meeting: Err... won't it be available behind the closed door?<br />
+2010-12-13 16:50:05 [Message] DearMYRTLE -&gt; Organizers Meeting: All of Scott's resources require a PW, but he said he was willing to give one to anyone who asked.<br />
+2010-12-13 16:50:18 [Message] Andy_Hatchett -&gt; Organizers Meeting: Hmm.. I thought it was going to be on their website- not bootcamp.<br />
+2010-12-13 16:50:24 [Message] GeneJ -&gt; Organizers Meeting: They have two work spaces ... www.gliffy.com and www.openalliance.basecamphg.com<br />
+2010-12-13 16:50:28 [Disconnect] DearMYRTLE<br />
+2010-12-13 16:50:36 [IP] DearMYRTLE: 66.133.97.196<br />
+2010-12-13 16:50:36 [Login] DearMYRTLE<br />
+2010-12-13 16:50:37 [Join Room] DearMYRTLE -&gt; Chat Lobby<br />
+2010-12-13 16:50:39 [Join Room] DearMYRTLE -&gt; Organizers Meeting<br />
+2010-12-13 16:50:39 [Exit Room] DearMYRTLE -&gt; Chat Lobby<br />
+2010-12-13 16:50:49 [Message] DearMYRTLE -&gt; Organizers Meeting: Not doing well on copy/paste I guess.<br />
+2010-12-13 16:51:04 [Message] Andy_Hatchett -&gt; Organizers Meeting: LOL! Myrt is doing her nails and keeps hitting the keyboard! :)<br />
+2010-12-13 16:51:07 [Message] GeneJ -&gt; Organizers Meeting: I think those are my notes...<br />
+2010-12-13 16:51:24 [Message] DearMYRTLE -&gt; Organizers Meeting: LOL.<br />
+2010-12-13 16:51:30 [Message] GeneJ -&gt; Organizers Meeting: Ooo<br />
+2010-12-13 16:51:38 [Disconnect] DearMYRTLE<br />
+2010-12-13 16:51:42 [Message] GeneJ -&gt; Organizers Meeting: Scott did say that he will continue to monitor the<br />
+2010-12-13 16:51:47 [Join Room] DearMYRTLE -&gt; Organizers Meeting<br />
+2010-12-13 16:51:47 [IP] DearMYRTLE: 66.133.97.196<br />
+2010-12-13 16:51:47 [Login] DearMYRTLE<br />
+2010-12-13 16:51:50 [Message] GeneJ -&gt; Organizers Meeting: BetterGEDCOM wiki; he will<br />
+2010-12-13 16:51:50 [Message] Andy_Hatchett -&gt; Organizers Meeting: sEE!<br />
+2010-12-13 16:52:09 [Message] GeneJ -&gt; Organizers Meeting: add to the wiki as he believes he has items to contribute to the dialog.<br />
+2010-12-13 16:52:49 [Message] DearMYRTLE -&gt; Organizers Meeting: I think it is ver important not to ignore the talent over at BetterGEDCOM.<br />
+2010-12-13 16:53:14 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:53:14 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:53:20 [Message] DearMYRTLE -&gt; Organizers Meeting: We've got about 7 more minutes....<br />
+2010-12-13 16:53:27 [Message] DearMYRTLE -&gt; Organizers Meeting: shall we move to the &quot;RootsTech 2011 Update&quot; ?<br />
+2010-12-13 16:53:38 [Message] GeneJ -&gt; Organizers Meeting: Yes.<br />
+2010-12-13 16:53:51 [Message] Andy_Hatchett -&gt; Organizers Meeting: Truw- too much good talent there - just how to let them makes the best use of themselves for BG.<br />
+2010-12-13 16:54:22 [Message] DearMYRTLE -&gt; Organizers Meeting: It would appear to me from Gordon Clarke's comments at the OpenGen meeting that the RootsTech people have moved away from a &quot;BetterGEDCOM&quot; open discussion to a &quot;Genealogy Technology&quot; open discussion.<br />
+2010-12-13 16:54:30 [Message] DearMYRTLE -&gt; Organizers Meeting: probably trying to take a middle road there.<br />
+2010-12-13 16:54:50 [Message] DearMYRTLE -&gt; Organizers Meeting: OpenGen is planning to have a booth there.<br />
+2010-12-13 16:55:02 [Message] DearMYRTLE -&gt; Organizers Meeting: I don't feel compelled to pay for a BetterGEDCOM booth.<br />
+2010-12-13 16:55:16 [Message] DearMYRTLE -&gt; Organizers Meeting: I don't own this project... I just created the workspace.<br />
+2010-12-13 16:55:31 [Message] DearMYRTLE -&gt; Organizers Meeting: I think that work can be accomplished here without a booth.<br />
+2010-12-13 16:55:43 [Message] Andy_Hatchett -&gt; Organizers Meeting: Not unless we are a lot farther along than I think we will be- a useless expense at that point.<br />
+2010-12-13 16:56:16 [Message] DearMYRTLE -&gt; Organizers Meeting: Even so, having a booth doesn't preclude adoption of a new GEDCOM format<br />
+2010-12-13 16:56:19 [Message] GeneJ -&gt; Organizers Meeting: Our wiki and blog are open.<br />
+2010-12-13 16:56:26 [Message] DearMYRTLE -&gt; Organizers Meeting: right.<br />
+2010-12-13 16:56:29 [Message] GeneJ -&gt; Organizers Meeting: so we have a 24-7<br />
+2010-12-13 16:56:31 [Message] GeneJ -&gt; Organizers Meeting: booth<br />
+2010-12-13 16:56:37 [Message] DearMYRTLE -&gt; Organizers Meeting: we shall see what develops at our Large Group Meetings.<br />
+2010-12-13 16:56:43 [Message] GeneJ -&gt; Organizers Meeting: Good idea<br />
+2010-12-13 16:56:56 [Message] DearMYRTLE -&gt; Organizers Meeting: I'm ready to report on progress in my DearMYRTLE blog when the group thinks appropriate.<br />
+2010-12-13 16:57:09 [Message] DearMYRTLE -&gt; Organizers Meeting: wonder why that text appeared in RED?<br />
+2010-12-13 16:57:10 [Message] Andy_Hatchett -&gt; Organizers Meeting: I do hope some of the lurkers will de-lurk for those meetings.<br />
+2010-12-13 16:57:12 [Message] DearMYRTLE -&gt; Organizers Meeting: I didn't do that.<br />
+2010-12-13 16:57:16 [Message] DearMYRTLE -&gt; Organizers Meeting: me twoo!<br />
+2010-12-13 16:57:20 [Message] DearMYRTLE -&gt; Organizers Meeting: too.<br />
+2010-12-13 16:57:23 [Message] DearMYRTLE -&gt; Organizers Meeting: LOL<br />
+2010-12-13 16:57:30 [Message] DearMYRTLE -&gt; Organizers Meeting: TWOO should about cover it!<br />
+2010-12-13 16:57:31 [Message] DearMYRTLE -&gt; Organizers Meeting: LOL<br />
+2010-12-13 16:57:53 [Message] DearMYRTLE -&gt; Organizers Meeting: Any new items to discuss?<br />
+2010-12-13 16:58:02 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:58:02 [Message] DearMYRTLE -&gt; Organizers Meeting: .<br />
+2010-12-13 16:58:20 [Message] Andy_Hatchett -&gt; Organizers Meeting: What red?<br />
+2010-12-13 16:58:49 [Message] Andy_Hatchett -&gt; Organizers Meeting: Sorry- couldn't resist :)<br />
+2010-12-13 16:59:04 [Message] DearMYRTLE -&gt; Organizers Meeting: Didn't do it....<br />
+2010-12-13 16:59:06 [Message] Andy_Hatchett -&gt; Organizers Meeting: No new items from me.<br />
+2010-12-13 16:59:28 [Message] DearMYRTLE -&gt; Organizers Meeting: change back to normal... and then type your screen name in this field, it will do the same thing.<br />
+2010-12-13 16:59:35 [Message] DearMYRTLE -&gt; Organizers Meeting: (I'll bet!)<br />
+2010-12-13 16:59:42 [Message] DearMYRTLE -&gt; Organizers Meeting: I didn't change font color.<br />
+2010-12-13 16:59:45 [Message] DearMYRTLE -&gt; Organizers Meeting: GeneJ<br />
+2010-12-13 16:59:50 [Message] Andy_Hatchett -&gt; Organizers Meeting: I did .<br />
+2010-12-13 17:00:14 [Message] GeneJ -&gt; Organizers Meeting: Just to repeat the TY to Tamara for the blog award. That was real nice.<br />
+2010-12-13 17:00:25 [Message] DearMYRTLE -&gt; Organizers Meeting: well, we're really stretching for content if we're trying the new chat screen out...... LOL.<br />
+2010-12-13 17:00:35 [Message] DearMYRTLE -&gt; Organizers Meeting: I believe his names is spelled TamUra.<br />
+2010-12-13 17:00:58 [Message] DearMYRTLE -&gt; Organizers Meeting: OK, we'll hold our next meeting same time next week.<br />
+2010-12-13 17:01:10 [Message] DearMYRTLE -&gt; Organizers Meeting: I'll go fetch the log, create a page for it and then go from there.<br />
+2010-12-13 17:01:16 [Message] GeneJ -&gt; Organizers Meeting: kk<br />
+2010-12-13 17:01:16 [Message] Andy_Hatchett -&gt; Organizers Meeting: ok- see you then ;)<br />
+2010-12-13 17:01:20 [Message] DearMYRTLE -&gt; Organizers Meeting: Shall we adjourn?<br />
+2010-12-13 17:01:30 [Message] DearMYRTLE -&gt; Organizers Meeting: ===================================4<br />
+2010-12-13 17:01:33 [Message] DearMYRTLE -&gt; Organizers Meeting: End of meeting<br />
+2010-12-13 17:01:37 [Message] DearMYRTLE -&gt; Organizers Meeting: =====================================<br />
+2010-12-13 17:01:38 [Message] GeneJ -&gt; Organizers Meeting: I bet you are right ... forgive me Tamura.<br />
+2010-12-13 17:01:39 [Message] Andy_Hatchett -&gt; Organizers Meeting: As thte commercial says... Nytol!<br />
+2010-12-13 17:01:42 [Message] GeneJ -&gt; Organizers Meeting: bad paws<br />
+2010-12-13 17:01:54 [Message] GeneJ -&gt; Organizers Meeting: ni ni<br />
+2010-12-13 17:01:55 [Message] DearMYRTLE -&gt; Organizers Meeting: thanks gang! Appreciate your ideas and comments.
+  </div>
+
+<div id="pageEditor" class="editorWrapper editorLayer">
+  <iframe id="target_editor" name="target_editor" src="/s/blank.html" style="width:0px;height:0px;border:0"></iframe>
+    <form action="/page/edit/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29" method="post" class="editorForm" id="editorForm"><input type="hidden" name="wikispacesFormToken" value="99d9f8c8589dcf8e9046740274a4ac631741ce67"/><div class="movkp"><input type="text" class="form-control" name="wikispaces_user_id" value="user-1453211485"/></div><div class="jowic"><input type="text" class="form-control" name="goto" autocomplete = "off"/></div><div class="wsh"><input type="text" class="form-control" name="mode" autocomplete = "off"/></div><div class="mimw"><input type="text" class="form-control" name="version" autocomplete = "off"/></div><div class="jowic"><input type="text" class="form-control" name="pageComments" autocomplete = "off"/></div><div class="wsh"><input type="text" class="form-control" name="saveAndContinue" autocomplete = "off"/></div><div class="movkp"><input type="text" class="form-control" name="comment" autocomplete = "off"/></div><div class="jovise"><input type="text" class="form-control" name="commentsDisabled" autocomplete = "off"/></div><div class="jowic"><input type="text" class="form-control" name="contentPresent" autocomplete = "off"/></div><div class="movkp"><input type="text" class="form-control" name="editorCleanup" autocomplete = "off"/></div><div class="jowic"><input type="text" class="form-control" name="WikispacesEditorContent" autocomplete = "off"/></div><input type="hidden" name="wikispacesASFormToken" value="6603f714e51bfebd075012b16e065d385629c3a5"/>
+    <input type="hidden" title="goto" name="f84fc5966e0ac82e39c19463d8231dae63b94a87" value=""/>
+    <input type="hidden" title="mode" name="a27d6ed24e120c1e696a767160273a08bc9a1173" autocomplete="off" value="visual"/>
+    <input type="hidden" title="version" name="5921f8e6fca5265384b96d30e0ae951bdbdf6c38" autocomplete="off" value="187899839"/>
+    <input type="hidden" title="pageComments" name="ba4bc00576c5b0806853e249a2e61bd10c15f955" autocomplete="off" value=""/>
+    <input type="hidden" title="saveAndContinue" name="400c6b3006effc59a09bf0965981d8f932a167fd" value="0"/>
+    <input type="hidden" title="comment" name="24ce50092d9974dcae4f3a03da4ca8ad3586b4d6" value=""/>
+    <input type="hidden" title="commentsDisabled" name="8676fd5fd367bdba095e5ef965ac8b85c5dca10e" autocomplete="off" value=""/>
+    <input type="hidden" title="contentPresent" name="259cfdcb96ff72ac9e96d5392124ddfaaf1227d9" autocomplete="off" value=""/>
+    <input type="hidden" title="editorCleanup" name="59a33139ac9e8f292365b1b21f450ae7f1c2e1ea" autocomplete="off" value=""/>
+
+    <textarea id="wsMainEditor" title="content" class="noContentHide" name="3a77e0e4653f290d03cdf01f64e3a5f49d2483ac" style="width: 100%; position: absolute; top: -50000px; left: -50000px;" autocomplete="off"></textarea>
+
+  <noscript>
+    <h2>Javascript Required</h2>
+    <p>You need to enable Javascript in your browser to edit pages.</p>
+  </noscript>
+
+  </form>
+  
+  
+  <div id="plainTextEditor" style="position:relative;display:none" class="editorLayer" >
+    <textarea id="textEditor" class="autogrow"></textarea>
+    <p style="clear:both;" align="right"><a href="http://helpcenter.wikispaces.com/customer/portal/articles/1959131-wikitext">help on how to format text</a></p>
+  </div>
+</div>
+
+
+
+
+  </div>
+  <div class="commentColumn WikispacesStream"><div class="WikispacesContent WikispacesBs3"><div class="commentList"></div></div></div>
+</div>
+
+  
+
+
+
+
+<script type="text/template" id="js-event-template">
+  <small>
+    <%- startDateShortFormat %>
+    <a href="<%- ws.common.pathFor('event', 'view', id) %>" class="WikispacesDialogLink">
+      <%- ws.common.truncate(title, 15) %>
+    </a>
+  </small>
+</script>
+
+<script type="text/template" id="js-reply-template">
+  <div class="tc-timeline-comment media">
+
+    <a class="pull-left userLink" href="<%- userCreated.url %>">
+      <img src="<%- userCreated.imageUrl %>" width="30" height="30" class="author-avatar" alt="" />
+    </a>
+    <div class="media-body" data-id="<%= id %>">
+      <% if (ws.context.user.canAdministerWiki) { %>
+        <i class="tc-delete-comment fa fa-trash-o contextual-command destroy-message ws-tip" title="Delete reply"></i>
+      <% } %>
+      <div class="tc-box-name-date">
+        <span class="tc-commenter"><a href="<%- userCreated.url %>"><%- userCreated.username %></a></span>
+        <% if (smartDate == '__live__') { %>
+        <abbr style="border-bottom-style: none;" class="timeago tc-comment-date" title="<%- (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+          <%- (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+        </abbr>
+        <% } else { %>
+          <abbr style="border-bottom-style: none;" class="tc-comment-date"><%- smartDate %></abbr>
+        <% } %>
+      </div>
+      <% if (body) { %>
+      <p>
+        <%= body %>
+      </p>
+      <% } %>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-share-template">
+  <div class="tc-timeline-block tc-<%= ws.stream.typeToBlockType(sharedType) %>-block" <%= (ws.stream.hideTimeline ? 'style="padding-left: 0px;"' : '') %>>
+
+    <% if (!ws.stream.hideTimeline) { %>
+      <div class="tc-timeline-icon">
+        <i class="fa fa-<%= ws.stream.typeToIcon(sharedType) %>"></i>
+      </div>
+      <div class="tc-timeline-triangle-man"></div>
+    <% } %>
+
+    <div class="tc-timeline-box" data-id="<%= id %>">
+      <div class="media">
+        <a class="pull-left userLink" href="<%- userCreated.url %>">
+          <img src="<%- userCreated.imageUrl %>" width="48" height="48" class="author-avatar media-object" alt="" />
+        </a>
+
+        <div class="media-body">
+
+          <div class="tc-stream-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <% if (ws.context.user.id) { %>
+              <li>
+                <a class="js-toggle-monitor" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-eye"></i>
+                  <span><%= monitored ? 'Start Monitoring' : 'Stop Monitoring' %></span>
+                </a>
+              </li>
+              <% } %>
+
+              <% if (ws.context.user.canAdministerWiki) { %>
+              <li>
+                <a class="js-toggle-lock" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-lock"></i>
+                  <span><%= locked ? 'Unlock Replies' : 'Lock Replies' %></span>
+                </a>
+              </li>
+              <% if (sharedType == 'discussion' || sharedType == 'comment' || sharedType == 'event') { %>
+              <li>
+                <a class="js-destroy-share" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-trash-o"></i>
+                  Delete <%= ws.stream.typeToName(sharedType) %>
+                </a>
+              </li>
+              <% } %>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="tc-timeline-box-header ws-reveal media-heading">
+              <h3 class="tc-box-title">
+              <% if (typeof adminLink !== 'undefined' && adminLink && ws.context.user.canAdministerWiki) { %>
+                <a href="<%- adminLink %>"><%- title %></a>
+              <% } else { %>
+                <%- title %>
+              <% } %>
+              <% if (typeof startDate !== 'undefined' && startDate) { %> - <%= startDateShortFormat %> <%= ws.stream.getYearFromStartDate(startDate) %><% } %>
+              </h3>
+              <div class="tc-box-name-date">
+                <% if (ws.context.instance.isTesClassroom) { %>
+                  <%- userCreated.username %>
+                <% } else { %>
+                  <a class="author-name" href="<%- userCreated.url %>"><%- userCreated.username %></a>
+                <% } %>
+                <% if (typeof recipients !== 'undefined' && recipients) { %>
+                  <i class="fa fa-angle-right"></i>
+                  <% if (typeof recipientsLink !== 'undefined') { %>
+                    <a href="<%- recipientsLink %>"><%- recipients %></a>
+                  <% } else { %>
+                    <span class="recipients"><%- recipients %></span>
+                  <% } %>
+                <% } %>
+                <% if (smartDate == '__live__') { %>
+                  <abbr style="border-bottom-style: none;" class="timeago tc-block-date" title="<%= (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+                    <%= (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+                  </abbr>
+                <% } else { %>
+                  <abbr style="border-bottom-style: none;" class="tc-block-date"><%- smartDate %></abbr>
+                <% } %>
+              </div>
+          </div>
+
+          <div class="<%= sharedType == 'comment' && !orphaned && !ws.stream.noCollapse ? 'hidden ' : '' %>tc-block-content">
+            <div class="clearfix">
+              <% if (typeof rangeActions !== 'undefined') { %>
+                <div class="tc-range-actions">
+                  <% for(var i = 0; i < rangeActions.length; i++) { %>
+                  <%= ws.stream.rangeActionTemplate(rangeActions[i]) %>
+                  <% } %>
+                </div>
+              <% } %>
+              <% if (description) { %>
+                <p><%= description %></p>
+              <% } %>
+            </div>
+          </div>
+
+          <% if (replyPages.length > 0 && !(replyPages.length === 1 && replyPages[0].digests.length === 0)) { %>
+            <div class="tc-timeline-comments">
+            <% for (var i = 0; i < replyPages.length; i++) { %>
+              <% if (i == 0 && replyPages[i].more) { %>
+                <a href="#" class="tc-show-more" onclick="ws.stream.pageReplies(<%= id %>, <%= replyPages[i].page + 1 %>); return false">Show more replies (<%= replyPages[i].more %> hidden) </a>
+              <% } else { %>
+                <div></div>
+              <% } %>
+              <% for (var j = 0; j < replyPages[i].digests.length; j++) { %>
+                <%= ws.stream.replyTemplate(replyPages[i].digests[j]) %>
+              <% } %>
+            <% } %>
+            </div>
+          <% } %>
+
+          <% if ((ws.stream.userCanPostMessage && !locked) || ws.context.user.canAdministerWiki) { %>
+          <div class="tc-add-comment media <%= ws.stream.noCollapse ? 'add-active' : ''%>">
+            <img src="<%- ws.context.user.imageUrlPrefix %>lg.jpg" width="30" height="30" class="pull-left author-avatar" alt="" />
+            <div class="media-body">
+              <textarea name="reply" placeholder="Comment" class="form-control form-control-tc ws-reveal <%= !ws.stream.noCollapse ? 'ws-unrevealed' : ''%> reply" /></textarea>
+              <button type="button" class="btn-tc btn-info-tc btn-sm-tc add-reply">Post</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-range-action-template">
+  <div>
+    <strong><%- name %></strong>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      <a href="<%- diffUrl %>">
+    <% } %>
+    <%= new Date(dateCreated * 1000).toLocaleString() %>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      </a>
+    <% } %>
+    <% if (typeof(rangeText) !== 'undefined') { %>
+      <div>
+        <span class="commentExtent">
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          <a href="<%- diffUrl %>">
+        <% } %>
+        <%= rangeText %>
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          </a>
+        <% } %>
+        </span>
+      </div>
+    <% } %>
+  </div>
+</script>
+
+<script type="text/template" id="js-stream-end-template">
+  <div class="tc-timeline-block tc-end-block">
+    <div class="tc-timeline-icon" style="margin-top: -10px;" />
+    <div class="tc-timeline-box" style="visibility: hidden;">
+      <p class="tc-box-title"></p>
+    </div>
+  </div>
+</script>
+
+<a name="discussion"></a>
+<div class="timeline WikispacesBs3 tc-timeline-embedded show-border">
+  <div class="timeline-line"></div>
+    <div id="js-share-list">
+    <div class="spinner hidden"><i class="fa fa-spinner fa-spin"></i></div>
+  </div>
+</div></div></div><div id="sentinel" style="clear:both"></div>        </div>
+      </main>
+    </div>
+  </div>
+</div>
+
+<footer class="ws-theme-footer" role="contentinfo">
+  <div class="ws-theme-container">
+    <div class="ws-theme-footer-inner">
+      <div class="WikiFooterNav WikiElement">
+<a href="http://helpcenter.wikispaces.com/" rel="nofollow" class="js-help-trigger">Help</a> &middot;
+<a href="http://www.wikispaces.com/about">About</a> &middot;
+<a href="http://blog.wikispaces.com/" target="_blank">Blog</a> &middot;
+<a href="http://www.wikispaces.com/content/pricing" rel="nofollow">Pricing</a> &middot;
+<a href="http://www.wikispaces.com/privacy" rel="nofollow">Privacy</a> &middot;
+<a href="http://www.wikispaces.com/terms" rel="nofollow">Terms</a> &middot;
+<a href="http://www.wikispaces.com/site/help?url=http%3A%2F%2Fbettergedcom.wikispaces.com%2FOrganizersMeetingNotes%2B2011-12-13%2B%2528Dec%2B13%2529" rel="nofollow"><strong>Support</strong></a> &middot;
+<a href="/space/subscribe/upgrade"><strong>Upgrade</strong></a>
+</div>      <div class="WikiLicense WikiElement">Contributions to http://bettergedcom.wikispaces.com/ are licensed under a <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0">Creative Commons Attribution Share-Alike 3.0 License</a>. <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0"><img src="http://www.wikispaces.com/i/creativecommons/by-sa_3.0_80x15.png" width="85" height="15" alt="Creative Commons Attribution Share-Alike 3.0 License"/></a><br />Portions not contributed by visitors are Copyright 2016 Tangient LLC<br /><a href="https://www.tes.com/us/?utm_source=wikispaces&utm_medium=link&utm_campaign=US-52-footer">TES: The largest network of teachers in the world</a></div>    </div>
+  </div>
+</footer>
+
+
+<script type="text/template" id="dialog-template">
+<div class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+        <h4 class="modal-title"><%= header %></h4>
+      </div>
+      <div class="modal-body">
+        <%= body %>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+
+<div id="js-help-template" class="hidden">
+  <div class="ws-help">
+    <div class="js-help-controls WikispacesContent WikispacesBs3">
+      <a href="http://www.wikispaces.com/site/gettingstarted/off" class="btn btn-default hidden js-getting-started-off pull-right">Turn off "Getting Started"</a>
+      <ol class="breadcrumb">
+        <li class="js-special-breadcrumb active">
+          <a href="http://helpcenter.wikispaces.com/" data-breadcrumb="0">Home</a>
+        </li>
+        <li class="js-ellipsis hidden js-special-breadcrumb">
+          ...
+        </li>
+        <li class="js-spinner hidden js-special-breadcrumb"><i class="fa fa-spinner fa-spin"></i></li>
+      </ol>
+    </div>
+    <div class="ws-help-content wiki">Loading...</div>
+  </div>
+</div>
+</div>
+<script src="http://www.wikispaces.com/s/nogz/9vz070xj-common.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/03083kx7-editorc.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/85k7018k-stream.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/91k8z207-contentbar.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/395j1vq7-component.stream-vo.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ws.namespace('ws.attributes');
+ws.namespace('ws.stream');
+ws.attributes.DISCUSSION_COUNT = 1;
+ws.attributes.pageId = 53250903;
+ws.attributes.version = 187899839;
+ws.attributes.showEditor = true;
+ws.attributes.editUrl = "http:\/\/bettergedcom.wikispaces.com\/page\/edit\/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FOrganizersMeetingNotes%2B2011-12-13%2B%2528Dec%2B13%2529";
+ws.attributes.userCanEdit = false;
+ws.stream.userCanPostMessage = false;
+ws.stream.hideTimeline = true;
+ws.stream.shareSource = "http:\/\/bettergedcom.wikispaces.com\/page\/shares\/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29";
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+jQuery(document).ready(function() {
+  ws.common.addJsonNotices({"warning":[],"error":[],"info":[],"success":[]});
+});
+
+jQuery(document).ready(function($) {
+  
+  function tipPlacement() {
+    return this.$element.closest('.ws-menu-bar .btn-group').is('.open') ? 'top' : 'bottom';
+  }
+
+  
+
+  $('.ws-menu-bar').each(function() {
+    var $menuBar = $(this);
+    var $tagDropdown = $menuBar.find('.ws-tag-dropdown-menu');
+    $menuBar.find('.tipme').tooltip({placement: tipPlacement, container: '.ws-menu-bar'});
+
+    
+    $menuBar.find('.ws-btn-more').click(ws.common.makeLinkClickFunction(function(e) {
+      if ($(this).closest('.ws-menu-bar .btn-group').is('.open')) {
+        ws.common.hideMorePageBar();
+      } else {
+        ws.common.showMorePageBar();
+      }
+    }));
+
+    $menuBar.on('click', '.ws-tag-dropdown-toggle', ws.common.makeLinkClickFunction(function(e) {
+      if ($(this).closest('.ws-menu-bar .dropdown').is('.open')) {
+        ws.common.hideTagDropdown();
+      } else {
+        ws.common.showTagDropdown();
+      }
+    }));
+
+    $(document.body).click(function(e) {
+      var $target = $(e.target);
+      if (!$target.closest('.ws-more-menu').closest('.ws-menu-bar').is($menuBar)
+          || $target.closest('a').is('.WikispacesDialogLink')) {
+        ws.common.hideMorePageBar();
+      }
+      if ($tagDropdown.length && !$target.closest('.ws-tag-dropdown-menu').is($tagDropdown)) {
+        ws.common.hideTagDropdown();
+      }
+    });
+    
+  });
+});
+
+
+jQuery(document).ready(function($) {
+  $('.ws-more-menu').on('click', 'a', function(e) {
+    if ($(this).is('.disabled')) {
+      e.preventDefault();
+    }
+  });
+});
+
+
+jQuery(document).ready(function() {
+  ws.editor.canEdit = false;
+  var editUrl = 'http://bettergedcom.wikispaces.com/page/edit/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FOrganizersMeetingNotes%2B2011-12-13%2B%2528Dec%2B13%2529';
+
+  jQuery('#js-edit-from-template').change(function() {
+    window.location = ws.common.addUriParams(editUrl, [['template', jQuery(this).val()]]);
+  });
+});
+
+
+jQuery(document).ready(function() {
+  ws.editor.loadEditorLibs('http://www.wikispaces.com/site/editorlibs/en/07z93j80.js');
+});
+
+
+ws.editor.startEditor = function (moreCoreOptions, moreMainOptions) {
+  ws.editor.canEdit = true;
+
+  var coreOptions = {
+    'content_css': ['http://bettergedcom.wikispaces.com/stylesheet/editor/241807025-217420326D.css']
+  };
+
+  // The stylesheet is passed in as a string, turn it into an array
+  // Add bootstrap styles to the editor, if we are in a theme that has full screen bootstrap
+  if (jQuery('body').is('.WikispacesBs3')) {
+    coreOptions.content_css.push('http://www.wikispaces.com//s/internal-bootstrap-body.css');
+  }
+
+  var mainOptions = {
+    'wssave_cancel_url': '/OrganizersMeetingNotes+2011-12-13+%28Dec+13%29',
+    'wsimage_upload_url': 'http://bettergedcom.wikispaces.com/file/multiupload',
+    'wsimage_max_file_size_mb': '20',
+    'wsimage_page_view_group': ''
+  };
+
+  ws.editor.loadEditor(jQuery.extend(coreOptions, moreCoreOptions), jQuery.extend(mainOptions, moreMainOptions));
+};
+
+  var wikispaces_page_version = '187899839';
+
+  jQuery(document).ready(function() {
+    ws.editor.enableButtons();
+  });
+
+
+
+--></script><!-- w19 161 mem:4:31(31) wki:9:10(2) tot:161:161(1) -->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"55613def96","applicationID":"10980928","transactionName":"Ml1TZBNTCkcCAkFaWAsXckUSRgtZTDdcVkA1WVZVIFEQXQwP","queueTime":0,"applicationTime":161,"ttGuid":"","agentToken":"","atts":"HhpEEltJGRhBABcJTBhF","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-686.min.js"}</script></body>
+</html>

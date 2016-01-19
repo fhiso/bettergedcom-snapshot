@@ -1,0 +1,1249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="search" href="http://bettergedcom.wikispaces.com/space/opensearch" type="application/opensearchdescription+xml" title="Wikispaces Search (BetterGedcom Wiki)" />
+<link rel="alternate" type="application/x-wiki" title="Edit This Page" href="/page/edit/Person+entity" />
+<link rel="alternate" title="BetterGedcom - All Changes" href="http://bettergedcom.wikispaces.com/wiki/xmla?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : Person entity - Discussion" href="http://bettergedcom.wikispaces.com/message/xml/Person+entity?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : Person entity - Edits" href="http://bettergedcom.wikispaces.com/page/xml/Person+entity?v=rss_2_0" type="application/rss+xml" />
+<link rel="microsummary" href="/page/microsummary/Person+entity/edits"/>
+<link rel="microsummary" href="/page/microsummary/Person+entity/messages"/>
+<script type="text/javascript">
+  
+if (typeof ws === 'undefined') ws = {};
+ws.context = {
+  instance: {
+    id: '1',
+    url: 'wikispaces.com',
+    isMain: true,
+    supportsGoogleDocs: false,
+    isTesClassroom: false,
+  },
+  user: {
+    id: '',
+    username: '',
+    status: '',
+    locale: 'en',
+    imageUrlPrefix: 'http://www.wikispaces.com/i/user_none_',
+    isTeacher: false,
+    canAdministerWiki: false,
+  },
+  wiki: {
+    id: '5050513',
+    name: 'bettergedcom',
+    text: 'BetterGedcom',
+    module: 'B',
+    isClassroom: false,
+    isTesClassroom: false
+    ,defaultSpaceId: 5050513
+    ,isWwwWiki: false
+  },
+  project: {
+    id: '5050513',
+    name: ''
+  },
+  space: {
+    id: '5050513',
+    name: 'bettergedcom',
+    isDefaultSpace: true,
+    isDefaultTemplate: false
+  },
+
+  environment_name: 'prod',
+
+  path: {
+    object: 'page',
+    method: 'view',
+    page: 'Person entity',
+    id: ''
+  },
+
+  settings: {
+    main_domain: 'wikispaces.com',
+    session_url: 'https://session.wikispaces.com/1/',
+    asset_url_prefix: 'http://www.wikispaces.com',
+    beta_features: false,
+    isMobileSite: false,
+    isUploadCapable: true,
+    can_discuss: false,
+    has_gdocs: false,
+    isDialog: false,
+    pwin: ''
+  },
+  clockSkewMillis: 1453211500286 - ((window.performance && window.performance.timing.responseStart > 0) ? window.performance.timing.responseStart : (new Date()).getTime())
+}
+
+
+// legacy javascript API variables, use the above instead
+var wikispaces_isUserLoggedIn = !!ws.context.user.id;
+var wikispaces_isMain = ws.context.instance.isMain;
+var wikispaces_username = ws.context.user.username;
+var wikispaces_spaceName = ws.context.space.name;
+var wikispaces_projectName = ws.context.project.name;
+var wikispaces_wikiName = ws.context.wiki.name;
+var wikispaces_wikiText = ws.context.wiki.text;
+var wikispaces_isDefaultSpace = ws.context.space.isDefaultSpace;
+var wikispaces_method = ws.context.path.method;
+var wikispaces_object = ws.context.path.object;
+var wikispaces_page = ws.context.path.page;
+var wikispaces_id = ws.context.path.id;
+var wikispaces_domain = ws.context.instance.url;
+var wikispaces_isUserOrganizer = false;
+var wikispaces_main_domain = ws.context.settings.asset_url_prefix;
+var wikispaces_asset_url_prefix = ws.context.settings.asset_url_prefix;
+var wikispaces_beta_features = ws.context.settings.beta_features;
+var wikispaces_isMobileSite = ws.context.settings.isMobileSite;
+var wikispaces_isUploadCapable = ws.context.settings.isUploadCapable;
+var wikispaces_can_discuss = ws.context.settings.can_discuss;
+var wikispaces_has_gdocs = ws.context.settings.has_gdocs;
+
+</script><title>BetterGedcom - Person entity</title>
+<meta charset="utf-8" />
+<link rel="apple-touch-icon" sizes="144x144" href="http://www.wikispaces.com/_/z6371z4x/i/logo-144.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.wikispaces.com/_/j5j77xz3/i/logo-114.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://www.wikispaces.com/_/vq8j5432/i/logo-72.png" />
+<link rel="apple-touch-icon" href="http://www.wikispaces.com/_/38515190/i/logo-57.png" />
+<link rel="shortcut icon" href="http://www.wikispaces.com/_/55v9k02z/i/logo-16.png" />
+<style type="text/css">
+/* Standard theme styles */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+.ws-theme-header-inner,
+.ws-theme-body-inner,
+.ws-theme-footer-inner,
+.ws-theme-content-inner,
+.ws-theme-sidebar-inner {
+  position: relative;
+}
+.ws-theme-header-inner:after,
+.ws-theme-body-inner:after,
+.ws-theme-footer-inner:after,
+.ws-theme-content-inner:after,
+.ws-theme-sidebar-inner:after,
+.ws-theme-menu-inner:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.ws-theme-content, .ws-theme-sidebar {
+  overflow-x: auto;
+}
+.ws-theme-footer {
+  text-align: right;
+}
+.ws-theme-footer a, .ws-theme-footer a:hover {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .ws-theme-container {
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .ws-theme-content {
+    width: 550px;
+    min-height: 384px;
+    float: right;
+  }
+  .ws-theme-sidebar {
+    width: 200px;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .ws-theme-container {
+    width: 970px;
+  }
+  .ws-theme-content {
+    width: 770px;
+    min-height: 496px;
+  }
+}
+@media (min-width: 1200px) {
+  .ws-theme-container {
+    width: 1170px;
+  }
+  .ws-theme-content {
+    width: 970px;
+    min-height: 600px;
+  }
+}
+/* End standard theme styles */
+</style>
+<style type="text/css">
+/* Theme-specific styles */
+body {
+  background-color: #e5f4dd;
+}
+
+.ws-theme-header .WikiSearch .WikiSearchInput,
+.ws-theme-sidebar .WikiSearch .WikiSearchInput,
+.ws-theme-footer .WikiSearch .WikiSearchInput {
+  width: 100%;
+}
+
+.ws-theme-header a,
+.ws-theme-sidebar a,
+.ws-theme-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+.ws-theme-header a:hover,
+.ws-theme-sidebar a:hover,
+.ws-theme-footer a:hover {
+  text-decoration: underline;
+}
+.ws-theme-header img,
+.ws-theme-sidebar img,
+.ws-theme-footer img {
+  border: none;
+}
+
+.ws-theme-header,
+.ws-theme-sidebar {
+  display: none;
+}
+
+.ws-theme-sidebar,
+.ws-theme-footer {
+  color: #000000;
+}
+
+.ws-theme-body-inner {
+  padding: 8px 5px;
+}
+
+.ws-theme-content {
+  overflow-x: visible;
+}
+.ws-theme-content-inner {
+  background-color: #FFF;
+  padding: 15px;
+}
+
+.ws-theme-footer {
+  font-size: 12px;
+}
+.ws-theme-footer-inner {
+  padding: 0 15px 15px 15px;
+}
+.ws-theme-footer .WikiLicense img {
+  vertical-align: text-bottom;
+}
+
+@media (min-width: 768px) {
+  .ws-theme-container {
+    width: auto;
+  }
+
+  .ws-theme-header,
+  .ws-theme-sidebar {
+    display: block;
+  }
+
+  .ws-theme-header {
+    color: #FFF;
+    background: #a4d0ad url('http://www.wikispaces.com/_/94v39788/i/theme_swoop.png') no-repeat 100% -25px;
+  }
+  .ws-theme-header-inner {
+    padding: 15px 0;
+  }
+
+  .ws-theme-body-inner {
+    padding: 15px;
+  }
+
+  .ws-theme-content {
+    width: auto;
+    float: none;
+    margin-left: 215px;
+  }
+  .ws-theme-content-inner {
+    width: 100%;
+    float: left;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.25);
+  }
+
+  .ws-theme-sidebar .WikiActions {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .ws-theme-sidebar .WikiActions > li {
+    padding: 2px;
+  }
+  .ws-theme-sidebar .WikiCustomNav ol {
+    padding-left: 16px;
+  }
+  .ws-theme-sidebar .WikiCustomNav ol.includePageList {
+    padding-left: 0;
+  }
+  .ws-theme-sidebar .ws-theme-nav-edit {
+    color: #666;
+    text-align: center;
+  }
+}
+/* End theme-specific styles */
+</style>
+<link rel="stylesheet" href="http://bettergedcom.wikispaces.com/stylesheet/view/241807025-217420326D.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/9q897620-internal-bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/vz033906-internal.css" type="text/css" />
+<script src="http://www.wikispaces.com/s/nogz/j91xzz3x-top.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+
+  var wsGoogleAccount = 'UA-80504-1';
+  _gaq.push(['_setAccount', wsGoogleAccount]);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', 'wikispaces.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setCustomVar', 2, 'Authenticated', 'Guest', 2]);
+  _gaq.push(['_trackPageview']);
+</script></head>
+<body><a href="#WikiContent" class="hidden sr-only sr-only-focusable">Skip to main content</a><div id="js-fixed-header-holder" class="fixed"><div class="WikispacesContent WikispacesBs3" role="banner">
+      <div id="WikispacesBanner" class="BannerDisplayed">You are not a member of this wiki. <a href="http://bettergedcom.wikispaces.com/space/join"> Join now</a>
+<script type="text/javascript">
+function dismissJoinWiki() {
+  ws.common.displayBanner(false);
+  jQuery.post("http://bettergedcom.wikispaces.com/wiki/dismissjoin");
+}
+</script> &nbsp;<a href='#' onclick='dismissJoinWiki(); return false;'>Dismiss</a></div>
+    <div class="ws-main-top-nav visible-xs">
+    <div class="navbar navbar-static-top" style="margin-bottom: 0;">
+      <div class="container">
+                <div class="navbar-header">
+          <div class="visible-xs pull-left">
+            <a href="/space/menu" class="WikispacesDialogLink btn navbar-btn">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+          <div class="visible-xs pull-right js-globalnav-popover-container">
+                        <a href="http://www.wikispaces.com/site/signin?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FPerson%2Bentity" class="btn navbar-btn ws-mobile-guest-username js-globalnav-popover-trigger">
+              guest
+            </a>
+                        <div class="hidden js-globalnav-popover-content">
+              <div class="WikispacesContent WikispacesBs3">
+                <div class="WikiInternalHeaderNav noHide">
+  <div class="WikiInternalHeaderNavMenu">
+                          
+                  <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/user/join?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2Fspace%2Fjoin" rel="nofollow" class="WikispacesXDomainDialogLink">Join</a></span>
+
+          <span class="divider">|</span>
+        
+        <span class="WikiInternalHeaderNavMenuArea"><a class="js-help-trigger" rel="nofollow" href="http://helpcenter.wikispaces.com/">Help</a></span>
+
+        <span class="divider">|</span>
+      
+      <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/site/signin?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FPerson%2Bentity" rel="nofollow" class="WikispacesXDomainDialogLink">Sign In</a></span>
+      </div>
+</div>              </div>
+            </div>
+          </div>
+          <div class="ws-navbar-middle-xs">
+            <div class="navbar-brand" role="navigation">
+              <a href="http://www.wikispaces.com/" class="ws-logo"></a>
+              <i class="fa fa-angle-right"></i>
+              <a href="http://bettergedcom.wikispaces.com/">BetterGedcom</a>
+                              <i class="fa fa-angle-right"></i> <a href="http://bettergedcom.wikispaces.com/home">Home</a>
+              
+            </div>
+          </div>
+                    <form action="/search/view" method="post" class="navbar-form ws-include-xs pull-left ws-navbar-search hidden-xs" role="search"><input type="hidden" name="wikispacesFormToken" value="8685902230f62217d2cf8b8c59f65b0a4886028a"/><input type="text" class="form-control search-query" name="q" value="" placeholder="Search" /> </form>
+                  </div>
+      </div>
+    </div>
+  </div>
+      <div class="hidden-xs"><div class="WikiInternalHeaderNav WikiElement floating">
+  <div class="WikiInternalHeaderNavMenu">
+                                    <span class="WikiInternalHeaderNavMenuArea guestUserName">guest</span><span class="slideMarker divider">|</span>
+        
+                  <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/user/join?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2Fspace%2Fjoin" rel="nofollow" class="WikispacesXDomainDialogLink">Join</a></span>
+
+          <span class="divider">|</span>
+        
+        <span class="WikiInternalHeaderNavMenuArea"><a class="js-help-trigger" rel="nofollow" href="http://helpcenter.wikispaces.com/">Help</a></span>
+
+        <span class="divider">|</span>
+      
+      <span class="WikiInternalHeaderNavMenuArea"><a href="http://www.wikispaces.com/site/signin?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FPerson%2Bentity" rel="nofollow" class="WikispacesXDomainDialogLink">Sign In</a></span>
+      </div>
+</div></div>
+  </div></div><div id="js-fixed-header-offset">
+<header class="ws-theme-header" role="banner">
+  <div class="ws-theme-container">
+    <div class="ws-theme-header-inner">
+      <a href="http://bettergedcom.wikispaces.com/" class="WikiLogo WikiElement"><img src="http://bettergedcom.wikispaces.com/space/showlogo/1447724692/logo.png" alt="BetterGedcom" /></a>    </div>
+  </div>
+</header>
+
+<div class="ws-theme-body">
+  <div class="ws-theme-container">
+    <div class="ws-theme-body-inner">
+      <nav class="ws-theme-sidebar" role="navigation">
+        <div class="ws-theme-sidebar-inner">
+          <div class="ws-theme-menu">
+            <div class="ws-theme-menu-inner">
+              <ul class="WikiActions WikiElement WikiControls">
+    <li id="WikiActionHome"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="http://bettergedcom.wikispaces.com/"><i class="fa fa-home fa-fw"></i></a><a href="http://bettergedcom.wikispaces.com/">Wiki Home</a></div></li>
+    <li id="WikiActionChanges"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="/wiki/changes"><i class="fa fa-clock-o fa-fw"></i></a><a href="/wiki/changes">Recent Changes</a></div></li>
+    <li id="WikiActionPagesAndFiles"><div><span class="WikiActionSupplemental" style="float: right;"></span><a href="/space/content"><i class="fa fa-file-text-o fa-fw"></i></a><a href="/space/content">Pages and Files</a></div></li>
+    <li id="WikiActionMembers"><div class="js-member-link"><span class="WikiActionSupplemental" style="float: right;"></span><a href="/wiki/members"><i class="fa fa-user fa-fw"></i></a><a href="/wiki/members">Members</a></div></li>
+</ul>
+              <form action="/search/view" method="post" class="WikiSearch WikiElement" role="search"><input type="text" class="form-control WikiSearchInput" name="q" value="" placeholder="Search" /> </form>              <div class="WikiCustomNav WikiElement wiki"><!-- ws:start:WikiTextMediaRule:0:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/custom/15419670?h=0&amp;w=0&quot; class=&quot;WikiMedia WikiMediaCustom&quot; id=&quot;wikitext@@media@@type=&amp;quot;custom&amp;quot; key=&amp;quot;15419670&amp;quot;&quot; title=&quot;Custom Media&quot;/&gt; --><div id="clustrmaps-widget"></div>
+<script type="text/javascript">
+//<![CDATA[
+var _clustrmaps = {'url' : 'http://bettergedcom.wikispaces.com', 'user' : 1008260, 'server' : '4', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2012-04-24', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www4.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();
+//]]>
+</script><noscript><a href="http://www4.clustrmaps.com/user/a8df6284" rel="nofollow"><img src="http://www4.clustrmaps.com/stats/maps-no_clusters/bettergedcom.wikispaces.com-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript><!-- ws:end:WikiTextMediaRule:0 --><br />
+<!-- ws:start:WikiTextMediaRule:1:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/custom/20494652?h=0&amp;w=0&quot; class=&quot;WikiMedia WikiMediaCustom&quot; id=&quot;wikitext@@media@@type=&amp;quot;custom&amp;quot; key=&amp;quot;20494652&amp;quot;&quot; title=&quot;Custom Media&quot;/&gt; --><div id="google_translate_element"></div>
+<script type="text/javascript">
+//<![CDATA[
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+//]]>
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script><!-- ws:end:WikiTextMediaRule:1 --><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/FAQ">FAQ</a></strong><br />
+<br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Goals1">Goals</a></strong><br />
+. <a class="wiki_link" href="http://bettergedcom.wikispaces.com/Better+GEDCOM+Requirements+Catalog">Requirements Catalog</a><br />
+. <a class="wiki_link" href="http://bettergedcom.wikispaces.com/BG+Requirements+Catalog+Index">Requirements Catalog Index</a><br />
+<br />
+FHISO<br />
+... <a class="wiki_link" href="http://bettergedcom.wikispaces.com/Patrick+L.+Jones+remarks">Patrick L. Jones remarks</a><br />
+... <strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/FHISO+Open+Discussion">FHISO Open Discussion</a></strong><br />
+<strong>... <a class="wiki_link" href="/FHISO+News">FHISO News 2012</a></strong><br />
+<strong>... <a class="wiki_link" href="http://bettergedcom.wikispaces.com/FHISO+News+2013">FHISO News 2013</a></strong><br />
+... <strong><a class="wiki_link" href="/FHISO+Call+for+Papers">FHISO Call for papers</a></strong><br />
+<br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/MEETINGS">Meetings</a></strong><br />
+<br />
+<strong>Reference</strong><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Shortcomings+Of+GEDCOM" target="_blank">What's Wrong with GEDCOM?</a></strong><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Data">Data Models</a></strong><br />
+. <a class="wiki_link" href="http://bettergedcom.wikispaces.com/BetterGEDCOM+Comparisons">Comparisons</a><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Research+Process%2C+Evidence+%26+GPS">Research Process</a></strong><br />
+. <a class="wiki_link" href="http://bettergedcom.wikispaces.com/Genealogy+Practice+and+Methods">Genealogy Methodology</a><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Sources+and+Citations">Sources &amp; Citations</a></strong><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Personal+Names">Personal Names</a></strong><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Defining+E%26C+for+BetterGEDCOM">Defining E&amp;C</a></strong><br />
+<br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Project+Frameworks">Project Frameworks</a></strong><br />
+<strong>.</strong> <a class="wiki_link" href="http://bettergedcom.wikispaces.com/GEDCOM+X+Framework">GEDCOM X</a><br />
+<br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Definitions">Definitions</a></strong><br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/BetterGEDCOM+Sandbox">Sandbox</a></strong><br />
+. <a class="wiki_link" href="http://bettergedcom.wikispaces.com/BetterGEDCOM+test+suite">Test Suite</a><br />
+<span style="cursor: pointer; margin: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;"><strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Tools">Tools</a></strong></span><br />
+<br />
+<strong><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Member+Profiles">BetterGEDCOM Member Profiles</a></strong><br />
+<br />
+<strong><a class="wiki_link_ext" href="mailto:BetterGEDCOM@gmail.com" rel="nofollow">Contact Us</a></strong><br />
+<br />
+<a class="wiki_link" href="http://bettergedcom.wikispaces.com/Archive">Archive</a><br />
+<br />
+<!-- ws:start:WikiTextIncludeRule:00:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/include/navigation?w=200&amp;h=100&quot; class=&quot;WikiMedia WikiMediaInclude&quot; id=&quot;wikitext@@include@@component=&amp;quot;navigation&amp;quot;&quot; title=&quot;Include navigation: component=&amp;quot;navigation&amp;quot;&quot; /&gt; --><div class="WikispacesNavbar" data-spaceid="5050513" data-navbarurl="/navbar">
+  <div id="WikispacesNavbarFavoritesEntry" data-entryid="16408119" class="WikispacesNavbarEntry">
+  <div class="WikispacesNavbarEntryHeader">
+        <span class="fa-fw"><i class="WikispacesNavbarToggle WikispacesNavbarPlus fa fa-caret-right"></i><i class="WikispacesNavbarToggle WikispacesNavbarMinus fa fa-caret-down"></i></span><span>Favorites&nbsp;<i class="fa fa-star"></i></span>
+  </div>
+  <div class="WikispacesNavbarEntryItems" id="WikispacesNavbarFavoritesEntryItems">
+    <span class="hidden WikispacesNavbarNum">20</span>
+<ol>
+</ol>
+  </div>
+</div>  <div id="WikispacesNavbarAllPagesEntry" data-entryid="16408121" class="WikispacesNavbarEntry WikispacesNavbarSortableEntry WikispacesNavbarRemovableEntry hidden">
+  <div class="WikispacesNavbarEntryHeader">
+        <i class="WikispacesNavbarSpinner fa fa-spinner fa-spin pull-right"></i><span class="WikispacesNavbarHeaderAction WikispacesNavbarRemoveEntry close"><i class="fa fa-times"></i></span><span class="fa-fw"><i class="WikispacesNavbarToggle WikispacesNavbarPlus fa fa-caret-right"></i><i class="WikispacesNavbarToggle WikispacesNavbarMinus fa fa-caret-down"></i></span><span>All Pages</span>
+  </div>
+  <div class="WikispacesNavbarEntryItems" id="WikispacesNavbarAllPagesEntryItems">
+    <span class="hidden WikispacesNavbarNum">20</span>
+<ol>
+</ol>
+  </div>
+</div>  <div id="WikispacesNavbarTags">
+    </div>
+  <div id="WikispacesNavbarOptions" class="WikispacesNavbarEntry WikispacesContent WikispacesBs3">
+    <div id="WikispacesNavbarOptionsEntryItems" class="WikispacesNavbarEntryItems">
+      <form class="WikispacesNavbarNewTagNavbarForm" action="/navbar/tag" method="post">
+        <div class="input-group">
+          <input type="text" name="tagName" placeholder="Tag" class="form-control" style="width: 135px;"/>
+          <div class="input-group-btn">
+            <button type="submit" name="submitTag" value="1" class="btn btn-default ws-btn-spinner"><span>Add</span></button>
+          </div>
+        </div>
+      </form>
+      <form class="WikispacesNavbarShowAllPagesForm text-center" action="/navbar/update/16408121" method="post">
+        <input type="hidden" name="status" value="A" />
+        <button type="submit" class="btn btn-default WikispacesNavbarShowAllPages ws-btn-spinner" name="go" value="1"><span>Add "All Pages"</span></button>
+        <button type="button" class="btn btn-primary WikispacesNavbarEditDone">Done</button>
+        <i class="fa fa-spinner fa-spin hidden"></i>
+      </form>
+    </div>
+  </div>
+</div><!-- ws:end:WikiTextIncludeRule:00 --><br />
+<!-- ws:start:WikiTextMediaRule:2:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/custom/24391644?h=0&amp;w=0&quot; class=&quot;WikiMedia WikiMediaCustom&quot; id=&quot;wikitext@@media@@type=&amp;quot;custom&amp;quot; key=&amp;quot;24391644&amp;quot;&quot; title=&quot;Custom Media&quot;/&gt; --><!-- Site Meter -->
+<script type="text/javascript" src="http://s47.sitemeter.com/js/counter.js?site=s47BetterGEDCOMstats">
+</script><noscript><a href="http://s47.sitemeter.com/stats.asp?site=s47BetterGEDCOMstats" target="_top" rel="nofollow"><img src="http://s47.sitemeter.com/meter.asp?site=s47BetterGEDCOMstats" alt="Site Meter" border="0" /></a></noscript><!-- Copyright (c)2009 Site Meter --><!-- ws:end:WikiTextMediaRule:2 --></div>              <div class="ws-theme-nav-edit">
+                              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main class="ws-theme-content" role="main">
+        <div class="ws-theme-content-inner">
+          <div class="contentBox"><div class="innerContentBox" id="WikiContent">
+
+<script type="text/template" id="comment-footer-template">
+
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</script>
+
+<script type="text/template" id="comment-content-template">
+<div class="ws-box commentView">
+  <div class="comment-close">
+    <button type="button" class="closeme close" aria-hidden="true"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="commentHeader">
+    <p class="ws-stream-meta command-context">
+      <a class="userLink userLinkPicture" href="<%= userCreated.url %>"><img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16"></a>
+      <a href="<%= userCreated.url %>"><%= userCreated.username %></a>
+      <% if (smartDate == '__live__') { %>
+      <abbr class="timeago" title="<%= (new Date(parseInt(dateCreated, 10) * 1000)).toISOString() %>">
+        <%= dateCreated %>
+      </abbr>
+      <% } else { %>
+        <%- smartDate %>
+      <% } %>
+      <% if (ws.context.user.canAdministerWiki && ws.comments.Manager.readOnly) { %>
+        <i class="fa fa-trash-o contextual-command delete ws-tip" title="Delete Comment"></i>
+      <% } %>
+    </p>
+  </div>
+
+  <div class="commentBody">
+    <div class="commentContent">
+      <%= description %>
+    </div>
+
+      <% for(i = 0; i < replyPages.length; i++) { %>
+        <% for(var j = 0; j < replyPages[i].digests.length; j++) { %>
+      <div class="commentReply" data-id="<%= replyPages[i].digests[j].id %>">
+        <p class="ws-stream-meta command-context">
+          <a class="userLink userLinkPicture" href="<%= replyPages[i].digests[j].userCreated.url %>"><img class="userPicture" src="<%= replyPages[i].digests[j].userCreated.imageUrl %>" width="16" height="16"></a>
+          <a href="<%= replyPages[i].digests[j].userCreated.url %>"><%= replyPages[i].digests[j].userCreated.username %></a>
+          <% if (smartDate == '__live__') { %>
+          <abbr class="timeago" title="<%= (new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000)).toISOString() %>">
+            <%= new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000).toLocaleString() %>
+          </abbr>
+          <% } else { %>
+            <%- smartDate %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+          <i class="fa fa-trash-o contextual-command delete-reply ws-tip" title="Delete Reply"></i>
+          <% } %>
+          </p>
+        <div class="commentContent"><%= replyPages[i].digests[j].body %></div>
+      </div>
+        <% } %>
+      <% } %>
+
+      <form class="reply commentReply">
+        <div class="form-group">
+          <textarea name="reply" placeholder="Reply" class="form-control" /></textarea>
+        </div>
+        <div class="btn-toolbar">
+          <button type="submit" class="btn btn-primary btn-sm" name="go" value="1">Post</button>
+
+          <% if (ws.context.user.id) { %>
+            <% if (monitored) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip active" title="You are monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip" title="You are not monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+            <% if (locked) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip active" title="Replies are not allowed."><i class="fa fa-lock"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip" title="Replies are allowed."><i class="fa fa-lock"></i></button>
+            <% } %>
+          <% } %>
+
+          <i class="fa fa-spinner fa-spin spinner pull-right hidden"></i>
+        </div>
+      </form>
+   </div>
+
+   
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-composer-template">
+<div class="ws-box commentView">
+  <div class="commentComposer">
+    <div class="comment-close">
+      &nbsp;<button type="button" class="close closeme" aria-hidden="true"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="commentHeader">
+      <p class="ws-stream-meta command-context">
+        <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+        <a href="#" onclick="return false;"><%= userCreated.username %></a>
+      </p>
+    </div>
+    <div class="commentBody">
+      <textarea name="comment" class="compose form-control" placeholder="Comment"/></textarea><br/>
+      <div class="btn-toolbar">
+        <button type="button" class="btn btn-default btn-sm monitored active pull-right" style="margin-left: 6px" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-eye"></i></button>
+        <button type="button" class="btn btn-default btn-sm locked btn-toggle pull-right" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-lock"></i></button>
+        <button type="button" class="btn btn-primary btn-sm closeme">Save</button>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-proxy-template">
+<div class="comment-proxy">
+  <span class="commentUser">
+  <% if (userCreated) { %>
+    <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+  <% } else { %>
+    <img class="userPicture" src="<%= ws.context.user.imageUrlPrefix %>sm.jpg" width="16" height="16">
+  <% } %>
+  </span>
+  <span class="commentReplies"><%= 1 + _(replyPages).reduce(function(memo, page){ return memo + page.digests.length; }, 0) %></span>
+</div>
+</script>
+
+<div class="ws-menu-bar WikiControls WikispacesContent WikispacesBs3">
+  
+    <h1 class="pageTitle"><a href="/Person+entity">Person entity</a></h1>
+      <div class="btn-group pull-right">
+          <span class="btn btn-default disabled tipme" title="you do not have permission to edit this page"><i class="fa fa-pencil fa-fw"></i> Edit</span>          <a class="btn btn-default tipme" title="view 30 discussion posts" href="/Person+entity#discussion"><i class="fa fa-comments fa-fw"></i> 30</a>          <a class="btn btn-default tipme" title="view 32 revisions" href="/page/history/Person+entity"><i class="fa fa-clock-o fa-fw"></i> 32</a>          <a class="btn btn-default ws-btn-more dropdown-toggle tipme" title="more options" href="/page/menu/Person+entity"><i class="icon-height-only fa-fw"></i>&hellip;</a>        <ul class="ws-more-menu dropdown-menu dropdown-menu-right">
+              <li class=" dropdown"><a class=" ws-tag-dropdown-toggle" href="/page/tags/Person+entity"><span class="pull-right">0</span> <i class="fa fa-tag fa-fw"></i> Tags</a>
+          <div class="dropdown-menu dropdown-menu-right ws-tag-dropdown-menu">
+          
+
+
+
+<form action="#" name="WikiTagForm" class="WikiTagForm"><input type="hidden" name="wikispacesFormToken" value="51b1be4f93741f0855cf3b70ec5e96b087d96c55"/><input type="hidden" name="wikispacesFormToken" value="51b1be4f93741f0855cf3b70ec5e96b087d96c55"/>
+  <div class="WikiTagList">
+    <i class="fa fa-tag ws-action"></i>
+        <ul class="list-unstyled">
+          <li>No tags</li>
+        </ul>
+      </div>
+  </form>      </div>
+    </li>
+              <li class="divider"></li>
+            <li class=""><a class=" WikispacesDialogLink" href="http://bettergedcom.wikispaces.com/wiki/addmonitor?monitorLink=page%3APerson%20entity"><i class="fa fa-eye fa-fw"></i> Notify</a>
+    </li>
+        <li class=""><a class=" WikispacesDialogLink" href="/page/rss/Person+entity"><i class="fa fa-rss fa-fw"></i> RSS</a>
+    </li>
+        <li class=""><a class="" href="/page/links/Person+entity"><i class="fa fa-link fa-fw"></i> Backlinks</a>
+    </li>
+              <li class="divider"></li>
+            <li class=""><a class="" href="/page/code/Person+entity"><i class="fa fa-code fa-fw"></i> Source</a>
+    </li>
+        <li class=""><a class="" href="/Person+entity?f=print"><i class="fa fa-print fa-fw"></i> Print</a>
+    </li>
+        <li class=""><a class="" href="/page/pdf/Person+entity"><i class="fa fa-cloud-download fa-fw"></i> Export (PDF)</a>
+    </li>
+      </ul>  </div>
+  </div>
+
+
+
+
+  <textarea class="form-control" id="autosaveContent" style="display:none;" rows="1" cols="1"></textarea>
+  <div id="autosavePrompt" style="display:none;"></div>
+
+<div class="commentContainer">
+  <div class="commentSubject">
+  <div class="wiki wikiPage" id="content_view">
+  <!-- ws:start:WikiTextHeadingRule:0:&lt;h1&gt; --><h1 id="toc0"><!-- ws:end:WikiTextHeadingRule:0 --> </h1>
+ <!-- ws:start:WikiTextHeadingRule:2:&lt;h4&gt; --><h4 id="toc1"><a name="x---Person entity suggested name: Nominal Record"></a><!-- ws:end:WikiTextHeadingRule:2 -->Person entity suggested name: Nominal Record</h4>
+ <br />
+<strong>Questions:</strong> What is a person? What elements does each person have that are mandatory? What are the optional elements? What elements may belong to a person or may be better defined elsewhere?<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:4:&lt;h2&gt; --><h2 id="toc2"><a name="x-Definition and Issues"></a><!-- ws:end:WikiTextHeadingRule:4 -->Definition and Issues</h2>
+ This is the entity type for an individual human being. There are two types of Person entity types sometimes discussed. The first is a Person entity type that records only the information about a person that can be taken from a single item of evidence. This usually includes the person's name and one or two (sometimes no) other information. This kind of Person entity is sometimes called an evidence entity since its information is derived from evidence. Some proposed names for this entity type include Person, Persona, Nominal. The second kind of Person entity holds all the information that can deduced about a person, at that stage. This may include name, vital information from whatever sources have been found, residence information that might come from census records, and so on, to produce an entity that is as complete as possible. This second kind of entity can be referred to as a conclusion entity, because it contains all a researcher has found out about the person. Note that &quot;conclusion&quot; may give a misleading impression of finality - the term &quot;current working hypothesis person&quot; has also been suggested. Some names that have been proposed for this type of entity are Person and Individual.<br />
+<br />
+The evidence and conclusion / working hypothesis model is designed to support the process of Analysis, which uses Evidence as input to the Analysis process and outputs Conclusions (a.k.a. working hypotheses). This model enables the permanent recording of Evidence input and Conclusions output from each process of Analysis. Note further that the <em>output</em> conclusions from one analysis process could form the <em>input</em> evidence to a <em>further</em> iteration of analysis, and that therefore one entity can be both evidence and conclusion, since they are evidence and conclusion to different iterations of analysis. (c.f. Elizabeth Shown Mills' statement, &quot;SOURCES provide INFORMATION from which we select EVIDENCE for ANALYSIS. A sound conclusion may then be considered &quot;PROOF&quot; from &quot;Evidence Analysis: A Research Process Map.&quot;)<br />
+<br />
+<span style="margin: 0px; padding: 0px;">Questions being considered about Person entities include:</span><br />
+<ol><li>Which concept(s) of Person entity should the BetterGEDCOM model support? Most current data models and genealogy programs support a conclusion-only version, since this is the most obvious and meaningful for general users. It is difficult to envisage a conversion process that could split an existing conclusion (a.k.a. working hypothesis) only file into a file containing both evidence and working hypothesis persons, suggesting that the BetterGEDCOM data model must support, at least, working-hypothesis-only data. However the evidence and conclusion / working hypothesis version provides the kind of support a researcher needs into order to gather evidence and then infer the set of individuals mentioned. It is therefore <em>suggested</em> that the BetterGEDCOM model supports both evidence and conclusion / working hypothesis person concepts, while <em>also</em> allowing for working-hypothesis-only data.</li><li>If the BetterGEDCOM model supports both evidence and conclusion / working hypothesis person concepts, can they both be based on the same Person entity type and can they both be used simultaneously? Or would there have to be two separate kinds of Person entities? Consideration of the real-world genealogical attributes and relationships for a working hypothesis person suggest that they have all come from an evidence person, and that therefore the attributes and relationships are identical on the two. Further, the iterative nature of analysis referred to above suggests that an entity can be, at the same time, a working hypothesis and an evidence entity. This suggests strongly that the entity type is the <em>same</em> for both uses. Note that some optional minor attributes and relationships might differ between the two uses.</li></ol><br />
+<!-- ws:start:WikiTextHeadingRule:6:&lt;h2&gt; --><h2 id="toc3"><a name="x-Analysis of attributes and relationships"></a><!-- ws:end:WikiTextHeadingRule:6 -->Analysis of attributes and relationships</h2>
+ Attributes and relationships can be categorised in at least two ways. Firstly:<br />
+<ul><li>Attributes and relationships derived from, and known to, the real-world, such as name(s), dates of birth, occupations, marriages, etc.</li><li>Attributes and relationships used internally by the processes and software of genealogy / family history, such as UUIDs, Ahnentafel numbers, privacy flags, keys, etc. These are crucial to the processes and software but unlikely to be meaningful to the person in the street.</li></ul><br />
+Another way to categorise is to split a person's attributes by type. This distinction is probably meaningful only to genealogists and software people but needs to be considered here. The original GEDCOM format split (most of) a person's real-world data into &quot;events&quot; and &quot;attributes&quot;. Note that the GEDCOM use of the term &quot;attribute&quot; must not be confused with the use of the term attribute in data modelling. The distinction between &quot;events&quot; and &quot;attributes&quot; in GEDCOM was never, in the author's view, very clear, and some software using GEDCOM just referred to both as &quot;facts&quot;. In the BetterGEDCOM model, there is an argument for extending the concept of &quot;event&quot; so that it may apply to more than one person. For instance, a birth event typically (but not always) involves three people - the child and two biological parents - but in GEDCOM applies only to the child, with the parents being implied by whatever the contemporary family is. A marriage can involve four people - bride, groom and two (sometimes) witnesses. A natural disaster can involve numerous people in the area. Residence can involve several people living as one household. In none of these cases, does the current GEDCOM structure allow easy, consistent and machine-readable recording of all participants in the event. If BetterGEDCOM does extend the &quot;event&quot; to allow participation by multiple persons, what about what GEDCOM refers to as &quot;attributes&quot;? The author can see no justification for extending &quot;attributes&quot;, which I shall now call Characteristics, to apply to multiple people. A physical description only makes sense if it applies to one person only - the same words may be used elsewhere, but the phrase describes one person only. A name applies to one person only - again, the words may be used elsewhere, but the name applies only to one. Further, the difference between Characteristics and (multi-person) Events is not just one of number of people involved - but in the case of the Characteristics, if the Characteristic is entered, there is <em>always</em> a value of the Characteristic, e.g. the name, the actual physical description, a list of possessions or the occupation. It may be <em>useful</em> to have a descriptive text for an event but in many cases it is simply unnecessary as the event can be sufficiently &quot;described&quot; from its own attributes. The second way to categorise attributes and relationships of Persons is therefore:<br />
+<ul><li>Characteristics - describe the current information known about a certain characteristic of a <em>single</em> person and, if present, require a <em>mandatory</em> value of some sort;</li><li>Events - describe an event that may affect <em>multiple</em> people and need <em>not</em> have a mandatory value.</li></ul><br />
+Questions to be asked about attributes of Person:<br />
+<ul><li>Should Events in BetterGEDCOM apply to one or multiple persons (rather than always just one)? (An alternative could be to create a Group entity for this event and apply the Event to the single Group, then trace through the Group to the Persons concerned)</li><li>Does the definition of a Characteristic make sense?</li><li>Is the categorisation into Characteristics and Events useful? Or should both concepts simply be referred to as Facts? (If the answer to the first two questions is &quot;yes&quot;, then referring to both as Facts will obscure the applicability of a Characteristic to a single Person only).</li></ul><br />
+(<em>Please respond to Questions on Discussion pages</em>)<br />
+<br />
+See &quot;<a class="wiki_link" href="/Event+entity" target="_blank">Event entity</a>&quot; for detailed consideration of Events.<br />
+See &quot;<a class="wiki_link" href="/Characteristic+entity" target="_blank">Characteristic entity</a>&quot; for detailed consideration of Characteristics.<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:8:&lt;h3&gt; --><h3 id="toc4"><a name="x-Analysis of attributes and relationships-Attributes of Person entity attached directly to that entity, i.e. not to Events or Characteristics:"></a><!-- ws:end:WikiTextHeadingRule:8 -->Attributes of Person entity attached directly to that entity, i.e. not to Events or Characteristics:</h3>
+ An optional <span style="margin: 0px; padding: 0px;"> <span style="background-position: 100% 50%; cursor: pointer; padding-right: 10px;"><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Universally_unique_identifier" rel="nofollow" target="_blank">UUID (Universally Unique Identifier)</a></span>.</span><br />
+<span style="margin: 0px; padding: 0px;">Flags for privacy and security</span><br />
+<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:10:&lt;h3&gt; --><h3 id="toc5"><a name="x-Analysis of attributes and relationships-Potential facts about people to be stored as Characteristic entities (assuming it is part of the model)"></a><!-- ws:end:WikiTextHeadingRule:10 -->Potential facts about people to be stored as Characteristic entities (assuming it is part of the model)</h3>
+ Note that all of these Characteristics may occur multiple times - e.g. a Person may have several names over the course of their life, each to be recorded on one Characteristic entity.<br />
+All these are <em>optional</em>.<br />
+<span style="margin: 0px; padding: 0px;">Names (names should have date elements) - including nicknames, alternate names, married names, etc. Consider name templates: examples could include Western European, Patronymic, Matronymic, Medieval, geographical-titular noble [see below])</span><br />
+<span style="margin: 0px; padding: 0px;">Title(s) - prefix/suffix; Nobility</span><br />
+<span style="margin: 0px; padding: 0px;">Gender (male, female, unknown [intersex? should this element have a date sub-element?])</span><br />
+<span style="margin: 0px; padding: 0px;">Award (e.g. medal, etc. Description is name of the award.)</span><br />
+<span style="margin: 0px; padding: 0px;">Caste</span><br />
+<span style="margin: 0px; padding: 0px;">Educational qualification (description is name of the qualification)</span><br />
+<span style="margin: 0px; padding: 0px;">Military service (description is name of unit or service served in)</span><br />
+National ID number / SSN, etc<br />
+National or tribal origin<br />
+Nationality<br />
+Occupation (entity to include further attribute for employers, etc.)<br />
+Patent or trademark <span style="margin: 0px; padding: 0px;">(description is short description of patent / tradmark)</span><br />
+<span style="margin: 0px; padding: 0px;">Physical description</span><br />
+Possessions<br />
+Religious affiliation<br />
+(<em>Many of the above have been extracted from GEDCOM 5.5 and their exact meaning is not always clear. This may, or may not, be an issue</em>)<br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:12:&lt;h3&gt; --><h3 id="toc6"><a name="x-Analysis of attributes and relationships-Potential facts about people to be stored as Event entities (assuming it is part of the model)"></a><!-- ws:end:WikiTextHeadingRule:12 -->Potential facts about people to be stored as Event entities (assuming it is part of the model)</h3>
+ <!-- ws:start:WikiTextHeadingRule:14:&lt;h3&gt; --><h3 id="toc7"><!-- ws:end:WikiTextHeadingRule:14 --> </h3>
+ All these are <em>optional</em>.<br />
+Adoption<br />
+Annulment of marriage<br />
+Baptism / Christening<br />
+Bar Mitzvah<br />
+Bas Mitzvah<br />
+Birth<br />
+Blessing<br />
+Burial<br />
+Census<br />
+Confirmation<br />
+Cremation<br />
+Criminal conviction<br />
+Death<br />
+Divorce, divorce filing<br />
+Draft Registration<br />
+Education (attendance at school, college, etc)<br />
+Emigration<br />
+Engagement<br />
+First communion<br />
+Funeral<br />
+Guardianship<br />
+Graduation (but see Educational Qualification)<br />
+Immigration<br />
+Marriage, marriage banns, marriage license, marriage contract / prenuptial agreement, marriage settlement, etc<br />
+Naturalisation <br />
+Ordination<br />
+Probate granted<br />
+Property<br />
+Residence at a location<br />
+Retirement<br />
+Will (making of)<br />
+<em>(Many of the above have been extracted from GEDCOM 5.5 and their exact meaning is not always clear (e.g. the difference between baptism and christening). This may, or may not, be an issue</em>)<br />
+<br />
+<span style="margin: 0px; padding: 0px;">Question - Do we add the LDS events (e.g. sealing in a temple) that are listed in current GEDCOM </span>as standard BetterGEDCOM events, or do we specify that the software convert such facts as user defined extensions to BetterGEDCOM? (<em>Respond on Discussion pages, please</em>)<br />
+<br />
+<span style="margin: 0px; padding: 0px;">The following sentences and phrases are text left over from a previous version of this page and not included above for one reason or another:</span><br />
+<ul><li><span style="margin: 0px; padding: 0px;"> &quot;All records should also have a set of UUIDs for which it is known that this record represents&quot; - the author is not clear on the meaning</span> of this phrase;</li><li><span style="margin: 0px; padding: 0px;">&quot;Heraldry&quot; This was a proposed event / characteristic - the author is unclear what is meant by this as it is a hugely complex topic;</span></li><li>&quot;Membership&quot; <span style="margin: 0px; padding: 0px;">This was a proposed event / characteristic - </span>I suggest this belongs to the relationship between a Person and a Group.</li><li>&quot;<span style="margin: 0px; padding: 0px;">Certification</span>&quot; This <span style="margin: 0px; padding: 0px;">was a proposed event / characteristic - its meaning is not clear enough to decide whether it is an event or characteristic;</span></li><li>&quot;Surety / bonding&quot; This <span style="margin: 0px; padding: 0px;">was a proposed event / characteristic</span> - its meaning is not wholly clear to me. I know of its use in marriage licences - what is the generic case?</li><li>&quot;<span style="margin: 0px; padding: 0px;">Sample Media oriented Events: Likeness ...&quot; </span>This <span style="margin: 0px; padding: 0px;">was a proposed event / characteristic - is this not simply the same as Physical Description but with added media?</span></li></ul>
+  </div>
+
+<div id="pageEditor" class="editorWrapper editorLayer">
+  <iframe id="target_editor" name="target_editor" src="/s/blank.html" style="width:0px;height:0px;border:0"></iframe>
+    <form action="/page/edit/Person+entity" method="post" class="editorForm" id="editorForm"><input type="hidden" name="wikispacesFormToken" value="2ba3d8542f05d2a41fee4cec6c11e9c49c7a468d"/><div class="jowic"><input type="text" class="form-control" name="wikispaces_user_id" value="user-1453211500"/></div><div class="movkp"><input type="text" class="form-control" name="goto" autocomplete = "off"/></div><div class="movkp"><input type="text" class="form-control" name="mode" autocomplete = "off"/></div><div class="jovise"><input type="text" class="form-control" name="version" autocomplete = "off"/></div><div class="jovise"><input type="text" class="form-control" name="pageComments" autocomplete = "off"/></div><div class="jovise"><input type="text" class="form-control" name="saveAndContinue" autocomplete = "off"/></div><div class="movkp"><input type="text" class="form-control" name="comment" autocomplete = "off"/></div><div class="movkp"><input type="text" class="form-control" name="commentsDisabled" autocomplete = "off"/></div><div class="mimw"><input type="text" class="form-control" name="contentPresent" autocomplete = "off"/></div><div class="jovise"><input type="text" class="form-control" name="editorCleanup" autocomplete = "off"/></div><div class="mimw"><input type="text" class="form-control" name="WikispacesEditorContent" autocomplete = "off"/></div><input type="hidden" name="wikispacesASFormToken" value="8740b84bc675609d151f451549d42e7039c54557"/>
+    <input type="hidden" title="goto" name="c50bb1b781a6b3b011240df1ffba04f4ae0cc30e" value=""/>
+    <input type="hidden" title="mode" name="ea04960a09eadf32418ef6a8d1e0d0f382a160d9" autocomplete="off" value="visual"/>
+    <input type="hidden" title="version" name="90c43e03f40c1e7554a09c631eac226f50d81372" autocomplete="off" value="184046955"/>
+    <input type="hidden" title="pageComments" name="9ae96f2f64a8625ea87c27bbcd7597789a12d91f" autocomplete="off" value=""/>
+    <input type="hidden" title="saveAndContinue" name="200515cd5dd17bfebc42b59da233b5527a2650a5" value="0"/>
+    <input type="hidden" title="comment" name="bccf9be3ea8bab4125992cbfd5903ce98694c9dd" value=""/>
+    <input type="hidden" title="commentsDisabled" name="1963100dbf5e8bff1b6c0d89a8dc94c9be59f01a" autocomplete="off" value=""/>
+    <input type="hidden" title="contentPresent" name="1c12ff4dc0d189ae17c31c03ca464d68c36bfdd6" autocomplete="off" value=""/>
+    <input type="hidden" title="editorCleanup" name="96574f3c4fcf1e8ee2d57cb5649055985d0a7473" autocomplete="off" value=""/>
+
+    <textarea id="wsMainEditor" title="content" class="noContentHide" name="1f128cae80f2701bddb5db6bbc1a08c2148beec2" style="width: 100%; position: absolute; top: -50000px; left: -50000px;" autocomplete="off"></textarea>
+
+  <noscript>
+    <h2>Javascript Required</h2>
+    <p>You need to enable Javascript in your browser to edit pages.</p>
+  </noscript>
+
+  </form>
+  
+  
+  <div id="plainTextEditor" style="position:relative;display:none" class="editorLayer" >
+    <textarea id="textEditor" class="autogrow"></textarea>
+    <p style="clear:both;" align="right"><a href="http://helpcenter.wikispaces.com/customer/portal/articles/1959131-wikitext">help on how to format text</a></p>
+  </div>
+</div>
+
+
+
+
+  </div>
+  <div class="commentColumn WikispacesStream"><div class="WikispacesContent WikispacesBs3"><div class="commentList"></div></div></div>
+</div>
+
+  
+
+
+
+
+<script type="text/template" id="js-event-template">
+  <small>
+    <%- startDateShortFormat %>
+    <a href="<%- ws.common.pathFor('event', 'view', id) %>" class="WikispacesDialogLink">
+      <%- ws.common.truncate(title, 15) %>
+    </a>
+  </small>
+</script>
+
+<script type="text/template" id="js-reply-template">
+  <div class="tc-timeline-comment media">
+
+    <a class="pull-left userLink" href="<%- userCreated.url %>">
+      <img src="<%- userCreated.imageUrl %>" width="30" height="30" class="author-avatar" alt="" />
+    </a>
+    <div class="media-body" data-id="<%= id %>">
+      <% if (ws.context.user.canAdministerWiki) { %>
+        <i class="tc-delete-comment fa fa-trash-o contextual-command destroy-message ws-tip" title="Delete reply"></i>
+      <% } %>
+      <div class="tc-box-name-date">
+        <span class="tc-commenter"><a href="<%- userCreated.url %>"><%- userCreated.username %></a></span>
+        <% if (smartDate == '__live__') { %>
+        <abbr style="border-bottom-style: none;" class="timeago tc-comment-date" title="<%- (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+          <%- (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+        </abbr>
+        <% } else { %>
+          <abbr style="border-bottom-style: none;" class="tc-comment-date"><%- smartDate %></abbr>
+        <% } %>
+      </div>
+      <% if (body) { %>
+      <p>
+        <%= body %>
+      </p>
+      <% } %>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-share-template">
+  <div class="tc-timeline-block tc-<%= ws.stream.typeToBlockType(sharedType) %>-block" <%= (ws.stream.hideTimeline ? 'style="padding-left: 0px;"' : '') %>>
+
+    <% if (!ws.stream.hideTimeline) { %>
+      <div class="tc-timeline-icon">
+        <i class="fa fa-<%= ws.stream.typeToIcon(sharedType) %>"></i>
+      </div>
+      <div class="tc-timeline-triangle-man"></div>
+    <% } %>
+
+    <div class="tc-timeline-box" data-id="<%= id %>">
+      <div class="media">
+        <a class="pull-left userLink" href="<%- userCreated.url %>">
+          <img src="<%- userCreated.imageUrl %>" width="48" height="48" class="author-avatar media-object" alt="" />
+        </a>
+
+        <div class="media-body">
+
+          <div class="tc-stream-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <% if (ws.context.user.id) { %>
+              <li>
+                <a class="js-toggle-monitor" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-eye"></i>
+                  <span><%= monitored ? 'Start Monitoring' : 'Stop Monitoring' %></span>
+                </a>
+              </li>
+              <% } %>
+
+              <% if (ws.context.user.canAdministerWiki) { %>
+              <li>
+                <a class="js-toggle-lock" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-lock"></i>
+                  <span><%= locked ? 'Unlock Replies' : 'Lock Replies' %></span>
+                </a>
+              </li>
+              <% if (sharedType == 'discussion' || sharedType == 'comment' || sharedType == 'event') { %>
+              <li>
+                <a class="js-destroy-share" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-trash-o"></i>
+                  Delete <%= ws.stream.typeToName(sharedType) %>
+                </a>
+              </li>
+              <% } %>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="tc-timeline-box-header ws-reveal media-heading">
+              <h3 class="tc-box-title">
+              <% if (typeof adminLink !== 'undefined' && adminLink && ws.context.user.canAdministerWiki) { %>
+                <a href="<%- adminLink %>"><%- title %></a>
+              <% } else { %>
+                <%- title %>
+              <% } %>
+              <% if (typeof startDate !== 'undefined' && startDate) { %> - <%= startDateShortFormat %> <%= ws.stream.getYearFromStartDate(startDate) %><% } %>
+              </h3>
+              <div class="tc-box-name-date">
+                <% if (ws.context.instance.isTesClassroom) { %>
+                  <%- userCreated.username %>
+                <% } else { %>
+                  <a class="author-name" href="<%- userCreated.url %>"><%- userCreated.username %></a>
+                <% } %>
+                <% if (typeof recipients !== 'undefined' && recipients) { %>
+                  <i class="fa fa-angle-right"></i>
+                  <% if (typeof recipientsLink !== 'undefined') { %>
+                    <a href="<%- recipientsLink %>"><%- recipients %></a>
+                  <% } else { %>
+                    <span class="recipients"><%- recipients %></span>
+                  <% } %>
+                <% } %>
+                <% if (smartDate == '__live__') { %>
+                  <abbr style="border-bottom-style: none;" class="timeago tc-block-date" title="<%= (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+                    <%= (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+                  </abbr>
+                <% } else { %>
+                  <abbr style="border-bottom-style: none;" class="tc-block-date"><%- smartDate %></abbr>
+                <% } %>
+              </div>
+          </div>
+
+          <div class="<%= sharedType == 'comment' && !orphaned && !ws.stream.noCollapse ? 'hidden ' : '' %>tc-block-content">
+            <div class="clearfix">
+              <% if (typeof rangeActions !== 'undefined') { %>
+                <div class="tc-range-actions">
+                  <% for(var i = 0; i < rangeActions.length; i++) { %>
+                  <%= ws.stream.rangeActionTemplate(rangeActions[i]) %>
+                  <% } %>
+                </div>
+              <% } %>
+              <% if (description) { %>
+                <p><%= description %></p>
+              <% } %>
+            </div>
+          </div>
+
+          <% if (replyPages.length > 0 && !(replyPages.length === 1 && replyPages[0].digests.length === 0)) { %>
+            <div class="tc-timeline-comments">
+            <% for (var i = 0; i < replyPages.length; i++) { %>
+              <% if (i == 0 && replyPages[i].more) { %>
+                <a href="#" class="tc-show-more" onclick="ws.stream.pageReplies(<%= id %>, <%= replyPages[i].page + 1 %>); return false">Show more replies (<%= replyPages[i].more %> hidden) </a>
+              <% } else { %>
+                <div></div>
+              <% } %>
+              <% for (var j = 0; j < replyPages[i].digests.length; j++) { %>
+                <%= ws.stream.replyTemplate(replyPages[i].digests[j]) %>
+              <% } %>
+            <% } %>
+            </div>
+          <% } %>
+
+          <% if ((ws.stream.userCanPostMessage && !locked) || ws.context.user.canAdministerWiki) { %>
+          <div class="tc-add-comment media <%= ws.stream.noCollapse ? 'add-active' : ''%>">
+            <img src="<%- ws.context.user.imageUrlPrefix %>lg.jpg" width="30" height="30" class="pull-left author-avatar" alt="" />
+            <div class="media-body">
+              <textarea name="reply" placeholder="Comment" class="form-control form-control-tc ws-reveal <%= !ws.stream.noCollapse ? 'ws-unrevealed' : ''%> reply" /></textarea>
+              <button type="button" class="btn-tc btn-info-tc btn-sm-tc add-reply">Post</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-range-action-template">
+  <div>
+    <strong><%- name %></strong>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      <a href="<%- diffUrl %>">
+    <% } %>
+    <%= new Date(dateCreated * 1000).toLocaleString() %>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      </a>
+    <% } %>
+    <% if (typeof(rangeText) !== 'undefined') { %>
+      <div>
+        <span class="commentExtent">
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          <a href="<%- diffUrl %>">
+        <% } %>
+        <%= rangeText %>
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          </a>
+        <% } %>
+        </span>
+      </div>
+    <% } %>
+  </div>
+</script>
+
+<script type="text/template" id="js-stream-end-template">
+  <div class="tc-timeline-block tc-end-block">
+    <div class="tc-timeline-icon" style="margin-top: -10px;" />
+    <div class="tc-timeline-box" style="visibility: hidden;">
+      <p class="tc-box-title"></p>
+    </div>
+  </div>
+</script>
+
+<a name="discussion"></a>
+<div class="timeline WikispacesBs3 tc-timeline-embedded show-border">
+  <div class="timeline-line"></div>
+    <div id="js-share-list">
+    <div class="spinner hidden"><i class="fa fa-spinner fa-spin"></i></div>
+  </div>
+</div></div></div><div id="sentinel" style="clear:both"></div>        </div>
+      </main>
+    </div>
+  </div>
+</div>
+
+<footer class="ws-theme-footer" role="contentinfo">
+  <div class="ws-theme-container">
+    <div class="ws-theme-footer-inner">
+      <div class="WikiFooterNav WikiElement">
+<a href="http://helpcenter.wikispaces.com/" rel="nofollow" class="js-help-trigger">Help</a> &middot;
+<a href="http://www.wikispaces.com/about">About</a> &middot;
+<a href="http://blog.wikispaces.com/" target="_blank">Blog</a> &middot;
+<a href="http://www.wikispaces.com/content/pricing" rel="nofollow">Pricing</a> &middot;
+<a href="http://www.wikispaces.com/privacy" rel="nofollow">Privacy</a> &middot;
+<a href="http://www.wikispaces.com/terms" rel="nofollow">Terms</a> &middot;
+<a href="http://www.wikispaces.com/site/help?url=http%3A%2F%2Fbettergedcom.wikispaces.com%2FPerson%2Bentity" rel="nofollow"><strong>Support</strong></a> &middot;
+<a href="/space/subscribe/upgrade"><strong>Upgrade</strong></a>
+</div>      <div class="WikiLicense WikiElement">Contributions to http://bettergedcom.wikispaces.com/ are licensed under a <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0">Creative Commons Attribution Share-Alike 3.0 License</a>. <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0"><img src="http://www.wikispaces.com/i/creativecommons/by-sa_3.0_80x15.png" width="85" height="15" alt="Creative Commons Attribution Share-Alike 3.0 License"/></a><br />Portions not contributed by visitors are Copyright 2016 Tangient LLC<br /><a href="https://www.tes.com/us/?utm_source=wikispaces&utm_medium=link&utm_campaign=US-52-footer">TES: The largest network of teachers in the world</a></div>    </div>
+  </div>
+</footer>
+
+
+<script type="text/template" id="dialog-template">
+<div class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+        <h4 class="modal-title"><%= header %></h4>
+      </div>
+      <div class="modal-body">
+        <%= body %>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+
+<div id="js-help-template" class="hidden">
+  <div class="ws-help">
+    <div class="js-help-controls WikispacesContent WikispacesBs3">
+      <a href="http://www.wikispaces.com/site/gettingstarted/off" class="btn btn-default hidden js-getting-started-off pull-right">Turn off "Getting Started"</a>
+      <ol class="breadcrumb">
+        <li class="js-special-breadcrumb active">
+          <a href="http://helpcenter.wikispaces.com/" data-breadcrumb="0">Home</a>
+        </li>
+        <li class="js-ellipsis hidden js-special-breadcrumb">
+          ...
+        </li>
+        <li class="js-spinner hidden js-special-breadcrumb"><i class="fa fa-spinner fa-spin"></i></li>
+      </ol>
+    </div>
+    <div class="ws-help-content wiki">Loading...</div>
+  </div>
+</div>
+</div>
+<script src="http://www.wikispaces.com/s/nogz/9vz070xj-common.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/03083kx7-editorc.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/85k7018k-stream.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/91k8z207-contentbar.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/395j1vq7-component.stream-vo.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ws.namespace('ws.attributes');
+ws.namespace('ws.stream');
+ws.attributes.DISCUSSION_COUNT = 30;
+ws.attributes.pageId = 49977083;
+ws.attributes.version = 184046955;
+ws.attributes.showEditor = true;
+ws.attributes.editUrl = "http:\/\/bettergedcom.wikispaces.com\/page\/edit\/Person+entity?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FPerson%2Bentity";
+ws.attributes.userCanEdit = false;
+ws.stream.userCanPostMessage = false;
+ws.stream.hideTimeline = true;
+ws.stream.shareSource = "http:\/\/bettergedcom.wikispaces.com\/page\/shares\/Person+entity";
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+jQuery(document).ready(function() {
+  ws.common.addJsonNotices({"warning":[],"error":[],"info":[],"success":[]});
+});
+
+jQuery(document).ready(function($) {
+  
+  function tipPlacement() {
+    return this.$element.closest('.ws-menu-bar .btn-group').is('.open') ? 'top' : 'bottom';
+  }
+
+  
+
+  $('.ws-menu-bar').each(function() {
+    var $menuBar = $(this);
+    var $tagDropdown = $menuBar.find('.ws-tag-dropdown-menu');
+    $menuBar.find('.tipme').tooltip({placement: tipPlacement, container: '.ws-menu-bar'});
+
+    
+    $menuBar.find('.ws-btn-more').click(ws.common.makeLinkClickFunction(function(e) {
+      if ($(this).closest('.ws-menu-bar .btn-group').is('.open')) {
+        ws.common.hideMorePageBar();
+      } else {
+        ws.common.showMorePageBar();
+      }
+    }));
+
+    $menuBar.on('click', '.ws-tag-dropdown-toggle', ws.common.makeLinkClickFunction(function(e) {
+      if ($(this).closest('.ws-menu-bar .dropdown').is('.open')) {
+        ws.common.hideTagDropdown();
+      } else {
+        ws.common.showTagDropdown();
+      }
+    }));
+
+    $(document.body).click(function(e) {
+      var $target = $(e.target);
+      if (!$target.closest('.ws-more-menu').closest('.ws-menu-bar').is($menuBar)
+          || $target.closest('a').is('.WikispacesDialogLink')) {
+        ws.common.hideMorePageBar();
+      }
+      if ($tagDropdown.length && !$target.closest('.ws-tag-dropdown-menu').is($tagDropdown)) {
+        ws.common.hideTagDropdown();
+      }
+    });
+    
+  });
+});
+
+
+jQuery(document).ready(function($) {
+  $('.ws-more-menu').on('click', 'a', function(e) {
+    if ($(this).is('.disabled')) {
+      e.preventDefault();
+    }
+  });
+});
+
+
+jQuery(document).ready(function() {
+  ws.editor.canEdit = false;
+  var editUrl = 'http://bettergedcom.wikispaces.com/page/edit/Person+entity?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FPerson%2Bentity';
+
+  jQuery('#js-edit-from-template').change(function() {
+    window.location = ws.common.addUriParams(editUrl, [['template', jQuery(this).val()]]);
+  });
+});
+
+
+jQuery(document).ready(function() {
+  ws.editor.loadEditorLibs('http://www.wikispaces.com/site/editorlibs/en/07z93j80.js');
+});
+
+
+ws.editor.startEditor = function (moreCoreOptions, moreMainOptions) {
+  ws.editor.canEdit = true;
+
+  var coreOptions = {
+    'content_css': ['http://bettergedcom.wikispaces.com/stylesheet/editor/241807025-217420326D.css']
+  };
+
+  // The stylesheet is passed in as a string, turn it into an array
+  // Add bootstrap styles to the editor, if we are in a theme that has full screen bootstrap
+  if (jQuery('body').is('.WikispacesBs3')) {
+    coreOptions.content_css.push('http://www.wikispaces.com//s/internal-bootstrap-body.css');
+  }
+
+  var mainOptions = {
+    'wssave_cancel_url': '/Person+entity',
+    'wsimage_upload_url': 'http://bettergedcom.wikispaces.com/file/multiupload',
+    'wsimage_max_file_size_mb': '20',
+    'wsimage_page_view_group': ''
+  };
+
+  ws.editor.loadEditor(jQuery.extend(coreOptions, moreCoreOptions), jQuery.extend(mainOptions, moreMainOptions));
+};
+
+  var wikispaces_page_version = '184046955';
+
+  jQuery(document).ready(function() {
+    ws.editor.enableButtons();
+  });
+
+
+
+--></script><!-- w20 238 tot:238:238(1) mog:43:43(1) mem:3:39(39) wki:28:38(3) dql:4:11(6) -->
+
+</body>
+</html>

@@ -1,0 +1,625 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="search" href="http://bettergedcom.wikispaces.com/space/opensearch" type="application/opensearchdescription+xml" title="Wikispaces Search (BetterGedcom Wiki)" />
+<link rel="alternate" type="application/x-wiki" title="Edit This Page" href="/page/edit/DEVELOPERS+MEETING" />
+<link rel="alternate" title="BetterGedcom - All Changes" href="http://bettergedcom.wikispaces.com/wiki/xmla?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : DEVELOPERS MEETING - Discussion" href="http://bettergedcom.wikispaces.com/message/xml/DEVELOPERS+MEETING?v=rss_2_0" type="application/rss+xml" />
+<link rel="alternate" title="bettergedcom : DEVELOPERS MEETING - Edits" href="http://bettergedcom.wikispaces.com/page/xml/DEVELOPERS+MEETING?v=rss_2_0" type="application/rss+xml" />
+<link rel="microsummary" href="/page/microsummary/DEVELOPERS+MEETING/edits"/>
+<link rel="microsummary" href="/page/microsummary/DEVELOPERS+MEETING/messages"/>
+<meta name="robots" content="noindex" />
+<script type="text/javascript">
+  
+if (typeof ws === 'undefined') ws = {};
+ws.context = {
+  instance: {
+    id: '1',
+    url: 'wikispaces.com',
+    isMain: true,
+    supportsGoogleDocs: false,
+    isTesClassroom: false,
+  },
+  user: {
+    id: '',
+    username: '',
+    status: '',
+    locale: 'en',
+    imageUrlPrefix: 'http://www.wikispaces.com/i/user_none_',
+    isTeacher: false,
+    canAdministerWiki: false,
+  },
+  wiki: {
+    id: '5050513',
+    name: 'bettergedcom',
+    text: 'BetterGedcom',
+    module: 'B',
+    isClassroom: false,
+    isTesClassroom: false
+    ,defaultSpaceId: 5050513
+    ,isWwwWiki: false
+  },
+  project: {
+    id: '5050513',
+    name: ''
+  },
+  space: {
+    id: '5050513',
+    name: 'bettergedcom',
+    isDefaultSpace: true,
+    isDefaultTemplate: false
+  },
+
+  environment_name: 'prod',
+
+  path: {
+    object: 'page',
+    method: 'view',
+    page: 'DEVELOPERS MEETING',
+    id: ''
+  },
+
+  settings: {
+    main_domain: 'wikispaces.com',
+    session_url: 'https://session.wikispaces.com/1/',
+    asset_url_prefix: 'http://www.wikispaces.com',
+    beta_features: false,
+    isMobileSite: false,
+    isUploadCapable: true,
+    can_discuss: false,
+    has_gdocs: false,
+    isDialog: false,
+    pwin: ''
+  },
+  clockSkewMillis: 1453211549558 - ((window.performance && window.performance.timing.responseStart > 0) ? window.performance.timing.responseStart : (new Date()).getTime())
+}
+
+
+// legacy javascript API variables, use the above instead
+var wikispaces_isUserLoggedIn = !!ws.context.user.id;
+var wikispaces_isMain = ws.context.instance.isMain;
+var wikispaces_username = ws.context.user.username;
+var wikispaces_spaceName = ws.context.space.name;
+var wikispaces_projectName = ws.context.project.name;
+var wikispaces_wikiName = ws.context.wiki.name;
+var wikispaces_wikiText = ws.context.wiki.text;
+var wikispaces_isDefaultSpace = ws.context.space.isDefaultSpace;
+var wikispaces_method = ws.context.path.method;
+var wikispaces_object = ws.context.path.object;
+var wikispaces_page = ws.context.path.page;
+var wikispaces_id = ws.context.path.id;
+var wikispaces_domain = ws.context.instance.url;
+var wikispaces_isUserOrganizer = false;
+var wikispaces_main_domain = ws.context.settings.asset_url_prefix;
+var wikispaces_asset_url_prefix = ws.context.settings.asset_url_prefix;
+var wikispaces_beta_features = ws.context.settings.beta_features;
+var wikispaces_isMobileSite = ws.context.settings.isMobileSite;
+var wikispaces_isUploadCapable = ws.context.settings.isUploadCapable;
+var wikispaces_can_discuss = ws.context.settings.can_discuss;
+var wikispaces_has_gdocs = ws.context.settings.has_gdocs;
+
+</script>  <title>BetterGedcom - DEVELOPERS MEETING</title>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://www.wikispaces.com/_/z6371z4x/i/logo-144.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="http://www.wikispaces.com/_/j5j77xz3/i/logo-114.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="http://www.wikispaces.com/_/vq8j5432/i/logo-72.png" />
+  <link rel="apple-touch-icon" href="http://www.wikispaces.com/_/38515190/i/logo-57.png" />
+  <link rel="shortcut icon" href="http://www.wikispaces.com/_/55v9k02z/i/logo-16.png" />
+  <style type="text/css">
+    #foot { margin-top: 5px; padding: 5px 0; font-family: arial,helvetica,sans-serif; font-size: 90%; line-height: 150%; clear: both; }
+    h1.pageTitle { font-family: arial,helvetica,sans-serif; }
+  </style>
+<link rel="stylesheet" href="http://bettergedcom.wikispaces.com/stylesheet/view/241807025-217420326D.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/9q897620-internal-bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="http://www.wikispaces.com/s/nogz/vz033906-internal.css" type="text/css" />
+<script src="http://www.wikispaces.com/s/nogz/j91xzz3x-top.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+
+  var wsGoogleAccount = 'UA-80504-1';
+  _gaq.push(['_setAccount', wsGoogleAccount]);
+  _gaq.push(['_gat._anonymizeIp']);
+  _gaq.push(['_setDomainName', 'wikispaces.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setCustomVar', 2, 'Authenticated', 'Guest', 2]);
+  _gaq.push(['_trackPageview']);
+</script></head>
+<body data-enhance="false">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+  <td valign="top">
+    <div style="padding: 10px;">
+<h1 class="pageTitle">DEVELOPERS MEETING</h1>
+<div class="contentBox"><div class="innerContentBox" id="WikiContent">
+
+<script type="text/template" id="comment-footer-template">
+
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</script>
+
+<script type="text/template" id="comment-content-template">
+<div class="ws-box commentView">
+  <div class="comment-close">
+    <button type="button" class="closeme close" aria-hidden="true"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="commentHeader">
+    <p class="ws-stream-meta command-context">
+      <a class="userLink userLinkPicture" href="<%= userCreated.url %>"><img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16"></a>
+      <a href="<%= userCreated.url %>"><%= userCreated.username %></a>
+      <% if (smartDate == '__live__') { %>
+      <abbr class="timeago" title="<%= (new Date(parseInt(dateCreated, 10) * 1000)).toISOString() %>">
+        <%= dateCreated %>
+      </abbr>
+      <% } else { %>
+        <%- smartDate %>
+      <% } %>
+      <% if (ws.context.user.canAdministerWiki && ws.comments.Manager.readOnly) { %>
+        <i class="fa fa-trash-o contextual-command delete ws-tip" title="Delete Comment"></i>
+      <% } %>
+    </p>
+  </div>
+
+  <div class="commentBody">
+    <div class="commentContent">
+      <%= description %>
+    </div>
+
+      <% for(i = 0; i < replyPages.length; i++) { %>
+        <% for(var j = 0; j < replyPages[i].digests.length; j++) { %>
+      <div class="commentReply" data-id="<%= replyPages[i].digests[j].id %>">
+        <p class="ws-stream-meta command-context">
+          <a class="userLink userLinkPicture" href="<%= replyPages[i].digests[j].userCreated.url %>"><img class="userPicture" src="<%= replyPages[i].digests[j].userCreated.imageUrl %>" width="16" height="16"></a>
+          <a href="<%= replyPages[i].digests[j].userCreated.url %>"><%= replyPages[i].digests[j].userCreated.username %></a>
+          <% if (smartDate == '__live__') { %>
+          <abbr class="timeago" title="<%= (new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000)).toISOString() %>">
+            <%= new Date(parseInt(replyPages[i].digests[j].dateCreated, 10) * 1000).toLocaleString() %>
+          </abbr>
+          <% } else { %>
+            <%- smartDate %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+          <i class="fa fa-trash-o contextual-command delete-reply ws-tip" title="Delete Reply"></i>
+          <% } %>
+          </p>
+        <div class="commentContent"><%= replyPages[i].digests[j].body %></div>
+      </div>
+        <% } %>
+      <% } %>
+
+      <form class="reply commentReply">
+        <div class="form-group">
+          <textarea name="reply" placeholder="Reply" class="form-control" /></textarea>
+        </div>
+        <div class="btn-toolbar">
+          <button type="submit" class="btn btn-primary btn-sm" name="go" value="1">Post</button>
+
+          <% if (ws.context.user.id) { %>
+            <% if (monitored) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip active" title="You are monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-monitor ws-tip" title="You are not monitoring replies."><i class="fa fa-eye"></i></button>
+            <% } %>
+          <% } %>
+          <% if (ws.context.user.canAdministerWiki) { %>
+            <% if (locked) { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip active" title="Replies are not allowed."><i class="fa fa-lock"></i></button>
+            <% } else { %>
+            <button type="button" class="btn btn-default btn-sm pull-right toggle-lock ws-tip" title="Replies are allowed."><i class="fa fa-lock"></i></button>
+            <% } %>
+          <% } %>
+
+          <i class="fa fa-spinner fa-spin spinner pull-right hidden"></i>
+        </div>
+      </form>
+   </div>
+
+   
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-composer-template">
+<div class="ws-box commentView">
+  <div class="commentComposer">
+    <div class="comment-close">
+      &nbsp;<button type="button" class="close closeme" aria-hidden="true"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="commentHeader">
+      <p class="ws-stream-meta command-context">
+        <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+        <a href="#" onclick="return false;"><%= userCreated.username %></a>
+      </p>
+    </div>
+    <div class="commentBody">
+      <textarea name="comment" class="compose form-control" placeholder="Comment"/></textarea><br/>
+      <div class="btn-toolbar">
+        <button type="button" class="btn btn-default btn-sm monitored active pull-right" style="margin-left: 6px" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-eye"></i></button>
+        <button type="button" class="btn btn-default btn-sm locked btn-toggle pull-right" onclick="jQuery(this).toggleClass('active')"><i class="fa fa-lock"></i></button>
+        <button type="button" class="btn btn-primary btn-sm closeme">Save</button>
+      </div>
+    </div>
+  </div>
+
+  
+<div class="commentFooter modal-footer">
+  <div class="pull-left">
+    <button type="button" class="btn btn-default btn-sm previous"><i class="fa fa-arrow-left"></i></button>
+    <button type="button" class="btn btn-default btn-sm next"><i class="fa fa-arrow-right"></i></button>
+  </div>
+  <% if (ws.context.user.canAdministerWiki && !ws.comments.Manager.readOnly) { %>
+  <div class="pull-right">
+    <button type="button" class="btn btn-default btn-sm remove">Remove</button>
+  </div>
+  <% } %>
+</div>
+
+</div>
+</script>
+
+<script type="text/template" id="comment-proxy-template">
+<div class="comment-proxy">
+  <span class="commentUser">
+  <% if (userCreated) { %>
+    <img class="userPicture" src="<%= userCreated.imageUrl %>" width="16" height="16">
+  <% } else { %>
+    <img class="userPicture" src="<%= ws.context.user.imageUrlPrefix %>sm.jpg" width="16" height="16">
+  <% } %>
+  </span>
+  <span class="commentReplies"><%= 1 + _(replyPages).reduce(function(memo, page){ return memo + page.digests.length; }, 0) %></span>
+</div>
+</script>
+
+
+
+
+
+
+
+<div class="commentContainer">
+  <div class="commentSubject">
+  <div class="wiki wikiPage" id="content_view">
+  <!-- ws:start:WikiTextHeadingRule:0:&lt;h4&gt; --><h4 id="toc0"><a name="x---Home &gt; Meetings &gt; Weekly Meeting"></a><!-- ws:end:WikiTextHeadingRule:0 --><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Home">Home</a> &gt; <a class="wiki_link" href="http://bettergedcom.wikispaces.com/Meetings">Meetings</a> &gt; Weekly Meeting</h4>
+ <br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:2:&lt;h1&gt; --><h1 id="toc1"><a name="BetterGEDCOM Weekly Meetings: Mondays 10:00 AM - 10:30 AM Pacific Time"></a><!-- ws:end:WikiTextHeadingRule:2 -->BetterGEDCOM Weekly Meetings: Mondays <strong>10:00 AM - 10:30 AM</strong> Pacific Time</h1>
+ Meetings are usually held on in a GoToMeeting setting. Prior to each weekly meeting, the GoToMeeting connection is posted below and forwarded to members of the BetterGEDCOM Wiki via WikiSpaces email. Be sure to review the <span style="font-family: arial,verdana,helvetica;"><a class="wiki_link_ext" href="https://www1.gotomeeting.com/help/pdf/GoToMeeting_User_Guide.pdf" rel="nofollow" target="_blank">GoToMeeting User Guide</a></span><br />
+<br />
+<!-- ws:start:WikiTextHeadingRule:4:&lt;h2&gt; --><h2 id="toc2"><a name="BetterGEDCOM Weekly Meetings: Mondays 10:00 AM - 10:30 AM Pacific Time-No Meetings are presently scheduled"></a><!-- ws:end:WikiTextHeadingRule:4 --><strong>No Meetings are presently scheduled</strong></h2>
+ <br />
+<strong><!-- ws:start:WikiTextAnchorRule:6:&lt;img src=&quot;/i/anchor.gif&quot; class=&quot;WikiAnchor&quot; alt=&quot;Anchor&quot; id=&quot;wikitext@@anchor@@Meeting Notes&quot; title=&quot;Anchor: Meeting Notes&quot;/&gt; --><a name="Meeting Notes"></a><!-- ws:end:WikiTextAnchorRule:6 -->NOTES FROM PREVIOUS MEETING</strong><br />
+<ul><li><a class="wiki_link" href="/DevelopersMeeting+Notes+2012-08-20+%28Aug+20%29">Monday 20 Aug 2012 Meeting Notes</a></li><li><a class="wiki_link" href="/Monday+6+Aug+2012+Meeting+Notes">https://bettergedcom.wikispaces.com/Monday+6+Aug+2012+Meeting+Notes</a></li><li>Monday 30 Jul 2012 Meeting+Notes<a class="wiki_link" href="/Monday+4+Jun+2012+Meeting+Notes">http://bettergedcom.wikispaces.com/Monday 30 Jul 2012 Meeting+Notes</a></li><li><a class="wiki_link" href="/Monday+23+Jul+2012+Meeting+Notes">Monday 23 Jul 2012 Meeting Notes</a></li><li><a class="wiki_link" href="/BetterGEDCOM+Developers+Meeting+2012-07-02+%28July+02%29">Monday 2 Jul 2012 Meeting Notes</a></li><li><a class="wiki_link" href="/Monday+18+Jun+2012+Meeting+Notes">Monday 18 Jun 2012 Meeting Notes</a></li><li><a class="wiki_link" href="/Monday+11+Jun+2012+Meeting+Notes">Monday 11 Jun 2012 Meeting Notes</a></li><li><a href="/file/view/BetterGEDCOM%20Developers%20Meeting%202012-06-04%20%28Jun%204%29.doc/342876404/BetterGEDCOM%20Developers%20Meeting%202012-06-04%20%28Jun%204%29.doc" onclick="ws.common.trackFileLink('/file/view/BetterGEDCOM%20Developers%20Meeting%202012-06-04%20%28Jun%204%29.doc/342876404/BetterGEDCOM%20Developers%20Meeting%202012-06-04%20%28Jun%204%29.doc');">Monday 4 Jun 2012 Meeting Notes</a></li><li><a class="wiki_link" href="/Monday+28+May+2012+Meeting+Notes">Monday 28 May 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeeting+Notes+2012-04-09+%28Apr+09%29" target="_blank">Monday 09 April 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeeting+Notes+2012-03-26+%28Mar+26%29">Monday 26 Mar 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeeting+Notes+2012-03-12+%28Mar+12%29">Monday 12 Mar 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeeting+Notes+2012-03-05+%28Mar+05%29">Monday 05 Mar 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeeting+Notes+2012-02-20+%28Feb+20%29">Monday 20 Feb 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeeting+Notes+2012-02-03+%28Feb+13%29">Monday 13 Feb 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeeting+Notes+2012-02-06+%28Feb+06%29">Monday 06 Feb 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeeting+2012-01-30+%28Jan+30%29">Monday 30 Jan 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeeting+Notes+2012-01-23+%28Jan+23%29">Monday 23 Jan 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeeting+Notes+2012-01-16+%28Jan+16%29">Monday 16 Jan 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeeting+Notes+2012-01-09+%28Jan+09%29">Monday 09 Jan 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeetingNotes+2012-01-02+%28Jan+02%29">Monday 02 Jan 2012 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeetingNotes+2011-12-19+%28Dec+19%29">Monday 19 Dec 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeetingNotes+2011-12-12+%28Dec+12%29">Monday 12 Dec 2011 Meeting Notes</a></li><li>Monday 05 Dec 2011 Meeting Notes (GeneJ needs to post)</li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeetingNotes+2011-11-28+%28Nov+28%29">Monday 28 Nov 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeetingNotes+2011-11-21+%28Nov+21%29">Monday 21 Nov 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/2011DevelopersMeeting14NovOfficialStatement">Monday 14 Nov 2011 DearMYRTLE Statement</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DeveloperMeetingNotes2001-11-07">Monday 7 Nov 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/2011+10+31+Developers+Meeting+Notes">Monday 31 Oct 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/24October2011DevelopersMeetingNotes" target="_blank">Monday 24 Oct 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/17Oct2011DevelopersMeetingNotes">Monday 17 Oct 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/9Oct2011DevelopersMeetingNotes">Monday 9 Oct 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Sub-Project+SourceTemplates">Monday, 3 Oct 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/2011DevelopersMeeting26Sept">Monday, 26 Sep 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/19Sep2011DevelopersMeetingNotes">Monday, 19 Sep 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeetingNotes29Aug2011">Monday, 29 August 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/8Aug2011DevelopersMtg">Monday, 8 Aug 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeetingNotes1+Aug2011">Monday, 1 Aug 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Monday%2C+25+July+2011+Meeting+Notes-Notice">Monday, 25 July 2011 Meeting Notes-Notice</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/2011July18DevMtg">Monday, 18 July 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeetingNotes11July2011">Monday, 11 July 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Monday%2C+27+June+2011+Meeting+Notes">Monday, 27 June 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMtg20June2011">Monday, 20 June 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DeveloperMtg6June2011">Monday, 6 June 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeetingNotes16May2011">Monday, 16 May 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/Monday%2C+9+May+2011+Meeting+notes">Monday, 9 May 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMtgNotes2May2011">Monday, 2 May 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMtgNotes11April2011">Monday 11 April 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMtgNotes4April2011">Monday, 4 April 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMtgNotes28March2011" target="_blank">Monday, 28 March 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMtgNotes21March2011">Monday, 21 March 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/28Feb2011DevelopersMeetingNotes">Monday, 28 Feb 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/21FebDevelopersMeeting">Monday, 21 Feb 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/17FebDevelopersMtg" target="_blank">Monday, 14 Feb 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/31Jan2011DevelopersMtgNotes">Monday, 31 Jan 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/17Jan2011DevelopersMeetingNotes">Monday, 17 Jan 2011 Meeting Notes</a></li><li><a class="wiki_link" href="http://bettergedcom.wikispaces.com/DevelopersMeetingNotes+2011-01-03+%28Jan+03%29">Monday, 3 Jan 2011 Meeting Notes</a></li></ul><span style="display: block; height: 1px; left: -40px; overflow: hidden; position: absolute; top: -25px; width: 1px;"><a class="wiki_link_ext" href="http://www.timeanddate.com/worldclock/fixedtime.html?msg=12+March+BetterGEDCOM+Developers+Meeting&amp;iso=20120312T10&amp;p1=137&amp;ah=1" rel="nofollow" target="_blank">Times Around the World</a></span>
+  </div>
+
+
+  </div>
+  <div class="commentColumn WikispacesStream"><div class="WikispacesContent WikispacesBs3"><div class="commentList"></div></div></div>
+</div>
+
+  
+
+
+
+
+<script type="text/template" id="js-event-template">
+  <small>
+    <%- startDateShortFormat %>
+    <a href="<%- ws.common.pathFor('event', 'view', id) %>" class="WikispacesDialogLink">
+      <%- ws.common.truncate(title, 15) %>
+    </a>
+  </small>
+</script>
+
+<script type="text/template" id="js-reply-template">
+  <div class="tc-timeline-comment media">
+
+    <a class="pull-left userLink" href="<%- userCreated.url %>">
+      <img src="<%- userCreated.imageUrl %>" width="30" height="30" class="author-avatar" alt="" />
+    </a>
+    <div class="media-body" data-id="<%= id %>">
+      <% if (ws.context.user.canAdministerWiki) { %>
+        <i class="tc-delete-comment fa fa-trash-o contextual-command destroy-message ws-tip" title="Delete reply"></i>
+      <% } %>
+      <div class="tc-box-name-date">
+        <span class="tc-commenter"><a href="<%- userCreated.url %>"><%- userCreated.username %></a></span>
+        <% if (smartDate == '__live__') { %>
+        <abbr style="border-bottom-style: none;" class="timeago tc-comment-date" title="<%- (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+          <%- (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+        </abbr>
+        <% } else { %>
+          <abbr style="border-bottom-style: none;" class="tc-comment-date"><%- smartDate %></abbr>
+        <% } %>
+      </div>
+      <% if (body) { %>
+      <p>
+        <%= body %>
+      </p>
+      <% } %>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-share-template">
+  <div class="tc-timeline-block tc-<%= ws.stream.typeToBlockType(sharedType) %>-block" <%= (ws.stream.hideTimeline ? 'style="padding-left: 0px;"' : '') %>>
+
+    <% if (!ws.stream.hideTimeline) { %>
+      <div class="tc-timeline-icon">
+        <i class="fa fa-<%= ws.stream.typeToIcon(sharedType) %>"></i>
+      </div>
+      <div class="tc-timeline-triangle-man"></div>
+    <% } %>
+
+    <div class="tc-timeline-box" data-id="<%= id %>">
+      <div class="media">
+        <a class="pull-left userLink" href="<%- userCreated.url %>">
+          <img src="<%- userCreated.imageUrl %>" width="48" height="48" class="author-avatar media-object" alt="" />
+        </a>
+
+        <div class="media-body">
+
+          <div class="tc-stream-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <% if (ws.context.user.id) { %>
+              <li>
+                <a class="js-toggle-monitor" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-eye"></i>
+                  <span><%= monitored ? 'Start Monitoring' : 'Stop Monitoring' %></span>
+                </a>
+              </li>
+              <% } %>
+
+              <% if (ws.context.user.canAdministerWiki) { %>
+              <li>
+                <a class="js-toggle-lock" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-lock"></i>
+                  <span><%= locked ? 'Unlock Replies' : 'Lock Replies' %></span>
+                </a>
+              </li>
+              <% if (sharedType == 'discussion' || sharedType == 'comment' || sharedType == 'event') { %>
+              <li>
+                <a class="js-destroy-share" tabindex="-1" href="#">
+                  <i class="fa-fw fa fa-trash-o"></i>
+                  Delete <%= ws.stream.typeToName(sharedType) %>
+                </a>
+              </li>
+              <% } %>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="tc-timeline-box-header ws-reveal media-heading">
+              <h3 class="tc-box-title">
+              <% if (typeof adminLink !== 'undefined' && adminLink && ws.context.user.canAdministerWiki) { %>
+                <a href="<%- adminLink %>"><%- title %></a>
+              <% } else { %>
+                <%- title %>
+              <% } %>
+              <% if (typeof startDate !== 'undefined' && startDate) { %> - <%= startDateShortFormat %> <%= ws.stream.getYearFromStartDate(startDate) %><% } %>
+              </h3>
+              <div class="tc-box-name-date">
+                <% if (ws.context.instance.isTesClassroom) { %>
+                  <%- userCreated.username %>
+                <% } else { %>
+                  <a class="author-name" href="<%- userCreated.url %>"><%- userCreated.username %></a>
+                <% } %>
+                <% if (typeof recipients !== 'undefined' && recipients) { %>
+                  <i class="fa fa-angle-right"></i>
+                  <% if (typeof recipientsLink !== 'undefined') { %>
+                    <a href="<%- recipientsLink %>"><%- recipients %></a>
+                  <% } else { %>
+                    <span class="recipients"><%- recipients %></span>
+                  <% } %>
+                <% } %>
+                <% if (smartDate == '__live__') { %>
+                  <abbr style="border-bottom-style: none;" class="timeago tc-block-date" title="<%= (new Date(parseInt(dateCreated) * 1000)).toISOString() %>">
+                    <%= (new Date(parseInt(dateCreated) * 1000)).toDateString() %>
+                  </abbr>
+                <% } else { %>
+                  <abbr style="border-bottom-style: none;" class="tc-block-date"><%- smartDate %></abbr>
+                <% } %>
+              </div>
+          </div>
+
+          <div class="<%= sharedType == 'comment' && !orphaned && !ws.stream.noCollapse ? 'hidden ' : '' %>tc-block-content">
+            <div class="clearfix">
+              <% if (typeof rangeActions !== 'undefined') { %>
+                <div class="tc-range-actions">
+                  <% for(var i = 0; i < rangeActions.length; i++) { %>
+                  <%= ws.stream.rangeActionTemplate(rangeActions[i]) %>
+                  <% } %>
+                </div>
+              <% } %>
+              <% if (description) { %>
+                <p><%= description %></p>
+              <% } %>
+            </div>
+          </div>
+
+          <% if (replyPages.length > 0 && !(replyPages.length === 1 && replyPages[0].digests.length === 0)) { %>
+            <div class="tc-timeline-comments">
+            <% for (var i = 0; i < replyPages.length; i++) { %>
+              <% if (i == 0 && replyPages[i].more) { %>
+                <a href="#" class="tc-show-more" onclick="ws.stream.pageReplies(<%= id %>, <%= replyPages[i].page + 1 %>); return false">Show more replies (<%= replyPages[i].more %> hidden) </a>
+              <% } else { %>
+                <div></div>
+              <% } %>
+              <% for (var j = 0; j < replyPages[i].digests.length; j++) { %>
+                <%= ws.stream.replyTemplate(replyPages[i].digests[j]) %>
+              <% } %>
+            <% } %>
+            </div>
+          <% } %>
+
+          <% if ((ws.stream.userCanPostMessage && !locked) || ws.context.user.canAdministerWiki) { %>
+          <div class="tc-add-comment media <%= ws.stream.noCollapse ? 'add-active' : ''%>">
+            <img src="<%- ws.context.user.imageUrlPrefix %>lg.jpg" width="30" height="30" class="pull-left author-avatar" alt="" />
+            <div class="media-body">
+              <textarea name="reply" placeholder="Comment" class="form-control form-control-tc ws-reveal <%= !ws.stream.noCollapse ? 'ws-unrevealed' : ''%> reply" /></textarea>
+              <button type="button" class="btn-tc btn-info-tc btn-sm-tc add-reply">Post</button>
+            </div>
+          </div>
+          <% } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="js-range-action-template">
+  <div>
+    <strong><%- name %></strong>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      <a href="<%- diffUrl %>">
+    <% } %>
+    <%= new Date(dateCreated * 1000).toLocaleString() %>
+    <% if (typeof(diffUrl) !== 'undefined') { %>
+      </a>
+    <% } %>
+    <% if (typeof(rangeText) !== 'undefined') { %>
+      <div>
+        <span class="commentExtent">
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          <a href="<%- diffUrl %>">
+        <% } %>
+        <%= rangeText %>
+        <% if (typeof(diffUrl) !== 'undefined') { %>
+          </a>
+        <% } %>
+        </span>
+      </div>
+    <% } %>
+  </div>
+</script>
+
+<script type="text/template" id="js-stream-end-template">
+  <div class="tc-timeline-block tc-end-block">
+    <div class="tc-timeline-icon" style="margin-top: -10px;" />
+    <div class="tc-timeline-box" style="visibility: hidden;">
+      <p class="tc-box-title"></p>
+    </div>
+  </div>
+</script>
+
+<a name="discussion"></a>
+<div class="timeline WikispacesBs3 tc-timeline-embedded show-border">
+  <div class="timeline-line"></div>
+    <div id="js-share-list">
+    <div class="spinner hidden"><i class="fa fa-spinner fa-spin"></i></div>
+  </div>
+</div></div></div><div id="sentinel" style="clear:both"></div>
+    </div>
+  </td>
+</tr>
+</table>
+
+<div id="foot">
+<div class="WikiLicense WikiElement">Contributions to http://bettergedcom.wikispaces.com/ are licensed under a <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0">Creative Commons Attribution Share-Alike 3.0 License</a>. <a rel="license" href="http://www.creativecommons.org/licenses/by-sa/3.0"><img src="http://www.wikispaces.com/i/creativecommons/by-sa_3.0_80x15.png" width="85" height="15" alt="Creative Commons Attribution Share-Alike 3.0 License"/></a><br />Portions not contributed by visitors are Copyright 2016 Tangient LLC<br /><a href="https://www.tes.com/us/?utm_source=wikispaces&utm_medium=link&utm_campaign=US-52-footer">TES: The largest network of teachers in the world</a></div></div>
+
+
+<script type="text/template" id="dialog-template">
+<div class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+        <h4 class="modal-title"><%= header %></h4>
+      </div>
+      <div class="modal-body">
+        <%= body %>
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+
+
+<div id="js-help-template" class="hidden">
+  <div class="ws-help">
+    <div class="js-help-controls WikispacesContent WikispacesBs3">
+      <a href="http://www.wikispaces.com/site/gettingstarted/off" class="btn btn-default hidden js-getting-started-off pull-right">Turn off "Getting Started"</a>
+      <ol class="breadcrumb">
+        <li class="js-special-breadcrumb active">
+          <a href="http://helpcenter.wikispaces.com/" data-breadcrumb="0">Home</a>
+        </li>
+        <li class="js-ellipsis hidden js-special-breadcrumb">
+          ...
+        </li>
+        <li class="js-spinner hidden js-special-breadcrumb"><i class="fa fa-spinner fa-spin"></i></li>
+      </ol>
+    </div>
+    <div class="ws-help-content wiki">Loading...</div>
+  </div>
+</div>
+</div>
+<script src="http://www.wikispaces.com/s/nogz/9vz070xj-common.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/85k7018k-stream.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/91k8z207-contentbar.min.js" type="text/javascript"></script>
+<script src="http://www.wikispaces.com/s/nogz/395j1vq7-component.stream-vo.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+ws.namespace('ws.attributes');
+ws.namespace('ws.stream');
+ws.attributes.DISCUSSION_COUNT = 112;
+ws.attributes.pageId = 53894798;
+ws.attributes.version = 420846324;
+ws.attributes.showEditor = false;
+ws.attributes.editUrl = "http:\/\/bettergedcom.wikispaces.com\/page\/edit\/DEVELOPERS+MEETING?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FDEVELOPERS%2BMEETING";
+ws.attributes.userCanEdit = false;
+ws.stream.userCanPostMessage = false;
+ws.stream.hideTimeline = true;
+ws.stream.shareSource = "http:\/\/bettergedcom.wikispaces.com\/page\/shares\/Developers+Meeting";
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+jQuery(document).ready(function() {
+  ws.common.addJsonNotices({"warning":[],"error":[],"info":[],"success":[]});
+});
+
+jQuery(document).ready(function() {
+  ws.editor.canEdit = false;
+  var editUrl = 'http://bettergedcom.wikispaces.com/page/edit/DEVELOPERS+MEETING?goto=http%3A%2F%2Fbettergedcom.wikispaces.com%2FDEVELOPERS%2BMEETING';
+
+  jQuery('#js-edit-from-template').change(function() {
+    window.location = ws.common.addUriParams(editUrl, [['template', jQuery(this).val()]]);
+  });
+});
+
+
+
+--></script><!-- w1 86 tot:86:86(1) mem:4:28(19) wki:1:1(1) -->
+
+</body>
+</html>
