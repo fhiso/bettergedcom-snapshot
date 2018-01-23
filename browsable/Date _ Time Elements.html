@@ -1,0 +1,386 @@
+<html>
+<head>
+<title>BetterGedcom - Date &amp; Time Elements</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">How might different calendaring systems be applied using a similar template structure to that needed for name elements above?</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">Note: Calendaring systems also have a geographical/governmental/cultural aspect to them that is not necessarily captured by simply naming a calendaring system. A geographical name or other information might be required.</span><br/>
+<br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">What accommodation needs to be made in genealogical data for time zone information?</span><br/>
+<br/>
+<h2 id="toc0"><a name="x-Types of Date Information"></a>Types of Date Information</h2>
+ An oft-overlooked aspect of date/time information is categorizing it by the type of time it represents.<br/>
+<br/>
+Exact<br/>
+Approximate (abt)<br/>
+Partial (Incomplete)<br/>
+Timespan (During)<br/>
+Between (Unspecific time) (bet)<br/>
+Before (bef)<br/>
+After (aft) (c)<br/>
+Calculated<br/>
+Negative (Not)<br/>
+Interpreted (Int) - indicating modification which could include conversion from another calendar, calculation from a relative-time reference, or other uses<br/>
+Relative (is this expressed in ways other than a text entry?)<br/>
+Text (e.g., "Christmastime, 1986" which to me could be in early Jan. 1987 or simply "Spring")<br/>
+Either/or??<br/>
+<br/>
+These are just examples. Is there a difference in "Timespan" and "Between" for our purposes? Should BetterGEDCOM make a distinction between these two? What other Time Types are there?<br/>
+<br/>
+<br/>
+Day (dd) Only<br/>
+Month (mm) Only<br/>
+Year (yyyy) Only<br/>
+Month / Year (mmyyyy)<br/>
+<br/>
+<a name="htmldiff5"></a><br/>
+<h3 id="toc1"><a name="x-Types of Date Information-XML Example"></a>XML Example</h3>
+ &lt;datetime&gt;<br/>
+&lt;calendar&gt; (template?)<br/>
+&lt;type&gt;<br/>
+&lt;time1&gt; (24 hour HH:MM)<br/>
+&lt;timezone1&gt;<br/>
+&lt;day-of-month1&gt;<br/>
+&lt;day-of-week1&gt;<br/>
+&lt;month1&gt;<br/>
+&lt;year1&gt;<br/>
+&lt;date-text1&gt;<br/>
+<span style="margin: 0px; padding: 0px;"> &lt;time2&gt;</span><br/>
+<span style="margin: 0px; padding: 0px;"> &lt;timezone2&gt;</span><br/>
+<span style="margin: 0px; padding: 0px;"> &lt;day-of-month2&gt;</span><br/>
+<span style="margin: 0px; padding: 0px;"> &lt;day-of-week2&gt;</span><br/>
+<span style="margin: 0px; padding: 0px;"> &lt;month2&gt;</span><br/>
+<span style="margin: 0px; padding: 0px;"> &lt;year2&gt;</span><br/>
+<span style="margin: 0px; padding: 0px;"> &lt;date-text2&gt;</span><br/>
+<span style="margin: 0px; padding: 0px;">&lt;/datetime&gt;</span>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-23T23:10:20-08:00</div>
+<div class="title">Should the date entity not have a source citation?</div>
+<div class="text">I notice, the XML sample includes no place for a source. Is this because there might be multiple sources?</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-24T16:58:21-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+You'll note our edit times are 4 minutes apart. We were editing the page at the same time. Sorry. As I said, it was a simple mistake caused by both of us editing at the same time.<br/>
+<br/>
+If you want me to just copy and paste the info, I will, but I figured you could express yourself however you want better than I could. Besides, I do too much editing as it is.</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-11-24T17:25:07-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+I see it like this...<br/>
+<br/>
+If BG requires a citation before it will accept OR transport data then the application must have a requirement that the user enter such citation.<br/>
+<br/>
+If BG is good enough in other respects then this won't matter to the developers. Developers will always take the easy way out if they can. Making it a BG requirement leaves them no choice- just as the user shouldn't have a choice to enter a citation or not.<br/>
+<br/>
+As Granny said...<br/>
+"If'n ya ain't sourcin it then ya ain't doin genealogy!)<br/>
+<br/>
+:)</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-24T17:30:18-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+It may be that unsourced data is of no value to you, but there's plenty of it out there. If application developers want to require entering source information, that's their choice. It is NOT the place of BetterGEDCOM as a neutral file transfer format to make judgments on such things. We won't be defining what is or what "ain't" genealogy.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T17:53:03-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+I agree with you. The real issue, at this point in time, is that the BetterGEDCOM, right now, should only allow or encourage Citation information. If we had developers on board, for this project, we might be able to do something. I think, and this is only my opinion, we can't demand Evidence on a record that is being transported.<br/>
+<br/>
+After all, either the sending program or the program receiving the information, may not have a place to put the citation.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-11-24T17:53:41-08:00</div>
+<div class="text">Question- why does BetterGEDCOM have to be totally neutral? Shouldn't it also encourage- if not demand- best genealogical practices from both users and developers?<br/>
+<br/>
+Whatever data format is chosen it can NOT allow the developers too much wiggle room- otherwise we'll be guilty of building in the same flaw that doomed GEDCOM; i.e allowing each to interpret the standard in their own way... and then 20 years from now we'll be doing all this over -again.<br/>
+<br/>
+In my world a Standard is not open to interpretation- one either complies with it en toto or one doesn't.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-24T18:06:10-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+This effort isn't some "Us vs. Them" effort in regard to users and developers, or, for that matter, anyone. In fact, I am sure many adjustments will be made depending on what developers prefer after we have generally agreed upon what we want.<br/>
+<br/>
+My personal idea in participating in this effort is not at all that we will stake out a position and then expect everyone to gravitate to our view. It's much closer to being the opposite of that: We will adjust as needed to accommodate the practical realities of today. At the same time, we will consider best practices and standards and help people (and particularly, developers) implement those standards. In fact, much of the current discussions on this wiki relate to ways to organize that aren't really relevant to today at all but rather anticipate what we all want for the future.<br/>
+<br/>
+As I said, there's plenty of data out there within genealogy applications that isn't sourced. Why isn't it? Perhaps the person entered it specifically for use with a pedigree chart. Perhaps there was no source data and it was merely passed from mother to child. Perhaps the person didn't know how to enter sources. Is it appropriate to make a judgment call on this data? Absolutely not. Data is just data. Your determination of what value it has to you is yours alone and not in the purview of BetterGEDCOM to dictate.</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-11-24T18:12:53-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+My hope for BG is that once finalized it it proven to be so superior that all genealogy software developers will be force to adopt it- mch as most were forced to adopt GEDCOM when it was introduced.<br/>
+<br/>
+There is always a place to put data a program doesn't know what to do with - the import error log. My larder amy be too full to accept more food but that still doesn't prevent me from bringing it into the house.<br/>
+:)</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T20:45:43-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+I understand what you are saying.<br/>
+<br/>
+For me, at this point in time, there are two things against us getting to where you are suggesting, and I agree with what you are saying.<br/>
+<br/>
+We don't have any "Standards" to go be. For example, is Evidence Explained! The Standard.<br/>
+<br/>
+We don't have any Developers actively participating on this Wiki right now?<br/>
+<br/>
+So, I am not sure, that we can Demand Anything. I think that we can help bring the issues to the surface.<br/>
+<br/>
+I am also not sure that the BetterGEDCOM will ever be finalized. Remember, this project is to allow you and I to share our research information.<br/>
+<br/>
+I'll take your Error Log to the next step. I think an Error Log should be very specific. Who what impacted, Why was this put into the Error Log. Is the entire record NOT imported into your file, or were there some pieces of the record dropped.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-25T10:56:28-08:00</div>
+<div class="text">I tend to agree with GeneJ in this discussion.<br/>
+<br/>
+Statements like “… every one of those "number of pieces of Evidence" are separate and each should/could lead you to add a new event and evidence person to your database …” will in my view result in a far too complex and tedious research process. Software that requires the user to record an event for every source that contains info about that event will not be used in 90% of the cases. <br/>
+<br/>
+BG should ideally not restrict the users way of working and may need to support several ways to record evidence and sources. I hope that it will be possible to do this in a way that allows programs that choose different models to interwork. If not, BG is in trouble.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-25T13:14:42-08:00</div>
+<div class="text">Frankly, the question this thread started with makes little sense. <br/>
+<br/>
+The term Entity has so far been used to indicate a record or a complete entry in a database table. The term Element has meant a subsection of such a record/entry. <br/>
+<br/>
+I am having a hard time understanding why a date would need its own, separate database record that was by itself an independent record within a database. This is the only circumstance in which such a question is even applicable. <br/>
+<br/>
+There is a huge disconnect in understanding how data is formed and entered within a database and how a user deals with that data. <br/>
+<br/>
+If the issue is applying a source citation specifically to only a date, as it appears to be, these issues have nothing to do with each other.<br/>
+<br/>
+I think the turkey's done now. Happy Thanksgiving, everyone (well, the Americans).</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-25T13:35:17-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+Yes, the issue is the Date to Evidence, Place to Evidence, Note to Evidence.<br/>
+<br/>
+This is brought up from us, the End User, looking at the information we have and how we have to deal with it.<br/>
+<br/>
+IF I have an Event, and the Source only have an Age, as in a Census Record, and the Place is not in that Record, I have to create a Birth Event, Age (which I may have to use a Date Calculator to determine the birth year, then I add the appropriate Citation.<br/>
+<br/>
+I find another record, that only indicates the Place of Birth. I create a New Birth Event and Cite it.<br/>
+<br/>
+If that was the only source information that I have found, at this point in time, AND I only want ONE Birth 'statement' in a Report, I have to make a choice as to which Birth Event that I present in that report.<br/>
+<br/>
+The proposal at hand, is to allow the user to continue with that first Birth event, and to add the Place information and cite that piece of the Birth Fact.<br/>
+<br/>
+Certainly, this is an issue for the application developer, but What IF that allow us, the end user, to do this.<br/>
+<br/>
+The report now, would have more complete information (birth date and place) and two Citations, one for each of those elements of that event.<br/>
+<br/>
+The same would be true when sharing information with another end user.<br/>
+<br/>
+Does this happen today, doubt it, but this is why, for me anyway, this is on the table.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-25T13:53:25-08:00</div>
+<div class="text">@Russ ... Bear says "ditto."</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-24T11:21:51-08:00</div>
+<div class="text">Hiya Andy,<br/>
+<br/>
+I'm among those who doesn't use my software for lots of genealogical work because it's more work to make the software perform to my understanding of particular genealogical standards. Still, however, I'm real uncomfortable thinking it's BetterGedcom's place to "require" users adopt any particular behavior with their software. <br/>
+<br/>
+Hoards of users of genealogical software will never use it to create a BetterGedcom. <br/>
+<br/>
+Many folks don't use the software's designated fields for source information--some folks enter it freeform into one or more memo or note fields. Some folks set up intricate paper file systems where the folder refers to the  reference number of an individual in the genealogical software.<br/>
+<br/>
+Not a techie here, but how would BetterGEDCOM "require" such a practice by a software user. Would it refuse to accept data unless the user had a source for the underlying record? <br/>
+<br/>
+If there were source information entered, even in the right place, how would BetterGEDCOM know if the user had entered the source information first or years after that entry had begun?<br/>
+<br/>
+--GJ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T11:23:37-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I think you are trying to convince me that the old way works. And I know the old way works. One Event with several components and Evidence. What I am suggesting, and it my not make sense technically, is suggesting that we take a look at, perhaps, a different way to do things. If it is looked at and comes back as not technically possible, fine. I am talking about what I see in my database and what might be "a nice new feature" for the application that I am currently using.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-24T11:29:04-08:00</div>
+<div class="text">@Russ:<br/>
+I wouldn't tell the user how to enter his data. <br/>
+But my hypothetical dream software would try to press home how important sources are. This could be done via a tutorial when you first start up. Or it could be like Andy Hatchett says <br/>
+"*ALL* genealogical data formats and applications should require a source entry for any data entered before accepting any other input"<br/>
+This might sound a bit severe - but you would get used to it quickly. If you enter something that is just your conclusion, you'd enter something like "own conclusion; reasons:..." for the source.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T11:45:55-08:00</div>
+<div class="text">testuser,<br/>
+<br/>
+I totally agree with Andy. I like his term "junk-ology".<br/>
+<br/>
+What my software, or any software SHOULD have, is a Option to DEMAND "evidence".<br/>
+<br/>
+I won't enter a conclusion, at this point in time because I don't know what every one means by that term.<br/>
+<br/>
+The whole Evaluation of Evidence and Conclusion stuff needs to be understood by the Users, the Technical Community, both developers and the technical folks here, and the Scholarly Genealogist. Right now, from the best that I can tell, only two of those 4 groups are on this wiki, at the moment.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-24T11:53:32-08:00</div>
+<div class="text">@Tom,<br/>
+<br/>
+I'm not in the "evidence" vs "conclusion" camp. <br/>
+<br/>
+Has someone posted a really good and realistic example of this (in something other than GEDCOM 5.5) language? <br/>
+<br/>
+I'm sitting here looking at more than 100 pages of probate information related to a single family in one small county covering only about 1815 to about 1880. I've done lots of due diligence on that material. <br/>
+<br/>
+For the family of an ancestor who had 14 children, I have stacks and stacks of census information that is evidence. I'd have to go back and count up how many census sheets have actually been entered into my research database. For 17 persons, however (principal married twice), you can imagine. We I to add the grandchildren's census (since that is sometimes good indirect evidence), the stack would be proportionately larger. Ditto, census that represented negative evidence (which I use). <br/>
+<br/>
+Really hoping for a detailed, realistic example that a small brained bear could get her arms around. --GJ</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-11-24T12:17:46-08:00</div>
+<div class="text">GeneJ, you asked:<br/>
+<br/>
+"Not a techie here, but how would BetterGEDCOM "require" such a practice by a software user. Would it refuse to accept data unless the user had a source for the underlying record?"<br/>
+<br/>
+In a word- yes.<br/>
+<br/>
+"If there were source information entered, even in the right place, how would BetterGEDCOM know if the user had entered the source information first or years after that entry had begun?"<br/>
+<br/>
+If BG and application software required source entry at the time of original data entry BG would automatically know.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-24T13:00:52-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+I am confused. I don't know what the old way was or the new way is, so my comments may be meaningless. In my Gedcom example I hoped I was showing how the new way can be partially implemented with the old Gedcom file format.<br/>
+<br/>
+A comment on your quote: "But, may times, I have to find a number of pieces of Evidence before I find the complete Event 'statement', that is Date AND Place."<br/>
+<br/>
+I would say that every one of those "number of pieces of Evidence" are separate and each should/could lead you to add a new event and evidence person to your database. What you mean by "complete Event 'statement'" I'm not sure, but it could be a new piece of evidence that mentions both date and place or it could be your conclusion that an event occurred with the date and place. If the former it's still evidence, just more complete. You would still make a conclusion that there was an event that occurred at that time and place. Maybe you're say that when you finally find that more complete piece of evidence it becomes the tipping point for you to actually make the conclusion. If so, I think it is important to separate the concepts of the evidence that causes you to finally make a conclusion from the conclusion itself.<br/>
+<br/>
+Question. Do I expect people to be this pedantic about their evidence? No, I don't. I expect them to use common sense. If they are entering data about their father or grandmother, and they want to go straight to a conclusion person without entering evidence first, my common sense says do it that way. I would and I did and I would do so again if I had any more grandmothers to find.<br/>
+<br/>
+Question. Do I expect a software program to insist its users follow the process and have to have all evidence point to sources, and all conclusions point to evidence. No, I don't. I think people can be as lazy, careful, sloppy, pedantic, or anal as they like. I think software should either encourage or at least make very easy following good practices, but that's all.<br/>
+<br/>
+Question. Where do I think the evidence and conclusion process makes sense? In situations where you are really doing research. You've reached the point where no one has gone before. You really are trying to reconstruct a family, really are trying to figure out how many Joseph C. Wetmores were living in southeastern Connecticut in 1850 (one of my big problems right now), and you have just a few gut feelings about the families of Wetmores that might have been in the area, maybe an idea that one of them might have been an ancestor, but you really don't know anything about them yet. In order to solve these kinds of problems the evidence and conclusion research process becomes a necessity. You have to gather the evidence, sift the evidence, reason about the evidence, make hypotheses, test hypotheses, and then come to tentative conclusions that best explains the evidence you have at the moment. If you want a computer program to help you do this (you could, obviously do it all by hand with 3x5 cards) you have to get all the raw evidence encoded somehow. The encoded raw data is what I call evidence events and evidence persons. The results of your reasoning is what I call the conclusion events and conclusion persons (though hypothesis is now becoming a more popular term for conclusion). See the DeadEnd model document and notice how the person record contains personReference objects and the event record contains eventReference objects. This is how the process is tracked in the DeadEnds model.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-24T13:13:52-08:00</div>
+<div class="text">Just an FYI, most of the research I've done is about families where "no one has gone before.<br/>
+<br/>
+@Tom, when you write, "really are trying to figure out how many Joseph C. Wetmores were living in southeastern Connecticut in 1850..." it brings to mind what I call a research log.<br/>
+<br/>
+I quite frequently will use a log to record details from various record groups from a particular locations. Say, census, vital records, cemeteries, etc. <br/>
+<br/>
+Tom, do you use a research log? --GJ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-24T16:16:45-08:00</div>
+<div class="text">Russ said,<br/>
+<br/>
+"I had made a couple of Edits on the Page that you have deleted. I put them there for a specific reason."<br/>
+<br/>
+I can't imagine doing anything like that without it being a complete accident. There was one instance in which we both edited a page at the same time, and I got a notice about it. I tried to figure out what we were both doing and reflect both our versions, but maybe that's what I messed up? Anyway, please fix my error and accept my apologies.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T16:39:39-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+As you know, I agree with your "junk-ealogy". But, might you agree that those 'rules' about requiring Citations, be the application's responsibility to require the user to have a citation?<br/>
+<br/>
+I am not sure that the BetterGEDCOM transport of that data police the User to Application rules.<br/>
+<br/>
+Just asking.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T16:44:22-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+I saw it in the History tab. Please take a look at that tab. You will see what I entered and was then deleted.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T16:45:40-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+This entry specifically:<br/>
+<br/>
+Nov 23, 2010 1:30 pm         greglamberson greglamberson<br/>
+<br/>
+Thank you<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-24T08:38:33-08:00</div>
+<div class="text">..continuing on the train of thought:<br/>
+Every factoid should be allowed to have a date, too!</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T08:49:06-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+I had made a couple of Edits on the Page that you have deleted. I put them there for a specific reason. That is Terms that I have seen around the Genealogy Community.<br/>
+<br/>
+Approximate is not clear enough, without the examples that I added. There are a number of software programs that would use the Terms, in printed material, that would include abbreviated terms for what I spelled out.<br/>
+<br/>
+I hope that you consider to re-instate the edit OR to include (Abt, C, Bef, Aft, Circa) to your term Approximate.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T08:51:45-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+I totally agree with you. It is certainly a limitation in the data entry I do in my software.<br/>
+<br/>
+My Data Entry, and Data Output, in the form of EndNotes, would be improved with this feature being addressed here. Right now, I have to create multiple Events / Facts, because I can't Cite the piece parts of the Facts / Events with the appropriate Citation.<br/>
+<br/>
+Thank you for bringing it up.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T09:00:13-08:00</div>
+<div class="text">testuser42,<br/>
+<br/>
+I hope that you are not proposing that the BetterGEDCOM project, Tell us where to started entering data from, nor to suggest to the developers of our software to start from the Evidence.<br/>
+<br/>
+Certainly, I start from there, when entering the data. I do, in fact, review to see IF I have used this SOURCE before. If not, I will create a Source Record. Then, I return to my source document and start entering the Data AND create the appropriate Citation, and Citation Notes (as required, are as needed) and attach that Citation to the Fact or Event that is included in the source document. I then go on to the next data entry and link back to that same Citation (and notes), as long as that Citation is appropriate. I turn the "page" in the document and I might create New Citation.<br/>
+<br/>
+Although I guess that in 'might be nice' to do the data entry from the Evidence, the issue I have with that, is I need to look at the person to see if I already have the information in this new source. So, I have to go to that person and enter the data as described.<br/>
+<br/>
+I am not sure, as a User, how that data is packaged and sent along to the "other end", but I am trying to clarify Data Entry (application stuff) from the Transport of that Data (the BetterGEDCOM). <br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-24T09:27:55-08:00</div>
+<div class="text"><br/>
+Adding to the dialog, there are events for which there is no date evidence in the record. For example, we have a bits of evidence from a variety of sources saying a particular ancestor was taken captive twice, and that his captors once traded him to the British for a keg of rum. <br/>
+<br/>
+Perhaps not on topic and to the best of my knowledge, not all software supports the concept of a "sort date" separate from what we consider "dates" or even "alternate" dates. Some genealogy software does support the distinct "sort date" field. <br/>
+<br/>
+Some software may support other user approaches to the listing of events within a person/event display, recognizing that chronological order is not the only way we may want information to be stylized or output. <br/>
+<br/>
+Like Russ, I don't think BetterGEDCOM is trying to tell folks how to do their research (data entry), we are just trying to develop ways for that research to be accurately conveyed when it's shared with others.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-24T09:58:44-08:00</div>
+<div class="text">For that example you have given can be a source from a Family Book, or Story from your great Aunt.<br/>
+<br/>
+What one could do, not publishing a book and all, But making a memoir of family stort stories add it to your source, then ref that source.<br/>
+<br/>
+<br/>
+Even hearsay bad or good, even a published book is ones point of view how they preceve that facts. <br/>
+<br/>
+BUT one can add the date and place they heard the story. Either way that information was last pass on to someone at a time and place. Just don't disregard it completely.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-24T10:16:48-08:00</div>
+<div class="text">This is an odd topic indeed.<br/>
+<br/>
+A date in genealogy exists in the context of an event. It is an attribute of an event. The event has the source. Dates do not have sources. Isn't this obvious?<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-24T10:22:23-08:00</div>
+<div class="text">@Tom, see above, "Being able to distinguish date evidence from location evidence is desirable ..."</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T10:45:10-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Please listen to what we are trying to day (GeneJ and I).<br/>
+<br/>
+I agree what a Date is associated with an Event.<br/>
+<br/>
+Most Events also have a Place.<br/>
+<br/>
+But, may times, I have to find a number of pieces of Evidence before I find the complete Event 'statement', that is Date AND Place.<br/>
+<br/>
+If I find the Date (or some piece of that date) in one place, and the Place another. With the ability to transport the Event Name and Date AND Citation and the Place of the Event and Citation.<br/>
+<br/>
+I think that this might help with a number of Fact information records. One with the Event, Date, Place and Evidence, for the Date. Then the Fact again, with Place and Citation, and maybe another Fact record what has both the Date and Place, along with the Evidence.<br/>
+<br/>
+So, I am only suggesting that it's not so obvious.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-11-24T10:55:39-08:00</div>
+<div class="text">TestUser, you said:<br/>
+<br/>
+"then you should be able to record the source later, if you want."<br/>
+<br/>
+This is one place, imho, that no options whatsoever should be offered. *ALL* genealogical data formats and applications should require a source entry for any data entered before accepting any other input whatsoever - period.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-24T11:06:22-08:00</div>
+<div class="text">If you find the date and the place in two different places, you have found two evidence events, not one. You create one with the date and its source. You create the other with the place and its source. If you conclude/hypothesize that they refer to the same event, you create a third hypothesis/conclusion event that binds them together, but does not destroy the evidence. If you find the evidence in two places you must conclude they are the same before you can treat them as the same.<br/>
+<br/>
+Here is how I solve your exact problem in Gedcom (I've got many things like this in my database):<br/>
+<br/>
+0 @I66@ INDI<br/>
+1 NAME John/Doe/<br/>
+1 SEX M<br/>
+1 BIRT<br/>
+2 DATE 18 December 1933<br/>
+2 PLAC Hopkinton, New Hampshire<br/>
+2 SOUR Summary from available evidence<br/>
+1 BIRT<br/>
+2 DATE 18 December 1933<br/>
+2 SOUR @S1@<br/>
+1 BIRT<br/>
+2 PLAC Hopkinton, New Hampshire<br/>
+2 SOUR @S31@<br/>
+<br/>
+Gedcom is not well suited for the evidence and research process so you have to make do, but you can be a little creative. Here you see a conclusion event and two evidence events within the same INDI record. Notice how the source for the conclusion event gets a source that indicates it is a conclusion/hypothesis and the other two have "real" sources.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-24T11:18:39-08:00</div>
+<div class="text">Thanks Tom, for bringing my train of thought back on the tracks - I kind of derailed there, and maybe some of the others too ;)<br/>
+Of course you're right about it being TWO evidence events (each with source) that are combined into ONE conclusion event. D'oh.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-24T00:36:41-08:00</div>
+<div class="text">Brian,<br/>
+<br/>
+I have thought of the date "thingy" to be, generally, just a section of of a larger entity. A date by itself has not particular value without being attached to some other things, like a place coupled with an event, for example.<br/>
+<br/>
+HOWEVER, there are certainly other ways to deal with dates, I imagine. Dates are unique in that they're so ubiquitous yet they don't hold any particular significance like that other ubiquitous element, locations.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-24T08:14:02-08:00</div>
+<div class="text">Being able to distinguish date evidence from location evidence is desirable. <br/>
+<br/>
+In the absence of the ability to make distinction, one aggregates evidence in the citation, for example:<br/>
+<br/>
+72. As to the date of the marriage, XXXX family bible ... for entry ....; as to the location, see Nellie Smith ... to Thomas Smith ..., letter of ... for Thomas' comment, "have returned from XXX where I attended Samantha's elaborate wedding." <br/>
+<br/>
+Others more skilled no doubt have better examples. --GJ</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-24T08:35:35-08:00</div>
+<div class="text">GeneJ, good point!<br/>
+If we extrapolate that, that means that every single thing we note in an event or person or... should have the possibility to add a link to a source, doesn't it?<br/>
+<br/>
+If you start inputting your data from the source end of things, it would appear that every single factoid will automatically have a source.<br/>
+If you do it the other way round and add some info to a person, then you should be able to record the source later, if you want.</div></div></div></body>
+</html>

@@ -1,0 +1,103 @@
+Sources and Citations
+ 
+
+Introduction
+ As documented throughout the wiki and in numerous blog articles and other postings, it is not possible to transfer the source and citation data recorded in many genealogy programs to a different program using GEDCOM. Data become lost or distorted during the transfer process. Below we attempt to catalog a host of BetterGEDCOM wiki pages and discussions about sources and citations. The pages discuss alternatives for extensions of GEDCOM that can solve this problem, additional functionality related to sources and citations, the implications of various citation practices and also solutions for automatic download of data about sources (metadata) from internet services for use in citations. The data content in the sources is outside the scope of this page.
+ 
+Please note that there can be many discussions on pages, few discussions are listed separately below..
+ 
+Please help us get this page complete, send page links with summaries to ghtorud or GeneJ.
+ 
+Subject categories
+ 1.Most recent work
+2.Previous major discussions and working documents
+3.User Requirements
+4.Current programs, GEDCOM and problems
+5.Citation styles and guides
+6.Citation methods, practices and examples
+7.Other solutions for Biographic meta data and Citations (not genealogy specific)
+8.Terminology
+9.Other, not categorized
+
+ The same wiki page or discussion thread may appear in several subject categories.
+ 
+1. Most recent work
+ 
+A Data Model for Sources and Citations. This page proposes a model for recording Sources and Citation data supporting international use. It defines entities for transfer of instances of S&C data and definitions of Master Source Types and Citation Element Types. Template definitions control the output of citations in reports and conversion of data. The entities may be combined in several ways in a file format or other transfer solution, e.g. web services.
+ 
+
+2. Previous major discussions and working documents
+•An architecture for sources, reference notes and bibliographies Jul-Aug 2011 brainstorming document trying to identify issues, collect knowledge, and discuss some ideas.
+•BetterGEDCOM support for Evidence Explained and the Genealogical Proof Standard (EE & GPS Support). The previous front page for EE&GPS, many of the references on the page can be found below.
+•From repository meta data to BetterGEDCOM and reports A future scenario with automatic download of source metadata from internet servers and source and citation data supporting several citation styles and meta data schemes coexisting in a program.
+•BetterGEDCOM First. GoogleDoc spreadsheet that lists some sixty or so frequently used or discussed citation elements. See legend at the bottom of the sheet.
+
+ 
+3. User Requirements
+•Source related requirements in the Requirements Catalog
+
+ 
+4. Current programs, GEDCOM and problems
+•Sources and Citations in GEDCOM A presentation of the data fields and structures in GEDCOM 5.5 for Sources, Citations and Repositories. Includes links to numerous external articles that describe the GEDCOM export or transfer process and related problems.
+•GEDCOM Source/Reference Components BetterGEDCOM GoogleDoc spreadsheet.
+•Application Overview. An early effort to present and classify the Sources and Citations functionality in some genealogy programs and an evaluation of their export of Source and Citation data in the GEDCOM format, including the identification of problems.
+•Software Citations. Research for BetterGEDCOM comparing the user interfaces, programmed citations and GEDCOM export of an 1880 US Census entry made to both FTM-Mac and RootsMagic v4.
+•Citation Mechanics. A series of screen shots providing an overview of the TMG (The Master Genealogist) v7 user interface for sources and citations, including how source types are created and defined, how citation elements are selected and citation templates are written. The last three graphics use screen shots to compare "lumper" and "splitter" approaches to develop the programmed citation for an 1880 US census.
+•Master Source. July 2010 attempt to develop screen shots of the master-source equivalent lists and templates/forms in different software packages. Highlights terminology differences.
+•Citation Specific Fields. July 2010 attempt to catalog what might be termed the “assertion level” fields in different software packages.
+•Repositories-repositories. July 2010 attempt to develop screen shots and/or catalog the Repository fields/options in different software.
+•What's wrong with sources An early (Dec 2010-Mar 2011) discussion of the problems wrt sources in GEDCOM.
+
+ 5. Citation styles and guides
+ •Modern Style Guides An early effort to overview of different styles and reference available style guides. Only some of the styles referenced are specific to genealogy, but most genealogy styles are derived from another typically classic citation style. For example, both Mills' Evidence style and the Register's citation style are "rooted" in Chicago (see Chicago Manual of Style or "CMOS").
+•Mills, The Evidence Series. An overview of Elizabeth Shown Mills' style guides.
+
+ 
+6. Citation methods, practices and examples
+•About Citations. This work catalogs examples of programmed and/or published citations specific to indirect evidence, negative evidence, information snippets (extracts and abstracts) and multiple sources in a single citation. Many of the examples came from "Work Samples" published on the Board for Certification of Genealogists (BCG) website.
+•Citation Graphics. Images of more than 20 mostly US centric sources and examples of different forms of citation (source list entry, full reference note, source label) for each. (Although included, in-line citations are also found in genealogy/family history materials.)
+
+ 
+7. Other solutions for Biographic metadata and Citations (not genealogy specific)
+•Dublin Core Metadata Initiative A brief introduction to DCMI and some links.
+•Zotero is one of several existing solutions for collection of metadata from various computer sources, storage of documents and generation of citations. The "An architecture for sources ..." document in category 2 above contains more references.?BetterGEDCOM GoogleDoc spreadsheet,Zotero Fields_alpha_97-04v.xlsThis file reports about the July 2010 Zotero "item types" (=source types) and the "fields" (=citation elements) associated with each. (Zotero development is an ongoing process.)
+?A few Zotero screen shots- 5 Jan 2011 BetterGEDCOM blog article.
+?The page "Citation Graphics" includes a few more Zotero screen shots. Click here and scroll down to the line that begins, "From WorldCat."
+
+•Citation Style Language is used by Zotero and other to specify the characteristics of citation styles. Here is an informal summary of the CSL 1.0 specification. The "An architecture for sources ..." document in category 2 above contains more references.
+
+ 8. Terminology
+ 
+Unfortunately the terminology used on the various pages is not consistent. Some terms are defined in the Definitions page (link below and on the BetterGEDCOM wiki left side navigation bar); some of the documents, pages or discussions define their own terminology. More work is needed to come up with a consistent terminology.
+ •"Definitions" (Home > Definitions)
+•"Pending Definitions" (Home > Definitions > Pending Definitions)
+•"Supplemental Glossary"; substantial extraction from the glossary of Mills' Evidence Explained (2007), with permission from the author.
+
+ 
+9. Other, not categorized
+
+ a. GENTECH Genealogical Data Model (2000). Gentech, among other things, has a multilevel source model.
+ 
+b. Robert Raymond, "Interoperable Citation Exchange 2009-03-11.pdf" (2009). Presentation sometimes referred to as "I.C.E." BetterGEDCOM discussions below.
+ •"FamilySearch presentation ... "
+•Reference to I.C.E. in discussion about Citation Graphics discussion, "GEDCOM for Citation..."
+•Reference to I.C.E. in September Developers Meeting.
+
+ c. RootsTech 2011 Wikipage, "Open Interactive Sources."
+ 
+d. References to John H. Yates work to develop a standardized implementations for Evidence Style.
+ •"John H. Yates, 'A Genealogical Data Model (Matrix Algebra) Specification" (Discussion April 2011). Discussion attached to wiki page "Data"; contains links to Yates' external Internet page.
+•Reference to Yates model in discussion thread (August 2011)
+•Discussion attached to "Geir's High Level Considerations on Citations in BetterGEDCOM (Discussion, April 2011)
+•Entries to discussions attached to page, "Fix the Transfer Problem." References to Yates in the discussion entries here and here.
+•GoogleDocs Spreadsheet, "Distill Full Reference Only Yates," showing some initial work to reduce Yates citation elements. This version of the spreadsheet contains only Yates' work on the full reference note. Contact GeneJ for more of the work.
+•Commentary on Yates elements in "Proposed Vision Statement"; discussion entry (Aug 2011)
+
+ e. GeneJ's personal blog for articles:
+ •"Technophoo. Have no fear ... metadata is here and near." Also, related article about metadata API from WorldCat.
+•"Style--Citing Records in the National Archives of the United States." Links to the free NARA citation guide.
+•"Style--FREE Register Citation Formats." Links to the freely available citation guide from the editors of the Register.
+
+ f. Mark Tucker, ThinkGenealogy, "Better Online Citations (series)."
+ 
+g. Randy Seaver's blog, Geneamusings, articles about his attempts to create and sync sources and citations. [will need to catalog and post these... ]

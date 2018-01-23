@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>BetterGedcom - Characteristic entity</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">A Characteristic entity, if </span><span style="margin: 0px; padding: 0px;"> included in the BetterGEDCOM model, would record current known information about</span> a certain characteristic of a <em>single</em> entity (e.g. a single Person, <em>or</em> a single Location, etc.). There are two <em>mandatory</em> attributes of any Characteristic entity:<br />
+<ul><li>A &quot;type&quot; that describes what sort of Characteristic this is;</li><li>A &quot;value&quot; of this Characteristic .</li></ul>Important, but optional attributes, include:<br />
+<ul><li>A date or date-range during which the value of the Characteristic is believed to be true;</li><li>A location where the value of the Characteristic is believed to be true.</li></ul><br />
+If Location is implemented as a separate entity type in BetterGEDCOM, then the location referred to above would actually be a pointer to the correct Location entity, not the name of it.<br />
+<br />
+<span style="margin: 0px; padding: 0px;">Questions being considered about Event entities include:</span><br />
+<ol><li><span style="margin: 0.5em 0px 0px; padding: 0px 0px 0px 3em;">Is the Characteristic entity required by the BetterGedcom model in the Logical Data Model? <em>Basic data normalisation says &quot;yes&quot;</em>.</span></li><li><span style="margin: 0.5em 0px 0px; padding: 0px 0px 0px 3em;">For the physical implementation of the BetterGEDCOM file, is the Gedcom approach adequate (embedding Characteristics within persons), or the Characteristics be physically separate entities in the file?</span></li><li><span style="margin: 0.5em 0px 0px; padding: 0px 0px 0px 3em;">If BetterGedcom chooses to include the Characteristic entity and also chooses to support the evidence and conclusion aspects of genealogical research, how are the same questions asked of the Person entity to be answered?</span></li></ol><br />
+<br />
+<br />
+<h1 id="toc0"> </h1>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>BetterGedcom - Tom's Goal and Requirements</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+This is my attempt to set down an overall goal for Better GEDCOM and a high level statement of Better GEDCOM's requirements -- Tom Wetmore<br/>
+<br/>
+<h1 id="toc0"><a name="Goal"></a><span style="font-size: 1.4em; margin: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 5px;">Goal</span></h1>
+ The goal of the Better GEDCOM project is to design a file format that can be used to both archive comprehensive genealogical data, and to transfer genealogical data between persons, websites, and applications.<br/>
+<h1 id="toc1"><a name="Requirements"></a><span style="font-size: 1.4em; margin: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 5px;"><strong><a name="Requirements"></a>Requirements</strong></span></h1>
+<br/>
+1. The syntax of the Better GEDCOM files shall be a non-proprietary format (e.g., XML, GEDCOM, JSON, …, or a custom application specific format).<br/>
+2. The data model that underlies Better GEDCOM must be a superset of the models used by existing genealogical applications to the fullest extent deemed possible during design.<br/>
+3. The data model that underlies Better GEDCOM must provide a set of data entities that will allow genealogical applications to support all conventional genealogical processes.<br/>
+4. The character set used by Better GEDCOM files must be UTF-8 encoded Unicode.<br/>
+5. Better GEDCOM files may contain references to external information that may exist as URI's in cyber space or in container files that accompany the Better GEDCOM files.<br/>
+6. Better GEDCOM must not impose restrictions on field lengths or value formats except as deemed necessary during design.<br/>
+7. Better GEDCOM must provide a means to mark-up text that is used in contexts that allow unstructured text (e.g., notes).<br/>
+<br/>
+<h1 id="toc2"><a name="Notes on Requirements."></a>Notes on Requirements.</h1>
+ 1. T<span style="font-size: 13px; font-weight: normal; line-height: 19px;">he final syntax of Better GEDCOM files is not specified by these requirements. It will probably be XML, but at this point in the process it’s not an important issue.</span><br/>
+<span style="font-size: 18px; line-height: 27px;"><strong><span style="font-size: 13px; font-weight: normal; line-height: 19px;">2. If Better </span></strong></span>GEDCOM does not fully encompass the data models used by existing applications, significant data from those applications will be lost during exports to Better GEDCOM files. If this happens Better GEDCOM will not be relevant.<br/>
+3. Not only must Better GEDCOM support the data models of existing applications, it must also provide the data model for future applications that will fully support genealogical research processes.<br/>
+4. Unicode is the universally accepted solution for handling the multitude of modern, historical and ancient character sets used by all human cultures. UTF-8 is the most common byte encoding of Unicode and supported by all modern software development environments.<br/>
+5. Better GEDCOM must handle multi-media information. That information takes the form of resources on the web or as files in locally accessible file systems. When data from a genealogical application is exported to Better GEDCOM files, the files may contain references to web resources or references to files that are simultaneously exported to an accompanying container file. In fact it would be be best for a Better GEDCOM file to be a zip file that contains both the Better GEDCOM text and the accompanying multi-meidia files; this guarantees the synchronicity between the two elements. Applications may give their users the option to include or exclude local multi-media files when exporting data.<br/>
+6. Better GEDCOM must be as flexible as possible. Formats for dates, places, names, must be as free, open and unrestricted as possible. Fixed formats should be eliminated as much as possible.<br/>
+7. There are two possible mark-up topics concerning Better GEDCOM. The first is the semantic marking up of content. The Better GEDCOM data model will handle the overall semantic mark up scheme in the set of the tags and elements it defines. The second topic is the one addressed by this requirement -- it is the stylistic mark up of text for appearance in reports and outputs. This mark-up can be accomplished using HTML or RTF type tagging in the fields that hold unstructured text.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>theKiwi</strong> 2011-01-17T19:23:40-08:00</div>
+<div class="title">Text Mark Up</div>
+<div class="text">In #7, BetterGEDCOM would be able to handle this by simply allowing the inclusion into a notes field of items like &lt;strong&gt; or &lt;em&gt; etc (if HTML is being used). - see #6.<br/>
+<br/>
+This is entirely up to the application that creates the BetterGEDCOM file, and then  at "the other end" in the application that imports a BetterGEDCOM file containing such items.<br/>
+<br/>
+Example - Reunion in its Notes fields allows for Styled Text which Reunion outputs to various of its printed reports, but when a GEDCOM file is created, all the styling disappears. <br/>
+<br/>
+But Legacy if I'm not mistaken does allow for the HTML encoding of some styling into the Notes to be written to the GEDCOM file if the user chooses by the "Keep embedded formatted codes within text".<br/>
+<br/>
+But Reunion of course does allow me to include HTML tags in the notes (they just look ugly in any view that doesn't use a browser to parse those tags), so I can use things like &lt;a href and &lt;b&gt; in Reunion to cause the desired appearance of my data when viewed with a web browser in TNG<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:23:http://roger.lisaandroger.com/getperson.php?personID=I10&amp;tree=Roger --><a class="wiki_link_ext" href="http://roger.lisaandroger.com/getperson.php?personID=I10&amp;tree=Roger" rel="nofollow">http://roger.lisaandroger.com/getperson.php?personID=I10&amp;tree=Roger</a><!-- ws:end:WikiTextUrlRule:23 --> <br/>
+<br/>
+for example where the title<br/>
+<br/>
+A Popular Nonagenarian<br/>
+<br/>
+is in the Reunion Notes field, and the GEDCOM file as<br/>
+<br/>
+0 @N409@ NOTE<br/>
+1 CONT &lt;b&gt;A Popular Nonagenarian&lt;/b&gt;<br/>
+<br/>
+So currently the combination of TNG and the Web Browser does allow for the second part of this - reading the styling out of a GEDCOM file and displaying it as expected, and at least Legacy does allow for the insertion of the text styling by HTML into a GEDCOM file.<br/>
+<br/>
+Roger</div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-01T06:59:51-07:00</div>
+<div class="text">I can't say I'm a fan of allowing mark up, citation styles or anything like that into BGC.  These are things in the presentation domain.  Far better in the long run to let BGC confine itself to the data domain.<br/>
+<br/>
+To some extent evidence objects will fly in the face of this.  If you have a scan you'll need to say whether it's a TIFF, PNG, etc.  Even then, you're not mandating how it's to be presented, just what it is.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-10-04T05:08:41-07:00</div>
+<div class="text">I fully agree that stylistic information should not be found in BG data, that it should be applied via some type of stylesheets during presentation. <br/>
+<br/>
+This has always been my main argument against formatted citation strings as data elements in BG. For example, if BG decides to use XML as its base level syntax, then Elizabeth Shown Mills templates could be implemented using XSLT stylesheets.<br/>
+<br/>
+However, text markup is not, per se, stylistic. The original purpose of HTML was to specify content, not style. This is the title, this is a paragraph, this is a list, this is an element in a list. This is not stylistic information, it is structural content. There is no mention of font, point size, paragraph indenting here, just structural content.<br/>
+<br/>
+I am not arguing strongly for text markup in BG here, but simply pointing out that it is not necessarily inconsistent with BG's goals of holding genealogical data.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-18T09:53:20-08:00</div>
+<div class="title">Tom's Goal and Requirements</div>
+<div class="text"><br/>
+At the end of the developer's meeting on January 17th there was a request that we individually attempt to state a goal for Better GEDCOM and to write some high level requirements for reaching that goal. That I have done. I am not presuming to write "the" Better GEDCOM goal or requirements; I am only trying to contribute to a consensus. Please take what I have written in that light. And please write your own statements!! Someone nicely provided an "Add your page here" prompt to let you know where to put them!!<br/>
+<br/>
+I steered clear of a couple requirements, e.g., the one about working with all cultures, and the one about only having one way of doing things. I think the first is covered under the generic umbrella of "genealogical processes", and as a flexibility freak, I don't believe in the latter.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-01-18T20:38:00-08:00</div>
+<div class="title">Various comments</div>
+<div class="text">Tom,<br/>
+<br/>
+I tend to agree with almost everything.<br/>
+<br/>
+Goal<br/>
+Comment: Why do you mention websites specificly, I would say they are just another application.<br/>
+Current protocols for access to specific websites tends to be interactive, unlike the batch mode of current Gedcom.<br/>
+<br/>
+Re. requirement 2.<br/>
+BG should steal every good idea that are currently implemented (or being implemented) that goes beyond GEDCOM 5.5, so I agree in principle that BG should be a superset of current implementations. BG should not be the limiting factor when info is exchanged between applications. There is however one limitation:  When different applications have implemented extensions to Gedcom 5.5 in different ways, BG should select one way to do things wrt data exchanged. And we may want to choose one way even when G5.5 have several alternatives that may be mapped to one alternative.<br/>
+<br/>
+Requirement 5: The last S in the requirement (fileS) should be removed – for reasons of simplicity. Ie I want to see only one BG file per container.<br/>
+<br/>
+Requirement 6: Being discussed separately.<br/>
+<br/>
+Re. note 6. What do you mean by fixed formats?<br/>
+<br/>
+<hr/>
+I note that you have not included anything about international support, cultures and religion. I strongly disagrees with the removal of that goal/requirement.<br/>
+<br/>
+And there is nothing on backwards compatibility.</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-19T03:08:10-08:00</div>
+<div class="text"><br/>
+Re: mentioning websites. I thought it sounded fine and made sense to me. Though access to websites might be interactive, websites must still maintain their data in some explicit file format or relational database, so they must be able to add to those files or add to those databases. So it seemed natural then to say that websites could be the import or export agent for Better GEDCOM files. But, since a website, in this context, is just another application, I agree that my goal statement is redundant.<br/>
+<br/>
+Fixed format fields would be for PFACTs like sex, marital status, ethnicity, religion, quality ... does Better GEDCOM define sets of fixed, valid values for these PFACTs, or can the application use any string they choose? (e.g., must use M, F, U or sex or not). Should these fields be fixed but internationalized?<br/>
+<br/>
+Yes, requirement 6 is being discussed separately. I was trying to make it mean something understandable.<br/>
+<br/>
+In my opinion, requirement 2 covers backwards compatibility. If you believe it needs to be pulled out as a separate requirement I think that is fine; it could be mentioned in the comment.<br/>
+<br/>
+In my opinion, requirement 3 covers international support, cultures and religion. Maybe it should be said more explicitly; maybe saying it should be in the comment. Because of the need for fixed fields, I think Better GEDCOM, in its header information, must be able to declare certain internationalization properties. Must the sex values always be M, F &amp; U, or should the letters from other languages be allowed? Should Better GEDCOM only import and export the names of months in English; should it be able to import and export the names of months in any one specified language; should Better GEDCOM be able to handle months written in many languages in the same file; should Better GEDCOM be able to export the names of months in the same language that the month was imported in? Should Better GEDCOM provide international support for the names of months in, say, the five most common languages, and then require applications to convert months in any other language to these when exporting Better GEDCOM files. I personally hate having to use JAN, FEB, MAR, ..., as the month strings in GEDCOM (so I don't, of course, it looks so darned stinking ugly). Are we talking about only Gregorian months, regardless of the language expressing them. How do we handle Julian months? How do we handle months in non-Christian based calendars? These are all fairly complex questions. I wanted requirement 3 to be the umbrella requirement that would force all these issues to the surface during the design phase. I guess it could be made more explicit. Upon rereading this paragraph, I guess something more explicit about internationalization and cultures should be inserted.<br/>
+<br/>
+(The need to do very complex work to meet simply expressed requirements is very common -- my favorite story about this concerns the orders given to General Eisenhower by President Roosevelt and Prime Minister Churchill during World War Two -- they read "Invade Europe. Defeat Germany." A perfect requirements statement. Eisenhower and his planning staff took it from there.)<br/>
+<br/>
+Re: your concern over different applications extending 5.5 in different ways. It was my intention that requirement 2 cover that. If two programs have extended 5.5 in different ways then they have two different data models and the requirement covers that case. I could imagine a problem if two applications use the same tag to mean entirely different things, but that can be handled by an importing program (a program that imports GEDCOM either for the purpose of converting it to Better GEDCOM or for purpose of incorporating its contents into a Better GEDCOM compliant database) reading the GEDCOM header record to see what application wrote the GEDCOM file. If Better GEDCOM comes to pass, utility programs that translate GEDCOM and/or application-proprietary files into Better GEDCOM will be in instant demand, and the good ones will handle this problem.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-01-19T07:43:14-08:00</div>
+<div class="text">Since you don’t say anything about international etc. in requirement 3, it is not obvious that it is part of # 3. It can be argued that many of the other requirements are also covered by # 3, since it is very general.<br/>
+<hr/>
+Fixed format fields. <br/>
+<br/>
+I tend to call these coded fields, just because that was the term in something I worked on long ago (EDI, ASC X.12, UN/EDIFACT dealing with standard business data interchange) where we maintained hundreds (thousands?) of national/international code lists for all sorts of things, postal codes, currencies, airport ids, bank ids, custom codes etc. I also see that Gedcom use the same term. I don’t see the problem with these fields, I think they are an important tool for keeping things standardized and translatable. It does not mean that there can not be user defined values in some fields, but user defined values may be a source of incompatibility. The list of standard values can be extended in new versions of the standard (or there could be separate lists updated more frequently).<br/>
+<br/>
+There are several approaches using standard code lists internationally, at least the following: 1) Use numeric values that are independent if language (but which few people are able to remember so they can read a file). Each language can then write a translated code list where the (textual) values for each number is listed. 2) Supply a code list identifier in addition to the code value. Code lists may be maintained by many authorities in different countries, and programs needs to know all code lists that they support. Can use numeric or alphanumeric codes. The code list identifiers could go in the header with the option to override per field occurrence.  3) Use alphanumeric codes that are often acronyms for the value in one language (similar to event tags in Gedcom.). 4) And one may combine all 3 alternatives using a code list id for standard built in code lists.<br/>
+<br/>
+Since files are usually read by computer geeks that in most cases know English, I personally prefer alternative 3) in most cases. In all cases there can in addition be user defined codes, where allowed for a specific field. <br/>
+<br/>
+My opinion is that it is not necessary to transfer codes for e.g. Gregorian months in all languages, translation is performed by the programs. But for months, can we not just use numeric values? Months in calendars we do not know, could be handled similarly. I am not sure I see the big problem with months. ??<br/>
+<br/>
+<hr/>
+If two programs have implemented extensions to G5.5 in two different ways, are you saying that BG should support both ways and that all programs must be able to import data encoded in both ways? (I would prefer only one solution.)<br/>
+<br/>
+Geir</div></div></div></body>
+</html>

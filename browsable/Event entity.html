@@ -1,0 +1,730 @@
+<html>
+<head>
+<title>BetterGedcom - Event entity</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+<span style="margin: 0px; padding: 0px;">An Event entity, if included in the BetterGedcom model, would record information about an event. Other than the actual type of the event, the three most important properties of an event are when it took place, where it took place, and who were the role players in the event, that is, the persons who took part in the event and the roles they played with respect to the event. Other aspects could include defining any organisation </span>involved in the event, with its role, also any cause (e.g. cause of death) that can be usefully highlighted. It should also be noted that some events (e.g. emigration) could justifiably refer to two locations - the from and to-locations.<br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">As in the case of the Person entity, events can be dealt with at the evidence level, when recording only the information about an event that can be taken from a single item of evidence, or at the conclusion level, where an Event entity represents all the information that a researcher has found out about an event.</span><br/>
+<br/>
+Some current physical implementations of <span style="margin: 0px; padding: 0px;">genealogical </span>data (e.g. GEDCOM) place <span style="margin: 0px; padding: 0px;"> event information within the most appropriate ("primary") person record. Therefore, a birth event is recorded inside the record of the person who was born, not within the record of the person's father, even if the father were mentioned in the event. Gedcom fortunately has a family record where information about marriage events is placed since duplication would be needed if a marriage event had to be kept in person records also.</span><br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">However, this physical placement should not be confused with the <em>Logical Data Model</em> that can be derived from GEDCOM, where the most basic rule of data normalisation (removal of repeating attributes) leads to the creation of an Event entity for the Logical Data Model.</span><br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">Other current models (e.g., Gramps) include the Event entity as a separate entity type in both Logical Data Model and the physical implementation of that model. Information directly about the event is placed in this entity and information about the persons who played roles in the event are placed in Person entities that refer to the Event entity.</span><br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">Questions being considered about Event entities include:</span><br/>
+<ol><li><span style="margin: 0.5em 0px 0px; padding: 0px 0px 0px 3em;">Is the Event entity required by the BetterGedcom model in the Logical Data Model? <em>Basic data normalisation says "yes"</em>.</span></li><li><span style="margin: 0.5em 0px 0px; padding: 0px 0px 0px 3em;">For the physical implementation of the BetterGEDCOM file, is the Gedcom approach adequate (embedding events within persons), or should an approach like Gramps be used (physically separate entities)?</span></li><li><span style="margin: 0.5em 0px 0px; padding: 0px 0px 0px 3em;">If BetterGedcom chooses to include the Event entity and also chooses to support the evidence and conclusion aspects of genealogical research, how are the same questions asked of the Person entity to be answered?</span></li><li>Should Events in BetterGEDCOM apply to multiple persons? (An alternative could be to create a Group entity for this event and apply the Event to the single Group, then trace through the Group to the Persons concerned)</li></ol>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-25T03:23:15-08:00</div>
+<div class="title">Data Models, Entities, GEDCOM and XML</div>
+<div class="text">I have just updated the main page to start to distinguish between the data model and the physical implementation in XML re the Event entity.<br/>
+<br/>
+The earlier statement that GEDCOM does not have an entity in its data model is totally wrong. It is impossible to draw a useful logical data model for GEDCOM without having an event entity type. <br/>
+<br/>
+It is true that events on the physical file in GEDCOM are level 1 and sit inside individuals which are level 0 - but that's about the physical implementation which is not the same thing as the data model.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-25T03:26:22-08:00</div>
+<div class="title">GRAMPS</div>
+<div class="text">For completeness, could someone make a similar update to the references to GRAMPS - if they are still relevant - to distinguish between the logical data model and the physical implementation of GRAMPS?</div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-25T05:28:51-08:00</div>
+<div class="text">Hi,<br/>
+<br/>
+I am not certain to really understand if there is a difference for Gramps. Like a Gedcom extension, Gramps uses some primary entities, event is one of them. Gramps XML is one backup format for physical implementation, the same hierarchy is used.<br/>
+<br/>
+You can see a sample with the experimental <a class="wiki_link_ext" href="http://gramps-connect.org/" rel="nofollow">Gramps-connect</a>.<br/>
+Tables are matching logical model.<br/>
+<br/>
+Hope this help.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-25T07:16:34-08:00</div>
+<div class="text">For physical implementation and related issues into Gramps, you will see that program uses a <a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=GEPS_010:_SQL_Backend" rel="nofollow">hierarchical datastore</a>. It is like reading Gedcom entities/levels as a native format but events and places are not embedded: they are new entities.</div></div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-27T09:58:26-08:00</div>
+<div class="title">How many defined Facts do we need?</div>
+<div class="text">How many Events and Characteristics do we need to be defined in the BG Standard? (using "Events and Characteristics" as successors to GEDCOM's EVENT and ATTRIBUTE)<br/>
+<br/>
+There are at least 2 approaches:<br/>
+(1) Define the minimum set needed and let users created the rest as user-defined extensions (prefixed with an underscore in GEDCOM)<br/>
+(2) Define all those already in GEDCOM, plus ones that this group agrees are needed for important events and characteristics missed from GEDCOM, plus ensure they all have unambiguous definitions. (Plus allow user-defined extensions)<br/>
+<br/>
+These are 2 extremes but I am tending towards the (1) end of the spectrum.<br/>
+<br/>
+My reasoning goes like this:<br/>
+1. There are concerns about a long list that attempts to cover all "important" events. Firstly, we will find it difficult to identify what is globally important. Secondly, we will probably need to keep updating the standard as more people identify certain facts as being important to them.<br/>
+<br/>
+2. Russ said in the discussion on Person entity "Both the Sending and Receiving application would have to know what the Event ID means". At first I agreed with him - but thinking about it, this is only true for some cases. <br/>
+<br/>
+If I have an event "burble" (this is supposed to be a nonsense word) and record that the burble event happened to person X in New York on 31 March 1909, then all I want is that<br/>
+ - my software shows this on a report;<br/>
+ - I can transfer this on a BG file to another person, who uses some different BG-compatible software, without loss of data, so that (in particular), a report in this new program says something like "X burbled in New York on 31 March 1909; source: xxxxx, etc, etc"<br/>
+<br/>
+In other words, all I probably need to do is transfer my data and my template that turns the burble event into English. The end software doesn't need to understand anything about the burble event other than that.<br/>
+<br/>
+So, treating burble as a user-defined fact will suffice.<br/>
+<br/>
+Let's be clear - there are lots of facts that are so crucial, the software DOES need to _understand_ them and how they relate to other facts, etc. <br/>
+<br/>
+Birth, for instance, because the software needs to warn about entry of facts for this person before then and (perhaps) the birth event identifies the parents through the role they play. <br/>
+<br/>
+Death because the software needs to warn about entry of facts for this person after then, and if they are entered (e.g. probate), then perhaps omitting an age from a report on that event.<br/>
+<br/>
+Name because the application needs to highlight this on reports and diagrams.<br/>
+<br/>
+If we tend to this end of the spectrum then we might as well copy over the current GEDCOM tags into BG but there is no real need to worry about some of the other suggestions like certification, bond, etc. Just let those who want them define them as User-defined facts.<br/>
+<br/>
+What about getting unambiguous definitions? I think someone said "ordination needs properly defining". To be honest, I think the same holds. So long as the software can transfer all the data without loss, and both originating and receiving software can produce a sentence like "X was ordained into Y at York on 18 January 1827", then isn't that all we need?</div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-27T14:19:18-08:00</div>
+<div class="text">Mstransky, <br/>
+I think you posted into the wrong discussion?<br/>
+But anyway - "participant" sounds to me exactly like "role". "Roles" have been discussed somewhere around here already, and are pretty much agreed on (I think).</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-27T14:50:39-08:00</div>
+<div class="text">Testuser42 wrote, "Are there any lists of events that are universally agreed on to be "essential"?"<br/>
+<br/>
+I posted this information elsewhere. See BCG Genealogical Standards Manual, 2000 for particular conventions here in the States. <br/>
+<br/>
+Both Register and NGSQ style guides open a genealogical biography with what's called the "genealogical summary paragraph." <br/>
+<br/>
+Name <br/>
+Birth date and location (*)<br/>
+Death date and location (*)<br/>
+Parents names <br/>
+Marriage date and location (<strong>)<br/>
+Spouse's name, birth and death dates and locations and parents names.<br/>
+<br/>
+*Sometimes the best evidence of birth is baptismal date and location<br/>
+</strong>Not every person married, and not every person married only once. The marriage information (and spousal identification) is presented chronologically).<br/>
+<br/>
+Not off the top of my head. :) --GJ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-27T14:52:40-08:00</div>
+<div class="text">In the posting immediately above, Wiki formatting apparently abused my asterisks, and the materials to which they referred.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-27T14:54:03-08:00</div>
+<div class="text">P.S. &lt;&lt;Perhaps the originator of the thread wouldn't mind changing the subject topic to something other than "facts?"</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-27T15:05:44-08:00</div>
+<div class="text">BTW, sex gets in there also as "son of" or "daughter of"</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-27T15:10:06-08:00</div>
+<div class="text">Starting at the top here, my first concern is that we haven't defined this information more broadly. What are events, characteristics, etc?<br/>
+<br/>
+Moving down, I think we need to set a largish defined list of possible "TAG" (or "burble") types of this class. Using those in GEDCOM is a more or less decent starting point, but I certainly don't favor copying and pasting from that list.<br/>
+<br/>
+I think  it's a better idea to try to define as much data as possible rather than just letting things develop organically. Yes, we'll fail, particularly as we start talking about other cultures, but it's better to define more rather than less. <br/>
+<br/>
+I also agree that using a template concept in relation to these "TAGs" is a great idea. I have advocated using templates in lots of places, and this is certainly one in which such templates would be advisable. Still, I think we should define as many of them ourselves as possible to begin with. Why? If we define a DEATH tag and have others map to it, we avoid use of equivalent MORD tags and MORTE tags being developed and used when they in fact refer to the exact same type of data. There is a language mapping issue here that is not properly dealt with by allowing everyone to just call things whatever they like.<br/>
+<br/>
+I think a major difference moving forward is how easily new tag types can be developed and incorporated. Obviously, this is going to depend greatly on how developers implement this concept, but generally, any software vendor who wishes to remain viable is going to provide the flexibility to develop and adjust tag types to their users. Our problem won't be that the tag types are too restrictive or limited but rather that it's far too easy to proliferate unique tags that could otherwise benefit from proper category matching with tag types we define. Besides, the less we define, the less vendors are going to map to our definitions.<br/>
+<br/>
+Also please keep in mind that as an XML format using namespaces we help define, we could easily release monthly updates or something similar to add tag types. This isn't your granddaddy's GEDCOM standard we're discussing here.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-27T15:43:39-08:00</div>
+<div class="text">I'm just pretending I don't see the word "facts"<br/>
+<br/>
+Somewhere on the wiki someone had proposed BetterGEDCOM only work with predefined events (I like burbles).<br/>
+<br/>
+Having spent a life time working in "data" and due diligence, can tell you it would be a huge mistake to limit BetterGEDCOM to some pre-defined list. <br/>
+<br/>
+If Great Aunt Suzie wants to create a burble and call it Hospital Visits, I would hope BetterGEDCOM would transfer her work as a "Hospital Visit" burble. --GJ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-27T15:56:53-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+Is it fair to say that there may be a need for a common understanding between Application Developers of what a burble is. BUT, at the same time, the End User could create it's own term. The Sending application just packs up that term, sends the data along in a BetterGEDCOM file. When it gets to the other end, the Application could do one of two things, Pass the new term along to the End User, or to dump the new term into the bit bucket. Oh, there must be an error message presented to the End User that "I dropped this term into the bit bucket for this person".<br/>
+<br/>
+I do think, in some "Interface Agreement", a set of terms are documented and understood. The BetterGEDCOM project, might help create the beginnings of a Data Dictionary.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-27T16:37:32-08:00</div>
+<div class="text">One good reason for having standardized event types is translation, so lets have a long list of events in the "standard", possibly updated once in a while. <br/>
+<br/>
+And we must support user defined event types. <br/>
+<br/>
+A question is, what is defined for an event type in the standard, for example do we define permitted roles, or extra data fields (e.g. event attribute types - see Gramps events) that may carry things like the cause of death.<br/>
+<br/>
+For user defined events, I doubt that it will be possible to transfer "sentence construction rules" that will be used to create sentences. Is this what is called templates above?   <br/>
+<br/>
+Should it be possible to encode the definition of a user defined event type (the meaning) in a BG-file?</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-28T02:28:53-08:00</div>
+<div class="text">gthorud,<br/>
+<br/>
+Have you thought about WHERE this long list of events is going to be Stored? Who is going to update that list of Events? Who is going to Maintain or Monitor this list of Events?<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-28T05:11:12-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+Yes, I have thought about that. If you create a standard you should also make sure there is an "organization" that can maintain it. At least this is how I see it now. If there will be such an "organization" - time will show.<br/>
+<br/>
+Geir</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-28T05:53:36-08:00</div>
+<div class="text">In Gramps, we have a set of predefined set of events, but users can easily define their own. As mentioned, however, these "custom" events have no specific meaning, and really can't even be used by the software for, say, determining lifespan. For example, an even might be "moved burial to new location" which might happen long after a person's death.<br/>
+<br/>
+One trouble we have in Gramps currently is the documenting of a Relationship. This isn't a family, but something marked by a marriage event, and ends with a divorce or death. A Relationship Entity might be useful here [1].<br/>
+<br/>
+Gramps does have some event categories in the software to deal with a variety of issues. For example, we have the category of events related to death (we call these "fallback events"). Then, if a death isn't given, but a burial or wake is, we can deduce a probable death date.<br/>
+<br/>
+So, I agree that it would be great to have Categories of events of classifying new burbles to transfer at least some basic meaning of a custom event. Perhaps a Category is a series of properties:<br/>
+<br/>
+1. typically occurs near birth/childhood/adulthood/death<br/>
+2. involves a relationship with others (list)<br/>
+3. is a start/stop event type<br/>
+<br/>
+It would be great to have a dynamic, standardized, internationalized growing set of meaningful event types, and related data. For example, just today in Gramps we were discussing the best way to *abbreviate* a burble in a non-English language. Taking the first letter of each word doesn't always work. If this were a standard, we could request a new type, properties, and abbreviation, and translators could submit a good abbreviation for their language. <br/>
+<br/>
+Hope that is useful,<br/>
+-Doug<br/>
+<br/>
+[1] - <!-- ws:start:WikiTextUrlRule:19:http://gramps-project.org/wiki/index.php?title=GEPS_001:_Relationship_type_event_link --><a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=GEPS_001:_Relationship_type_event_link" rel="nofollow">http://gramps-project.org/wiki/index.php?title=GEPS_001:_Relationship_type_event_link</a><!-- ws:end:WikiTextUrlRule:19 --><br/>
+<br/>
+(In Gramps, we have a series of Gramps Enhancement Proposal for which this is one, and in fact the first one.)</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-27T10:25:28-08:00</div>
+<div class="text">Sorry if you may not like this..<br/>
+"4.Should Events in BetterGEDCOM apply to multiple persons? (An alternative could be to create a Group entity for this event and apply the Event to the single Group, then trace through the Group to the Persons concerned)"<br/>
+<br/>
+The concept of making people grouped to a certain "Activity/timestamp" were many argue how to use "Event"<br/>
+<br/>
+What about a Event that pionts to a source document such as a census/repo that has your data about the source date place type of material title and such.<br/>
+<br/>
+Now to link a person as a group to the source without clashing the term EVENT. What about "Participant?" That could link to the personID roll date and such.<br/>
+<br/>
+Now how one tries to tie all the people involved to a WHOLE they can say who was tied to this census home dwelling, or wedding event. that event/source has a sourceID<br/>
+<br/>
+Then you could just select that source ID and see all the entries associated "LINKED" to that source<br/>
+<br/>
+Participant Entry SourceID14 also points to person77<br/>
+Participant Entry SourceID14 also points to person78Participent Entry SourceID14 also points to person56<br/>
+<br/>
+Would a participant LABEL help define that personid, persons roll, aka name, date place etc...and can be linked to a source as well.<br/>
+<br/>
+Maybe I am wrong? I just figured people what event for a predefined term, yet others would like to capture aka info of a person in a place and time. I thought a "Participant" could maybe handle and define the roll of that person and identify MANY persons group to a source as in grouping the Participants of an event.<br/>
+<br/>
+Which ever way you see it, I never heard that term used but might be able to define better without taking away from other terms for the same thing.<br/>
+<br/>
+I dont know, maybe it helps maybe it don't? What do you think?</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-27T10:41:56-08:00</div>
+<div class="text">Maybe a scholery way to say it is, Those who Like to keep event as a time, place record as a source of data.<br/>
+indivual data as person tems<br/>
+<br/>
+Maybe a term "Participant" can capture that persons irregular aka name, various roll and such as a bridge between the person and an event source?</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-27T14:15:59-08:00</div>
+<div class="text">Adrian, I agree with your approach. It would be a never ending story to exactly define every imaginable evente or attribute. <br/>
+<br/>
+As for the most basic event types that NEED to be exactly defined and well understood:<br/>
+Somebody (Christoffer?) had the idea of having "classes" of events. So that people could use their own exotic events but sort them into a class that is standard. Something like <br/>
+event type=ceasarean; class=birth<br/>
+or<br/>
+event type=drowning; class=death<br/>
+<br/>
+I kind of like that, but I'm not sure if that would be better than just having notes to the standardized events. The event "death" should  have a "cause" anyway, and if that's not enough, a note would be.<br/>
+<br/>
+Are there any lists of events that are universally agreed on to be "essential"?<br/>
+<br/>
+From the top of my head, I'd say<br/>
+Birth <br/>
+Marriage (or "union" of any kind) <br/>
+Death<br/>
+Adoption<br/>
+maybe Burial<br/>
+maybe "Religious Confirmation" (what's a neutral term for all the different things like baptism, confirmation, bar mitzvah, ... ?)<br/>
+?<br/>
+<br/>
+Attributes might be <br/>
+Religion<br/>
+Occupation (or is this an event?)<br/>
+Habitation (event?)<br/>
+Appearance (not so important)<br/>
+?</div></div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-27T10:18:07-08:00</div>
+<div class="title">Qualifying Locations for Events?</div>
+<div class="text">I have just updated the main page to point out that some events (e.g. emigration) could justifiably refer to two locations - the from and to-locations - instead of the single location that the GEDCOM standard provides. (The software I use, Family Historian, allows this through an extension tag)<br/>
+<br/>
+This then leads us into considering whether the emigration location in people's existing files is the from or to-location. Well, we'll probably never know, but the user will, so I suggest that to avoid such confusion in future we allow a qualifier for the location so that the meaning for a location doesn't just default to "at" but can be adjusted to "from" or "to".<br/>
+<br/>
+Another useful qualifier would be "near" as I know my great uncle was killed at the Battle of Messines. How do I record that? Using "Battle of Messines" as the place-name works but is illogical as that is an event. The village of Messines itself is a distance away - if I could enter "near Messines" with Messines as the place and "near" as a qualifier, then that would be good.</div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-27T15:26:30-08:00</div>
+<div class="text">With out making a big thing about a data set needing to and from fields for one source.<br/>
+<br/>
+You could enter two person evidance for the same source<br/>
+<br/>
+John McMiller leaving port Ireland<br/>
+John Miller arriving at ellis island<br/>
+<br/>
+<br/>
+Just a thought since many Hard Documents have a single date ofr the time an event took place.<br/>
+<br/>
+With Migrating we could still say departure for a timestamp of the person<br/>
+and another timestamp for arrival?<br/>
+<br/>
+Yes no?</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-27T15:56:44-08:00</div>
+<div class="text">Mstransky, yes. With migration, you could divide that into two. But I still think that sometimes you wouldn't want to (e.g. if the source says "X migrated from Ireland to Canada in the 1840s" maybe you would just want to call that a migration, because it's the term in the source?)<br/>
+And there _might_ be other events with a need for more than one location. I'm trying to come up with one, but it's not easy (and I'm tired).<br/>
+<br/>
+Russ, qualifiers are part of the data. If a some event took place "near" New York, then that's worth recording as such. <br/>
+If qualifiers aren't saved, we could only use notes or free-form locations to record this - this is what I'm doing in my software now. It works, but it isn't very easy to sort locations that way. <br/>
+A qualifier could possibly be saved as an optional attribute to the place-reference inside an event. I'm sure the techies will find a good place to store that information.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-27T15:59:10-08:00</div>
+<div class="text">testuser,<br/>
+<br/>
+Where are these Qualifiers "Saved"?<br/>
+<br/>
+Not disagreeing with Qualifiers, only where this information is saved.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-27T16:03:01-08:00</div>
+<div class="text">"And there _might_ be other events with a need for more than one location. I'm trying to come up with one, but it's not easy (and I'm tired).<br/>
+"<br/>
+<br/>
+I just posted to the <!-- ws:start:WikiTextUrlRule:5:http://bettergedcom.wikispaces.com/message/view/Location+entity/30668879 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Location+entity/30668879" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Location+entity/30668879</a><!-- ws:end:WikiTextUrlRule:5 --><br/>
+<br/>
+I was trying to make a universal equivelant for location aka names like how a persons aka names are handel.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-28T06:27:24-08:00</div>
+<div class="text">Russ,<br/>
+Where are these Qualifiers "Saved"?<br/>
+<br/>
+Well, in the BG-XML. If I want to transport my research, all my information needs to be saved into the BG. Internally, the software may use its own database.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-28T07:17:27-08:00</div>
+<div class="text">Qualifiers? what would that look like to be stored or selected in a database?<br/>
+<br/>
+My way but disregard my TAGS till a BG format is obtained.<br/>
+<br/>
+Qualifiers-----------<br/>
+examples I love them!!!<br/>
+"mixing up what I call a source (like a book) and evidence (like a passage that says John Smith was born in 1888 in Hackensack, NJ)"<br/>
+<br/>
+Person 232, John Smith<br/>
+Person 287, mary Jones<br/>
+<hr/>
+participant 65, "Book", SID@5 John Smith, birth 1888, pg12 RATING etc..<br/>
+participant 89, "Book", SID@5 John Smith, Blue eys, pg17 RATING etc..<br/>
+participant 68, "Marriage", SID@9 Husband, SID@66 John Smith, 1901, RATING etc..<br/>
+<hr/>
+source 5 "Book", Miller Trails, auther, etc...<br/>
+source 9 "Certificate", Ok, Ok city etc...<br/>
+<hr/>
+<br/>
+One can see John smith {232} has attached files 65, 89, 68, if pulled or display can be<br/>
+"John Smith" default dates&amp; places<br/>
+   &amp; Chronological Order<br/>
+       1888 Hackensack, NJ, Born .....[e65]<br/>
+       1888 Blue eyes charateristics..[e89]<br/>
+       1901 Married Jane Jones .......[e68]<br/>
+<br/>
+If one click on the [e68] person-evidence<br/>
+a event marriage certificate data comes up<br/>
+"Marriage Certificate" (people attached to an event)<br/>
+   1901 Holy Church, 128 St. Street, Hackensack, NJ....[]<br/>
+        List of Participants<br/>
+        Groom John Smith ...[@232]<br/>
+        Bride Jane Jones ...[@287]<br/>
+        Witness Tim Jones ..[@112]<br/>
+        Witness Mary Smith .[@131]<br/>
+<br/>
+The user ha all the flexiblity to a block of data anything they want, Immegration, or migration, eivdence, neg evidence. IF someone gets a copy of the info and belives it should be tagged differently they pull down the label secltion choose click done!!! but the data still stays the same. <br/>
+<br/>
+Also other functions can sort like locations and dsiplay all the collected data sets gathered for a location/area like above.<br/>
+<br/>
+I know Iknow this looks foregin to you I am on a learning curve here to change my db to change my tags to ones that you are using so anyone can follow the data without getting confused by what I tag the data node.<br/>
+<br/>
+So when I explain how I do it I talk like I have marrbles in my mouth for not using the tag use by your methood. <br/>
+<br/>
+But I don't loss any data. my labels would/will be selectable from the app side<br/>
+<br/>
+johns data<br/>
+0 [Birth], 1 date, 2 place, (data that was inputed)<br/>
+I get a copy an see it is not a Migration but a immegration. I go to the pull down and change it to Immegration.<br/>
+0 [Immegration], 1 date, 2 place, (data that was inputed)<br/>
+<br/>
+OTHER PROGRAMS cut strings data out at times.<br/>
+No data had to be copied and pasted into another field, the data was not forgotten/missed by a converter/parse the whole line set.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-28T08:15:28-08:00</div>
+<div class="text">testuser,<br/>
+<br/>
+Another new term.<br/>
+<br/>
+BG-XML<br/>
+<br/>
+Now we are getting to the issue and hand and the scope of this project.<br/>
+<br/>
+BetterGEDCOM = Data<br/>
+<br/>
+XML = a way to transport data<br/>
+<br/>
+At least that is how this project started<br/>
+<br/>
+Applications on a computer somewhere, houses the DATA, as entered by an EndUser. The EndUser wants to Share that Data with another EndUser. The application packages up the Data, as defined in the BetterGEDCOM, XML (if that is the vehicle) sends the BetterGEDCOM to the other user. The other User's application unpacks the BetterGEDCOM, and presents that Data to the other EndUser.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-28T08:51:38-08:00</div>
+<div class="text">An example that would use two places is when "Peter bought a part of farm X and called it Y".<br/>
+<br/>
+There is obviously a need for "qualifier", but i would suggest that it is called a prefix instead of qualifier (or can a qualifier be a postfix?)</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-28T10:32:05-08:00</div>
+<div class="text">Russ, I think we're saying the same with different words (as appears to happen often here ;-)<br/>
+<br/>
+I should have said "the BetterGedcom file" or "BG-XML-file" instead of BG-XML.<br/>
+<br/>
+BetterGedcom isn't just data, though - it's a structure for data, a set of rules. Or am I wrong there?<br/>
+Data that is structured in accordance to the BetterGedcom rules can be written in a file. To do that, we need a syntax. XML might be the best choice for syntax.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-28T12:14:13-08:00</div>
+<div class="text">testuser,<br/>
+<br/>
+Data must have structure. Not sure what 'rules' mean. Data structure and rules, in my mind are not the same. What if a 'rule' is broken? If the Data Structure is not followed, the data won't be delivered as intended.<br/>
+<br/>
+I'll leave the XML Syntax up to you Techie folk. I am not qualified to make that decision. However, the decision needs to be make as a community. The end user, needs to know the impact on the end user when that choice is made. Accuracy and Performance is the top two 'requirements', for me at the moment. But the technology chosen may offer some trade offs.<br/>
+<br/>
+Just one users opinion.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>Christine_E</strong> 2011-07-07T22:12:29-07:00</div>
+<div class="text">My immigrants went through more than 2 places.  They didn't just go from Hamburg to New York.  They went from (small town in Europe) to Hamburg to New York to (small town in USA).  Even if you just want to focus on what the passenger list says (depending on the year, one or both small towns could be listed) and only want to record ports/airports when a country is exited/entered, many people immigrated by going through London or Liverpool and changing ships.  Their records show 3 countries with England being the middle one.<br/>
+<br/>
+Other examples of events with more than 2 places are 9-11 attack, an accident where the patient is transported to multiple hospitals, D-Day which took place on 5? beaches, a crime spree.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-07-08T04:30:39-07:00</div>
+<div class="text">Agreed - we've got the possibility of this in the Requirements Catalogue under Data-Event02 Multiple places per event. The "Way Forward" includes:<br/>
+ - Analyse whether there is a need for more than two places per event - e.g. "from", "to", "via";<br/>
+ - Analyse whether location-roles are mandatory, optional or forbidden. (Location-roles refers to the role that a location plays in an event. Examples of roles are "from" and "to". Locations without roles would be just listed, e.g. "The 1906 earthquake happened at X and Y")<br/>
+ - If roles are needed - what are the roles?<br/>
+<br/>
+There's also a discussion for it as "Data-Event02 - Multiple places per event", where I seem to have been initially against "via" locations for the complexity they brought and then realised that it was simple, not complex, to design XML (or whatever) to include them so it made far more sense to include them as you suggest.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-27T14:23:34-08:00</div>
+<div class="text">I don't know about GEDCOM, but there is software that allows for qualifiers. It would surely be good to save them in the BG.<br/>
+<br/>
+Yes, there might be a need for more than one location to an event. I hope that this wouldn't be a problem in BG.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-27T15:12:48-08:00</div>
+<div class="text">testuser,<br/>
+<br/>
+Save them where?<br/>
+<br/>
+What is the BetterGEDCOM going to save? Isn't the purpose of a BetterGEDCOM to be data from one application to another application?<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-27T15:20:00-08:00</div>
+<div class="text">Emigration refers to a place you're coming from.<br/>
+Immigration refers to a place you're going to.<br/>
+Migration refers to moving between two places.<br/>
+<br/>
+Good point, though. What else might need two places? This is a new idea, so I think we'd need some pretty well-defined examples to get people to buy in to this generally. As usual, what seems to us a simple concept isn't so simple when you start getting into its data aspects.<br/>
+<br/>
+We definitely should accommodate qualifiers. What are they?<br/>
+<br/>
+Near, outside, suburban?, not?</div></div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-27T11:45:50-08:00</div>
+<div class="title">"participant" as a Bridge</div>
+<div class="text">With the many ways people have used events for people and actual places conflicting in the proper use of the term. And where to use negitive or proof of data comments.<br/>
+<br/>
+I would like to propose the idea of "Participant"<br/>
+<br/>
+Keeping EVENT as a source records Time and place.<br/>
+<br/>
+With "Participant" can act as a bridge between PersonsID and actual Source/DocumentID<br/>
+<br/>
+So as event defines a sources "timestamp" place, date, title, such and such data.<br/>
+<br/>
+The "Participant"  defines a persons "timestamp" of data use at the time of the event found within the sources information.<br/>
+Aka names, age, dates, roll, charateristics, data such and such.<br/>
+ALSO within this line set of data I researcher/genealogist has the ability to show/notes if data is conflicting, mis read, translated, citations, chareteristics, data right wrong. etc...<br/>
+<br/>
+This "Participant" can link the personID individaul to the source/event document data.<br/>
+<br/>
+Also if one wishes to view a Source/event document they can see all the "Participant(S)" which point to it and the names and rolls they played. And further from each "Participant line set id" is linked to the individaul ID.<br/>
+<br/>
+I thought this would better define a PERSONS Participation in an event, while the event can remain a seperate thing.<br/>
+<br/>
+Let me stop here, Just trying to help both sides maybe have a place that seems best to call it what it is, The persons "Participation" IN and "event".<br/>
+<br/>
+What do others think?</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-28T03:45:17-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+I don't make a distinction between the transport of the data and the use of the data. My rationale is that you must be able to transport the data used by genealogical programs. To do that you must understand the kind of data a modern genealogical program will need. I think much of the problem with GEDCOM stems from the fact that GEDCOM can only hold the bare bones of genealogical data, so any use of GEDCOM as a transport medium causes loss of data. To keep BG from being a data lossy transport mechanism (which I believe should be the first requirement of BG) I think it best to think through the data needs of genealogical software first.<br/>
+<br/>
+If you read the last three sentences in my last response on this thread you will see your niece situation. You should never have to throw any data on the floor. Here is a possible ways to add records to your database when you get a phone call about your new niece. The first example is the pedantic, fully research oriented approach. Alternative follows.<br/>
+<br/>
+These are all new records added to your database:<br/>
+<br/>
+event: [id: e1; type: birth; date: "event date" placep: [id: p1] birth rolep: [id: i1; role: father] rolep: [id: i2; role: mother] rolep: [id: i3; role: child] sourcep: s1]<br/>
+person: [id: i1; name: "Dad Name" rolep: [id: e1; sex: m; role: father] sourcep: s1]<br/>
+person: [id: i2; name: "Mom Name" rolep: [id: e1; sex: f; role: mother] sourcep: s1]<br/>
+person: [id: i3; name: "Child Name" rolep: [id: e1; sex: f; role: child] sourcep: s1]<br/>
+source: [id: s1; type: phonecall; note: "Description of happy phone call from by brother telling me about the birth of his new baby girl"]<br/>
+<br/>
+And because your brother and sister-in-law are already in your database, you then add the new persons, i1 and i2, as sub-persons to their conclusion persons.<br/>
+<br/>
+Alternatively you could eschew all these extra persons and create a new birth event but make the father and mother role pointers point directly to your final person records for your brother and sis-in-law. Then you would just create the minimum number of records to record the new information -- a person record for your niece, a birth record for her birth, and a source record for how you found out about it. Or since this is for close, still living relatives you are intimate with, don't even bother with a source record, just add a single birth event record and a single new person record.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-28T04:02:45-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Wow. Finally an entry that I understand. Thank you.<br/>
+<br/>
+Earlier in this thread, and elsewhere, you use the term Evidence Person, Conclusion Person, and other terms, as I recall. How or Does that fit in with what you just said.<br/>
+<br/>
+If you keep those terms out of the discussion, what you said really makes sense. The BetterGEDCOM should package up that data and send it along. At the other end, unpackage it, no loss of data.<br/>
+<br/>
+Its those terms, that need to be clearly defined, and I think you have done that, AND agreed to by those applications that want to use the BetterGEDCOM to share our research.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-28T04:04:42-08:00</div>
+<div class="text">Greg re "This topic deserves its own thread on the proper page"<br/>
+<br/>
+Where are you going to put this? If you're referring to the process of extracting "conclusions / current hypotheses" from "evidence", and where do we put them in the BG model? then I suggest it's a major, major topic that needs to be easily visible in the side-bar. <br/>
+<br/>
+And if you are going to create such a page then I'll hang fire with my thoughts and questions and ramblings about what happens to the characteristics and events associated with the input evidence person and how they relate to the output conclusion person.<br/>
+<br/>
+(Incidentally - re your comment that says "mixing up what I call a source (like a book) and evidence (like a passage that says John Smith was born in 1888 in Hackensack, NJ)" - maybe I am, I wouldn't be surprised, or maybe it's that we have a different view with different unspoken interpretations about what's what. Either way we need to tackle this more obviously...</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-28T06:14:10-08:00</div>
+<div class="text">Tom said:<br/>
+<br/>
+"...As we did learn that Gramps would allow you to encode the 100 events that the 100 persons come from, and then allow you to have a single person refer to all 100. This is a partial solution to the problem. In LifeLines program one can go much further. Even though the LifeLines database is pure Gedcom, it is Gedcom syntax, not a Gedcom standard, so users are free to invent tags with their own new conventions. Then the user programmability part of LifeLines allows users to write programs that understand and use the new conventions."<br/>
+<br/>
+I don't understand how LifeLines goes "much further". Of course, *any* software which allows you programmatic access to the data would allow "users to write programs that understand and use [their own] new conventions." That includes Gramps, which uses a well-known, easy-to-use language rather than one that is limited and invented purely for this usage. Gramps even has a standardized method of sharing these extensions (called Addons) that can provide GUIs, and connections to other software. See <!-- ws:start:WikiTextUrlRule:8:http://gramps-project.org/wiki/index.php?title=3.2_Addons --><a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=3.2_Addons" rel="nofollow">http://gramps-project.org/wiki/index.php?title=3.2_Addons</a><!-- ws:end:WikiTextUrlRule:8 --><br/>
+<br/>
+Or did I miss something?<br/>
+<br/>
+-Doug</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-28T07:38:15-08:00</div>
+<div class="text">Doug,<br/>
+<br/>
+No, I missed something. I wasn't aware of the Gramps report programming or plug in schemes. I imagine the report writing scheme has the same features as the LifeLines approach. The plug-ins goes further than anything in LifeLines.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-28T08:27:12-08:00</div>
+<div class="text">Hey tom just a thought,<br/>
+<br/>
+event: [id: e1; type: birth; date: "event date" placep: [id: p1] birth rolep: [id: i1; role: father] rolep: [id: i2; role: mother] rolep: [id: i3; role: child] sourcep: s1]<br/>
+person: [id: i1; name: "Dad Name" rolep: [id: e1; sex: m; role: father] sourcep: s1]<br/>
+person: [id: i2; name: "Mom Name" rolep: [id: e1; sex: f; role: mother] sourcep: s1]<br/>
+person: [id: i3; name: "Child Name" rolep: [id: e1; sex: f; role: child] sourcep: s1]<br/>
+source: [id: s1; type: phonecall; note: "Description of happy phone call from by brother telling me about the birth of his new baby girl"]<br/>
+<br/>
+I see alot of data repeats that link my pattern useing your data<br/>
+<br/>
+person: [id: i1; name: "Dad's Name" rolep: [id: e1; sex: m; ] event: e1]<br/>
+person: [id: i2; name: "Mom's Name" rolep: [id: e1; sex: f; ] event: e2]<br/>
+person: [id: i3; name: "Child's Name" rolep: [id: e1; sex: f; ] event: e3]<br/>
+<br/>
+<hr/>
+event: [id: e1; birth rolep: [id: i1; role: father] sourcep: s1]<br/>
+event: [id: e2; birth rolep: [id: i2; role: Mother] sourcep: s1]<br/>
+event: [id: e3; birth rolep: [id: i3; role: Child] sourcep: s1]<br/>
+<br/>
+---<br/>
+source: [id: s1; type: birth; date: "event date" placep: [id: p1] type: phonecall; note: "Description of happy phone call from by brother telling me about the birth of his new baby girl" ]<br/>
+<hr/>
+<br/>
+<br/>
+<br/>
+Mine is alittle more compact then this but still achives the linkage between relations and for template display by apps or programs.<br/>
+<br/>
+But still a source can pull linked event listed and then pull the persons via the events.<br/>
+this would show all people list involved with that event.<br/>
+<br/>
+Not the greatest to rewrite another work, becuase niether example has all the data that could be represented as a whole but I thought it a simple to show you my thinking useing your lingo. just two ways to hold the same data.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-28T08:35:39-08:00</div>
+<div class="text">"Mine is alittle more compact then this" I me my off line then this example.-Mike<br/>
+<br/>
+these all are seprate areas so that events are not jumbled at diffrent tiers inside other nodes and more like a flat file which can be imported/exported from excel, csv, access tables, without any thing being complex with an untold number of complex child nodes. the more comlex the more complex parse and apps have to be written to read identify where to find and pull the date.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-28T09:16:15-08:00</div>
+<div class="text">I note in my example that I put the sex attribute in the wrong place.<br/>
+<br/>
+For example:<br/>
+person: [id: i1; name: "Dad Name" rolep: [id: e1; sex: m; role: father] sourcep: s1]<br/>
+<br/>
+should be:<br/>
+person: [id: i1; name: "Dad Name"; sex: m; rolep: [id: e1; role: father] sourcep: s1]<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-28T09:21:37-08:00</div>
+<div class="text">Mike writes this:<br/>
+<br/>
+event: [id: e1; birth rolep: [id: i1; role: father] sourcep: s1]<br/>
+event: [id: e2; birth rolep: [id: i2; role: Mother] sourcep: s1]<br/>
+event: [id: e3; birth rolep: [id: i3; role: Child] sourcep: s1]<br/>
+<br/>
+In my example I have one event record to represent the birth of the girl, and that event has three roles. Here you are creating what looks like three different event records, none with date or place, and each with one of the three roles, so I am confused by your approach.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-28T10:05:36-08:00</div>
+<div class="text">No biggie on the missing info from your previous post, that is why a stated that this is an incoplete data set for any one to compare apples and oranges, but they are still friut.<br/>
+<br/>
+"In my example I have one event record to represent the birth of the girl," I would also.<br/>
+<br/>
+Here you are creating what looks like three different event records, none with date or place.<br/>
+YES Ture, the Source record lets say a marriage for the better part of an example.<br/>
+<br/>
+source: [id: s1; "marriage" "certificate" date, place, etc..<br/>
+<br/>
+when looking at the document one sees there are 4 people listed the groom, bride and two witnesses, you can even include the minister and cleck if you wanted too.<br/>
+<br/>
+Ok you scan the document for the img archive C: or root/ <br/>
+[s1] "certificate" "marriage at churh of light" "date", "place", ref-img212, ...etc<br/>
+<br/>
+this document gets the type of doc, title of doc, date on document processed, place of record, and other notes &amp; data.<br/>
+now you already have people in your navigation tree you want to connect thier rolls and aka names or aka dates<br/>
+<br/>
+[e1] [person12] "marriage" "date" "names or aka", "Groom", "title" etc.. {s1}<br/>
+[e2] [person65] "marriage" "date" "names or aka", "Bride", "title" etc.. {s1}<br/>
+[e3] [person83] "marriage" "date" "names or aka", "Witness", "title" etc.. {s1}<br/>
+[e4] [person99] "marriage" "date" "names or aka", "Witness", "title" etc.. {s1}<br/>
+<br/>
+Now when a person whish to view John Smith [person12] at the tree display level<br/>
+John Smith<br/>
+ --records can be matched for p12 from e list---<br/>
+         1907 Jonathan Smith &amp; Mary Jones Wedding, {iconlink s1}<br/>
+<br/>
+<br/>
+someone viewing this says hogwash they were marriage in 1908 so they can click or pull the source<br/>
+<br/>
+Source1<br/>
+      "marriage at churh of light" <br/>
+--records can be matched for s1 from e list---<br/>
+  here you list all parties recorded at the event. then the link can take you to th eperson level if needed.<br/>
+<br/>
+A source document has its own title recorded Jan 13th 1908 issue , while it may say this year our lord Dec 27th 1907. Many time source document are reprinted years later to confirm an event too place.<br/>
+<br/>
+Tom and all, I was not trying to say this that is wrong, just that diffrent ways can get the same results of the data. <br/>
+<br/>
+Tom I feel for you and myself, we are trying to show examples with imaginary data, not like we have a Beta data set to work with so we can capture what is presented to either of us.<br/>
+But I did enjoy being able to see your set up with data to understand this<br/>
+<br/>
+you ytag = zdata<br/>
+mine rtag = zdata<br/>
+<br/>
+I was talking tags that you would use for something else. Put I am trying to get to the page everyone agrees the Ztag means Zdata.<br/>
+<br/>
+Anyone knows either examples here or there dont represent a full set of data, sooner or alater someone will come along and say your missing this data or where do I stick "Blue Hair?". <br/>
+<br/>
+I like how some just explained all this xml format example &amp; styles does clutter the boards. But without it people have no navigation how, where, when it will be used.<br/>
+<br/>
+someone term the XML will be done its own way in an app, when transffering it from one to another format will be the BG-xml format to be imported to another. The BG-model describes what  is going to be captured but NOT how it will look like in this BG-xml that is not here yet. so we/ errr I should stop posting examples that have no wieght yet to compare it to "nothing yet xml structure", it just raises more questions doing like I have.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-28T10:26:58-08:00</div>
+<div class="text">Adrian asked,<br/>
+"Where are you going to put this?"<br/>
+<br/>
+Well, this is now a discussion about Tom's data model, not about the original discussion. If I were going to "put this" somewhere, it'd be on Tom's pages where he discusses his data model. But that's how discussions work: They take their own turns, and that's just the way it is.<br/>
+<br/>
+There. I changed the Subject. Maybe that will help.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-28T10:39:11-08:00</div>
+<div class="text">I have responded here, on Tom's pages about his data model:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:4:https://bettergedcom.wikispaces.com/message/view/DeadEnds+Model/30823533 --><a class="wiki_link_ext" href="https://bettergedcom.wikispaces.com/message/view/DeadEnds+Model/30823533" rel="nofollow">https://bettergedcom.wikispaces.com/message/view/DeadEnds+Model/30823533</a><!-- ws:end:WikiTextUrlRule:4 --><br/>
+<br/>
+Obviously everyone can do what they want, but this is about Tom's data model now, so his pages seem a far better place to discuss this..</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-27T12:04:56-08:00</div>
+<div class="text">This is the same concept as the "evidence person."<br/>
+<br/>
+An evidence person is extracted from the same evidence as an event so has the properties of the person described in the evidence. Probably the most important of these properties, genealogically speaking, is age. Evidence persons often have ages because they are defined within the context of an event and the time that the event occurred, and events often mention the ages of the role players. Think of a marriage certificate that mentions the ages of the bride and groom; think of a census records that gives the ages of the members of the household.<br/>
+<br/>
+No new concept needed; we' got that one covered.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-27T12:19:27-08:00</div>
+<div class="text">so "evidence person" captures the persons<br/>
+aka names<br/>
+aka age<br/>
+aka roll in event<br/>
+aka "ifthat" is supporting or conflicting data notation<br/>
+AND THAT<br/>
+No date, No place since the person being tied to an event suffice sine the event captures the date, place and record data of the in hand documents?<br/>
+<br/>
+Why duplicate place and place names if the source contains it already. Does "evidence person" supplemnt data from EVENT without duplication from the many persons associated with the source?<br/>
+<br/>
+Also does "evidence person" link to such a source that when you reverse the the linking data you can view oall the people involve from the event/source documents?<br/>
+<br/>
+Sorry I am a hands on kind of person, I seen a few examples here and there and conflicts that <br/>
+people have pointed out wishfull uses and how other terms people get use too are used differently across softwares and peoples habits.<br/>
+<br/>
+Ok if you have that covered I leave it at that.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-27T13:12:33-08:00</div>
+<div class="text">The evidence persons capture all those things, and as you surmise, have no dates or places since the events have them.<br/>
+<br/>
+Events have dates and places extracted from source/evidence. The source/evidence has the text that describes the event and persons, so includes the text about date and place, but there are no explicit data and place objects associated with the sources records themselves (here we are not talking about BG, which has still to address these ideas, but to the DeadEnds model). Actually most people now want places to be their own objects in their own hierarchy, with the events then referring to them, and I agree this is good.<br/>
+<br/>
+In the DeadEnds model, not the BG model, which isn't at this point of detail yet, the events and the persons associated with them as role players have two way links to each other (the "role pointers"), and also the events and persons each refer to their source as well (the "source pointers"). There is redundancy in these pointers but they don't require much space, and there are easy ways to limit their number should someone feel compelled to squeeze bytes.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-27T13:17:18-08:00</div>
+<div class="text">In reading this it's apparent how much information can be sliced and diced and mixed with opinion and analysis by different folks and the approaches they take.<br/>
+<br/>
+Every point at which information is entered into a genealogical computer database has at least a small allowance for analysis and interpretation. No information entered is absolutely free of analysis. This is important to note.<br/>
+<br/>
+There are lots of places to delineate the parts of data from one another in genealogy. Today's genealogy software uses what is often called a conclusion-based model because the model allows entry of information into a database only as support of a particular conclusion or fact. Any change of the conclusion can alter or destroy the previous entry of supporting information. Moreover, it is difficult if not impossible to enter information that does not directly support a conclusion.<br/>
+<br/>
+This problem has been widely known for the better part of two decades. Newer genealogy data models have embraced various fixes to this problem with emphasis on information extracted from source documents rather than the conclusions the information supports.<br/>
+<br/>
+The above certainly delves into this question of how to define and categorize bits of data.<br/>
+<br/>
+In looking at genealogical data, there is a problem between representing real people and how/when/why someone determines someone referred to in evidence from a source actually refers to a real person represented in a database.<br/>
+<br/>
+Defining a "participation" relationship to a piece of evidence (which, by the way, is often just a small part of what is documented as a source) and a real person as represented in a database misses the point a little, from my perspective. The role should be defined in the piece of evidence. There also might be numerous persons of the same or similar names in the evidence. I think the linkage should be from the identity used in the evidence (i.e., the evidence-person) to the real-life person representation. This more detailed linkage is clearer.<br/>
+<br/>
+You're probably aware of several of us using terms defined in Elizabeth Shown Mills's work, Evidence Explained (First Edition (c)2007, Second Edition (c)2009). This is in direct support of our effort to include concepts used in scholarly genealogy in a data model of the future (whether or not we can immediately do so).<br/>
+<br/>
+Mills's model is no absolute authority, but is as close to one as we have. The current discussion compels me to point out how this sort of discussion is being dealt with in other places, as I'm not sure I understand the delineation of the data you suggest has solid foundation in any such underlying concepts.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-27T13:22:28-08:00</div>
+<div class="text">"Why duplicate place and place names if the source contains it already?"<br/>
+<br/>
+I like to remove duplication but I would say that in this instance, they way that I personally would use a Source record currently, the Source would have no more than a free-form text version of what's in the source. (Indeed, I've gotten quite lazy and even omit that if I've got a clear image of the page in question - probably naughty of me).<br/>
+<br/>
+Therefore, the source record would not specify, in a machine readable form, any of the names, ages, places, etc. <br/>
+<br/>
+The genealogist would manually extract information from the text of the source, and apply it to the evidence person and the evidence person's events. So at this first stage, the information would be entered in one place only. There might well be similar words in the text of the source, but that's it.<br/>
+<br/>
+Now, if you were to codify the source as part of the source record, that might be a different thing - but in effect, that's what the evidence person does.<br/>
+<br/>
+NB - I like the name Participant.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-27T13:30:37-08:00</div>
+<div class="text">Greg says, "Defining a "participation" relationship to a piece of evidence (which, by the way, is often just a small part of what is documented as a source) and a real person as represented in a database misses the point a little, from my perspective. The role should be defined in the piece of evidence. There also might be numerous persons of the same or similar names in the evidence. I think the linkage should be from the identity used in the evidence (i.e., the evidence-person) to the real-life person representation. This more detailed linkage is clearer."<br/>
+<br/>
+Here is the DeadEnds person content rule:<br/>
+<br/>
+personName? sex personAttr* eventRoleRef? vital* relationRef* personRef* urlRef* note* noteRef* sourceRef*<br/>
+<br/>
+There are three key items in this rule that bear on the discussion:<br/>
+<br/>
+1. eventRoleRef -- This person may refer to an event using a role reference, stating that "I played this role that that event."<br/>
+<br/>
+2. personRef -- The person may refer to any number of other persons records, stating that, "I am a hypothesis/conclusion person who was concluded/hypothesized into existance by combining all the person records bering referred to here.<br/>
+<br/>
+3. sourceRef -- This person may refer to a source that justifies the person's existence either by referring to evidence or by referring to a conclusion reached by the researcher.<br/>
+<br/>
+I think this model covers both linkages Greg refers to. Unlike Greg, if I interpret him correctly, I don't believe either is more important than the other, and together they don't miss any points.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-27T14:25:46-08:00</div>
+<div class="text">personName? sex personAttr* eventRoleRef? vital* relationRef* personRef* urlRef* note* noteRef* sourceRef*<br/>
+<br/>
+Tom I do it the same way my tags qre equl to your model<br/>
+PID = personRef*<br/>
+SID = sourceRef*<br/>
+EID = evidence-person<br/>
+<br/>
+It just to bad we dont have the same DATA to input it into our own formats, then each of us can view the others BY THE KNOWN DATA and understand how the other stores it and how its functionallity will come about.<br/>
+<br/>
+But since there is no beta DATA to be used as a rosetta stone to interpet the others functions and terms.<br/>
+<br/>
+I think we do have the same best efficent functions in mind, but we lose each other a bit until what we are going to call "x".</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-27T16:00:56-08:00</div>
+<div class="text">Adrian, You're mixing up what I call a source (like a book) and evidence (like a passage that says John Smith was born in 1888 in Hackensack, NJ). Right now, we jump directly from source to an event (conclusion), skipping evidence. There's no decided-upon solution here, but I would suggest we record evidence as subjective and map objective people (and perhaps places) to that evidence.<br/>
+<br/>
+Tom,<br/>
+<br/>
+I still haven't comprehended your data model. In this post, you refer to: <br/>
+<br/>
+"3. sourceRef -- This person may refer to a source that justifies the person's existence either by referring to evidence or by referring to a conclusion reached by the researcher."<br/>
+<br/>
+I don't understand this yet. To me, a source is like a book. The linkages a source makes are only to pieces of evidence in my way of thinking.<br/>
+<br/>
+I do like your tree structure, but there are 2 problems:<br/>
+1. How does this map to today's software? and <br/>
+2. This concept is still bat-dropping absurdity (to slightly rephrase the sentiment) for most folks no matter how much sense it makes logically. Not that that means much at this point.<br/>
+<br/>
+"Unlike Greg, if I interpret him correctly, I don't believe either is more important than the other..."<br/>
+<br/>
+At this point I'm not sure which what is important and which other what isn't quite so important.<br/>
+<br/>
+I do believe you start with a question you want to answer which usually ends up in something like an event tag. In looking for the answer to that question you look in books or other sources. These sources may or may not have relevant information, and whether they do or don't have information, I believe you should be able to record the results either way. When information you think is relevant (or might be) is found, you should make note of what that information is, where in the source it is found, and make any notes related to it you need to. Then you should apply that information to the real-life person in your database. That last step in particular still seems a little vague to me. <br/>
+<br/>
+I don't know that we can get all this done in a data model now. Consensus is we can't initially. But this is the process I have in mind, and I'm trying to match these concepts of data with concepts in a BetterGEDCOM data model. I think it still breaks down at the evidence-real person level. The great thing about this is that nothing is written in stone, and we can all learn form each other , adapt and improve both our understanding and our ideas.<br/>
+<br/>
+Hot spiced apple cider sounds awfully good right now.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-27T18:01:54-08:00</div>
+<div class="text">Greg asks:<br/>
+<br/>
+""3. sourceRef -- This person may refer to a source that justifies the person's existence either by referring to evidence or by referring to a conclusion reached by the researcher."<br/>
+<br/>
+I don't understand this yet. To me, a source is like a book. The linkages a source makes are only to pieces of evidence in my way of thinking"<br/>
+<br/>
+Tom's response:<br/>
+<br/>
+The source of information that is taken directly from evidence is that evidence, so yes, things like books, vital record registers, etc, are the sources for the evidence level persons. This is the normal idea of a source and citation (the source is the physical source in the real world, the citation is a text string that allows others to find that physical thing.)<br/>
+<br/>
+But what is the source for a person object that is constructed from a hypothesis or conclusion made by a researcher? It can't be anything other than the reason the researcher made the decision.<br/>
+<br/>
+I think you see the idea of a "tree of persons", with the evidence persons down at the leaves, and the growing conclusion persons that encompass the evidence persons. At every "node" in this person tree there has (has is much to strong a word here, as many users of any program that supported this idea would be much too lazy to supply them all) to be be a source. Just imagine the totality of that tree. Every leaf has what we think of as a normal source pointing off to real, hard evidence. But every other "node" in the tree is based on some decision to join lower level persons and nodes of persons together. The only source you can put at those nodes are the particular reasons why those particular sets of persons were brought together. So the whole tree is now "decorated" with a consistent set of sources, one from each node, some pointing to real evidence, some pointing to reasons for combining. Maybe this is a little esoteric, but it captures everything needed in a research process with the minimal amount of information and with no duplication.<br/>
+<br/>
+Greg then says, ""I do like your tree structure, but there are 2 problems:<br/>
+1. How does this map to today's software? and <br/>
+2. This concept is still bat-dropping absurdity (to slightly rephrase the sentiment) for most folks no matter how much sense it makes logically. Not that that means much at this point."<br/>
+<br/>
+Tom then responds:<br/>
+<br/>
+It doesn't map to today's software except for software that is so flexible that it allows users to stretch boundaries. For example, in any program there is no restriction of creating 100 person records for the same real person if you want to get every item of evidence properly encoded. But the software is not going to give you much support in knowing that the 100 persons all represent what you believe to be the same person. As we did learn that Gramps would allow you to encode the 100 events that the 100 persons come from, and then allow you to have a single person refer to all 100. This is a partial solution to the problem.<br/>
+<br/>
+In LifeLines program one can go much further. Even though the LifeLines database is pure Gedcom, it is Gedcom syntax, not a Gedcom standard, so users are free to invent tags with their own new conventions. Then the user programmability part of LifeLines allows users to write programs that understand and use the new conventions. So in LifeLines person trees can be implemented using INDI trees with, let's say internal INDI pointers (just as the DeadEnds model uses person references). The real answer to your first question is that there is no commercial software that supports evidence and the research process out of the box.<br/>
+<br/>
+Your second point is important. If one wanted to write a commercial program that fully implemented the evidence and conclusion process (as I fanatically and boringly keep ranting on about), it would still have to support the users who want to use the program just like they use the programs of today. Unfortunately the nuances of good research practices are going to be lost on 98% of the users of genealogical software. If you were hawking software only for that 2% (if it is even that high) you'd be in the wrong racket. One of the nice things about the DeadEnds data model is that it fully supports the conclusion only style unchanged with exactly the same set of objects. You just would never build any trees. Then every person entered would be treated as a final person and voila, it all still works.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-27T18:51:47-08:00</div>
+<div class="text">-delete-<br/>
+<br/>
+I just deleted my fourth or so response.<br/>
+<br/>
+My head hurts. This topic deserves its own thread on the proper page, so I'm not going to perpetuate this discussion here.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-28T02:46:15-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Question: Isn't most of your most recent discussion about the application and not the transport of that data?<br/>
+<br/>
+What the user does or doesn't do with the fields in the application should not matter to the way the information is passed between applications.<br/>
+<br/>
+It sounds like there are rules that you have presented. Aren't those rules within the application?<br/>
+<br/>
+<br/>
+Suppose, I learned today, that I have a new neice, only have the name and not details AND no Evidence. I put that name into my application and send my updated information to another family member. Does this name get dropped?<br/>
+<br/>
+The only information that is know, is the mother's name, the father's name, and the child's name (and sex), NO Documentation. Do you drop that name on the floor?<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div></div><div class="comment"><div class="from"><strong>Christine_E</strong> 2011-07-07T22:28:15-07:00</div>
+<div class="title">Data-Event03 Central registry of event types</div>
+<div class="text">One of the problems with having registries is that it makes on-going work for us or someone else.  This seems to imply a series of future upgrades to the BetterGEDCOM standard.<br/>
+<br/>
+Rather than having a registry, allow the software developer or user to define extensions (Syntax04, Syntax05). Later when future BetterGEDCOM prepares for a new release, these events could be considered for incorporation.<br/>
+<br/>
+Suppose the initial release is considered version 1.0 and a software company meets that standard, then discontinues the business.  Future additions to this registry (ie, the BetterGEDCOM standard) should be considered a later version of the standard.  It shouldn't invalidate the discontinued software as no longer meeting the 1.0 version.</div></div></body>
+</html>

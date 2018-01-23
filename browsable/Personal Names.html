@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>BetterGedcom - Personal Names</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<a class="wiki_link" href="HOME">HOME</a> &gt; Personal Names<br/>
+<h1 id="toc0"><a name="Personal Names"></a>Personal Names</h1>
+ GEDCOM 5.5 provides two alternative ways to represent a personal name, one that uses slashes to separate the surname from the other parts of the name, and one that uses a structure with Name prefix, Given name, Nickname, Surname prefix, Surname and Suffix. This page lists discussions and pages on the wiki that discuss requirements and solutions not handled by GEDCOM 5.5.<br/>
+<br/>
+<h4 id="toc1"><a name="Personal Names---1. Most recent work"></a><strong><span style="color: #000000;">1. Most recent work </span></strong></h4>
+<a class="wiki_link" href="Personal+Name+Data+Standard">Personal Name Data Standard</a> Currently there are no comprehensive data standards on PersonalNames that take into consideration Internationalization and the different naming customs of different cultures and languages. This draft proposed Personal Names Data Standard attempts to meet that goal. In addition, this hyperlink will contain separate draft documents on Background, Problems, User Requirements, Rationale, Implementaion Guide and Outstanding Issues. These documents attempt to aggregate and summarize the other papers and links below.<br/>
+<br/>
+<h4 id="toc2"><a name="Personal Names---2. Previous discussions, pages and documents"></a><strong>2. Previous discussions, pages and documents</strong></h4>
+<ul><li><a class="wiki_link" href="Person-Name+Elements">Person-Name Elements</a> (from Jan 2011)</li></ul><br/>
+<h4 id="toc3"><a name="Personal Names---3. Personal names in current genealogy programs and services"></a><strong>3. Personal names in current genealogy programs and services</strong></h4>
+<br/>
+<h4 id="toc4"><a name="Personal Names---4. User Requirements"></a><strong>4. User Requirements</strong></h4>
+<ul><li><a class="wiki_link" href="Better+GEDCOM+Requirements+Catalog#Data-PersonNames01">Personal Name related requirements in the Requirements Catalog</a></li></ul><br/>
+<strong>5. Discussion of the level of Rigour in handling Personal Names</strong><br/>
+<ul><li><a class="wiki_link" href="Personal+Names+and+Rigour">Personal Names and Rigour</a></li></ul><br/>
+<h4 id="toc5"><a name="Personal Names---6. External genealogy related resources"></a><strong>6. External genealogy related resources</strong></h4>
+<ul><li><a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=GEPS_021:_Additional_Name_Fields" rel="nofollow">Additional Name Fields</a> A GRAMPS page discussing extention to the personal name features in the program.</li><li><a class="wiki_link" href="GenXML">GenXML</a> proposes a Personal Names solution (the specification is <a class="wiki_link_ext" href="file/detail/GenXML30.pdf" rel="nofollow">here</a>)</li></ul><br/>
+<h4 id="toc6"><a name="Personal Names---7. External resources about names in general"></a><strong>7. External resources about names in general</strong></h4>
+<ul><li>W3C:<a class="wiki_link_ext" href="http://www.w3.org/International/questions/qa-personal-names" rel="nofollow">Personal names around the world</a> Comments <a class="wiki_link_ext" href="http://www.w3.org/International/wiki/Personal_names" rel="nofollow">here</a>.</li><li><a class="wiki_link_ext" href="http://citationstyles.org/downloads/specification.html" rel="nofollow">Citation Style Language 1.0</a> - has a structure and functionality for names especially related to sorting of surnames (see clauses Names and Name Particles)</li><li>Wikipedia: <a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Personal_names" rel="nofollow">Personal names</a> <a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Patronymic" rel="nofollow">Patronymic</a></li><li><a class="wiki_link_ext" href="http://publicintelligence.net/rocic-law-enforcement-guide-to-international-names/" rel="nofollow">Law Enforcement Guide to INTERNATIONAL NAMES</a> (Thanks Tamura)</li><li><a class="wiki_link_ext" href="http://archive.ifla.org/VII/s13/pubs/NamesOfPersons_1996.pdf" rel="nofollow">Names of Persons - National Usages for Entry in [library] Cataloges</a> (related to MARC)</li><li>Please help us extend this list</li></ul><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-09T04:19:55-08:00</div>
+<div class="title">Citation dependency</div>
+<div class="text">The issues raised at <!-- ws:start:WikiTextUrlRule:2:http://bettergedcom.wikispaces.com/Formatting+Templates+and+MetaData --><a href="http://bettergedcom.wikispaces.com/Formatting+Templates+and+MetaData">http://bettergedcom.wikispaces.com/Formatting+Templates+and+MetaData</a><!-- ws:end:WikiTextUrlRule:2 --> may have a bearing on this design Neil.<br/>
+<br/>
+Tony</div><div class="comment"><div class="from"><strong>NeilJohnParker</strong> 2012-01-09T08:23:58-08:00</div>
+<div class="text">Thanks<br/>
+First a nit, your 5th line in &lt;UIData&gt; has an superfulous "/", i.e &lt;/elements&gt;.<br/>
+<br/>
+Does this template concept support multipe occurences, e.g. 4 authors,<br/>
+Neil Parker, Louise Parker, William Smith and Frank Jones. Does it do so with out using comma separated lists, i.e. as separate lines? If so how? Could you provide a simpl example. Can and how do templates handle values that are cross references? How do templates handles "mongrel" templates i.e. a person has a combination of two standard templates for say a PersonName as in Canada and elsewhere where we have people and customs from all over the world.<br/>
+<br/>
+<br/>
+Thanks</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-09T08:37:09-08:00</div>
+<div class="text">It could do Neil. This is not a complete design here. STEMMA suggested using a JSON-like syntax for item lists such as authors or page references. The separator is then irrelevant.<br/>
+<br/>
+I would hope that the template itself does not make itself specific to any particular locale or culture. Ideally, its personal-name parameters should be typed as one of first-canonical-form, second-canonical-form, etc., and either have a choice of locale-dependent algorithms in the Text case, or call on the data provider in the BG case.<br/>
+<br/>
+This scheme works well for simple citations, i.e. where there is only once source, and no author annotation. See discussion in STEMMA spec on simple-citations versus compound-citations for more complex cases.<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-09T11:28:53-08:00</div>
+<div class="text">The issue of elided forms (e.g. for citations) and general issues of sorting and collation are raised here Neil: <!-- ws:start:WikiTextUrlRule:4:http://bettergedcom.wikispaces.com/message/view/Formatting+Templates+and+MetaData/48948369 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Formatting+Templates+and+MetaData/48948369" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Formatting+Templates+and+MetaData/48948369</a><!-- ws:end:WikiTextUrlRule:4 -->.<br/>
+<br/>
+Apologies for this being a little disconnected in wiki terms.<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-10T02:16:27-08:00</div>
+<div class="text">Bringing the aforementioned thread over to this page where it's more relevant:-<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;I don't have a good scheme for dealing with the other issues you raise but I wanted to find a way of dealing with elided forms and sorting together.&lt;br/&gt;&lt;br/&gt;For instance, consider something like:&lt;br/&gt;&lt;br/&gt;&amp;quot;General Sir Anthony Cecil Hogmanay Melchett VC DSO KCB&amp;quot;&lt;br/&gt;&lt;br/&gt;...he of Blackadder fame :-)&lt;br/&gt;&lt;br/&gt;We can break this down into name-parts like titles, givenname, middlenames, familyname, honaries, etc.&lt;br/&gt;&lt;br/&gt;Although those terms are very Western, something more generic might allow us to specify sorting and different forms by the token groups.&lt;br/&gt;&lt;br/&gt;For instance:&lt;br/&gt;fore-titles = 1 2&lt;br/&gt;given-name = 3&lt;br/&gt;middle-names = 4 5&lt;br/&gt;family-name = 6&lt;br/&gt;post-titles = 7 8 9&lt;br/&gt;&lt;br/&gt;Hence, different name forms might be&lt;br/&gt;&lt;br/&gt;family-name, fore-name middle-initials&lt;br/&gt;fore-name family-name&lt;br/&gt;family-name, fore-initial&lt;br/&gt;&lt;br/&gt;Similarly with a sort-order or collation-sequence.&lt;br/&gt;&lt;br/&gt;If we can break apart a name then it is practical to have standard combinations for different &amp;quot;name locales&amp;quot; (i.e. the locale that the name structure is relevant to rather than specifically that of the user). This would simply the whole argument.&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">I don't have a good scheme for dealing with the other issues you raise but I wanted to find a way of dealing with elided forms and sorting together.
+ 
+For instance, consider something like:
+ 
+"General Sir Anthony Cecil Hogmanay Melchett VC DSO KCB"
+ 
+...he of Blackadder fame :-)
+ 
+We can break this down into name-parts like titles, givenname, middlenames, familyname, honaries, etc.
+ 
+Although those terms are very Western, something more generic might allow us to specify sorting and different forms by the token groups.
+ 
+For instance:
+fore-titles = 1 2
+given-name = 3
+middle-names = 4 5
+family-name = 6
+post-titles = 7 8 9
+ 
+Hence, different name forms might be
+ 
+family-name, fore-name middle-initials
+fore-name family-name
+family-name, fore-initial
+ 
+Similarly with a sort-order or collation-sequence.
+ 
+If we can break apart a name then it is practical to have standard combinations for different "name locales" (i.e. the locale that the name structure is relevant to rather than specifically that of the user). This would simply the whole argument.</pre>
+<!-- ws:end:WikiTextCodeRule:0 --><br/>
+I know people will leap on this and cit is as too an approach too Western, thereby missing the reference to "generic".  :-)<br/>
+<br/>
+It still feels a little complex in my head but imagine that we have a series of "name schemes" - one for each cultural variation.<br/>
+<br/>
+These name schemes would define the name-part categories, like the Western ones shown above. Using appropriate meta-data, we could help to present an appropriate form for entering such a name - ... shades of the same approach to citations visible here.<br/>
+<br/>
+Hence, when entering a Western name, you might see fields for given-name, family-name, etc., as shown listed above, but when entering a name associated with a different scheme then the name-part fields would be labelled differently.<br/>
+<br/>
+OK, so what would that give us? Well, it would allow the tokens in a name (i.e. basically the separate words) to be categorised according to a set of culturally significant categorised. By that, I mean the parts significant during sorting/collation and different representative forms.<br/>
+<br/>
+We then have a small set of items (i.e. name-parts rather than mere tokens, where each name-part might encompass multiple tokens) and the name scheme can use them to define the sorting rules and name forms in a very compact way.<br/>
+<br/>
+What do folks reckon? This could work - no question in my mind - but would it be too complex? Can we manage name-schemes in a similar way to citation-sources?<br/>
+<br/>
+Tony</div></div></div></body>
+</html>

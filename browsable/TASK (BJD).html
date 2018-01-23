@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>BetterGedcom - TASK (BJD)</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"></span><strong><span style="font-size: 18px; line-height: 19px;">TASK</span></strong><br />
+<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> This entity type represents something that a RESEARCHER needs to do or has done for one or more PERSONs. </span><br />
+<br />
+<br />
+<br />
+<br />
+<strong><span style="font-size: 13px; line-height: 19px;">Dependencies:</span></strong><br />
+<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">A TASK belongs to one or more PERSONs.</span><br />
+<br />
+<strong><span style="font-size: 13px; line-height: 19px;">Attributes:</span></strong><br />
+<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">TaskUID - required - a universally unique identifier. (I'm not entirely sure any UUID will be truly unique across many systems. But that's the general consensus)</span><br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">Task</span>Type - required - A classification of what kind of task it is: Administrative, Research, etc. It should have a number of predetermined values, and also allow free form.<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> Description </span> - optional <span style="font-size: 13px; font-weight: normal; line-height: 19px;">.</span><br />
+StartDate - optional - A date when this task was or should be started.<br />
+CompleteDate - optional - a date the task was completed.<br />
+Started - optional - Y/N - A way to indicate that a task was actually started. I'm using Y/N, but naturally the actual value here should be language dependent.<br />
+Completed - optional - Y/N - this will automatically be true if there is a completion date.<br />
+Result - optional - A summary of the results.<br />
+<br />
+<strong><span style="font-size: 13px; line-height: 19px;">Relationships:</span></strong><br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> A TASK must belong to 1 or more PERSONs.</span><br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">A TASK may have one or more EVENT, RESEARCHER, OBJECTIVE, OBJECT, LOCATION, REPOSITORY, SOURCE., or CHARACTERISTIC.</span><br />
+<br />
+<strong><span style="font-size: 13px; line-height: 19px;">Example</span></strong><span style="font-size: 13px; font-weight: normal; line-height: 19px;">:</span><br />
+<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">I need to go to the NYC Municipal Archives at 31 Chambers St and do a search for Philapena Frohbesen's birth certificate.</span><br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">I also need to key in the siblings for Lorentz Rambshurtster's other children and their vital statistics. So there are two TASKs.</span><br />
+<br />
+<h1 id="toc0"> </h1>
+ <h1 id="toc1"> </h1>
+
+    </div>
+  </body>
+</html>

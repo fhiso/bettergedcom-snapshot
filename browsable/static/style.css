@@ -1,0 +1,6 @@
+.comment { border-left: 0.5ex solid rgba(0,0,0,0.25); padding-left: 1ex; background:rgba(0,0,0,0.0625); }
+.comment .title { font-weight: bold; font-size: 110%; margin: 0.5ex 0ex; }
+.comment .from { background: rgba(0,0,0,0.125); padding:0.25ex; margin-top:1em; margin-left:-1ex; color: rgba(0,0,0,0.7071); }
+.comment .from strong { color: black; }
+.comment + .comment { margin-top: 2em; }
+.comment .comment + .comment { margin-top: 1em; }

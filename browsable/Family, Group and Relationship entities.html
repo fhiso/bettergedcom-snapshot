@@ -1,0 +1,374 @@
+<html>
+<head>
+<title>BetterGedcom - Family, Group and Relationship entities</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+<h3 id="toc1"> </h3>
+<br/>
+<h3 id="toc2"><a name="x--Family entity - Is this needed or desired???"></a><span style="font-size: 1.1em; margin: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 5px;"><strong>Family entity - Is this needed or desired???</strong></span></h3>
+<span style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">Perhaps a "Relationship" or "Group" entity would be better? Perhaps all these concepts are better represented within the Event class of entities? How would these decisions impact mapping into and out of today's genealogy software?</span><br/>
+<br/>
+<span style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">A family entity should NOT be included in BetterGEDCOM. It should instead be handled by the Event Entity as follows:</span><br/>
+<ul><li><span style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">The birth event should link to the person born and that person's father and mother.</span></li><li><span style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">The adoption event should link to the person adopted and that person's adoptive parents.</span></li><li><span style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">The marriage event should link to the people being married.</span></li><li><span style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">The divorce event should link to the people being divorced.</span></li><li><span style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">The commonlaw event should link to the people entering a commonlaw relationship.</span></li></ul><br/>
+<span style="margin: 0px; padding: 0px;">There is no need to implement the CHIL, HUSB and WIFE links in the FAM record, The above links are sufficient whereas the reverse links are redundant and don't add any information to the GEDCOM but only cause potential inconsistencies and make the GEDCOM larger. Any program can produce the reverse links it needs for its database when the GEDCOM is input.</span><br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">Should there be information that is associated with the family as a whole, then something is needed for it. See the Group Entity.</span><br/>
+<br/>
+<h3 id="toc3"><a name="x--Relationship Entity"></a><span style="font-size: 1.1em; margin: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 5px;"><strong>Relationship Entity</strong></span></h3>
+<span style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">A Relationship entity could serve as a catchall mechanism to document relationships even if the relationship is unspecific or non-biological. Some do not favor this because it would introduce more ambiguity. Does that argument hold water?</span><br/>
+<br/>
+<span style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">GEDCOM already represents relationships in a reasonable way, using the RELA tag to indicate a relationship and the TYPE tag to represent the type of relationship. It is limited in GEDCOM in that it can only be used between INDIs.[If we were building upon the existing GEDCOM standard this would be more relevant.] However, very few programs have made use of this. Most have ignored this tag but used a WITN or _WITN tag instead, The WITN tag was deprecated in GEDCOM 5.4.</span><br/>
+<br/>
+<span style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">The tricky part is that one relationship implies the reverse. Example: If Person A attended the birth of Person B, then Person B's birth was attended by Person A. Only one relationship need not be specified, and the other can be implied. Placing both in the BetterGEDCOM file will only cause problems. The receiving program can build the reverse link itself.</span><br/>
+<br/>
+<span style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px;">Note <span style="background-attachment: initial; background-clip: initial; background-color: initial; background-origin: initial; background-position: 100% 50%; background-repeat: no-repeat no-repeat; cursor: pointer; padding-right: 10px;"><a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=GEPS_001:_Relationship_type_event_link" rel="nofollow" target="_blank">this link to a GRAMPS enhancement project</a></span> advocating their adoption of a relationship object. This page includes a discussion of how GEDCOM handles relationships. <em><strong>Please also note that the definitions in all these cases are quite different.</strong></em></span><br/>
+<br/>
+<h3 id="toc4"><a name="x--Group Entity"></a><span style="font-size: 1.1em; margin: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 5px;"><strong>Group Entity</strong></span></h3>
+<span style="margin: 0px; padding: 0px;">It would be worthwhile to implement groups of people, places, or things. Normally, you might think all you need is a GROUP tag and name the groups that this individual, place or event belongs to. That would work, but there would be no place to specify information about the group as a whole. So it does make sense to have a Group entity.</span><br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">Groups may be groups of People, Events, Locations, Objects, or any other entity or combination thereof. You may want a group to be "All people invited to a specific event" or "All marriages in a certain city" or even "People in a picture taken at a certain event at a certain location". You may have all sorts of information to attach to this group.</span><br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">This is where family information would go, if there were specific events or pictures that existed for the family. It would be impracticle to try to hang that information anywhere else. But family groups need not be defined unless there was additional information about it that needed to be recorded. This is not a replacement for the parent and child links of the FAM structure in GEDCOM. In fact, you can have <span style="background-attachment: initial; background-clip: initial; background-color: initial; background-origin: initial; background-position: 100% 50%; background-repeat: no-repeat no-repeat; cursor: pointer; padding-right: 10px;"><a class="wiki_link_ext" href="http://www.tamurajones.net/FamilyInTraditionalGenealogySoftware.xhtml" rel="nofollow" target="_blank">many different types of families</a></span> defined for overlapping groups of people.</span><br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">Groups should not, in BetterGEDCOM, contain links to the Entities within them. Instead, the entities should have links to the groups they are in, maybe with a GROUP tag and a ROLE subtag to identify what their part is within the group. The GROUP tag may also have a DATE subfield to indicate when they belonged to the group.</span><br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">An individual entity may belong to the same group multiple times, since it may leave and rejoin a group, or may be a member with different or multiple roles.</span>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-23T23:43:57-08:00</div>
+<div class="title">Arguemtns for a Relationship Entity</div>
+<div class="text">I can see a use for the relationship entity. In the case of a christening or marriage you have witnesses and godparents. There are naturally ways to handle this without creating a relationship entity. You would have to store the role of the person at the event. So in any event you have to have a table linking each person at an event, and what that role was. That is effectively the relationship entity.<br/>
+<br/>
+PersonName (UUID, NameID, Name1, ...)<br/>
+Relationship (PersonID,EventID, RoleID, ...)<br/>
+Event (EventID, Date1 ... DateN, placeID, ...)<br/>
+<br/>
+That information has to be recorded and passed to any importer. So you have to make it anyway. Might as well make use of it.</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-25T02:22:16-08:00</div>
+<div class="text">Responding to Brian.<br/>
+<br/>
+As I have said there is no duplication of records in the DeadEnds model. There is one event record per event, and one person record per person. I'm surprised that this wouldn't be clear from the specs. There is duplication in the roles, which are small sub-structures in the records; think of them as pointers. The duplication can be removed in external archive versions of the model by making roles one-way, but the incremental differences in size by doing this is immaterial. I've built databases with the structures as outlined in the DeadEnds specs with hundreds of millions of records, and written algorithms that process records from these non-relational, hierarchical databases at pretty good speeds. For example, algorithms that can take 600,000 evidence records with the name George Bush, and within a few seconds combine those records into 1,000 or so different persons with the name George Bush.<br/>
+<br/>
+Second, worrying about normalizing data structures in hierarchical databases is a non-issue. The main point of hierarchical databases is to make the data unique in records that best model the actual data so there is no (or at least very little) duplication to deal with. Yeah, if you were to convert a hierarchical model into a relational database you might worry about normalizing, but even then you don't have to. For example, in the algorithms described above the first time I implemented the system I used a relational database but did not normalize the data because I found the numbers didn't demand it and the algorithms ran faster with unnormalized data because the duplication made queries run faster. In the later, hierarchical based database, it's not even an idea that comes up. By the way, the hierarchical database used in the current version of the algorithms is Lucene and the records are in XML format. And the main reason I moved to the hierarchical database with XML records is that the algorithms run even faster with such a database. The relational database used before switching to Lucene was SQL Server.<br/>
+<br/>
+I know I am in the vast minority when it comes to ideas about database technology for genealogy. But there is a little more than just talk and over-opinionated crusty old fartness to back up my views.<br/>
+<br/>
+A perceived disadvantage of hierarchical databases with respect to relational ones is that hierarchical databases don't support full query access to the data in the database in all imaginable ways. However, no genealogical software (that I am aware of) provides such general access to their databases, and secondly, indexing technology has come so far since the invention of relational databases, that the whole raison d'etre of relational databases is now in question. Hierarchical databases with full-text indexing can be much smaller and much faster with general purpose queries than their relational counterparts.<br/>
+<br/>
+Brian says: "Genealogy data is most naturally a graph or network type of data structure. But how do you design it to deal with the many connectedness and still minimize duplication of data. I think the two goals are in opposition."<br/>
+<br/>
+First, I agree with the first part there, and that has always been my main argument for implementing genealogical databases as hierarchical ones (if it looks like a duck, if it waddles like a duck, if it quacks like a duck, it is a duck). But the second part I disagree with. I believe the DeadEnds model is a proof of concept that many-connectedness does not cause duplication of data. Please explain any place you see duplication of data in the DeadEnds model. I have already stated that the role pointers in the specs are two-way and this can be thought of as duplication, but the two-way ness is a performance issue that can be removed when needed, which I contend would be never. The DeadEnds model was explicitly designed to (among other things) eliminate duplication. I would be willing to bet that having two-way pointers between person and event records in a hierarchical database uses less memory that normalizing those pointers into their own table. Here we're talking about taking the roles out of event records and the roles out of person records and creating the additional event-person index structure to hold that information. I would therefore contend that not only does the DeadEnds model solve the multi-connected problem, it does it better than a normalized relational database would.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-25T15:50:05-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I'm not trying to argue for RDBMs over hierarchical. I think we are talking past each other. I was agreeing with your idea. I was trying to say that my initial analysis of DeadEnds was incorrect, except for the role duplication. I was not agrueing for or against the duplication. There are benefits for both approaches. That does not alter the fact that the DeadEnds model buries objects within objects. It is neither correct or wrong to do so, Nor is it good or bad. Valid arguments can be made for both approaches.  I'm not here to argue that.<br/>
+<br/>
+I would argue that hierarchical databases can be faster than relational. In current application that would be true, because people use thing like Oracle or SQL Server, or Postgres. Hierarchical DBs are generally special built. I could build a RDBMS that was as fast as, or faster than, any hierarchical DBMS. That is irrelevant.<br/>
+<br/>
+If I were to choose the ideal DBMS for genealogy it would be a network (as in graph not web) DB. It seems to me that your DeadEnds is such. Although you've classified it as Hierarchical. Based, I am assuming, on the structure of the objects which are tree based, rather than on how the objects connect.<br/>
+<br/>
+There is as you say duplication in the role sub-object. There is potential duplication in relation sub-object also. But, I'm not saying that is a bad thing. <br/>
+<br/>
+Personally, I would prefer to separate the sub-objects with pointers to them. But that is mechanics.<br/>
+<br/>
+What I am trying to say is that the implementation need not be decided to map the model.<br/>
+<br/>
+Let me show you my thinking.<br/>
+<br/>
+&lt;?xml version="1.0"?&gt;<br/>
+&lt;schema xmlns="<!-- ws:start:WikiTextUrlRule:60:http://www.w3.org/2001/XMLSchema --><a class="wiki_link_ext" href="http://www.w3.org/2001/XMLSchema" rel="nofollow">http://www.w3.org/2001/XMLSchema</a><!-- ws:end:WikiTextUrlRule:60 -->"<br/>
+ xmlns:bg="<!-- ws:start:WikiTextUrlRule:61:http://bettergedcom.wikispaces.com/BG1 --><a href="http://bettergedcom.wikispaces.com/BG1">http://bettergedcom.wikispaces.com/BG1</a><!-- ws:end:WikiTextUrlRule:61 -->"<br/>
+targetNamespace="<!-- ws:start:WikiTextUrlRule:62:http://bettergedcom.wikispaces.com/BG1 --><a href="http://bettergedcom.wikispaces.com/BG1">http://bettergedcom.wikispaces.com/BG1</a><!-- ws:end:WikiTextUrlRule:62 -->"<br/>
+   elementFormDefault="unqualified"<br/>
+   attributeFormDefault="unqualified"&gt;<br/>
+<br/>
+&lt;element name="person"&gt;<br/>
+  &lt;complexType&gt;<br/>
+    &lt;sequence&gt;<br/>
+      &lt;element name="gender" type="string"/&gt;<br/>
+      &lt;element name="haircolor" type="string" minoccurs="0"/&gt;<br/>
+...<br/>
+      &lt;element name="name" type="bg:BGname"/ minoccurs="0"&gt;<br/>
+      &lt;element name="event" type="bg:BGevent"/ minoccurs="0"&gt;<br/>
+      &lt;element name="place" type="bg:BGplace"/ minoccurs="0"&gt;<br/>
+      ...<br/>
+    &lt;/sequence&gt;<br/>
+  &lt;/complexType&gt;<br/>
+&lt;/element&gt;<br/>
+<br/>
+&lt;element name="BGevent"&gt;<br/>
+  &lt;complexType&gt;<br/>
+    &lt;sequence&gt;<br/>
+      &lt;element name="eventtype" type="string"/&gt;<br/>
+      &lt;element name="role" type="bg:BGrole" minoccurs="1"/&gt;<br/>
+...<br/>
+    &lt;/sequence&gt;<br/>
+  &lt;/complexType&gt;<br/>
+&lt;/element&gt;<br/>
+<br/>
+&lt;element name="BGrole"&gt;<br/>
+  &lt;complexType&gt;<br/>
+    &lt;sequence&gt;<br/>
+      &lt;element name="roletype" type="string"/&gt;<br/>
+      ...<br/>
+    &lt;/sequence&gt;<br/>
+  &lt;/complexType&gt;<br/>
+&lt;/element&gt;<br/>
+<br/>
+...<br/>
+<br/>
+&lt;/schema&gt;<br/>
+<br/>
+So you see my point, whether we have the role within an object or by itself, we still have to define it for XML purposes. The same applies for person, name, relationship, group, what have you. The implementation is irrelevant it needs to be defined and mapped for XML purposes.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-25T16:49:34-08:00</div>
+<div class="text">Is there not a need to store more than the role type in a relation/role/PERSON-EVENT entity? (The discussion about database engines is of little interest to me, so I choose to assume that the relation is a separate entity.) <br/>
+<br/>
+For example some sort of surety value that could show for example a question-mark against a relation in a diagram. Or maybe someone wants to mark the relation as sensitive? Or a note discussing if this relation is correct?</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-25T21:27:11-08:00</div>
+<div class="text">Responding to Brian.<br/>
+<br/>
+I realize you weren't advocating relational db's, but with terms like EVENT-PERSON being used, it's not too far over the horizon. Those kinds of terms come up when people are thinking about normalizing data, and people generally think about normalizing when they are thinking about relational databases.<br/>
+<br/>
+I was reacting to the fact that two persons have now said the DeadEnds model requires duplication of event records. One of those incorrect assessments was based on the assumption that the DeadEnds model would be normalized to have no multiple fields in a record, another warning about relational thinking. The DeadEnds model uses the * notation to mean "any number of" all over the place, so there should have been no way a normalization assumption crept in.<br/>
+<br/>
+Below I use the terms role and relationship in an analogous fashion: a role is a relationship between and event and and person, while a relationship is a relationship between a person and another person (sorry about the double meaning of relationship there).<br/>
+<br/>
+I agree that a role is an object, so that a role in an event and a role in a person are both objects in objects. I would not make roles independent objects, but I would not argue that it could not be done. In the DeadEnds, object-in-an-object, model to encode a role or relationship you use two objects and two pointers and it is fully indexed. To encode a role or relationship as a separate object in the normalized-object model you use three objects (a person, an event and a person-event for a role, and a person, a person, and a person-person for a relationship) and two (or four when indexed) pointers. By keeping roles and relationships as objects-in-objects things are smaller, faster, and simpler. Paraphrasing the sqlite slogan: "smaller, faster, simpler: choose any three."<br/>
+<br/>
+I know the argument that data models are different than data implementations. It is a mantra that has been brought up many times on this wiki and everywhere else that models are discussed. There are always folk who will warn when others are beginning to mix the concepts; it's a common hot button. The fact that I mix the concepts all the time makes me a target for the comments, and I accept that with good humor. I've been around long enough, designed data models and structures for complex algorithms enough times, that I know that one of the best qualities of a good model has is that it can be implemented in its own terms. So I evaluate models by asking if can be implemented efficiently and usefully as it is, and if it can't, I wonder if it is the best model. When I design a model I constantly go back and forth between abstract model world and down and dirty implementation world, and for me a successful result is when the worlds come together perfectly. I know lots of people disagree vehemently with me about this point, and that's okay.<br/>
+<br/>
+I guess the real argument comes down to this. Are the role and relationship concepts so important that they should be singled out at the model level as independent object types? Or can the same concepts be adequately and equivalently described as role sub-objects within events and persons? Must something be treated as an independent entity type if it is a concept we want to talk about? Someone who wants to keep the model and the implementation separate would say, I think, "At the model level it's best to treat the role and relationship" as independent objects for a pedagogical reason, but when you implement the objects in software you are free to get rid of the independent objects and cache a couple pointers in the person and event records." I think this is a wonderful argument, and it makes a lot of sense, and I'm not going to claim that it is a wrong argument. If BG decides this is the right way to do it I wouldn't throw a tantrum, because it makes sense. But to me, if you don't create the new entity types in the model, it is still just as easy to talk about the same concepts from the point of view of simple reference-based relationships between events and person or persons and persons, and you have a model that can be used unmodified as the implementation structure.<br/>
+<br/>
+A relationship as an entity is certainly possible. Most people would agree, I think that a relationship would be made up of a type (eg, father/child, husband/wife, ...) and references to the two role players. That's fine. But how does a person know its in a relationship? Well, we all know how it can find out, by implementing more than just the model in the database. What I'm saying is that if you can find a model that is simpler than another model, and it also leads to a database record that requires less computation, you have a better model. In the DeadEnds model of putting the roles inside persons and events, you save space by have fewer entity types, and you can put persons and events as-is in the database with no extra additions required. For me this is a win-win-win:<br/>
+<br/>
+Win One. The Database/Archive/Transport file is smaller.<br/>
+Win Two. The Database needs no extra helper indexes or other helper fields computed to makes things findable.<br/>
+Win Three. The Model and the Database/Archive/Transport formats are the same.<br/>
+<br/>
+Overall I guess I'm ambivalent about this. Whatever the consensus turns out to be on whether roles and relationships should be first class object citizens or second-class object-within-an-object citizens, the BG model will be in good shape.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-26T06:43:05-08:00</div>
+<div class="text">"simply because it seemed to lead to a better XML by removing duplication."-hr<br/>
+<br/>
+"Are the role and relationship concepts so important that they should be singled out at the model level as independent object types?"-tom<br/>
+<br/>
+We are all trying to fix techincal and functional problems from past designs. and looking at it very clearly how we can put a finger on it. And even other boards people poit out other things which conflict toward it also.<br/>
+<br/>
+What I am getting to, we all know xml is flexable and can become a very large file very fast. <br/>
+<br/>
+0 INDI @S022@ = 11 characters<br/>
+&lt;INDI&gt;022&lt;/&lt;INDI&gt; = 17 Charecters<br/>
+&lt;INDI person-ID="022"&gt; &lt;INDI&gt; = 28 Characters<br/>
+<br/>
+I am looking at/for the end results the more various TAG labels created in the XML expanse it so fast it become so large and to big to handle my a computer or server memory. I found that out first hand. Some genealogy version out there were so chucky a note pad could open a gedcom, but crash since that style was 5 times larger with less info used from the original gedcom. Sure comupters get more memory since 10yrs but do we need to contiune feeding a style that that will get out of control?<br/>
+<br/>
+Sometimes one has to give up a traditional way of designing a database to make it as small as possible yet even more fuctional. <br/>
+<br/>
+Yes we would like to make the xml readable with instructive tags in them but that is also design for failure by size.<br/>
+<br/>
+You guys are great, with all the evidance of people and events examples and aka peoples name discussons examples.<br/>
+<br/>
+Those that are back end developers need to have an equal amount of family data and represent that in a so called data format, WHILE the technical guys can format the technical ligno. each interval as new examples of person relations are added to a DATA test, everyone can see the xml modeling that handles what is give as it comes.<br/>
+<br/>
+at the end of a day, you have all the <br/>
+1. technical writeups and definitions<br/>
+2. A xml format that is choosen for universal flexiblity and size.<br/>
+3. then code tha client side and server side apps to handle it all.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-26T08:45:20-08:00</div>
+<div class="text">Concerns about XML crop up. Just a few words.<br/>
+<br/>
+The mass of opinion on this wiki is that the external file format for BG will be XML. I would not make that decision but I have accepted it as a given. Even though it takes more characters to represent a concept in XML syntax than in any other syntax, there is no way the final number of characters would ever get out of hand for modern computers. We're talking about a factor of maybe two or three times as many characters as needed in a custom format, but factors of two or three are immaterial today.<br/>
+<br/>
+Certainly the size of a BG XML file cannot get out of hand if the BG model does not get out of hand. Which it won't because if it did it would collapse and disappear. And programs that barf on large files are buggy dinosaurs.<br/>
+<br/>
+Should databases in the programs that support the BG model be structured as BG objects; that is, should a database contain the XML-structured BG objects identical to the objects as they would be found in a BG archive or transport file would? There are two common answers to this question that I sense are out there.<br/>
+<br/>
+1) It shouldn't be of concern to the BG effort so don't ask it; and<br/>
+2) No.<br/>
+<br/>
+I think both these answers are wrong (I think the answer is yes), but I don't think having an answer to this question will have any important impact of the design of the BG model, so it's not a big deal.<br/>
+<br/>
+I can't see worrying about the actual XML tags as a current worry. Clearly there are many national languages involved, so any tag would have to be displayed in many different ways in different localizations. To do the translations, of course, each tag must be defined with such clarity that a translator can figure out the right word or phrase to use. This lexicon would have to be one of the BG products. Hey, why don't we be true scientists and use latin for the BG tags?<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-26T08:59:50-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I am a simple End User. I don't know XML from ABC. I look to you Technical folk to get is there.<br/>
+<br/>
+However, I think that there are a couple of folks not at the table yet to help US make any decision.<br/>
+<br/>
+We need, in my humble opinion, some development representatives here to get involved and to help ALL of us make the decision.<br/>
+<br/>
+I do look for the technical folks her, and you certainly are one of them, to present your options and opinions.<br/>
+<br/>
+Afterall, we have only been doing this for, what, 3 weeks?<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-26T09:04:27-08:00</div>
+<div class="text">"Certainly the size of a BG XML file cannot get out of hand if the BG model does not get out of hand." - Tom<br/>
+<br/>
+That is what I am concerned about. You mave have seen them I have seen them "limit files upto ??Kbs to be converted or parsed, or Server time out and computer error "Not Responding"<br/>
+<br/>
+This is not 1990 where people have 100-200 people and a handful of documents. Now people have 1000's of persons, and can collect 10-50 documents a peice. <br/>
+<br/>
+I have pushed server side computers and Client side and made them crash on large files. The past 5 years messing around with XML databases I found some simple things which make them speed up by the xml structure. <br/>
+<br/>
+The people that say "Don't really care how or what the database looks likes, it is not important" <br/>
+I can agree with them to one point ONLY IF they dont get involed with HOW it will look like or how data is inserted inside other nodes.  They make make techincal "terms" of what types of things need to be captured, but leave the data structure to peopl ewho care how the function and structure is best suited to be as fexiable NOT TO ITSELF, but other platforms to interchange the data within it.<br/>
+<br/>
+I have an xml file database holding 4Mbs yet the same gedcom xml structure getting over 1Mbs would chokes That is why I gace up on that old xml styles.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-26T09:11:24-08:00</div>
+<div class="text">Sorry Rush i was submitting at the same time. But for what you wrote, 3 weeks is a great so far.<br/>
+<br/>
+But I have been trying to contain myself since it is so young with a great pace sofar. I just don't want to see it re create stubbling stones mimiking the same xml that cause everyone to branch out into different app programs. <br/>
+<br/>
+We are a the same cross roads 14 years ago, all I am saying and trying to address, lets not re create them as a database structure, and maybe consider other xml structuring.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-26T12:36:03-08:00</div>
+<div class="text">The sizes of XML files is not a BG issue. Archival or transport XML files ranging from the 100s of megabytes to multi-gigabyte range should cause no problems. If you use a file of that size as its own "flat file database," that is, if you read it over and over and over to search for the data you are looking for, of course it will creep along, but that's not what any normal system would do.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-26T12:50:16-08:00</div>
+<div class="text">"Archival or transport XML files ranging from the 100s of megabytes"-Tom<br/>
+<br/>
+Yes I know, I have gigibytes of pdfs, photos, text, articles, data entry items handled all by XML. I have tried many ways and now use a very good structuerd layout.<br/>
+<br/>
+The single xml style years ago in one xml file that looked like a gedcom in xml format was clunky and dragged with complex parse to grab the information.<br/>
+<br/>
+I am/was starting to see a dupicaion of the structure coming back again lead by many examples of "LABELS" Birth person-events, citation labels as the node tag NAME itself.<br/>
+<br/>
+Just be doing that restricts the structure itself in ways. that is what I think I am seeing. I know it is three weeks NEW, but am willing to accept or suggest when I can.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-26T14:03:02-08:00</div>
+<div class="text">For what it's worth I'm no big fan of XML either because of it's bulk. I'd rather use a key-value, or delimited format. I think of the EDI formats. Each line has a particular record type, with a known number of elements of known max size. It is a tight clean format, but the model calls for XML. XML does have it's attractions, too. I like the existing GEDCOM, but it's simply been outgrown, and it's weaknesses made evident. <br/>
+<br/>
+I hate using long field names and long formats, but that goes back to my 640K RAM IBM XT days with a whopping 20MB harddrive. That's 20 Megabytes, not 20 Gigabytes. I could fit the data of 400 of those drives into the stick in my pocket at this moment. So, size is important to me also. We should definitely strive for a compact structure. However, the ODF standard would I believe allow us to compress the XML to relatively a relatively small size.<br/>
+<br/>
+It doesn't matter to me if we define roles inside of both people and events or separately. We should just pick one, we can always change it later. A design should be simple enough to be fluid, until we are settled. I'm really just throwing out ideas, and we should all throw out an idea and then choose an approach.<br/>
+<br/>
+I'm new here, learning about this from one of my genealogy newsletters. Tom's opinions certainly carry weight with me. since he's written to completion at least one popular genealogy software program. <br/>
+<br/>
+Tom, I would like to know why you used a relationship object in DeadEnds. Is it simply for easy and quick searches? Do you think that model would be a good place to begin the BG model?<br/>
+<br/>
+My. inclinition is it's a good starting point. I would like to take out the role object from the person object and replace it with a pointer to the event object.<br/>
+<br/>
+While convenient, I'd probably do away with the relationship object, since that information is knowable from within any decent application. However, I have no problem keeping it either. It's certainly a handy bit of information to have attached to a person, but could be overused.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-24T03:43:29-08:00</div>
+<div class="text">As you say, the relationships are inherent in the roles. Are you saying you need something extra in BG beyond the roles? Why? If a program wants to create internal objects during program execution to represent a relationship so be it, by why put the redundant info in the BG format.<br/>
+<br/>
+Check the DeadEnds model. That model uses three ways to represent relationships without the need for a relationship entity. Data models are cleaner and easier to understand (in my humble opinion) if the data object types are clearly physical "noun" type things.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-24T10:02:28-08:00</div>
+<div class="text">"you have to have a table linking each person at an event, and what that role was. That is effectively the relationship entity"<br/>
+<br/>
+The basic data model will have an entity type for EVENT and an entity type for PERSON. There is a many-to-many relationship between those 2 types as one EVENT may affect many PERSONs, and a PERSON may be affected by many EVENTs. <br/>
+<br/>
+Now, in a basic, logical data model you do not have to resolve the many-to-many relationships but in this instance it is useful to look ahead and do just that. We would get...<br/>
+PERSON entity type<br/>
+EVENT entity type<br/>
+PERSON-EVENT entity type (to use the most simplistic name for it)<br/>
+<br/>
+Relationships now:<br/>
+A PERSON may be involved in many PERSON-EVENTs<br/>
+An EVENT may involve many PERSON-EVENTs<br/>
+<br/>
+The role of the person in the event then gets stored against the PERSON-EVENT entity concerned. I presume this is what Brian means by "a table linking each person at an event", and it stores the role as he mentions.<br/>
+<br/>
+What I don't like is calling this a "Relationship" as it could be any sort of EVENT - e.g. a soldier and a battle, with a role of "casualty". Relationship would be an awfully bad name for an entity containing the information that "Private John Smith was a casualty at the Battle of Amiens"<br/>
+<br/>
+Since the major attribute for this 3rd entity type is "role", I'd be inclined to call it, not RELATIONSHIP but "EVENT-ROLE".<br/>
+<br/>
+So what we need is something far more general to resolve the many-to-many relationship between PEOPLE and EVENT.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-24T10:21:09-08:00</div>
+<div class="text">What about<br/>
+<br/>
+PERSON entity type<br/>
+EVENT entity type<br/>
+PERSON-EVENT entity type (to use the most simplistic name for it)<br/>
+<br/>
+Relationships now:<br/>
+A PERSON may be involved in many PERSON-EVENTs<br/>
+An EVENT may involve many PERSON-EVENTs<br/>
+<br/>
+thrid idea<br/>
+<hr/>
+Person ID#34, John Smith, sex,...<br/>
+event ID#24, Roll=casualty, date,...sourceidlink#902<br/>
+Person ID#45, John Smith, sex,...<br/>
+event ID#67, Roll=casualty, date,...sourceidlink#902<br/>
+<br/>
+<hr/>
+sourceID#902, Battle of Amiens<br/>
+<hr/>
+<br/>
+Source are events captured/written in time it self.<br/>
+so all the events by indiviual person events are linked to a sourceID<br/>
+<br/>
+then by filter the sourceID you can see all the eventrools of people linked to the one sourcematerial document.<br/>
+? kind of follow it?<br/>
+The person eventID is the event roll a person played.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-24T10:22:30-08:00</div>
+<div class="text">Sorry I meant to not duplicate to John Smiths but meant two seprate people with unique Event rolls and a commmon source record</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-24T12:33:43-08:00</div>
+<div class="text">I'd be ok calling it ROLE. It is the PERSON-EVENT entity, as Adrian guessed, which I was talking about. But PERSON-EVENT is really an awful name for an entity that will be at the core of a data model. It's fine inside a SQL table definition or when needed to link two other entities that have no need for further information.<br/>
+<br/>
+Sometimes a many to many relationship has all the data needed in the two joined entities. But in this case more information is needed, ie the role/relatonship/reason and perhaps more information.<br/>
+<br/>
+In this case, I'm merely pointing out that we really need to put the PERSON-EVENT link in some kind of entity. It really shouldn't be stuffed in either the PERSON or the EVENT entity. It can be called anything really, but it should make sense and be descriptive. FAMILY would be restrictive. RELATIONSHIP may be insensitive. ROLE is rather neutral, but could be also be considered insensitive in the casualty event. GROUP seems kind of weird in this case, to me. I actually kind of like ROLE.<br/>
+<br/>
+Tom, the problem I see with the DeadEnds model is you'd have to create multiple event records for the same event because the role is recorded in the event. This makes the database significantly larger. I have thousands of people in my database, with ten plus thousand events. A baptism event might now have 4 to 12 times as many event records in that model. One event record for each person who had a role, and sometimes two for the same person (ie godparent and mother's-sister). I'd be looking at maybe more than a hundred thousand event records for my still very incomplete family tree (I still have tens of thousands of sibling members and descendants to include).</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-24T13:49:31-08:00</div>
+<div class="text">Brian says "Tom, the problem I see with the DeadEnds model is you'd have to create multiple event records for the same event because the role is recorded in the event. This makes the database significantly larger. I have thousands of people in my database, with ten plus thousand events. A baptism event might now have 4 to 12 times as many event records in that model. One event record for each person who had a role, and sometimes two for the same person (ie godparent and mother's-sister). I'd be looking at maybe more than a hundred thousand event records for my still very incomplete family tree (I still have tens of thousands of sibling members and descendants to include)."<br/>
+<br/>
+I may not have explained myself clearly. There aren't event records for each role player. There is one event record per event. If an event has four role players (eg., father, mother, child at birth, attending physician) then there is 1 event and 4 person records to be created. In my preferred model the event both refers to the four persons via roleReferences and each person refers to the event with a reciprocal roleReference. Ther are no EVENT-PERSON records per se, they are simply inherent in the roleReferences. The DeadEnds way would be:<br/>
+<br/>
+event: [id: 123; date: 18 January 1784; placep: [id: p543] type: birth; rolep: [id: 234 type: father] rolep: [id: 345; type: mother] rolep: [id: 456; type: child] rolep: [id: 567; type: attendingPhysician]]<br/>
+<br/>
+person: [id: 234 name: John Smith; rolep: [id: 123; type: father]]<br/>
+<br/>
+person: [id: 345; name: Mary; rolep: [id: 123; type: mother]]<br/>
+<br/>
+person: [id: 456; name: James Smith; rolep: [id: 123; type: child]]<br/>
+<br/>
+person: [id: 567; name Dr. Fred C. Snurfbuckt; rolep: [id: 123; type: attendingPhysician]]<br/>
+<br/>
+place: [id: p543; ...]<br/>
+<br/>
+Note how in this way you record only the information that is available in a very simple manner. You do what you have to do, but nothing more. Of course you don't really record it this way; your brilliant software does it for you.<br/>
+<br/>
+I stress there are no PERSON-EVENT thingies in here, just role references. This is part and parcel with my contention that a relationship is not an entity that is on a par with a person or an event.<br/>
+<br/>
+I also sense that by talking about PERSON-EVENT's we are heading down into the realm of RDBMS's too fast. I'm among the minority of persons (maybe a very, very small minority) who do not believe that an RDBMS is the right DB technology for genealogy. The DeadEnds data model kind of presupposes a hierarchical database model with relationships implemented by networking objects in the database. My LifeLines program did this using Gedcom records as the database records. My DeadEnds software uses more generalized text-based trees as records. Any database based on XML does this (even if the XML records are fields in a simple RDBMS. But this is a battle that can really be said to be an implementation one with no place in BG discussions.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-24T15:08:46-08:00</div>
+<div class="text">"I also sense that by talking about PERSON-EVENT's we are heading down into the realm of RDBMS's too fast"<br/>
+<br/>
+Tom - let me reassure you, I am not thinking of an RDBMS at all. My own software is FamilyHistorian from Calico Pie, which actually uses GEDCOM as its native file format - so definitely not a DBMS!<br/>
+<br/>
+I resolved that many-to-many relation between PERSON and EVENT simply because it seemed to lead to a better XML by removing duplication. My issue with your DeadEnds way is that you have duplicated the role (e.g. John Smith as father) in the event line and in the person line. Of course, while everything works, duplication does not matter, but if we hit our exported BG XML text file with an editor to adjust someone's role (and I've done similar things where I realise I've got the wrong terms) and don't adjust both, we are in deep brown stuff.<br/>
+<br/>
+Hence, regardless of the file storage technology, I would want the XML to resolve that many-to-many. <br/>
+<br/>
+Conversely, I have absolutely no issue with XML having multiple role elements inside an event element, even though that breaks the first (?) rule of data normalisation (the one about no repeated attributes), because it is just a text file, not a DBMS.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-24T19:08:18-08:00</div>
+<div class="text">Ah, well, now I know why your name is so familiar. Interesting. I was thinking along RDBMs lines. I guess, I should have read the DeadEnds definition more carefully.<br/>
+<br/>
+Ok, so you've recorded the many to many by denormalizing the data and giving both sides half the key, in effect. I don't really have a problem with duplicating a key field. Using a list approach is a unique solution. <br/>
+<br/>
+Not sure that I'd agree you haven't got a person-event record, you just buried them as subrecords within the event record. With the added cost of an extra role record for each role in the person entity. You'd have to include the ability for a person to have multiple roles also. Easy enough to do in XML. although, I's say that only one of the records need the full role information, and the other just the foreign key.<br/>
+<br/>
+In any event in your model we still need to have the role entity, even though it would be a sub entity to both person and event.<br/>
+<br/>
+Adrian's comment points to the weakness in your approach. That was part of the reasoning behind the development of the five normal forms. Record it once and in one place and you never (theoretically) have to worry about data corruption due to edits.<br/>
+Normalization is great for many applications, but not all. There's still no getting around that.<br/>
+<br/>
+Whether you go with a relational or a hierarchical or a network model you just really wind up shuffling around the elements and giving them different names.<br/>
+<br/>
+Getting away from the argument for a minute. Genealogy data is most naturally a graph or network type of data structure. But how do you design it to deal with the many connectedness and still minimize duplication of data. I think the two goals are in opposition.<br/>
+<br/>
+Rather than argue which system is better, I think time is better spent developing the model. I'd be ok with sub entities, or entities within entities. That would lend itself readily to XML, and is easy enough to extract into a relational model. THe reverse is also easy.<br/>
+<br/>
+So, we have a need for a person, an event, and some means of recording the role. A role can't exist without an event or a person. So it is a child entity. Either within one or both of it's parent entities or separate from them.<br/>
+<br/>
+Or am I incorrect?</div></div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-24T10:16:01-08:00</div>
+<div class="title">Groups of different Entity Types</div>
+<div class="text">"Groups may be groups of People, Events, Locations, Objects, or any other entity or combination thereof."<br/>
+<br/>
+I am really not liking the idea of mixing entity types in GROUPs. As soon as you over-generalise, you lose the ability to say much about the entity. For instance, I'd like to have GROUPs affected by EVENTs - such as: <br/>
+Event "San Francisco earthquake" affects Group "Balfour Guthrie partnership". <br/>
+<br/>
+That makes sense but if the GROUP consists of EVENTs, how do we create any meaningful relationships between EVENTs and GROUPs of Events? Or a GROUPs of Events and a single Location?<br/>
+<br/>
+There is a possible need for an entity type that just contains a list of arbitrary entities of any and every type - e.g. to list stuff that is intended to be exported periodically. But you can't do much with it in family history terms - only in IT housekeeping terms.<br/>
+<br/>
+To me, a GROUP should just contain PEOPLE. Not even a list of just LOCATIONs - why do we need that? What's the genealogical meaning of it? About the only genealogically meaningful use of a list of locations is to define a higher level location - which is surely just another LOCATION!</div></div></body>
+</html>

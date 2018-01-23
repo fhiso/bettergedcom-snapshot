@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>BetterGedcom - ROLE (BJD)</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"></span><strong><span style="font-size: 18px; line-height: 19px;">ROLE</span></strong><br />
+<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> This entity type represents a role for one or more PERSONs. </span><br />
+<br />
+<br />
+<br />
+<br />
+<strong><span style="font-size: 13px; line-height: 19px;">Dependencies:</span></strong><br />
+<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">A ROLE belongs to one or more PERSONs.</span><br />
+<br />
+<strong><span style="font-size: 13px; line-height: 19px;">Attributes:</span></strong><br />
+<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> RoleUID - required - a universally unique identifier. (I'm not entirely sure any UUID will be truly unique across many systems. But that's the general consensus)</span><br />
+RoleType - required - A choice field allowing free form entry. Some predetermined values can be: father, mother, brother, sister, ..., sponsor, witness, corporal, etc.<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> Description </span> - optional <span style="font-size: 13px; font-weight: normal; line-height: 19px;">.</span><br />
+Surety - optional - a value on a scale indicating how certain the data is.<br />
+<br />
+<strong><span style="font-size: 13px; line-height: 19px;">Relationships:</span></strong><br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> A ROLE must belong to 1 or more PERSONs.</span><br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> A ROLE may occur in 1 or more EVENTs.</span><br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">A ROLE may be related to 1 or more LOCATIONs. (Can anyone think of a case where this </span>would apply and an event wouldn't?)<br />
+<h1 id="toc0"> </h1>
+
+    </div>
+  </body>
+</html>

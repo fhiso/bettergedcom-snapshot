@@ -1,0 +1,2003 @@
+<html>
+<head>
+<title>BetterGedcom - Mike's Model</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<strong>SFT.xml</strong> - "<strong><span class="style39"><span style="color: #ff0000;">S</span></span>implified <span class="style39"><span style="color: #ff0000;">F</span></span>amily <span class="style39"><span style="color: #ff0000;">T</span></span>ree</strong> <span class="style39"><span style="color: #ff0000;"><strong>xml</strong></span><span style="color: #000000;">"</span></span><br/>
+<br/>
+<span class="style39">Concept by Michael Stransky working with web based XML.</span><br/>
+<br/>
+<u><span class="style39">Structured Concept: </span></u><br/>
+<span class="style39">Gedcom is one flat file which is made up of data storage areas to contain data in record sets like INDI@, SOUR@, FAM@, REPO@...What SFT does is breaks down those data sets into more flexible independent XML files. But any any time one can reconstruct a gedcom single flat file again with a xslt will parse the <span class="style39">multiple </span>xml files and sequence them into a single text output in gedcom format.</span><br/>
+<br/>
+<br/>
+<strong><span class="style11">PID.xml</span></strong> &gt;&gt; Gedcom equivalent INDI<br/>
+This is the default data snip set that the user or researcher wishes to have a person displayed in a navigational tree as generic representation of preferred individual data like birth, death, dates and places. That is it, all other records will be discussed shortly in EID.xml. ﻿<br/>
+<span class="style41"><u>FUNCTION:</u> This file controls a default person display markers, pedigree, navigation, and parent child relationships. ﻿</span><br/>
+<table class="wiki_table">
+<tr>
+<td><span style="color: #800000;">&lt;xml&gt;&lt;data&gt;</span><br/>
+<span style="color: #800000;">&lt;set&gt;</span><br/>
+<span style="color: #800000;">&lt;pid&gt;1&lt;/pid&gt;&lt;cid&gt;2&lt;/cid&gt;&lt;pgm&gt;John Fitzgerald&lt;/pgm&gt;&lt;psn&gt;Kennedy&lt;/psn&gt;&lt;psx&gt;M&lt;/psx&gt;&lt;pbd&gt;1917&lt;/pbd&gt;&lt;pbp&gt;Brookline, MA&lt;/pbp&gt;&lt;pdd&gt;1963&lt;/pdd&gt;&lt;pdp&gt;Dallas, TX&lt;/pdp&gt;</span><br/>
+<span style="color: #800000;">&lt;/set&gt;&lt;set&gt;</span><br/>
+<span style="color: #800000;">&lt;pid&gt;2&lt;/pid&gt;&lt;cid&gt;4&lt;/cid&gt;&lt;pgm&gt;Jaqueline Lee&lt;/pgm&gt;&lt;psn&gt;Bouvier&lt;/psn&gt;&lt;psx&gt;F&lt;/psx&gt;&lt;pbd&gt;1929&lt;/pbd&gt;&lt;pbp&gt;Southampton, NY&lt;/pbp&gt;&lt;pdd&gt;1994&lt;/pdd&gt;&lt;pdp&gt;New York City, NY&lt;/pdp&gt;</span><br/>
+<span style="color: #800000;">&lt;/set&gt;</span><br/>
+<em><span style="color: #000000;">.......more individaul sets......</span></em><br/>
+<span style="color: #800000;">&lt;/data&gt;&lt;xml&gt;</span><br/>
+</td>
+</tr>
+</table>
+<strong>F<span class="style11">ID.xml</span></strong> &gt;&gt; Gedcom equivalent FAM<br/>
+This is the linkage for navigation from person to parents and children. A "cid" in the pid is know as Child of family ID in the "FID.xml". ﻿<br/>
+<span class="style41"><u>FUNCTION:</u> This file controls a bond display markers to display pedigree, navigation, and parent child relationships even step children in a family view..</span><br/>
+<table class="wiki_table">
+<tr>
+<td><span style="color: #800000;">&lt;xml&gt;&lt;data&gt;</span><br/>
+<span style="color: #800000;">&lt;set&gt;</span><br/>
+<span style="color: #800000;">&lt;fid&gt;2&lt;/fid&gt;&lt;hid&gt;8&lt;/hid&gt;&lt;wid&gt;9&lt;/wid&gt;&lt;fbd&gt;07 OCT 1914&lt;/fbd&gt;&lt;fbp&gt;Newport, RI, USA&lt;/fbp&gt;&lt;fdd&gt;&lt;/fdd&gt;&lt;fdp&gt;&lt;/fdp&gt;</span><br/>
+<span style="color: #800000;">&lt;/set&gt;</span><br/>
+<span style="color: #800000;">&lt;set&gt;</span><br/>
+<span style="color: #800000;">&lt;fid&gt;4&lt;/fid&gt;&lt;hid&gt;3&lt;/hid&gt;&lt;wid&gt;4&lt;/wid&gt;&lt;fbd&gt;&lt;/fbd&gt;&lt;fbp&gt;&lt;/fbp&gt;&lt;fdd&gt;&lt;/fdd&gt;&lt;fdp&gt;&lt;/fdp&gt;</span><br/>
+<span style="color: #800000;">&lt;/set&gt;</span><br/>
+<em>.......more bonds or family sets......</em><br/>
+<span style="color: #800000;">&lt;/data&gt;</span><br/>
+<span style="color: #800000;">&lt;xml&gt;</span><br/>
+</td>
+</tr>
+</table>
+<br/>
+<br/>
+<strong><span class="style11">SID.xml</span></strong> &gt;&gt; Gedcom equivalent SOUR<br/>
+This is when a person enters a document strictly as a source. This is strictly to capture the physical document NOT the information found within. This SID.xml also can point to an external image file name found in a default hard drive location folder or web folder. <br/>
+<span class="style41"><u>FUNCTION:</u> This file controls source documents collected and stores them in one place and can link to folder image or locations if available.</span><br/>
+<table class="wiki_table">
+<tr>
+<td><span style="color: #800000;">&lt;xml&gt;&lt;data&gt;</span><br/>
+<span style="color: #800000;">&lt;set&gt;</span><br/>
+<span style="color: #800000;">&lt;sid&gt;1&lt;/sid&gt;&lt;rid&gt;?&lt;/rid&gt;&lt;iid&gt;19283.jpg&lt;/iid&gt;&lt;cls&gt;Birth&lt;/cls&gt;&lt;typ&gt;Certificate&lt;typ&gt;&lt;rtl&gt;"Record of birth"&lt;rtl&gt;</span><br/>
+<span style="color: #800000;">&lt;rdt&gt;1 Jun 1917&lt;rdt&gt;&lt;rlo&gt;Rhode Island Newport Centeral Hospitol&lt;/rlo&gt;&lt;rpl&gt;Newport, RI, USA&lt;/rpl&gt;</span><br/>
+<span style="color: #800000;">&lt;/set&gt;&lt;set&gt;</span><br/>
+<span style="color: #800000;">&lt;sid&gt;2&lt;/sid&gt;&lt;rid&gt;?&lt;/rid&gt;&lt;iid&gt;63746.pdf&lt;/iid&gt;&lt;cls&gt;Marriage&lt;/cls&gt;&lt;rtl&gt;Marriage Record&lt;rtl&gt;</span><br/>
+<span style="color: #800000;">&lt;rdt&gt;07 OCT 1914&lt;rdt&gt;&lt;rlo&gt;St. Pauls Church of Newport&lt;rlo&gt;&lt;rpl&gt;Newport, RI, USA&lt;/rpl&gt;</span><br/>
+<span style="color: #800000;">&lt;/set&gt;</span><br/>
+..........sid Source ID, rid is repository, iid image ID link to default image file/folder ...............<br/>
+<span style="color: #800000;">&lt;/data&gt;&lt;/xml&gt; </span><br/>
+</td>
+</tr>
+</table>
+<em>Note: some source documents are captured days after an event. The event date from inside a sid gets captured in the EDI file. Such like Newspapers will Print Thursday of an event that happen on the previous Monday. Above for source I made up some data so this can been seen.</em><br/>
+<ul><li>due to others input the gedcom REPO and PUBL need to have independent xml files also.</li></ul><br/>
+<strong><span class="style11">EID.xml</span></strong> &gt;&gt; Gedcom equivalent BIRT, MARR, DEAT, etc....<br/>
+This is the collected data sets (interpretation or observed data inside the source BUT NOT the source data itself) This is where USERS enter independent lines of data, pulled from inside a source, about details and events. Such data like a citation, each single entry per person will then point to a single (pID) and the (sID). This establishes the connection of the person to a source with "acceptance level of proof".<br/>
+<span class="style41"><u>FUNCTION:</u> This file controls all the users entered data of the observations of aka information found inside source documents. Also provides a user the ability to keep track of which citations have been review or not, also what level of acceptance they bare.</span><br/>
+<table class="wiki_table">
+<tr>
+<td><span style="color: #800000;">&lt;xml&gt;&lt;data&gt;</span><br/>
+<span style="color: #800000;">&lt;set&gt;</span><br/>
+<span style="color: #800000;">&lt;eid&gt;1&lt;/eid&gt;&lt;pid&gt;1&lt;/pid&gt;&lt;sid&gt;1&lt;/sid&gt;&lt;cls&gt;Birth&lt;/cls&gt;&lt;typ&gt;Cert&lt;typ&gt;&lt;rol&gt;baby&lt;rol&gt;&lt;egn&gt;John Fitzgerald&lt;/egn&gt;&lt;esn&gt;Kennedy&lt;/esn&gt;{&lt;tagA&gt;?#&lt;/tagA&gt;&lt;tagB&gt;?#&lt;/tagB&gt;&lt;tagC&gt;?#&lt;/tagC&gt;}</span><br/>
+<span style="color: #800000;">&lt;/set&gt;&lt;set&gt;</span><br/>
+<span style="color: #800000;">&lt;eid&gt;2&lt;/eid&gt;&lt;pid&gt;8&lt;/pid&gt;&lt;sid&gt;1&lt;/sid&gt;&lt;cls&gt;Birth&lt;/cls&gt;&lt;typ&gt;Cert&lt;typ&lt;rol&gt;Father&lt;rol&gt;&lt;egn&gt;Joseph Patrick&lt;/egn&gt;&lt;esn&gt;Kennedy&lt;/esn&gt;{&lt;tagA&gt;?#&lt;/tagA&gt;&lt;tagB&gt;?#&lt;/tagB&gt;&lt;tagC&gt;?#&lt;/tagC&gt;}</span><br/>
+<span style="color: #800000;">&lt;/set&gt;&lt;set&gt;</span><br/>
+<span style="color: #800000;">&lt;eid&gt;3&lt;/eid&gt;&lt;pid&gt;9&lt;/pid&gt;&lt;sid&gt;1&lt;/sid&gt;&lt;cls&gt;Birth&lt;/cls&gt;&lt;typ&gt;Cert&lt;typ&gt;&lt;rol&gt;Mother&lt;rol&gt;&lt;egn&gt;Rose Elizabeth&lt;/egn&gt;&lt;esn&gt;Fitzgerald&lt;/esn&gt;{&lt;tagA&gt;?#&lt;/tagA&gt;&lt;tagB&gt;?#&lt;/tagB&gt;&lt;tagC&gt;?#&lt;/tagC&gt;}</span><br/>
+<span style="color: #800000;">&lt;/set&gt;&lt;set&gt;</span><br/>
+<span style="color: #800000;">&lt;eid&gt;4&lt;/eid&gt;&lt;pid&gt;8&lt;/pid&gt;&lt;sid&gt;2&lt;/sid&gt;&lt;cls&gt;Marital&lt;/cls&gt;&lt;typ&gt;Marriage&lt;typ&lt;rol&gt;Groom&lt;rol&gt;&lt;egn&gt;Joseph Patrick&lt;/egn&gt;&lt;esn&gt;Kennedy&lt;/esn&gt;{&lt;tagA&gt;?#&lt;/tagA&gt;&lt;tagB&gt;?#&lt;/tagB&gt;&lt;tagC&gt;?#&lt;/tagC&gt;}</span><br/>
+<span style="color: #800000;">&lt;/set&gt;&lt;set&gt;</span><br/>
+<span style="color: #800000;">&lt;eid&gt;5&lt;/eid&gt;&lt;pid&gt;9&lt;/pid&gt;&lt;sid&gt;2&lt;/sid&gt;&lt;cls&gt;Marital&lt;/cls&gt;&lt;typA&gt;Marriage&lt;typ&gt;&lt;rol&gt;Bride&lt;rol&gt;&lt;egn&gt;Rose Elizabeth&lt;/egn&gt;&lt;esn&gt;Fitzgerald&lt;/esn&gt;{&lt;tagA&gt;?#&lt;/tagA&gt;&lt;tagB&gt;?#&lt;/tagB&gt;&lt;tagC&gt;?#&lt;/tagC&gt;}</span><br/>
+<span style="color: #800000;">&lt;/set&gt;</span><br/>
+<em><span style="color: #000000;">..........more event evidence records linking sources to PIDS also group views of people and places tied to an event or source document...............</span></em><br/>
+<span style="color: #800000;">&lt;/data&gt;&lt;/xml&gt;</span><br/>
+</td>
+</tr>
+</table>
+<em>{requested options to include level evidence facts, also if record should be viewed publicly and shared during an export process.} - will be modified for better clarification <strong>once BG touches on this topic</strong>.</em><br/>
+<em>tagA # to designate level of privacy to display info.</em><br/>
+<em>tagB # to designate level</em> <em>to be exported and shared.</em><br/>
+<em>tagC # to designate level</em> <em>of evidence that it may bare.</em><br/>
+each tag level<br/>
+<u><em>Restricted, Confidential, Private, Public</em></u><br/>
+<em>1 Restricted, No display, no share, no transfer.</em><br/>
+<em>2 Confidential, No display, no share, yes transfer.</em><br/>
+<em>3 Private, limit display, yes share, yes transfer.</em><br/>
+<em>4 Public, yes display, yes share, yes transfer.</em><br/>
+<br/>
+<span class="style11"><strong>LID.xml</strong></span> View&gt;&gt; Gedcom <span class="style39">equivalent </span>?<br/>
+Here is a new concept request, many historians and USERs request to track locals and locations which change names. Those locations that have split up and/or land areas regroup by wars, including such districts and name changes. These two DB files acts the same, LID = PID. Also evidence records (EID's) can be shared between multiple PID's and LID's from a same source document. All EID's from a single source event can CAPTURE all persons and locations to a single source event.<br/>
+<span class="style41"><u>FUNCTION:</u> This file controls default location display place markers, changes, gps, and land aka name relation changes over time.</span><br/>
+<br/>
+<br/>
+<br/>
+<u><strong><span class="style41">For the home hobby user:</span></strong></u><br/>
+<span class="style41"><span style="font-size: 10pt;">For a hobbist they may use the PID and FID to store default place-markers of people which has the ability to display all descendant, pedigree and household views along with half or step siblings. The way PID and FID are constructed can import GEDCOM standard INDI and FAM records as well export out to GEDCOM structure again.﻿</span></span><br/>
+<span class="style41"><span style="font-family: Times New Roman;"><span class="style41"><span style="font-size: 10pt;">﻿</span></span></span></span><br/>
+<br/>
+<strong><span class="style41"><span style="font-size: 10pt;"><u>For the Researcher minded user:</u> ﻿﻿</span></span></strong><br/>
+<span class="style41"><span style="font-size: 10pt;">The SID and EID are xml files to place source records and evidence records for tracking assumptions and record keeping. These xml files are structure for easy import and export of single, multiple or entire file as a collection or archive. If a researcher may use the PID xml to attach many evidence records to an individual this can be easily done. This PID individual acts as a place marker to list all records to a single person in question.</span></span><br/>
+<span class="style41"><span style="font-family: Times New Roman;"><span class="style41"><span style="font-size: 10pt;">﻿</span></span></span></span><br/>
+<span class="style41"><span style="font-family: Times New Roman;"><span class="style41"><span style="font-family: Times New Roman;"><span class="style41"><span style="font-size: 10pt;">By using both ends of the xml areas, using them together make a better over all use and flexibilty in needs and seprated storage.﻿</span></span></span></span></span></span><br/>
+<span class="style41"><span style="font-family: Times New Roman;">﻿</span></span><br/>
+<span class="style41"><span style="font-family: 'Times New Roman'; font-size: 10pt;">For sharing files, If one wished to share all xml files they can be shared. If one wishes only to import or export all or some EID or SID records, only those files can be selected and performed as desired. A users PID outline of people are not over written, just new additional EID and SID records are added to the collected archive or research work in the EID and SID files. The PID and FID navigations do not get corrupted or even touched since no actual records are store inside each individual place-marker record. Each evidence records only point to the ID# of an individual of choice.</span></span><br/>
+<br/>
+<br/>
+<u><strong>Here is a GEDCOM like structure to see how the above xml matches up in a gedcom like file.</strong></u><br/>
+Note the tags I used are my tags which have no bearing on a gedcom tag or a future BG tag that will be used to identify the data field in question. This list only represents which data field I am to sync with and data that I am capturing for an import or export purposes.<br/>
+<table class="wiki_table">
+<tr>
+<td><u>Gedcom like so it is easier fro people to follow</u><br/>
+<ul><ul><ul><li>This acts like your INDI area</li></ul></ul></ul>0 PID 1<br/>
+1 cid 2<br/>
+1 pgm John Fitzgerald<br/>
+1 psn Kennedy<br/>
+1 psx M<br/>
+1 pbd 1917<br/>
+1 pbp Brookline, MA<br/>
+1 pdd 1963<br/>
+1 pdp Dallas, T<br/>
+0 PID 2<br/>
+1 cid 4<br/>
+1 pgm Jaqueline Lee<br/>
+1 psn Bouvier<br/>
+1 psx F<br/>
+1 pbd 1929<br/>
+1 pbp Southampton, NY<br/>
+1 pdd 1994<br/>
+1 pdp New York City, NY<br/>
+.......more Person sets......<br/>
+<ul><ul><ul><li>This acts like your FAM area</li></ul></ul></ul>0 FID 2<br/>
+1 hid 8<br/>
+1 wid 9 fbd 07 OCT 1914<br/>
+1 fbp Newport, RI, USA<br/>
+1 fdd<br/>
+1 fdp<br/>
+0 FID 4<br/>
+1 hid 3<br/>
+1 wid 4<br/>
+1 fbd<br/>
+1 fbp<br/>
+1 fdd<br/>
+1 fdp<br/>
+.......more bonds or family sets......<br/>
+<ul><ul><ul><li>This acts like your ASSO area</li></ul></ul></ul>0 EID 1<br/>
+1 pid 1<br/>
+1 sid 1<br/>
+1 cls Birth<br/>
+1 typ Cert<br/>
+1 rol baby<br/>
+1 egn John Fitzgerald<br/>
+1 esn Kennedy<br/>
+1 tagA ?#<br/>
+1 tagB ?#<br/>
+1 tagC ?#<br/>
+0 EID 2<br/>
+1 pid 8<br/>
+1 sid 1<br/>
+1 cls Birth<br/>
+1 typ Cert<br/>
+1 rol Father<br/>
+1 egn Joseph Patrick<br/>
+1 esn Kennedy<br/>
+1 tagA ?#<br/>
+1 tagB ?#<br/>
+1 tagC ?#<br/>
+0 EID 3<br/>
+1 pid 9<br/>
+1 sid 1<br/>
+1 cls Birth<br/>
+1 typ Cert<br/>
+1 rol Mother<br/>
+1 egn Rose Elizabeth<br/>
+1 esn Fitzgerald<br/>
+1 tagA ?#<br/>
+1 tagB ?#<br/>
+1 tagC ?#<br/>
+0 EID 4<br/>
+1 pid 8<br/>
+1 sid 2<br/>
+1 cls Marital<br/>
+1 typ Marriage<br/>
+1 rol Groom<br/>
+1 egn Joseph Patrick<br/>
+1 esn Kennedy<br/>
+1 tagA ?#<br/>
+1 tagB ?#<br/>
+1 tagC ?#<br/>
+0 EID 5<br/>
+1 pid 9<br/>
+1 sid 2<br/>
+1 cls Marital<br/>
+1 typA Marriage<br/>
+1 rol Bride<br/>
+1 egn Rose Elizabeth<br/>
+1 esn Fitzgerald<br/>
+1 tagA ?#<br/>
+1 tagB ?#<br/>
+1 tagC ?#<br/>
+.......more bonds or family sets......<br/>
+<ul><ul><ul><li>This acts like your SOUR area.</li></ul></ul></ul>0 SID 1<br/>
+1 rid ?<br/>
+1 iid 19283.jpg<br/>
+1 cls Birth<br/>
+1 typ Certificate<br/>
+1 rtl "Record of birth"<br/>
+1 rdt 1 Jun 1917<br/>
+1 rlo Rhode Island Newport Central Hospital<br/>
+1 rpl Newport, RI, USA<br/>
+0 SID 2<br/>
+1 rid ?<br/>
+1 iid 63746.pdf<br/>
+1 cls Marriage<br/>
+1 rtl Marriage Record<br/>
+1 rdt 07 OCT 1914<br/>
+1 rlo St. Pauls Church of Newport<br/>
+1 rpl Newport, RI, USA<br/>
+.......more Source sets......<br/>
+<br/>
+<br/>
+Keeping this short I did not include Event locations over time<br/>
+and how places and people can be linked to a single event/area.<br/>
+<br/>
+I will add that request soon how I would control a users needs to track <br/>
+historical locations over time as land or property changes names. This <br/>
+will be achieved by mimicking the INDI and FAM area.<br/>
+LOCA = INDI and AREA = FAM but contain thier own pedigree from <br/>
+one data change during land splits, joining areas together or name <br/>
+changes with GPS or near the area.<br/>
+</td>
+<td><u>Data field defined</u><br/>
+<br/>
+PID Person id #<br/>
+cid Child of family FID match<br/>
+pgm Persons given names<br/>
+psn Persons surname<br/>
+psx Persons sex<br/>
+pbt Persons birth date<br/>
+pbp Persons birth place<br/>
+pdt persons death date<br/>
+pdp Persons death place<br/>
+??? updating the rest of the list.<br/>
+<br/>
+<br/>
+FID Family, Group or Bond #<br/>
+hid husband = PID #<br/>
+wid wife = PID #<br/>
+fbd bond start date<br/>
+fbp bond start place<br/>
+fdt bond end date<br/>
+fdp bond end place<br/>
+??? updating the rest of the list.<br/>
+<br/>
+<br/>
+EID event from a source<br/>
+pid = PID # match too<br/>
+sid = SID # match too<br/>
+cls = classifictation of event<br/>
+typ = sub type of event<br/>
+rol = role individual played<br/>
+egn = event pers given name<br/>
+esn = event pers surname<br/>
+tagA = ?privacy level<br/>
+tagB = ?shared level<br/>
+tagC = ?users progress<br/>
+??? updating the rest of the list<br/>
+<br/>
+<br/>
+SID Source # ID<br/>
+rid REPO # ID<br/>
+iig image file name<br/>
+cls Source Classification<br/>
+typ Source Sub class type<br/>
+rtl record title<br/>
+rlo records location<br/>
+rpl records place<br/>
+??? updating the rest of the list<br/>
+</td>
+</tr>
+</table>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-17T16:19:42-08:00</div>
+<div class="title">Looking for suggestions on how we begin to build comparisons</div>
+<div class="text">Hi Mike:<br/>
+<br/>
+Thank you for posting the model here, so that we can begin to understand it better, separate from discussions of existing GEDCOM.<br/>
+<br/>
+Realizing you may have addressed this in another discussion thread .... <br/>
+<br/>
+(1) Is there a work process or work flow associated with the model? <br/>
+<br/>
+(2) Do you consider this model to be "evidence-conclusion" based? <br/>
+<br/>
+<br/>
+(3) GenTech defined particular data definitions and advanced certain reasoning about those definitions. Using your model, can you help us "see" how you considered those principals? Which GenTech principals does your model advance and how?<br/>
+<br/>
+(4) We have posted references to various known genealogical standards level materials and/or best thinking (if not best practices). These might include the Genealogical Proof Standard and evidence management ala _Evidence Explained_. Have you had a chance to review any of those materials enough to explain to us how your model supports specific features of those standards or that best thinking.  <br/>
+<br/>
+(5) Assuming it is an "evidence-conclusion based model, how will would the BetterGEDCOM transfer mechanism of this model support "conclusion based" software export?</div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-19T09:19:01-08:00</div>
+<div class="text"><br/>
+... or both can be false. The point is you have possibly conflicting evidence that you want to document, just like different documents may give different birth dates, etc.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-19T09:44:21-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+  Are you trying to capture the evidence lets say in gedcom terms for an example.<br/>
+<br/>
+0 @I50@ INDI<br/>
+1 EVID @E75@<br/>
+2 ROLL step-daughter<br/>
+1 SOUR @S455@<br/>
+2 TITL reading of a will<br/>
+<br/>
+0 @I50@ INDI<br/>
+1 EVID @E78@<br/>
+2 ROLL Cousin <br/>
+1 SOUR @S777@<br/>
+2 TITL NJ 1910 fed census<br/>
+<br/>
+0 @I88@ INDI<br/>
+1 EVID @E91@<br/>
+2 ROLL step-Father<br/>
+1 SOUR @S455@<br/>
+2 TITL reading of a will<br/>
+<br/>
+0 @I88@ INDI<br/>
+1 EVID @E92@<br/>
+2 ROLL Head <br/>
+1 SOUR @S777@<br/>
+2 TITL NJ 1910 fed census<br/>
+<br/>
+So if you listed or say view a sour record<br/>
+Display related linked records like so.<br/>
+SOUR @S777@ "1910 fed census NJ......."<br/>
+  EVID @E92@ "Head John Smith age ...." <br/>
+  EVID @E78@ "Cousin Mary fields......"<br/>
+<br/>
+Or by looking at a person the evidence recordds list like so<br/>
+INDI @I50@ "Mary Fields from - to........"<br/>
+  EVID @E78@ "Cousin Mary fields........."<br/>
+  EVID @E78@ "step-daughter Mary fields.."<br/>
+<br/>
+I have many ways to keep options open to capture what people what as tools, display options or new kinds of displays. I also keep myself open to altering a GEDCOM like version as shown here if others might consider and also keep my options open in XML formats as well.<br/>
+<br/>
+I think we need to ask what fields of data people need to capture, and how they want they to be display as user NEEDS. then let each techie look at it if it can be done and share possiable ways to perform it keeping "how to on the table" and "needs or the users wishes" and the BG terminology people can make a shcolary definition of it all.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-19T09:54:28-08:00</div>
+<div class="text">Sorry I should have display it as <br/>
+<br/>
+0 @I50@ INDI<br/>
+1 EVID @E75@<br/>
+2 ROLL step-daughter<br/>
+1 SOUR @S455@<br/>
+2 TITL reading of a will<br/>
+1 EVID @E78@<br/>
+2 ROLL Cousin <br/>
+1 SOUR @S777@<br/>
+2 TITL NJ 1910 fed census<br/>
+<br/>
+0 @I88@ INDI<br/>
+1 EVID @E91@<br/>
+2 ROLL step-Father<br/>
+1 SOUR @S455@<br/>
+2 TITL reading of a will<br/>
+1 EVID @E92@<br/>
+2 ROLL Head <br/>
+1 SOUR @S777@<br/>
+2 TITL NJ 1910 fed census</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-19T10:25:20-08:00</div>
+<div class="text">There is no such tag as "EVID" which is why I used "ASSO".<br/>
+<br/>
+"ROLL" should be (if anything) "ROLE"<br/>
+<br/>
+The SOUR tags should be level 2 under the EVID tag. They are the source of the Evidence, not of the Individual.<br/>
+<br/>
+I'd have had the step-father/daughter relationship as follows:<br/>
+<br/>
+0 @I50@ INDI<br/>
+1 ASSO @I88@<br/>
+2 RELA step-daughter<br/>
+2 SOUR @S455@<br/>
+3 TITL reading of a will<br/>
+<br/>
+0 @I88@ INDI<br/>
+1 ASSO @I50@<br/>
+2 ROLL step-Father<br/>
+2 SOUR @S455@<br/>
+2 TITL reading of a will<br/>
+<br/>
+and the above is currently valid GEDCOM, although few programs currently handle it.<br/>
+<br/>
+Your second part is not about relationships of two people, but it relationships to the Head of the family of the federal census record. I don't think you want to record that this way. If we had a "Group" of people, we would refer to them.<br/>
+<br/>
+The key thing you left out in your example was that you were pointing to an evidence record, and were not pointing to the other person's INDI record.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-19T10:59:01-08:00</div>
+<div class="text">"There is no such tag as "EVID" which is why I used "ASSO"." <br/>
+-True thats why I was trying to say like gedcom, because my model would be to new to follow along.<br/>
+<br/>
+"The SOUR tags should be level 2 under the EVID tag. They are the source of the Evidence, not of the Individual."<br/>
+- correct again I was just trying to say to ref towards a sour record<br/>
+1 &gt; sour<br/>
+not<br/>
+0 SOUR.<br/>
+<br/>
+I like your ASSO also. <br/>
+<br/>
+<hr/>
+"The key thing you left out in your example was that you were pointing to an evidence record, and were not pointing to the other person's INDI record."<br/>
+Yes that is what I am trying to do.<br/>
+<br/>
+Say by looking at a source record and you want to view all the people that took a part in the event.<br/>
+The, (I'll use your term with my example)<br/>
+<br/>
+Say you look at a census record with 8 people in a home<br/>
+That sour record is ref'd by 8 records which some people call observed data in the image, but is now entered as text fields.<br/>
+1-8 captures the person names, ages, roles they played etc... and each other the 8 persons captured with data pointing to the source image or document also point the the ACUTAL individaul in a tree outline.<br/>
+<br/>
+So if you even pulled up a wedding record you could just have the bride and groom, 2 observed data text from the source pointing to the two indivuals each,. ONE can even get creative and add in the witnesses, the Judge and minister, even the clerk.<br/>
+<br/>
+People dont have to be related by blood but they are all tied to an event or source doc. <br/>
+<br/>
+About the girl being the cousin and also the step daughter. <br/>
+<br/>
+Most researchers may be able to view the ONE person and see ALL roles in the listed "Observed data records" on one screen and which each point back to a source record.<br/>
+<br/>
+Or the source record view can see all the persons and rolls they played at an event on the screen at one time.<br/>
+<br/>
+The thing you have is trying to find a link how a girl can be the Cuosin and step-daughter at the same time. <br/>
+<br/>
+Over all, I think this really just a user "need to follow up Flag marker option" not that you need to have a software fill in a very big blank to over come missing information.<br/>
+<br/>
+If a person did find the root cuase that her Mother married her Cousin Billy after her father died, Then you could add "Marys fields" Mother and complete that little brick wall. Without going crazy making complex data structures to capture the math.<br/>
+<br/>
+Once the mother has been added the APP software would canculate and display such relations without having to designate extra data fields make transffer of data more complex?<br/>
+<br/>
+I am just kind of throwing this out there, because I would not want to be the one writing all the code to capture relations went any APP will allready do that with no tagged fields?</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-19T11:07:07-08:00</div>
+<div class="text">Sorry I did not grammer check after I wrote that. I believe with a little more research  a person would find out that the Girls mother married her cousin giving her the status of two relationships.<br/>
+<br/>
+Once the mother is added to the INDI or tree outlines the display and app side functions canculated and display this info without have to make new extra fields to capture "AUTOMATIC APP SIDE TOOLS".<br/>
+<br/>
+Just becuase we dont have the mother record in hand we should not make the DB or APP more complex from others. This some hard core researchers might agree that is where you have to Hypothisis about how could it be, research into it while those two records of evidence are flagged "Needs follow up".</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-19T11:09:44-08:00</div>
+<div class="text">Now that I've had time to think about it, I think the relationships in the census record should not be attempted to be transferred to the INDI records. They should remain in the source itself.<br/>
+<br/>
+Maybe it should be something like this:<br/>
+<br/>
+0 @S777@ SOUR<br/>
+1 TITL NJ 1910 fed census<br/>
+1 ASSO @I50@<br/>
+2 ROLE Cousin<br/>
+1 ASSO @I88@<br/>
+2 ROLL Head <br/>
+<br/>
+The "ASSO" tag is illegal here, but something like this would work fine. Then the program can include with the info about INDI I88 that this person was the Head of the family in the NJ 1910 fed census, and it would link to the correct source.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-19T11:35:34-08:00</div>
+<div class="text">Yes, I hit my head on the wall to break down the data and seperate it as must as possible. Sorry I am not the greatest writer.<br/>
+<br/>
+What I have learn.<br/>
+<br/>
+Most researchers look at a document and translate the images into records. this ACTION I have put into one area. Thereseearcher keeps all the work and records in one xml file.<br/>
+<br/>
+Now these records are uniform and are NOT stored with outline trees or even stored inside INDI records for possible overwriteing of ones hard work and research. Also of sources are kept in a xml file as their own like a big COLLECTION of repo and image links.<br/>
+<br/>
+People outlines can be very poor information when sharing and merging, sources can be poorly collected. BUT the key work of a researcher is his or hers work kept seperate from all the ther ways it can get influence with merges and sharing as ONE BIG FILE.<br/>
+<br/>
+In a gedcom way I am doing this<br/>
+<br/>
+<br/>
+0 INDI @50@<br/>
+1 NAME Mary Fields<br/>
+<br/>
+0 INDI @88@<br/>
+1 NAME Billy Smith<br/>
+<br/>
+<br/>
+0 @S777@ SOUR<br/>
+1 TITL NJ 1910 fed census<br/>
+2 .....<br/>
+<br/>
+0 EVID @E441@<br/>
+1 CLAS census<br/>
+<ol><li>ref to @S777@</li></ol>2 ROLE Cousin<br/>
+<ol><li>ref to @I50@</li></ol><br/>
+0 EVID @E444@<br/>
+1 CLAS census<br/>
+<ol><li>ref to @S777@</li></ol>2 ROLL Head <br/>
+<ol><li>ref to @I88@</li></ol><br/>
+For me it is import that the INDI stays strickly an outline tree with just default data for user prefrence as person place-marker<br/>
+and printouts, note there is no records stored inside<br/>
+<br/>
+2nd the Evidence or researchers work is capture in one area linking all sources to the person in question with the researchers data in veiw.<br/>
+<br/>
+I see people will rather just share evidence and source images, not someonelse outlines that have no proof. A reseacher will collect data attach the records to a per and slowing build out there own tree outline BY THE PROOF.<br/>
+<br/>
+On the other hand the home hobby care less for the digging and just wants to print out pretty outlines, and they can. this suits both worlds with out taking control over the original function of the areas.<br/>
+<br/>
+If you like what I am showing you, I have a very easy fix in gedcom LIKE version to sufice the need to trake locals and locations over time and it links locations WITH people to the event vid the evidence records above.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-19T12:58:01-08:00</div>
+<div class="text">Louis says:<br/>
+"As to where I'd put the information that one person is the step-daughter of the other, I'd put it in using the association structure:<br/>
+<br/>
+0 @I50@ INDI<br/>
+1 ASSO @I75@<br/>
+2 RELA step-daughter"<br/>
+<br/>
+Tom had already said, to start this discussion:<br/>
+"&lt;person id="yyy"&gt;<br/>
+&lt;name&gt;William Dells&lt;/name&gt;<br/>
+&lt;relation id="xxx" type="stepDaughter"/&gt;<br/>
+&lt;source id="sss"/&gt;<br/>
+&lt;person&gt;"<br/>
+<br/>
+So now I wonder what all the fuss was about! Our two solutions are identical, except mine is written in DeadEnds XML, and yours is in normal GEDCOM.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-19T13:12:25-08:00</div>
+<div class="text">Tom &amp; Louis,<br/>
+<br/>
+ I think the confusion comes from when we look at another persons style, right off the bat not understanding it right away we say "that way? how would you do Z?"<br/>
+<br/>
+ I think what will help us in the long run, which I have been trying to point out for about three weeks now is a "BG data fields list"<br/>
+<br/>
+I see they are having that on "Goals".<br/>
+<br/>
+If this list is made, the next problem for the DEVS and TECHIES is the BG format to import and export from.<br/>
+<br/>
+Can I suggest a GEDCOM like structure with new tags like ASSO as Louis is alreay doing. Also that other thing I have been stressing is soft text tags over Hard encoded tags if we can.<br/>
+<br/>
+I won't make a long winded blurb here but if you ask me what I mean I can then type it out.<br/>
+<br/>
+You either of you oppose to a gedcom like file to import and export to, with additional strucutre modifications?</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-12-19T14:38:01-08:00</div>
+<div class="text">Re. the discussion about hard or soft tags (standardized or user defined values) defining a relation type. I see little need for standardized values for the purpose of allowing a program to understand the biological relation, but there is another reason for standardizing a base set of values and that is to enable translation. I think a set of values for biological relations should be standardized for use with an Asso type of event (not too distant relations, and not father/mother), and the sender of such info should not expect that the receiving program will understand the semantics of such a biologic relation value, but it should be displayed, preferably in the receiver’s language. User defined values are also needed.  <br/>
+<br/>
+I expect that eg. a probate, that may specify a biological relation (eg. cousin) between two persons, AND also specify that one is a guardian for the other, will be recorded as two links – the first via a biological asso type of relation, and the other one via a guardian role for a probate event – or should both go via the event??<br/>
+<br/>
+I have not looked at the census stuff yet.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-19T14:48:58-08:00</div>
+<div class="text"><br/>
+Tom:<br/>
+<br/>
+Yes, we're identical.<br/>
+<br/>
+I think I raised the fuss only because I incorrectly believed XML required the attribute values to be pre-specified when I saw your list of values.<br/>
+<br/>
+Mike: This thread is getting a little long now. having to go to page 3. Please start your other initiatives, but do so in some new threads attached to appropriate pages.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-18T19:32:59-08:00</div>
+<div class="text">Hey Tom, I have been following along all day, I use the same in my relations of people when displaying people in trees or canculating generations. My relation formula (app side commands) when connecting people and displays like yours FMSS | FMSD | FFSS | FFSD | MMSS | MMSD | MFSS | MFSD<br/>
+<br/>
+  I have....<br/>
+PMMF | PMMM | PFMF | Etc...<br/>
+<br/>
+My goes <br/>
+PMMF = Person Mothers Mothers Father <br/>
+PMMM = Person Mothers Mothers Mothers<br/>
+PFMF = Person Fathers Mothers Fathers<br/>
+<br/>
+It can goes back as far as needed Such like PFFMMFFM<br/>
+This is already done and running. But is more an inside APP function.<br/>
+<br/>
+Since you also are needing such things as Step-Child or Step-Father I have a way to add that to my model fairly easy. It will be an app fuction like my pedigree formula as I have shown above.<br/>
+<br/>
+<hr/>
+That said. Are the app people to show these relations as a display or are users requesting a filed be shown a relation tag per person or per peice of evidence on a single person.<br/>
+<br/>
+1) if a peice of evidence NEEDS a field to hold a relationship text ok, I can kind of see that.<br/>
+<br/>
+2) But an individual having to have a hard tag relations ship to everyone away from thenself. I see that as kind of not good. <br/>
+Each person can be a grandfather of, a sibling to 4 other people, a spouse to two other people and step child of another and so one.<br/>
+<br/>
+<hr/>
+Ok this relationship that wwe are discussing, is it just an app function, or a single relationship between a record and a person. anything more than that might be over kill?</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-18T19:44:44-08:00</div>
+<div class="text">Louis, i am not leaving you out I meant to say to you and tom,<br/>
+<br/>
+I just wanted to add to my above PFMFFM app side tracker, I do also count generations down with my Desendant views and relations from the start person. Such like PCCCCCC<br/>
+Person Childs Childs Childs +++ etc...<br/>
+<br/>
+<br/>
+But again, <br/>
+1) requested? have a text field between a person and a record as a text input?<br/>
+2) this will be all app side conculations?<br/>
+3) some thing beyond this?</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-18T23:20:26-08:00</div>
+<div class="text">Mike says: "2) But an individual having to have a hard tag relations ship to everyone away from thenself. I see that as kind of not good. <br/>
+Each person can be a grandfather of, a sibling to 4 other people, a spouse to two other people and step child of another and so one."<br/>
+<br/>
+Yes, very much not good. Relationships between persons in a database, for display purposes, are easily calculated by the application. For example, Family Tree Maker always shows the relationship between the "home" person and the currently viewed person, no matter how distantly related. FTM doesn't use a set of tags for this; it algorithmically creates the text expression on the fly.<br/>
+<br/>
+I think the issue behind the issue here is HOW ARE RELATIONSHIPS TO BE REPRESENTED IN BETTER GEDCOM TRANSPORT FILES? I think there are two ways to do it, and I have put both of those ways into the DeadEnds model.<br/>
+<br/>
+1. If the relationship were established by a known event, then the transport file should contain that Event record and the two Person records that were the role players in the event that caused their relationship to form. For example, we could be talking about a birth event and the mother/child relationship. The Event record will have two role references to the Person records, and the two Person records will have a role reference to the Event record. The two Person records do not refer to each other directly; they refer directly to the Event and the pattern of the references establishes the relationship.<br/>
+<br/>
+2. If the relationship were established by evidence that stated the relationship existed, but did not mention the event that caused the relationship to be established, then the transport file will contain the two Person records and the Person records will refer to each other directly using relation references; the stepFather/stepDaughter example I gave earlier is an example.<br/>
+<br/>
+Note that in the first cases, when there is evidence of an event, the persons could also be connected with relation references, but this is overkill since the role references establish those relationships indirectly. The relationship expressions I mentioned earlier can also go through event role references (the examples I gave earlier only went through relation references).<br/>
+<br/>
+One would never add extra relations to Person records. For example if you know that James was the father of John and John was the father of Daniel, then the transport file would contain the records with role or relation references to establish the John/Daniel relationship, and it would contain the records with the role or relation references to establish the John/Daniel relationship, but THERE WOULD BE NO references to establish the James/Daniel relationship. First there shouldn't be, because (we assume) there is no single item of evidence that establishes the James/Daniel relationship. And second there doesn't need to be, since the James/Daniel relationship is easily inferred from the two other relationships.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-19T00:03:34-08:00</div>
+<div class="text"><br/>
+Tom:<br/>
+<br/>
+The difference between:<br/>
+<br/>
+&lt;relation id="yyy" type="stepFather"/&gt;<br/>
+<br/>
+and<br/>
+<br/>
+&lt;relation id="yyy"&gt;&lt;type&gt;stepFather&lt;/type&gt;&lt;/relation&gt;<br/>
+<br/>
+is that in the first case, "stepFather" and all those other items in the list must be defined in BetterGEDCOM.<br/>
+<br/>
+In the second case, only the "type" attribute is defined, and the program is allowed to define the items of that type in any way it wants because it is now data, and not part of the specification.<br/>
+<br/>
+Necessary items should be defined, and others should be up to the program. <br/>
+<br/>
+For example, GEDCOM currently defines a number of events, e.g. BIRT, DEAT, MARR, and a few dozen more. But the GEDCOM developers realized they couldn't define all of them, so they included the general EVEN tag with an optional descriptor to allow for custom events. The EVEN tag has a TYPE subtag whose value defines the type of event:<br/>
+<br/>
+1 EVEN<br/>
+2 TYPE Equipment Lease<br/>
+2 DATE 4 NOV 1837<br/>
+<br/>
+1 EVEN Appointed Zoning Committee Chairperson<br/>
+2 TYPE Civic Appointments<br/>
+2 DATE FROM JAN 1952 TO JAN 1956<br/>
+2 PLAC Cove, Cache, Utah<br/>
+2 AGNC Cove City Redevelopment<br/>
+<br/>
+I think this is a very good feature of  current GEDCOM. It allows this data to be imported and the event descriptor and type can be intelligently used by the receiving program.<br/>
+<br/>
+BetterGEDCOM should retain this style and not try to enumerate the potentially limitless number of possible options.<br/>
+<br/>
+So I see this as a way to evaluate which properties to make XML attributes and elements and which to make data.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-19T00:11:33-08:00</div>
+<div class="text"><br/>
+Tom:<br/>
+<br/>
+You said: "Should I take from your response that you think dealing with step-relationships and other non-biological relationships are too much for genealogical software to deal with?"<br/>
+<br/>
+I wasn't referring to your example at all. I was talking about the general idea of having lists.<br/>
+<br/>
+With regards to your example, I don't feel BetterGEDCOM needs to include relationships in its definition. All it needs is the parent/child, husband/wife links and then the program can compute what the relationship is. Computing a step-brother is easy. <br/>
+<br/>
+Any documentation of the relationship is really a either note attached to the two people, or source data that supports one or more parent/child, husband/wife links.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-19T00:14:34-08:00</div>
+<div class="text">... for non-biological relationships, I again like the way GEDCOM works with the association structure:<br/>
+<br/>
+ASSOCIATION_STRUCTURE:=<br/>
+n ASSO @&lt;XREF:INDI&gt;@ <br/>
++1 RELA &lt;RELATION_IS_DESCRIPTOR&gt;<br/>
++1 &lt;&lt;SOURCE_CITATION&gt;&gt;<br/>
++1 &lt;&lt;NOTE_STRUCTURE&gt;&gt;<br/>
+<br/>
+Again, notice the relationship itself is data, and is NOT a tag.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-19T01:03:55-08:00</div>
+<div class="text">Louis says: "The difference between:<br/>
+&lt;relation id="yyy" type="stepFather"/&gt;<br/>
+and<br/>
+&lt;relation id="yyy"&gt;&lt;type&gt;stepFather&lt;/type&gt;&lt;/relation&gt;<br/>
+is that in the first case, "stepFather" and all those other items in the list must be defined in BetterGEDCOM.<br/>
+In the second case, only the "type" attribute is defined, and the program is allowed to define the items of that type in any way it wants because it is now data, and not part of the specification.<br/>
+Necessary items should be defined, and others should be up to the program. "<br/>
+<br/>
+Tom says: "Why? Where does this rule come from? We never discussed such a rule. XML doesn't require that attribute values come from fixed, "hard" sets (would you say that UUID's used for the values of id attributes come from a short, specifiable list?), nor does it require that element values can't come from small fixed hard sets. XML is a syntax not a semantic -- it is the schemas that makes these rules and there are no Better GEDCOM schemas yet. If I am wrong about this I apologize, but the implied rules you seem to have about how to structure XML files I have never seen expressed elsewhere."<br/>
+<br/>
+Again I ask: How would you put two persons into a transport file if all you knew about them was that one was the step-daughter of the other? And in such a way that the receiving software could truly UNDERSTAND the relationship, not just have a soft phrase that a user applies to it. By "understand" I mean to be able to use the information algorithmically for searching, for trying to infer new relationships, and so on. I have explained the way I would do it (two Person records connected by relation references using HARD step child and step parent tags). I have explained the way GEDCOM would do it (requiring two INDI records with names, one anonymous INDI record, and two FAM records, and possibly another anonymous INDI record if you want to complete the biological family of the step child). An analogous method to the GEDCOM could be done in Better GEDCOM  of course, but every other method I can come up with requires more than just the two Person records in my suggested solution. But I could certainly understand the argument that one would prefer to use the GEDCOM approach to avoid having the step relationships hard coded. But, remember, if you did that, all these "extra" records that you'd have to create (the third person and the two families) would have to have sources, and wouldn't it be a little odd to have all five of those records refer to a source that only mentions two persons and no families? Does anyone have any other examples of how to do it? I would be very interested in other ideas.<br/>
+<br/>
+By the way I completely agree with the notion of using hard tags for obvious things, and then using soft tags like GEDCOM does for rarer things. It seems that the only difference between you and me is that I advocate a longer list of hard tags. Remember, hard tags allow software to understand, soft tags don't even allow the software to guess; as you say, soft tags are just data. And I hope you noticed from my last post that I have suggested a way to have "firm tags", that is, tags that are user defined but also have semantics that can be understood and used by the software.<br/>
+<br/>
+The consequences are clear. -- if a relationship is represented by a hard tag, software can understand its underlying semantics. If the relationship is represented by an arbitrary soft phrase, the software cannot. As I see it, it is better to err on the side of long lists than err on the side of short lists.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-19T01:42:41-08:00</div>
+<div class="text">Louis says: "I wasn't referring to your example at all. I was talking about the general idea of having lists."<br/>
+<br/>
+You don't like lists. I do like lists and believe they are critical, but I've said my piece.<br/>
+<br/>
+Louis says: "With regards to your example, I don't feel BetterGEDCOM needs to include relationships in its definition. All it needs is the parent/child, husband/wife links and then the program can compute what the relationship is. Computing a step-brother is easy."<br/>
+<br/>
+I agree with the "all you need part." But I don't think "all you need" is the same as "all that you should have."<br/>
+<br/>
+If all you allow is parent/child and husband/wife you are advocating the GEDCOM model for representing all relationships. Not that that is automatically bad. But back to the step child example. To represent the step child relationship in a transport file with only parent/child and husband/wife, you need the three persons and two families I have shown. Are you willing to have this? I don't necessarily think it's bad or good, but with your approach you are required to use this solution. That's okay. But I don't think it's the best way. Remember you don't have any real evidence about the third person or the two families. Any by the way if by parent/child you imply biological realationship, your model won't deal with adoption.<br/>
+<br/>
+To say it is easy to compute step-brother relationships if you have only parent/child and husband/wife relations is trivially true, but that has never been my point. My point is how to actually represent step-brother relationships in the best possible way without encumbering a database or transport file with persons and families there is no direct evidence for. Ah, maybe this is one of those examples of "negative evidence" we hear about from time to time. Saying that George and Henry are step brothers is negative evidence for two husband/wife relations that are not explicitly mentioned. In your solution you would have to create both of those husband/wife relations in order for the software to know the two boys are step-brothers -- even though you know nothing at all about their parents -- and even though you couldn't say anything about which of the three parents was the joint parent of the two boys or anything about the sex of the joint parent. Please think about how ambiguous the families you would have to create would have to be just so your software could understand that the two boys were step-brothers. I just can't condone doing that even though it is possible. It simply does not pass the smell test.<br/>
+<br/>
+Again. How would you do it? Given the evidence "George and Henry are step-brothers" please explain what you think should be in a Better GEDCOM file to transport this information from one software system to another. You know NOTHING else about George and Henry (note, you don't even know their surnames, which could be the same or could be different).<br/>
+<br/>
+You do suggest a possible solution in your "Any documentation of the relationship is really a either note attached to the two people, or source data that supports one or more parent/child, husband/wife links."<br/>
+<br/>
+From this I take away the idea that you would probably create two Person records and put a note in each that the other is his step-brother. But then no software would be able to discover their relationship. I am very much against hiding important information that software should be able to use down in notes that cannot be processed for semantic meaning. <br/>
+<br/>
+Tom W.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-19T05:27:22-08:00</div>
+<div class="text">Tom &amp; kessler,<br/>
+<br/>
+ We are all techie types. We all know how to store data and use apps to display one link of is either F or M and a parent family group to other half-siblings and step children.<br/>
+<br/>
+ Is it ok to ask which example of data are we talking about that we are entering into data fields.<br/>
+<br/>
+ Mary Fields, "Reading of the Will", 1943 Her Step father left her the House. *so we are trying to capture her relationship into a data field (step daugther to INDI@xxx).<br/>
+ If this is done then we are capturing the data twice. An (app) can display her relation to the stepfather already as easy seeing who a persons mother or father are.<br/>
+<br/>
+1) is the point here to have extended tree outlines to display past the nuclear family showing step children and half-siblings instead of the nuclear family.<br/>
+<br/>
+2) Or is this a need when a research (their are some here which DO NOT use navigational trees to display relationships. BUT they rather look only on records that link to PEOPLE in a name list. The purpose of that to pull a record and LABEL the persons with arelationship status to another person from the record document WITHOUT ever looking or using a navigational INDI tree outlines.<br/>
+<br/>
+Please for clarity, what was the the need for followed by an example of intent? From the past month these are the only two things I can see from users wish lists and wanted tool functions.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-19T08:55:48-08:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+Tom says: "Why? Where does this rule come from? We never discussed such a rule. XML doesn't require that attribute values come from fixed, "hard" sets (would you say that UUID's used for the values of id attributes come from a short, specifiable list?), nor does it require that element values can't come from small fixed hard sets. XML is a syntax not a semantic -- it is the schemas that makes these rules and there are no Better GEDCOM schemas yet. If I am wrong about this I apologize, but the implied rules you seem to have about how to structure XML files I have never seen expressed elsewhere."<br/>
+<br/>
+I'm sorry. Yes, you are 100% correct here. I have not worked much with XML, especially at the model building level, and mistakingly thought attribute values must all be defined. I do intend to leave the defining of the XML for BetterGEDCOM to people who have experience with it.<br/>
+<br/>
+But it was your extensive list of relationship names that I disagreed with, and did not think we should be defining such lists into BetterGEDCOM. Therefore:<br/>
+<br/>
+&lt;relation id="yyy" type="stepFather"/&gt;<br/>
+<br/>
+may then be used, but I think there should not be a fixed list of possible values for the "type" attribute.<br/>
+<br/>
+As to where I'd put the information that one person is the step-daughter of the other, I'd put it in using the association structure:<br/>
+<br/>
+0 @I50@ INDI<br/>
+1 ASSO @I75@<br/>
+2 RELA step-daughter<br/>
+<br/>
+The receiving program can easily display the step-daughter relationship under both people. If it's smart, it feasibly could understand what the step-daughter means, but you're going to need an almost intelligent machine if it is going to be able to check the relationship or add it if it doesn't exist. <br/>
+<br/>
+People need to be the final verification. A simple reason is what if you have two sets of evidence. One that says A is the uncle of B, and the second that says A is the cousin of B. You want both recorded but you don't know which is true. Using genealogical/detective techniques, ultimately a decision can be made, maybe with the "preponderence of evidence" rule. However, a program cannot and should not be relied on to make this decision for you.<br/>
+<br/>
+So no, you should not get the receiving program to "understand" the relationship. It should only have the relationship documented as a "step-daughter" or "uncle" or "cousin".</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-19T09:05:38-08:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+Right, I don't like long lists and you prefer them. I'm fine with that. I'll be the conservative and you'll be the liberal as we add our comments onto BetterGEDCOM.<br/>
+<br/>
+I also wasn't familiar with "hard" and "soft" tags, but now you've defined those for me. Thanks.<br/>
+<br/>
+Re adoption, that is simply a Parent/Child relation with a "Type" of "Adopted" as opposed to a type of "Biological" which is usually the default.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-12-19T09:10:26-08:00</div>
+<div class="text">Louis said:<br/>
+<br/>
+"One that says A is the uncle of B, and the second that says A is the cousin of B. You want both recorded but you don't know which is true."<br/>
+<br/>
+Why assume that one is true and one is false when they could both be true?</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-18T05:35:35-08:00</div>
+<div class="text">Tom and Andy thank you for saying what I tried to say the first time. I agree with you both 99%. I just have 2 cents to thrown in.<br/>
+<br/>
+1.  For Better GEDCOM to be a success it must be as complete a model for genealogical processes we can manage to come up with.-Tom<br/>
+That is 100% Absolutely TRUE!!!!<br/>
+<br/>
+But where is even the start of this list? We don't even have a simplified list showing name, location, and field input fields required to capture the need data? can we even start a list?<br/>
+<br/>
+"BetterGEDCOM will have neither of these advantages, and to expect developers to adopt BG for their present programs is , imho, totally unrealistic."<br/>
+True with what you say and more than likely this will be the outcome.<br/>
+<br/>
+BUT if some techie ever get a full list of BG required data fields that must be given to capture data. I am not saying naming nodes and tags, just the required fields list that must be met to store data. (AND MAKE A BG LIST)<br/>
+<br/>
+It is all about money for the big cheeses. If they can lay down parses to convert other software to them, all companies will do this.<br/>
+Even if they decide not to, there is a whole world of open source programmers like myself wanting to take a take at it. But if we don't have a road map what is to be included as data fields, then all this effort will just be a discussion should have, could have, would have.<br/>
+It kind of the humor,<br/>
+<br/>
+"Build It, and they will come"<br/>
+<br/>
+and they will migrate to a platform that offers better tools and needs per user.<br/>
+<br/>
+I would really really love it if there was a list. not a topic talking about one item and listing five input feilds, I am hoping for a list greater than 90% to get started. I dont want to start making now with nothing, and then a list come out, I am forced to go back and relabel commands and codes a third time.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-18T05:55:25-08:00</div>
+<div class="text">By lists I'm pretty sure you mean the tags to be used at various points in the data. I've been avoiding talking about them because I think of them as the frosting on the cake once the model is established, though I can see your point of view that having the lists ahead of time can help in grasping the model in a subjective manner.<br/>
+<br/>
+In the DeadEnds model I've presented here, some of the tags are mentioned explicitly, while many are "hidden" in the rules for the various kinds of attributes that can occur. In my own software, of course, I have long lists of tags that are possible in different contexts. I'll give an example below by showing the current list of relation role tags currently supported:<br/>
+<br/>
+aunt<br/>
+bride<br/>
+brother<br/>
+brotherInLaw<br/>
+child<br/>
+cousin<br/>
+daughter<br/>
+daughterInLaw<br/>
+father<br/>
+fatherInLaw<br/>
+grandFather<br/>
+grandMother<br/>
+greatGrandFather<br/>
+greatGrandMother<br/>
+greatAunt<br/>
+greatUncle<br/>
+groom<br/>
+halfBrother<br/>
+halfSister<br/>
+head<br/>
+husband<br/>
+informant<br/>
+physician<br/>
+member<br/>
+mother<br/>
+motherInLaw<br/>
+neice<br/>
+nephew<br/>
+other<br/>
+recorder<br/>
+role<br/>
+secondCousin<br/>
+sibling<br/>
+sister<br/>
+sisterInLaw<br/>
+son<br/>
+sonInLaw<br/>
+spouse<br/>
+stepBrother<br/>
+stepDaughter<br/>
+stepFather<br/>
+stepMother<br/>
+stepSister<br/>
+stepSon<br/>
+uncle<br/>
+undertaker<br/>
+unknown<br/>
+wife<br/>
+witness<br/>
+<br/>
+This is of course incomplete, but has the relations that I have needed in the past. I add to the list as I need to.<br/>
+<br/>
+I am not proposing this as a BG list, just as one of the many lists I've had had to put together for DeadEnds software.<br/>
+<br/>
+On the hard tag versus soft tag issue, I prefer hard tags for all the common and usual cases; doing this allows the semantics of those tags to be built into software applications. But there are a lot of roles that one can't anticipate ahead of time, so a more general technique is also needed. You see in my list that I have on member called "role". On this one it is assumed that there will be a soft sub-type to go along with it.<br/>
+<br/>
+Tom wetmore</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-18T08:50:58-08:00</div>
+<div class="text">Well, I as a programmer, won't want to support a BetterGEDCOM that has 100 different lists each with 100 different tags that is surely to be out of date and incomplete the days it is published.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-18T08:54:09-08:00</div>
+<div class="text">... the day it is published. <br/>
+<br/>
+I wish you could edit your own posts on this wiki tool.</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-12-18T09:02:19-08:00</div>
+<div class="text">and there I was thinking you were working on a HUGE application that would take more than 24 hrs just to publish!<br/>
+<br/>
+;)</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-18T09:18:40-08:00</div>
+<div class="text">@Louis, <br/>
+<br/>
+I'm with you (re: lists and tags). I can trace the concept of fixed tags/lists back to GenTech.<br/>
+<br/>
+(1) We don't want to break existing user developed content <br/>
+(2) Users of some programs create programmed sentences and use the "tag" to name those sentences. <br/>
+(3) Users create tags to follow specific themes. (I have tags to monitor my dads moveements in WWII) <br/>
+<br/>
+If you strip users access to tag definition,  I think that would break existing user content.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-18T10:11:39-08:00</div>
+<div class="text">Louis says: "Well, I as a programmer, won't want to support a BetterGEDCOM that has 100 different lists each with 100 different tags that is surely to be out of date and incomplete the day it is published."<br/>
+<br/>
+I'm not sure what you mean. I don't believe you can make complexity go away by refusing to acknowledge it. What would be your alternative?<br/>
+<br/>
+Say you found evidence that said that Mary Fields was the step-daughter of William Dells with no other details. And let's say this was important to you. How would you record that in your database?<br/>
+<br/>
+I do it like this:<br/>
+<br/>
+&lt;person id="xxx"&gt;<br/>
+  &lt;name&gt;Mary Fields&lt;/name&gt;<br/>
+  &lt;relation id="yyy" type="stepFather"/&gt;<br/>
+  &lt;source id="ss"/&gt;<br/>
+&lt;/person&gt;<br/>
+<br/>
+&lt;person id="yyy"&gt;<br/>
+  &lt;name&gt;William Dells&lt;/name&gt;<br/>
+  &lt;relation id="xxx" type="stepDaughter"/&gt;<br/>
+  &lt;source id="sss"/&gt;<br/>
+&lt;person&gt;<br/>
+<br/>
+&lt;source id="sss"&gt; ... source info... &lt;/source&gt;<br/>
+<br/>
+The software understands the semantics of the relationships, so that the software knows that Mary is the daughter of William's wife, even though at this point nothing else is known about the wife, and there is not even a record for her in the database. The software can infer that William's wife might have been married to a Mr. Fields, but that this isn't sure, but the software can use this possibility internally when helping to suggest possible conclusions from the data. With specified tags one gets specifiable semantics. Without specified tags there are no semantics possible.<br/>
+<br/>
+I guess this is the crux of the hard tag versus soft tag issue. If you don't have words that mean things, you can say the things you mean. This applies to genealogical software as much as it does to talking to your friends.<br/>
+<br/>
+If genealogical software does not understand the concepts of step-relationships, how will they get treated in reports? How do others think this example should be dealt with? I hope you don't suggest adding two persons and putting a note in each one.<br/>
+<br/>
+(It's probably closer to 10 lists with 50 members each.)<br/>
+<br/>
+If you wanted to fully support this relationship in a pure GEDCOM world, you would have to create a nameless person for William's wife, another nameless person for William's wife's earlier "spouse", a family record with the two nameless persons for Mary's parents and Mary as the only child, and another family record for William's nameless wife and William. You end up with four person records, two being nameless, two family records, and one source record. (This is how I would do this using LifeLines, which is a pure GEDCOM system.)<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-18T10:58:15-08:00</div>
+<div class="text">Here is what I am calling what for this explanations<br/>
+<br/>
+&lt;x&gt; = tag or node name<br/>
+&lt;&gt;y&lt;&gt; = is the data input field that excepts data input<br/>
+"z" is what we define x+z in genealogy terms as BG is going throw each clarifying terms<br/>
+<br/>
+When I ask for all the possible data “fields” that are “required to be captured” like in y. the list of x such like step mom, step sister, brother, mother, etc. to me those are soft text tag or as rolls people are. Or do you actually have a tag on a person called Step mom and mother and sister to another all at the same time?<br/>
+It’s a great list to know people want to track these relations which is good!<br/>
+<br/>
+What kind of field input list I am looking for is kind of like this.<br/>
+<br/>
+Kind of like for a person individual tree place marker, we need<br/>
+persons given names<br/>
+persons surname<br/>
+persons title<br/>
+persons start date <br/>
+persons end date<br/>
+persons start place<br/>
+persons end place<br/>
+persons defualt image<br/>
+persons ....etc.<br/>
+<br/>
+For controlling a source<br/>
+source Title<br/>
+source classification<br/>
+source sub class type<br/>
+source printed date<br/>
+source recorded date<br/>
+Source.....ect<br/>
+<br/>
+Evidence<br/>
+evidence event place<br/>
+evidence event date<br/>
+evidence event location<br/>
+evidence citation<br/>
+evidence user note<br/>
+evidence ...etc...<br/>
+<br/>
+This kind of a list I am looking for, Like one big excel sheet<br/>
+person in the tree<br/>
+Gedcom = INDI<br/>
+Gramps = Person<br/>
+Deadends = Individual<br/>
+sft.xml = PID<br/>
+<br/>
+But none other the others will formulate a list of all fields used by their db structure.<br/>
+Gedcom does not even list 100%, they have a write up saying here are some, Repo, sour, date, plac<br/>
+<br/>
+I dont want some I need ALL fields that capture data.<br/>
+<br/>
+Does this make sense to you?<br/>
+With out it, there are no roadway directions for a techie to even start construction on a db transfer. or even not seeing a full list how will Tom know if he his missing something, or if I am missing something. I rather have nodes allocated ready when the data starts flowing, not cry that something was missed, then have to go back alter codes, and commends to handle an input field.<br/>
+<br/>
+ Say you get done, ERRRR, then they bring up another field input that needs to be captured like page of page from a book or sheet, then it is back to adding that and re doing codes and commands again and again and again. <br/>
+<br/>
+I rather be at 80-90% and only go back once or twice a year. Not having to follow along bit pulling terms from a message board trying to count the many kinds of data fields people are requesting. This has nothing to do with labeling a term or a node tag, it what we call an input field from a techies shoes.<br/>
+<br/>
+If we don’t have such a list how can anyone make room to cover INCOMING data from another, or export data from a field that no one else will ever use? Then that leave s that app or dev with a 90% exchange rate of data.<br/>
+<br/>
+Could we make a full list, and break them down into sub groups?</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-18T11:12:44-08:00</div>
+<div class="text">Before some one bashing me for bring up a excel, my point is if BG had an actual guildline list of required fields. that would be the first step for each person<br/>
+Tom, myself, a gramps rep, gendcom rep. JUST to have that list and check off thier own work for an equiliant node. that nodes &lt;ggg&gt; what ever the app calls it will export out a data block to xml &lt;JJJ&gt; so that any other app can import &lt;JJJ&gt; to thier &lt;uuu&gt;.<br/>
+<br/>
+just that would be a great starting point. each dev would kn9w if they are lacking a data filed that should be considered, or give ideas to others by seeing such a list. I know it dont make much sense to the user of an app, but a tech,app,dev would like to see a road map from BG to shoot for.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-18T15:01:46-08:00</div>
+<div class="text"><br/>
+Tom:<br/>
+<br/>
+The problem with:<br/>
+<br/>
+&lt;relation id="yyy" type="stepFather"/&gt;<br/>
+...<br/>
+&lt;relation id="xxx" type="stepDaughter"/&gt;<br/>
+<br/>
+is that now the program has to "understand" the meaning of stepFather and stepDaughter and the other 100 tag types. Now you raise the complexity of defining to 200 genealogy software programmers what those tag types mean and that they must check for consistent data between them. Yikes! That's horribly complex.<br/>
+<br/>
+Instead, make that tag type data, e.g.:<br/>
+<br/>
+&lt;relation id="yyy"&gt;&lt;type&gt;stepFather&lt;/type&gt;&lt;/relation&gt;<br/>
+...<br/>
+&lt;relation id="xxx"&gt;&lt;type&gt;stepDaughter&lt;/type&gt;&lt;/relation&gt;<br/>
+<br/>
+Then leave it up to the program to decide how to check for valid relationships.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-18T15:05:36-08:00</div>
+<div class="text"><br/>
+... but if you can get DeadEnds to work successfully your way, within your and my lifetime, then I'll definitely jump on your bandwagon.  <br/>
+<br/>
+I just don't think it feasible.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-18T18:52:20-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+I don't see a meaningful difference between ...<br/>
+<br/>
+&lt;relation id="yyy" type="stepFather"/&gt;<br/>
+<br/>
+and<br/>
+<br/>
+&lt;relation id="yyy"&gt;&lt;type&gt;stepFather&lt;/type&gt;&lt;/relation&gt;<br/>
+<br/>
+Choosing which properties to make XML attributes and which to make XML elements is very subjective and I simply do not see the distinction you are trying to make.<br/>
+<br/>
+Should I take from your response that you think dealing with step-relationships and other non-biological relationships are too much for genealogical software to deal with? If you think the answer is yes then I can see why you object to many of the relationship tags. But if you think our software should be able to deal with the full set of relationships that are meaningful to family historians, aren't you compelled to accept that the software must be able to represent those relationships? And if we are going to transport data between systems, and that data includes those relationships, how are we going to signify those relationships? If we don't do it with type tags how are we going to do it? I am open to suggestions. I would like others to commit their ideas to virtual paper instead of speaking in generalities.<br/>
+<br/>
+I use an algebra for these relationships. Every complex relationship can be broken down into an expression of simpler relationships built up from a primitive set. So you don't have to include custom code in the software for every relationship, you just have to write one piece of software that understands the relationship algebra. For instance we can represent step-father as an expression. Let F and M represent the father and mother relationship; let Sp represent the spouse relationship. Then the step-father relationship is MSp &amp; !F where &amp; means and and ! means not (this expression means "mother's spouse and not biological father). Another example, consider the culturally important concept of a "parallel cousin" found in many cultures, a cousin who is either a child of your mother's sister or a child of your father's brother. Let S and D be the primitive biological son and daughter relationships. Then the cross cousin relationship is:<br/>
+<br/>
+FMSS | FMSD | FFSS | FFSD |  MMSS | MMSD | MFSS | MFSD<br/>
+<br/>
+where the |'s mean or (this expressions means "father's mother's son's son or father's mother's son's daughter or ...").  Additionaly, FF | MF defines grandfather (father's father or mother's father), FB | MB defines uncle (father's brother or mother's brother), and so on and so on. With this approach one can add relationships without having to modify existing software. Specify the name of a new relationship, specify its "formula" and the software can use its builtin relationship evaluator to deal with it.<br/>
+<br/>
+I am not trying to make things more complicated than they need to be. But I do want them to be as complicated as they must be to meet reasonable requirements.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-17T18:38:37-08:00</div>
+<div class="text">Mike,<br/>
+<br/>
+Might I suggest that you post these emails on the Wiki? Others might be interested.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-17T18:49:15-08:00</div>
+<div class="text">Sorry Russ, I did not want to clutter the thread or lose the topic, here is that email as a whole to GeneJ<br/>
+<br/>
+but for the first two<br/>
+hmmm?<br/>
+(1) Is there a work process or work flow associated with the model?<br/>
+<br/>
+You can either just build a family outline and not have one record of evidence, just something to print pretty trees. (useing only PID and FID xmls)<br/>
+OR<br/>
+You can store documents keeping in a xml file and images in the SID xml, then make evidence records per person found in each source record. YOU DONT not need to even link them to a PID xml.<br/>
+<br/>
+Or build from both ends?PID/FID to EID/SID<br/>
+<br/>
+This is my plans for wartimepress.com. We have 100k's of images. each image will have 10-30 named militray people each page. Each individual will have ONE eid record.<br/>
+Kind of like ancestry.com search and view images.<br/>
+one census image sheet 5 of 17, = 1 SID record<br/>
+20 indi found = 20 EID records to be entered, that point to one sid.<br/>
+<br/>
+Just that using eid and sid xml's will act as a searchable archive and repository of wwii records for any WWII publications.<br/>
+<br/>
+So back to you 1 question<br/>
+"(1) Is there a work process or work flow associated with the model?"<br/>
+Q. Are other softwares out there force people to have certain items (steps) before they can proceed?<br/>
+<br/>
+<br/>
+<br/>
+q 2, evidence-conclusion based.....Hmmmm... I see so much thrown back and forth the past week for a few days straight my head spun. LOL, Give me a day to review you few links, put my feet in your shoes, to answer 2-7 with how you view things.<br/>
+<br/>
+If i jump the gun here in layman's terms, I like to collect any all records. link them to the people they belong via eid to pid. If I find records that support each other like a-b and b-c and c-d, than d must bare some sort of support to a. But under the person view all records get list.<br/>
+errr... like to say evidence builds up to a conclusion by a collection of evidence. I think I am stick my foot in my mouth right know. Let me have a day to wear your shoes by not just browsing over the pages from the links you gave but read word for word a few times.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-17T18:59:39-08:00</div>
+<div class="text">1 OBJE<br/>
+2 FILE C:\Users\(user information and folder name) Media\(media filename).jpg<br/>
+2 FORM jpg<br/>
+2 TITL Test Media<br/>
+2 _TYPE PHOTO<br/>
+2 _SCBK Y<br/>
+2 _PRIM Y<br/>
+<br/>
+Neat, I misssed that becaus ethe the older FTM I had. I had like 1000+ people in my tree when i tried export it away from FTM all I got was a striped down gedcom out put.<br/>
+<br/>
+Question, GEDCOM and FTM may support an image file, I had many shoebox photos but never achived a FULL DATA export any any kind. That was with FTM ver.11, what version of FTM started to export FULL data files, not striped down one? That crush me not be able to share with family back then.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-17T19:01:37-08:00</div>
+<div class="text">Mike, you are doing incredible!! I didn't really mean to suggest we could answer those questions off the top of your head. <br/>
+<br/>
+You wrote, "other softwares out there ..." <br/>
+when we discuss a data model, I think it helps others to understand the process intended by that model. GenTech had a work flow model.<br/>
+<br/>
+Put your shoes away, enjoy a warm fire in the best way you know how!!</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-17T19:05:48-08:00</div>
+<div class="text">Mike,<br/>
+<br/>
+We are NOT talking about FTM. We are talking about applications in general. I don't know other applications, but as you can tell, I have done some testing for this project.<br/>
+<br/>
+This issue is What version of GEDCOM does the Application Generate and/or read and open.<br/>
+<br/>
+In this case, Roots Magic 4 can generate the link as described.<br/>
+<br/>
+Family Tree Maker Version 11 is very old. I don't consider this forum the place to discussion specific applications, at this point in time. There are other places for those discussions.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-17T19:15:54-08:00</div>
+<div class="text">Ok I am sorry if a overstepped using an apps name for and example from experince. <br/>
+<br/>
+"We are talking about applications in general." My Bad I used an example, but should not have named such an old app descrediting them. Actaully I enjoy thier more robust tree outline printing.<br/>
+<br/>
+<br/>
+I was getting to a critical point, IF BG is trying to create a stepping stone I am all for it and will bend over backswards to help.<br/>
+IF BG is not then I dropped the ball with too much expectations. Did I?</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-17T19:29:11-08:00</div>
+<div class="text">Mike,<br/>
+<br/>
+Does BetterGEDCOM need to address images, you bet !!!!<br/>
+<br/>
+I only question the application, is that isn't what this project about. However, I hope that you see the Blog test results that each application has is good points and bad points, both of which point back to the old GEDCOM format, more the last "official" version 5.5. There other formats that came out later. 5.5.1 did start to address the image issue, in that it has links to images.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-17T19:41:52-08:00</div>
+<div class="text">"I only question the application, is that isn't what this project about." <br/>
+A) Then I jumped the gun.<br/>
+<br/>
+" I hope that you see the Blog test results that each application has is good points and bad points"<br/>
+Q) Can you provide a link, Thanks<br/>
+<br/>
+<br/>
+Remark, Since BG guide lines states that is must use xml technology I assumed BG would clarify what to call "x" and what tag to wrap "x" in. <br/>
+<br/>
+I was going to make my model transfer data to and from this BGxml model to my own SFT model.<br/>
+<br/>
+Once BG achived a ground model, I was going to make the first wartimepress.com EID evidence records to format to a BG so researchers and users could pull evidence records and and them to thier own military record models. I kind of put the first search databases on hold since Nov. I would really like to open them up.<br/>
+<br/>
+But I see I am still stuck between a rock and hard spot. <br/>
+<br/>
+Russ, If BG was/is not trying to achive a stepping stone, was BG just trying to term the proper labels and methods of genealogy standards as in definitions and expectations, not really wanting to produce an actual solution to doing it?<br/>
+Mike</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-17T19:51:39-08:00</div>
+<div class="text">Mike,<br/>
+<br/>
+Sorry. I don't understand the question and am not sure it's even important.<br/>
+<br/>
+What is being asked, is the ability to share research information between two applications. One may be a home computer another may be on a website. No lost data in this sharing.<br/>
+<br/>
+How that comes about, is up to you technical folks. I can only speak as a user of a program. I have shown, on the blog, some of the results of what happens when I try to share today. I have other results to post in the next couple of days. Each test, so have, has shown similar results.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-17T20:27:23-08:00</div>
+<div class="text">"What is being asked, is the ability to share research information between two applications. One may be a home computer another may be on a website. No lost data in this sharing."-Russ<br/>
+Russ that is my goal, not any app being the leader, just a way to directly share, or output to a stepping stone, so that the other app can import it from with 100% data transfer.<br/>
+ Sorry if some of my tangents get abit out there but I am reaching for straws at times.<br/>
+<br/>
+" some of the results of what happens when I try to share today"-Russ<br/>
+I have seen that, that is my biggest peeve also. If I do work in one app and wish to share or migrate, I want that app to release "ALL MY WORK" in a file that can be absorbed by the next app/program/person.<br/>
+<br/>
+If I ever try to explain something in the future, you can be sure that this what I am trying to get too. Or I may be offering an idea how to.<br/>
+<br/>
+Where My hands are tied! I know and understand Gedcom structure, but do not have a complete list of ALL the tags they use like INDI REPO FAM SOUR MARR etc....<br/>
+For Gramps do they have a list, for GENtech wheres there list? even any other ones.<br/>
+<br/>
+From a techie point of view, I could care less what you want to call "x". but if you show me "x" is stored in gedcom MARR, and the equivelant in gramps is MARI, and gentech is BOND, THEN I could make a xml sxlt parse in a week or less.<br/>
+<br/>
+But it seems every model talks long winded about terminology but never shows a full tag or node list structure.<br/>
+<br/>
+If techies don't know where an app sticks its record change, how can we create a parse to located that tag and export it.<br/>
+<br/>
+Me as a techie, I need the "road maps" to the tag and node structures. With out that it is like talking about how to get to the general store, making a right over yonder, and left when you see a farmer Wilson brown cow not the black one. All I can guess is that data it stuck somehere around such a node? How many levels deep? <br/>
+<br/>
+from a techie point, with out seeing the actual full structure IN use, it is hard for any techie to create a transfer bridge between two db structures.<br/>
+<br/>
+SO my next attempt for a solution is/was.....<br/>
+<br/>
+That is why I was suggesting that, WHILE BG creates the Terminology what to call "X", and just state the input Z field name, OR BETTER wrap that data "x" in a tag called "Z".<br/>
+<br/>
+At least from this point say Tom from Deadends can transfer his structure export of data from tag "b" holding "x" to the BG tag "z".<br/>
+<br/>
+once in BG format, I can parse that same bgxml and pull "x" from "z" and place "x" in my "u" tag.<br/>
+<br/>
+But it would be my responsibility to export my data to that same guideline, so Tom would have the same opportunity to get my data, the same way, when I export it to a BG standard in xml.<br/>
+<br/>
+I know you are a User and tester of many apps, but from a techie stand point I really would really need to see all the input field types an app uses.<br/>
+<br/>
+I think I am off on a tangent again. Let me stop here for today. I will think how to write this from a techie point of needs to get it rolling. If someone else wants to better word it from a techie shoes, please feel free to say what is needed to get a transfer stepping stone going, OR another solution that one may see better in doing it.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-17T23:07:12-08:00</div>
+<div class="text">Comparisons are good for collecting basic data, but I am having  trouble seeing the relevance of this discussion for creating a Better GEDCOM. It seems to imply there are some sets of transformations that can map GEDCOM to and from GenTech to and from DeadEnds to and from Gramps to and from GenXML to and from whatever by keeping tables of tags and syntax and writing parsers and XSLT programs, and that all we need to do is line them all up and figure out how they are the same.<br/>
+<br/>
+Genealogical programs don't share the same views about genealogical data. There are things you can store in one program's database that you cannot store in another's. Every program has its own internal data structures based on its own data model based on the whims, opinions and knowledge of the persons who designed it. None of them cared about GEDCOM as a primary requirement. They all implement a different model of genealogical data. Those models are all different, sometimes subtly, sometimes amazingly divergently. They don't map to one another. They don't map to GEDCOM or back from GEDCOM. It is pointless to describe how transformations can be done between them, if the transformations loose data and misinterpret data at every step. The data loss and data misinterpretation are not problems we can solve by patching GEDCOM or tabulating the tags used by all the programs, or deciding how many files to put our records in, or deciding to use XML or Unicode, or DOM parsers or XSLT. Better GEDCOM should be the project that tries to move us out of this unfixable world into one where sharing becomes possible.<br/>
+<br/>
+And the whole key to moving out of the unfixable world we are in is to try to create a model of genealogical data types that tries to encompass the whole set of genealogical processes that we anticipate will be supported by anyone writing reasonable genealogical software. If we want to truly share data between software programs, the model the transport files implement must be able to encompass the models used by all programs. For Better GEDCOM to be a success it must be as complete a model for genealogical processes we can manage to come up with. It does makes sense to compare current models with one another to help us evolve to that model, but not to figure out how we can transform between them, because that is impossible. So yes comparisons are important and useful, but are we really talking about them in the right way here?<br/>
+<br/>
+And even having that model is not a panacea, because there is no way that having such a model is ever going to "fix up" the current batch of programs and make them share data. The only way to make sharing work is to have a transport file format based on a model that is so complete that every program can both map to it and be compelling enough that the program designers want to support it. And even this is not a panacea, because it is unlikely (impossible actually) to expect every software program to fully support in their own databases the full model the transport file's model allows. And this means that sharing would still be a lossy operation, but at least there would be no misinterpretation or reinterpretation of the data that does transport. And this is all one can ever hope for.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-12-18T00:07:58-08:00</div>
+<div class="text">The original GEDCOM had two things going for it.<br/>
+<br/>
+1). An application with a large user base interested in sharing the same type of data.<br/>
+<br/>
+2). An application that gained immediate acceptance because it was priced at $35.00 when most genealogy programs were priced at $250+.<br/>
+<br/>
+Other developers were forced by market forces to use GEDCOM if they wanted to stay in business.<br/>
+<br/>
+BetterGEDCOM will have neither of these advantages, and to expect developers to adopt BG for their present programs is , imho, totally unrealistic.<br/>
+<br/>
+BG only real hope is to be so overwhelmingly superior as a transfer method that developers will be willing to write new applications to take advantage of it.<br/>
+<br/>
+As to how they get their new applications to handle their old files should be left to them-not BG.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-17T18:34:12-08:00</div>
+<div class="text">GeneJ, I just sent you an email which I will try to answer all 7 questions with proper to the point answers.<br/>
+<br/>
+For now I think this 7 q<br/>
+"Assuming it is an "evidence-conclusion based model, how will would the BetterGEDCOM transfer mechanism of this model support "conclusion based" software export?"<br/>
+<br/>
+I think before BetterGEDCOM can support any kind of transfer mechanism of any data. the other models need to supply a sample of its own data. This way if all madels call NAME as name or Given name + Surname. BetterGEDCOM must come to a concensus to say if your model say uses data as "John P./Smith" or "John P." and "Smith"<br/>
+<br/>
+Both must export data to xml nodes as <br/>
+&lt;BGxml&gt;<br/>
+ &lt;Indi&gt;123&lt;Indi&gt;<br/>
+ &lt;Gname&gt;John P.&lt;/Gname&gt;&lt;Sname&gt;Smith&lt;/Sname&gt;<br/>
+&lt;/BGxml&gt;<br/>
+<br/>
+Once this stepping stone is achived by the Bettergedcom it would be up to all the other independant applications ad software providers to parse this BGmodel an import the data fields into thier own nodes as &lt;NAME&gt;John P./Smith&lt;/NAME&gt; <br/>
+or <br/>
+&lt;NAMEFIRST&gt;John P.&lt;NAMEFIRST&gt;&lt;NAMELAST&gt;Smith&lt;NAMELAST&gt;<br/>
+<br/>
+I have been under the impression that was BG's root goal. Call to arms the standard what to term "x" and how it will be in xml technology.<br/>
+<br/>
+Did I over shoot and expect to much? <br/>
+<br/>
+If this is the final goal of BG, should BG make a list of all data fields that MUST be captured. Make a list of the data feild terms and call out the TAGS to warp that field. <br/>
+<br/>
+let the other apps and models sync up with sxlts to import and export to a BG model in order to migrate from one app to another with 100% data transfer.<br/>
+<br/>
+If I am wrong please let me know, I can stop. I hope not.</div></div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-18T11:44:53-08:00</div>
+<div class="title">Needed: BG Guideline of required data fields</div>
+<div class="text">I am not sure if I wording it very well, I had an hour drive to the site I got called too. I like your xml format<br/>
+<br/>
+&lt;person id="xxx"&gt;<br/>
+&lt;name&gt;Mary Fields&lt;/name&gt;<br/>
+&lt;/person&gt;<br/>
+<br/>
+and mine <br/>
+&lt;pid&gt;xxx&lt;/pid&gt;<br/>
+&lt;pgn&gt;Mary&lt;/pgn&gt;<br/>
+&lt;psn&gt;Fields&lt;/psn&gt;<br/>
+<br/>
+If there was a BG list that a individual must be export to for both of us to adhere to say<br/>
+<br/>
+A so called BG Guideline of required data fileds!!!!!!<br/>
+unique individual #, data field = INDI<br/>
+names of individual, data field = NAME<br/>
+title of Individual, data field = TITL<br/>
+Etc…….<br/>
+<br/>
+&lt;INDI&gt;xxx&lt;INDI&gt;<br/>
+&lt;TITL&gt;&lt;TITL&gt;<br/>
+&lt;NAME&gt;Mary/ Smith&lt;/NAME&gt;<br/>
+<br/>
+<br/>
+Say both Tom, Others and I would have the responsibility to make an export program to export data into such BG tags.<br/>
+Also it would be our responsibly to make our own xslt or file crawlers to extract that data into our programs.<br/>
+<br/>
+If anyone says why do that its a waste, well this is how ALL app import and export to GEDCOM, it is GEDCOM that does not support all the various data fields that the genealogist desired today. This is our chance to make a xml version to export to a xml or even a gedcom flat file with more TAGS that support such data fields.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-20T06:24:43-08:00</div>
+<div class="title">tracking land changes idea</div>
+<div class="text">Since we have the oppertinuty to make room for more options I am asking others about this idea.<br/>
+<br/>
+Consider that GEDCOM does have subroutines to track pedigree and family groups.<br/>
+INDI and FAM<br/>
+<br/>
+I dont think it would be vary hard at all for many APP to duplicate the INDI and FAM app subroutines or codes and have them look for <br/>
+INDI = LAND, or PLAC, or HIST what ever tag...<br/>
+FAM = LOCA, or AREA, or some other tag.<br/>
+<br/>
+as in an event, one might have a land area say Burke County, which could be the genr'l area as a PARENT, if the land is split or broken up these would become the children of the gen'l area.<br/>
+<br/>
+If a land area is merged then the land has two parents as in pedigree.<br/>
+<br/>
+A land or building with a name change would become a child of a single parent like record.<br/>
+<br/>
+This way people can also print pedigree or house , desentant views of a historical research or report.<br/>
+<br/>
+Since people can be tied to event(records) the land can be tied with the group of people into one list.<br/>
+<br/>
+What would others think of this slight modification or additional reseach tool.</div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-12-31T06:45:24-08:00</div>
+<div class="text">Re. pre-established databases.<br/>
+<br/>
+First, Tom, thanks for the explanation of “pre-established databases”. A few gen progs currently have some sort of preloaded database, but I have not checked them out - the only one I have really used contains only current places. The archival services here will publish a historic place/area database in 2011 for access via the web, but it will most likely only contain higher level areas.<br/>
+<br/>
+I think it would be very useful to be able to make such a historic place database and transport it in BG - it could be done in a project by for example a genealogy society covering a particular area. <br/>
+<br/>
+I have always wanted such a database for the areas that I am working most on, I would like to run that database against halve a million transcribed source records that I have on my machine (and which could be converted to Gedcom).<br/>
+<br/>
+One use is to find the administrative areas that a place belong to, so you can find out where to look for sources for the place. Another advantage is obviously that you don’t have to enter the info about a place yourself. And, when reading an old document with names of places in an area that you are not familiar with, it will be very useful to have a list of the places in that area – with spelling variations. Or, if it contains coordinates or URLs, it may be used to access other databases. And the BG-file could also contain maps and photos.<br/>
+<br/>
+There are lots of applications …..<br/>
+<br/>
+And it is important that this info can be made available and distributed independent of online database services.<br/>
+<br/>
+More on hierarchies later .....</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-31T07:05:08-08:00</div>
+<div class="text">gthorud,<br/>
+Tom,<br/>
+<br/>
+What I think I am seeing here, is that Every BetterGEDCOM FILE would have to pass through this Place Record database to be approved for compliance.<br/>
+<br/>
+I thought we were trying to address ways, that any Application, would generate a file, and what information needs to be in that file addressing any Place Name in the file. Is the Jurisdiction order from largest to smallest, smallest to largest, how is each level of Jurisdiction separated from the next, and what should be in the file is the Jurisdiction is not known at that time.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-31T09:11:53-08:00</div>
+<div class="text">Russ says, commenting on my latest, "What I think I am seeing here, is that Every BetterGEDCOM FILE would have to pass through this Place Record database to be approved for compliance."<br/>
+<br/>
+I didn't mean to imply anything like that. I was simply pointing out a very interesting possibility for the future if Better GEDCOM chooses to include Place records in its transport files. My use of the word "compliant" was very different than your assumption. All I meant was that any application that could import Better GEDCOM files would be able to import these third party location database files automatically.<br/>
+<br/>
+Family Tree Maker comes with a very large world-wide place database built in. It does not require that the places that one enters in their FTM databases be in this database. Nor should any Better GEDCOM compliant system insist that all places must adhere to some database either. Users must be free to enter place information as they see fit. But since most locations are pretty conventional, having a database pre-establised in an application can do nothing but help.<br/>
+<br/>
+On a Better GEDCOM file export, I would expect that the entire Place database would not be transmitted, but only the place records needed to "close" the transport file.<br/>
+<br/>
+There are even more interesting implications that could be explored in the future. For example, every Better GEDCOM record will have (I assume) a totally unique UUID. That means all Place records will have totally unique UUIDs. I hope you can start imagining some of the implications of this. One is very obvious. If certain third party geographical databases become very popular and in widespread use, Better GEDCOM transport files don't need to include those place records since the importing program can be assumed to either already have them or to be able to get them quickly. (Of course these implications apply to ALL OTHER record types as well, and these have very interesting implications for the future as well).<br/>
+<br/>
+ Summary: If Better GEDCOM has Place records, third parties can create Better GEDCOM files representing large geographical/political databases which would could then be used by ANY (not just genealogical) application needing geographical information to pre-load its database of location info. I know that if this were to come to pass I would immediately create my own specification files for places. In fact I already have such a file that I have built up over the years whenever I need new places. Its format is not Better GEDCOM of course, but it is my own location specification format that is used to build a hierarchy of place records. I actually don't use this file for genealogy, but for my bird-watching applications (my other main avocation). This allows me to keep track of exactly where I see each bird species I record. Then I can easily ask for a list of all birds seen in any jurisdiction, from small ones like towns, to large ones like continents or oceans.<br/>
+<br/>
+Russ says: "I thought we were trying to address ways, that any Application, would generate a file, and what information needs to be in that file addressing any Place Name in the file. Is the Jurisdiction order from largest to smallest, smallest to largest, how is each level of Jurisdiction separated from the next, and what should be in the file is the Jurisdiction is not known at that time."<br/>
+<br/>
+To my mind that is exactly what the discussion about comma-separated strings, versus tress or networks of Place records is all about. This thread is a minor tangent off this main thread, but addresses an implication about Place records that might be interesting to many people, interesting enough to affect which way the Better GEDCOM file format decisions might go on the comma-separated string versus hierarchical records decision.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-31T09:20:28-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Question: (then I'm off of this topic, as clearly I don't understand)<br/>
+<br/>
+Are you saying that Family Tree Maker HAS, built in, a Place Name Database?<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-12-31T10:00:53-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+Isn't that what the Place Name Authority that is used to resolve places in FTM is?</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-31T10:31:53-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+Yes.<br/>
+<br/>
+Tom W.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-31T11:40:41-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Nope. Family Tree Maker uses information from Bing.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-31T12:43:09-08:00</div>
+<div class="text">I use FTM 2010 for the Mac. The place database is built into the program, because it's available whether I'm running the program online or offline.<br/>
+<br/>
+Bing is used to show maps of the places, so that is unavailable when running offline.<br/>
+<br/>
+I have no experience with FTM for Windows; maybe there the database is not builtin.<br/>
+<br/>
+Not that this matters as to the points I was making.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-31T14:09:01-08:00</div>
+<div class="text">Russ, Myrt and I ran a TMG to FTM &amp; RM test today. We developed some screen shots of the TMG place styling/methodology. We also shot how certain place information appeared when imported to FTM and RM. <br/>
+<br/>
+It's on the blog:<br/>
+<!-- ws:start:WikiTextUrlRule:4:http://bettergedcom.blogspot.com/ --><a class="wiki_link_ext" href="http://bettergedcom.blogspot.com/" rel="nofollow">http://bettergedcom.blogspot.com/</a><!-- ws:end:WikiTextUrlRule:4 --><br/>
+"Looking at TMG Places through the eyes of GEDCOM."</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-01T06:23:16-08:00</div>
+<div class="text">I've commented on the issue of In-line Notes, vs Note Records vs both in the discussion subject "Single way (current goal 7)" on the Goals page <!-- ws:start:WikiTextUrlRule:0:http://bettergedcom.wikispaces.com/GOALS --><a href="http://bettergedcom.wikispaces.com/GOALS">http://bettergedcom.wikispaces.com/GOALS</a><!-- ws:end:WikiTextUrlRule:0 --> since that seems the best place for the one-way or not discussion.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-01-04T13:58:42-08:00</div>
+<div class="text">About 3rd party location databases:<br/>
+<br/>
+I mentioned this before: "GOV - the genealogical gazeteer"<br/>
+<!-- ws:start:WikiTextUrlRule:6:http://gov.genealogy.net/index.jsp --><a class="wiki_link_ext" href="http://gov.genealogy.net/index.jsp" rel="nofollow">http://gov.genealogy.net/index.jsp</a><!-- ws:end:WikiTextUrlRule:6 --><br/>
+<br/>
+This is a very cool tool for research in Germany and much of Europe. It has a huge number of places and their changes over time. I would guess that the data behind it is organized in a hierarchical way, because you can search for super- and sub-ordinate objects, and the way the relations are shown in the "expert view". <br/>
+As such, I believe it would be possible to convert this data to any other hierarchical system - also a Better GEDCOM. I'd be insanely happy to see that data available directly in my genealogy software!</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-02-04T10:10:31-08:00</div>
+<div class="text">The following is an attempt to solve the problem Louis pointed out with multiple paths from a location to the top node in the location hierarchy.<br/>
+<br/>
+I have stolen the basic idea from a program. The solution is in principle to merge the current comma separated list of location names with a hierarchy of location entities, in a way where each NAME may specify a path to the top node (via the path specified for the next higher level name, recursively). <br/>
+<br/>
+Rather than repeating the location names in a list for each event, it is now stored once and referred to in the event, by a Location name ID, that indirectly also identifies a path to the top of the hierarchy. The ID does not have the problem with ambiguity as does names.<br/>
+<br/>
+The solution can handle names that change over time, attachment of a location to multiple higher level hierarchies, numeric id’s (used in various sources) as additional names, surety of the link to the higher level, and alternative names for the location level type name and more.<br/>
+<br/>
+For each location there is one “Location” record and one or more “Location name” records. All levels in a hierarchy are locations, and have these two types of records. <br/>
+<br/>
+Several location name records are needed for a location when a location have several names/ids/spelling variations over time, or is linked to several higher levels, or have several names for the level type over time.<br/>
+<br/>
+A simple hierarchy for “Westby, Vernon County, Wisconsin, United States” will have four Location name records and four Location records. The Location name record for Westby will link to its own Location record and the Location name record for Vernon County, which will link to its own Location record and the Location name record for Wisconsin and so on. The record referred to by events is the Location name record for Westby.<br/>
+<br/>
+Location name record have these fields: <br/>
+<hr/>
+- Location name ID (mandatory)<br/>
+- Location ID (mandatory)  (pointer to the corresponding Location record)<br/>
+- Location name  (name or some other sort of id, eg. a numeric id) (mandatory) See 1)<br/>
+- Name Scheme (string that identifies scheme used to assign the name/id, user defined) (optional)<br/>
+- Is short name  (used for names such as CA, WI)<br/>
+- Time date/period (optional)<br/>
+- Location Level Type (if different from default, see Location record, see 2) below)<br/>
+- Is top level record (yes/no, default no) See 3)<br/>
+- Higher level location name ID (optional) See 4)<br/>
+- Higher level location name surety (optional)<br/>
+- And more incl. Citation references (or rather a ref to the Location name id from a citation), <br/>
+Notes, name default prefix(/postfix), multi part ids in name, UUID, Is well known name,<br/>
+<br/>
+1)    There may be several Location name records with the same name for one location, e.g. when the location is linked to several hierarchies.<br/>
+2)    The Location level Type field in the location name record may be used eg. when the name of the type changes over time, but the “function?”/type of the area is the same. When for example a parish and a municipality cover the same area, the parish and the municipality shall be registered as two different locations, and Location level type is not used.<br/>
+3)    A location as modeled here may be top level in one hierarchy, but not in another. (A missing link to a higher level does not necessarily mean that the level is a top level.)<br/>
+4)    Must be present when the name record is referenced by an event (or other cases where a name hierarchy can be printed in eg. a report) or referenced by a lower level name record, unless the name record is at the top level. May be omitted in eg. a name record used to store a name variant only (spelling variation) that is not referenced by an event.<br/>
+<br/>
+Location records have these fields: <br/>
+<hr/>
+- Location ID <br/>
+- ID of preferred name for location (mandatory)<br/>
+- Default and preferred location level type (may be overridden by a location name record containing location level type) <br/>
+- And more incl. Coordinates, Multimedia links, Citations, Notes, Location type (School, Farm, Church etc, see 1) below ),  UUID etc. <br/>
+<br/>
+1) Location Type is different from Location level type. Location type applies to the lowest level locations, e.g. schools, farms, building, church, etc. Most programs allow selection of hierarchy levels (which in BG will translate into level types) – location types are kept in a separate field in order to make selection easier (much shorter list to choose levels from).<br/>
+<br/>
+There is also an issue regarding Addresses. It seems reasonable to have a separate record type containing Postal address, Phone, email, (time period?) etc. A better name for these records would be Contact info. A Contact info record should most likely link to a Location record, with the option to override it by a record linked to a Location name record – a location can have several addresses over time. (Could even be several Contact info records per Location name record (?))</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-29T16:12:50-08:00</div>
+<div class="text"><br/>
+Russ,<br/>
+<br/>
+GEDCOM already has name changes for individuals. You can specify the NAME tag multiple times for an individual. Therefore changes of individual names is already in the structure.<br/>
+<br/>
+Why should the names of places be any different? The place/location record is a perfect place to include the name change information, mimicking the individual record. Remember, a specific place should be identified with an ID, e.g. @P143@ and not with a name, e.g. "New York, NY, USA" as GEDCOM does.<br/>
+<br/>
+Tom:<br/>
+<br/>
+But the comma-separated format for place names is a hierarchy. It an elegant form that saves space and complication, and I give my kudos to the original GEDCOM designers to have come up with it. If any application wants to convert it internally to a heirarchy, then by all means. But don't force an application that doesn't use hierarchies internally (very few do for places) to export their data as a hierarchy. <br/>
+<br/>
+And I don't think BetterGEDCOM should define more than one way of doing one thing. That will cause ambiguity and extra programming for programmers who will now have to handle both methods. BetterGEDCOMs definitions should be general enough to handle all cases, but in just one way.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-12-30T02:50:08-08:00</div>
+<div class="text">"I don't think BetterGEDCOM should define more than one way of doing one thing"<br/>
+I'd be happy enough with just a place name written in comma separated form. I'd also want BG to only have 1 way of doing _exactly_ the same thing. However... <br/>
+<br/>
+I interpret Tom's suggestion as:<br/>
+1) EITHER a comma separated name for uncertain places <br/>
+2) OR a hierarchy of separate but related place entities for "well-known" areas.<br/>
+<br/>
+E.g. New York City is represented by a single place entity with a name of "New York, NY, USA" under scheme (1). And it's marked up to say that this is the full name. Or...<br/>
+As 3 place entities under scheme (2), viz:<br/>
+ - place entity with name "New York City", related by a "part of" relationship to:<br/>
+ - place entity with name "New York State", related by a "part of" relationship to:<br/>
+ - place entity with name "USA"<br/>
+Note in this pattern that each place name just has a single node _and_ the 1st two are marked up to say that they are part names only.<br/>
+<br/>
+Now, I have to say that Tom's concept of "well-known" areas and "historical ... you don't yet understand their relationships with other areas" are sufficiently clearly different to me that they are doing _two_ different things and therefore I can't see any objection to allowing both methods in this instance. <br/>
+<br/>
+(This isn't to say that I think the hierarchy of relationships has proven benefit in this particular case.)</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-12-30T08:59:59-08:00</div>
+<div class="text">A couple of issues with the comma separated list<br/>
+<br/>
+1) How are the type of place for each of the higher (all except the bottom one) places in the list transfered?<br/>
+<br/>
+2) If you have two or more places with the same next higher level area, which is relatively common, how do you distinguish between them?  For example, "The blue house, Berg, ParishA" and "The green house, Berg, ParishA" where the blue house is on one farm Berg, and the green house is on another farm also called Berg. How is the receiving program able to tell that there are two Berg farms?</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-12-30T09:31:41-08:00</div>
+<div class="text">"How are the type of place for each of the higher (all except the bottom one) places in the list transferred?"<br/>
+In my current GEDCOM set-up, they aren't transferred. In BG, I believe (now that you've asked the question!) that there should be comma separated type list held against each comma separated place entity - thus the place with a name of "New York, NY, USA" would have a type-list of "settlement, state, country" (which is 3 elements, thus including this place). And whether it should be 3 comma separated or 3 separate items in XML is something I'll leave to the XML  gurus.<br/>
+<br/>
+"If you have two or more places with the same next higher level area, which is relatively common, how do you distinguish between them?" Currently (and with this scheme even under BG, I suppose), I'd actually alter one or both of those names, so I could see which is which, even in a simple list. One classic case in Cheshire is that we have two places named Willaston in the county. Thus we might have places:<br/>
+"33 Chester St, Willaston, Cheshire, England" and <br/>
+"33 Crewe Rd, Willaston, Cheshire, England"<br/>
+<br/>
+These would get entered as <br/>
+"33 Chester St, Willaston (near Neston), Cheshire, England" and <br/>
+"33 Crewe Rd, Willaston (near Nantwich), Cheshire, England"<br/>
+Thus I'd alter the semi-legal names to make it clear which is which - and in fact, that's pretty much what happened to the postal addresses, before we had post-codes - people would just add the name of a nearby town.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-30T12:59:40-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+I can go either way on places. Using GEDCOM as my LifeLines database, I am stuck with comma separated values, and I don't find them much of a hindrance. I like the hierarchical approach, however, because of its elegance and its lack of duplication. And it opens a nice market for third parties to supply place databases, and if we use UUIDs, these place databases can be semi-permanent, so we can "write it and forget it." I am very much aware of all the gotcha's about using hierarchies, but they are, in my opinion, the same gotchas as using comma-separated strings, but the elegance of hierarchies makes up for a lot of issues.<br/>
+<br/>
+Advantages of the comma-separated lists<br/>
+<br/>
+You can be sloppy about missing/unknown pieces. You can be sloppy, sloppy, sloppy, and this can be of great advantage: "aboard HMS Beagle, Coral Sea, Pacific Ocean"<br/>
+<br/>
+Disadvantages of the comma-separated lists:<br/>
+<br/>
+You don't know what each name represents (equivalent to "You can be sloppy...")<br/>
+<br/>
+Advantages of the hierarchical approach:<br/>
+<br/>
+No duplication<br/>
+Individual records can contain historical information about specific regions.<br/>
+You know what the levels are (assuming the records specify what kind of thing they are, which they had better, or we're doing it wrong).<br/>
+Databases can be pre-established.<br/>
+<br/>
+Disadvantages of the hierarchical approach:<br/>
+<br/>
+I really don't see any that are unique to it. It has the same gotcha's as the comma-separated approach.<br/>
+<br/>
+As far as not wanting to have two ways to do the same things, I find that a fairly wussy requirement, but I can go along with it. If we opt for comma-separated lists, I hope there might be some way to specify what kind of thing each of the names are. By the way I hate double commas to mean pieces that were left out, so hope we won't sanction that. Certainly for a transport format, having one way of transmitting place information makes a lot of sense. It can actually be the receiving programs that decide which place info to put into different records or not.<br/>
+<br/>
+(In my GEDCOM to DeadEnds conversion software [after all, to experiment with the DeadEnds model I have to get data from somewhere], I parse out the comma-separated strings in the GEDCOM PLAC strings, and build up the place hierarchies. I think this is what other programs do as well (e.g., GRAMPS, Family Tree Maker).<br/>
+<br/>
+So let me ask this question: If we only use comma-separated lists for places, do we need Place records? I'm not sure. If we had a record for each different comma-separated list, this does save duplication, so I guess it's okay.<br/>
+<br/>
+And back to "two ways to do the same thing."<br/>
+<br/>
+In GEDCOM one can have a NOTE be just local to a record, or one can have a NOTE refer to an entirely separate NOTE record. In the first case one assumes the note is just something about the record that contains it. In the second case one assumes that multiple records will refer to the same note. So GEDCOM here has two ways of representing notes. Does this fall under the category of two ways to do the same thing? Note for example, when certain programs (e.g., GRAMPS, GEDitCOM) read GEDCOM files, they extract the notes that are internal to records and make separate NOTE records out of them. I guess those programs only want one way of doing things, even if the GEDCOM files they import have two ways of doing things!!<br/>
+<br/>
+As another example, in the DeadEnds model I allow places to be comma-separated strings inside Event records (they are not separate Place records, that is). I also allow Places to be separate Place records with comma-separated strings. And I also allow Place records to be hierarchical, and at each level in the hierarchy, the name could be a comma-separated string or a single component string. Is this three ways of doing the same thing? Does this means I am not a wussy programmer who insists on only having one way to do each thing! Am I shooting myself in the foot?<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-12-30T18:22:24-08:00</div>
+<div class="text">Adrian,<br/>
+I agree that your “(near Neston)” solution is a possibility, although I would prefer a solution that kept “(near Neston)” separate from the place name so that I could e.g. use the name to access a database. An alternative to “(near Neston)” that is often used here is to use the property’s number (each property here can be identified by a series of 2-5 numbers, depending on the context) – but I would not like that to be part of the name. So in my view the comma separated list has a problem with ambiguous names.<br/>
+<br/>
+(But your “(near Neston)” approach raises a separate question, which could be discussed in a separate discussion – should there be a possibility to have a suffix that may be printed if needed, but would not be a part of the “real name”. )<br/>
+<hr/>
+Tom,<br/>
+What do you mean by “Databases can be pre-established.” ?<br/>
+<br/>
+<hr/>
+If we are thinking about UUIDs for places, it will be a strange thing if we can’t use it to identify e.g. the next higher level area – but would have to use a comma separated list of names instead of the UUID.<br/>
+<br/>
+Since there is so much resistance against improving (in my view) on the old comma separated list, I suggest the following:<br/>
+<br/>
+I think that all programs in the foreseeable future will need to have functionality for import of a comma separated list from Gedcom 5.5 so it would probably not be a problem to have a comma separated list in BG. Also, a program that is only capable of storing a comma separated string should have no problem traversing a received hierarchy of records on order to extract a (comma separated) list of places/areas. A system that stores a string internally could then send that string, and a system that stores a hierarchy of strings could send that – the recipient is the one that will know if a conversion is necessary – and will in that case do the conversion. A program supporting BG would have to support receipt of both solutions. <br/>
+<br/>
+There might even be a case where the two alternatives might work together, if a higher level area belongs to several hierarchies - a comma separated list could choose the relevant hierarchy --- but there are probably other ways to solve this, and maybe someone would argue that there is no need - or very complicated - to choose the complete higher level hierarchy. (You could even have a comma separated list of place IDs.) I need to think more about this.<br/>
+<br/>
+We may have one, two or three ways of doing things, that problem can often be handled by doing more programming, the worst thing we can do is to exclude solutions that will allow innovation – that can not be solved by programming.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-30T19:36:26-08:00</div>
+<div class="text">gthorud asks: "Tom, What do you mean by “Databases can be pre-established.” ?<br/>
+<br/>
+If Better GEDCOM chooses to implement places as hierarchical trees of Place records, someone could create a file that just contains Better GEDCOM Place records for certain parts of the world. For example, a file that contains all the towns, villages, cities, parishes (Louisiana), boroughs (Alaska), unincorportated places, counties, states, provinces in North America as of 2010, as a Better GEDCOM add-on or plug-in file. Any BetterGEDCOM compliant program could then read that file and thereby have established for it a fully populated set of Places. Users would then only have to enter new place records for very odd things like being at sea, or in places that are unknown or places that are ambiguous.<br/>
+<br/>
+If we could get dates established properly in the Place records, something I feel is still a difficult issue to solve, a file that contains the counties of all the United States as they evolved over time, would be a very valuable plug-in for Better GEDCOM compliant programs. How counties have evolved over time is a big issue for many genealogists in the United States and there must be similar issues all over the world (just think about how counties have changed in England, and in now the different kinds of county structures that exist in England). Oh, here's something interesting. I live in Massachusetts, U.S.A. We no longer have counties officially! But we still have sheriffs, which, in the United States, is traditionally a county position.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-30T19:44:47-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Sorry, but I have to ask.<br/>
+<br/>
+WHO is going to build a BetterGEDCOM Place Records? Where is it going to be hosted?<br/>
+<br/>
+Sorry, I must be missing something very important in this topic (building a database of some sort). <br/>
+<br/>
+Isn't the 'place records' part of the application that is trying to create a file to be transported? <br/>
+<br/>
+We are trying to define what the information is that needs to be transported, but, to my knowledge, no one is expected to create any database. Rules perhaps, but not a database.<br/>
+<br/>
+If I am understanding this issue correctly, you are suggesting that the BetterGEDCOM project would be creating a database that would put Bing Maps and Google Maps to shame. After all, the just maintain current 'stuff' (place names). Yes, I understand that Layers are being added to at lease Google Maps, but to do what is being suggested would still put both of them to shame in the amount of 'historical' information that might be required.<br/>
+<br/>
+Please help me understand the "database" / "Place Records" piece of your discussion.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-30T23:55:35-08:00</div>
+<div class="text"><br/>
+Tom:<br/>
+<br/>
+The trouble with implementing a hierarchical model for places, and the complication of doing so, is that it is actually a network rather than a hierarchy. Lower level places can have more than one parent because jurisdictions change, and that's what complicates matters.<br/>
+<br/>
+Here's a tangible example:<br/>
+<br/>
+Dubrovka was a town in the province of Volhynia in the country of Poland. In the 1800's, that province was acquired by Russia. In the 1920's, the Soviet Union took over.  A few years after, the province boundaries were changed and the province of Zhytomyr now contained Dubrovka. In the 1990's, the Soviet Union broke up and Zhytomyr became part of the Ukraine.<br/>
+<br/>
+So giving each place name an entity is complicated. You have several that have two parents that vary by time. Here is what it is like:<br/>
+<br/>
+0 @P1@ PLAC <br/>
+1 NAME Dubrovka<br/>
+1 UPTO @P2@<br/>
+2 DATE TO 1924<br/>
+1 UPTO @P3@<br/>
+2 DATE FROM 1925<br/>
+<br/>
+0 @P2@ PLAC <br/>
+1 NAME Volhynia<br/>
+1 UPTO @P4@<br/>
+2 DATE TO 1849<br/>
+1 UPTO @P5@<br/>
+2 DATE FROM 1850 TO 1919<br/>
+1 UPTO @P6@<br/>
+2 DATE FROM 1920 TO 1924<br/>
+<br/>
+0 @P3@ PLAC <br/>
+1 NAME Zhytomyr<br/>
+1 UPTO @P6@<br/>
+2 DATE FROM 1925 TO 1990<br/>
+1 UPTO @P7@<br/>
+2 DATE FROM 1991<br/>
+<br/>
+0 @P4@ PLAC<br/>
+1 NAME Poland<br/>
+<br/>
+0 @P5@ PLAC <br/>
+1 NAME Russia<br/>
+<br/>
+0 @P6@ PLAC <br/>
+1 NAME Soviet Union<br/>
+<br/>
+0 @P7@ PLAC <br/>
+1 NAME Ukraine<br/>
+<br/>
+This is actually horrendous to parse and nearly impossible to manually check that the jurisdictions are correct during the correct dates. I as a programmer would not want to program this. Not when the following is a possible option that says the same thing, but instead uses the comma delimited place names:<br/>
+<br/>
+0 @P1@ PLAC<br/>
+1 NAME Dubrovka, Volhynia, Poland<br/>
+2 DATE TO 1849<br/>
+1 NAME Dubrovka, Volhynia, Russia<br/>
+2 DATE FROM 1850 TO 1919<br/>
+1 NAME Dubrovka, Volhynia, Soviet Union<br/>
+2 DATE FROM 1920 TO 1924<br/>
+1 NAME Dubrovka, Zhytomyr, Soviet Union<br/>
+2 DATE FROM 1925 TO 1990<br/>
+1 NAME Dubrovka, Zhytomyr, Ukraine<br/>
+2 DATE FROM 1991<br/>
+<br/>
+I'd much sooner have something like this, which is a simple extension of what GEDCOM has now.  <br/>
+<br/>
+As far as being "sloppy" goes, my program displays places in reverse hierarchical order. That makes any mistakes very easy to identify and fix. Of course that type of functionality does not depend on the underlying data structure, but just on the way the data is displayed.<br/>
+<br/>
+<br/>
+"Don't know what each name represents".  <br/>
+<br/>
+Tom, we are talking about two equivalent structures here. One way (I'm not suggesting we do it) that is very easy is to add a type tag. e.g.:<br/>
+<br/>
+0 @P1@ PLAC<br/>
+1 NAME Dubrovka, Volhynia, Poland<br/>
+2 TYPE City<br/>
+<br/>
+0 @P2@ PLAC<br/>
+1 NAME Volhynia, Poland<br/>
+2 TYPE Province<br/>
+<br/>
+Besides, how would we know in the hierarchy method what the level is. You'd have to do something like the above.<br/>
+<br/>
+<br/>
+"Two ways to do the same thing".<br/>
+<br/>
+Yes, NOTE as a record and a NOTE local to a record are two ways to do a note. That is bad. Let's say there is a NOTE that is local. A person then goes and adds the same note as local to another record. Is the program now mandated to clean things up and make it a note record? It is not clear and because there are two ways, you don't know which way you should program it. You only know you need to support both ways. So lets then make the rule: Single notes inline and multiple notes as Records. What a useless rule that is. It just makes the programming harder and provides no benefit. So let's not make the rule then. Now you've got two ways to do something again. Gotta program to allow for it. <br/>
+<br/>
+The way I've seen it in the hundreds of GEDCOMs I've looked at, programs have chosen to do it either one way or the other - always local, or always as records. I've never seen a program that has them mixed. There is such insignificant gain to allowing two different ways to do NOTES, and it just adds extra complications because programmers will have to support both ways. Let's choose only one. This to me, was a minor mistake, a minor one. But let's not complicate BetterGEDCOM at any point. Generality is great, but redundancy is not.<br/>
+<br/>
+Which way to go on notes? Most notes are unique, and in that case it makes sense to include them inline. But I've seen some GEDCOMs with the same note repeated 1000 times. In that case it makes sense to make them records. This comparison seems to give reason for both. But I think the deciding criteria should be simplicity and help the programmer out, as long as it is not too simple that it can't do everything that is needed of it. Maintaining an extra entity structure for notes takes housekeeping. There are extra links to maintain, and when a note is edited to become the same as another, you may have to merge them. Why bother. Just make all notes inline and they are simple strings. BetterGEDCOM becomes simpler with one less entity to worry about. Everyone will be happier.<br/>
+<br/>
+<br/>
+"If we only use comma-separated lists for places, do we need Place records?"<br/>
+<br/>
+Absolutely! We need to attach information about the place somewhere. At the minimum, it needs latitude and longitude, which needs to go somewhere.  I'd actually like to extend places to have events of their own (others have disagreed), but I know I want to document the homes and towns where my ancestors lived. Where do I document that the home was built in 1850, had a fire in 1860, was used for a movie in 2004, etc?  Where do I give the events of the town so that the lives of my ancestors can be placed in the proper setting?  Where should I attach pictures of the ancestral town where a lot of my ancestors came from? This is so necessary, I'm so surprised few genealogy programs support extended information about places.<br/>
+<br/>
+<br/>
+Well, those are my thoughts. I don't expect everyone to agree.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-31T03:29:54-08:00</div>
+<div class="text">Russ asks "WHO is going to build a BetterGEDCOM Place Records? Where is it going to be hosted?"<br/>
+<br/>
+I have no idea. The point is simple however. If Better GEDCOM uses Place records of ANY kind, those records can be created by third parties and put in files and those files can be imported into Better GEDCOM compliant systems. After all a Better GEDCOM transport file doesn't HAVE to include Person records. It can contain any subset of any kind of the final Better GEDCOM record set, as long as there is "closure" (all records referenced by records in the file are also in the file). The idea of a Better GEDCOM transport file containing nothing other than Place records does have quite an appeal.<br/>
+<br/>
+I think it is not hard to imagine that large sets of Place records are a marketable item. I would sure like to have all my places already in my program before I started. Take a look at Family Tree Maker. It comes with an immense database of places already "preprogrammed" into the application. Having a large file of Better GEDCOM Place records would give every compliant application this same benefit.<br/>
+<br/>
+Note, this is NOT an application issue. It is purely a Better GEDCOM transport file format issue. If there are Place records anyone can create them and put them in files and then try to do anything they wish with them.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-31T03:54:00-08:00</div>
+<div class="text">Louis is concerned that hierarchical place records will run into trouble because we are really dealing with a network rather than a pure tree in the hierarchy, stating that it is difficult to deal with networks.<br/>
+<br/>
+What can I say? Places are hierarchical. Places do form richer graphical networks than trees some of the time. These hierarchies exist whether dealing with comma-separated strings or with separate Place records that refer to each other, creating the tree or network. This is the world we must deal with. Saying it's a difficult world to deal with is certainly true. Using comma-separated strings does simplify the world a bit, because the user must choose one single path through a network hierarchy over all others that are possible (even though they are networks, they are also directed acyclic graphs, so it is always possible to enumerate a finite number of comma-separated paths through any network). (The fact that most users have no idea that they are really picking a string that represents such a path through a complicated network of place concepts is immaterial.) On the other hand the user then looses all knowledge of the other ways a place fits into other hierarchies. The question to me is how important is it to have more than one possible hierarchy known about in our databases.<br/>
+<br/>
+You can view this a little like generating citation strings from a hierarchy of Source records. A citation is a string generated by looking at a Source record hierarchy and building up a special string.<br/>
+<br/>
+A comma-separated string version of a place can also be thought of as generating a string from a set of related Place records, by climbing up a Place hierarchy. The fact is that if the Place records form a network rather than a tree, this means that THERE ARE MORE THAN ONE comma-separated strings for the place is very, very true. But must that bad? Isn't it actually good? Doesn't it mean that our applications can better understand the true nature of places? Can't there be rules for selecting which comma-separated string to use in different contexts?<br/>
+<br/>
+Wouldn't it be wonderful if you could say, "Give me the geopolitical comma-separated string for this place as it would have been named in 1790," or give me the comma-separated string for this place name as it would have been expressed in the German language as this place existed in Poland in 1877"? Yeah, this is "hardish" stuff to deal with, but does that justify saying we don't want to do it? For me it's a matter of imagining the risks and the benefits of the features.<br/>
+<br/>
+It is also the case that the many, many places can be dealt with as pure trees. Yes, examples like Louis's are out there and very real, but I never like appealing to special cases as a justification for throwing away a simple and elegant way of dealing with many cases.<br/>
+<br/>
+It's hard to know exactly where the boundary between Better GEDCOM and applications lies here. It might be the case that Better GEDCOM decides that all places will be transmitted as comma-separated strings inside Event records. That is, there are no Place records at all. If this is the case, then the receiving applications would have to build the trees and networks of Places (it they choose to) and Better GEDCOM would wash its hands of the whole thing. There are certainly advantages to this, though it would inflate the sizes of many transport files and would loose any special information about the places that would be in the Place records.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-12-31T04:13:38-08:00</div>
+<div class="text">I'm drooling just thinking about a 3rd party place records file covering the HRE 800AD-1806AD!!</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-28T14:55:43-08:00</div>
+<div class="text">Hi Russ:<br/>
+<br/>
+From the above posted TMG Help file:<br/>
+Places: You can choose whether to export only the Short Place fields or you can check which of the place fields will be exported, whether a comma will be exported when a field is missing, and, if Commas when missing is checked, then you specify whether to trim leading and trailing spaces which may have been inadvertently included in the data.<br/>
+<br/>
+I'm wondering if I didn't cause those extraneous commas by not setting the file up for export correctly. <br/>
+<br/>
+I KNOW I didn't rework the data.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-28T15:15:48-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+I am sure that you have the ability to control that. If you want, I will retest it, if you email me that, or another GEDCOM to prove and document the point.<br/>
+<br/>
+I think generating another GEDCOM file, using that option, would be wonderful, so that the other information is constant.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-12-28T16:40:10-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+I do not think that it is a good idea to implement two ways of doing the same thing, that is an invitation to incompatibility.<br/>
+And I don't see the big implementatio9n issue.<br/>
+<br/>
+There is nothing about phone numbers in the place hierarchy in ged 5.5 so it is just another example of how to try to make a crippled standard do things it was not intended for - is that an approach we want to encourage? <br/>
+<br/>
+I think it is better to define a long term goal rather than trying to patch a crippled standard. If you go that way, you could end up patching for ever.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-28T16:46:03-08:00</div>
+<div class="text">gthorud,<br/>
+<br/>
+Hey, this project is a group decision based process.<br/>
+<br/>
+I am guessing, based on the tests that I have run, (NOT talking about phone numbers), that many software developers would have to re-write their data base structure, to have the Jurisdiction architecture that you have proposed.<br/>
+<br/>
+Again, I am NOT diagreeing with the concept, but there are may other items that must be fixed. Source and Citation information being one of them.<br/>
+<br/>
+Also, this Group will get to vote one what gets done and when.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-12-28T17:42:28-08:00</div>
+<div class="text">Russ<br/>
+<br/>
+There is no need to rewrite the database structure to have a hierarchy - you are mixing application and datafile structure.<br/>
+<br/>
+But if you want to make something useful for your customers, like storing info related to places/areas, you may need to modify your database.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-28T17:57:14-08:00</div>
+<div class="text">gthorud,<br/>
+<br/>
+Sorry, just an End User. I only want to Share my information.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-28T18:32:48-08:00</div>
+<div class="text">gthorud,<br/>
+<br/>
+Info on places can easily be stored in a Place entity/record. Recording change of place names is trivial within that structure, as I alluded to before. <br/>
+<br/>
+I feel, as a programmer, there is no need to complicate things with a hierarchy. And yes, a hierarchy does very much complicate things.<br/>
+<br/>
+That's my opinion.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-12-29T03:13:55-08:00</div>
+<div class="text">"there is no need to complicate things with a hierarchy"<br/>
+I have to say that I agree with Louis. I have been trying to mentally concoct a place-name hierarchy so that I only enter each element of (say) "Crewe", Cheshire, England" once. <br/>
+<br/>
+On the plus side, if the data file were implemented in a relational database (with apologies to Tom W!) it would be pretty easy to insert the info that creates the upwards reference. I've not really got my head round what it would be like in any other form of data file.<br/>
+<br/>
+However, on the minus side - what hierarchy do we use for jurisdictions? (I'll take it as read that any decent software would be able to implement different jurisdictional hierarchies for each country, though that's actually non-trivial.)<br/>
+<br/>
+I find with my own data that it's an illusion that I have one jurisdictional hierarchy, probably because my place-names are useful, rather than rigorous. <br/>
+<br/>
+E.g. 1: I put "London, England" (or "London,, England") because the city of London is split between 2 historic counties - however, as far as I'm concerned it's all one place. <br/>
+<br/>
+E.g. 2: (much smaller) I put "Barthomley parish, Cheshire, England" despite the fact that the parish spreads over into Staffordshire, because if I omitted the county, London-style, then anyone from outside the area wouldn't have the faintest idea where the parish was. Ideally, I'd distinguish between the parts of the parish in each county, but my ancestors weren't rigorous enough to tell me which part of the parish they were referring to. Nor did they recognise the essential anomaly of referring to their place of birth by a religious organisation (the parish) when asked a question that would normally be answered with a civil jurisdictional area.<br/>
+<br/>
+Further, it's my experience that whatever jurisdictional hierarchy I try to use for England, I can find counter-examples in the same country of how one area doesn't work like that.<br/>
+<br/>
+So in the end, though I hate duplicate entry, I've mentally settled for entering my attempt at the full name against each place - that way I can use whatever concepts work for me for that individual place.<br/>
+<br/>
+As an aside I DO think it would be useful to have a relationship between places, so that I can answer the question "Who lived in 'Cheshire, England'?" but that relationship is one that is specifically designed purely for the study of family history and not meant to represent any legal / jurisdictional hierarchy.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-12-29T03:26:47-08:00</div>
+<div class="text">Gthorud said "There is nothing about phone numbers in the place hierarchy in ged 5.5 so it is just another example of how to try to make a crippled standard do things it was not intended for"<br/>
+<br/>
+Phone numbers are in the address_structure of GEDCOM 5.5, rather than the place_structure. However, you're not far wrong in your conclusion as the place_structure contains a place_value, which is the "jurisdictional name of the place where the event took place". Nothing about the address where the event happened. So people use the address_structure for that, but that contains stuff totally irrelevant to historic event such as phone numbers, etc. I suspect it was always intended that address_structure be used for this, else why put it against the event, but the different requirements for historic and current addresses result in a silly set of items.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-12-29T04:05:27-08:00</div>
+<div class="text">Would it really be complicating things if there was the possibility of a hierarchy, but not a requirement? <br/>
+E.g., you enter your Places any way you like, and they are preserved like that. If you want, you can link a place to another and indicate the relationship (A was part of B from 1750-1824). So if you like, you can build a hierarchy that way, but you don't have to.<br/>
+Would this be terribly complex? I can't tell.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-29T06:21:41-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+Question:<br/>
+<br/>
+You said:<br/>
+<br/>
+"Recording change of place names is trivial within that structure, as I alluded to before. "<br/>
+<br/>
+The question is, doesn't this belong in the Application and NOT part of the BetterGEDCOM file?<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-29T07:46:26-08:00</div>
+<div class="text">testuser42 asks: "Would it really be complicating things if there was the possibility of a hierarchy, but not a requirement?"<br/>
+<br/>
+I believe this is the right way to go, and the technique I implement. You want the hierarchical approach for well-known areas, but you need the non-hierarchial approach for places you are not sure of, or are historical and you don't yet understand their relationships with other areas.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-20T08:04:53-08:00</div>
+<div class="text">Consider some records display a PLACE location like Brookyln NY in general<br/>
+<br/>
+0 LOCT 1<br/>
+1 name Brooklyn, NY<br/>
+1 ????<br/>
+1 ????<br/>
+1 ????<br/>
+<br/>
+A street address to a building may be needed<br/>
+<br/>
+0 LOCT 2<br/>
+1 name 137 Meeker ave<br/>
+1 ???? Apartment 10B<br/>
+1 ????<br/>
+1 ????<br/>
+<br/>
+0 LOCT 3<br/>
+1 name 124 Broad ST<br/>
+1 ???? Apartment 7C<br/>
+1 ????<br/>
+1 ????<br/>
+<br/>
+<br/>
+for the family group or say LAM<br/>
+<br/>
+0 AREA 1<br/>
+0 PRIM =LOCT#1<br/>
+0 SECD = nothing for now<br/>
+0 Child = LOCT 2<br/>
+0 CHILD = LOCT 3<br/>
+<br/>
+this can capture mini locations or child areas inside a larger area.<br/>
+<br/>
+If Broard St changed it name to Eagle ave in 1940<br/>
+<br/>
+0 LOCT 4<br/>
+1 name 124 Eagle Ave<br/>
+1 ???? Apartment 7C<br/>
+1 ????<br/>
+1 ????<br/>
+<br/>
+you can add a child under LOCT #3<br/>
+<br/>
+0 AREA 2<br/>
+0 PRIM =LOCT#3<br/>
+0 SecD blank<br/>
+1 child = LOCT#4<br/>
+<br/>
+<hr/>
+<br/>
+I am reaching for straws to show a possiable function that could be added with some slight modificaations to a gedcom file.<br/>
+<br/>
+Be creatative, IF WE HAD TOO do it would you see a more creative way in building the strcuture that GEDCOM and other APP could stay with the needs of the users wishes.<br/>
+<br/>
+This concept utilizes a function loop which is already in place, it would just need its own kinds of standard tags.<br/>
+<br/>
+<br/>
+This also is simple for devs to copy the INDI charts and reports to display such location reports or historal changes in a way.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-12-21T17:30:32-08:00</div>
+<div class="text">First of all, I am not sure I want to see a big ancestor/descendant tree chart for places/locations/area. It would be interesting to see such a tree, but it may be overkill to show a lot of generations. I have seen a type of diagram that is used here to describe the history of farms, but in most cases it does not look as a tree. Anyway, the output is an application issue - so it may not affect the interchange format – as long as it captures the information.<br/>
+<br/>
+The output that I think is most important is to see the parents (maybe grand parents) and children of a location – and some time in the future the ability to generate narrative reports that can traverse the descendant three of a place and list e.g. the people who lived there together with info about the farm.<br/>
+<br/>
+I am not sure if it is possible to achieve this just by making small modifications to existing code.<br/>
+<br/>
+I have difficulty seeing which advantages a “family” type of record has, compared to only having one type of location record (other than the possibility of reusing code). I envisage using events to connect parent and child locations, one reason being that the change is often documented in sources that must be referenced.<br/>
+<br/>
+I don’t see why one should create a new location when the name is changed, a location may have several names over time. And importantly I think the geographical area of a location may also change over time.  It will most likely be too complicated if one should always create a new place if say a small piece of land was merged with a large farm, and the name of the large farm was unchanged.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-21T17:57:20-08:00</div>
+<div class="text">"but it may be overkill to show a lot of generations" <br/>
+True, and also people can over kill almost anything abusing it original purpose. This is just a suggestion that it could be if we had or can include such user needs. Like trcking farm land and such.<br/>
+<br/>
+  I was just attempting to try off the top of my head with the least amount of impacted.<br/>
+<br/>
+  However I still believe a location needs to be included with and event record and be tied to persons as a group of an event.  <br/>
+<br/>
+"I am not sure if it is possible to achieve this just by making small modifications to existing code." <br/>
+It can, but who would be willing to incorperate it IF they feel there is no need for it.<br/>
+<br/>
+"I envisage using events to connect parent and child locations, one reason being that the change is often documented in sources that must be referenced."<br/>
+YES me to<br/>
+<br/>
+<br/>
+"I don’t see why one should create a new location when the name is changed, a location may have several names over time. And importantly I think the geographical area of a location may also change over time."<br/>
+<br/>
+Yes I could see it like that also, so here is fuel forthe fire.<br/>
+<br/>
+Every time a person chnages thier name they do not become a new individual #.<br/>
+<br/>
+However I do think for a change of name, a person can have evidence records which point <br/>
+to a source and show them in choro order.<br/>
+<br/>
+Same can go for a location, name change, then evidence record can still list them "changes" in chrono order. <br/>
+<br/>
+LOL yeah it would have been neat to see a land fan chart LOL, but I meant it for a small scale use of like a fontier town and the changes it under went to modern day.<br/>
+<br/>
+Thanks for you thoughts I appreciate it.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-21T19:13:45-08:00</div>
+<div class="text"><br/>
+Keep it simple, I say. <br/>
+<br/>
+I love the elegance and simplicity of using commas as place level separators. <br/>
+<br/>
+I definitely do not want to take the simple things GEDCOM currently has and make them complex, unless there is a necessary reason and a major benefit to do so.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-21T19:23:34-08:00</div>
+<div class="text"><br/>
+... regarding change of location over time, I mentioned my thoughts on this before, but to summarize, I like under the Place record (I'll use GEDCOMish):<br/>
+<br/>
+0 @P43@ PLAC<br/>
+1 NAME Winnipeg, Manitoba, Canada<br/>
+2 DATE FROM 1812 TO 2009<br/>
+1 NAME Colder than the South Pole, Manitoba, Canada<br/>
+2 DATE FROM 2009 <br/>
+<br/>
+Then references to this place are always:<br/>
+<br/>
+n PLAC @P43@ <br/>
+<br/>
+and you don't have to worry about the name changes. They are recorded once and only once under the PLAC record. It would not be hard for any program to use the correct name depending on the date of the event, e.g.<br/>
+<br/>
+1 BIRT<br/>
+2 DATE 1985<br/>
+2 PLAC @P43@<br/>
+<br/>
+Could display the place for that event at Winnipeg, Manitoba, Canada because the date of the event is 1985. But if the date was 2010, it would display South Pole. <br/>
+<br/>
+p.s. the "FROM date TO date" construct is allowed in GEDCOM, although its rarely used.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-22T06:15:47-08:00</div>
+<div class="text">GedcomISH, LOL, I will use that from now on. I tried Gedcom Like, but was replied "that's not correct GEDCOM" Maybe ISH might be better.<br/>
+<br/>
+OK GedcomISH terms.<br/>
+<br/>
+I can agree showing land as people is over kill as posted above. but to capture the need of changes over time I see how you do/or will perform yours.<br/>
+<br/>
+Me I set a PLAC/location as a default record with title as its own. Such like<br/>
+<br/>
+0 @P43@ PLAC<br/>
+1 NAME Winnipeg, Manitoba, Canada<br/>
+2 NOTE My historical research<br/>
+<br/>
+0 @L001@ LOCA<br/>
+1 ASSO @P43@<br/>
+1 NAME Winnipeg<br/>
+2 DATE FROM 1812 TO 2009<br/>
+0 @L002@ LOCA<br/>
+1 ASSO @P43@<br/>
+1 NAME Colder than the South Pole<br/>
+2 DATE FROM 2009<br/>
+<br/>
+I create a generic place marker for a plac like @P43@ which is a preference record of display that a user wishes to have in there db.<br/>
+Just like a have generic person place markers with NO EVIDENCE record keeping inside them.<br/>
+I perform these "LOCA" as "source records" of evidence which link to the PRIME record in question.<br/>
+<br/>
+If the record @P43@ is in a display screen, ALL the real records display in chronological order under that place-marker record.<br/>
+<br/>
+@P43@ Winnipeg, Manitoba, Canada<br/>
+<hr/>
+   @L001@ 1812 TO 2009 Winnipeg &gt;@S0019@<br/>
+   @L002@ 2009 Colder than the South Pole &gt;@S0021@<br/>
+<br/>
+By doing this it allows me to link places and people to gather to one group event, or place.<br/>
+<br/>
+No for a person evidence record<br/>
+0 @E002@ EVID<br/>
+1 ASSO @P43@<br/>
+1 ASSO @S00021@<br/>
+1 NAME John Smith<br/>
+2 ROLE Head<br/>
+.....<br/>
+<br/>
+But this is how I do mind and it works very easy and cuts down duplication of data as much as I could with more linkage flexibility to group people and places and events or even sources to all.<br/>
+<br/>
+Again i will stress that pedigree of land markers idea I have dropped since I already capture name changes over time. I thought people were looking for a way to DISPLAY land splits and combining land as a display report.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-12-28T09:34:12-08:00</div>
+<div class="text">louiskessler wrote:<br/>
+<br/>
+"I love the elegance and simplicity of using commas as place level separators. "<br/>
+<br/>
+I am not sure what is so elegant about commas.<br/>
+<br/>
+I don't see why we should keep the comma separated list. I would rather see a Location/Place record for each level, and a reference from e.g. the lowest level place record to the record on the level above. In this way you can transfer info related to each place level (eg. type of location, notes, multimedia refs etc.) and you will avoid ambiguities when there are several locations with the same name.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-28T10:10:08-08:00</div>
+<div class="text">gthorud,<br/>
+<br/>
+Not disagreeing with you, but I think that TMG uses the comma's and it is not helpful in the program that I use. Please see the results on the Blog.<br/>
+<br/>
+I am not sure that the Jurisdiction levels will help either. But, please give it try using Google Maps or Bing Maps.<br/>
+<br/>
+Having looked at the GEDCOM to Various programs, including the two mapping websites, IF you understand that the place names work from the Smallest to the Largest Jurisdiction (Left to Right), but Read the place names from Largest to Smallest, you know what Jurisdiction Level you end with, at the left end of the string of levels.<br/>
+<br/>
+I am only raising these questions because 1) I don't want to have to think about Jurisdiction levels outside of my program, and 2) the results of the import of a TMG generated GEDCOM made the import useless. Shouldn't say useless, but I have to clean up all of the Place Names.<br/>
+<br/>
+Having said that, it's my understanding the TMG has an update coming out, so I don't know if this it taken care of in that update.<br/>
+<br/>
+I have another test, TMG to RM4 to look at the use of the comma's do to RM4.<br/>
+<br/>
+Thanks for the posting.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-28T10:23:47-08:00</div>
+<div class="text">Hi Russ, gthorud:<br/>
+<br/>
+I use TMG. <br/>
+<br/>
+The self contained program has a nice place system based on customizable templates. <br/>
+<br/>
+I'm guessing that when a GEDCOM is created, the template references are lost.<br/>
+<br/>
+Here is some information mentioning places in the TMG v7 Help topic, GEDCOM EXPORT (quoting):<br/>
+<br/>
+Places<br/>
+<br/>
+You can choose whether to export only the Short Place fields or you can check which of the place fields will be exported, whether a comma will be exported when a field is missing, and, if Commas when missing is checked, then you specify whether to trim leading and trailing spaces which may have been inadvertently included in the data.<br/>
+<br/>
+[...]<br/>
+<br/>
+NOTE: TMG source structure is not preserved in GEDCOM export since the GEDCOM source record has a much simpler structure than that used by TMG; however, the data from all TMG fields containing source information are exported, except for the following fields. Dates and places associated with tags exported as GEDCOM NOTE tags are not exported. (This includes TMG Note tags, unless you modify them. Lookup: Tag Type Definition) Address tags with the GEDCOM ADDR tag selected and Phone tags with the GEDCOM PHON tag are not exported. Methods of circumventing the GEDCOM 5.5 specifications are beyond the scope of a Help file. They are, however, discussed in Getting the Most Out of The Master Genealogist, a book written by TMG users and offered for sale on the Wholly Genes website.<br/>
+<br/>
+[end quote]<br/>
+<br/>
+Hope this helps. --GJ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-28T10:28:49-08:00</div>
+<div class="text">Adding a bit more from TMG HELP. Below, from the topic, "Data Entry: Places"<br/>
+<br/>
+The place where an event occurred is recorded in separate fields in order to facilitate searching. For your convenience, five unlimited fields are referred to by the divisions commonly used: Detail, City/Town, County, State, and Country. These fields can be used for any geographical or political place name divisions. Limited fields for Latitude/Longitude and Temple are also provided. Addressee, Postal, and Phone fields are also provided for your use when desired. You can also modify the labels used on these place fields using Styles.<br/>
+Lookup: Field Labels<br/>
+<br/>
+Place Detail<br/>
+The Detail field may be divided into as many as nine parts separated by two vertical lines (||). Each part may be accessed separately in narrative reports. If you are leaving any blank fields between the separators, you can enter a space so that you can see more easily how many fields you have skipped. In other words, |||| will work, but you should always use || || since it is easier to see that you have a blank field.<br/>
+<br/>
+One of the advantages of a computerized database is that you can construct searches on various fields. Therefore, it's a good idea to give some thought to the consistency needed to produce meaningful searches when entering place names. Genealogists often have to contend with place names that have changed over the years. You may wish to note both names in the place field.<br/>
+Lookup: Place Names<br/>
+<br/>
+If you use abbreviations, make sure they are consistent. A standardized list of place abbreviations can be found in Postal Abbreviations.<br/>
+<br/>
+Entering Reserved Characters<br/>
+Lookup: Escape Character<br/>
+<br/>
+[end quote]<br/>
+Hope this helps. --GJ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-12-28T14:20:07-08:00</div>
+<div class="text">Russ and GeneJ,<br/>
+<br/>
+I have been using TMG, among others, for the last 3 or 4 major versions. What I see is a program that is trying to do a lot, but it is crippled by Gedcom. I see no problem in converting the TMG data into one or more hierarchies of place entities, and the conversion between such a hierarchy and a comma separated list is close to trivial. BUT a hierarchy is capable of avoiding ambiguities, and in my opinion it fits better with a future structure that will carry all sorts of info related to places/locations/areas.<br/>
+<br/>
+Russ, are you referring to a particular test on the blogg? A hierarchy - that will not contain eg. telephone numbers - should reduce the need for editing after import. But avoiding all editing, or configuration, will among other things require standardization of a reasonably sized set of jurisdiction types - but it is not impossible.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-28T14:51:09-08:00</div>
+<div class="text">gthorud,<br/>
+<br/>
+Please see this Blog entry:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:14:http://bettergedcom.blogspot.com/2010/12/tmg-to-family-tree-maker-ged2.html --><a class="wiki_link_ext" href="http://bettergedcom.blogspot.com/2010/12/tmg-to-family-tree-maker-ged2.html" rel="nofollow">http://bettergedcom.blogspot.com/2010/12/tmg-to-family-tree-maker-ged2.html</a><!-- ws:end:WikiTextUrlRule:14 --><br/>
+<br/>
+There is an image that shows you the issue. (lots of comma's). That is what I am talking about.<br/>
+<br/>
+Sharing that same GEDCOM file, between other programs does NOT include commas.<br/>
+<br/>
+Again, I am not against your suggestion, but of the issues this project involves, and the amount of work that our Software Vendor's would have to do, to be BetterGEDCOM friendly, we could suggest that as a future feature. If other programs used the hierachies you suggest, I might have a different answer.<br/>
+<br/>
+As to Phone Numbers, etc, from what I can tell, most applications have an entry for that, and I am guessing GEDCOM 5.5 has made room for that as well.<br/>
+<br/>
+Russ</div></div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-20T18:50:11-08:00</div>
+<div class="title">Various XMLs ways</div>
+<div class="text">Performance, flexibility, and quicker intergration for others to use and manipulate.<br/>
+<br/>
+Yes, my opinion is three things<br/>
+<br/>
+1.) the complexity of how many nodes are layered within another nodes.<br/>
+<br/>
+2.) The complexity of making tags inside of Nodes, not the in the data field area.<br/>
+<br/>
+3.) which has nothing to do with the structure of a xml file but the type of coding which parses and controls the xml file.<br/>
+<br/>
+Tom you might like this it is written on a fair level. I hope it might be similar to you for LIKE sql ideas.<br/>
+<!-- ws:start:WikiTextUrlRule:36:http://users.monash.edu.au/~dtaniar/Practical-Projects/Experimentation-Oracle-XML(2009).pdf --><a class="wiki_link_ext" href="http://users.monash.edu.au/~dtaniar/Practical-Projects/Experimentation-Oracle-XML(2009).pdf" rel="nofollow">http://users.monash.edu.au/~dtaniar/Practical-Projects/Experimentation-Oracle-XML(2009).pdf</a><!-- ws:end:WikiTextUrlRule:36 --><br/>
+<br/>
+<br/>
+<hr/>
+Another thing to consider<br/>
+<br/>
+this is what I call hard tagging<br/>
+&lt;Nodename Class="BIRT" type="CERT"&gt;<br/>
+only the parse of the original APP knows what to do with it. To hand this over to a second party they would have to rewrite it by hand.<br/>
+<br/>
+how ever if written more soft text type<br/>
+&lt;Nodename&gt;&lt;Class&gt;BIRT&lt;/Class&gt;&lt;type&gt;CERT&lt;/type&gt;<br/>
+<br/>
+If the recieving person or app/xml parse needs to change the class from BIRT to birth or Birth it is in the actaul text area to be manipulated.<br/>
+<br/>
+Same thing with &lt;person ID="7394"&gt;<br/>
+<br/>
+the other side would have to write a parse to know WHERE ID is and at what level to edit it.<br/>
+<br/>
+If &lt;person&gt;927394&lt;/person&gt; to me I find it more easy and more flexible to perform math functions to pull the number and rewrite the new number back to the text area.<br/>
+Even with find and replace, if one does not like BIRT and whats birth, they can manipulate the text area quicker. not that easy when it is hidden inside the nodes.<br/>
+<br/>
+just consider this, it is the data that is the important thing. For data to be flexible as it can, my opinion it needs to say in the text field area. Just because we can make it more complex does not always mean it is the better way.<br/>
+<br/>
+For example, you can have a generic parse perform node counts and redisplay what the node text is, WITHOUT having to know what the actual tag name is.<br/>
+ But hide a piece of information inside of the node HARD tagging them with actual vital data becomes more of a chore to share it quickly and easy.</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-20T20:53:08-08:00</div>
+<div class="text">Yes, interesting article.<br/>
+<br/>
+As in my recent discussions with Louis, I don't see any difference in using attributes or elements in terms of performance, ease of programming, or anything else. It seems a matter of preference to me.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-21T07:51:51-08:00</div>
+<div class="text">Yes and things we talked about weeks before. I agree also.<br/>
+I figured you might get something out of it becuase of the SQL discussed in it. I fine most articles are written about 2001-2002 on xml. Same with the GEDCOM standard and articles always refer to such things way back then in the beginning of the deca.<br/>
+<br/>
+<br/>
+We are going into 2011, and alot has change, and alot of nothing has changed. I still can not find a good article to discribe how I am performing multi seprate xml files.<br/>
+ So for me to pull up an article trying to use such terms from it would be miss leading, or assume that is how my style will perform. So for me I have no know exact tech terms to basis my model against. <br/>
+<br/>
+ I agree, as long as there is a common file on the table, any of us can manipulate it inside our own APP. <br/>
+<br/>
+ Just so you know my preferance is to keep all data in the datafields, it is easier to manipulate the data then the hard tags in the structure.<br/>
+  BUT again I stress, as a prefrance one can always spend a bit of time to provide a xslt to transform it as hard tag or soft tag nodes and data. That transformation xslt I dont want to edit over and over so I hope to have a sync list before even starting anything.</div></div></div></body>
+</html>

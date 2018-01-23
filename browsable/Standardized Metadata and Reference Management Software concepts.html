@@ -1,0 +1,469 @@
+<html>
+<head>
+<title>BetterGedcom - Standardized Metadata and Reference Management Software concepts</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h2 id="toc0"><a name="x-1. Standardized Metadata and CSL"></a>1. Standardized Metadata and CSL</h2>
+<br/>
+Creating reference notes and bibliographies in genealogical software usually begins by the user adding details about the sources to their database. When users fill in fields of data about a source—identifying each author, title, date, etc—they are recording source metadata. Using yet other techniques, this metadata is electronically manipulated to create reference notes and bibliographies.<br/>
+<br/>
+Professionals from different libraries and archives also create metadata, often about the same sources with which genealogists work, and there are formal “metadata standards.” Some familiar metadata standards are MARC21, MODS and Dublin Core. For example, if you review a title in the <a class="wiki_link_ext" href="http://catalog.loc.gov/" rel="nofollow">//Library of Congress Online Catalog//</a> (US), the associated “MARC TAGS” about the work are displayed in a tab.<br/>
+<br/>
+The three noted standards, <a class="wiki_link_ext" href="http://www.loc.gov/marc/bibliographic/" rel="nofollow">MARC21</a>, MODS and Dublin Core (there are others), are each different, especially in their targeted level of detail, and thus, in descriptors and definitions. In particular, MODS does not reach to the level of detail of MARC21, and Dublin Core is greatly simplified from MODS. [<a class="wiki_link" href="Standardized%20Metadata%20and%20Reference%20Management%20Software%20concepts.html#1">1</a><span style="font-family: Cambria; font-size: 12pt;">]</span><br/>
+<br/>
+Taken collectively, the standardized metadata is complex, however third parties have developed ways of extracting typically <em>high-level bibliographic data</em> from a range of the standardized metadata. “Reference Management Software”—products like Thompson’s <em>EndNote</em> and<em>Reference Manager—</em> feature the ability for users to create libraries of information about sources (including bits of extracted standardized metadata), from which bibliographies and reference notes can be created in a variety of recognized citation styles.<br/>
+<br/>
+Many paper-based genealogists use products like <em>EndNote</em> in their research and writing. Some of these products allow users to “drag and drop” citations from the library into their word processing program.<br/>
+<br/>
+<em>Zotero</em> is an open-source reference management software product that works similar to Endnote. The technology behind Zotero is called “Citation Style Language” or CSL, which is also open source. Like Endnote, Zotero uses CSL protocols to interface with sets of standardized metadata. Said another way, CSL/Zotero define fields (like our citation elements) that map to the more complex standardized metadata. Using CSL technology, Zotero supports different languages and generates bibliographic entries and high-level reference notes in more than 1500 different citation styles.<br/>
+<br/>
+The main point here is that at a more scholarly and even institutional level, approaches to standardization exist and their development continues. As well, third party efforts, including some that are open-sourced have discovered ways to work with this data.<br/>
+<br/>
+<h2 id="toc1"><a name="x-2. Reference Management Software, Stylistic Matters: Substance and Form"></a>2. Reference Management Software, Stylistic Matters: Substance and Form</h2>
+<br/>
+<em>Chicago Manual of Style Online</em>, at 14.1, "The purpose of Source Citations," explains, "Ethics, copyright laws, and courtesy to readers require authors to identify the sources of direct quotations or paraphrases and of any facts or opinions not generally known or easily checked." The source continues, "Conventions for documentation vary according to scholarly discipline, the preferences of publishers and authors, and the needs of a particular work. Regardless of the convention being followed, the primary criterion of any source citation is sufficient information either to lead readers directly to the sources consulted or, for materials that may not be readily available, to positively identify the sources used, whether these are published or unpublished, in printed or electronic form."<br/>
+<br/>
+From Mills, 2007, 42, "Evidence Explained is rooted in [Chicago Manual's Humanities] style. However, most <em>Evidence</em> models treat original or electronic sources not covered by [the CMOS, Bluebook, MLA, Turabian manuals], as well as some modifications that better meet the analytical needs of history researchers."<br/>
+<br/>
+See introductory paragraphs on this wiki page and the opening comments to the wiki page, "Modern Style Guides." See also, Tamura Jones, "<a class="wiki_link_ext" href="http://www.tamurajones.net/GenealogyCitationStandard.xhtml" rel="nofollow">Genealogy Citation Standard</a>," <em>Modern Software Experience</em>, 27 June 2011; James Tanner, "<a class="wiki_link_ext" href="http://genealogysstar.blogspot.com/2011/07/looking-towards-rational-philosophy-on.html" rel="nofollow">Looking towards a rational philosophy of citations</a>," <em>Genealogy's Star</em>, 17 July 2011.<br/>
+<br/>
+Where angels fear to tread.<br/>
+<br/>
+Standardization involves issues of substance (information about the source) and form (given a particular style, how should information be formed into a citation). Matters of form include if or how to present the various elements including the punctuation thereof, which tends to vary by country, often by institution or publisher. All the form in the world won't make up for a lack of substance.<br/>
+<br/>
+<h3 id="toc2"><a name="x-2. Reference Management Software, Stylistic Matters: Substance and Form-Substance"></a>Substance</h3>
+ Some issues of substance cross discipline lines, but some are unique to particular disciplines. In the simpest sense, I see substance as fields or citation elements that provide information about the source. Some elemental needs (pun intended) are more common in genealogy than in other disciplines. For example, genealogists deal with many documents that don't carry any title (say, a letter), and we work with many documents that carry the same title ("Certificate of Death").<br/>
+<br/>
+Just as BetterGEDCOM wants to standardize these matters of substance so that genealogists can exchange information, the broader class of reference management software is working toward the same objective on a worldwide basis and across disciplines. As far as I have been able to learn, reference management software approaches substance in the same way Geir's document suggests we would proceed--first setting out "source types" (Zotero calls them item types) and then, for each source type, reference management software has defined fields (like our citation elements), including references that are similar to Geir's modules. As a result of these approaches, there are a relative few source types in reference management software, and there will be a relative few source types in BetterGEDCOM.<br/>
+<br/>
+That genealogists need more source types or more fields, including assertion level fields is not the point--that they have item types and fields we could build upon is the point. As these same third party efforts (some open source) develop item types and fields that support access to standardized metadata, so aligning our work with the larger reference management software movement might bring BetterGEDCOM's effort closer to online citations.<br/>
+<br/>
+<h3 id="toc3"><a name="x-2. Reference Management Software, Stylistic Matters: Substance and Form-Form"></a>Form</h3>
+ In reference management software, given the coordinated list of item types and fields, style libraries can be created and managed by a separate effort, based on something akin to Geir's concept of "style rule sets." Once core style have been developed, additional styles are added based on how that new style compares to a core style or to some other style.<br/>
+<br/>
+<br/>
+<h2 id="toc4"><a name="x-3. Master Sources and Assertions"></a>3. Master Sources and Assertions</h2>
+ The source system in genealogical software, which BetterGEDCOM aimed to support, functions somewhat like reference management software--libraries of source data are developed to support the creation of bibliographic and reference note citations, but genealogical software source systems need to store full reference notes using integrated citation mechanics that involve elements at both “master source” and “assertion” level. These mechanics are frequently manipulated by users taking different approaches to managing the master source list. (Conversely, the library in reference management software stores high-level elements, frequently at a level higher than a master source developed by genealogists.) Said another way, to function, genealogical software needs to efficiently store and manage more elements/fields and likely at more or different levels than reference management software.<br/>
+<br/>
+<span style="font-size: 17px; line-height: 25px;"><strong>4. Genealogical Software and Source Types.</strong></span><br/>
+Currently, across genealogy software programs, source types tend to be directly associated with particular citation templates, which may or may not be proprietary. The template determines which citation elements are available for that given source type. Reference management software works quite differently. In CSL/Zotero, the item type (source type) determines the available information fields, which ideally represent a universe of the fields various styles or catalogs require. The styles are built separately, populated by the item type’s information fields.<br/>
+<br/>
+Because of this difference, hundreds upon hundreds of source types exist in genealogical software, each unique to a style. These source types are often localized (US- or UK-centric) and use an array of citation elements that are also unique to each software vendor.<br/>
+<br/>
+In contrast to the hundreds of source types existing in genealogical software that supports few styles, CSL/Zotero recognizes fewer than 50 source types, supports 1500 citation styles and serves a world-wide market.<br/>
+<br/>
+<h3 id="toc5"><a name="x-3. Master Sources and Assertions-5. Flexible Schema"></a>5. Flexible Schema</h3>
+ Much like reference management software, BetterGEDCOM could defined reasonably high-level source types in accordance with Geir’s approach (I call his approach a schema).<br/>
+<br/>
+Universal/County Specific &gt; Source Type Class &gt; Source Type.<br/>
+<br/>
+We tentatively identified a group of 23 universal source type classes (books, journals, research reports, web pages, newspaper items, etc.). Census and vital records are among the source type classes that would be country specific.<br/>
+<br/>
+Where CSL has established item types, BetterGEDCOM could/should adopt those named source types and descriptions. BetterGEDCOM would add source types to the BetterGEDCOM model as necessary.<br/>
+<br/>
+For each Source Type (and thus Source Type Class), BetterGEDCOM could define a set of available elements (citation elements/data types) to ideally support the production of citations for that source type regardless of nuances in form, language or style. Where CSL has established fields, BetterGEDCOM could/should adopt those fields as citation elements, and add unique citation elements to the BetterGEDCOM model as necessary.<br/>
+<br/>
+Extendable.<br/>
+Vendors (and users, if the vendor permits) could/should be able to extend the BetterGEDCOM source types using a system of levels, with the lowest level representing the database assertion. All citation elements would be available at any level,* and lower level sources would inherit the properties of the higher-level source.<br/>
+<br/>
+US &gt; Vital Records &gt; Assertion<br/>
+US &gt; Vital Records &gt; Sammy Sue &gt; Assertion<br/>
+US &gt; Vital Records &gt; New Hampshire Deaths &gt; Assertion<br/>
+US &gt; Vital Records &gt; Massachusetts Vital Records &gt; Assertion<br/>
+US &gt; Vital Records &gt; New Hampshire Deaths &gt; Sammy Sue, certificate 20632 &gt; Assertion<br/>
+US &gt; Vital Records &gt; New Hampshire Deaths &gt; Thomas Jones, died 1698 &gt; Assertion<br/>
+US &gt; Vital Records &gt; State Certificates &gt; Missouri Death Certificates &gt; Mike Jones (1942)<br/>
+US &gt; Vital Records &gt; State Certificates &gt; Missouri Death Certificates &gt; Assertion<br/>
+<br/>
+*This includes page, etc., so that no particular citation element should be limited to the "assertion" level. See the lumper vs splitter graphics on the wiki page <a class="wiki_link" href="Citation%20Mechanics.html">Citation Mechanics</a>.<br/>
+<br/>
+<span style="font-family: Cambria; font-size: 12pt;"><a name="1"></a>[1]</span> Among others, “<a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Metadata_Object_Description_Schema" rel="nofollow">Metadata Object Description Schema</a>,” <em>Wikipedia,</em> “[MODS] is an <a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Extensible_Markup_Language" rel="nofollow">XML</a>-based bibliographic description schema developed by the<span style="text-decoration: none;"><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/United_States" rel="nofollow">United States</a> <a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Library_of_Congress" rel="nofollow">Library of Congress</a></span>' Network Development and Standards Office. MODS was designed as a compromise between the complexity of the<span style="text-decoration: none;"><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/MARC_standards" rel="nofollow">MARC</a></span> format used by libraries and the extreme simplicity of <span style="text-decoration: none;"><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Dublin_Core" rel="nofollow">Dublin Core</a></span> metadata.”
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-13T08:41:54-07:00</div>
+<div class="title">Standardized Metadata and CSL</div>
+<div class="text">GeneJ:<br/>
+<br/>
+Your article is very timely. This is exactly what I'd like BetterGEDCOM to accomplish as in <a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Vision/41369239" rel="nofollow">my Proposed Vision Statement discussion</a>.<br/>
+<br/>
+You reference <a class="wiki_link_ext" href="http://www.tamurajones.net/GenealogyCitationStandard.xhtml" rel="nofollow">Tamura's Genealogy Citation Standard Article</a> and in that he says:<br/>
+<br/>
+"In 2009, <a class="wiki_link_ext" href="http://www.thinkgenealogy.com/better-online-citations/" rel="nofollow">Mark Tucker posted a YouTube video</a> that demoed how citing online sources should work; different sites should use all use the same standard citation format, one which would enable desktop applications to automatically receive all the pertinent data from the online record collection."<br/>
+<br/>
+That is exactly what I'm looking for in my proposed Vision for BetterGEDCOM. <br/>
+<br/>
+Mark himself in the 3rd comment on his post answers what the question as to what the system would use, and he says: "This would either use XML as the file format or an updated version of GEDCOM."<br/>
+<br/>
+I hope GeneJ (and everyone else), that you're willing to use BetterGEDCOM to start taking this to reality and making it happen.<br/>
+<br/>
+Louis</div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-13T15:14:26-07:00</div>
+<div class="text"><br/>
+GeneJ:<br/>
+<br/>
+The only GEDCOM tag that should be used for location information that will translate into a citation is:<br/>
+<br/>
++1 PAGE &lt;WHERE_WITHIN_SOURCE&gt;<br/>
+<br/>
+where<br/>
+<br/>
+WHERE_WITHIN_SOURCE = Specific location within the information referenced.<br/>
+<br/>
+The data in this field should be in the form of a label and value pair, such as:  Film: 1234567, Frame: 344, Line: 28<br/>
+<br/>
+This is perfectly generalized and puts no limitation on the label/value pairs that are allowed (except it doesn't tell you what to do if you want the value to contain a comma).<br/>
+<br/>
+This is the part that you can expand on and formalize to get citations to work perfectly and identify the data source as precisely as you want it. <br/>
+<br/>
+This is also the part that very few (if any) developers have implemented. They are the ones who missed the construct they were supposed to use and they are the ones who mess it up by forcing their information into other GEDCOM Tags. Citations would transfer much better if this construct was used. There would be no mistaking what the fields and their values are.<br/>
+<br/>
+In BetterGEDCOM, we should bring this construct front and center and give concrete examples on how to use it properly.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-13T15:27:28-07:00</div>
+<div class="text"><br/>
+As far as the Source Record itself, GEDCOM has tags that include: AUTH, TITL, ABBR, PUBL, TEXT, DATA/EVEN/DATE/PLAC/AGNC/&lt;NOTE_STRUCTURE&gt;, &lt;SOURCE_REPOSITORY_CITATION&gt;, REFN/TYPE, RIN, &lt;CHANGE_DATE&gt;, &lt;NOTE_STRUCTURE&gt;, &lt;MULTIMEDIA_LINK&gt;.<br/>
+<br/>
+These generally transfer well. If there are cases where they don't, we can devise a way in BetterGEDCOM to fix them and add another Tag if necesary.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-13T15:54:41-07:00</div>
+<div class="text">Louis ... <br/>
+<br/>
+Do you mean move macro (master level) data to the assertion level fields?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-13T16:14:13-07:00</div>
+<div class="text">@Louis,<br/>
+<br/>
+As I said, if you have a nice little book that you reviewed as a text edition, or a nice little manuscript that you viewed at a repository, GEDCOM will do just fine. <br/>
+<br/>
+But, I review books on line and in e-edition now. <br/>
+<br/>
+I do not want to hunt and peck to find a URL (especially if I want to delete it) ... I don't want to wonder where to put the original publication date. <br/>
+<br/>
+I want to manage my master sources, not be told by GEDCOM how I should manage my work. <br/>
+<br/>
+GEDCOM's source structure is broken, Louis, it really is. Trying to add complicating features to a broken system just seems like a bad vision.<br/>
+<br/>
+Me thinks we can fix the structural issues faster than we can figure out all the possible patches it needs. --GJ</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-13T22:49:48-07:00</div>
+<div class="text"><br/>
+Gene:<br/>
+<br/>
+Adding a URL field (if that's what we decide to do) is a trivial change to make to BetterGEDCOM. That's not broken. That's just<br/>
+a normal evolution of the standard.<br/>
+<br/>
+Nothing in GEDCOM tells you how to manage your work. In fact, when you do your work, you do it with your genealogy program. The program should worry about how to present your source data to you and it should know (but usually doesn't) how to correctly translate its own database to and from GEDCOM. <br/>
+<br/>
+We won't make any progress unless we start fixing something.<br/>
+<br/>
+If you think we can fix the structural issues, then lets address that first. Right here and now. <br/>
+<br/>
+I have one big structural issue that my Vision is addressing - and that is separating the source information / evidence from the conclusions.<br/>
+<br/>
+What structural issues are the ones you are concerned with?</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-08-14T14:53:04-07:00</div>
+<div class="text">A few comments on the above<br/>
+<br/>
+Downloading evidence records would also require the ability to download source meta data.<br/>
+<br/>
+I don’t see a conflict (or opposite focus) between downloading evidence and citations.<br/>
+<br/>
+The leading genealogy programs have implemented Evidence Explained. Exchanging citation data between these programs will in my view require a solution that is much more advanced (in terms of e.g. Citation Elements) than current Gedcom – the old Gedcom would end up being 5% of a new solution. Therefore I don’t see any point in patching Gedcom to handle EE and more advanced solutions, it will just make things more complicated to develop. I have discussed backwards compatibility with current Gedcom in my Architecture document, see Standard Citation elements. A short term solution based on Gedcom, for download of source meta info is in my view a dead end – it will not carry the necessary info in a precise way – I think this is demonstrated in how current more advanced programs use the Gedcom fields today – it’s a mess as documented earlier on this wiki.<br/>
+<br/>
+As I have indicated in a parallel discussion, I see a potential problem in allowing just about everybody to define source types that can be exported all over the place. I fear anarchy because of far to many and similar source types – but at the same time we want user defined source types. This need to be looked into. <br/>
+<br/>
+The splitter/lumper issue – isn’t the additional CEs in the splitter “where in source info”? Why do we need the “Lumper?” <br/>
+<br/>
+I am not sure I understand the PROBLEM being discussed about micro data (as defined by Gene, perhaps record/entry data is a better term) but if I understand it correctly there is a potential overlap between citation elements and evidence data. If so, I am not sure I see a problem with the overlap.<br/>
+<br/>
+Louis states that Gedcom already has a solution for “standardized source info”. I have my doubts, but awaits what Louis has in mind.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-14T19:11:31-07:00</div>
+<div class="text"><br/>
+Geir,<br/>
+<br/>
+Yes, the leading genealogy programs have implemented Evidence Explained. They also export them into GEDCOM but all in somewhat different ways. They can read their own data back, but they don't transfer well. You've already started analyzing that and that's excellent.<br/>
+<br/>
+Surely each program's GEDCOM export suggests different ways of exporting, and a "best" method could be decided on to be the standard and generalized so that it could work with all of EE or Lackey or other citation methodologies. <br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-14T19:48:47-07:00</div>
+<div class="text">@ Geir<br/>
+<br/>
+"Opposite focus"-if you conceptualize the information as "levels of detail"--from information about how to find and identify the source through to information in a source-there is a sort of continuum. Higher level (macro) information at one end, and fine details in the source (micro) at the other end. <br/>
+<br/>
+We want "Geir smart" dis-ambiguous fields to hold all that data.  By "opposite focus," I was offering my perspective that our discussions about evidence records focus on the micro end of that continuum.  ...and that the higher, macro level data is just as important in substance.  <br/>
+<br/>
+Lumper/splitter ... "isn’t the additional CEs in the splitter “where in source info”? Why do we need the “Lumper?” I don't think I understood the question, but an example follows using census. <br/>
+<br/>
+Current GEDCOM recognizes two levels only--that master source (the source record) and the assertion level (where in source, etc)<br/>
+<br/>
+Some users create a master source for census at a high level (say the county or state level or even the census year level), while other users create a master source (source record) for census at the household level. <br/>
+<br/>
+Those who set up their master source at a higher level are called "lumpers" (they consolidate or lump the source definition and add many details at GEDCOM's only other level-the assertion level ... so they add a lot more than "where in page" at the assertion level). Those who set up their master source at a lower level, say the household level, are called splitters (they split what might be called a single source into many master sources). These splitters enter most of the details (including all the page numbers) at the master source level.<br/>
+<br/>
+BetterGEDCOM could try to standardize these mechanics, but I'm suggesting that wouldn't work well--lumpers will find a way to lump and splitters will find a way to split, even if that means mis-using our wonderful elements to meet their needs. Ala, I suggest BetterGEDCOM employ the higher-lower level approach to sources, with the last level always representing an assertion. If we make all the fields available to all the levels, with the lower level inheriting the properties of the higher level, we can make lumpers and splitters happy with the same element group. <br/>
+<br/>
+Make sense? --GJ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-08-15T15:34:25-07:00</div>
+<div class="text">Gene,<br/>
+<br/>
+Finally I understand your "opposites".<br/>
+<br/>
+Lumper/splitter: What I was thinking is that if the Splitter contains all the CEs of the lumper, but has added fields for more detail, why not have only the splitter - just not use all the CEs. <br/>
+<br/>
+I now realize that the "border" between source and "where in source" CEs has been moved in the two cases. I may not see all the implications, but if all CEs that you transfer are uniquely identified, the "function" that produces a reference note may not see this boarder (it just sees a set of CEs), but it will show up in Bibliographies - or?<br/>
+<br/>
+Am I starting to understand?</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-08-15T15:59:04-07:00</div>
+<div class="text">Louis,<br/>
+<br/>
+Well, there is a problem exchanging the data today if you don't intend to pay for conversion (in a little while). I realize the issue is huge, but we will see ...</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-15T16:56:27-07:00</div>
+<div class="text">:)<br/>
+<br/>
+Lumper/Splitter: <br/>
+<br/>
+Yes, I think you have it. <br/>
+<br/>
+When we create the broader group of CE's, lumpers will want the more detailed level CD's to be at the assertion level, while splitters will want them to be at the master source level. <br/>
+<br/>
+See the first part of Adrian's post (link below), where we agreed that users want the ability to decide what sits at the source_record level (ie, my term, "Master Source.") <br/>
+<br/>
+Comparatively, when RootsMagic implemented EE, it used a whole host of CE's at the "master source" level and a whole group of CE's at the "assertion" level. See the link below. The part in yellow color is RM's Master Source level and the part in green is RMs assertion level. <br/>
+<!-- ws:start:WikiTextUrlRule:19:http://bettergedcom.wikispaces.com/Master+Source#RM4 --><a href="http://bettergedcom.wikispaces.com/Master+Source#RM4">http://bettergedcom.wikispaces.com/Master+Source#RM4</a><!-- ws:end:WikiTextUrlRule:19 --><br/>
+<br/>
+If we were to take screen shots (I wish I had) for this same "source type" (US Census Online Image), we'd find that even if the CE field names are standardized, FTM has a little different set up than RM. (And TMG will be different than both. Let's assume Legacy, Family Historian, etc are a litte different too, and so on and so forth. <br/>
+<br/>
+If we allow the CE's to shift between levels, there is no reason to believe that each vendors approach wouldn't fit well into BetterGEDCOM.<br/>
+<br/>
+Now then, if we allow there to be another level (so you could have high level/low level entries in the master source list), I think I'm in heaven. I woud likely then have my high level census entry set up like the bibliographic entry=county level. My low level master source  (I'm a census splitter), would be the household level data (so, page no., civil district, dwelling/household no., person of interest). I could manage both those levels from the Master Source List. <br/>
+<br/>
+These higher-lower level source mechanics would be great for large series, too.  --GJ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-15T17:10:06-07:00</div>
+<div class="text">P.S. In the case of the census example (US Census Online Image), I should have added that each may have slightly different mechanics but be interpreting the same citation requirements.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-13T09:20:48-07:00</div>
+<div class="text">Louis,<br/>
+<br/>
+(1) I don't believe all programs should be required to use the same citation style. (In truth, as an export format, we can't even require that software generate citations.)<br/>
+<br/>
+(2) "Standardized Metadata," and effort I would support, has the opposite focus of your E &amp; C approach, Louis. Standardized Metadata works to get information about the source developed. While I'm not an expert in the current issues, in looking over the different standards, it seems pretty clear that those who have try to simplify the metadata fields ultimately fail to create a standard. (The fields become ambiguous.) <br/>
+<br/>
+So, for example, if you tried to add your micro level data (that's really what it is) to GEDCOM styled maco-identifiers, I believe that standard would fail.  PS As you know, I don't know why repositories would be interested in coding to our alternative standard anyway. <br/>
+<br/>
+This difference in focus--macro or micro-is not a small issue. Focusing on the micro and not macro is what led to one of our providers posting millions of images that can't be traced back to the FHL film from which the images and/or indexing was developed. <br/>
+<br/>
+(3) I hope that BG will implement the item type/source type, expanded field/citation element and modules in the near term. And I'd be willing to do all I can to identify the fields and help with the modules.  <br/>
+<br/>
+I realize your vision is in conflict with that hope.<br/>
+<br/>
+(4) In the longer term, I'd like to see an open source BetterGEDCOM citation library develop--something that woud support all styles.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-13T09:45:33-07:00</div>
+<div class="text">Ooops ... I meant, I hope BG will implement in the near term Geir's approach to the item type/source type, field/citation element and modules ...</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-13T10:06:40-07:00</div>
+<div class="text"><br/>
+GeneJ:<br/>
+<br/>
+(1) I agree with you. Citation styles should be flexible. I am actually shocked when I go back and read the the line I quoted did say "citation style". Somehow I interpreted it as a standard for online "source information / evidence" - but NOT for the citation. Thanks for pointing this out.<br/>
+<br/>
+(2) It is standardized source information that we are trying to build up. I don't see that as being very difficult, and GEDCOM almost has it now. It's just a matter of separating the information from the conclusions.<br/>
+<br/>
+I have no idea what you're talking about with regards to micro/macro. I don't see what's so hard about this. <br/>
+<br/>
+(3) Continue with your citation work. It will be needed in the future. But a first step is needed to make progress now.<br/>
+<br/>
+I don't see how my vision is in conflict. I see my vision as the first step.<br/>
+<br/>
+(4) So would I. But I'd like to see the shorter term happen before the longer term. :-)<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-13T12:19:14-07:00</div>
+<div class="text">Hi Louis,<br/>
+<br/>
+(2) ... "Standardized source information .... and GEDCOM almost has it now. It's just a matter of separating the information from the conclusions."<br/>
+<br/>
+See, I don't follow that logic. We are just on different planets. <br/>
+<br/>
+I'm guessing we have both read Terry Reigel's article about TMG and GEDCOM. Can't we agree that source macro data becomes ambiguous when processed via GEDCOM?<br/>
+<br/>
+Simple item types--letters, interviews, photographs, journal articles, digitized census, websites, etc.--do not "GEDCOM" transparently. GEDCOM's fields work for simple published books or unpublished manuscripts you find in a repository. Beyond the most simple forms, one has to get creative with the available fields so that for one source or item type, you find a URL listed as the call number, the website name "might" be in the repository field ... when "date" transfers, it might be the access date, maybe it's the event date or maybe it's the date published. In some other source, you'll find the URL in the field for publisher location, and the access date in the note field ...</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-13T13:57:13-07:00</div>
+<div class="text">p.s. <br/>
+<br/>
+By macro data, I mean the fields or elements critical to the identification of a source. These are often higher level fields by which sources are cataloged and identified by repositories, libraries, archives. <br/>
+<br/>
+By microdata, I'm referring to the bits you sometimes call "evidence"--these bits are at a lower, deeper, micro level.<br/>
+<br/>
+Say the macro data for a death certificate would be all the information we use to identify the certificate. <br/>
+<br/>
+The micro data would be fields of information in that death certificate (informant's name, cause of death, street address, disposition of remains). <br/>
+<br/>
+As I understand it, you want to use GEDCOM fields as a substitue for the standardized metadata discussed in the page posting, and then you hope others will harvest information at an even deeper level to attach to that GEDCOM record. <br/>
+<br/>
+I'm questioning that logic. If I can't pass my own master source list from me to me without significant confusion of the data, why would we recommend a repository use it as a base for cataloging information.</div></div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-08-13T17:57:46-07:00</div>
+<div class="title">Extending source types</div>
+<div class="text">Et the end of the page gene writes about extending source types. In the "Architecture ..." document I have written about what could perhaps be called extending source types by adding Citation Element Modules, but I am not sure if that is what you mean?  If not, it could perhaps help me understand if you provided an example with CEs.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-13T18:01:52-07:00</div>
+<div class="text">Hi Geir<br/>
+<br/>
+It's the concept of lower level source. <br/>
+<br/>
+Say we define a source type class, "Vital Records" and assign a group of available fields.<br/>
+<br/>
+This source type class could be extended by adding lower level sources.<br/>
+<br/>
+<br/>
+US &gt; Vital Records &gt; Assertion<br/>
+US &gt; Vital Records &gt; Sammy Sue &gt; Assertion<br/>
+US &gt; Vital Records &gt; New Hampshire Deaths &gt; Assertion<br/>
+US &gt; Vital Records &gt; Massachusetts Vital Records &gt; Assertion<br/>
+US &gt; Vital Records &gt; New Hampshire Deaths &gt; Sammy Sue, certificate 20632 &gt; Assertion<br/>
+US &gt; Vital Records &gt; New Hampshire Deaths &gt; Thomas Jones, died 1698 &gt; Assertion<br/>
+US &gt; Vital Records &gt; State Certificates &gt; Missouri Death Certificates &gt; Mike Jones (1942)<br/>
+US &gt; Vital Records &gt; State Certificates &gt; Missouri Death Certificates &gt; Assertion</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-13T18:16:11-07:00</div>
+<div class="text">Sorry, I didn't include the CEs, but I don't see why the CE's would change. The CE's are available. I don't see why they couldn't be assigned at any level, as long as the lower level source inherited the properties assigned at the higher level.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-13T18:32:03-07:00</div>
+<div class="text">Practical example.<br/>
+<br/>
+Say I'm going to do a lot of research in the New Hampshire Death Records at FS. I can set up that source (or source extension), add research notes that attach to that New Hampshire Death's level., etc. It's possible I might even record some negative searches in the research log and attach that at the NH Deaths level. The as I find records, I just add a lower source for that record. <br/>
+<br/>
+I can see vendors allowing us to roll those up, too. (But, ooo. I get ahead of myself).</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-14T02:54:42-07:00</div>
+<div class="text">Better Examples:<br/>
+<br/>
+Say we set up a source type class "database," and we associate elements with that source type class.  The makers of FTM might extend that source class with source types for the commonly used indexed databases on its Ancestry.com website. <br/>
+<br/>
+So, a FTM user might find source types:<br/>
+<br/>
+Universal &gt; Database &gt; Database name 1<br/>
+Universal &gt; Database &gt; Database name 2<br/>
+Universal &gt; Database &gt; Database name 3<br/>
+<br/>
+Can you think of a reason why BetterGEDCOM would care how those extensions are made or organized, as long as the export include that class/type path that connects to our source type.<br/>
+<br/>
+Does that make sense? --GJ</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-14T11:04:47-07:00</div>
+<div class="text"><br/>
+GeneJ:<br/>
+<br/>
+Sorry, no. I have no idea what you're talking about.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-14T11:52:29-07:00</div>
+<div class="text">Hi Louis:<br/>
+<br/>
+I try again.<br/>
+<br/>
+Example 1<br/>
+BetterGEDCOM will have a universal source type class Universal &gt; Books<br/>
+<br/>
+Lets say that at the class level, our singe source class entry can entirely replace the permutations and combinations one finds in Vendor A's 10 different source types "book-XXX" <br/>
+<br/>
+If that vendor wants to retain their 10 different source types, they can--by making each an extension of the single BetterGEDCOM source type/source type class, "Books."  <br/>
+<br/>
+Example 2<br/>
+BetterGEDCOM will have a source type class US &gt; Census. Say we build three source types under that class, one of which will be 1880-1930 US Census. <br/>
+<br/>
+Say also that RootsMagic, FTM, Legacy, etc., have a great number of differently named templates, all about the 1880-1930 census. There are quite a few mechanical difference between the way the programs different templates operate. (See the comment Adrian made, along the lines of, "They all seem to get their, just by different routes.)<br/>
+As long as the vendor is extending from our source type with our source type elements (ie, they are adding lower levels), I don't see why we care which route they take to get there. <br/>
+<br/>
+Ideally, Louis, using this flexible/extendable option, each and every one of the zillions of source types out there in vendor software could be fitted precisely into the BetterGEDCOM model, albeit, using the BetterGEDCOM elements.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-14T11:56:30-07:00</div>
+<div class="text">Err... I mean elements.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-14T12:05:26-07:00</div>
+<div class="text">Another example ..<br/>
+<br/>
+Let's say we create a source type class, US &gt; Vital Records, and we assign a host of elements to that source types.<br/>
+<br/>
+Happy day. Let's say Ancestry creates metadata that users of various software can download. For that access, Ancestry (not BetterGEDCOM) is going to decide the "level of detail" (collection, census year and county, etc.)  for that collection.  <br/>
+<br/>
+If we have a level based system, vendors (and users if the vendors allowed it) might want to extend our source class to a "level" that is perfect for that data.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-14T18:07:54-07:00</div>
+<div class="text"><br/>
+GeneJ:<br/>
+<br/>
+I think what you're saying is just to put levels on the SOURCE_DESCRIPTIVE_TITLE in GEDCOM. That's where this information is saved now by most programs, and there's no reason why we can't use something like "&gt;" to indicate a level and try to standardize them.<br/>
+<br/>
+In Behold, I sort sources by this field, and find that most GEDCOMs have a decent definition of the source. Because it is text, reading programs have no problem reading it.<br/>
+<br/>
+Example, from my McCarthy.ged sample file (produced by Legacy Version 5.0), these are the SOUR.TITL fields sorted by title:<br/>
+<br/>
+1 TITL "Patrolman Held For Manslaughter"<br/>
+1 TITL "Weeks Doings"<br/>
+1 TITL 1870 United States Federal Census, Massachusetts, James J. Lannan Household<br/>
+1 TITL 1880 United States Federal Census, Massachusetts, Conrad Bailey Household<br/>
+1 TITL 1880 United States Federal Census, Massachusetts, James J. Lannan Household<br/>
+1 TITL 1900 United States Federal Census, Massachusetts, James J. Lannan Household<br/>
+1 TITL 1900 United States Federal Census, Massachusetts, Theodore H. McCarthy Household<br/>
+1 TITL 1910 United States Federal Census, Massachusetts, James J. Lannan Household<br/>
+1 TITL 1910 United States Federal Census, Massachusetts, Nathaniel J. Lannan Household<br/>
+1 TITL 1910 United States Federal Census, Massachusetts, Nathaniel J. Lannan Household<br/>
+1 TITL 1920 United States Federal Census, Margaret (Donovan) McCarthy Household<br/>
+1 TITL 1920 United States Federal Census, Massachusetts, Conrad Bailey Household<br/>
+1 TITL 1920 United States Federal Census, Massachusetts, Nathaniel J. Lannan Household<br/>
+1 TITL 1930 United States Federal Census, Massachusetts, Conrad Bailey Household<br/>
+1 TITL 1930 United States Federal Census, Massachusetts, John J. McCarthy Household<br/>
+1 TITL 1930 United States Federal Census, Massachusetts, Manuel Silva Household<br/>
+1 TITL 1930 United States Federal Census, Massachusetts, Nathaniel J. Lannan Household<br/>
+1 TITL 1930 United States Federal Census, Massachusetts, William Lawrence McCarthy Household<br/>
+1 TITL Birth Certificate Dianne Marie Jack<br/>
+1 TITL Birth Certificate Eleanor Gertrude Lannan<br/>
+1 TITL Birth Certificate Ernest Conrad Bailey<br/>
+1 TITL Birth Certificate Esther Catherine Bailey<br/>
+1 TITL Birth Certificate George Henry Lannan<br/>
+1 TITL Birth Certificate James Joseph Lannan<br/>
+1 TITL Birth Certificate Jane Veronica Lannan<br/>
+1 TITL Birth Certificate Margaret Aloyse Lannan<br/>
+1 TITL Birth Certificate Mary Lannan<br/>
+1 TITL Birth Certificate Matthew James McCarthy<br/>
+1 TITL Birth Certificate Merri Elizabeth McCarthy<br/>
+1 TITL Birth Certificate Michael Gerard Barry<br/>
+1 TITL Birth Certificate Mildred Nellie Bailey<br/>
+1 TITL Birth Certificate Stephen James McCarthy<br/>
+1 TITL Birth Certificate Walter Francis McCarthy<br/>
+1 TITL Birth Certificate Walter Leo Bailey<br/>
+1 TITL Birth Certificate Warren James Bailey<br/>
+1 TITL Birth Certificate for Adelaide Helena Silva<br/>
+1 TITL Body and Blood of Jesus Christ<br/>
+1 TITL Catholic Burial and Interment Deed<br/>
+1 TITL Catholic Burial and Interment Deeds<br/>
+1 TITL Death Certificate Catherine Norton<br/>
+1 TITL Death Certificate Conrad Bailey<br/>
+1 TITL Death Certificate Eleanor Gertrude Lannan<br/>
+1 TITL Death Certificate Joseph Francis Silva<br/>
+1 TITL Death Certificate Margaret A. Lynch<br/>
+1 TITL Death Certificate Mildred Nellie Bailey<br/>
+1 TITL Death Certificate Nathaniel J. Lannan<br/>
+1 TITL Death Certificate for William Lawrence McCarthy<br/>
+1 TITL Death Certificate for William Lawrence McCarthy<br/>
+1 TITL Family Airloom Roman Catholic Bible<br/>
+1 TITL Headstone: William Lawrence McCarthy<br/>
+1 TITL International Genealogical Index - North America<br/>
+1 TITL Marriage Certificate: Adelaide Helena Lannan and Walter Francis McCarthy<br/>
+1 TITL Marriage Certificate: Elaine R. McElroy marriage to William Lawrence McCarthy, Jr.<br/>
+1 TITL Marriage Certificate: Mildred Nellie Bailey and William Lawrence McCarthy<br/>
+1 TITL Massachusetts National Cemetery<br/>
+1 TITL Military Headstone: James V. McDonnell<br/>
+1 TITL New Calvary Cemetery, Burial and Interntent Deeds<br/>
+1 TITL Personal Interview with Adelaide Helena Lannan<br/>
+1 TITL Personal Interview with Beverly Marie McCarthy<br/>
+1 TITL Personal Interview with Kevin Francis McCarthy<br/>
+1 TITL Personal Interview with Kimberly Ann McCarthy<br/>
+1 TITL Personal Interview with Maurice Michael Barry<br/>
+1 TITL Personal Knowledge<br/>
+1 TITL Social Security Administration Master Death Index<br/>
+1 TITL The Seven Holy Gifts of the Holy Spirit<br/>
+1 TITL United States Air Force: Jeffrey Scott Carlson<br/>
+1 TITL United States Army: Kevin Francis McCarthy<br/>
+1 TITL United States Army: Walter Francis McCarthy<br/>
+1 TITL Wedding Announcements<br/>
+1 TITL Wedding Invitation Colleen Joy Erickson and Kevin Francis McCarthy<br/>
+1 TITL World War I Selective Service System Draft Registration Cards, 1917-18</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-08-15T05:21:27-07:00</div>
+<div class="text">To me it seems that there are several different things being described.<br/>
+<br/>
+In the 3’rd posting Gene writes: “It's possible I might even record some negative searches in the research log and attach that at the NH Deaths level.” The level you would attach it to is not in a Source Type Tree, but in (something that is a possible extension) a tree of sources (source type instances), possibly structured according to type – but in principle independent of the type tree. If you mean that you want to tailor source types and/or templates more or less to every source, that is a different thing, which would leave users with thousands of source types – from various exporters – I have a problem with that.<br/>
+<br/>
+The two examples in the posting of 8:52 seems to me as two different things. In 1) you define a source type that is the union (sum) of the CEs in the 10 different types. In 2) you go the other way creating a base type (common subset of CEs) that can be specialized by adding CEs. <br/>
+<br/>
+Adrian’s statement, as I read it, was on a different issue – that of traversing source type selection trees. The tree of source types may have the same structure as the source type tree, or it may be different.<br/>
+<br/>
+What we need to understand is the consequences of having thousands of source and template types, many for the same “original” source type, almost identical. <br/>
+<br/>
+As a starter: <br/>
+- How will you be able to output those in a single document with a homogenous output format? <br/>
+- How are you going to merge source instances? <br/>
+- Shall the importer be able to create a source/citation using a source type defined by e.g Ancestry? <br/>
+- Shall he be able to edit a source/citation instance defined by Ancestry – if he is not satisfied by the job Ancestry has done? <br/>
+- If the user can select from all these types, how is he going to do that – considering that they are almost identical? Will this be like having 10 or 20 Evidence Explained to chose a source type from.<br/>
+<br/>
+<br/>
+What else does source types affect? What else are they used for?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-15T07:56:41-07:00</div>
+<div class="text">@ Geir, <br/>
+<br/>
+See the examples here ... <!-- ws:start:WikiTextUrlRule:15:http://bettergedcom.wikispaces.com/message/view/Standardized+Metadata+and+Reference+Management+Software+concepts/41380309#41389941 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Standardized+Metadata+and+Reference+Management+Software+concepts/41380309#41389941" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Standardized+Metadata+and+Reference+Management+Software+concepts/41380309#41389941</a><!-- ws:end:WikiTextUrlRule:15 --><br/>
+<br/>
+You are correct that I left out a step or note of explanation with the first examples ... depending on how you look at it, as below. <br/>
+<br/>
+In current software, like TMG, I can't create an entry at the source level (enter a in master source) without tethering it to a source type which in turn requires a set of templates. <br/>
+<br/>
+Because GEDCOM elements are so painful, I do set up a "source type" (a real source type) for each of the primary collections I work with, and I actually have duplicate source types for most of those collections--the result of trying different ways to work around GEDCOM.  <br/>
+<br/>
+1) Initially working around the limitations of GEDCOM meant trying to use the GEDCOM fields as honest to goodness standards--I put titles in the title field and authors in the author field. That approach left most of the important information without anywhere to be recorded, so I typed that information into the template as template text or overwrote the source type template. This first approach enabled me to create wonderful citations in the program I used, but only the information in fields transfers via GEDCOM, so in a transfer, I lost most of the information about the source. The loss was so great that I stopped uploading my full tree to WorldConnect. The citation information was so bad as to be misleading. With fewer tags, I hoped it was at least less misleading. <br/>
+Now, some vendors would allow you to transfer the text only citation. At least as far as I know, my vendor doesn't. That text output would have helped at WorldConnect. If you want to transfer to another software program, I pretty much have to start from scratch to organize and make the citation work in that other software. (Including that I'd have to re-write everyone of those templates.)<br/>
+<br/>
+2) Hoping to improve upon that technique, I worked to get more information in elements, so all the information would transfer to GEDCOM. This is sort of the Louis approach= just treat the GEDCOM elements as available fields and cram it all in there. Don't care what the real title field is, just put information in there that might be title like. So what if it all gets italicized, or put in quotes. <br/>
+<br/>
+My WorldConnect citation information was just horrible (so I stuck with fewer tags in the upload=fewer awful looking transfers). Ditto, if I go to some other program, I pretty much have to start from scratch.</div></div></div></body>
+</html>

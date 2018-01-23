@@ -1,0 +1,1673 @@
+<html>
+<head>
+<title>BetterGedcom - BetterGEDCOM Comparisons</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h4 id="toc0"><a name="x---Data Models &gt; BetterGEDCOM Comparisons"></a><a class="wiki_link" href="Home.html">Home</a> &gt; <a class="wiki_link" href="Data.html">Data Models</a> &gt; BetterGEDCOM Comparisons</h4>
+<br/>
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+//<![CDATA[
+function googleTranslateElementInit() {
+ new google.translate.TranslateElement({
+   pageLanguage: 'en'
+ }, 'google_translate_element');
+}
+//]]>
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
+</script><br/>
+<h2 id="toc1"><a name="x-BetterGEDCOM Comparisons"></a>BetterGEDCOM Comparisons</h2>
+<br/>
+<strong>BetterGEDCOM Comparison Spreadsheet (Google Spreadsheet)</strong><br/>
+A spreadsheet has been set up at Google docs to compare in detail the different data models. This spreadsheet is multi-user, so don't be afraid to go at it. The spreadsheet has several pages (see tabs at bottom). The spreadsheet is at: <a class="wiki_link_ext" href="https://spreadsheets.google.com/ccc?key=0AkvzrkpbaGH0dHBQdmFrckxFQWJnYWJhRnpUazh3Wnc&amp;hl=en" rel="nofollow">https://spreadsheets.google.com/ccc?key=0AkvzrkpbaGH0dHBQdmFrckxFQWJnYWJhRnpUazh3Wnc&amp;hl=en</a> (If a permission box pops up when you attempt to log in to the spreadsheet, just ask for permission and one of the administrators will respond to your request.)<br/>
+<br/>
+<strong>Navigating the spreadsheet</strong><br/>
+The first page lists all the Records (as called in GEDCOM) or Entities (as called in XML). An attempt has been made to put them in a reasonable order and to place them so that equivalent record/entities are lined up. Models without that record/entity are shown with three dashes. That indicates they specifically are not there, as opposed to unknown or missed.<br/>
+<br/>
+The remaining pages are for each of the record/entities in order, one per page. The components of each entity are broken out. They are then put in a reasonable order and placed so that equivalent compents are lined up. There may be a hierarchy, so levels are indicated by the number of leading periods.<br/>
+<br/>
+<strong>Important Notes</strong>:<br/>
+<ol><li>This is NOT an easy task to do. There is no science in mapping elements from one system to another. Some are easy and some need to be interpreted. The main idea is to do the best we can. We'll be pulling from this all the structures in use and deciding which structures are best for BetterGEDCOM.</li><li>There is a LOT to do here. The more people who can help, the faster and better it can be done. First step, would be to add information and fill in the tables for any data model and record/entity that is not yet entered. Don't try to get it perfect the first time around. Just try to get it up.</li><li>If you are knowledgeable in specific models, then please, by all means, work on that model and try to get it right in relation to the ones you know about.</li><li>This is a rewarding task. Believe me, you will learn about the various models in detail by doing this. You will then be better informed for your input into the BetterGEDCOM process.</li></ol><br/>
+Please go to it. One or two people can't get it done. We need many of you.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-08T11:38:03-08:00</div>
+<div class="title">Family/Group record question (from non-tech)</div>
+<div class="text">I notice some models have a family record, some have a group record; GEDCOM 6.0 XML had both. <br/>
+<br/>
+Is it wrong for my user brain to translate this (family/group) as the program methodology differences? <br/>
+<br/>
+I mostly use TMG, and I don't think it natively runs what other programs call family record. Individuals are linked as parents to children using different tags (bio, step, adopted and other tags). <br/>
+<br/>
+When we say GEDCOM 6.0 XML recognizes both, is that to say TMG's native data linking parents and children is still ported as a "family" but its other "group associations" come in as "group?" <br/>
+<br/>
+Or, are we saying TMG's "parent"-"child" data comes in without any family envelope--just another group association?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-08T12:26:08-08:00</div>
+<div class="title">Question re Relationship and Fact/Event/Date/Location/Tag qualifiers/coments (from non-tech)</div>
+<div class="text">If I'm raising this in the wrong place, just say so and I'll find a better home.<br/>
+<br/>
+In practice, I see common qualifiers to relationships and to the various events. I also see record comments. I believe these qualifiers and record comments are different from "notes" as either can pertain DIRECTLY to the specific data fields we are trying to communicate; each can color the understanding of that data field significantly.  Conversely, these are the kind of items that if stripped, can materially alter the information being shared.<br/>
+<br/>
+I'm interested in knowing if any of the models we are presenting allows these qualifiers or record comments to transfer (or if in the original database, will they be seen as exceptions and/or irregular entries by the model).<br/>
+<br/>
+Borrowing from Hoff and Leclerc, _Genealogical Writing in the 21st Century_ (2006), p. 2, "The process of expressing our findings in writing--including proper use of terms such as probably, possibly, likely, and maybe--is the most valuable tool in our research kits. Unfortunately, it is also the most neglected." <br/>
+<br/>
+Same source, p. 115, "Commonly used Symbols," for "?" as, "uncertain interpretation of original text." <br/>
+<br/>
+Do any of the models presented allow me to communicate "probably" as in the record below (example from above noted source, p. 18:<br/>
+... born about 1718, probably at at Marlborough, Massachusetts  <br/>
+<br/>
+How do I use a "?" to report that one of the persons I'm reporting as a child might not be a child. <br/>
+<br/>
+In practice, I also see what I will call pertinent name/date/relation comments. Will any of the models above allow me, for example to communicate the dates as below (example from above source, pp. 18, 20):<br/>
+Died between 2 July 1722 (date of will) and 3 September 1772 (probate of will) ...<br/>
+Married before 1742 (when their fist child was baptized), perhaps at Norwich Connecticut, where her parents were living.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-14T06:30:11-08:00</div>
+<div class="text">Tom - in the above posting, under what circumstances would there not be 1 Evidence Record per 1 Source? Or in data modelling terms - what's the relationship btw Source and Evidence Record and its cardinality?<br/>
+<br/>
+Cheers</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-14T07:09:08-08:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+The only reason we might want to structure the evidence records is to allow compliation of the evidence by repository and easy indexing of the names, places and dates in it. But it's not essential.<br/>
+<br/>
+Thanks for your example (although I do take offence that you turned my favorite Boo Boo Bear into a "crook").<br/>
+<br/>
+What you have appear to have done is simply modified regular GEDCOM somewhat (may I say "tweaked") to map to the evidence/conclusion terminology. Very nice!<br/>
+<br/>
+This is how I would translate your example back to GEDCOM and why I think it is the same:<br/>
+<br/>
+The source record:<br/>
+<br/>
+0 @S1@ SOUR<br/>
+1 TITL History of Animation<br/>
+1 AUTH Hanna Barbera<br/>
+1 PUBL<br/>
+2 DATE 1960<br/>
+<br/>
+Exactly the same.<br/>
+<br/>
+The evidence:<br/>
+<br/>
+1 SOUR @S1@<br/>
+2 PAGE 45<br/>
+2 NOTE Yogi the Bear was born in Jellystone Park in 1956 and he was smarter than the average bear.<br/>
+<br/>
+In GEDCOM, it is included inline with the person. It is what GEDCOM refers to as the Source-Citation and I called simply the citation which were terms you didn't like. But I'm really good with calling it Evidence.  <br/>
+<br/>
+The same evidence may be repeated in several places in a GEDCOM if it is referred to multiple times. Because of this repetition, I argued a while back on BetterGEDCOM for separate Evidence entities, although I did call them citations at the time.<br/>
+<br/>
+<br/>
+Now the evidence person, of course in GEDCOM, is an INDI like you had presented:<br/>
+<br/>
+0 @EP1@ INDI <br/>
+1 SOUR @S1@   &lt;- In GEDCOM, the Evidence is inline<br/>
+2 PAGE 45<br/>
+2 NOTE Yogi the Bear was born in Jellystone Park in 1956 and he was smarter than the average bear.<br/>
+1 NAME Yogi the Bear <br/>
+1 BIRT <br/>
+2 DATE 1956<br/>
+2 PLAC Jellystone Park<br/>
+1 EVEN      &lt;- In GEDCOM, the EVEN tag is used to record general events or attributes that it doesn't directly define<br/>
+2 TYPE Intelligence<br/>
+2 NOTE Smarter than the average bear<br/>
+<br/>
+<br/>
+We add a source. Same as yours<br/>
+<br/>
+0 @S2@ SOUR<br/>
+1 TITL Jellystone Park Police Records<br/>
+<br/>
+We add the evidence.<br/>
+<br/>
+1 SOUR @S2@<br/>
+2 FILE 567    &lt;- I believe FILE and TEXT can be used here<br/>
+1 TEXT On Jan 12, 1962, Yogi and Booboo were apprehended after stealing two picnic baskets from the Ranger Rick picnic area.<br/>
+<br/>
+In GEDCOM the evidence goes inline <br/>
+<br/>
+0 @EP2@ INDI<br/>
+1 NAME Yogi Bear<br/>
+1 EVEN<br/>
+2 ROLE Crook   &lt;-  Usually ROLE follows the EVEN in GEDCOM.<br/>
+2 DATE 12 JAN 1962 <br/>
+2 PLAC Ranger Rick Picnic Area, Jellystone Park <br/>
+2 SOUR @S2@<br/>
+3 FILE 567 <br/>
+3 TEXT On Jan 12, 1962, Yogi and Booboo were apprehended after stealing two picnic baskets from the Ranger Rick picnic area.<br/>
+<br/>
+0 @EP3@ INDI<br/>
+1 NAME Boo Boo<br/>
+1 EVEN        &lt;- In GEDCOM, this event is repeated for each person involved<br/>
+2 ROLE Crook   &lt;-  Poor Boo Boo apprehended as a crook<br/>
+2 DATE 12 JAN 1962 <br/>
+2 PLAC Ranger Rick Picnic Area, Jellystone Park <br/>
+2 SOUR @S2@<br/>
+3 FILE 567 <br/>
+3 TEXT On Jan 12, 1962, Yogi and Booboo were apprehended after stealing two picnic baskets from the Ranger Rick picnic area.<br/>
+<br/>
+<br/>
+So up to here I'm with you completely.<br/>
+<br/>
+<br/>
+Now you explain Evidence Person Records <br/>
+<br/>
+0 @EP2@ INDI &lt;&lt;-- using INDI again as an evidence person<br/>
+1 EVID @EV2@ &lt;&lt;-- This (evidence) person was derived from this evidence<br/>
+1 NAME Yogi &lt;&lt;-- This person was mentioned by this name in the evidence.<br/>
+1 ROLE Crook &lt;&lt;-- This person has the role of crook ...<br/>
+2 EVEN @EN12 &lt;&lt;-- ... in the (evidence) event found here.<br/>
+<br/>
+0 @EP3@ INDI &lt;&lt;-- Ditto for Booboo...<br/>
+1 EVID @EV2@<br/>
+1 NAME Booboo<br/>
+1 ROLE Crook<br/>
+2 EVEN @EN12<br/>
+<br/>
+... and Conclusion Person Record<br/>
+<br/>
+0 @CP1@ INDI &lt;&lt;-- using INDI for conclusion persons also.<br/>
+1 INDI @EP1@ &lt;&lt;-- using 1 INDI line for the based-on / evidence-for link.<br/>
+1 INDI @EP2@<br/>
+1 SOUR Our conclusion based on careful research<br/>
+<br/>
+That is the part that I wasn't catching onto in everything else that you've said before. <br/>
+<br/>
+I'll have to think about it for a bit, but my first reaction is that I don't like having the Evidence Person. I think that information is basically what I tried to put into my Evidence record earlier in this thread. Then the above becomes this:<br/>
+<br/>
+0 @EV2@ EVID<br/>
+1 NAME Yogi &lt;&lt;-- This person was mentioned by this name in the evidence.<br/>
+1 ROLE Crook &lt;&lt;-- This person has the role of crook ...<br/>
+2 EVEN @EN12 &lt;&lt;-- ... in the (evidence) event found here.<br/>
+1 NAME Booboo<br/>
+1 ROLE Crook<br/>
+2 EVEN @EN12<br/>
+<br/>
+I think that's better, because it groups the Evidence People, Evidence Places, Evidence Dates and Evidence Notes all together with the Evidence, and I believe it does exactly what you want to do - without complicating matters by having two types of people. <br/>
+<br/>
+<br/>
+Now in your summary, I agree with everything except I'd embed the evidence persons into the evidence records:<br/>
+<br/>
+2 source records, one a book, one police records.<br/>
+2 evidence records, one a page from the book, one a file from the police records containing 3 (evidence persons), the one mentioned in the book, and the two mentioned in the police file.<br/>
+1 (evidence) event, the one mentioned in the police report (the birth event implied in the book was treated as a vital event so did not require an event record).<br/>
+1 (conclusion) person, based on our genealogical deduction that the two evidence persons with Yogi in their names were the same animated bear.<br/>
+<br/>
+This way we keep our 4 level hierarchy:  Repositiory, Source, Evidence, Conclusion.   And it is this hierarchy that is unchangeable for all time. We don't have a separate Evidence Person Record to complicate matters as it is embedded in the evidence.  And this can be the record structure used by a repository. <br/>
+<br/>
+So I think we're together, except where the Evidence Person goes.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-14T08:41:10-08:00</div>
+<div class="text">I made some changes to the Navigation Bar -- hope it helps encourage better threading.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-14T08:55:12-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+Think of a Source record as describing a book. Think of Evidence records as representing a sentence, or a table, or a paragraph, or a chapter in that book. Voilà, many Evidence records from the same Source record.<br/>
+<br/>
+There is a certain amount of user freedom in deciding exactly what makes up an Evidence record. I would say it has to represent at least enough of the full source item to include at least information about a person or an event involving one or more persons. I would have no problems with an Evidence record that gave rise to multiple Event records and/or evidence Person records.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-14T09:13:20-08:00</div>
+<div class="text"><br/>
+Tom said: "I would have no problems with an Evidence record that gave rise to multiple Event records and/or evidence Person records".<br/>
+<br/>
+That's good.<br/>
+<br/>
+But would you be okay with eliminating the "evidence Person", but having that info embedded either in the Evidence record, or in the Event record?  I don't really care which, although maybe the Event record is better, since it already contains the people the event pertains to.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-14T09:57:52-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+Glad we are converging! It looks like the looseend between us is the evidence person. Let me try to make a quick explanation of why I think the evidence person is important to be at the record level.<br/>
+<br/>
+Here's how I imagine part of the user interface working for a genealogical application that supports the evidence and conclusion process.<br/>
+<br/>
+You've done a lot of research on a person named Johann Kessler, and collected a lot of data about persons named Johann Kessler from many sources of evidence. You've reached the point where you now want to look at all the data you've collected in order to make your conclusions about the real Johann you're interested in. I believe you'd LOVE a user interface that would allow you to see all your Johann Kessler evidence persons as small virtual index cards or as slips of paper on your desktop. You'd want to be able to move all those "cards" around on your desktop, collecting them into groups that you believe represent different real persons with the name Johann Kessler. You'd want to be able to "right click" on the index cards to see where they came from, inspecting the evidence or sources if necessary. One of those groups would presumably represent the real Johann Kessler you're really interested in, and the other groups would be all the other Johann Kesslers that have been confusing you for the past few years. When you have the groups the way you want them, you'd use a user interface command to join the group you're interested in into the Johann Kessler conclusion person. You add your own source to the new conclusion record describing why you made that conclusion. Good work; job well done; Tom Jones would be proud of you.<br/>
+<br/>
+I view any object that is so important that you'd want it to have its own strong and vivid and independent user interface appearance DESERVES to be a real record in an underlying database.<br/>
+<br/>
+So that's my view. If we do decide to keep the evidence persons under the evidence records in Better GEDCOM I certainly don't think that would be a disaster at all. Like you say, all the information is there, just packaged a little differently. In my internal DeadEnds database, and in my native DeadEnds archive format, I'd have the evidence persons as separate entities because I think that's the right way to do it, but I'd have no problems importing or exporting from a file format that had the evidence persons subsumed under evidence records.<br/>
+<br/>
+Let me complicate things a tiny bit. First let me say that I think that the SAME PERSON RECORD should be used for both evidence and conclusion persons (I hear groans of protest coming from different directions). I also believe that there is no need AT ALL to limit the "levels" of Person records to just two, the evidence level and the conclusion level. I see no reason why TREES OF PERSON RECORDS could not go to three or even four levels. If you'd like I could try to construct at least a thought example for cases where this might make sense.<br/>
+<br/>
+All you need to allow the same Person record to work at multi-levels is to have each Person record be able to refer to any number of other, CLOSER TO EVIDENCE, Person records. I've had these links in the DeadEnds model for years, and I was very happy to see the "basedOn" links in the GEDCOM Future Directions document. If you look into the GenTech model you will see that Assertion records have the equivalent of a based-on link, and that GenTech asstertion trees can also grow to any size. The GenTech model is a very awkward one (in my humble opinion), with the Assertion record having to play a key role in basically everything, and these Assertion links to sub-assertions are intended to do exactly as what I am proposing for the sub-person links in Person records.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-14T12:23:29-08:00</div>
+<div class="text">Tom <br/>
+Thanks. So it's One Source to many Evidence Records. And one Evidence Record to many Event records and / or Evidence Person records. But by implication, many Evidence Records to many Conclusion Person Records. <br/>
+<br/>
+OK - I can cope with that. Except I still daren't think too deeply about why you don't have an Evidence Event and a Conclusion Event. Maybe that's my inner Spock talking.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-14T12:28:07-08:00</div>
+<div class="text">Adrian says, "I still daren't think too deeply about why you don't have an Evidence Event and a Conclusion Event."<br/>
+<br/>
+(Ah, but I do! Check the DeadEnds model document!)<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-14T20:37:52-08:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+Okay, you've explained your evidence person quite well. But I think we diverge a little here.<br/>
+<br/>
+Your example about my long lost ancestor Johann talks about a "card" for each evidence person. I understand that concept. But I don't agree that this is the way the evidence/conclusion process should work. Here's my viewpoint:<br/>
+<br/>
+I think the evidence needs to be at the Event level. That is at the combination of event-person(s)-role(s)-place-date-notes. Each item of evidence is collected, and then all the events from that piece of evidence are extracted.  e.g.:<br/>
+<br/>
+Evidence E01: From a Census Record, events are:<br/>
+Living - Johann Kessler - child - Vienna, Austria - 1911 - Age 6<br/>
+<br/>
+Evidence E02: From an Immigration Record, events are:<br/>
+Immigrated - Yohan Kesler - husband - New York - 1930 - Age 29<br/>
+Immigrated - Hilda Kesler - wife - New York - 1930 - Age 26<br/>
+<br/>
+Evidence E03: From a City Directory:<br/>
+Residence - Johann Kesler - occupant - 111-44th Street, New York - 1941 - <br/>
+Residence - Helen Kesler - wife - 111-44th Street, New York - 1941 -<br/>
+<br/>
+Here we have 3 pieces of evidence linking to 5 events. Each of these can be records so we have 8 records.<br/>
+<br/>
+Now I don't want to try put evidence persons together. It is already making assumptions and there are too many to make. I am not sure that any of these three Johanns are the same. We've got spelling differences, age conflicts, wife's name's different, etc.  If we put all possibilities together, we'd have 3 evidence people with one item of evidence, 3 more with 2 items, and 1 with all 3. There's 7 different possible evidence people to choose from. To me this is an extra step and unnecessary.  <br/>
+<br/>
+What I want to do is take all the possible events for the person I am interested in, and include them in my conclusion person, the INDI I create. So the first step my ideal software will do is to allow me to ask for all the evidence with events pertaining to someone named Johann Kessler OR to someone with a similar name to allow for misspellings. I might ask for specific locations or date ranges as well to whittle it down . All these events are then displayed for me on the screen:<br/>
+<br/>
+Living - Johann Kessler - child - Vienna, Austria - 1911 - Age 6 (From E01)<br/>
+Immigrated - Yohan Kesler - husband - New York - 1930 - Age 29 (From E02)<br/>
+Immigrated - Hilda Kesler - wife - New York - 1930 - Age 26 (From E02)<br/>
+Residence - Johann Kesler - occupant - 111-44th Street, New York - 1941 - (From E03)<br/>
+Residence - Helen Kesler - wife - 111-44th Street, New York - 1941 - (From E03)<br/>
+<br/>
+I'm actually not the originator of this idea. Read the book "The Conceptual Approach to Genealogy" by David C. Chamberlin, 1998.<br/>
+<!-- ws:start:WikiTextUrlRule:79:http://www.familyrootspublishing.com/store/product_view.php?id=654 --><a class="wiki_link_ext" href="http://www.familyrootspublishing.com/store/product_view.php?id=654" rel="nofollow">http://www.familyrootspublishing.com/store/product_view.php?id=654</a><!-- ws:end:WikiTextUrlRule:79 --><br/>
+<br/>
+Then I can evaluate the events relative to each other and come to the conclusions of which are most likely and which are probably wrong and document those within the INDI itself. Everything is then there in the one INDI to look at regarding the person. e.g.:<br/>
+<br/>
+0 @I1@ INDI<br/>
+1 NAME Johann /Kessler/<br/>
+2 EVID @E01@<br/>
+1 NAME Yohan /Kesler/<br/>
+2 EVID @E02@<br/>
+3 NOTE I believe the name was spelled incorrect on the Immigration record. <br/>
+3 CONT So it is listed 2nd as the non-preferred spelling.<br/>
+1 BIRT<br/>
+2 DATE 1901<br/>
+3 EVID @E02@<br/>
+3 NOTE Calculated from Age 29 in 1930<br/>
+3 CONT We believe this age to be true.<br/>
+2 DATE 1905<br/>
+3 EVID @E01@<br/>
+3 NOTE Calculated from Age 6 in 1911<br/>
+1 RESI <br/>
+2 DATE 1911<br/>
+2 PLAC Vienna, Austria<br/>
+2 AGE 6<br/>
+2 EVID @E01@<br/>
+1 IMMI <br/>
+2 DATE 1930<br/>
+2 PLAC New York<br/>
+2 AGE 29<br/>
+3 NOTE I believe this age is correct.<br/>
+2 EVID @E02@<br/>
+1 NOTE Found a Johann Kesler married to Helen, but I don't believe this is my ancestor because ...<br/>
+2 CONT So I'm not including that Residence event here because it would be misleading<br/>
+2 CONT ... or I might include that Residence event here to show where he did NOT live.<br/>
+2 EVID @E03<br/>
+3 NOTE But either way, I am going to link back to the evidence that I think is wrong, so I don't forget.<br/>
+<br/>
+So it gets messy enough to add all the events and positive and negative sourcing to the conclusion person. To add the complication of multiple numbers of evidence persons in between the events and the conclusion persons seems to me like overkill. <br/>
+<br/>
+I think everyone would be happier sorting through and deciding betwen 5 simple event cards, than sorting 7 (and that number grows exponentially for every event added) evidence people cards each containing multiple and duplicated events on each person.<br/>
+<br/>
+And trying to make multi-levels of people is probably an attempted solution to this exponentially growing number of them. But we eliminate that hassle completely if we decide not to include them.<br/>
+<br/>
+I don't think any genealogist wants to spend their time creating a number of possible evidence people. I think they want to be able to scan the events, and use the relevant events to create their conclusion person immediately. I think that would be much more appealing to everyone.<br/>
+<br/>
+I hope this reasoning seems sound to you.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-15T02:54:55-08:00</div>
+<div class="text"><br/>
+Louis,<br/>
+<br/>
+Just read your last. We are very close.<br/>
+<br/>
+When you say your evidence needs to be at the Event level, and then that this is what you want to have displayed:<br/>
+<br/>
+"Living - Johann Kessler - child - Vienna, Austria - 1911 - Age 6 (From E01)Immigrated - Yohan Kesler - husband - New York - 1930 - Age 29 (From E02)<br/>
+Immigrated - Hilda Kesler - wife - New York - 1930 - Age 26 (From E02)<br/>
+Residence - Johann Kesler - occupant - 111-44th Street, New York - 1941 - (From E03)<br/>
+Residence - Helen Kesler - wife - 111-44th Street, New York - 1941 - (From E03)"<br/>
+<br/>
+I look at that list and I say that those are exactly what I meant and exactly what I would want to be displayed too. Those are exactly the index cards/slips of paper I want to see. You want to call them partial items from event evidence; I call them complete person evidence! They are the same things. And I made the point that these things that you want to see are very important things so deserve to be their own records.You see these five things differently, as only roles from evidence events. I think there is no problem in that. It is a viewpoint thing.<br/>
+<br/>
+Let me ask you this. You are writing the software to do this. You reach the point where you want to show these five items in a Behold window. In your code, what would those five things be?  Would they be pointers to an evidence event with a further index into an array of roles inside the event to identify the role of interest, or would they be items of their own? As I imagine this software they are always items on their own, so I want them to be records in a database, so I don't have to create them in the software on the fly as the user browses around his/her database. I can imagine operations in my software that would require hundreds of these items, so I want them to be records of their own to facilitate that.<br/>
+<br/>
+But like I say, there is very little difference.<br/>
+<br/>
+You go on to say that you don't want to create conclusion INDIs by putting together evidence persons, but by putting together information from evidence events. By doing that you have to do a lot of picking and choosing to create those INDI's. You have to transfer selected information from the evidence events into the conclusion persons. If you instead were working with evidence persons, which already have the information, you most of the time just put a reference to that evidence person into the conclusion person and you are done (see my example where the conclusion Yogi was just two pointers to the Yogi evidence persons -- since all the inforamtion was already in those evidence persons, including the source info, there was nothing else to do.). You only have to add your own info if you want to resolve a fact or make your own interpretation on the conclusion person. And, of course, you have to justify in some way why your brought the info together into a conclusion person in the first place -- both our approaches require that.<br/>
+<br/>
+Now, it's very true that software could create the first version of your type of conclusion person by constructing an INDI record that alredy contains the information for the events pre-selected from the correct role players, so you could get the same ease in your approach that I get in mine. It all boils down to the fact that the same information is in the records.<br/>
+<br/>
+So let's see if I have this right.<br/>
+<br/>
+In my model there are evidence events and evidence persons. My evidence events have date, place, and roles, where a role is just a tag identifing the role and a pointer to an evidence person that has the person's name and whatever other PFACTs the evidence supplied.<br/>
+<br/>
+In your model there are only evidence events. They have date, place, and instead of roles with pointers, they have roles with the name and other PFACTS about the persons included directly as substructures. The information in the two approaches is identical. My approach has added an extra layer of indirection and another record type for the database.<br/>
+<br/>
+I think my approach is better because the things I call evidence persons (I believe) need to be manipulated at that level frequently by the software. (Plus, of course, in my mind, they are such a DARNED NEAT concept!). You think that is not so necessary since the software can display the information as if there were this level of entity without requiring the extra layer of objects in the database.<br/>
+<br/>
+Does that sum things up? If I have it right your model is an excellent one. And that's because it's the same as mine (insert big smiley here). You've just decided to include the evidence persons as substructures within the evidence events, whereas I have chosen to give them first class record status. Other than that the models seem identical.<br/>
+<br/>
+So, I'm really back to a statement I made in the last missal. However Better GEDCOM goes on this issue is immaterial to me and my DeadEnds implementation. The data models we are arguing about are really the same. On importing a BG file with your interpretation, I would simply add the extra layer on indirection on import and flatten it out on export. If you were to import a BG file using my interpretation, you would flatten the data in import, and expand it on export. Pretty simple really.<br/>
+<br/>
+At this point I think we understand each other on this point, see that we both have the same underlying model in mind, and see how easy they map.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-15T10:11:36-08:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+Yes, I think you've summed it very well.<br/>
+<br/>
+Since I am inputting pure GEDCOM, I don't have the Evidence record to input, but I use the "citation" info (i.e. page number, quay, notes) as a proxy for it. e.g.:<br/>
+<br/>
+1 SOUR @S1@<br/>
+2 PAGE 32<br/>
+2 QUAY 3<br/>
+2 NOTE Age 6<br/>
+<br/>
+I follow it by all the events it pertains to.<br/>
+<br/>
+I display this in my Source index as:<br/>
+<br/>
+S1 Source description (from @S1@ SOUR record)<br/>
+  S1-1 Page 32, Quay 3, Age 6<br/>
+    Birth: Johann Kessler 1905<br/>
+<br/>
+<br/>
+Whereas the display of Johann Kessler would be:<br/>
+<br/>
+Johann Kessler<br/>
+  Birth: 1905 [S1-1 Source Description, Page 32]  <br/>
+<br/>
+<br/>
+Now as far as the display of those 5 events goes, I might make that a "Search Sources" function that will allow filtering by person (with spelling variations), place, date range, event type, or notes contents. This would bring up a window with the events found and the person would then drag and drop the events that they think pertain to the person in the report. They would then add their conclusions to each item they add. And they can move them around within the person to order them so that the one they believe is most-true is first.<br/>
+<br/>
+Then yes, that part is created on the fly, depending on what the user wants to work on at the time.<br/>
+<br/>
+So people will be able to either add an event to a person directly - the traditional method - but must add the source for it (even if it is "unknown" or "personal knowledge").<br/>
+<br/>
+Or, and I'll be trying to promote this, people can add their info by source, and extract all the events in the source first, and then assign the events to the people they belong to. That could be a much more efficient way to do it, and will ensure that you've extracted everything you can from the source.<br/>
+<br/>
+So even though you and I will implement a different solution, I agree that we'll be can use the same model.  In your case, you'll have to add the Evidence Person if it is not there. In my case, I'll have to remove the Evidence Person if it is there.  <br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-16T21:38:00-08:00</div>
+<div class="text"><br/>
+<!-- ws:start:WikiTextUrlRule:1:http://www.beholdgenealogy.com/blog/?p=805 --><a class="wiki_link_ext" href="http://www.beholdgenealogy.com/blog/?p=805" rel="nofollow">http://www.beholdgenealogy.com/blog/?p=805</a><!-- ws:end:WikiTextUrlRule:1 --></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-13T09:28:30-08:00</div>
+<div class="text">Discussion topic morphed. Is sad. <br/>
+<br/>
+Frustrated too. Haven't been commenting as doing so, even like this, seems to further hijack the discussion.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-13T12:38:43-08:00</div>
+<div class="text">Trying to catch up on my reading...<br/>
+<br/>
+Yesterday 9:01 pm Tom said "That sounds like a pretty good idea to me. ...<br/>
+<br/>
+What seems to be of concern is that:<br/>
+1. For simple records, we have to put in a lot more source lines/nodes than we used to"<br/>
+<br/>
+I would have thought that in the exact case you quote Tom, the sources are already against each Event/Attribute/whatever in most genealogy apps. But I'm no expert on GEDCOMs from more than a limited number of apps. We only increase the number of source references if we go to sourcing of sub-facts (i.e. the place or the date, etc, individually) - or do I thought.<br/>
+<br/>
+Louis then said (Today 1:00 am)<br/>
+"I think a source at a certain level should be defined to pertain to the item at that level and POSSIBLY any of its sublevels"<br/>
+<br/>
+As I see it, that's the current way for Events/Attributes/whatevers. A source for an event _possibly_ applies to its place, _possibly_ to its date, etc. And all converted GEDCOMs would work like that. Provided this allowed sourcing at the level of sub-fact _also_, then I'd have no issues with this idea. I'm not saying I _would_ source at the level of sub-fact - just that some people might. Personally I'm rather sympathetic with Louis' view that you have to read the data in the source to really understand anyway, so what the heck, sourcing at sub-fact level is not necessarily that helpful compared to reading and thinking. But if some people want _potential_ sourcing at sub-level, fine.<br/>
+<br/>
+Tom at 2:14 today (actually - are these your times or just what I'm seeing translated into GMT - sorry, UCT?)<br/>
+"I think the best solution is the following if we are stuck with conclusion persons...<br/>
+<br/>
+1. Allow any number of vital events of the same kind in the records. Have each one come from a different source so only one source line is needed per event. ...<br/>
+2. Allow an extra vital event structure of each type which the user creates on his/her own with what he/she believes to the be true facts of the event."<br/>
+<br/>
+While this is logically sound, we also have to remember that someone has to be able to convert millions of current GEDCOM files into BG. That means we have to deal with (say) my typical Birth event for a person (none or one per person for 99.9%), which has half a dozen sources against it; values of place, date location and address that represent my current working hypothesis - and no way of unravelling these back to one per source.<br/>
+<br/>
+So whatever model we follow for new files in BG, we have to be able to make a sensible interpretation of files like these. <br/>
+<br/>
+And I think that simply comes down to:<br/>
+ - all sources for an individual / family / whatever MIGHT POSSIBLY also apply to the events / attributes / whatever belong to the individual etc. <br/>
+ - all sources for a specific event / attribute / whatever MIGHT POSSIBLY also apply to the place / date / address / organisation / whatever of the event / attribute etc<br/>
+<br/>
+IF people want the ability to source the place / date / address / organisation / whatever of the event / attribute etc, then BG should allow it but the previous note still applies and its use is NOT mandatory. In the absence of any source at this level, the one higher MIGHT apply. In the presence of any source at this level, the one higher can be assumed NOT to apply (I think).</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-01-13T15:53:48-08:00</div>
+<div class="text">Tom asked:<br/>
+<ul class="quotelist"><li>if there are Evidence records what do they contain? I don't want them to have the events and persons already regularized, if that information is going to also be in Event and Person records.</li></ul>and explained:<br/>
+<ul class="quotelist"><li>An Evidence record needs to describe the evidence in some way. It doesn't seem necessary to verbatim include the evidence, since the user can find the evidence in the physical source. But the user might like to abstract, partially transcribe, summarize, or otherwise describe the evidence, often including an external link to an image of a page. And the user certainly has to include the PFACTs necessary to complete the citation string, e.g., page number in source.</li></ul><br/>
+I kind of have a strange feeling that this might be done by marking up text in a way similar to what is proposed in Gedcom XML 6.0, see this <a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Data+Models/32554704" rel="nofollow">discussion</a></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-13T19:54:33-08:00</div>
+<div class="text"><br/>
+Tom:<br/>
+<br/>
+I think we are starting to agree.<br/>
+<br/>
+By the way, I consider an event and a PFACT similar - maybe call it a Epfact (ugh!!), where the PFACT isn't a point in time but is a time period. So where I say "Event", I also mean "PFACT".  I think both can go under one record: EventFact?<br/>
+<br/>
+Now regarding your definitions, I am thinking very similarly to you:<br/>
+<br/>
+Source: Yes, I agree. <br/>
+<br/>
+Evidence: Yes. It also contains the "where within source" like a page number, and links to all the EventFacts that the entry contains.<br/>
+<br/>
+EventFact: Each one contains one EventFact, names of people (not links, since this is not known until analysis is done), role of each person in this event, name of the place (again not a link), date or date-range of EventFact. <br/>
+<br/>
+Person: Links to all the EventFacts that the researcher believes are the same conclusion person. <br/>
+<br/>
+<br/>
+Then ultimately, a genealogical society or library may put up a database for their repository of just sources and items of evidence and the events they contain. People could search the evidence and events for names and places that they are interested in. Doing this would allow BetterGEDCOM to be their XML structure for their database. Conclusion people can be left up to the researchers, and their concocted family trees can be submitted to a one of those conclusion people databases. Thinking in this way might be able to be a way to help get a handle on the "boundaries" between the entities.<br/>
+<br/>
+So you really have 4 levels:  Repository, Source, Evidence and EventFact.   Each of those are records, but I would put the EventFact at the bottom of the hierarchy.  <br/>
+<br/>
+The ExtractedText from Future Directions can and should be part of the Evidence.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-13T19:57:17-08:00</div>
+<div class="text">If this thread can find an appropriate home, I'd love to comment.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-13T20:20:40-08:00</div>
+<div class="text">After doing a little more thinking about sources I think ...<br/>
+<br/>
+In a conclusion record (assuming it's GEDCOM so we can talk about level numbers) I think it's safe to say that every level one item should have come from a single source. Well, except maybe for notes that are added in here and there. So every level one line and/or structure should have a level two source line and that source should refer to that level one line and the structure below it.<br/>
+<br/>
+In an evidence record I believe everything in it should come from the same source so there should be a single level one source line.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-13T20:23:25-08:00</div>
+<div class="text">In terms of using markup in evidence records. It seems an okay thing to me. It would be done if for some reason the user wanted to display the evidence in reports, and to have it formatted as closely as possible to the original. I have called this type of Evidence record a "transcription" type and markup would make sense for that kind.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-13T20:35:37-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+When it comes right down to it, everything is a PFACT, even an event. But for me there are concepts that are significantly different in scope and of enough importance in an underlying model, to require being set off as their own things. I think an event is the kind of a special purpose PFACT that requires its own selfhood.<br/>
+<br/>
+I like your idea of looking at an Event as an end point in the source chain. But I also see the evidence Person in exactly the same way.<br/>
+<br/>
+Here is what I believe to be very important -- an evidence Event and an evidence Person are records taken DIRECTLY from real world evidence by regularizing (marking up with GEDCOM tags or XML elements) information found verbatim in the evidence into a structured GEDCOM or XML or other syntactic form. One could argue that the marking up could simply be done inside the Evidence record, but when you suggested that last night after your epiphany I argued against it. Not because it's a bad idea, but because I believe the real OPERATIONAL/ALGORITHMIC bases of doing the genealogical process requires the user to interact heavily with the evidence Events and Persons as separate conceptual entities, and important conceptual entities deserve their own recordhood.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-13T20:51:52-08:00</div>
+<div class="text">Gene,<br/>
+<br/>
+If you know how this thread could find another home but remain intact, I would happily follow it there.<br/>
+<br/>
+The fact that there are now 65 messages in this thread indicates that it is very active and very important to the persons commenting on it. The fact that it is now so off topic is as much the fault of the wiki model of doing things as anything else. For me this is simply part of the nature of the world I live in, and not otherwise deeply problematical. I am sorry this makes you sad and frustrated and unwilling to comment.<br/>
+<br/>
+The topics being discussed here are, to me, the most important being discussed on this wiki, since they are directly addressing what the Better GEDCOM model will be, and that is the key to everything that follows.<br/>
+<br/>
+It is getting clearer and clearer to me the wiki model of rambling discussions is not a very effective method of getting work done. Since I started to post to these discussions, I have repeated points over and over and over again, as have many others. I have written long, well thought out, fairly well written, logically consistent, messages covering very complex topics, making very clear arguments with very clear conclusions in a way that I have tried to make as easy to understand as possible. Yet because of the way the wiki works these comments are just wills-o-the-wisp, lost almost as soon as they are posted. Now that is truly frustrating.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-13T21:07:58-08:00</div>
+<div class="text">Set up a new discussion topic to this same page include a link back to this discussion topic, referring to the page numbers on which this thread was discussed. <br/>
+<br/>
+Then come back to this discussion and post a message with the link to the new one. <br/>
+<br/>
+Won't that work?</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-14T00:02:24-08:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+Yes, I agree that Events, People (and Places) are their own entity. <br/>
+<br/>
+Now since Evidence pertains to Events.  And Events are made up of: (Who, What, When, Where, Why/How), which can be translated to: (People, Event Description, Date, Place, Notes), then are not the People and Places attached to the Events?<br/>
+<br/>
+But it is here at the Event that I would make the break. Because the Evidence would tell you that: <br/>
+<br/>
+0 @E1@ EVID<br/>
+1 EVEN BIRT<br/>
+1 INDI Yogi Bear<br/>
+1 DATE 1920<br/>
+1 PLAC Jellystone National Park<br/>
+1 NOTE Yogi was smarter than the average bear.<br/>
+<br/>
+I see that as what must be in the Evidence and NOT the following:<br/>
+<br/>
+0 @E1@ EVID<br/>
+1 EVEN BIRT<br/>
+1 INDI @I999@<br/>
+1 DATE 1920<br/>
+1 PLAC @P444@<br/>
+1 NOTE Yogi was smarter than the average bear.<br/>
+<br/>
+The reason is that as far as the evidence is concerned, it doesn't know about the Conclusion people or the Conclusion place.<br/>
+<br/>
+It is only after the evidence is analyzed that the Conclusion person can be surmized, and then I see the genealogy program doing this:<br/>
+<br/>
+0 @999@ INDI<br/>
+1 NAME Yogi Bear<br/>
+2 EVID @E1@<br/>
+1 BIRT <br/>
+2 DATE 1920<br/>
+2 PLAC Jellystone National Park<br/>
+2 EVID @E1@<br/>
+<br/>
+Allowing the genealogist to make their own conclusions and cite the evidence they are using for it.<br/>
+<br/>
+I see people entities as conclusions, but I see events as part of the evidence. Those events do include the evidence people in them, but they are not the conclusion people and should not link to the conclusion people. The conclusion people (which also contain conclusion events) should link to the evidence.<br/>
+<br/>
+This is so hard to talk about. I'm not sure I'm talking the same language as you. But I think we're getting closer.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-14T04:51:21-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+I think we are close. Unlike you, I don't feel any need to structure the information that is in evidence records, since that structuring will be done in event and person records. I also don't point from evidence to the person and events that come from them. I point the other way. <br/>
+<br/>
+Let me give a complete example of my approach. We're researching Yogi the Bear. We find a book "History of Animation" by Hanna Barbera written in 1960. On page 45 it mentions that Yogi was born in Jellystone Park in 1956 and that he was smarter than the average bear.<br/>
+<br/>
+We have a source record:<br/>
+<br/>
+0 @S1@ SOUR<br/>
+1 TITL History of Animation<br/>
+1 AUTH Hanna Barbera<br/>
+1 PUBL<br/>
+2 DATE 1960<br/>
+<br/>
+We have evidence on page 45<br/>
+<br/>
+0 @EV1@ EVID<br/>
+1 SOUR @S1@<br/>
+2 PAGE 45<br/>
+1 ABSTRACT Yogi the Bear was born in Jellystone Park in 1956 and he was smarter than the average bear.<br/>
+<br/>
+Here I have chosen to just abstract the material in the source; I have not structured it any other way. Note the evidence points back to the source and the source does not point to the evidence.<br/>
+<br/>
+From the evidence it is possible to create one evidence person. NOTE: In my terminology we don't create a separate event from this evidence because the event mentioned is a VITAL event (one role player, that role player being the primary) in which case, just like GEDCOM, we treat the vital event as a PFACT of the evidence person.<br/>
+<br/>
+0 @EP1@ INDI   &lt;&lt;-- though we use INDI here, this is an EVIDENCE PERSON<br/>
+1 EVID @EV1@  &lt;&lt;-- points to the evidence record this evidence person is derived form<br/>
+1 NAME Yogi the Bear &lt;&lt;-- the name PFACT<br/>
+1 BIRT  &lt;&lt;-- the birth PFACT with date and place<br/>
+2 DATE 1956<br/>
+2 PLAC Jellystone Park<br/>
+1 PFACT   &lt;&lt;-- The intelligence PFACT about Yogi -- since this PFACT doesn't have a pre-defined tag in our model set (let's say) we have to formally give the PFACT a type and a value.<br/>
+2 TYPE Intelligence<br/>
+2 VALU Smarter than the average bear<br/>
+<br/>
+This evidence person points back to the evidence it is based on. The evidence it was based on DOES NOT point to it.<br/>
+<br/>
+This is a single evidence person record about Yogi the Bear. This is NOT a conclusion record.<br/>
+<br/>
+Later we find another piece of evidence. It's a police report about an incident in which some picknickers reported that Yogi and Booboo stole their food.<br/>
+<br/>
+We add a source.<br/>
+<br/>
+0 @S2@ SOUR<br/>
+1 TITL Jellystone Park Police Records<br/>
+<br/>
+We add the evidence.<br/>
+<br/>
+0 @EV2@ EVID<br/>
+1 SOUR @S2@<br/>
+1 FILENUMBER 567  &lt;&lt;-- identifies where in source evidence found -- needed for the eventual citation.<br/>
+1 ABSTRACT On Jan 12, 1962, Yogi and Booboo were apprehended after stealing two picnic baskets from the Ranger Rick picnic area.<br/>
+<br/>
+Since we now have a multi-role event, we add an EVIDENCE EVENT record.<br/>
+<br/>
+0 @EN1@ EVEN<br/>
+1 EVID @EV2@  &lt;&lt;-- This event was derived from this evidence<br/>
+1 DATE 12 JAN 11962  &lt;&lt;-- When the event occurred<br/>
+2 PLAC Ranger Rick Picnic Area, Jellystone Park  &lt;&lt;-- Where the event occurred<br/>
+1 ROLE Crook  &lt;&lt;-- There was a crook role-player in the event ...<br/>
+2 INDI @EP2@  &lt;&lt;-- ... and his evidence person record is found here.<br/>
+1 ROLE Crook  &lt;&lt;-- There was another crook role-player in the event ...<br/>
+2 INDI @PE3@  &lt;&lt;-- ... and his evidence person record is found here.<br/>
+<br/>
+This event record points back to the evidence, which DOES NOT point to it. The event record names the two roles in the events and points to the evidence person records of the perps.<br/>
+<br/>
+And we also create those two EVIDENCE PERSONs from the evidence.<br/>
+<br/>
+0 @EP2@ INDI  &lt;&lt;-- using INDI again as an evidence person<br/>
+1 EVID @EV2@  &lt;&lt;-- This (evidence) person was derived from this evidence<br/>
+1 NAME Yogi   &lt;&lt;-- This person was mentioned by this name in the evidence.<br/>
+1 ROLE Crook  &lt;&lt;-- This person has the role of crook ...<br/>
+2 EVEN @EN12  &lt;&lt;-- ... in the (evidence) event found here.<br/>
+<br/>
+0 @EP3@ INDI  &lt;&lt;-- Ditto for Booboo...<br/>
+1 EVID @EV2@<br/>
+1 NAME Booboo<br/>
+1 ROLE Crook<br/>
+2 EVEN @EN12<br/>
+<br/>
+Okay, we now have TWO EVIDENCE PERSON records for Yogi the Bear. We decide that there really was a bear living in Jellystone Park with the name Yogi the Bear. This was the result of our intensely detailed and careful genealogical deliberation, carried out as described by our favorite reference book "Best Practices in Genealgical Research." So here we go creating the actual CONCLUSION PERSON record for Yogi.<br/>
+<br/>
+0 @CP1@ INDI  &lt;&lt;-- using INDI for conclusion persons also.<br/>
+1 INDI @EP1@  &lt;&lt;-- using 1 INDI line for the based-on / evidence-for link.<br/>
+1 INDI @EP2@<br/>
+1 SOUR Our conclusion based on careful research<br/>
+<br/>
+This is all the conclusion Yogi has to be, since we can follow the links to get his name and his birth info and the fact that he is a felon.<br/>
+<br/>
+In summary this example has:<br/>
+<br/>
+2 source records, one a book, one police records.<br/>
+2 evidence records, one a page from the book, one a file from the police records.<br/>
+3 (evidence persons), the one mentioned in the book, and the two mentioned in the police file.<br/>
+1 (evidence) event, the one mentioned in the police report (the birth event implied in the book was treated as a vital event so did not require an event record).<br/>
+1 (conclusion) person, based on our genealogical deduction that the two evidence persons with Yogi in their names were the same animated bear.<br/>
+<br/>
+All these records EXCEPT for the conclusion person are unchangeable for all time. They reflect exactly what sources and evidence say. The only thing that is changeable are our conclusions. If later we decide the police report really applied to Yogi the Bear's son Yogi, we would dissolve record @CP1@.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-12T17:00:50-08:00</div>
+<div class="text"><br/>
+I agree with placing the source at the level where it is applicable. But I disagree with ever needing to demote it.<br/>
+<br/>
+This is because I think a source at a certain level should be defined to pertain to the item at that level and POSSIBLY any of its sublevels. <br/>
+<br/>
+Then Adrian's example would become:<br/>
+<br/>
+1 BIRT<br/>
+2 SOUR @S4@<br/>
+2 DATE 18 DEC 1949<br/>
+3 SOUR @S2@<br/>
+2 PLAC New London, New London, Connecticut, USA<br/>
+3 SOUR @S3@<br/>
+2 ADDR 4472 Main Rd, New London<br/>
+3 SOUR @S8@<br/>
+<br/>
+The S4 source should be placed at the level 2 location, and not at two level 3 locations. That indicates that S4 may pertain to the birth event itself and/or one or more sublevels, or it may not pertain to the whole birth event but does pertain to at least 2 sublevels.<br/>
+<br/>
+This gets rid of the entire problem of demotion and duplication which as you've all noted will get very messy and noone will know what to do.<br/>
+<br/>
+Okay, so maybe you don't like that the source is not denoted as accurately as it can be as to what it pertains to. But that is probably less important than the source description itself that will make clear what it describes. That description is needed anyway to do the real comparison. <br/>
+<br/>
+Just trying to keep it simple, and the above definition would help to do so.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-12T17:12:31-08:00</div>
+<div class="text"><br/>
+Tom said: "I believe dates should be allowed to be free format. Unlike Louis I believe unstructured strings can be parsed for important content. I believe a sort date is only needed if the year in the date field, which may be free format, cannot be easily recognized (or is not there altogether)."<br/>
+<br/>
+My argument against doing this is threefold:<br/>
+<br/>
+1. Yes, freeform dates can be parsed. But 95% of programs don't do it now. Forcing programs to add date parsing when they don't do it now is one more item to make programmers less willing to adopt BetterGEDCOM.<br/>
+<br/>
+2. If no structure is imposed, then all sorts of junk can get in there, including typos. 2010 may appear as 210. Now you require complex error checking as well. And we certainly don't want BetterGEDCOM, which is designed to be a permanent data storage to have stuff like that in.<br/>
+<br/>
+3. Almost all programs currently have date fields, parse and check that the date is valid, and then when they export to BetterGEDCOM, if we don't specify that they should put it in a specific format, e.g. 4 Nov 2009, then they'll do whatever they feel, <br/>
+and well get a mess and possibly ambiguous dates that can't be interpreted properly, e.g. 4/11/2009 or 11/4/2009. What about double dates, e.g. Jan 1742/43. If we don't define those properly, they'll come out in all sorts of ways.<br/>
+<br/>
+I think we'll be in real trouble if we don't have a required standard date first, and only then an optional free format date with it.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-12T17:57:33-08:00</div>
+<div class="text">Concerning Louis's comments on dates. I am not unreasonable and am happy to go along with requirement for a structured date field. I hope it would be flexible enough for qualification, ranges, double dates, and so on. The idea of an optional unstructured free format date works for me.<br/>
+<br/>
+I obviously have very strong feelings about the way I think things should be, and know they often range into the impractical or unwise, but I don't think they range into the impossible. I have a strong feeling that genealogy is a "humanistic" enterprise, which to me means one that is hard to constrain with rigid formatting and structuring rules. To me, date and place (and don't forget name) strings have always represented the "battle ground" between rigid rules for the ease of the computing side, and the free-format needs that sometimes pop up when dealing with "humanistic" data. This was the basic point of my article, "Structure and Flexibility in Genealogical Data," that launched my arrival into the world of those nuisance blow-hards who argue about genealogical data models as if they were critically important. It was my strong feelings about the need to be flexible with these strings that led me into passionate arguments at one time about the inappropriateness of relational databases for genealogical data, as these types of databases are among the most rigid in their rules for structuring data. My abiding dislike with the GenTech model stems from this point.<br/>
+<br/>
+I agree with Louis's three point up to a point, and I am willing to let those arguments stand as the ones we base our decisions upon. However, I would not be me if I did not make at least a passing comment about them before letting them rest.<br/>
+<br/>
+1. The fact that 95% of applications don't do what they should is not a persuasive argument for someone as iconoclastic as I am.<br/>
+2. Allowing freedom has always been fraught with possible negatives; but freedom brings far more potential for the positive; there's a very big risk/benefit tradeoff involved.<br/>
+3. Well, let's not say we're going to allow absolute free format. There has to be at least some guidelines. As I said at the beginning I'm not totally unreasonable! Anyone who enters 4/11/2009 should be taken behind the barn.<br/>
+<br/>
+My LifeLines program allows free format dates and has since its first implementation. The LifeLines "libraries" have a rich set of functions that attempt to extract such things as the the year or month or day for these free format strings, and there are functions that put dates into a number of standard output formats so they don't look free format on reports or in displays. These are all based on simple parsing code that handles straightforward, normal dates, as well as all kinds of non-standard strings. I can argue that this kind of ad hoc parsing is not rocket science code because I am far from a rocket scientist.<br/>
+<br/>
+Okay, I've had my say. Bring on the restrictions!<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-12T18:12:57-08:00</div>
+<div class="text"><br/>
+Tom:<br/>
+<br/>
+Keep up your arguments and your points of view. As I said before it is healthy and I want to see all possible views considered and you and I usually are very good at bringing up two different ones. Don't feel you have to justify yourself. You have a lot of experience in your work that we all appreciate and respect. <br/>
+<br/>
+I fully expect that there is an equal chance that the majority like your view or like my view and there will be another equal chance of them picking something inbetween or something completely different. Whatever works best. But unless all possible views are expressed, there is no democracy.<br/>
+<br/>
+Maybe we should be in government as opposite parties. We both want the best for the nation. And that's the way the system works. ... Except then we'd have to resort to name calling and schoolground tactics. :-)<br/>
+<br/>
+Louis<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-12T18:14:45-08:00</div>
+<div class="text">I am now hopelessly confused about how to stick source pointers into conclusion records. I would at least hope that we all agree that the whole reason we have these problems is because our applications force us to create CONCLUSION PERSONS where we have to jam and merge together all the facts gathered from many sources into a cohesive whole.<br/>
+<br/>
+I think the best solution is the following if we are stuck with conclusion persons...<br/>
+<br/>
+1. Allow any number of vital events of the same kind in the records. Have each one come from a different source so only one source line is needed per event. No sources on date and place lines.<br/>
+2. Allow an extra vital event structure of each type which the user creates on his/her own with what he/she believes to the be true facts of the event. The source line for this extra event structure says that it is the user's conclusion.<br/>
+3. Have these extra event structures come first and tell compliant programs that the first event of any kind is the one to use in displays and simple reports.<br/>
+4. Source all other facts individually. This is a pain in the butt for the sex PACT, but should be okay for all the other PACTs.<br/>
+<br/>
+We've just jammed the entire evidence and conclusion model right into the person record. Yeah for us.<br/>
+<br/>
+Hey, I just realized two things. First, fact rhymes with PACT, but second, there should be an F in PACT, so, in fact, they shouldn't rhyme. Can you come up with a better term for PACT that includes F? How about PFACT? You could say that still rhymes with fact? Hey, that's good -- for now on they're going to e PFACTs! Love it. Oh, DARN it!! We forgot quality, aspect, element and facet!! PFACTQAEF?<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-12T20:04:29-08:00</div>
+<div class="text"><br/>
+Tom:<br/>
+<br/>
+Actually, thinking about it, I like your idea. Instead of multiple sources per event, we may want to have only one source per event. The SOUR can always be at level 1. <br/>
+<br/>
+e.g. We have a ship's record that defines ages and implied birth years of 2 people. And a census record that defines ages and implied birth years for the same 2 people. These ages are not necessarily the same.<br/>
+<br/>
+We then have something like this:<br/>
+<br/>
+0 INDI @I1@<br/>
+1 EVEN @E11@<br/>
+1 EVEN @E12@<br/>
+<br/>
+0 INDI @I2@<br/>
+1 EVEN @E21@<br/>
+1 EVEN @E22@<br/>
+<br/>
+0 EVEN @E11@<br/>
+1 TYPE Birth<br/>
+2 DATE Jan 1842<br/>
+1 SOUR @S1@<br/>
+<br/>
+0 EVEN @E12@<br/>
+1 TYPE Birth<br/>
+2 DATE Jan 1842 (Same as E11)<br/>
+1 SOUR @S2@<br/>
+<br/>
+0 EVEN @E21@<br/>
+1 TYPE Birth<br/>
+2 DATE Apr 1845<br/>
+1 SOUR @S1@<br/>
+<br/>
+0 EVEN @E22@<br/>
+1 TYPE Birth<br/>
+2 DATE 1846 (Different from E21)<br/>
+1 SOUR @S2@<br/>
+<br/>
+But you've just led me to an epiphany:<br/>
+<br/>
+Doesn't it make sense to make things Evidence based? Maybe we shouldn't have Event records at all, but should have Evidence Records. What we are doing is stringing all the events that a piece on evidence provides and attaching them to that item itself. The above example then becomes:<br/>
+<br/>
+0 EVID @E1@<br/>
+1 SOUR @S1@<br/>
+1 INDI @I1@<br/>
+2 BIRT<br/>
+3 DATE Jan 1842<br/>
+1 INDI @I2@<br/>
+2 BIRT<br/>
+3 DATE Apr 1845<br/>
+<br/>
+0 EVID @E2@<br/>
+1 SOUR @S2@<br/>
+1 INDI @I1@<br/>
+2 BIRT<br/>
+3 DATE Jan 1842  (same as other evidence)<br/>
+1 INDI @I2@<br/>
+2 BIRT<br/>
+3 DATE Apr 1846  (different from other evidence)<br/>
+<br/>
+This could theoretically eliminate the need for INDI structures entirely. Nothing would hang out of them. Everything would be Evidence from a specific source. <br/>
+<br/>
+This one concept, if it appeals to all the BG folks as much as I'm starting to like it, might be the one big thing, the big change that might set BetterGEDCOM apart. It is a distinct move to base BG on Evidence.<br/>
+<br/>
+Think about it. <br/>
+<br/>
+If there is a general good feeling about this, we can expand upon it, possibly in a new thread or even it's own section.<br/>
+<br/>
+BetterGEDCOM can be the "Evidence-based Genealogical Model".</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2011-01-13T03:36:56-08:00</div>
+<div class="text">"This could theoretically eliminate the need for INDI structures entirely. Nothing would hang out of them. Everything would be Evidence from a specific source."-Louis<br/>
+<br/>
+That is what I was accomplishing. By keeping a seprate area like a library of knowledge. All the sourecs and the transcribed info found within. These two areas can function on their own without a INDI or FAM area. <br/>
+  This could also be incorperated at a reposistory level company that has no need for INDI or FAm relations. it allows vistors to take snips of CHOOSEN data for a researchers scrap book<br/>
+<br/>
+  YET... the FAM and INDI records act as a generic placemarker for displays, trees, outline to navigate people IF DESIRED.<br/>
+<br/>
+ Sorry I did not make my last post clear.<br/>
+<br/>
+@I1@ INDI <br/>
+1 NAME Thomas Trask /Wetmore/ Sr<br/>
+1 SEX M<br/>
+1 BIRT<br/>
+2 DATE 13 MAR 1866 &lt;note generic not a record<br/>
+2 PLAC Nova Scotia, Canada &lt;note generic not a record<br/>
+1 DEAT<br/>
+1 DATE 17 FEB 1947 &lt;note generic not a record<br/>
+1 PLAC Connecticut, USA &lt;note generic not a record<br/>
+<br/>
+<br/>
+@E1@ EVID<br/>
+0 SOUR @S1@ <br/>
+0 INDI @I1@ <br/>
+1 BIRT<br/>
+2 DATE 13 MAR 1866<br/>
+2 PLAC Plympton, Digby, Nova Scotia, Canada<br/>
+@E2@ EVID<br/>
+0 SOUR @S1@ <br/>
+0 INDI @I1@ <br/>
+1 DEAT<br/>
+2 DATE 17 FEB 1947<br/>
+2 PLAC New London, New London, Connecticut, USA<br/>
+<br/>
+<br/>
+@S1@ SOUR <br/>
+0 TITL Fred Snurf's family tree<br/>
+1 NOTE Got this off Fred Snurf's family tree from Ancestry.com and the turkey didn't put in any sources.<br/>
+1 Location Ancestry.com URL??????????<br/>
+<br/>
+<hr/>
+What this does is allows a research to search thier own record DB in the EVID for just Birth Dates, or Places etc... all Evid records.<br/>
+<br/>
+Even filter just a sour and all the dates or names that come out of that one source or vise versa.<br/>
+<br/>
+The INDI is used as a generic placemarker like a conculsion person which does not hurt the original function of tree outlines or relation tables. I thought this could be a win win for both. The home user can have the outline tree navigation, and a hard core researcher can create a complete complided database based on snips of citation and evidence coming from a source table of sources.<br/>
+<br/>
+Each table area keeps the them in thier own areas without demoting their purpose insde of another type of record. It also helps filter and handle specific types of records for easy transffer or handling.<br/>
+<br/>
+Not I have not been able to show yet that Media, Repository, and some other types of areas are done the same way. When I get a beta block of data I will show that.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-13T06:07:27-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+You have all the same concepts in your new grouping. You have sources as records and you have evidence as records. Inside your evidence records you have persons and inside them you have their vital events attached to them. It does center the evidence model around a new type of record, but I have to say I don't like it.<br/>
+<br/>
+First of all it hides the evidence persons away, whereas I think the evidence person is the prime concept that should be in a genealogist's mind. And second it does away with the multi-role event by using the GEDCOM solution of only allowing events to be "inside" persons. How would you encode a birth certificate trying where you try to give equal weight to the child, father and mother, while also making sure the two parent/child and the one mother/father relationship were captured properly? Maybe you would put the relationships between persons into some other record?<br/>
+<br/>
+In your mode,l would you also have top level conclusion person records that would then point to the collection of evidence records for them? I think you'd have to, right? If you did the conclusion persons would have to point INSIDE your new evidence records, since those records would have info about multiple evidence persons. Pointing INSIDE a record is something I've thought about, something I know is possible, but I think it opens up a whole new kettle of fish. It is a very unconventional operation to be sure, and it basically just isn't done. Well, it is done in XML with their local anchor structure, so I am all wrong about that.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-13T07:29:30-08:00</div>
+<div class="text"><br/>
+Just wanted to see if you all thought I had gone completely bonkers by posting that.<br/>
+<br/>
+Basically, it is EXACTLY the same data, normalized under an Evidence record. It is not the only way to do it. There are many ways to transform this. I won't try to enumerate them here because it can lead to infinite discussion with differing opinions and no conclusions.<br/>
+<br/>
+But I just wanted you to know that I think the Evidence record (which to me is identical to what I call the citation) is important and needed as its own record/entity.<br/>
+<br/>
+If it is eventually decided that BetterGEDCOM include such an entity, I'll have to leave the "best" formulation of this to the rest of you, because my expertise is in the existing state of GEDCOM and where the data lay.<br/>
+<br/>
+I do see that there is a mechanical and easy mapping between GEDCOM-based and evidence-based systems or a blend of the two.<br/>
+<br/>
+Sorry, I'm now getting caught in the trap of talking very abstractly. I'll have to slap myself out of it.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2011-01-13T07:33:49-08:00</div>
+<div class="text">"How would you encode a birth certificate trying where you try to give equal weight to the child, father and mother, while also making sure the two parent/child and the one mother/father relationship were captured properly? Maybe you would put the relationships between persons into some other record?"-Tom<br/>
+<br/>
+GEDCOMish below<br/>
+<br/>
+0 HEAD<br/>
+1 TITL Smiths family tree by ronald <br/>
+1 PATH c:/BG/standard/smithFT/<br/>
+<br/>
+0 INDI @I1@<br/>
+1 CHIL @F1@<br/>
+  ... stepson in question real bio F1<br/>
+*generic placemarker info<br/>
+0 INDI @I2@<br/>
+*generic placemarker info new step mom<br/>
+0 INDI @I3@<br/>
+*generic placemarker info boys bio dad<br/>
+0 INDI @I4@<br/>
+*generic placemarker info boys bio mom<br/>
+<br/>
+<br/>
+<br/>
+0 FAM @F1@<br/>
+1 HUSB @I3@<br/>
+1 WIFE @I2@<br/>
+0 FAM @F2@<br/>
+1 HUSB @I3@<br/>
+1 WIFE @I4@<br/>
+<br/>
+0 EVID @E1@<br/>
+1 INDI @I1@<br/>
+1 FAM @F1@<br/>
+1 SOUR @S1@<br/>
+1 NAME Johnny<br/>
+1 RELA Step Son<br/>
+0 EVID @E2@<br/>
+1 INDI @I2@<br/>
+1 FAM @F1@<br/>
+1 SOUR @S1@<br/>
+1 NAME Mrs Johnson<br/>
+1 RELA Head<br/>
+<br/>
+0 SOUR @S1@<br/>
+1 REPO @R1@<br/>
+1 TYPE Census<br/>
+2 TITL 1910 NJ Federal census<br/>
+1 RECOrded<br/>
+2 DATE 11 Feb 1910<br/>
+2 PLAC 647 berry lane<br/>
+<br/>
+0 REPO @R1@<br/>
+1 MEDD @M1@<br/>
+1 NAME Ancestry.com<br/>
+<br/>
+0 MMED @M1@<br/>
+1 PATH <br/>
+2 FILE image84763.jpg<br/>
+<br/>
+<hr/>
+Would this be so bad?<br/>
+<br/>
+The FAM &amp; INDI still works with the origanl design and relation.<br/>
+<br/>
+Ok I put the new marrige as F1 and the real parents of the boy in F2 so dont get confused.<br/>
+<br/>
+When a person is qu'ed like I1 it will diisplay all the events that point to him and have been collected on that one person.<br/>
+<br/>
+IF the FAM # 2 is qu'ed the boys bio parents are display.<br/>
+IF the FAM #1 is Qu'ed the father and new wife are display ALONG with the evidence showing all people tied to a fam like a group of names and relations to the INDI choosen.<br/>
+YES the father and new wife might be displayed with no new children, but the extra set of displayed info filter matches and displays ALL evidence of people envolved with this household and their relation ships either be ADOPTED, STEP, Cousins, or other.<br/>
+<br/>
+Is this a bad way to do it?<br/>
+one source, has two evidance people and roles found in it which point to a Upper level place marker person each. AND the location can act as an event group for the household of all involved?</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-13T09:14:06-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+I don't think you're bonkers, and I agree that the data is the same but renormalized. My example was a simple one involving only two "vital events" and no multi-person events. It would be interesting to work out an example with a multi-role event.<br/>
+<br/>
+I agree whole heartedly that the Evidence record is critical. Let's see if I can propose a quick set of definitions for record types. Just to get down what I think is the right way to view things:<br/>
+<br/>
+Repository -- a record that describes the location where lots of sources are stored.<br/>
+<br/>
+Source -- a record that describes an identifiable item (book, journal, diary, census, website, ...) that contains information a genealogist finds useful. The PFACTs in the record are used to generate most of the citation strings used in footnotes and bibiliography entries (e.g., title, author, publication year). Note that the "page number" level of detail is NOT generally in the Source records since Source records describe full books, etc.<br/>
+<br/>
+Evidence -- a record that holds or describes information found in a source that gets a genealogist excited. In the vast majority (all?) of the cases there is a mention of one or more persons, giving PFACTs about them, often mentioning events they participated in, often mentioning or implying (via the events or mentioned explicitly) the relationships they had with other persons. Information in the Evidence record completes the citation string, e.g., by possibly recording the page number in the source where the evidence is from.<br/>
+<br/>
+Event (evidence-level) -- a record that regularizes into a fixed GEDCOM/XML format the information about a real event that that is described or implied by evidence as already recorded in an Evidence record. The Event record refers to that Evidence record for its provenance..<br/>
+<br/>
+Person (evidence-level) -- a record that regularizes into a fixed GEDCOM/XML format the information about a real person that is mentioned in and already recorded in an Evidence record. The Person record refers to that Evidence record for its provenance.e<br/>
+<br/>
+One thing I have thought about is the boundary between the Evidence record and the Event record. In your example you have regularized the information about events inside the Evidence record. A quesion I've pondered many times is do we need both Evidence and Event records? Whenever I think about it I come up with the answer that we do need the two types. An Evidence record may mention many people in many contexts, may mention or imply multiple events. That is, a single Evidence record could generate many different Event and Person records, and since I think that Events and Persons should very much be "first class citizens," i.e., full records on their own part, I end up keeping the Evidence record separate.<br/>
+<br/>
+Another thing I've thought about quite a bit is, if there are Evidence records what do they contain? I don't want them to have the events and persons already regularized, if that information is going to also be in Event and Person records. In my DeadEnds model document (the one before the XML version) I put down some thoughts on their contents. An Evidence record needs to describe the evidence in some way. It doesn't seem necessary to verbatim include the evidence, since the user can find the evidence in the physical source. But the user might like to abstract, partially transcribe, summarize, or otherwise describe the evidence, often including an external link to an image of a page. And the user certainly has to include the PFACTs necessary to complete the citation string, e.g., page number in source.<br/>
+<br/>
+So I worry about the boundary between the Event and Evidence records, but as you might see from the last paragraph I also worry about the boundary between the Evidence and Source records in the other direction! This latter issue is why I often don't put an Evidence record in my models, because I think of them as the "leaves" of the source hierarchy so can be handled by a Source record. For the same reason I usually leave the Repository record out because I think of it as the top level Source record. I see the source world as being a TREE of Source records, the repositories at the top and the evidence at the leaves. However, when I propose this there are always big objections ("Tom, you can't call different things by the same name!"). So I am happy with the "three level source model -- Repository, Source, Evidence." And remember the "GEDCOM Future Directions" paper suggesting a four level source model -- Repository, Source, Document, ExtractedText. Yikes.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-01-13T09:23:26-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Would it be possible for you to post your descriptions on Glossary of Terms Page? It would be very helpful.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-12T00:33:52-08:00</div>
+<div class="text"><br/>
+There are a number of issues being discussed on this thread. Here are some comments.<br/>
+<br/>
+I believe dates should be allowed to be free format. Unlike Louis I believe unstructured strings can be parsed for important content. I believe a sort date is only needed if the year in the date field, which may be free format, cannot be easily recognized (or is not there altogether).<br/>
+<br/>
+If we allow every "node" in our records (e.g., line in GEDCOM, element in XML) to have an independent source, we are going to have to figure out how to know what sources apply to every one of those nodes. Here is a GEDCOM example:<br/>
+<br/>
+<a class="wiki_link" href="/code">code</a><br/>
+0 @I1@ INDI<br/>
+1 NAME Thomas Trask /Wetmore/ IV<br/>
+2 SOUR @S1@<br/>
+1 BIRT<br/>
+2 DATE 18 DEC 1949<br/>
+3 SOUR @S2@<br/>
+2 PLAC New London, New London, Connecticut, USA<br/>
+3 SOUR @S3@<br/>
+2 SOUR @S4@<br/>
+1 OCCU Retired software geek<br/>
+2 SOUR @S5@<br/>
+1 NOTE Tom is a truly great guy, loved by everyone he meets, and man can that guy code!<br/>
+2 SOUR @S6@<br/>
+1 SOUR @S7@<br/>
+<!-- ws:start:WikiTextAnchorRule:0:&lt;img src=&quot;/i/anchor.gif&quot; class=&quot;WikiAnchor&quot; alt=&quot;Anchor&quot; id=&quot;wikitext@@anchor@@&quot; title=&quot;Anchor: &quot;/&gt; --><a name=""></a><!-- ws:end:WikiTextAnchorRule:0 --><br/>
+<br/>
+The whole record has a source, the name has a different source, the birth event as a whole has a source, the date and place fields of the event have sources, the occupation has a source and the note has a source. This is not a contrived example (well, it is some), but this is exactly the kind of thing that has to occur in CONCLUSION PERSONS where all the facts from different sources are merged together into a single record.<br/>
+<br/>
+So, for the date field, I would argue that sources S2 (applies to just date), S4 (applies to whole birth event), and S7 (applies to whole record) apply, but none of the others do.<br/>
+<br/>
+In my use of LifeLines, where I edit the GEDCOM records of people directly, I use this convention, but in complicated cases it gets very, well, complicated. We have not talked much about this issue, but thought I'd mention it to see if others have comments.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-12T03:19:29-08:00</div>
+<div class="text">Tom - looking at your example reinforces my lack of enthusiasm for sources at multiple levels within an event / property / attribute / whatever.<br/>
+<br/>
+But I can't decide whether my lack of enthusiasm is laziness or comes from a genuine concern about the robustness of the construct.<br/>
+<br/>
+If I take the Birth event as an example: The text has Source S4 applying as a Source to the whole birth event. Suppose we now add a further sub-node to the Birth event - an ADDRess at level2, for example (OK - let's skip the fact that many of us would like Address and Place to be combined as one in BG, this is just an example...). <br/>
+<br/>
+Suppose further that this address has a new source, S8. Then what _should_ surely happen is that S4, currently at level2, acting as a source to the full Birth event, should be demoted to level3 to act as a source only to the Date and the Place, and moved to be immediately after those items. ADDR is then added at level2, with S8 immediately after it at level3, applying only to ADDR. Thus:<br/>
+<br/>
+1 BIRT<br/>
+2 DATE 18 DEC 1949<br/>
+3 SOUR @S2@<br/>
+3 SOUR @S4@     &lt;&lt;&lt;&lt;&lt; new bit<br/>
+2 PLAC New London, New London, Connecticut, USA<br/>
+3 SOUR @S3@<br/>
+3 SOUR @S4@     &lt;&lt;&lt;&lt; new bits here and below<br/>
+2 ADDR 4472 Main Rd, New London<br/>
+3 SOUR @S8@<br/>
+<br/>
+(Hope I got the GEDCOM right, though since current GEDCOM only allows sources for the whole event, it's a moot point for this sort of thing)<br/>
+<br/>
+OK - this is by no means impossible, so maybe I am just being lazy. But - can we really rely on all software to properly demote stuff? I'm not sure and I'd like BG to be robust.<br/>
+<br/>
+And actually - what the heck does "a source applying to a whole event" actually mean in the first place?? <br/>
+<br/>
+Does it mean - as I just took it to mean - it's the source for everything currently known about the event, i.e. the source for birth-date and birth-place? Or does does it mean, it's the source for knowing that Tom was born? (OK - that's a bit of a nonsense - if Tom exists, then he was born, no need for a source - but imagine this were another and optional event). It's actually unclear which meaning applies and therefore whether the source should drop down or not.<br/>
+<br/>
+So I'm still reluctant to allow BG to push sources down below the level of the event - except when it's necessary, e.g. to source bits of notes in some fashion. But I'm not sure these concerns are logical....</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-01-12T04:59:46-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Want to understand the Data Entry / Database for this:<br/>
+<br/>
+1 BIRT<br/>
+2 DATE 18 DEC 1949<br/>
+3 SOUR @S2@<br/>
+2 PLAC New London, New London, Connecticut, USA<br/>
+3 SOUR @S3@<br/>
+2 SOUR @S4@<br/>
+<br/>
+Does this mean that you have the capability to Source each element of this Event?<br/>
+<br/>
+Russ<br/>
+<br/>
+Birth Event<br/>
+Date with Source<br/>
+<br/>
+Place for that birth Event with two DIFFERENT Sources</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-12T05:47:05-08:00</div>
+<div class="text"><br/>
+Adrian says (after showing his example): "Then what _should_ surely happen is that S4, currently at level2, acting as a source to the full Birth event, should be demoted to level3 to act as a source only to the Date and the Place, and moved to be immediately after those items. ADDR is then added at level2, with S8 immediately after it at level3, applying only to ADDR."<br/>
+<br/>
+EXACTLY, EXACTLY, EXACTLY!! And whenever I am editing one of my GEDCOM records, trying to correctly add new information to a CONCLUSION person, I find myself demoting and duplicating SOUR lines all over the place. This is one of the very PAINFUL REALITIES of only having conclusion records in your database. The different facts and events come from so many places, that if you want to structure you conclusion objects to hold what you believe is the truth (or is at least is in the best form you think you can show), these crazy "trees of sources" that require constant maintenance come along with your pains.<br/>
+<br/>
+This is one of the main reasons why I am trying to get to a place where my database has EVIDENCE persons that only have ONE LEVEL 1 SOURCE line because everything in individual record come from the same source, and then CONCLUSION persons that point to evidence persons. The facts and events in the CONCLUSION persons can then have sources that represent your own conclusions from the evidence. And since the conclusion person always points to all the evidence persons it is derived from, you never loose the original sources.<br/>
+<br/>
+Here is a debate I have with myself all the time when I am editing my records. If I find a new birth event for an ancestor, say slightly different than any version I've found before, do I add it as a new birth event to the CONCLUSION person, giving him/her another BIRT event; or do I take the DATE and PLAC information and add it to a single BIRT event. Here's example.<br/>
+<br/>
+Say my database starts with a person with this birth event:<br/>
+<br/>
+1 BIRT<br/>
+2 DATE 18 DEC 1896<br/>
+2 PLAC Norwich, Connecticut<br/>
+2 SOUR @S1@  &lt;&lt;-- points to the social security database<br/>
+<br/>
+But then I get the WWI draft registration for this person, and it has a different birth date and less detail on the place. I could just add this (before or after the above event):<br/>
+<br/>
+1 BIRT<br/>
+2 DATE 19 December 1896<br/>
+2 PLAC Connecticut<br/>
+2 SOUR @S2@ &lt;&lt;-- points to the WWI draft record<br/>
+<br/>
+So, what would you do? I have two approaches. Sometimes I add this second event as is and then a THIRD event that shows what I believe -- that is, I put a little of the EVIDENCE &amp; CONCLUSION PROCESS right in the record. So here is the third record I put in:<br/>
+<br/>
+1 BIRT<br/>
+2 DATE 19 DEC 1896<br/>
+3 SOUR @S2@ &lt;&lt;-- gotta believe this one because he wrote it in his own hand<br/>
+2 PLAC Norwich, Connecticut<br/>
+3 SOUR @S1@ &lt;&lt;-- going with Norwich because this has more detail than found in the WWI card.<br/>
+2 SOUR This is my conclusion based on examining the source records and choosing what I believe to be the best information.<br/>
+<br/>
+And I make this the first event structure in the record. And remember, the other two events remain in the record.<br/>
+<br/>
+But sometimes I get frustrated with all the "extra" events that start filling up my records, so some times I would reduce it down to just one record that looks like this:<br/>
+<br/>
+1 BIRT<br/>
+2 DATE 19 December 1896 &lt;&lt;-- shown first because it's the one I believe to be true<br/>
+3 SOUR @S2@  &lt;&lt;-- demoted: points to the WWI draft record<br/>
+2 DATE 18 DEC 1896 &lt;&lt;-- shown second because it's the one I don't believe to be true<br/>
+3 SOUR @S1@  &lt;&lt;-- demoted: points to the social security database<br/>
+2 PLAC Norwich, Connecticut &lt;&lt;-- shown first because it has more information<br/>
+3 SOUR @S1@  &lt;&lt;-- demoted: points to the social security database<br/>
+2 PLAC Connecticut &lt;&lt;-- shown second because it has less information<br/>
+3 SOUR @S2@ &lt;&lt;-- demoted: points to the WWI draft record<br/>
+2 SOUR The arrangements in this event show my preferences, with the first mentions being what I believe the better statement of the facts.<br/>
+<br/>
+So now I have ONE BIRT event with multiple DATE and PLAC lines with the implied rule that the one comes first is the one to use in displays and preferences, and you gotta hope your program understands this convention (see funny story below).<br/>
+<br/>
+So, Adrian, this problem we ALL have, whether we know it or not. I'm not sure what the best way to solve it is (I have many records in my database using these different approaches and they are all pretty ugly, but true honesty requires they be ugly GIVEN THAT WE DON'T PROPERLY SUPPORT THE EVIDENCE AND CONCLUSION PROCESS).<br/>
+<br/>
+The only reason I have all this power over my records is because the LifeLines program allows (actually REQUIRES) me to edit my records in their PURE GEDCOM FORM (there are NO FORMS IN LIFELINES), so I have complete access to this information. Most programs don't allow this, so for those, you can only guess what kind of a mess your "source trees" get into.<br/>
+<br/>
+Here's a funny story. When I first wrote LifeLines I knew this problem would happen, so I wrote the code so that if there were extra NAME lines, extra BIRT structures, extra DATE lines in events, and so on, that the first would alway have priority. This would be the info used for display, for reports, for age calculations, and so forth. (Of course, in the LifeLines report generation language, I put in facilities that ALL the extra lines could be extracted and used in reports). Then I put the program into the public domain and it became an open source project on Source Forge. So of course the developers who took it over wanted (and did) rethink every single decision I put into the original version, and put their own stamp on everything. This is the nature of open source software and you have to go along with that with faith that in general things will get better and better. And for LifeLines this was mostly true. At one time they decided that it should be the LAST of the extras that should be chosen (the reason, I guess, was that that last one you added would be the one you wanted), but later they changed it so that the one that had the MOST INFORMATION would be the one chosen, and given they all have the same amount of information (this means who has the most 2 lines within it) chose the one earlier in the file. Well this is a good solution, I guess, but every once in awhile I have a record where it picks the wrong structure, because that structure has more info than the rest, but that extra info is stuff I don't believe to be true. Well, it's been going on 20 years since I wrote LifeLines, and I don't have the heart to go back into the code after so many hands have been stirring it around, and try to put it back the way I want it. So I just live with it, imagining the day when the magic of DeadEnds will lift me into the sublime world of genealogical rapture.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-12T05:57:35-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+Yes, you see it correctly. I have always felt that the user must be able to provide sources and add notes at any point inside a genealogical record, even something as seemingly silly as adding a note to a note.<br/>
+<br/>
+In my long response to Adrian just posted you can see my rationale -- it all boils down to the fact that in a system that only handles conclusion records, it can get very complicated in picking and choosing which of the sources you got the info from you want to used to justify different facts in the records.<br/>
+<br/>
+I can only do this because my program allows me to. Most programs don't allow such shenanigans.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-01-12T06:02:36-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Thank you for this message. The light bulb finally went off and I think I finally "get it". The "it" being the different "perons" and that software developers have to change what they are doing.<br/>
+<br/>
+Let me see if I do "get it" or get it more than yesterday.<br/>
+<br/>
+It sounds like you do most of the "data entry" using GEDCOM, rather than from an application.<br/>
+<br/>
+Your "person" definitions are based on the "level" (0, 1, 2, etc) for that Person. Promoting or Demoting is what "controls" or defines the type of Person is, and at what "level" the Fact / Event and related SOUR information.<br/>
+<br/>
+Is that close?<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-12T06:28:30-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+I do ALL my data entry by directly editing GEDCOM records. However, this is done from "inside" my application. When I ask to edit something, my program creates a temporary file with the GEDCOM record in it, and then passes me over to a text editor with that file (users can pick which text editor they want -- as an very aged UNIX fa*t I use vi, but users can choose whatever they are familiar with). When I finish editing the file, the editor immediately returns back to the application which validates my changes before continuing. It is a seamless operation. It is very important to be able to do this editing from within the program so that all issues of consistency between records can be verified. If I make a mistake during editing (get levels wrong, point to families that don't exist, etc.), the program knows immediately and forces me either to abandon my changes or to re-edit the record. It's painless and smooth.<br/>
+<br/>
+My persons are all at level 0 of course since they are records. The vital events in the records are always at level 1 and the date and places of those events are always at level 2. It is the source lines I have to move around to different levels when I mix and merge facts from different sources. The promoting and demoting of sources are done so that I can keep track of what information in the recorsd comes from what sources.<br/>
+<br/>
+The fact of the matter is that those sources should really be evidence persons, but my program, like all others, does not adequately support that concept. But I think as you suggest, the promoting and demoting of source lines can be viewed as picking and choosing which of these (unfortunately non-existant) evidence persons would be the ones being chosen to supply the conclusion information.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>theKiwi</strong> 2011-01-12T08:54:07-08:00</div>
+<div class="text">"So, for the date field, I would argue that sources S2 (applies to just date), S4 (applies to whole birth event), and S7 (applies to whole record) apply, but none of the others do."<br/>
+<br/>
+Over the years on the ReunionTalk forum, this has been perhaps one of the most persistent requests - the ability to source each of the 3 different "elements" of information that are allowed for an Event - an item with a Date, Place and Memo. <br/>
+<br/>
+Reunion doesn't allow this either internally or of course when exporting a GEDCOM file - any source applied to the event is by default assumed to apply to all 3 elements, unless the "Source Detail" is used to specify where each bit of information came from.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-12T09:16:20-08:00</div>
+<div class="text">Sir Kiwi,<br/>
+<br/>
+Yes, that was my intention in the example. A source at level n applies only to its parent line/node at level n-1, which means it also applies to EVERYTHING below its parent line/node. Therefore, a source at level 1 applies to the entire record.<br/>
+<br/>
+p.s. I am an ornithologist, too.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-12T12:34:55-08:00</div>
+<div class="text">The complexity of sourcing the "sub-facts" (e.g. the date, location, note, etc - but potentially a lot more) has been exercising my brain. Clearly several people like the idea of being able to do so - my concern is about the robustness of the model when adding a new "sub-fact" (as indicated above). I think, however, we can get round that at the expense of altering Tom's concept slightly.<br/>
+<br/>
+Let us keep the idea that "a source at level n applies only to its parent line/node at level n-1", and the idea that sources can appear, not just at the top level for an event / property / attribute / whatever, but also at lower levels against individual things within that event / property / whatever. However, let us modify the idea and say that a source at level n applies only to its parent line/node at level n-1, but does not apply to ANYTHING below its parent line/node unless explicitly found there.<br/>
+<br/>
+Thus to repeat Tom's original example. Take the fact:<br/>
+1 BIRT<br/>
+2 DATE 18 DEC 1949<br/>
+3 SOUR @S2@<br/>
+2 PLAC New London, New London, Connecticut, USA<br/>
+3 SOUR @S3@<br/>
+2 SOUR @S4@<br/>
+<br/>
+In this new view, Source S4 applies as a Source to the birth event - this means S4 tells us that Tom was born. (Like I say, slightly silly example, but think of an event that isn't mandatory for a carbon-based life-form if you object). The different bit is that S4 now says _nothing_ to us about the date or the place. <br/>
+<br/>
+Then if we add the address as I did above, we add only the source for that address and don't need to consider propagating S4 downwards to the Date or Place as I did above. Thus the new pseudo-GEDCOM is:<br/>
+<br/>
+1 BIRT<br/>
+2 DATE 18 DEC 1949<br/>
+3 SOUR @S2@<br/>
+2 PLAC New London, New London, Connecticut, USA<br/>
+3 SOUR @S3@<br/>
+2 ADDR 4472 Main Rd, New London     &lt;&lt;&lt;&lt; New bit<br/>
+3 SOUR @S8@<br/>
+2 SOUR @S4@           &lt;&lt;&lt;&lt; untouched<br/>
+<br/>
+S4 stays where it is because in this view, it said _nothing_ to us about the date or the place. <br/>
+<br/>
+This view is more robust at the point of adding sub-facts because we are not reliant on programmers doing what Tom describes as "very PAINFUL REALITIES"<br/>
+<br/>
+But it has one added advantage. All current GEDCOM files - unless extended as Tom has done - work on this view of the world. The source applies to the fact and cannot be assumed to apply to each of the sub-facts. Therefore, when someone converts a GEDCOM fact, they leave the source link where it is. <br/>
+<br/>
+As a result, yes, our sub-facts (Date, Place, Organisation, etc) are now unsourced. But what's the alternative? Carry the top level sources down to the sub-facts as well? I don't think so - we have no idea whether they apply to the sub-facts and I'd rather have an unsourced fact than an erroneously sourced fact. One is obvious, the other not.<br/>
+<br/>
+Whereas conversion under the original idea of a top-source applying to all sub-facts, must result in errors since we have no idea whether the top-source does apply to all sub-facts so whether we leave it at the top or propagate it down to all sub-facts, we're stuck with an error.<br/>
+<br/>
+Thus in this new proposal: a source at the top level of an event / property / attribute / person / family / whatever is a source for the existence of the event / property / attribute / person / family / whatever;<br/>
+<br/>
+It _may_ also be a source for values within the event / property / attribute / person / family / whatever but this must be explicitly recorded against the matching values.<br/>
+<br/>
+More subtly, absence of a explicit recording of a source against a lower-level value within the fact does _not_ mean that the source says nothing about that lower-level value . The relationship is "unknown" not "negative".</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-12T13:01:01-08:00</div>
+<div class="text"><br/>
+Adrian,<br/>
+<br/>
+That sounds like a pretty good idea to me. It means three good things to me:<br/>
+<br/>
+1. We have to push our sources down as far as possible, so we have a nice rule that every ultimate PACT has a source.<br/>
+2. We don't have to change levels on existing source lines/nodes when adding more PACTs.<br/>
+3. Substructures never have to be assumed as coming from the same source.<br/>
+<br/>
+What seems to be of concern is that:<br/>
+<br/>
+1. For simple records, we have to put in a lot more source lines/nodes than we used to.<br/>
+<br/>
+So say we're really bad genealogists and we trust family trees from the Internet an we end up with a record like:<br/>
+<br/>
+0 @I1@ INDI<br/>
+1 NAME Thomas Trask /Wetmore/ Sr<br/>
+1 SEX M<br/>
+1 BIRT<br/>
+2 DATE 13 MAR 1866<br/>
+2 PLAC Plympton, Digby, Nova Scotia, Canada<br/>
+1 DEAT<br/>
+2 DATE 17 FEB 1947<br/>
+2 PLAC New London, New London, Connecticut, USA<br/>
+<br/>
+Normally I would just stick one 1 SOUR line at the end of this record that says something like:<br/>
+<br/>
+1 SOUR Got this off Fred Snurf's family tree from Ancestry.com and the turkey didn't put in any sources.<br/>
+<br/>
+It seems with Adrian's idea I would now have to ...<br/>
+<br/>
+ @I1@ INDI<br/>
+1 NAME Thomas Trask /Wetmore/ Sr<br/>
+2 SOUR Got this off Fred Snurf's family tree from Ancestry.com and the turkey didn't put in any sources.<br/>
+1 SEX M<br/>
+2 SOUR Got this off Fred Snurf's family tree from Ancestry.com and the turkey didn't put in any sources.<br/>
+1 BIRT<br/>
+2 DATE 13 MAR 1866<br/>
+3 SOUR Got this off Fred Snurf's family tree from Ancestry.com and the turkey didn't put in any sources.<br/>
+2 PLAC Plympton, Digby, Nova Scotia, Canada<br/>
+3 SOUR Got this off Fred Snurf's family tree from Ancestry.com and the turkey didn't put in any sources.<br/>
+1 DEAT<br/>
+2 DATE 17 FEB 1947<br/>
+3 SOUR Got this off Fred Snurf's family tree from Ancestry.com and the turkey didn't put in any sources.<br/>
+2 PLAC New London, New London, Connecticut, USA<br/>
+3 SOUR Got this off Fred Snurf's family tree from Ancestry.com and the turkey didn't put in any sources.<br/>
+<br/>
+Yikes!!<br/>
+<br/>
+I think we need to find a middle course, but I'm not clever enough to see it right now.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2011-01-12T15:47:59-08:00</div>
+<div class="text">Here is how I would break down the same info<br/>
+<br/>
+@I1@ INDI                <br/>
+1 NAME Thomas Trask /Wetmore/ Sr<br/>
+1 SEX M<br/>
+2 BDATE 13 MAR 1866         &lt;note generic not a record<br/>
+2 BPLAC Nova Scotia, Canada &lt;note generic not a record<br/>
+1 DDATE 17 FEB 1947         &lt;note generic not a record<br/>
+1 DPLAC Connecticut, USA    &lt;note generic not a record<br/>
+<br/>
+<br/>
+@E1@ EVID<br/>
+0 SOUR @S1@ <br/>
+0 INDI @I1@ <br/>
+2 BDATE 13 MAR 1866<br/>
+2 BPLAC Plympton, Digby, Nova Scotia, Canada<br/>
+@E2@ EVID<br/>
+0 SOUR @S1@ <br/>
+0 INDI @I1@ <br/>
+1 DDATE 17 FEB 1947<br/>
+1 DPLAC New London, New London, Connecticut, USA<br/>
+<br/>
+<br/>
+@S1@ SOUR <br/>
+0 TITL Fred Snurf's family tree<br/>
+1 NOTE Got this off Fred Snurf's family tree from Ancestry.com and the turkey didn't put in any sources.<br/>
+1 Location Ancestry.com</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-09T20:38:09-08:00</div>
+<div class="text"><br/>
+Most (all?) of us would agree that sentence templates are application concepts, and nothing written here suggests otherwise. The relationship with Better GEDCOM is basic -- information from Better GEDCOM records provide the information that fill in the slots of the templates. This was described. There is no requirement for applications to support sentence templates from Better GEDCOM or otherwise. Good applications are simply going to do it because it makes their reports have better quality than the applications that don't.<br/>
+<br/>
+This issue came up because of GeneJ's questions about how one gets high quality statements of date and place in conclusions persons. These statements could either be data entered by the user, which means they would have to be stored as Better GEDCOM data in Better GEDCOM records, or they could be automatically generated by an application with some clever software. One potential issue that bears on Better GEDCOM is obvious -- if applications are particularly good at creating these place and date strings, users would be tempted not to add their own dates and places at the conclusion level. If an application does not have the feature for creating those strings, users would have to create them themselves and put them in the Better GEDCOM conclusion objects. This would have the very disconcerting effect of having users of two different applications, both of which fully support Better GEDCOM, having to enter data into their Better GEDCOM records differently.<br/>
+<br/>
+I think the conclusion must be that applications cannot be depended upon to create the strings, which means the users must. So then the discussion turned upon the issue of how much freedom should Better GEDCOM give users for constructing their date and place strings. GEDCOM is very limited in how legal date strings can be formatted. To get the kinds of date strings that GeneJ wants, either Better GEDCOM's date strings must be given much greater freedom for structure, or maybe we have to support a special "description" tag that, if used, would be a free-format string that would be used in the place of the date string in displays and reports. My preference is to put the freedom into the date strings themselves, and put the onus on the application software to try to extract meaningful information from those strings (e.g., date or date range) when needed for such things as indexing or sorting. However the idea of a description tag is one that could be used in many contexts, one that would be used sparingly, but one that could provide a much needed "escape" mechanism when a user must override what would happen without the description. Note that this "escape" concept is very common in software that processes complex and unpredictable types of information. These escape routes provide a way to handle data that doesn't fit into any of the schemes that the software was designed to handle.<br/>
+<br/>
+My example of this working well is the LifeLines program, which uses generic GEDCOM as its model, but allows completely free-format strings for both date and place values. I have found that software does not have to be very clever at all to read those free-format strings and extract enough fixed information from them that they can be used to sort and index the records. One trivial approach is to look for the first four character token in a date string that is a number between 1000 and 3000 and assume it's a year and use that year to index that date. I have many thousands of persons in my database, and many of them have very odd and long strings for dates, but i've never found this technique to fail. This technique would obviously also work for GeneJ's examples. (e.g., "on a Monday in spring some time between 1918 and 1921" -- LifeLines would index the event under 1918 and be done with it).<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-09T23:46:39-08:00</div>
+<div class="text"><br/>
+Adrian,<br/>
+<br/>
+You said: "In the case of in-line notes, we would have to consider whether the citations for the fact apply to the whole fact, including all the notes, or not, in which case we could need citations against the fact as a whole and / or against each of the notes. Which starts to get less than robust from the use-input viewpoint."<br/>
+<br/>
+No, it works for inline notes as well, e.g.:<br/>
+<br/>
+1 BIRT<br/>
+2 NOTE blah, blah<br/>
+3 SOUR @S43@<br/>
+2 NOTE more blah<br/>
+3 SOUR @S43@<br/>
+<br/>
+Now only the GEDCOM/BG need to have this breakup. The program may show it as one note with 2 citations in it, e.g.:<br/>
+<br/>
+Note: blah, blah [1] more blah [2]</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-10T04:30:10-08:00</div>
+<div class="text">"it works for in-line notes as well"<br/>
+Louis - thanks for showing out how it could be done. And when I'm just checking through to see how much of this is in GEDCOM now, I discover, guess what, it's all there already! The possibility of multiple notes, each with sources independent of the source for the details of the event - all already there. Score 1 up to Louis...<br/>
+<br/>
+I'll park that suggestion in my mind until we discuss notes, sourcing and citations in more detail.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-10T04:43:37-08:00</div>
+<div class="text">Russ,<br/>
+"How does an applications Sentence Template get used in a BetterGEDCOM file? Isn't that something on the User Interface?"<br/>
+<br/>
+1. If an application's Sentence Template were exported onto a BG file, it would just be stored there. I can't see any compelling reason for an app to export its templates other than <br/>
+(a) those few apps that use GEDCOM as their native file format now and presumably will use BG as their native file format in the future OR<br/>
+(b) if an app designer decided they wanted to save that data onto a BG file as an archive (let's not discuss how sensible that is - I just said "if" &lt;grin&gt;)<br/>
+My only suggestion is that it might be useful to designate a particular part of the file to contain such oddities.<br/>
+<br/>
+2. No, absolutely no need for all apps to have such a thing. <br/>
+<br/>
+3. If the sending application doesn't have that 'feature'? Then they'll never get on the BG file.<br/>
+<br/>
+4. If the receiving application doesn't have that 'feature'? I would envisage that IF such templates ended up on the file, they should have custom / extensible / app-defined tags that the recipient app will just "ignore". (Just what "ignore" means is something to discuss when we talk about extensions, but clearly it's got to include "process the data that you can").<br/>
+<br/>
+"That Sentence Template, from what I see in both programs, are in the User Interface, both on screen and in reports". Yes, except it clearly has to be stored in the app's own 'database' because you don't create it immediately before you run the report. If you like, it's stored in that part of the database dedicated to the UI, rather than to the genealogy.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-10T07:36:31-08:00</div>
+<div class="text">test42 said "I still think the 'surety' value could be used for more than just sources"<br/>
+<br/>
+Not sure whether you still think that - but if you mean the current QUAY item then, sort-of-yes, it's not far off. It needs the meaning of the values to be altered (see TMG's definition of surety for one consistent definition) and it's got to be used in different places as well. <br/>
+<br/>
+I'm afraid I hold out no real hope for it being calculated from the values applicable to the sources as the logic would have to be expressed in some formal, rigorous fashion, way beyond our capabilities, for it to be amenable to maths. <br/>
+<br/>
+NB - on another topic - we may need to get some different names for these items - "prefix" and "suffix" are not good ones because the items may not be prefices in another language.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-10T08:47:34-08:00</div>
+<div class="text">Adrian wrote, "we may need to get some different names for these items - "prefix" and "suffix" are not good ones because the items may not be prefices in another language."<br/>
+<br/>
+While it doesn't solve the problem of whether or not "prefix" translates well, what do we think of term "Qualitative prefix" (by which one could infer the date/location, etc. entry is more "quantitative").</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-10T11:27:33-08:00</div>
+<div class="text"><br/>
+GeneJ, Adrian,<br/>
+<br/>
+I agree that prefix and suffix aren't good terms to use. In fact I found them so confusing when they popped up here that I didn't know what they meant.<br/>
+<br/>
+I take it we are talking about words such as between, about, before, after, probably, possibily? I think "qualifier" works fine for these. The suffixes I assume were the phrases in parentheses that tied the dates to events? This might just be called "event phrases."<br/>
+<br/>
+The terms prefix and suffix make you automatically think about names, not dates!<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-10T13:11:34-08:00</div>
+<div class="text">Hi Tom:<br/>
+<br/>
+With regard to dates, the adverbs referenced as "prefixes" (probably, possibly, likely, and maybe) are a field/item/entry separate from the date styles we already have such as about/circa, before, after, between (and the silent [on]). <br/>
+<br/>
+We'd be recognizing the following as being different:<br/>
+<br/>
+BIRTH<br/>
+XXXX probably <br/>
+DATE aft1815 ....<br/>
+<br/>
+BIRTH <br/>
+XXXX<br/>
+DATE aft1815 <br/>
+<br/>
+<br/>
+BIRTH <br/>
+XXXX probably <br/>
+DATE 15 July 1816<br/>
+<br/>
+BIRTH <br/>
+XXXX <br/>
+DATE 15 July 1816 ...</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-01-11T19:16:23-08:00</div>
+<div class="text">Perhaps most for my own memory, here is a summary of my thinking on the various issues.<br/>
+<br/>
+Dates - I have previously argued that it should be possible to represent dates as a free form text string, possibly accompanied by a structured date (sort date, that may also appear alone as the only date). Surety values should not go in the text string. When there is a time period, there will be a need to have two strings with something between them.<br/>
+<br/>
+Prefixes and suffixes for place names should be allowed per event, and it should also be possible to store a default value in the place-name record. They should be called prefix and suffix – I don’t see what else would make sense even in another language. (Is it realistic to have language dependent values of these prefixes/suffixes?)<br/>
+<br/>
+Conclusion level Surety values, which are not necessarily related to sources, could be attached to dates, places and relations to persons for an event. Surety should not be included in the date-string or place-prefix/suffix above.  Coded values each representing a word (“probably” etc) will allow translation- I don’t need to do probability calculations on these values.<br/>
+<br/>
+Separate Reasoning field – I am not sure about this. It should be possible to carry the info in the fields above (string/pref/suff).<br/>
+<br/>
+Transfer of sentence templates - These can be carried with extension encoding since they most likely will only be read by the same program as exported them. Could be used to exchange templates between users of the same program.<br/>
+<br/>
+I support extension of the formal date notation, as in Gedcom now, to support time ranges with vague ends (eg from 1844-47 to about 1878)<br/>
+<br/>
+Footnotes in Notes – should be allowed to contain any text, not just citation info. Notes could be broken up so footnotes could go in between – but this should be more closely investigated when we know the encoding of notes (HTML?). What about the ability to assign footnotes to dates, place, and maybe other pieces of an event – not only for source reference.<br/>
+<br/>
+New issue: Also, I would like to see the possibility to split a note into several parts as in TMG and other progs. I see them as a possibility to get away from some of robot language and also be able to better structure the output for a person  in reports – e.g. mixing events and note parts in a sequence. Thus I would like to see the ability to assign a “classifying string” to each note part that would say something about the type of content. (Which may be ignored by a non supporting prog.)</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-11T20:04:04-08:00</div>
+<div class="text"><br/>
+Free form dates cannot be parsed by programs because they have no structure, and they might as well be a note on the date field.<br/>
+<br/>
+Programs need a date field - they are extremely important and we should no take that away. The user should interpret it for the program and record it as such.<br/>
+<br/>
+e.g Date as given<br/>
+<br/>
+Two years before dad died <br/>
+<br/>
+could and should be recorded as:<br/>
+<br/>
+2 DATE ABT 1843<br/>
+3 NOTE Two years before dad died<br/>
+<br/>
+I never thought there was a need for a sort date. It's just extra fluff for the user to worry about that shouldn't have to be worried about. Programs can easily sort structured dates properly. If you want something sorted in a specific date order, then add an estimated date (e.g. EST 1842 ) to allow it to go in the correct place.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-11T20:09:29-08:00</div>
+<div class="text"><br/>
+Splitting a note into several parts is exactly the same as having several adjacent notes. <br/>
+<br/>
+No need to complicate the note definition since it is possible already.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-11T22:32:37-08:00</div>
+<div class="text">While adding sort dates to BetterGEDCOM is a totally different matter, the practice of using estimated dates for sorting purpose should probably go in the "bad data practices" ledger column.  <br/>
+<br/>
+Using an estimated date to force a sort date is not unlike what World Family Tree did with the WFT estimate years ago. Both have the same outcome--bad data. <br/>
+<br/>
+If your ancestor happens to be on the receiving end of those "estimated dates," you probably know what I'm talking about.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-09T13:51:38-08:00</div>
+<div class="text">"Some applications allow you to create a 'sentence template' for each event type, which is a really cool idea ... it's also probably true that this is more an application issue than a Better GEDCOM issue"<br/>
+<br/>
+I agree, not least because the 'sentence template' is probably inspired by the native data structure inside the app, rather than the sort of stuff seen in a BG file. However, it might be useful to designate a means to allow the extension of the BG format to include this sort of stuff - which I guess is (warning - geek term) metadata relevant only to the app. Still, if you want to dump your data to BG, why not dump the lot? Especially if you really thought you dumped the lot, but it turns out you've only got the data, not the meta data.<br/>
+<br/>
+And for your question - where does the data come from? It's what I've input and it's potentially important to realise that my method of working considers not just the evidence and conclusions (albeit presented in your terms only in a conclusion-only model), but also the output. (Which I think is also what Gene is saying). <br/>
+<br/>
+Now, for all the reasons that you refer to, I dislike computer generated reports, even though Calico Pie's Family Historian does its best to ring the changes with "He" "She" or "They" replacing "XXXX YYYY ZZZZZ" in some vaguely useful fashion. So a text written by a human is still my ideal. <br/>
+<br/>
+But I'll still produce generated reports to cover the 99% of my relatives who I've not written human words for. That means I do enter my data in such a way that I hope it reads vaguely intelligently on output. In particular, I'd quite like the ability to enter things like "Before her death" as a date phrase and have that picked up and recognised, equated to the correct date _if_ it exists, and ultimately printed out. That's probably too vague to act as a spec'n, and there must be a strictly limited number of phrases that should be interpreted and equated. But there's something there.<br/>
+<br/>
+Similarly, I'm liable to enter attributes that have a long time-scale - classically, it's "X served in the Cheshire Regiment from 1915 to 1919". I'll put the details about promotions, battles, woundings, etc, inside the note for that one event, so it's a mini-biog for those 5y. If I pull out the promotions, say, to be separate events, the generated output gets all the way to demob in 1919 before picking up the next event and saying "He was promoted to corporal in Jan 1916". <br/>
+<br/>
+I offer this last para up only to point out that my notes are going to be big - and I'd therefore like to have the ability to drive footnotes / citations _inside_ that note, not just at the level of the event / attribute as a whole. If we ever get to citations...</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-09T14:00:34-08:00</div>
+<div class="text">"Having said all this, it's also probably true that this is more an application issue than a Better GEDCOM issue."<br/>
+<br/>
+Awww ... and here I thought we were finding a bit of consensus. <br/>
+<br/>
+(1) I don't see how you strip the prefix from the related information without materially altering the meaning of the data.<br/>
+<br/>
+(2) Because that alteration turns "maybes" into "for sure," we should consider the addition of the simple field I'm referring to as "prefix"</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-09T14:23:31-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+In GEDCOMs today, I see big notes broken up into smaller ones, and then each of the smaller ones can then have its own citations. If the program is smart, it can display consecutive notes back together as a big one.<br/>
+<br/>
+So thinking simply, there are sometimes simple ways to implement complex things (like embedded citations).</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-09T14:31:42-08:00</div>
+<div class="text">"I don't see how you strip the prefix from the related information without materially altering the meaning of the data."<br/>
+<br/>
+Don't worry Gene - you're right. You can't strip the prefix. What Tom and I were referring to was the 'sentence template' - that's the recipe for how to stick the various bits of fact together to form a narrative sentence in the English language, when you want to run off a narrative report, rather than a simple item listing. The various bits themselves, e.g. what you refer to as the prefix, _must_ be part of the BG data, as you suggest in (2) above.<br/>
+<br/>
+Or put it into cookery terms - the bits such as the prefix, date, location, whatever sort of qualifier you like, are the ingredients. The BG data must make room for all the ingredients. The 'sentence template' is the recipe for how those ingredients get stuck together to form a vaguely intelligent narrative sentence. <br/>
+<br/>
+One of the reasons the recipe is an application issue is revealed in my phrase "the recipe for how to stick the various bits of fact together to form a narrative sentence in the English language", where the give-away is the word 'English'. Another language will have its own sentence template, working on the same ingredients but possibly in a different order.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-09T14:33:04-08:00</div>
+<div class="text">Adrian wrote, "I offer this last para up only to point out that my notes are going to be big - and I'd therefore like to have the ability to drive footnotes / citations _inside_ that note, not just at the level of the event / attribute as a whole. If we ever get to citations..."Tom wrote,"If the program is smart, it can display consecutive notes back together as a big one. ... So thinking simply, there are sometimes simple ways to implement complex things (like embedded citations)."<br/>
+<br/>
+That is a big issue, especially for those who write proof arguments and want the reference marks to show in the right places. <br/>
+<br/>
+I too look forward to those discussions, when we get to the topic of citations.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-09T14:34:09-08:00</div>
+<div class="text">Adrian wrote, "You can't strip the prefix ..."<br/>
+<br/>
+TYTY</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-09T14:39:56-08:00</div>
+<div class="text">Louis - re break-up and recombining - I see what you mean. <br/>
+<br/>
+That would certainly work in the case of notes existing as their own entity and linked to from elsewhere, because they'd (I assume) naturally have their own citations / footnotes.<br/>
+<br/>
+In the case of in-line notes, we would have to consider whether the citations for the fact apply to the whole fact, including all the notes, or not, in which case we could need citations against the fact as a whole and / or against each of the notes. Which starts to get less than robust from the use-input viewpoint.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-01-09T16:06:41-08:00</div>
+<div class="text">Adrian, I still think the "surety" value could be used for more than just sources. You can enter one manually for every conclusion you make. You demonstrated that it can't be calculated by multiplying - but there will be a mathematical way to calculate it, I'm sure. A kind of (weighted?) average? (I'm just guessing, I've no clue about this kind of maths and these terms...)<br/>
+<br/>
+The surety could then be translated to a string for reports, e.g. <br/>
+100="proven"; 99-81 = near-certain; 80-61 = "probably"; 60-41 = "possibly"; 40-21 = "unlikely"; 20-1 = "very unlikely"; 0="disproven"<br/>
+...or similar. Should 0 and 100 be special?</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-01-09T16:39:07-08:00</div>
+<div class="text"><strong>Surety - Prefix - Data - Suffix</strong><br/>
+I guess this can be used generally for reports. Could it be used generally for a BG-file?<br/>
+<br/>
+"Probably - after - 1950 - (date of marriage)"<br/>
+"Possibly - near - Lexington - (where the parents lived)"<br/>
+Prefixes for time indicate a date range, for places a "space range". Can there be other uses for prefixes?<br/>
+<br/>
+Suffixes in Gene's examples are always a kind of reasoning behind the conclusion. So in a way, they are the missing link in the evidence-conclusion process. <br/>
+How to put these into a BG structure? I think I did it the wrong way round above, it should be more like this:<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;//ex. 1, death//&lt;br/&gt;Daterange:&lt;br/&gt; From: 2 July 1722&lt;br/&gt;  Reasoning: date of will&lt;br/&gt;   Link: source containing will&lt;br/&gt; To: 3 September 1772 &lt;br/&gt;  Reasoning: probate of will&lt;br/&gt;   Link: source/event containing probate of will&lt;br/&gt; Surety: 8 (for the whole range)&lt;br/&gt;&lt;br/&gt;//ex. 2, marriage//&lt;br/&gt;Date: Before 1742&lt;br/&gt; Reasoning: when their first child was baptized&lt;br/&gt;  Link: Baptism event of child&lt;br/&gt;Place: Norwich Connecticut&lt;br/&gt; Prefix: at&lt;br/&gt; Reasoning: where her parents were living&lt;br/&gt;  Link: Parents place&lt;br/&gt; Surety:50&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">//ex. 1, death//
+Daterange:
+ From: 2 July 1722
+  Reasoning: date of will
+   Link: source containing will
+ To: 3 September 1772 
+  Reasoning: probate of will
+   Link: source/event containing probate of will
+ Surety: 8 (for the whole range)
+ 
+//ex. 2, marriage//
+Date: Before 1742
+ Reasoning: when their first child was baptized
+  Link: Baptism event of child
+Place: Norwich Connecticut
+ Prefix: at
+ Reasoning: where her parents were living
+  Link: Parents place
+ Surety:50</pre>
+<!-- ws:end:WikiTextCodeRule:0 --><br/>
+The Reasoning is attached to every PACT. You can use plain text there. Then there is a link (if you want to make it easy to jump to conclusions, erm, to follow the chain of reasoning). A smart software could use the linked event/source/PACT to come up with its own string for the "Reasoning".<br/>
+<br/>
+Btw, it's not an image, it's just text in between two <a class="wiki_link" href="/code">code</a> lines. Try it on the test-pages ;-)</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-09T16:41:45-08:00</div>
+<div class="text">testuser wrote, "the surety could then be translated to a string for reports, e.g.<br/>
+100="proven"; 99-81 = near-certain; 80-61 = "probably"; 60-41 = "possibly"; 40-21 = "unlikely"; 20-1 = "very unlikely"; 0="disproven"<br/>
+...or similar. Should 0 and 100 be special?"<br/>
+<br/>
+Here's my thought on the _prefixes_ ... <br/>
+<br/>
+I'm inclined to think words would be more powerful than numbers--but maybe what we want to work towards now is agreement that  prefixes should be a part of BetterGEDCOM. <br/>
+<br/>
+If we get such a consensus, we can corral our best thinking around how that concept would be best implemented in BetterGEDCOM as part of the "what is BetterGEDCOM gonna look like" move.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-01-09T17:03:25-08:00</div>
+<div class="text">Yes, I agree, prefixes need to be a part of BetterGEDCOM! All in favour say Aye! :)<br/>
+<br/>
+I think words are fine for the "surety" prefix, and are the only way for the time-and-place-qualifiers. <br/>
+<br/>
+For places at least, I guess we need to be flexible and allow user-defined values (someone might actually be born "on" a plane "above" the north pole...). <br/>
+<br/>
+For time, I think we can use the short set of qualifiers that GEDCOM has, mending a few omissions. GEDCOM can't do "FROM ABT x TO AFT y", I think. So we should allow the combination of date-ranges and qualifiers.<br/>
+<br/>
+Using words exclusively we need to explain the meaning well enough so that translators don't misinterpret anything.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-01-09T18:27:40-08:00</div>
+<div class="text">Adrain,<br/>
+<br/>
+RE: Sentence Template<br/>
+<br/>
+How does an applications Sentence Template get used in a BetterGEDCOM file? Isn't that something on the User Interface?<br/>
+<br/>
+Does this mean that ALL applications have to have such a thing?<br/>
+<br/>
+What if the sending application doesn't have that 'feature'?<br/>
+<br/>
+What is the receiving application doesn't have that 'feature'?<br/>
+<br/>
+I have tested two software programs. One has this feature, the other does not. I can successfully share data between the two.<br/>
+<br/>
+That Sentence Template, from what I see in both programs, are in the User Interface, both on screen and in reports. The difference between the two programs, I can change one and can't change the other.<br/>
+<br/>
+How does this fit into a BetterGEDCOM file?<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-08T21:31:52-08:00</div>
+<div class="text"><br/>
+GeneJ asks "In practice, I also see what I will call pertinent name/date/relation comments. Will any of the models above allow me, for example to communicate the dates as below (example from above source, pp. 18, 20):<br/>
+Died between 2 July 1722 (date of will) and 3 September 1772 (probate of will) ...<br/>
+Married before 1742 (when their fist child was baptized), perhaps at Norwich Connecticut, where her parents were living."<br/>
+<br/>
+The short answer is that applications today don't allow this level of detail except in unstructured notes. The issue underlying the question here was the main topic in my talk "Structure and Flexibility in Genealogical Data." We need structure in order to make ease of computing possible. Yet we need flexibility to handle all situations that can occur in the messy, sloppy world of genealogy. Most computer-based solutions are heavy on the structure side, but very light on the flexibility side. Most applications don't go any further than bef, aft, bet, prob and poss.<br/>
+<br/>
+Another issue behind your issue here is the concept of evidence records versus conclusion records. Clearly the date value of " between 2 July 1722 (date of will) and 3 September 1772 (probate of will)" is a conclusion date that derived from two evidence dates. The date value of "before 1742 (when their fist child was baptized)" is just as clearly a conclusion date derived from the event of a child's baptism. And just as clearly the place value of "perhaps at Norwich Connecticut, where her parents were living" is a conclusion based on an event from the child's parents' lives.<br/>
+<br/>
+In my DeadEnds model these two date values and one place value could be written EXACTLY as you have written them in the conclusion person records, but I am one of the few developers who believes that genealogical applications must particularly be extra heavy on the flexibility side . The conclusion records would contain/refer-to the evidence person records with the details.<br/>
+<br/>
+One could also imagine good software almost being able to reconstruct the strings you have above by deriving those strings from the events in the evidence records, but this would be too much to expect from most application developers. What I mean here is actually quite simple. When you create a conclusion person from evidence persons, say you choose NOT to enter a specific date or place for an event. What date or place would then be used by the application for display in either user interface screens or on reports. Well, if there is no information available at the conclusion level, it has to come from the constituent evidence records. One could imagine different ways for this to happen (use the first one, use all of them, create a between date that covers the extremes, create a nice string as in your example). I think the rule should be that you enter dates and places in conclusion objects in exactly the manner you would like to see them in reports, or you let the software, if it is smart enough, create those strings for you.<br/>
+<br/>
+I'm sure you can see how the "structure" based developers would object to your kind of strings, as they are harder to parse and understand than simple ones. However, it is not all that hard to write software than can parse through these more complex strings and pick out the pertinent facts. For example, the specific dates and specific places mentioned in your strings are clearly recognizable amid all the extra words. This recognition is necessary of the dates and places are going to be indexed (to make them searchable) or used in various computations (e.g., calculation of age at time of death).<br/>
+<br/>
+Sorry for overly geeky answer, but you did ask.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-01-09T06:51:27-08:00</div>
+<div class="text">Gene, thanks for a good real-life problem!<br/>
+<br/>
+In a way, I think that qualifiers could be represented by a "Surety"-level. Something like a scale from 0 to 10, on which you rate the reliability you give to the bit of information it's attached to.<br/>
+Maybe written qualifiers can be derived from that number, and the other way round.<br/>
+<br/>
+Your example:<br/>
+<em>"?" as, "uncertain interpretation of original text."</em><br/>
+could be translated into a low "surety" number attached to the transcript.<br/>
+<br/>
+<em>born about 1718, probably at Marlborough, Massachusetts</em><br/>
+could have a higher surety attached to the place.<br/>
+<br/>
+<em>one of the persons I'm reporting as a child might not be a child</em><br/>
+could be indicated by a low surety attached to the link between these persons<br/>
+<br/>
+<em>Died between 2 July 1722 (date of will) and 3 September 1772 (probate of will)</em><br/>
+This is more difficult.<br/>
+"Between X and Y" is already possible in Gedcom. I hope it would be possible to write the date including the reasons for the date-span just like this, and have it recorded in the file just like this. <br/>
+But if it needs to be more structured for the file - maybe it would work like this (pseudo-code...)<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;Daterange:&lt;br/&gt;  From: 2 July 1722&lt;br/&gt;   Link: source containing will&lt;br/&gt;    Linktext: date of will &lt;br/&gt;  To: 3 September 1772 &lt;br/&gt;   Link: source/event containing probate of will&lt;br/&gt;    Linktext: probate of will&lt;br/&gt; Surety: 8 (for the whole range)&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">Daterange:
+  From: 2 July 1722
+   Link: source containing will
+    Linktext: date of will 
+  To: 3 September 1772 
+   Link: source/event containing probate of will
+    Linktext: probate of will
+ Surety: 8 (for the whole range)</pre>
+<!-- ws:end:WikiTextCodeRule:0 --> <br/>
+Your last example could probably be done in a similar way:<br/>
+<em>Married before 1742 (when their fist child was baptized), perhaps at Norwich Connecticut, where her parents were living</em><br/>
+I'd link the "bef 1742" to the baptizing event, and the place to the PACT that has the parents' living there. The place would get a low surety, the date a higher one.<br/>
+<br/>
+<br/>
+(Tried some formatting, let's see how it works...)</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-09T07:21:33-08:00</div>
+<div class="text">I think we need, as your quotes and Tom's comments suggest, more, not less, qualification. Somewhere I've suggested that location should be qualified (e.g. the ability to put "near to Messines, Belgium" instead of simply "Messines, Belgium"). This is another form of qualification that is clearly meaningful.<br/>
+<br/>
+At first, I thought that this could be done by the (expanded) QUAY (Quality) item that we mentioned elsewhere, but that's not so. Firstly that applies to Sources, not to what we deduce from Sources. This can be seen from the extreme example of imagining what it would be like if we didn't enter sources at all but still wanted to enter "Probably 1918" as a date - to do it, you need something that's not dependent on a source being there. Secondly, depending on how you combine the data, four sources, each rated as a "probable", might result in a conclusion that was at best only "possible". (Do the maths - 80% x 80% x 80% x 80% = 41%)<br/>
+<br/>
+So one could create a "Likelihood" for the (manually entered) conclusion - values might be "near-certain", "probably", "possibly", "unlikely", etc, and enter it against the thing you're trying to qualify.<br/>
+<br/>
+However....<br/>
+If we allow it to go against every item within an attribute / event / whatever, we could end up with a mess. For instance, "My granddad was employed probably as a fitter, probably in the role of apprentice, probably by the LNW Railway, probably from April 1911, possibly at Crewe Loco Works, Crewe, Cheshire." I'm not sure anyone understands the resulting sentence. <br/>
+<br/>
+I'd therefore suggest that just _one_ qualifier of the likelihood variety suffices per attribute / event / whatever, viz: "Probably, my granddad was employed as a fitter, in the role of apprentice, by the LNW Railway, from April 1911, at Crewe Loco Works, Crewe, Cheshire." Or possibly. And then I'd expand things in the note against this attribute.<br/>
+<br/>
+SO I definitely advocate something along these lines.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-09T07:44:04-08:00</div>
+<div class="text">Gene - I left commenting on the date-phrases for a separate comment, because I see them as a different issue. As I think you do, because you say "I also see".<br/>
+<br/>
+"Died between 2 July 1722 (date of will) and 3 September 1772 (probate of will)" does not invoke "likelihood" since (crimes apart), it must happen like that. Here, you are simply using date-phrases to illuminate how you got to that conclusion. Indeed, it's not even necessary for you to mention those phrases. (Though it ought to be done _somewhere_).<br/>
+<br/>
+In fact, GEDCOM 5.5 does allow a Date-phrase - either a free-standing one (with no explicit date) or one with an equivalent date (e.g. "the start of World War 2 (September 1939)" is an example of the 2nd format). The use of the phrase is currently limited, however, since one cannot use a phrase in a range or anything else (e.g. "from the start of World War 2 (September 1939)" isn't legal GEDCOM.<br/>
+<br/>
+I would certainly like to see phrases used in just as many places as real dates - e.g. "From her birth" is a good thing it seems to me, not least because you don't need to change it if you don't know her birth first, and do later on. So that would allow the creation of data giving a sentence "Died between the date of the will (2 July 1722) <br/>
+and the date of the probate (3 September 1772)"<br/>
+<br/>
+Your final sentence is trickier. I think if we combine my comments above (the qualifier "perhaps" applying to the whole fact), we might get: <br/>
+"Perhaps married before their first child was baptised (1742) in Norwich Connecticut."  I'd put "Norwich was where her parents were living at the time" into a note for the event.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-09T07:58:27-08:00</div>
+<div class="text">This topic broaches a fascinating subject that I don't think we've explicitly covered yet ... the automatic generation of text to be put into fancy output reports ... and what its relationship to Better GEDCOM is.<br/>
+<br/>
+This really is a great subject. I find reading reports generated by many applications pretty funny. Very stilted with bad grammar, bad noun and verb agreement, missing phrases (i.e., naked commas) and so on. Some applications allow you to create a "sentence template" for each event type, which is a really cool idea.<br/>
+<br/>
+One of the main goals of my LifeLines program was giving the user the ability to generate reports with lots of power over sentence structure. For example, LifeLines has a very neat pronoun function that allows users to replace names with grammatically correct pronouns in every possible context, and the user can use this in generating reports to avoid using a person's full name every the person is mentioned in a report.<br/>
+<br/>
+Having said all this, it's also probably true that this is more an application issue than a Better GEDCOM issue.<br/>
+<br/>
+Getting back to GeneJ's original question, where should the phrase "between 2 July 1722 (date of will) and 3 September 1772 (probate of will)" come from in a report? There are only two answers (I think anyway) -- either that phrase already existed in the database or that phrase was constructed by the report generating process. It's a VERY GOOD question that does have real implications for the design of Better GEDCOM. I'm not going to answer the question yet, because I'm not sure what the answer should be. What do others think? Given that GeneJ really wants to see that string in her reports, WHERE DOES IT COME FROM? Thoughts?<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-09T08:38:16-08:00</div>
+<div class="text">testuser added pictures. I'm so jealous.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-09T12:19:24-08:00</div>
+<div class="text">Genealogy is a history discipline (ala, "family history")--it is frequently best narrated. When we talk data, we are sometimes extracting particular bits from information best narrated. One of the challenges is to keep the apple (each bit) looking like the apple after it's lifted from it's native form, but also unlock the potential from that part of the data displayed as dates, locations, names, roles. etc. (we'll leave source elements and narrative memos for later). <br/>
+<br/>
+Yes, Adrian, I see the "suffix field" (will date"/"will probate") as different from what I'm not seeing as the "prefix field" (probably, possibly, likely, and maybe).<br/>
+Because of the way the special prefix "?" is applied (it attaches without a space), it even seems a little different form of prefix.<br/>
+<br/>
+Because they change so significantly the meaning of the data, the prefixes noted seem at least equally important to the data forms GEDCOM recognizes for dates (after, before, etc.).* [And yes, Adrian, I think "at/in/near" should be included for both location detail and location place, in the same way dates are before, after, etc.] <br/>
+<br/>
+The "suffix field" is different--it seems always short, super specific and directly "explaining" the data entry, doesn't it (ala "because"). <br/>
+<br/>
+Tom asked, "Where does [that suffix data] come from?"<br/>
+<br/>
+For me, "how will I report this" is part of my proof thought process, after I consider the body of evidence. I might have references to lots of great information far more specific dates, but not want to rush more specific conclusions. The example above related to the wills is quite common in genealogy. That style of entry is needed for many of my New Jersey ancestors whose date of death and/or burial are unknown to me. (New Jersey includes a major collection of published estate abstracts.)</div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-13T15:01:14-08:00</div>
+<div class="title">Adding some real world citation elements to the spreadsheet</div>
+<div class="text">&lt;&lt;Is non-tech. If I've done this wrong or the items would be better added somehow differently, please let me know so we can fix it.<br/>
+<br/>
+I haven't finished normalizing Mill's citation elements, but did add sheets to the workbook for a few items as below:<br/>
+<br/>
+Record identification<br/>
+Description/evaluation<br/>
+Item Type or format<br/>
+Source Type<br/>
+Source of the source<br/>
+<br/>
+I can only do one thing at a time. Will add these to definitions shortly.<br/>
+<br/>
+"Record Identification" is a term being used temporarily to refer to the specific information consulted in a source. Real world examples might be:<br/>
+*Household identification (on a census)<br/>
+*Individual's record name and record content (on a birth certificate or baptismal record)<br/>
+*Parcel name or number (on a map)<br/>
+<br/>
+"Description/evaluation" is a term being used temporarily to refer to specific information that describes or evaluates a source or passage. Real world examples might be:<br/>
+*Provenance.<br/>
+*Author specific items, for example, relationship of the other to the item being cited (someone's mother, etc.); age of author<br/>
+*Condition or organization (for example, census so faint as to effect readability or census where names organized alphabetically; condition of a photograph; records partially destroyed by fire)<br/>
+<br/>
+"Item type or format" is a term being used temporarily to describe the the source content or form:<br/>
+*Digital Image<br/>
+*Record Copy<br/>
+*Duplicate original<br/>
+<br/>
+"Source Type" is a term being used temporarily to describe the source. Examples include:<br/>
+database<br/>
+index<br/>
+bound manuscript<br/>
+typescript<br/>
+photograph<br/>
+letter, E-mail, listserve archive<br/>
+<br/>
+Source of the source is a credit line (EE p. 2007, p 427), it refers back to the source author's citation, authorities or parenthetical references.<br/>
+*NARA micropublication name and roll (for digital images of certain NARA publications like census)<br/>
+*Agency and Book and Page or Certificate Number; Repository (for vital record indexes)<br/>
+*Author Title and FHL film Number (for records in the FS Historical Record Collections)</div></div></body>
+</html>

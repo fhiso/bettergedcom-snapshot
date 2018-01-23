@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>BetterGedcom - Application overview</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<h4 id="toc0"><a name="x---Home &gt; EE &amp; GPS Support &gt; Sources and Reference Notes - Application Overview"></a><a name="x---Home &gt; EE &amp; GPS Support &gt; Sources and Reference Notes - Application Overview"></a> <a class="wiki_link" href="home.html">Home </a>&gt; <a class="wiki_link" href="EE%20%26%20GPS%20Support.html">EE &amp; GPS Support</a> &gt; Sources and Reference Notes - Application Overview</h4>
+ <br />
+<h1 id="toc1"><a name="Application Overview"></a><a name="Application Overview"></a> Application Overview</h1>
+ <br />
+<h3 id="toc2"><a name="Application Overview--Application Overview Quick Links"></a><a name="Application Overview--Application Overview Quick Links"></a> Application Overview Quick Links</h3>
+ 
+
+<table class="wiki_table">
+    <tr>
+        <td>I<br />
+</td>
+        <td><a class="wiki_link" href="Application%20overview.html#functionality">Application source systems</a><br />
+</td>
+    </tr>
+    <tr>
+        <td>II<br />
+</td>
+        <td><a class="wiki_link" href="Application%20overview.html#Source Export">Application GEDCOM Export Mechanics</a><br />
+</td>
+    </tr>
+    <tr>
+        <td>III<br />
+</td>
+        <td><a class="wiki_link" href="Application%20overview.html#Challenges">Application Source Data Other Challenges</a><br />
+</td>
+    </tr>
+    <tr>
+        <td>IV<br />
+</td>
+        <td><a class="wiki_link" href="Application%20Data.html">Application Data</a> (separate wiki page)<br />
+</td>
+    </tr>
+</table>
+
+<hr />
+<br />
+<br />
+<h1 id="toc3"><a name="I Application source systems"></a><a name="I Application source systems functionality"></a> <span style="color: #ff0000;">I Application source systems </span></h1>
+ Based on a preliminary review of Applications that read and write GEDCOM, some Applications offer a basic or <strong>default template</strong> that is compatible with GEDCOM in most respects. We believe that <strong>Application source systems functionality</strong> may generally be described in one of four ways, as below.<br />
+<br />
+<em>Note: The groups below were developed as a way to organize particular data related GEDCOM concepts. The groups do not represent user benefits or compliance to any particular standard.</em><br />
+<br />
+<span style="color: #800000;">Customized Group</span>: Applications where the source system is largely characterized by user customization or development of both Citation Elements and Citation Templates.<br />
+<ul><li><em>The Master Genealogist</em> (currently, v7.04) [jump to <a class="wiki_link" href="Application%20Data.html#TMGv7" target="_blank">Application Data</a> , Application Page or <a class="wiki_link_ext" href="http://www.whollygenes.com/Merchant2/merchant.mvc?screen=TMG" rel="nofollow" target="_blank">vendor product website</a>]</li><li><em>GenBox</em> (currently, v3)</li></ul><br />
+<span style="color: #800000;">Evidence Explained Group</span>: Applications that enable <em>Evidence Explained</em> style, by some approach to or interpretations of Citation Elements and Citation Templates. <br />
+<ul><li><em>Legacy Family Tree</em> (currently _)</li><li><em>RootsMagic</em> (currently 4.1) [jump to <a class="wiki_link" href="Application%20Data.html#RootsMagic" target="_blank">Application Data</a>, Application Page or <a class="wiki_link_ext" href="http://www.rootsmagic.com/RootsMagic/" rel="nofollow" target="_blank">vendor product website</a>]</li><li><em>Family Tree Make</em>r 2011 [jump to <a class="wiki_link" href="Application%20Data.html#FTM" target="_blank">Application Data</a>, Application Page or <a class="wiki_link_ext" href="http://store.ancestry.com/index.aspx?p=4825" rel="nofollow" target="_blank">vendor product website</a>]</li><li><em>Family Tree Maker 2010 for Mac</em> [jump to <a class="wiki_link" href="Application%20Data.html#FTMM" target="_blank">Application Data</a>, Application Page or <a class="wiki_link_ext" href="http://store.ancestry.com/ProductDetail.aspx?P=P-4845" rel="nofollow" target="_blank">vendor product website</a>]</li></ul><br />
+<span style="color: #800000;">Extended Functionality Group</span>: Applications that have <em>not</em> enabled <em>Evidence Explained</em> style, but allow extended functionality.<br />
+<ul><li><em>Reunion</em> (currently )</li><li><br />
+</li></ul><br />
+<span style="color: #800000;">GEDCOM Based Group</span>: Applications enabling Citation Elements either identical to or closely aligned with GEDCOM's Data Fields.<br />
+<ul><li><em>Family Historian</em> (currently )</li><li><em>Ancestral Quest</em> (currently )</li><li><em>?Personal Ancestral File</em> (PAF) (currently ___)</li><li><em>Brother's Keeper for Windows</em> (v6.3)</li></ul><br />
+<br />
+<br />
+<h1 id="toc4"><a name="II Application GEDCOM Export"></a><a name="Source Export"></a> <span style="color: #ff0000;">II Application GEDCOM Export</span></h1>
+ <br />
+Note: Not all of our tests have been completed. As tests are completed, the findings are be reported in on the <a class="wiki_link" href="Application%20Data.html">Application Data</a> page. <br />
+<br />
+Based on our tests to date, we find:<br />
+<br />
+1. <strong>Compliant export</strong>. Those Applications that have GEDCOM Based systems generally export Citation Elements to the corresponding Data Field in GEDCOM.<br />
+<br />
+<strong>2. Non-complaint export.</strong> The main reason for non complaint export is that programs have implemented functions that record many more types of information than the current fields (tags) in Gedcom allows. The additional types are recorded in Gedcom as non-standard extensions or by including other information in the Gedcom field that they were intended for.<br />
+<br />
+The data structures in use are described below, and many programs use a several of these structures:<br />
+<br />
+2.a. <strong>Concatenating Citation Elements</strong>. Some programs that enable more elements than GEDCOM export by concatenating (merging) many Citation Elements into one field, and then associating that merged data with a GEDCOM Data Field. There is no way for a receiving program to unwrap the merged data. Citations exported in this fashion generally must be reconstructed manually by the user. [1]<br />
+<br />
+2.b. <strong>Concatenating with separators and labels</strong> (Variant of 2). In the process of concatenating elements into a GEDCOM Data Field, one program puts a separator character between the Citation Elements and labels each element. This approach is not standardized, so the receiving program is not able to break up the field into separate Citation Elements. Because the receiving program can not interpret the data, the citations must be reconstructed by the user. [1]<br />
+<br />
+2.c. <strong>Non-standard fields</strong>. Most programs that enable more Citation Elements than GEDCOM has Data Fields use non-standard tags. The tag (label) of these fields start with an underscore. On import, non-standard tag/label can not be imported because the receiving program doesn't understand it.<br />
+<br />
+The various methods are described for each program on the Application Data page.<br />
+<br />
+<strong>Conclusion: The result of this is that it is not possible to transfer source and citation information between most of today's major programs, using GEDOM, because they use the methods described in 2.</strong><br />
+<br />
+Geir's overview: In some cases, it might be possible to solve the problem in the importing program by implementing special functionality for each of the other programs, but this is expensive and it often does not work because of big differences in the way programs structure the information internally.<br />
+<br />
+[1] Geir Thorud to GeneJ, &quot;Why source and citation...&quot; 5 April 2011.<br />
+<br />
+<br />
+<br />
+<h1 id="toc5"><a name="III Application Source Data Other Challenges"></a><a name="Challenges"></a> <span style="color: #ff0000;">III Application Source Data Other Challenges</span></h1>
+
+    </div>
+  </body>
+</html>

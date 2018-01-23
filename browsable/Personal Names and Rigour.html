@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>BetterGedcom - Personal Names and Rigour</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+ <span style="font-family: Arial;">This page tries to make a case for there being too much rigour in all our approaches to personal names. It seems that in the end there will always be that one case that breaks your rules. I will conclude with a suggestion for a much simpler scheme that might actually be more robust.</span><br />
+<br />
+<span style="font-family: Arial;">We might decide that the essential elements of a personal name are: the given name, optional middle names, and surnames. Terms such as first name, forename, Christian name, last name, etc., are culturally dependent and should be avoided. Even 'family name' should be avoided unless the context demand it.</span><br />
+<br />
+<span style="font-family: Arial;">A given name is used to distinguish members of a family group. The term implies that the name is purposefully chosen when the child is born and contrasts with inherited parts of their personal name. In the West, a given name is often called a first name, or forename, but this presupposes the order of the name parts.</span><br />
+<br />
+<span style="font-family: Arial;">A surname is an inherited part of a personal name added to a given name, and is usually a family name. Many dictionaries actually define ‘surname’ as a synonym of ‘family name’ but this is not true where a culture uses patronymic or matronymic names, i.e. where a surname is based on the given name of a male or female ancestor, respectively. In the West, a surname is often called a last name but that presupposes the order of the name parts. In North and South America, as well as in Europe, a surname is placed at the end of a person's given name. In China, Japan, Korea, Hungary, and in many other East Asian countries, the family name is placed before a person's given name. In Spain and most Spanish-speaking countries, two or more surnames are commonly used. Some cultures may use both patronyms and family names. Some cultures may use hyphenated surnames, which is not the same as two distinct surnames.</span><br />
+<br />
+<span style="font-family: Arial;">A middle name is an additional name placed between a given name and a surname. There may be zero or more of these and they may be extra given names, surnames of ancestors or relatives, a maiden name, or a saint’s name.</span><br />
+<br />
+<span style="font-family: Arial;">OK, not too bad so far...</span><br />
+<br />
+<span style="font-family: Arial;">We also need to consider titles, honours, qualifications and other designated letters, and generational names (i.e. Sr, Jr, I, II, etc). These are usually in the form of a prefix or postfix (aka suffix) but not always. The Irish equivalent of a generational name appears infix.</span><br />
+<br />
+<span style="font-family: Arial;">There is also a general class of name token called a 'particle', analogous to a grammatical particle. This includes all those small joining words such as: “von”, “van”, “der”, “de [la]”, “d′”, “the”, “[son] of”, “mc”, “mac&quot;, &quot;Ó&quot;, &quot;Ní&quot;, &quot;Nic&quot;, &quot;Mhic&quot;, &quot;Bean&quot;, &quot;Ui&quot;, &quot;y&quot;, etc. These have different characteristics that control their behaviour under case conversion and sorting.</span><br />
+<br />
+<span style="font-family: Arial;">Many products have added extra fields to try and accommodate all this variation. For instance, this page (<a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=GEPS_021:_Additional_Name_Fields" rel="nofollow">Additional Name Fields</a>) contains some good examples of sesquipedalian names used to justify additional fields in Gramps 3.3.</span><br />
+<br />
+<span style="font-family: Arial;">Character case is a problem that is discussed to a lesser extent in this field. The tradition of uppercasing a surname is a bad one, and effectively corrupts the stored name in situations where it contains a lowercase-only letter (e.g. in German), or when it should be presented in camel-case. Even with simple capitalised lowercase (as is the English convention for proper nouns), in some cultures it is not always the first letter that is uppercased (e.g. in Irish). Making a name more visible, or even making it a hyperlink, only requires some type of mark-up to identify it, after which your software can apply whatever style you want for the user interface or a report.</span><br />
+<br />
+<span style="font-family: Arial;">Just to blow all of this out of the water, typical names in the Native American tribes do not have a surname (either family name or patronym). A person might also have different names at different periods of their lives, e.g. an infant name like &quot;little rabbit&quot;, later changing to a war name when a boy becomes man, and changing again for the later periods of their life. Some tribes are also secretive about their personal names, using them only within their own tribe, and resorting to a &quot;public name&quot; outside of it.</span><br />
+<span style="font-family: Arial;">Some related reading:</span><br />
+<a class="wiki_link_ext" href="http://personal-names-among-the-indian-nations-east-of-the-mississippihttp//umkn-dsp01.unisa.ac.za/bitstream/handle/10500/2675/dissertation_lombard_c.pdf" rel="nofollow">personal-names-among-the-indian-nations-east-of-the-mississippi</a><br />
+<a class="wiki_link_ext" href="http://umkn-dsp01.unisa.ac.za/bitstream/handle/10500/2675/dissertation_lombard_c.pdf" rel="nofollow">dissertation_lombard_c</a><br />
+<span style="font-family: Arial;"><a class="wiki_link_ext" href="http://life.familyeducation.com/baby/baby-names/45491.html" rel="nofollow">Family Education - Baby Names</a></span><br />
+<br />
+<span style="font-family: Arial;">So where do we go from here? Should we ignore all the hard cases and just concentrate on Western names?</span><br />
+<br />
+<span style="font-family: Arial;">I want to explain a little about the STEMMA approach - not because it has got it right (it hasn't) but because it hints at a different route. A personal-name entity in <a class="wiki_link_ext" href="https://sites.google.com/site/familyhistorydata/home/document-structure/person/personal-names#NAME_VARIANTS" rel="nofollow">STEMMA </a>is roughly divided into date ranges. Each date range defines one 'canonical name' (for output) and multiple acceptable names to be used during input for name matching. For instance, my canonical name might be &quot;Anthony Charles Proctor&quot; but the sequences used to match input might include &quot;Anthony Proctor&quot;, &quot;Tony Proctor&quot;, etc. For someone who has changed their name, say during marriage, another canonical name and set of input sequences may be defined for the relevant date onwards. It's worth noting that each STEMMA Person entity also has a separate title property that is used for genealogical annotation, and this might be decorated to avoid ambiguities, e.g. &quot;John Smith (1908)&quot;, or &quot;Fred Bloggs (Lyonesse)&quot;.</span><br />
+<br />
+<span style="font-family: Arial;">Each of the token sequences used for name matching might be characterised as, say, Romanised, phonetic, nickname, professional name (or stage name), alias (or also-known-as, nom de plume, pen name), married name, etc. At the moment, there is only one canonical name but suppose we allow a selection with their own characteristics such as formal, semi-formal, informal, listing (i.e. for sorting). Would we really need to worry about parsing names, or categorising their name tokens?</span><br />
+<br />
+<span style="font-family: Arial;">It seems we still need to know which token(s) to sort on but that's a much easier proposition that could be determined through highlighted in the UI. One question: some cultures sort by given name rather than surname, and some cultures sort by different surnames when they have multiple ones. Is it always the case that a sorted name has the key token(s) at the head (e.g. Proctor, Anthony Charles)? Note that I deliberately used 'head' rather than 'left' or 'right' to account for different writing directions.</span><br />
+<br />
+<span style="font-family: Arial;">Tony</span>
+    </div>
+  </body>
+</html>

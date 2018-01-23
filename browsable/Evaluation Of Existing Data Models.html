@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>BetterGedcom - Evaluation Of Existing Data Models</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+ Here we will hash out the pros and cons of existing data models and how well these models meet the goals of BetterGEDCOM<br/>
+<br/>
+There will likely be various methods to evaluate various data models. If you have an evaluation model in mind, please add it here.<br/>
+<br/>
+Tom Wetmore added the page <a class="wiki_link" href="Evidence%20and%20Conclusion%20Process.html">Evidence and Conclusion Process</a>. This proposes a process that a genealogist might go through while researching persons. Genealogical data models can be evaluated by investigating how well they support this process.<br/>
+<br/>
+<h3 id="toc1"><a name="x--GRAMPS Data Model Evaluation"></a>GRAMPS Data Model Evaluation</h3>
+<a href="file/view/EvaluateGramps.pdf/180339373/EvaluateGramps.pdf" target="_blank">Here</a> is a document giving Tom Wetmore's evaluation of the GRAMPS Data Model
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-29T03:30:59-08:00</div>
+<div class="title">Personal concerns</div>
+<div class="text">I'm not done researching data models myself and so do not feel ready to truly start evaluating the data models various folks have presented. However, here are my impressions and concerns generally so far:<br/>
+<br/>
+1. Balancing Long-term vision and short-term needs - I don't want to commit to a short-term, incremental or stop-gap solution for today's realities without understanding what the future direction is. That said, I don't know that it's possible to immediately advocate for a data model that supports the research process (i.e., embraces evidence, deliberations, analysis, etc). We must understand where we're going first and have a plan on how to get there from where we are.<br/>
+2. Embrace of a "scholarly genealogy" approach - Rather than just adding some places in a data model for more analysis, I feel we have to explicitly change the focus of genealogy data from the conclusions we have in today's software to an evidence-centric model. Such an approach is more truly in keeping with today's best practices. Many people advocate the need for more explicit evidence, but these approaches are mostly supplements to a conclusion model. Anyway, that's my opinion right this minute.<br/>
+<br/>
+These are my 2 biggest concerns at the moment.</div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-29T04:18:22-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+I am not sure there is a rush on any of this. That is NOT to say that what we are doing is not important, because it is.<br/>
+<br/>
+How long have we been working on this project?<br/>
+<br/>
+How long has the current GEDCOM been "broken"?<br/>
+<br/>
+The issue, for me at this time, is that we don't have all of the right players at the Wiki Table.<br/>
+<br/>
+We need software developers and we need the Scholarly Genealogists at the table.<br/>
+<br/>
+As an End User of one program, GeneJ as End User of another program are only two users, and how many other computers based programs are there, not to mention web based applications.<br/>
+<br/>
+You technical folks are doing an awesome job of "putting stuff out there", but I think we have a long way to go before any decisions are made.<br/>
+<br/>
+In my opinion, we need to take our time, weight the positive and negative effects of what we are about, with everyone at the table,<br/>
+<br/>
+My 2 cents on this.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-29T11:11:49-08:00</div>
+<div class="text">Well, I don't think I was implying there's any particular rush on things. Far from it. <br/>
+<br/>
+So far what I've seen on the technical side is a lot of talk on technical things that make assumptions on where we're headed that I don't think are necessarily correct. Regarding having the right people at the table, frankly, if we haven't even decided where we are headed yet, we're not in any danger of trying to get there without any particular point of view at the table.<br/>
+<br/>
+Also, this is going to be a renegotiation at every step of the way. This is not a strictly linear process. As we move further along and more people become involved, we're going to end up going over every assumption over and over again. This is going to be particularly true once we get to the stage of having a basic concept in mind.</div></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-12-22T22:57:56-08:00</div>
+<div class="title">We Need To Compare The Various Models</div>
+<div class="text">We have Tom's DeadEnds data model, that he is very happy with. We have Mike's SFT data model that he is very happy with. <br/>
+<br/>
+We've got the original GEDCOM, which is better than most people think, because it has many features that they don't know about. There is no need to re-write what works.<br/>
+<br/>
+We've got the GEDCOM 6.0 XML Draft which was a valid first attempt by the LDS people to update GEDCOM. <br/>
+<br/>
+Then we've got GRAMPS, GenTech and a host of other models. <br/>
+<br/>
+We can argue concepts until we are blue in the face. But until the models are compared right down to the individual Entity/Element/Tag level and translated back to a common form (e.g. GEDCOMish), possibly with concrete examples to make everything clear, then I'm afraid we won't be able to objectively decide what's best and what's not.<br/>
+<br/>
+Some proper evaluation will need to be done.<br/>
+<br/>
+Suggestions?</div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-23T06:49:16-08:00</div>
+<div class="text">"We can argue concepts until we are blue in the face" -Louis<br/>
+  So true, I would not try to make anyone change what may work for them or myself. But I think GEDCOMish as the stepping stone format should be used. Even though I am 100% xml, I still consider the many apps out there that rely on a gedcom model.<br/>
+<br/>
+<br/>
+I have already started to match my tags to the GEDCOM tags. But the many various custom tags that many Apps have created may and are still unaccounted for.<br/>
+<br/>
+For that small &lt;2% that can not be sync, I suggested a universal CATCHall tag that stores the original exporting tag and data into a note like field seprated by "/" or ":". <br/>
+<br/>
+Then the importing App will allow a user to view errored or unrecognized tags and the original purpose by the "Tag" in front of the data. This might suffice for a short while while doing import export test for what may never be 100%.<br/>
+<br/>
+But yes I agree those knowledgeable of the Gedcom 5.5 and 5.5.1 could start a list of MAJOR tags, then minor (not used a much lists)<br/>
+<br/>
+Than apps only make minor export changes to the GEDCOMish GEDBG structure + CATCHall tag.<br/>
+<br/>
+Then I am sure anumber of apps can start import and export files. A russ would have a ball saying what the heck is "XYXY" tag? and work trying to better sync tags to a main ideal communications.<br/>
+<br/>
+"Some proper evaluation will need to be done."<br/>
+-Louis<br/>
+By having a (GEDCOMish"BG") tag list, it is up to the APP DEVS to import and export to it. this will be a universal stepping point for all. That list can act as a sync list and an explination to an outside person looking in at anothers model IF that app dev provides it.<br/>
+<br/>
+If each MODEL provides a sync list match to a BG list that is how we can compare the various models datafields that they are handling or capturing outside of the norm or find an equvilant for them.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-23T08:57:01-08:00</div>
+<div class="text">I believe we should add Event GEDCOM to the list. It was a CommSoft Proposal from 1994. It included some excellent modifications to lineage-linked GEDCOM, including both Events and Places as record level objects. Here is a link to the proposal.<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:8:http://deadendssoftware.com/EventGEDCOMDraft1.0.pdf --><a class="wiki_link_ext" href="http://deadendssoftware.com/EventGEDCOMDraft1.0.pdf" rel="nofollow">http://deadendssoftware.com/EventGEDCOMDraft1.0.pdf</a><!-- ws:end:WikiTextUrlRule:8 --><br/>
+<br/>
+Given that it is now 16 years later one might say they were ahead of their time.<br/>
+<br/>
+Any comparison of models should start with a list and definitions of the records supported by each model, and some way to contrast the different definitions.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-23T09:35:35-08:00</div>
+<div class="text">Wow thank is incrediable. That is what I am doing. instead of placeing all records inside the INDI, all my EID link out to all universal records. Also th eperson relationships are preseverd via my PID and Family/GroupID table.<br/>
+<br/>
+ Maybe I have not worded my concept very well, but you can read that pdf Tom added and that is the basis In made my model to do.<br/>
+ please note I am not saying his is the way to go, it is just that is how I made my model to store data. If others adopt the EVENT and places as level records you will find that storage of data become more flexiable and compact.<br/>
+<br/>
+ So yes "I am in favor" on that motion if more would adopt that concept.</div></div></div></body>
+</html>

@@ -1,0 +1,236 @@
+<html>
+<head>
+<title>BetterGedcom - Fix the Transfer Problem</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<a class="wiki_link" href="HOME.html">HOME</a> &gt; <a class="wiki_link" href="EE%20%26%20GPS%20Support.html">EE &amp; GPS Support</a> &gt; Fix the Transfer Problem<br/>
+<br/>
+<h3 id="toc0"><a name="x--High level considerations about how to create a solution for citations in BG"></a><strong>High level considerations about how to create a solution for citations in BG</strong></h3>
+<a href="file/view/Geir%27s%20high%20level%20considerations%20on%20citations%20in%20BetterGEDCOM.pdf">Geir's high level considerations on citations in BetterGEDCOM.pdf</a> for discussion.<br/>
+<br/>
+<h3 id="toc1"><a name="x--No more scrambled citations!"></a>No more scrambled citations!</h3>
+<br/>
+Citations represent the record of Evidence for our conclusions; the Genealogical Proof Standard deals with evidence and conclusions and has an element, "Complete and accurate citation of sources." <br/>
+<br/>
+BetterGEDCOM will provide for the "complete" and "faithful" transfer of citations.<br/>
+<br/>
+When fully implemented, BetterGEDCOM Applications will export all the data necessary for another BetterGEDCOM Application to reconstruct citations from both standard and non-standard Citation Elements and default, standard and non-standard Citation Templates. We have preliminarily identified six (6) requirements for this purpose.<br/>
+<br/>
+1. Establish an extended group of standard BetterGEDCOM <a class="wiki_link" href="Citation%20Elements.html">Citation Elements</a>, and<br/>
+2. Determine the method by which an Application will define and export non-standard Citation Elements, and<br/>
+3. Discover one or more standardized BetterGEDCOM Citation Templates, where at least one "default" template is based on GEDCOM's Data Fields, and<br/>
+4. Determine the method by which Applications will export references to that/those standardized BetterGEDCOM Citation Templates, and<br/>
+5. Discover ways by which Applications will define and export (or export references to) non-standard Citation Templates, and<br/>
+6. Determine methods by which this comparatively larger export will be consistently interpreted by those Applications that are GEDCOM compatible but have not yet adopted BetterGEDCOM's model. [<a class="wiki_link_ext" href="message/view/Fix+the+Transfer+Problem/37383138" rel="nofollow">Link to discussion</a>]<br/>
+<br/>
+Somewhat in the way GENTECH envisioned active management of it's data model, [*] BetterGEDCOM envisions active management of standard Citation Elements and Citation Templates. We have preliminarily identified one (1) requirement for this purpose:<br/>
+<br/>
+7. Provide means for active management of BetterGEDCOM standard Citation Elements, Citation Templates and the mechanisms by which references are transmitted.<br/>
+<br/>
+<br/>
+*GENTECH Genealogical Data Model (2000), p. 3, "the model will be extended."<br/>
+<h1 id="toc2"> </h1>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-08T20:45:43-07:00</div>
+<div class="title">#6 - Determine methods by which this comparatively larger export will be consistently interpreted by those Applications that are GEDCOM compatible but have not yet adopted BetterGEDCOM's model.</div>
+<div class="text">How about some ideas?<br/>
+<br/>
+One thought was to have a requirement for BetterGEDCOM to have a "default" template based on GEDCOM's current Data Fields. (Not all currently do.)<br/>
+<br/>
+That would at least provide an internal "map to" mechanism in each BetterGEDCOM compliant application. <br/>
+<br/>
+Needs much work, but perhaps this is a start.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-04-09T12:38:39-07:00</div>
+<div class="text">Gene<br/>
+Trying to respond to your request for ideas.... I'm a bit uncertain exactly what we're talking about. I presume that the "larger export" refers to the new elements to construct citation / footnotes / bibliography / whatever - where by "new" I mean, things that aren't in GEDCOM. Is it that or not?<br/>
+<br/>
+Then the applications in scope seem to be clear - they are GEDCOM "compatible" apps but not BG "compatible" apps.<br/>
+<br/>
+So.... oh - I just lost it - how are these GEDCOM "compatible" apps going to be loading these new elements? On what sort of a file? <br/>
+<br/>
+I think I must have misinterpreted somewhere...</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-09T13:37:39-07:00</div>
+<div class="text">Hi Adrian -- <br/>
+<br/>
+Thank you. <br/>
+<br/>
+You wrote, "how are these GEDCOM "compatible" apps going to be loading these new elements?" <br/>
+<br/>
+Yes!! <br/>
+<br/>
+#6 recognizes that some, <strong>but not all</strong>, Applications have source systems that are comparatively larger than GEDCOM's say 10 data fields. <br/>
+<br/>
+When two of those larger systems try to talk today, GEDCOM is sort of like a bottle neck. <br/>
+<br/>
+We can remove that bottleneck, but when we do, there will still be Applications that have source systems based on GEDCOM's 10 fields. <br/>
+<br/>
+Enter the #6 magician!!</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-09T14:01:04-07:00</div>
+<div class="text">P.S. Today, those with larger systems use a variety of different techniques to ship that comparatively larger data to GEDCOM--so there is a surprise behind every door. <br/>
+<br/>
+A system that has GEDCOM's say 10 fields today might have only those same fields in the post BetterGEDCOM world.<br/>
+<br/>
+If all programs had a default template set built from GEDCOM's say 10 Citation Elements," then we have ONE highly structured component setin an otherwise very flexible environment. <br/>
+<br/>
+The thought was, that single highly structured component might play a role in discovering details for a #6 requirement.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-04-10T05:10:57-07:00</div>
+<div class="text">Gene<br/>
+Are you suggesting that a system that <br/>
+(a) has GEDCOM's 10 fields (let's presume it's 10 for argument's sake) today, <br/>
+(b) hasn't been modified for BG (yet); <br/>
+<br/>
+would be modified in some fashion? (Just trying to get my head round this!)<br/>
+<br/>
+Now, I thought the purpose of the template was to form the bibliography, footnote, 2nd footnote etc. So I'm still a bit lost on how this template using the 10 items helps with the _transfer_. <br/>
+<br/>
+Are we suggesting that the umpteen dozen items from the big list (150 or whatever...) could be mapped onto the 10 in some fashion (which is CONSISTENT across all apps because the BG standard defines the mapping) and thus the umpteen dozen do get into an old style program? Albeit concatenated / compressed etc<br/>
+<br/>
+If that could be done, the template is probably not that important - IF one had confidence that all 10 were printed.<br/>
+<br/>
+Am I getting close to your ideas?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-10T08:33:03-07:00</div>
+<div class="text">Hi Adrian,<br/>
+<br/>
+You write, "the big list (150 or whatever...) ... CONSISTENT across all apps because the BG standard defines the mapping"<br/>
+<br/>
+Short answer--yes. Assume Family Historian is the receiving program example. Right now, if a Roots Magic GEDCOM is imported to Family Historian, the RootsMagic data will come to you organized differently than if you were importing a GEDCOM from TMG. (And we could go on and on and on.)<br/>
+<br/>
+Requirement #6 says that once we've figure out how those larger systems talk to each other, we have to then make that same information import to the GEDCOM 5.5 based system--that can only read 10 fields.<br/>
+<br/>
+Longer answer--How do CUSTOM elements import to Family Historian?<br/>
+<br/>
+You wrote, "the template is probably not that important"<br/>
+<br/>
+Two reasons:<br/>
+<br/>
+1) If the BetterGEDCOM system is based on transferring some reference to a template. Family Historian, as above, doesn't have a way of exporting reference to a template--so how will a BetterGEDCOM based application understand what to do with those elements? Voila--enter that "default" template.<br/>
+<br/>
+2) A little more complex. All Application producing Citations in the ordinary course of business use template assumptions for that purpose--although a UI might keep the template under the hood. If we only "concatenated / compressed," there is a good chance Family Historian's import will be consistently unintelligent in it's template. BUT .. there is probably a way to make that intelligent.<br/>
+<br/>
+I think ... if we presume a GEDCOM "default" template as we develop the gazillions of BetterGEDCOM templates and elements, the concept of higher or critical source elements will emerge. (Maybe like GENTECH in the post 2010 world) If that is the case, then Family Historian user will not ONLY get <strong>all the BG elements</strong>, but that GEDCOM identified subset will produce an intelligent citation, albeit limited compared to BetterGEDCOM compliant Applications.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-10T08:33:50-07:00</div>
+<div class="text">I'm reading the posting just now by Geir .. it touches on some of the same concepts.</div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-10T10:01:39-07:00</div>
+<div class="title">Geir's High Level Considerations on Citations in BetterGEDCOM</div>
+<div class="text">Thank you.<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:13:http://bettergedcom.wikispaces.com/file/detail/Geir%27s+high+level+considerations+on+citations+in+BetterGEDCOM.pdf --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/file/detail/Geir%27s+high+level+considerations+on+citations+in+BetterGEDCOM.pdf" rel="nofollow">http://bettergedcom.wikispaces.com/file/detail/Geir%27s+high+level+considerations+on+citations+in+BetterGEDCOM.pdf</a><!-- ws:end:WikiTextUrlRule:13 --><br/>
+<br/>
+Citation Elements and "A medium sized set of elements":<br/>
+You wrote, "Yates ... 600"<br/>
+He only worked with the QuickCheck models, and came up with about 550 elements. (That number from my Excel work with his data.) I found it too time consuming to work in the spreadsheet format. I propose it's easier to start with a reasonable "generalized" list (even have a list for that purpose), and work directly on Mills QuickCheck models. We could add to the list as necessary. The list in a "citation elements" wiki page if I can ever get that page to actually save.<br/>
+<br/>
+You wrote, "EE is that it has not attempted to generalize the element types." Once you get beyond the QuickCheck models, there's a much bigger message there--regardless of the style you use, citations should be "crafted around ... three essentials: evaluation, identification, and description." [EE (2007), p 38]<br/>
+<br/>
+You wrote, " very little (or none) of the classification info appear" -- could you clarify what you mean by that?<br/>
+<br/>
+Zotero -- (I lost that page due to log out too, by the way.) There are more reasons to go in a Zotero like direction than not. Translations, the ability to easily change between different style guides, etc.<br/>
+From both online and telphonic discussions, the folks at Zotero want styles that have been "generalized," to use your words. For each "citation element" not now part of Zotero's historical sources, they will want a justification. That's not difficult to do, if you have their list to begin with. Zotero has a new community outreach staff member. (For whom I have left a message.) Perhaps we can save this part of the discussion until I re-write the Zotero-like page and get it posted.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-04-10T14:03:33-07:00</div>
+<div class="text">There is certainly a degree of duplication in there.<br/>
+<br/>
+For instance, <br/>
+National Government Records / Original Materials (U.S.) / Maps refers to "[RECORD GROUP TITLE]" while <br/>
+National Government Records / Original Materials (U.S.) / Railroad Retirement Board refers to "[NARA RECORD GROUP TITLE]"<br/>
+<br/>
+Unless I'm seriously misunderstanding, this is the same RECORD GROUP TITLE in both cases - it's just named inconsistently.<br/>
+<br/>
+Similarly, [CREATOR], [CREATOR OF DATABASE], [CREATOR OF BLOG] are all the same item I imagine - it just happens to be that the thing is varying. And I guess Author and Creator may be synonymous. <br/>
+<br/>
+Even so, we're not going to get a radical change in numbers.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-10T16:25:20-07:00</div>
+<div class="text">Yes.<br/>
+<br/>
+The problem with working from Yates worksheet is that sometimes his "Date" is really a date, while other times it's and "Access Date" The same for Year. <br/>
+<br/>
+I have a separate spreadsheet with Yates data from the Full Reference note only. I wasn't trying to generalize, just eliminate duplicates.<br/>
+<br/>
+I posted a separate spreadsheet to Google docs. It's Yates worksheet at the Full Reference Note level only. I wasn't working to "normalize the" labels--I called it distill. I was just trying to eliminate duplicates of the kind you, Adrian, point out. <br/>
+<br/>
+The spreadsheet is at <!-- ws:start:WikiTextUrlRule:8:https://spreadsheets.google.com/ccc?key=0AhGBiJ9HyACHdDhTaC15Y3hKWHdqSG44dmRyNnlPVFE&amp;hl=en&amp;pli=1#gid=0 --><a class="wiki_link_ext" href="https://spreadsheets.google.com/ccc?key=0AhGBiJ9HyACHdDhTaC15Y3hKWHdqSG44dmRyNnlPVFE&amp;hl=en&amp;pli=1#gid=0" rel="nofollow">https://spreadsheets.google.com/ccc?key=0AhGBiJ9HyACHdDhTaC15Y3hKWHdqSG44dmRyNnlPVFE&amp;hl=en&amp;pli=1#gid=0</a><!-- ws:end:WikiTextUrlRule:8 --></div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-04-11T14:50:17-07:00</div>
+<div class="text">GeneJ<br/>
+<br/>
+My database counted about 580 different elements in Yates, but that is not important. The point is that the number is large.<br/>
+<br/>
+You wrote: "I propose it's easier to start with a reasonable "generalized" list (even have a list for that purpose), and work directly on Mills QuickCheck models." <br/>
+<br/>
+I don't know how easy it is, but one point in my document is - should we look into the general methology of creating the "generalized list" - which rules will guide that process?<br/>
+<br/>
+"citations should be "crafted around ... three essentials: evaluation, identification, and description." [EE (2007), p 38]"<br/>
+<br/>
+If you mean that the purpose is not only to identify the text, you are right - i have not looked into if she has taken the easy way out wrt evaluation and description.<br/>
+<br/>
+"very little (or none) of the classification info appear".<br/>
+<br/>
+I may be wrong, but can you tell for every printed citation (eg. by looking at footnote only), and every element in it, what the input prompt/label for that element was? - without checking EE. <br/>
+<br/>
+If you can create a general element type, that will end up in the same place in the citation for every source type where the element is used, that will be a test (of possibly more tests) if that general type works as good as the spesific ones.<br/>
+<br/>
+Related to this is<br/>
+<br/>
+- is the "sepcificity" needed for other things than input? If not, the importing app would be able to create the footnote without knowing the specific label/promt, it will only know the more harmonized element type - but can create the same footnote as if it knew the specific label/prompt that were used when the info was entered. (Am I making sence - this is not very well formulated)<br/>
+<br/>
+-If you are using general elements, you could define specific labels/prompts for input of a source type, not using the name of the general field but the specific one - the specific labels being used only in the exporting program.<br/>
+<br/>
+-Or, even when using general elements in the BG file, each element could carry with it both the general type of the field, AND the specific one (possibly the label/prompt). The importing app may use it, if there is a need. (The latter is just an idea, I am not sure if it is useful. One posibility is to show EE labels to both users, but using general elements that will "interwork" with all sorts of databases and programs. Sort of building EE on top of a general set of elements.)<br/>
+<br/>
+Some of the above may not be clearly expressed, so ask!!!</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-11T21:34:48-07:00</div>
+<div class="text">kk.<br/>
+<br/>
+You wrote, ""generalized" list ...can you tell every element in it what the prompt for that element was. <br/>
+Thanks again for forwarding the Zotero links.  Over the weekend, I'm going to try to lay out a spread sheet of Zotero item types and labels, as sort of "generalized" baseline. <br/>
+<br/>
+P.S. From the work I did in early January<br/>
+<!-- ws:start:WikiTextUrlRule:22:http://bettergedcom.wikispaces.com/message/view/BetterGEDCOM+Comparisons/32664256 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/BetterGEDCOM+Comparisons/32664256" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/BetterGEDCOM+Comparisons/32664256</a><!-- ws:end:WikiTextUrlRule:22 --> <br/>
+<br/>
+You wrote, "it will only know the more harmonized element type - but can create the same footnote as if it knew the specific label/prompt that were used when the info was "<br/>
+If a program can read a "template" it should be able to place the label. <br/>
+<br/>
+You wrote, "If you are using general elements, you could define specific labels/prompts...specific labels/prompts for input of a source type" <br/>
+<br/>
+Yes--to all the concepts of labels vs general elements. See also  that link above.<br/>
+<br/>
+You wrote, "if she has taken the easy way out wrt evaluation and description." Mills QuickCheck Models are comprehensive as a whole, but they were never intended to show every circumstance for every situation. She has an element called "evaluation"--in the 2007 book, see page 95 for an example of an evaluative comment at that "master source" level. Page 98 has a similar line, "Descriptive Details."  By definition, Mills has only a few true examples in the book. (There is not "assertion" that each Quick Check references.) The BCG's Work Samples, though, are real word. See <br/>
+<!-- ws:start:WikiTextUrlRule:23:http://www.bcgcertification.org/skillbuilders/worksamples.html --><a class="wiki_link_ext" href="http://www.bcgcertification.org/skillbuilders/worksamples.html" rel="nofollow">http://www.bcgcertification.org/skillbuilders/worksamples.html</a><!-- ws:end:WikiTextUrlRule:23 --><br/>
+<br/>
+On the wiki, I think I've posted examples of "evidence" citation from those Work Samples. <br/>
+<br/>
+Yeah. I found them. <br/>
+See GeneJ Mar 12, 2011 11:30 pm<br/>
+<!-- ws:start:WikiTextUrlRule:24:http://bettergedcom.wikispaces.com/message/view/Evidence+and+Conclusion+Process/35338758?o=20#35779390 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Evidence+and+Conclusion+Process/35338758?o=20#35779390" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Evidence+and+Conclusion+Process/35338758?o=20#35779390</a><!-- ws:end:WikiTextUrlRule:24 --></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-18T09:33:03-07:00</div>
+<div class="text">I wrote above, "Zotero has a new community outreach staff member. (For whom I have left a message.)"<br/>
+<br/>
+Rec'd phone call back this date from Zotero's Community Outreach staff member. <br/>
+<br/>
+When the time is right, they'd like an e-mail from us outlining our Zotero.org specific thoughts. In short, she would be our initial point person. --GJ</div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-11T18:35:41-07:00</div>
+<div class="title">Do we need Custom Elements?</div>
+<div class="text">By definition, every custom element will need a custom template. <br/>
+<br/>
+Since we are considering permitting text in the template (outside of the element), couldn't we just pass that non-standard element as a text item?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-07-22T14:35:54-07:00</div>
+<div class="title">BetterGEDCOM_First ... </div>
+<div class="text"><!-- ws:start:WikiTextUrlRule:9:http://bit.ly/pLA3LV --><a class="wiki_link_ext" href="http://bit.ly/pLA3LV" rel="nofollow">http://bit.ly/pLA3LV</a><!-- ws:end:WikiTextUrlRule:9 --><br/>
+<br/>
+Someone commented, "NOTE:  SC +1 PAGE is used in GEDCOM very flexibly. The data in this field should be in the form of a label and value pair, such as: 'Film: 1234567, Frame: 344, Line:28'"<br/>
+I'm missing something. <br/>
+<br/>
+I assume we all agree that the note style citation is narrated. References to films, frames, files or folders become an integrated part of my reference note citations, so I would might have "film no. 1234567" or film 1234567, but probably wouldn't want "Film: 1234567."  (I have enough punctuation going on without adding colon dilema. Am I being silly?)<br/>
+<br/>
+More and more in my citations, references to films fall in the citation part "source of the source."  <br/>
+<br/>
+What am I missing?</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-07-22T14:42:20-07:00</div>
+<div class="text">P.S. In source of the source, I'm identifying the film, so it might be FHL film no. 1234567. I'm frequently looking up the film titles to see if they match other records already in my database, so sometimes I even add the film title in editorial brackets. For example ..., cites FHL film 167845 ["Jones County (Iowa), Death Records, 1880-1933"].</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-07-23T06:19:05-07:00</div>
+<div class="text"><br/>
+GeneJ:<br/>
+<br/>
+The 'Film: 1234567, Frame: 344, Line:28' format was developed in GEDCOM with a purpose. It allows programs to add their own arbitrary descriptors to the citation in a standard format (via the ":" and "," separators) so that another program can interpret the meaning of the values. <br/>
+<br/>
+The program need not display it this way, but just read and write it to GEDCOM in this format.<br/>
+<br/>
+I'd say using inconsistent references such as "film no." in one instance and just "film" in another is not good. There is no way a program would be able to scan through the infinite set of possible representations to accuractely break down parts of your citation. <br/>
+<br/>
+I actually think GEDCOM's pairing of descriptors and values is a great idea (just like I think their commas as levels in place names is). Instead of developing your own formats for your citations with the brackets, isn't it simple enough to say:<br/>
+<br/>
+Film: 167845, Title: "Jones County (Iowa), Death Records. 1880-1993"<br/>
+<br/>
+And why do you think that looks so bad?<br/>
+<br/>
+GEDCOM is to transfer, not do display. It would be quite easy for a program to display that GEDCOM by removing the colon for the Film descriptor, and removing the word "Title" and adding the brackets for the<br/>
+title descriptor if it had the capability. But if the underlying data it was using was not structured, that would then be near impossible.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-07-23T09:21:19-07:00</div>
+<div class="text">Thank you.  <br/>
+<br/>
+I've been working on some graphic examples. I'll try to get those uploaded to a page and hope the visuals help.</div></div></div></body>
+</html>

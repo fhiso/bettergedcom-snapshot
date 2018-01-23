@@ -1,0 +1,1240 @@
+<html>
+<head>
+<title>BetterGedcom - GenTech Data Model</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+<br/>
+The <a class="wiki_link_ext" href="http://www.ngsgenealogy.org/cs/GenTech_Projects" rel="nofollow" target="_blank">GenTech Genealogical Data Model Project</a> devised a theoretical genealogical data model that also accommodates the genealogical research process. <br/>
+<br/>
+One of useful determinations made in the GenTech model is that the same information can be recorded or presented in the exact same genealogical software package in different ways and still be completely valid and acceptable. Recognizing and embracing this is absolutely crucial to any effort to try to map genealogical data in the real world to a standardized framework. There will be differences and discrepancies, and that's ok. In fact, <span style="color: #ff0058;">one of the most common shortcomings in genealogical software is in the accommodation of divergent information and theories</span>.<span style="color: #ff0058;"> [Authority?]</span><br/>
+<br/>
+Download links and other references about GenTech are available at the blog, see "GenTech," <a class="wiki_link_ext" href="http://bettergedcom.blogspot.com/p/gentech.html" rel="nofollow">//Build A Better GEDCOM// blog</a><br/>
+<br/>
+<h2 id="toc1"> </h2>
+<h2 id="toc2"><a name="x-Fundamental Principles of the GenTech Data Model"></a>Fundamental Principles of the GenTech Data Model</h2>
+ From the description document of the data model:<br/>
+<br/>
+<span style="line-height: 100%; margin-bottom: 0in; margin-left: 0in;">The intention of the group was to create a data model that would support the following four principles.</span><br/>
+<ul><li><span style="line-height: 100%; margin-bottom: 0in;">The purpose of the genealogical data model is to support the genealogical research process.</span></li><li><span style="line-height: 100%; margin-bottom: 0in;">There is one and only one place to put each piece of data, and there exists a place for every piece of genealogical data.</span></li><li><span style="line-height: 100%; margin-bottom: 0in;">Some researchers will not produce all the data that rigorous pursuit of the process will produce.</span></li><li><span style="line-height: 13px;">Actual software systems based on the data model should teach, encourage, remind, and assist users to follow the research process to create high quality genealogical research that can be communicated to others.</span></li></ul><br/>
+Note how different these goals are from the BetterGEDCOM project's initial project. The genealogical research process more closely encompasses a subsequent project of BetterGEDCOM we usually refer to as the genealogical workspace.<br/>
+<br/>
+<h2 id="toc3"><a name="x-More on Assertions"></a>More on Assertions</h2>
+ [<em>My problem with the official GENTECH Data Model is that I can't understand "assertions" from it. This may be because I can't find the full explanation, or any one of a number of explanations. However, at some point I managed to find and save this article, which makes a better job of explaining the concept. The article is pasted in as found, so the tenses, etc, are way out of date. I also have no idea whether this article was superseded by any of the formal data model. Adrian B</em>]<br/>
+<br/>
+Dick Eastman and John Wylie, "<strong>Concepts from the GenTech Lexicon Data Model</strong>, 15 Aug 1998, Coverpages.org, (<a class="wiki_link_ext" href="http://xml.coverpages.org/GenTechLexiconDataModel1998.html" rel="nofollow">"GenTech -- Genealogical Data Model -- Article"</a> : 15 Dec 2010), cites a now broken link to www.gentech.org.<br/>
+<br/>
+[quoting]<br/>
+The heart of the Data Model is the ASSERTION. ... The ASSERTION records the act of analyzing evidence and coming to a conclusion about that evidence. While ASSERTIONs initially address evidence, they can also address prior ASSERTIONs. We often talk in genealogy about the need to cite sources, and use evidence. The ASSERTION is the basic tool for recording that analysis. Except when addressing previous ASSERTIONs, it will usually address the lowest level of SOURCE. This is sometimes called a snippet. It may be that part of a source that addresses a particular person (what we call a PERSONA). For example, the will of a fictitious John Smith, executed on 1 May 1850, may say "...and to my daughter Polly Adams, I give $100." From this I could assert that: John had a daughter called Polly. She was alive on 1 May 1850. And that she married an Adams. From another source, my knowledge of genealogy, I could also assert that this Polly was the same person as his daughter Mary (Polly being a common nickname for Mary.) Note that these ASSERTIONs will have different levels of surety, and when combined with other ASSERTIONs that address Polly/Mary SMITH/ADAMS, will document an ancestor.<br/>
+ASSERTION is linked to many other entities: SOURCE, EVENT, GROUP, PERSONA, PLACE, CHARACTERISTIC, SURETY, RESEARCHER and another ASSERTION. One can see that software that implements the Data Model would be very powerful. With all this detail recorded (or at least recordable) and linked at the lowest level, we can audit (or backtrack) on all of the hundreds of decisions we make when we enter data into our software. We can also find the decisions of those from whom we import data. Using just the links I've listed above, there are nine relationships other data may have to an ASSERTION. With the important recursive power of ASSERTIONs (that is ASSERTIONs about ASSERTIONs) this becomes the fundamental tool for documenting the genealogical process and in strengthening genealogy software: the ultimate goal of the entire project, and the reason GENTECH took on this task in the first place.<br/>
+[end quote]
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>testuser42</strong> 2010-12-13T17:26:20-08:00</div>
+<div class="title">Gedbas4all</div>
+<div class="text">Just FYI, I found this article on the german genealogy wiki:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:12:http://wiki-en.genealogy.net/Gedbas4all/Article --><a class="wiki_link_ext" href="http://wiki-en.genealogy.net/Gedbas4all/Article" rel="nofollow">http://wiki-en.genealogy.net/Gedbas4all/Article</a><!-- ws:end:WikiTextUrlRule:12 --><br/>
+<br/>
+It deals with evidence and conclusion, using GenTech ideas and terms. I haven't read the GenTech papers yet, so maybe this is only a repetition?<br/>
+<br/>
+The page on a possible data model might be interesting, too (in German only, unfortunately):<br/>
+<!-- ws:start:WikiTextUrlRule:13:http://wiki-de.genealogy.net/Gedbas4all/Datenmodell --><a class="wiki_link_ext" href="http://wiki-de.genealogy.net/Gedbas4all/Datenmodell" rel="nofollow">http://wiki-de.genealogy.net/Gedbas4all/Datenmodell</a><!-- ws:end:WikiTextUrlRule:13 --><br/>
+<br/>
+Also, a page on importing Gramps data into the GenTech inspired model:<br/>
+<!-- ws:start:WikiTextUrlRule:14:http://wiki-de.genealogy.net/Gedbas4all/Import/Gramps --><a class="wiki_link_ext" href="http://wiki-de.genealogy.net/Gedbas4all/Import/Gramps" rel="nofollow">http://wiki-de.genealogy.net/Gedbas4all/Import/Gramps</a><!-- ws:end:WikiTextUrlRule:14 --><br/>
+<br/>
+It seems there isn't much development on that project. But it doesn't seem deserted, either.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-14T08:27:06-08:00</div>
+<div class="text">Hi Testuser.<br/>
+<br/>
+We added a GenTech section to the Standards page of the Build a BetterGedcom blog and added a page, "GenTech" to include additional references. <br/>
+See <!-- ws:start:WikiTextUrlRule:5:http://bettergedcom.blogspot.com/p/gentech.html --><a class="wiki_link_ext" href="http://bettergedcom.blogspot.com/p/gentech.html" rel="nofollow">http://bettergedcom.blogspot.com/p/gentech.html</a><!-- ws:end:WikiTextUrlRule:5 --><br/>
+<br/>
+The blog references include links to core down loadable GenTech documents from the NGS GenTech Internet site, GenTech: Genealogical Data Model (<!-- ws:start:WikiTextUrlRule:6:http://www.ngsgenealogy.org/cs/GenTech_Projects --><a class="wiki_link_ext" href="http://www.ngsgenealogy.org/cs/GenTech_Projects" rel="nofollow">http://www.ngsgenealogy.org/cs/GenTech_Projects</a><!-- ws:end:WikiTextUrlRule:6 -->).</div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-14T08:53:42-08:00</div>
+<div class="title">GenTech "Genealogical Process Steps" vs "GenTech Data Model 1.0-1"</div>
+<div class="text">Looking for a little help here.<br/>
+<br/>
+Having spent some additional time with the two flow diagrams accessible via the NGS GenTech Internet page, <!-- ws:start:WikiTextUrlRule:16:http://www.ngsgenealogy.org/cs/GenTech_Projects --><a class="wiki_link_ext" href="http://www.ngsgenealogy.org/cs/GenTech_Projects" rel="nofollow">http://www.ngsgenealogy.org/cs/GenTech_Projects</a><!-- ws:end:WikiTextUrlRule:16 --> .<br/>
+<br/>
+I'm trying to relate a specific element in the "Genealogical Process Steps" to the "GenTech Genealogical Data Model," and would sure like some help.<br/>
+<br/>
+Okay, in the flow chart for "Genealogical Process Steps," (Process) in the upper right, there is a box "Analyze, Evidence and Create Conclusional Statements." (Analyze Evidence) On the Process diagram, that appears the LAST linked part of the greater described process. <br/>
+<br/>
+To the right of the Analyze Evidence box, there are a couple of unlinked Process steps, namely "Import Genealogical Data" and "Produce Output..." <br/>
+<br/>
+Again, I'm focused on that Analyze Evidence box. I'm wondering if anyone can relate that Process step to the model itself. <br/>
+<br/>
+The second flow diagram, the data model itself, is divided into two parts (Evidence and Conclusions) by a dashed line (pink). <br/>
+<br/>
+Separate from how I might interpret the "Analyze Evidence" box by today's standards, can someone help me find that process step as identified by GenTech in the data model itself? <br/>
+<br/>
+Thank you for any assistance you are able to provide. --GJ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-15T03:50:55-08:00</div>
+<div class="title">Criticism of the GenTech Model</div>
+<div class="text">I've read the GenTech documentation a number of times over the past decade. I have found bits of it difficult to understand and awkward. Since GenTech has been brought up in the BetterGEDCOM context, I've gone through the model documents again. My problems with the model concern the extreme normalization the model has undergone and the resultant need for a complex object type, called an "assertion" in the diagrams and a "statement" in the text.<br/>
+<br/>
+In my opinion a data model should be composed of a set of entity types that best models the major "noun" concepts from a real world of discourse, and those entity types should refer to each other based on how the concepts in the real world relate to one another. Two important concepts in the genealogical world are persons and events, so all genealogical models contain them in one form or other. An event in the real world is something that happens at a place and time that involves persons playing different roles, and the events genealogists are interested in create or modify relationships between people or indicate major changes in the lives of persons.<br/>
+<br/>
+If you check the Event object in the GenTech model you will see that it does have a place-id and a date, but it doesn't have any references to persons. Instead every relationship between a GenTech Event and GenTech Person is established pairwise by creating a new object, a GenTech Assertion. For the GenTech model to encode a birth event, there must be created an Event object to represent the birth event's type, date and place, then three Person objects to represent the child and its parents (the Person objects are ONLY NAMES by the way -- no PACTs in our terminology, more on that below), and then three Assertion objects to relate each Person object to the Event object individually.<br/>
+<br/>
+(Aside on the PACT issue for a moment. Say the original birth record gave the weight of the baby and one wanted to add this to the GenTech model. This would be done by creating two more GenTech objects, a Characteristic object to hold the weight and another Assertion object to bind the weight to the Person object. Imagine having to do this in the model for every sex characteristic, every age characteristic, every occupation, and so on.)<br/>
+<br/>
+In my opinion the GenTech model breaks two fundamental rules of data modeling -- first, it elevates relationship information ("verb" like concepts) into object-hood -- and second it worries about and anticipates how the model will be implemented in a database. Every relationship between any other object type in the model must be established by an Assertion object. Objects can't relate or refer to one another on their own. So the GenTech model has object types that represent real world objects, as it should, but then it has another object type that represents all possible relationships that can exist between real world objects.<br/>
+<br/>
+Why did GenTech do this? The answer is pretty basic. They wanted a fully normalized model. I won't go into any details about what a normalized model is since this isn't a tutorial on making models, but normalizing a model is something you do judiciously when preparing a data model for implemenation in a relational database. It is not something you do to your model ahead of time. For example, here is a normalizing issue that the GenTech model "solves" ahead of time. Events in the real world often involve multiple people, where the number of people is not a fixed number. Relational databases have difficulty with object types that have these open-ended qualities, so normalization techniques are used to rearrange where data is stored in various tables. The GenTech model anticipates these needs, with the tacit assumption that the model will be hosted on relational databases. The Assertion object "normalizes away" this open-endedness by hiding it in another place.<br/>
+<br/>
+If you "unnormalize" the GenTech model a few steps by allowing say, Persons to directly have their own Characteristics, allowing Events to directly refer to their Person role players, you can "backup" into a very reasonable model. Then an actual implemenation of the GenTech model in relational databases could choose to normalize the model in the best way for the application. But implementations of the "proper, backed up" model in hierarchical network databases could implement the model directly in the model's own terms since normalization is generally not an issue for hierarchical and network databases.<br/>
+<br/>
+Tom Wetmore</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-11-09T14:14:33-08:00</div>
+<div class="text">Emmanuel<br/>
+This is my summary of the case that I referred to, and which always gives me the chills:<br/>
+<br/>
+Step 1<br/>
+Objective - find 1861 census for Janet Young (nee Gow) - should be 62y old, long-term resident in Angus. Known to die in 1875 in Dundee, Angus and to be born in Dunkeld, Perthshire. Search finds ....<br/>
+<br/>
+Source 1 - Census Entry: Young, Janet, 1861, Dundee <br/>
+Downloaded from ScotlandsPeople reference 1861 YOUNG JANET F 60 DUNDEE FIRST DISTRICT DUNDEE CITY ANGUS 282/01 025/01 016<br/>
+<br/>
+This is the only 1861 record to match Janet on name, age (+/- 2y) and place of birth (Dunkeld). By match and lack of alternatives, we deem this to be our Janet Young (nee Gow).<br/>
+<br/>
+Step 2<br/>
+Analyse census record above - in particular, note Janet Young is described as a widow. <br/>
+Conclusion - her husband, Andrew Young, died in or before April 1861. Mark up Andrew's record accordingly.<br/>
+<br/>
+Step 3<br/>
+Various work carries on researching the Young family, until:<br/>
+<br/>
+Step 4<br/>
+Objective - search 1861 census for Andrew Young born in Dunkeld (I think I was looking for their son, Andrew Young junior). This finds:<br/>
+<br/>
+Source 2 - Census Entry: Young, Andrew &amp; Janet, 1861, Lochee<br/>
+Downloaded from ScotlandsPeople, reference: DUNDEE THIRD DISTRICT DUNDEE CITY/ANGUS 282/03 003/03 015<br/>
+<br/>
+This matches Andrew Young senior, previously assumed dead by:<br/>
+ - his correct age (to within 5y), <br/>
+ - his correct birthplace, <br/>
+ - names, birthplaces and ages of children Andrew, James and Christina,<br/>
+<br/>
+The Andrew on this census has a wife named Janet Gow. Apart from the surname, she matches Janet Young by age (+/- 2y) and place of birth (Dunkeld). <br/>
+<br/>
+Issue - the wife's surname mismatches. This is explained by the fact that Janet Young's maiden name was Gow (i.e. that on this census) and in Scotland women can often use their maiden name on official forms.<br/>
+<br/>
+Conclusion - This is therefore deemed to be the family for Andrew and Janet Young and Andrew is still alive.<br/>
+<br/>
+Step 5 <br/>
+Objective - to identify conclusions resulting from erroneous identification of Source 1. <br/>
+Step 5A) Identify first level conclusions, i.e. those directly justified by Source 1 (e.g. death of Andrew Young, 1861 census for Janet). <br/>
+Step 5B) Identify any second level conclusions that used the (erroneous) conclusions identified in step (5A) as their evidence.<br/>
+Repeat ad nauseum until no more conclusions can be identified.<br/>
+<br/>
+Step 6<br/>
+Objective - to remove conclusions resulting from erroneous identification of Source 1. <br/>
+<br/>
+Fortunately, in this particular case, I didn't have much reversion to do beyond deleting Janet's incorrect 1861 census, reviving Andrew from his early grave and deleting a grandchild who was a grandchild of the "other" Janet Young from Dunkeld. Or at least - that's what I THINK, because while it's easy in current GEDCOM style programs to identify where a Source is used as Evidence, identifying where a previous CONCLUSION has been used as evidence is just down to someone (me, in this case) writing it in the notes.</div></div><div class="comment"><div class="from"><strong>EmmanuelBriot</strong> 2011-11-10T03:28:18-08:00</div>
+<div class="text">Adrian,<br/>
+Very interesting example. I have tried below to show how I would handle it with<br/>
+the Gentech model. I might have made wrong choices, so I would certainly<br/>
+welcome discussion. I think it would be interesting to see how things would go<br/>
+with the DeadEnds model as well as Behold's model.<br/>
+<br/>
+Sorry for the long post here, I think it is necessary to show the details of the model.<br/>
+<br/>
+<ul><li>Step 1</li></ul>  Janet Young (nee Gow) - should be 62y old,<br/>
+  long-term resident in Angus. Known to die in 1875 in Dundee, Angus and to be<br/>
+  born in Dunkeld, Perthshire. Search finds ....<br/>
+<br/>
+  Gentech would contain something like the below. Here, we have a single<br/>
+  persona for Janet, although it is likely it would in reality be made up of<br/>
+  several other personas, from the various sources where we found the birth,<br/>
+  residency,..<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;      Persona   [id=1, name=&amp;quot;Janet Young nee Gow&amp;quot;]  # Name is informative only&lt;br/&gt;      Characteristic [id=1]&lt;br/&gt;          Characteristic_Part [characteristic=1, type=&amp;quot;first name&amp;quot;, value=&amp;quot;Janet&amp;quot;]&lt;br/&gt;          ..  others, not shown here&lt;br/&gt;      Assertion [id=1, from=Persona(1), to=Characteristic(1)]&lt;br/&gt;      Event     [id=1, name=&amp;quot;birth of Janet Young&amp;quot;, date=&amp;quot;...&amp;quot;]&lt;br/&gt;      Assertion [id=2, from=Persona(1), to=Event(1)]&lt;br/&gt;&lt;br/&gt;      # Show she is marriage to Andrew&lt;br/&gt;      Persona   [id=2, name=&amp;quot;Andrew Young&amp;quot;]&lt;br/&gt;      Event     [id=2, name=&amp;quot;marriage of Andrew and Janet&amp;quot;, date=&amp;quot;...&amp;quot;]&lt;br/&gt;      Assertion [id=3, from=Persona(1), to=Event(2),  role=&amp;quot;wife&amp;quot;]&lt;br/&gt;      Assertion [id=4, from=Persona(2), to=Event(2),  role=&amp;quot;husband&amp;quot;]&lt;br/&gt;      ... other assertions irrelevant for use case.&lt;br/&gt;[[code]&lt;br/&gt;&lt;br/&gt;* Source 1: Census Entry in Dundee&lt;br/&gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">      Persona   [id=1, name="Janet Young nee Gow"]  # Name is informative only
+      Characteristic [id=1]
+          Characteristic_Part [characteristic=1, type="first name", value="Janet"]
+          ..  others, not shown here
+      Assertion [id=1, from=Persona(1), to=Characteristic(1)]
+      Event     [id=1, name="birth of Janet Young", date="..."]
+      Assertion [id=2, from=Persona(1), to=Event(1)]
+ 
+      # Show she is marriage to Andrew
+      Persona   [id=2, name="Andrew Young"]
+      Event     [id=2, name="marriage of Andrew and Janet", date="..."]
+      Assertion [id=3, from=Persona(1), to=Event(2),  role="wife"]
+      Assertion [id=4, from=Persona(2), to=Event(2),  role="husband"]
+      ... other assertions irrelevant for use case.
+[[code]
+ 
+* Source 1: Census Entry in Dundee
+ </pre>
+<!-- ws:end:WikiTextCodeRule:0 -->  New in the model:<br/>
+     Source [id=1]<br/>
+       Citation [id=1, type="title", value="Census Dundee ..."]<br/>
+<!-- ws:start:WikiTextCodeRule:1:
+&lt;pre class=&quot;text&quot;&gt;* Step 2: Analyse census record above&lt;br/&gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text"> 
+* Step 2: Analyse census record above
+ </pre>
+<!-- ws:end:WikiTextCodeRule:1 -->  New in the model:<br/>
+     # What we read in the sources. We can't assume this Janet is the same we<br/>
+     # already have in the database, so we create a new persona. That persona<br/>
+     # is a widow<br/>
+<br/>
+     Persona  [id=3,  name="Janet from this census"]<br/>
+     Characteristic [id=2, date="April 1861"]<br/>
+         Characteristic_Part [type="marrital status", value="widow"]<br/>
+     Assertion [id=5, from=Persona(3), to=Characteristic(2)]<br/>
+<br/>
+     # Conclusion: since age... match, we think this persona is the same as the<br/>
+     # Janet we already knew. From then one, the GUI will always show the<br/>
+     # attributes of Persona(3) and Persona(1) merged, although they are really<br/>
+     # separate in the database.<br/>
+<br/>
+     Assertion [id=6, from=Persona(3),  to=Persona(1),  type="same as"]<br/>
+<br/>
+     # 2nd conclusion: her husband his dead. We create a new persona for this<br/>
+     # husband. There is no notion of Family, so we create a marriage between<br/>
+     # Janet and that persona<br/>
+     Persona [id=4, name="Janet's husband"]<br/>
+     Event [id=3, name="Janet's marriage"]<br/>
+     Assertion [id=7, from=Persona(3), to=Event(3),  role="wife"]<br/>
+     Assertion [id=8, from=Persona(4), to=Event(3),  role="husband"]<br/>
+<br/>
+     # That husband is dead<br/>
+     Event [id=4, name="Death of Janet's husband"]<br/>
+     Assertion [id=9, from=Persona(4), to=Event(4), role="principal"]<br/>
+<br/>
+     # In fact, we know he is dead because his wife is a widow, so we can<br/>
+     # link the two assertions. This step is optional but might prove<br/>
+     # useful later, or for automatic reasoning.<br/>
+<br/>
+     Assertion_Assertion [id=1, original=5, deduction=9]<br/>
+<br/>
+     # 3rd conclusion: we assume the husband we are talking about here is the<br/>
+     # one we already new about<br/>
+     Assertion [id=10, from=Persona(4), to=Persona(2), type="same as"]<br/>
+<br/>
+     In my idea of a GUI, all this would be done from the same "Source" page:<br/>
+     you click to create a new source, enter screenshot of the census, then<br/>
+     enter the citations we found. In this part for the citation, you can<br/>
+     only refer to new personas. Then there is a second step in which you bind<br/>
+     these new personas with ones that already exist in your database.<br/>
+<a class="wiki_link" href="/code">code</a><br/>
+<br/>
+<ul><li>Step 4: search 1861 census for Andrew Young, found in Source 2.</li></ul><br/>
+        Gentech: we would do something similar to step2: create a new source, new<br/>
+        personas for this Janet (id=5) and this Andrew (id=6). They are also<br/>
+        married, so we create a marriage between them (event 5). One of the<br/>
+        conclusions is that this Janet is the same we already had in the<br/>
+        database, so we create an assertion "same as". Same for Andrew.<br/>
+<br/>
+        But when we see the page for Andrew, we discover there is an<br/>
+        inconsistency because he was marked as dead in Step 2 (this<br/>
+        inconsistency could easily be detected automatically in fact). From the<br/>
+        Death event, we easily find out the assertion that bound it to the<br/>
+        Persona(4), and also that it was found in Source1<br/>
+<br/>
+<ul><li>Step 5A) Identify erroneous first level conclusions</li></ul><br/>
+      Gentech: from the above, we know that we need to look at Source1 (no need<br/>
+      to guess or remember that years later). The simplest conclusion is that<br/>
+      the husband we found in Source1 (Persona(4)) is not Andrew, so we mark<br/>
+      the Assertion(10) as disproved. While on the page for Source1, we also<br/>
+      see that one of the other conclusions we drew was to think that Janet was<br/>
+      the one already in the database, so we also disprove Assertion(6).<br/>
+<br/>
+<ul><li>Step 5B) Identify any second level conclusions</li></ul><br/>
+      Gentech: Now, if we go to the page for Janet (Persona(1)), we'll find<br/>
+      all the events and characteristics for Persona(1) and Persona(5).<br/>
+      We also see the disproved Assertion(6), so we know she wasn't the one<br/>
+      on the census (but we still have a link to that census, should we care<br/>
+      to examine the census again.<br/>
+<br/>
+      On Andrew's page, we see all events for Persona(2) and Persona(6), and<br/>
+      the disproved assertion for Persona(4), so we know he wasn't the one<br/>
+      on the census, but still have a trace to the census.<br/>
+<br/>
+<ul><li>Step 6: remove conclusions resulting from erroneous identification</li></ul><br/>
+      Gentech: Never remove anything, just disprove the assertion. It will<br/>
+      still show (optionally) on the person's page, so we can revisit it<br/>
+      at any time.<br/>
+<br/>
+I think the above scenario works fine with GenTech. The way I did this example<br/>
+(but there might certainly be better alternatives) we still see multiple<br/>
+marriage on Janet's page: Event(2) and Event(5). On the "second Janet page"<br/>
+(from Persona(3)), we see the marriage Event(3) that binds here to the<br/>
+"second Andrew".<br/>
+<br/>
+I think the GUI should have an option to collapse these marriages together and<br/>
+merge the information (if one defines a place and the other a date, we could<br/>
+have a single entry in the GUI that shows both place and date). The important<br/>
+thing is not to merge them in the database, since we don't know 100% that they<br/>
+are the same always.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-11-11T08:26:11-08:00</div>
+<div class="text">Emmanuel - you'll have to give me the time to read this through carefully. It deserves careful reading because you could be the one person to rescue GenTech's reputation!</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-11T20:26:22-08:00</div>
+<div class="text">Here is how Adrian’s chilling example could be handled by the DeadEnds model.<br/>
+<br/>
+First, it is important to give the state of things before this example begins, and how that state would be reflected in the DeadEnds model at that time. It is clear from the writeup that before we reach step 1 there are already two conclusion persons in existence, Janet Gow and Andrew Young, and that they are married. It may even be the case that there are conclusion persons in existence for their children Andrew, James and Christina. This means that research has already been done, evidence has already been collected, and if the DeadEnds model were being used this evidence exist in the form of Persona records for Janet and Andrew, and the Conclusion records for Janet and Andrew would link to these Personas.<br/>
+<br/>
+<em>Step 1<br/>
+Objective - find 1861 census for Janet Young (nee Gow) - should be 62y old, long-term resident in Angus. Known to die in 1875 in Dundee, Angus and to be born in Dunkeld, Perthshire. Search finds ....<br/>
+<br/>
+Source 1 - Census Entry: Young, Janet, 1861, Dundee <br/>
+Downloaded from ScotlandsPeople reference 1861 YOUNG JANET F 60 DUNDEE FIRST DISTRICT DUNDEE CITY ANGUS 282/01 025/01 016<br/>
+<br/>
+This is the only 1861 record to match Janet on name, age (+/- 2y) and place of birth (Dunkeld). By match and lack of alternatives, we deem this to be our Janet Young (nee Gow).</em><br/>
+<br/>
+In the description of Step 1, Adrian makes it clear that there is already be a Conclusion record for Janet Gow, born about 1799 in Dunkeld, died 1875 in Dundee. How he arrived at that is beyond the scope of this example, but he must have other evidence, extracted into Persona records and used to build Janet’s Conclusion record.<br/>
+<br/>
+In the DeadEnds model the first source would result in three records. First, the Source record for the 1861 Census, not shown below. Second would be the Event record for the census (all examples shown in XML for convenience):<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;&amp;lt;event type=”census” id=”e1”&amp;gt;&lt;br/&gt;  &amp;lt;date&amp;gt; 1861 &amp;lt;/date&amp;gt;&lt;br/&gt;  &amp;lt;place&amp;gt; Dundee &amp;lt;/place&amp;gt;&lt;br/&gt;  &amp;lt;role type=”unknown” personid=”p1”&amp;gt;&lt;br/&gt;    &amp;lt;mstat&amp;gt; widow &amp;lt;/mstat&amp;gt;&lt;br/&gt;    &amp;lt;age&amp;gt; 60 &amp;lt;/age&amp;gt;&lt;br/&gt; &amp;lt;/role&amp;gt;&lt;br/&gt;  ...&lt;br/&gt;&amp;lt;/event&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&lt;event type=”census” id=”e1”&gt;
+  &lt;date&gt; 1861 &lt;/date&gt;
+  &lt;place&gt; Dundee &lt;/place&gt;
+  &lt;role type=”unknown” personid=”p1”&gt;
+    &lt;mstat&gt; widow &lt;/mstat&gt;
+    &lt;age&gt; 60 &lt;/age&gt;
+ &lt;/role&gt;
+  ...
+&lt;/event&gt;</pre>
+<!-- ws:end:WikiTextCodeRule:0 --><br/>
+Note that in DeadEnds, person attributes that are relative to the event (not intrinsic to the person) are treated as attributes of the Role Reference. So Janet’s age is placed in the role reference. Adrian stated that the record shows that Janet was a widow, and although he doesn’t actually show this in the source string, I’ll assume he’s telling the truth, so Janet’s widow status is also given as a role attribute (mstat means marriage status).<br/>
+<br/>
+The third record created from the evidence would be a Persona record:<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:1:
+&lt;pre class=&quot;text&quot;&gt;&amp;lt;person id=”p1”&amp;gt;&lt;br/&gt;  &amp;lt;name type=unknown”&amp;gt; Janet Young &amp;lt;/name&amp;gt;&lt;br/&gt;  &amp;lt;event type=”reside” date=”1861” place=”Dundee”/&amp;gt;&lt;br/&gt;  &amp;lt;event type=”birth” date=”about 1801”/&amp;gt;&lt;br/&gt;&amp;lt;/person&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&lt;person id=”p1”&gt;
+  &lt;name type=unknown”&gt; Janet Young &lt;/name&gt;
+  &lt;event type=”reside” date=”1861” place=”Dundee”/&gt;
+  &lt;event type=”birth” date=”about 1801”/&gt;
+&lt;/person&gt;</pre>
+<!-- ws:end:WikiTextCodeRule:1 --><br/>
+I added two derived events added to the Persona, one for the birth, based on the age given in 1861, and one for residence in Dundee at the time of the census. In DeadEnds, events can either be stand alone records that refer to their role players via role references (as in the census event), or, if there is only one role-player who is primary in the event, that event can be put inside the Persona as an event sub-structure.<br/>
+<br/>
+Adrian states that he “deems” this record to apply to the Janet Young nee Gow, which means he has concluded that this new Persona record should be linked into the Janet Gow Conclusion record. So we can infer exactly what has changed to that Conclusion record:<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:2:
+&lt;pre class=&quot;text&quot;&gt;&amp;lt;person id=”CP1”&amp;gt;  // Conclusion record for Janet Gow&lt;br/&gt;  &amp;lt;name type=”birth”&amp;gt; Janet Gow &amp;lt;/name&amp;gt;&lt;br/&gt;  &amp;lt;sex&amp;gt; F &amp;lt;/sex&amp;gt;&lt;br/&gt;  ...&lt;br/&gt;  &amp;lt;person personid=”...”&amp;gt; // Previous linked Persona&lt;br/&gt;  ...&lt;br/&gt;  &amp;lt;person personid=”p1”&amp;gt; // Link to new Persona just added by this step. &amp;lt;&amp;lt;&amp;#45;- THIS IS NEW.&lt;br/&gt;     &amp;lt;source&amp;gt; Only 1861 record to match Janet Young by name, approximate age and location &amp;lt;/source&amp;gt;&lt;br/&gt;  &amp;lt;/person&amp;gt;&lt;br/&gt;  ...&lt;br/&gt;&amp;lt;/person&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&lt;person id=”CP1”&gt;  // Conclusion record for Janet Gow
+  &lt;name type=”birth”&gt; Janet Gow &lt;/name&gt;
+  &lt;sex&gt; F &lt;/sex&gt;
+  ...
+  &lt;person personid=”...”&gt; // Previous linked Persona
+  ...
+  &lt;person personid=”p1”&gt; // Link to new Persona just added by this step. &lt;&lt;-- THIS IS NEW.
+     &lt;source&gt; Only 1861 record to match Janet Young by name, approximate age and location &lt;/source&gt;
+  &lt;/person&gt;
+  ...
+&lt;/person&gt;</pre>
+<!-- ws:end:WikiTextCodeRule:2 --><br/>
+In the example the source attribute is used to state the reason why the Persona has been linked to the Conclusion. You might like a better word for source -- how about reason or conclusion?<br/>
+<br/>
+<em>Step 2<br/>
+Analyse census record above - in particular, note Janet Young is described as a widow. <br/>
+Conclusion - her husband, Andrew Young, died in or before April 1861. Mark up Andrew's record accordingly.</em><br/>
+<br/>
+By what Adrian has written here we know there already is a Conclusion record for Andrew Young, and that the Conclusion records for Andrew Young and Janet Gow are linked as husband and wife or in a family structure.<br/>
+<br/>
+The fact that Janet Young is a widow implies her husband died before 1861. From this fact Adrian would create another Persona from the census record:<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:3:
+&lt;pre class=&quot;text&quot;&gt;&amp;lt;person id=”p2”&amp;gt;&lt;br/&gt;  &amp;lt;name value=”unknown”/&amp;gt;  &amp;lt;&amp;lt;&amp;#45;- This persona is anonymous&lt;br/&gt;  &amp;lt;event type=”death” date=”before 1861”&amp;gt;&lt;br/&gt;    &amp;lt;source&amp;gt; Inferred from wife being a widow in 1861 &amp;lt;/source&amp;gt;&lt;br/&gt;  &amp;lt;/event&amp;gt;&lt;br/&gt;&amp;lt;/person&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&lt;person id=”p2”&gt;
+  &lt;name value=”unknown”/&gt;  &lt;&lt;-- This persona is anonymous
+  &lt;event type=”death” date=”before 1861”&gt;
+    &lt;source&gt; Inferred from wife being a widow in 1861 &lt;/source&gt;
+  &lt;/event&gt;
+&lt;/person&gt;</pre>
+<!-- ws:end:WikiTextCodeRule:3 --><br/>
+At this point Adrian (erroneously) believes that this Persona record applices to Andrew Young, so he adds a link to it to the Andrew Young Conclusion person:<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:4:
+&lt;pre class=&quot;text&quot;&gt;&amp;lt;person id=”CP2”&amp;gt;&lt;br/&gt;  &amp;lt;name type=”birth”&amp;gt; Andrew Young &amp;lt;/name&amp;gt;&lt;br/&gt;  &amp;lt;sex&amp;gt; M &amp;lt;/sex&amp;gt;&lt;br/&gt;  &amp;lt;person personid=”...”&amp;gt; // Link to other Persona record for Andrew&lt;br/&gt;  ...&lt;br/&gt;  &amp;lt;person personid=”p2”/&amp;gt; // Link to Persona record just created. &amp;lt;&amp;lt;&amp;#45;- This is the new part.&lt;br/&gt;    &amp;lt;source&amp;gt; Assumption that widow Janet Young in 1861 was wife of Andrew &amp;lt;/source&amp;gt;&lt;br/&gt;&amp;lt;/person&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&lt;person id=”CP2”&gt;
+  &lt;name type=”birth”&gt; Andrew Young &lt;/name&gt;
+  &lt;sex&gt; M &lt;/sex&gt;
+  &lt;person personid=”...”&gt; // Link to other Persona record for Andrew
+  ...
+  &lt;person personid=”p2”/&gt; // Link to Persona record just created. &lt;&lt;-- This is the new part.
+    &lt;source&gt; Assumption that widow Janet Young in 1861 was wife of Andrew &lt;/source&gt;
+&lt;/person&gt;</pre>
+<!-- ws:end:WikiTextCodeRule:4 --><br/>
+Summary so far. We have created a Persona for Janet Young and attached it to the Janet Gow conclusion. We have created a no-name Persona for the husband of the widow Janet Young and attached it to the Andrew Young conclusion.<br/>
+<br/>
+<em>Step 3<br/>
+Various work carries on researching the Young family, until:<br/>
+<br/>
+Step 4<br/>
+Objective - search 1861 census for Andrew Young born in Dunkeld (I think I was looking for their son, Andrew Young junior). This finds:<br/>
+<br/>
+Source 2 - Census Entry: Young, Andrew &amp; Janet, 1861, Lochee<br/>
+Downloaded from ScotlandsPeople, reference: DUNDEE THIRD DISTRICT DUNDEE CITY/ANGUS 282/03 003/03 015<br/>
+<br/>
+This matches Andrew Young senior, previously assumed dead by:<br/>
+- his correct age (to within 5y), <br/>
+- his correct birthplace, <br/>
+- names, birthplaces and ages of children Andrew, James and Christina,<br/>
+<br/>
+The Andrew on this census has a wife named Janet Gow. Apart from the surname, she matches Janet Young by age (+/- 2y) and place of birth (Dunkeld).</em><br/>
+<br/>
+In step 4, using DeadEnds, Adrian would create a new census event for the Andrew &amp; Janet Young household, and five Person records for the two parents and three children. Adrian is starting to get worried because this Janet Gow looks like the real Janet Young he was looking for, so he’s getting a sinking feeling that the new Janet Young Persona record really applies to a completely different person that he is probably not interested in.<br/>
+<br/>
+<em>Issue - the wife's surname mismatches. This is explained by the fact that Janet Young's maiden name was Gow (i.e. that on this census) and in Scotland women can often use their maiden name on official forms.<br/>
+<br/>
+Conclusion - This is therefore deemed to be the family for Andrew and Janet Young and Andrew is still alive.</em><br/>
+<br/>
+Adrian would now properly link the five Persona records to the proper five Conclusion records. He would also remove to two erroneous Personas, but I'll cover that after the next quote.<br/>
+<br/>
+<em>Step 5 <br/>
+Objective - to identify conclusions resulting from erroneous identification of Source 1. <br/>
+Step 5A) Identify first level conclusions, i.e. those directly justified by Source 1 (e.g. death of Andrew Young, 1861 census for Janet). <br/>
+Step 5B) Identify any second level conclusions that used the (erroneous) conclusions identified in step (5A) as their evidence.<br/>
+Repeat ad nauseum until no more conclusions can be identified.<br/>
+<br/>
+Step 6<br/>
+Objective - to remove conclusions resulting from erroneous identification of Source 1. </em><br/>
+<br/>
+Now we see one way how the DeadEnds model SHINES! Source 1 caused two erroneous conclusions: 1) that Janet Young was Janet Gow, and 2) that Janet Young’s dead husband was Andrew Young. These two conclusions are attached directly to the links from the Andrew Young and Janet Gow conclusion records to the new Personas created in step one. By simply UNLINKING those two personas, the erroneous conclusions are “POOF” REMOVED. There are now two “orphan” persona records, not linked to any conclusion persons, and this is exactly how the things should be, since Adrian at this point has no clue as to who Janet Young and her nameless husband are. Some might argue that we want to keep these erroneous conclusions around in some way. I say “why, why, why?” You made a mistake and you just corrected it. Do you really want to wallow in the remembrances of your mistakes. If you really insist on journaling all your mistakes, I would put a note into the orphan Personas clearly stating who they are not!!<br/>
+<br/>
+<em>Fortunately, in this particular case, I didn't have much reversion to do beyond deleting Janet's incorrect 1861 census, reviving Andrew from his early grave and deleting a grandchild who was a grandchild of the "other" Janet Young from Dunkeld. Or at least - that's what I THINK, because while it's easy in current GEDCOM style programs to identify where a Source is used as Evidence, identifying where a previous CONCLUSION has been used as evidence is just down to someone (me, in this case) writing it in the notes.</em><br/>
+<br/>
+I hope you see how these concerns are removed using the DeadEnds approach.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-11-14T15:17:01-08:00</div>
+<div class="text">Emmanuel,<br/>
+Congratulations - I said at the beginning of this thread that "Unfortunately, the full [GENTECH] documentation is poor at explaining what [the assertion] is for". I think I now begin to see some, at least, of its uses and that the GENTECH model might actually be useful.<br/>
+<br/>
+I note that, unlike Tom's ideas, GENTECH doesn't put layers of conclusion persons on top of the initial personas. However, the person / person / same-as assertions seem to perform a somewhat similar role, though I can't envisage them in 2 dimensions and they wouldn't have the attributes and events that persons would. One of the uses for adding attributes to conclusion persons higher up the tree is to over-ride values against personas. For instance, persona1 might have a name "Michael Doe", persona2 might have a name "Anthony Michael Doe". After a deduction that these 2 are the same guy, the new conclusion person 3, linked from personas 1 and 2, might have the name structure "Anthony Michael Doe - uses Michael", and the names lower down would be marked superseded. <br/>
+<br/>
+Similarly in some fashion, GENTECH might create a new persona with the name structure "Anthony Michael Doe - uses Michael", mark this as the same person as the other 2 and presumably mark the 1st 2 name characteristics as superseded, all in assertions somehow.<br/>
+<br/>
+The major aspects of GENTECH for me are that <br/>
+ - the entity relationship diagrams do obscure genealogical relationships, making it more difficult to understand - not an issue for end-users (I hope) but certainly one for programmers;<br/>
+ - the assertion does seem to provide a natural home for the recording of proof statements and proof summaries, in which I have a great interest;<br/>
+ - I'm not keen on losing the concept of Family. As described in the Requirements Catalogue for BG, there are 2 concepts that GEDCOM has conflated - (i) the (alleged) biological parentage and (ii) the social grouping of a family. The (alleged) biological parentage can be described by birth events and the correct roles, no argument from me about that. But the social grouping of a family is independent of events, so to me, needs a successor to the GEDCOM Family.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-11-14T15:35:29-08:00</div>
+<div class="text">Now, re Emmanuel's description of Andrew and Janet Young. This all seems to make perfect sense, though I think I still find it difficult to envisage how step 6 "remove conclusions resulting from erroneous identification" might work. <br/>
+<br/>
+Let me take an example based on Andrew and Janet. Suppose somewhere before step 4, when I found the unexpected 1861 census, in fact, in step 3 ("Various Work"), I had found some reference in a parish register to an Andrew Young in 1862. Let's say there were 2 possibilities for this Andrew Young - Janet's husband and another chap, his (invented) cousin of similar age and origin. Because Janet's Andrew is dead in 1861 (I thought), then the step 3 Andrew from the parish register must be (we'll say) the new cousin.<br/>
+<br/>
+After the 1861 census has been found, then step 5 has to identify the conclusion about the parish register Andrew being the cousin as now being suspect.<br/>
+<br/>
+I think we can do it providing we are careful about recording the contributing assertions(?) to that identification. These must surely include:<br/>
+ - that the only 2 possibilities for the parish register Andrew are Janet's Andrew and his cousin;<br/>
+ - that Janet's Andrew is the same as the first 1861 Mr Young, who is not seen;<br/>
+ - that the first 1861 Mr Young is dead;<br/>
+<br/>
+I have no idea how GENTECH would represent that logic but I'm sure it has to, as the only one of those assertions(?) that is wrong is that "Janet's Andrew is the same as the first 1861 Mr Young". I think it's possible....<br/>
+<br/>
+Tom - I will check through your post later - I don't envisage any surprises, though.</div></div><div class="comment"><div class="from"><strong>EmmanuelBriot</strong> 2011-11-15T00:58:23-08:00</div>
+<div class="text"><ul class="quotelist"><li>I note that, unlike Tom's ideas, GENTECH doesn't put layers of conclusion</li><li>persons on top of the initial personas. However, the person / person / same-as</li><li>assertions seem to perform a somewhat similar role, though I can't envisage</li><li>them in 2 dimensions and they wouldn't have the attributes and events that</li><li>persons would.</li></ul><br/>
+I think the above is the main difference between DeadEnds and GenTech: in the<br/>
+latter, the conclusion persons are virtual: they are build by the software, for<br/>
+the display, from the set of "same as" assertions. Exporting from one model to<br/>
+the other should be relatively easy in fact, if we ever have to do it.<br/>
+<br/>
+<br/>
+<ul class="quotelist"><li>One of the uses for adding attributes to conclusion persons</li><li>higher up the tree is to over-ride values against personas. For instance,</li><li>persona1 might have a name "Michael Doe", persona2 might have a name "Anthony</li><li>Michael Doe". After a deduction that these 2 are the same guy, the new</li><li>conclusion person 3, linked from personas 1 and 2, might have the name</li><li>structure "Anthony Michael Doe - uses Michael", and the names lower down would</li><li>be marked superseded.</li></ul><br/>
+The way I would do it in GenTech (disclaimer: not tried in practice) is to use<br/>
+the Assertion_Assertion I showed in my earlier example:<br/>
+<br/>
+  Assertion[id=1, from=Persona1, to=Characteristic[name="Michael Doe"]]<br/>
+  Assertion[id=2, from=Persona2, to=Characteristic[name="Anthony Michael Doe"]]<br/>
+  Assertion[id=3, from=Persona1, to=Persona2, type="same as"]<br/>
+<br/>
+  At this point, the GUI, on the page for Michael Doe, will show both<br/>
+  names. You want to only preserve one. Two ways to do it: either you create<br/>
+  a third persona to store your conclusions (which GenTech certainly doesn't<br/>
+  forbid, although it doesn't call them "conclusion persona" since they can<br/>
+  be further extended:<br/>
+<br/>
+    Persona3<br/>
+    Assertion[id=4, from=Persona3, to=Characteristic[name="...."]]<br/>
+    Assertion[id=5, from=Persona1, to=Persona3, type="same as"]<br/>
+    Assertion_Assertion[original=Assertion2, deduction=Assertion4]<br/>
+<br/>
+      and then either the GUI doesn't show you Assertion2 anymore because it<br/>
+      was used in an Assertion_Assertion, or you mark Assertion2 as disproved<br/>
+      which seems a bit radical.<br/>
+<br/>
+  The second approach is to add the new name assertion to one of the existing<br/>
+  personas directly, but that doesn't seem so in line with the model.<br/>
+<br/>
+<br/>
+<br/>
+<ul class="quotelist"><li>The major aspects of GENTECH for me are that</li><li>- the entity relationship diagrams do obscure genealogical relationships,</li></ul>    making it more difficult to understand - not an issue for end-users (I<br/>
+    hope) but certainly one for programmers;<br/>
+<br/>
+As a developer myself, I am more comfortable with such diagrams than with<br/>
+abstract discussions on genealogical matters, because I am not an expert<br/>
+genealogist.<br/>
+<br/>
+<br/>
+<ul class="quotelist"><li>- the assertion does seem to provide a natural home for the recording of</li></ul>    proof statements and proof summaries, in which I have a great interest;<br/>
+<br/>
+And also to record a negative statement ("Persona1 is *not* the same as<br/>
+Persona2").<br/>
+<br/>
+If I may make another analogy to explain the concept of assertions: imagine you<br/>
+have a huge sheet of paper. When you find a census record, you also search for<br/>
+a blank space on that paper, and start writing information you see in the<br/>
+census: names (aka "Persona"), places, dates, attributes ("blond", "baker",...)<br/>
+<br/>
+The second step is to draw lines between these various pieces of information<br/>
+you have already written: you link "Persona1" with "Place1" and write "birth"<br/>
+next to the link, for instance. And so on for all the information you can find<br/>
+on the census. This diagram you just created is completely separated from the<br/>
+rest of the information on your paper. This is the evidence level of GenTech.<br/>
+Each of the lines is of course an assertion (from a person to a person, from a<br/>
+person to a place, or anything else). <br/>
+<br/>
+Draw a big box around all the information you have just written. At the top of<br/>
+the box, write "Source1", since this all came from that single source. When<br/>
+they are entered in the database, the assertions will be linked to that source.<br/>
+<br/>
+The third step is to draw lines from the pieces of informations you have just<br/>
+written to those pieces of information that were already on the paper. Each<br/>
+time you draw such a line, you should explain why you draw it. This is the<br/>
+conclusion part of the GenTech model. Each line here is still an assertion,<br/>
+although they are not associated with a source. They will, however, have a<br/>
+rationale to justify them.<br/>
+<br/>
+You can also if you wish draw lines between lines. These are<br/>
+Assertion_Assertion, ie assertions deducted from other assertions.<br/>
+<br/>
+The work of the software is to store that sheet of paper in a computer in a<br/>
+manner that it can show you the information in different ways after traversing<br/>
+all the links. But it must be able at any point to reconstruct your paper<br/>
+exactly as you entered it, because you might need to see again what and why you<br/>
+entered exactly as you wrote it.<br/>
+<br/>
+The analogy is fairly accurate, I think, and in fact this sheet of paper is<br/>
+what I would love to have as a GUI: no constrained form, no need to copy paste<br/>
+the information into various boxes, no need to duplicate the Source<br/>
+information,... <br/>
+<br/>
+<br/>
+<ul class="quotelist"><li>- I'm not keen on losing the concept of Family. As described in the</li></ul>    Requirements Catalogue for BG, there are 2 concepts that GEDCOM has<br/>
+    conflated - (i) the (alleged) biological parentage and (ii) the social<br/>
+    grouping of a family. The (alleged) biological parentage can be described<br/>
+    by birth events and the correct roles, no argument from me about that. But<br/>
+    the social grouping of a family is independent of events, so to me, needs a<br/>
+    successor to the GEDCOM Family.<br/>
+<br/>
+<br/>
+GenTech proposes to store the children of a couple as a group of personas. I<br/>
+think this is heavy weight (or maybe I did not understand correctly that<br/>
+part). In my prototype, I chose not to have the notion of Family, but to<br/>
+compute it on the fly instead based on various criteria. As discussed in<br/>
+another thread, this is fairly flexible, in that the computation can be based<br/>
+on birth events (where the child and parents play different roles) or on<br/>
+persona-to-persona relationships (if you see a census that says "cousin" or<br/>
+"grand-mother" you do not have to create intermediate personas or families for<br/>
+those). <br/>
+<br/>
+Your "social grouping" can be represented exactly like that in GenTech: use a<br/>
+group of Personas, give a name to the group. The software can be extended to<br/>
+take certain types of group into account when computing the pedigree, for<br/>
+instance.<br/>
+<br/>
+My point of view is that it will be easier to add the notion of Family if we<br/>
+ever need it than to remove it eventually. So far, I haven't seen a case where<br/>
+this notion was required.</div></div><div class="comment"><div class="from"><strong>EmmanuelBriot</strong> 2011-11-15T00:59:46-08:00</div>
+<div class="text">(sorry for the missing quotes in the above: I had prepared the answer using "&gt;" at the beginning of lines, but apparently the wiki removes them... Hopefully, Adrian's and my comments are still distinguishable.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-11-15T12:46:58-08:00</div>
+<div class="text">Tom - re your version of my Janet Gow / Young issue:<br/>
+<br/>
+Again, all looks fine. As an incidental, in step 1, re the persona record created for 1861 census, with the bit &lt;event type=”birth” date=”about 1801”/&gt;<br/>
+<br/>
+I'm not sure I like that bit - it's deriving a date for the birth and I'd prefer to keep the persona totally honest and have no derivation / interpretation. On the other hand, our software will search for matches on the implied birth date and it makes it hard to find the birth details if they're elsewhere AND in the form of an "Age at" value. Maybe the derived / interpreted stuff should be marked as derived, so we know it's not a direct quote?<br/>
+<br/>
+"In the example the source attribute is used to state the reason why the Persona has been linked to the Conclusion. You might like a better word for source -- how about reason or conclusion?" <br/>
+<br/>
+How about "justification"?? Otherwise, "reason" - but not "conclusion" - the conclusion is that they are the same people, this is the reason / justification for that conclusion.<br/>
+<br/>
+However, I think that the same issue applies to your scheme as I indicated to Emmanuel. If at some point during my mistaken assumption of Andrew's early demise, I have used the "fact" of his early death to "prove" something else, I can't see how the DeadEnds model helps detect that - there would need to be a link from the combination of "This Mr Young is MY Andrew" and "He's dead" to the other logic. When "This Mr Young is MY Andrew" is disproven, then the link would take us to the now dubious conclusion - which might be about Andrew's cousin of the same name.<br/>
+<br/>
+In fairness I don't imagine DeadEnds was ever designed to do this - that's why I started investigating "Proof" in other pages. And maybe the "Justification" tag referred to above suggests where we might stick something.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-11-15T12:49:53-08:00</div>
+<div class="text">Emmanuel - glad to see GenTech has a concept of group for a group of people. <br/>
+<br/>
+Adrian</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-15T14:44:20-08:00</div>
+<div class="text">"As an incidental, in step 1, re the persona record created for 1861 census, with the bit &lt;event type=”birth” date=”about 1801”/&gt; I'm not sure I like that bit - it's deriving a date for the birth and I'd prefer to keep the persona totally honest and have no derivation / interpretation. On the other hand, our software will search for matches on the implied birth date and it makes it hard to find the birth details if they're elsewhere AND in the form of an "Age at" value. Maybe the derived / interpreted stuff should be marked as derived, so we know it's not a direct quote?"<br/>
+<br/>
+Adrian,<br/>
+<br/>
+I agree somewhat. When I actually record these birth events extracted from censuses I do it this way:<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;&amp;lt;event type=birth&amp;gt;&lt;br/&gt;  &amp;lt;date type=&amp;quot;computed&amp;quot;&amp;gt; about 1801&lt;br/&gt;    &amp;lt;note&amp;gt; computed from age at census event &amp;lt;/note&amp;gt;&lt;br/&gt;  &amp;lt;/date&amp;gt;&lt;br/&gt;&amp;lt;/event&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&lt;event type=birth&gt;
+  &lt;date type="computed"&gt; about 1801
+    &lt;note&gt; computed from age at census event &lt;/note&gt;
+  &lt;/date&gt;
+&lt;/event&gt;</pre>
+<!-- ws:end:WikiTextCodeRule:0 --></div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-11-16T08:26:48-08:00</div>
+<div class="text">Tom - re type="computed"<br/>
+That seems OK - it's clearly distinguishing extracted text from deduced values.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-08T06:18:01-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+I believe I understand your points, and I believe I treat them fairly in my responses. But you have yet to make one response that is germane to my comments about the research process algorithms and how personas are the necessary data unit.<br/>
+<br/>
+"no data is transferred in my model". Someone has to put it into the persona. They don't just get there on their own. If the user doesn't do it, then the programmer has to program it. If it gets in the BetterGEDCOM language, then for sure the programmer has to program it."<br/>
+<br/>
+Your approach requires more copying, yet you continue to use copying as an argument against my approach where no copying is done! To continue your criticism you are now forced to equate copying with the original encoding of the data into records! In my approach I encode exactly the same information, from exactly the same source material, that you do. The copying I refer to is the copying of information between records in your database when you make conclusions. It is here that your approach requires copying and mine does not.<br/>
+<br/>
+"In your method with personas, the researcher will write in their conclusions and link to the persona, and presumably inherit the persona's event information. It could be copied in just as easily."<br/>
+<br/>
+Once again you admit to the copying problem in your approach as if were some incidental issue. Louis, please consider the following example:<br/>
+<br/>
+You have found eleven items of evidence that you believe all mention the same person (among others). You create a conclusion person record for that person and you have copied bits and pieces of information from those eleven evidence records into that conclusion person. For each of the bits you must also copy up some information so you can get to the original sources and get the citations generated. All that has to be done manually. Now let's say that you decide that four of the evidence records really refer to another person. Imagine the situation you will be in. All those bits you copied up, all the source &amp; citation stuff you so neatly handled, all has to be unwound, and the bits and pieces have to be carefully and painstakingly redistributed and recopied between two conclusion persons. I trust you can appreciate the situation here.<br/>
+<br/>
+Now please consider this with the persona approach. There will be eleven persona records. Because each is bound tightly to its evidence event record it has a direct link to its source so the citation for that persona is always available. There is a higher level person record that refers to those eleven personas. In that conclusion person there is a statement that justifies those personas being linked. Now how does my approach handle the change? I break the links between the first conclusion person and those four personas, create a second conclusion person, and link it to those four persona records. Other than that all I have to do is alter the statements about why the two sets of personas are believed to be the individual persons. Please, please, please, stop and really think about this!<br/>
+<br/>
+"I am trying to promote evidence-based research by making the source reference material the important thing. It's got all the context. It contains more than just people which is all persona's are. It contains (in the example of 10 people in a ship crossing) the entire family connections, relative ages, timeline events, significant places - and all sorts of context that gets lost by watering it down and forcing it under an INDI structure. There are family events as well. I feel place events are important too. And even the relation of one piece of evidence to another (e.g. two gravestones next to each other) is very important. Completely lost in personas."<br/>
+<br/>
+This is truly disingenuous. My approach keeps the source material important. It handles family connections, relative ages, timeline events, all places, doesn't water anything down, and doesn't force anything into inappropriate structures. The fact that you have written this indicates you don't understand my approach. The DeadEnds model was designed from the ground as the model to promote and support evidence-based research. What is so ironic in what you just said is the fact that the persona is the one, truly key concept required for evidence-based research software support, yet you imply your approach, which spurns that one, key idea, is somehow a nobler attempt! I am bedazzled.<br/>
+<br/>
+"I'm afraid you, Tom, are not getting my point."<br/>
+<br/>
+You think that because I disagree with you?</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-08T15:49:07-08:00</div>
+<div class="text">Geir and Louis,<br/>
+<br/>
+Here is my summary of our position. We three seem to be the most active in proposing model ideas and defending them. In my view both of your models have flaws. And both of you believe mine has flaws. I could never agree with a model that didn't have personas in the form of multi-tier persons, and I think Geir's model takes what should be a simple model for sources and complicates it greatly. We seem to be at an impasse in getting the other two to understand our own ideas.<br/>
+<br/>
+I think we're stuck, and I believe it's a waste of time to continue arguing. These arguments and impasse are so frustrating that there is no joy in this anymore. I'm deep into DeadEnds development and implementing what I believe to be the best model. I will take my joy there. I concede the BG model field to you two and wish you the best of luck.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-11-08T16:55:03-08:00</div>
+<div class="text">Awww. Tom. You didn't give me a chance to respond to your last rebuttal.<br/>
+<br/>
+This is healthy. We flesh things out. We don't have to agree. Your ideas are very helpful to me and everyone else. I may not agree with you and you with me on certain things (and certain fundamental things) but I always learn from what you say.<br/>
+<br/>
+But please definitely go back to DeadEnds and develop it your way. Prove me wrong! Make a system that genealogists will want to use. I'll do the same with Behold, and together we'll enhance the whole field of genealogy software and encourage the other programs to come up to our standards.<br/>
+<br/>
+I predict you'll be back.<br/>
+<br/>
+And if you want, I'd still be happy to make up my response to your previous post.<br/>
+<br/>
+:-)<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-11-08T16:56:48-08:00</div>
+<div class="text"><br/>
+p.s. Behold Version 1.0 will be released November 24th.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-11-08T17:03:27-08:00</div>
+<div class="text">Good going Louis.  Congratulations. :) --GJ</div></div><div class="comment"><div class="from"><strong>EmmanuelBriot</strong> 2011-11-09T07:12:49-08:00</div>
+<div class="text">Some time ago, I was working on a prototype application based on GenTech directly. I made a few minor modifications to it (commented in <!-- ws:start:WikiTextUrlRule:23:http://briot.github.com/geneapro/gentech.html --><a class="wiki_link_ext" href="http://briot.github.com/geneapro/gentech.html" rel="nofollow">http://briot.github.com/geneapro/gentech.html</a><!-- ws:end:WikiTextUrlRule:23 -->).<br/>
+<br/>
+If I may try to do a small ASCII schema showing what I believe Tom is trying to say. Say I found 4 sources/evidences mentioning names that I think relate to the same person. I would end up with the following in my database:<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;evidence1 (from source1) gives birth info for Persona1&lt;br/&gt;evidence2 (from source2) gives same birth info and some death info for Persona2&lt;br/&gt;evidence3 gives same death info and some marriage info for Persona3&lt;br/&gt;evidence4 gives same marriage info for Person4&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">evidence1 (from source1) gives birth info for Persona1
+evidence2 (from source2) gives same birth info and some death info for Persona2
+evidence3 gives same death info and some marriage info for Persona3
+evidence4 gives same marriage info for Person4</pre>
+<!-- ws:end:WikiTextCodeRule:0 --><br/>
+At this point, since these all came from different sources, I should enter them as evidences in the genealogy, and then I can start working on the conclusions.<br/>
+I will match Persona1 and Person2 (same birth info, I strongly suspect they are the same), and so on. "Matching" two persons means there is an assertion ("same as") between them, which should be justified by some documented reasoning. At this point, my genealogy contains 4 personas, linked as follows<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:1:
+&lt;pre class=&quot;text&quot;&gt;      P1__&lt;br/&gt;          \__same birth&lt;br/&gt;      P2__/&lt;br/&gt;          \__same death&lt;br/&gt;      P3__/&lt;br/&gt;          \__same marriage&lt;br/&gt;      P4__/&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">      P1__
+          \__same birth
+      P2__/
+          \__same death
+      P3__/
+          \__same marriage
+      P4__/</pre>
+<!-- ws:end:WikiTextCodeRule:1 --><br/>
+The software is in charge of displaying only one conclusion person for them (which is not that hard to do, even with a relational database -- see my code on github for those interested). So for instance If I had an additional info that Persona4 is also the father of Persona5, the pedigree for Persona5 would show all information for Persona4 and the "same as" Personas, namely P1, P2 and P3.<br/>
+<br/>
+Although P1, P2, P3, P4 all exist separately in the database, the GUI should rarely display them separately, because they have been "proven" to be the same person.<br/>
+<br/>
+To go back to Tom's example, I suddenly decide that the "same death" was wrong in fact. So I'll just mark this assertion as disproved (and not remove it, it might still be useful later on).  The database now still contains the four personas, but they make up two different groups. Without doing anything else, I now have:<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:2:
+&lt;pre class=&quot;text&quot;&gt;      P1__&lt;br/&gt;          \__same birth&lt;br/&gt;      P2__/&lt;br/&gt;          &lt;br/&gt;      P3__&lt;br/&gt;          \__same marriage&lt;br/&gt;      P4__/&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">      P1__
+          \__same birth
+      P2__/
+ 
+      P3__
+          \__same marriage
+      P4__/</pre>
+<!-- ws:end:WikiTextCodeRule:2 --><br/>
+So the pedigree for P5 will now only show the information for the father by taking P3 and P4. I do not need to explicitly create a conclusion person (in fact, there is no such notion as a conclusion person, only a list of assertions between the personas).<br/>
+<br/>
+Although I did not go too far in my code, I was able to prove that this model works: I can display a pedigree, a page that shows information for a person (by taking the information from all "same as" personas).<br/>
+<br/>
+There is no copy of information, either, only assertions between personas, and assertions between personas and sources.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-09T08:20:33-08:00</div>
+<div class="text">Emmanuel,<br/>
+<br/>
+Good example of personas. In the DeadEnds model these personas would exist as person objects/records, and the conclusion persons would also. And as you say, when displaying persons on a user interface you would only show the conclusion persons unless the user want to drill down into the "person tree".<br/>
+<br/>
+Using your example, I'll mention other objects that would be in the DeadEnds model. There would be records for the sources, but not for the separate items of evidence in the source (this being the major difference between DeadEnds and Louis). However, there would be persona and event records extracted from the evidence, squeezing all the genealogically significant information from the sources, and all of those records would have source references to the sources. The source references would hold the details of how/where the persona/event info was extracted from the source, including, for example, the page number in the source, a literal transcription of the info in the source, etc. And of course there would be the person records themselves. You don't actually diagram them in your figures, but your text makes it clear that they are there. In the DeadEnds model personas and persons are really the same object type, and trees of these person records can be constructed that have more than the two tiers shown by your example. It would be rare that you would need more than two tiers, but I have cases where I have 100 personas that I have decided are the same person, and in reaching all my conclusions (your assertions? see below) it has been much better to be able to join together subgroups of the personas with different conclusion reasons, and then join groups of groups of personas by other conclusions. The best example of this that I have come up with involve city directories. For one person I have a run of about 20 consecutive city directories that mention him. By seeing slow changes in address, and slow changes in occupation, I conclude that these 20 personas are the same person. So I join those 20 into a person. But then I have many other personas, stemming from census records, land records, residences at times of births of children, etc, that I also conclude to this person. But the reasons for the conclusion are different than the reason for the simple city directory personas. So it becomes very convenient to say, join the group of city directory based personas to the list land record and census record personas, and so on. As I said it is rare to want to do this, only when there is a massive amount of evidence for a single person, but when you want to do it, it's great to be able to.<br/>
+<br/>
+In contrast, in the Louis model there would be source records and evidence records. The evidence records are structured with information extracted the source, so the play a role corresponding somewhat to my personas and evidence level event records. As a practical matter these evidence records would have structured information about events and persons mentioned in the source, probably very similar to the data found in the personsa. In Louis's model there would be just the conclusions persons, starting out as one, as in your example, and converted to two. Without persona records there is the issue of copying information between the evidence records and the conclusion person records. Theoretically, if Louis's model allows conclusion persons to point "inside" evidence records, specifically to where the person data resides, his system is more or less isomorphic to yours and mine -- the personas are really there, but the exist as substructures within evidence records.<br/>
+<br/>
+One other point. I don't have anything anywhere in my model called an assertion. I simply have source references for personas (and many other record types), which refer to their sources, and in higher level persons I have "conclusion" objects that justify action of combining the personas into the person. I used to call these conclusion objects sources, also, since conceptually they are a source (that source being my brain making a decision), but this idea has been hard to explain, so I hide the idea behind the conclusion word. One of my main objections to the GenTech (OMG, are we back onto the original purpose of this thread?) was to critique the GenTech model, and the assertion was one of the key problems of the model in my mind. What you are calling an assertion in your note seems to be identical to the thing I call a conclusion.</div></div><div class="comment"><div class="from"><strong>EmmanuelBriot</strong> 2011-11-09T08:49:28-08:00</div>
+<div class="text">My exact datamodel (which really is almost 100% Gentech, or at least my understanding of it) can be seen on github, and even include comments :-)<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:32:https://github.com/briot/geneapro/blob/master/geneapro/models.py --><a class="wiki_link_ext" href="https://github.com/briot/geneapro/blob/master/geneapro/models.py" rel="nofollow">https://github.com/briot/geneapro/blob/master/geneapro/models.py</a><!-- ws:end:WikiTextUrlRule:32 --><br/>
+<br/>
+A Persona, there, is indeed basically just a name and an id.<br/>
+<br/>
+Regarding the GUI and "drilling down the tree", I have a basic page that shows what I meant:<br/>
+<!-- ws:start:WikiTextUrlRule:33:http://briot.github.com/geneapro/person1.png --><a class="wiki_link_ext" href="http://briot.github.com/geneapro/person1.png" rel="nofollow">http://briot.github.com/geneapro/person1.png</a><!-- ws:end:WikiTextUrlRule:33 --><br/>
+<br/>
+In Gentech, the Source is indeed a separate entity. Combined with a Citation, it fully identifies a source (name, author,...). The "items of evidence" are found through the notion of Assertion. Going back to my example, we have, for Persona1:<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;Source1&lt;br/&gt;   \_ Citation1   &amp;quot;title&amp;quot;  &amp;quot;MyBook&amp;quot;&lt;br/&gt;   \_ Citation2   &amp;quot;author&amp;quot; &amp;quot;...&amp;quot;&lt;br/&gt;   ...&lt;br/&gt;&lt;br/&gt;Assertion1 (from Persona-To-Event):&lt;br/&gt;   persona=Persona1&lt;br/&gt;   Event=Event1 (which is the birth of persona1, including date and location)&lt;br/&gt;   source=Source1&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">Source1
+   \_ Citation1   "title"  "MyBook"
+   \_ Citation2   "author" "..."
+   ...
+ 
+Assertion1 (from Persona-To-Event):
+   persona=Persona1
+   Event=Event1 (which is the birth of persona1, including date and location)
+   source=Source1</pre>
+<!-- ws:end:WikiTextCodeRule:0 --><br/>
+From the same source, we can make other assertions, which will in general be associated with other Persona (although I believe it would be fair to also link them directly to Persona1 if the source is unambiguous that they are the same -- that's mostly the choice of the genealogist here).<br/>
+<br/>
+The sources form a hierarchy, so if we have a big book, I good create<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:1:
+&lt;pre class=&quot;text&quot;&gt;Source2:&lt;br/&gt;   higher source: Source1&lt;br/&gt;   Citation3: &amp;quot;page&amp;quot; &amp;quot;3&amp;quot;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">Source2:
+   higher source: Source1
+   Citation3: "page" "3"</pre>
+<!-- ws:end:WikiTextCodeRule:1 --><br/>
+and create an assertion linked to Source2 rather than Source1. This is again left to the genealogist to choose his preferred way of working.<br/>
+<br/>
+Trees of personas are indeed possible (thanks for mentioning that, I had kept my example simple). That basically creates subgroups of personas, which are then grouped into bigger groups. If we break the assertion from a subgroup to a group, then all the personas in that<br/>
+subgroup are still linked together, but no longer with the personas that remain in the bigger group.<br/>
+<br/>
+It seems to me that your DeadEnds model is relatively close to GenTech. I would say that your SourceReference indeed plays the role of the assertion in GenTech, although I don't quite understand how you link the same SourceReference to multiple personas without duplicating the information on the reference (page number,...). That's one thing that GenTech avoids by the use of the assertions and the hierarchical Sources.<br/>
+<br/>
+Your Conclusions are another kind of assertions (GenTech has Persona-To-Event, Persona-To-Characteristic and Persona-To-Persona, basically).<br/>
+<br/>
+I don't think GenTech really uses the term conclusion in its model. What is a conclusion one day might just be a stepping stone tomorrow, after all.<br/>
+<br/>
+I am relatively new in this forum, can you point me to some earlier messages (not in this thread, I think I followed it through) explaining your objections on GenTech in general, and assertions in particular.<br/>
+<br/>
+I have found them very convenient, but again my application is far from being end-user quality. I don't even use it yet for my own genealogy!</div></div><div class="comment"><div class="from"><strong>EmmanuelBriot</strong> 2011-11-09T08:59:19-08:00</div>
+<div class="text">Tom,<br/>
+Sorry, just saw your mention on Dec 15 in this thread with your criticism of GenTech.<br/>
+<br/>
+I did not have the same criticism, but then indeed I was implementing a relational database, so the normalized form is what I would have ended up with in any case. I agree that presenting the normalized form makes things more complex, since it is generally easier to go from a high-level model (say UML) down to a normalized database model, rather than the opposite.<br/>
+<br/>
+Regarding the criticism that an Assertion does not relate to a noun, this is similar to the UML notion of "Association Class", which are extra data associated with an association. For instance, UML would have:<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;|&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;-|                   |&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;-|&lt;br/&gt;| Persona |-*&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;-*&amp;#45;-&amp;gt; | Event |&lt;br/&gt;|&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;-|        |          |&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;-|&lt;br/&gt;                   |&lt;br/&gt;        |&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;-|&lt;br/&gt;        | &amp;lt;&amp;lt;Association Class&amp;gt;&amp;gt; |&lt;br/&gt;        |      Assertion        |&lt;br/&gt;        |&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;-|&lt;br/&gt;        | source, rationale,    |&lt;br/&gt;        | disproved             |&lt;br/&gt;        |&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;&amp;#45;-|&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">|---------|                   |-------|
+| Persona |-*------------*--&gt; | Event |
+|---------|        |          |-------|
+                   |
+        |-----------------------|
+        | &lt;&lt;Association Class&gt;&gt; |
+        |      Assertion        |
+        |-----------------------|
+        | source, rationale,    |
+        | disproved             |
+        |-----------------------|</pre>
+<!-- ws:end:WikiTextCodeRule:0 --><br/>
+so even at high-level modeling, it still makes sense to model the Assertion, I believe, since it contains additional information about the link.<br/>
+<br/>
+(Note that the above UML diagram doesn't correctly describe what an assertion is in GenTech: in UML, for a given Persona and a given Event there can be a single Association, ie a single Assertion -- that's not true in GenTech)</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-11-09T09:29:19-08:00</div>
+<div class="text">I've not posted for ages for varying reasons but feel I need to make a comment in response to Tom's suggestions that he will get on with DeadEnds - and Louis' similar comment. <br/>
+<br/>
+I feel we need people to do exactly that - our discussions about the Data Model for evidence / conclusions has simply been hampered by the fact that few of us have experience in operating AND formally documenting such processes. Hence we argue about what the entities and relationships should be because we don't really have a deep understanding of what the PROCESSES should be. Or maybe we do, but we all have different understandings. <br/>
+<br/>
+As evidence, I suggest that we pretty much agree on modelling the real world. Oh, we might debate whether Family should be its own entity-type or a sub-type of the Group entity type or concocted on the fly from relationships, but we all agree it has to be there somewhere.<br/>
+<br/>
+It starts getting flakey with sources and citations because we don't all agree on the need for concepts like templates and when we get into the evidence &amp; conclusion model, then it really all goes pear-shaped. And partly it's because there's not enough of us to gain any consensus and partly it's because it's pretty much all theoretical. I've never had to develop a data model without defined processes before - that's what we're trying to do here and it's * hard!<br/>
+<br/>
+So - please, Tom and Louis, I think you can help us by getting experience of programming your differing concepts. Then we might understand the model that's necessary to support real processes. We might also get some screen shots that convince the non-believers that having umpteen personas / evidence people making up one conclusion person can be invisible to the end-user (the same invisibility that Emmanuel describes).<br/>
+<br/>
+On a personal note, I'd be interested in who can demonstrate effective and automatic rolling back (or proposed roll back) of conclusions when you realise that census record actually wasn't your 4G grandmother after all, so your 4G grandfather is still alive, so did I use the fact that he was dead (which I now know he wasn't) to prove anything else??? (And yes, I did that - I got fooled by the fact that Scots women often write their maiden name down on official forms)</div></div><div class="comment"><div class="from"><strong>EmmanuelBriot</strong> 2011-11-09T12:31:15-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+Would you care to propose a specific example for your last paragraph ? Something in the order of "Source1 is a book; page1 shows that X died on ...; Source2 is ...; Since ... I believe X from first source and Y from second source are the same, and that also lead me to conclude that..."<br/>
+<br/>
+The idea is to see how that would be represented concretely in the various models, and then what the impact (read: user manipulations) are required to disprove one of the assumptions and find out the impact.<br/>
+<br/>
+Please try to keep the example to the specific point you mentioned (ie don't introduce too many additional parameters) so that we can concentrate on the use case.<br/>
+<br/>
+I think that would be extremely useful to start collecting such use cases and see their representation (speaking for my part, and I do not have years of genealogy practice...)</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-11-09T13:01:14-08:00</div>
+<div class="text">@ EmmanuelBriot,<br/>
+<br/>
+Perhaps Adrian will have more appropriate suggestions, but some materials are available. <br/>
+<br/>
+(1) A few of us contributed materials to the wiki topic,  "Methodology" (link is on the wiki nav bar). Some of those materials are more general than others. In particular, see the page, "Gathering Information" <br/>
+<!-- ws:start:WikiTextUrlRule:12:http://bettergedcom.wikispaces.com/Gathering+Information --><a href="http://bettergedcom.wikispaces.com/Gathering+Information">http://bettergedcom.wikispaces.com/Gathering+Information</a><!-- ws:end:WikiTextUrlRule:12 -->.<br/>
+<br/>
+If we find additional case materials to work with, we might want to set up a part of the page "Gathering Information" to post links to those materials. <br/>
+<br/>
+(2) The topic of real world case studies came up when were working on E&amp;C in April and May. The following month, hoping it might be useful, I blogged some extended research about an ancestor. See the series, "Sheriff William Preston's identity crisis." I've held off publishing the final installment--the proof ... but there are a variety of both genealogical identity and relationship issues/questions. Ditto, different kinds of research challenges, lots of false positives, source types and family circumstance are involved. One person who looked over the materials suggested it might have been better if I'd presented each item of evidence rather than discuss the materials. It is a US centric case (including generally a lack of key vital records). Here's the link to first article in the case about the sheriff. <br/>
+<!-- ws:start:WikiTextUrlRule:13:http://theycamebefore.blogspot.com/2011/06/sheriff-william-prestons-identity.html --><a class="wiki_link_ext" href="http://theycamebefore.blogspot.com/2011/06/sheriff-william-prestons-identity.html" rel="nofollow">http://theycamebefore.blogspot.com/2011/06/sheriff-william-prestons-identity.html</a><!-- ws:end:WikiTextUrlRule:13 --><br/>
+<br/>
+BTW, Adrian led our effort into work on the Research Process (also linked on the Nav Bar, right below "Methodology").</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-07T16:32:10-08:00</div>
+<div class="text">Gier,<br/>
+<br/>
+I have a different recollection entirely. I don't remember a single serious problem "discovered" about my model. I don't remember any "solution" to these discovered problems ever being proposed. And I don't remember anything about merging my model with an alternative model. We must inhabit different universes.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-07T16:45:55-08:00</div>
+<div class="text">"And, let me add, there is to me no more obvious way to link conclusions to evidence than to use citations."<br/>
+<br/>
+Anyone who has taken the time to read the DeadEnds model knows that it has a complete and consistent and simple approach for linking conclusions to evidence to sources in a way that citations are precisely generated. The DeadEnds model does not have a specific record called a citation, because a citation is not a database entity; it is a formatted string that is generated "on demand" from information recorded in the source references and sources.<br/>
+<br/>
+A citation is constructed by taking information in a source reference and combining it with a source template, to produce the actual citation string. Can we agree to this?  Certainly if we are agreeing to the source template initiative we are formally approving this view. The source structure of DeadEnds was cast into the proper form to work in this world of templates more than a decade ago.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-07T16:48:48-08:00</div>
+<div class="text">Do these discussions mean there still is some interest around to really work on the Better GEDCOM model?</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2011-11-07T18:46:57-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Judging from the comments and the survey results I'd say yes. To the best of my knowledge, people rarely write multiple paragraph comments on something they are no longer interested in.<br/>
+<br/>
+;)</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-11-07T18:53:38-08:00</div>
+<div class="text"><br/>
+Andy asked: "Are Tom's system and Louis' system incompatible? Could something be designed that could handle both and give the end user the option? Something like a basic and advanced setting or something?"<br/>
+<br/>
+I'll refer everyone back to my discussion with Tom back in January at: <!-- ws:start:WikiTextUrlRule:25:http://bettergedcom.wikispaces.com/message/view/BetterGEDCOM+Comparisons/32431138?o=60 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/BetterGEDCOM+Comparisons/32431138?o=60" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/BetterGEDCOM+Comparisons/32431138?o=60</a><!-- ws:end:WikiTextUrlRule:25 --><br/>
+<br/>
+It's page 4 of a topic that changed direction several times finally getting to the meat of the matter. It contains a Yogi Bear example which will enable everyone to grasp Tom's concept and my concept more clearly.<br/>
+<br/>
+Tom concludes saying: <br/>
+<br/>
+"In my model there are evidence events and evidence persons. My evidence events have date, place, and roles, where a role is just a tag identifing the role and a pointer to an evidence person that has the person's name and whatever other PFACTs the evidence supplied.<br/>
+<br/>
+In your model there are only evidence events. They have date, place, and instead of roles with pointers, they have roles with the name and other PFACTS about the persons included directly as substructures. The information in the two approaches is identical. My approach has added an extra layer of indirection and another record type for the database."<br/>
+<br/>
+Tom thinks his approach is better, whereas I think my approach is better.<br/>
+<br/>
+I think that adding Personas and extra levels is unnecessary and just adds complicatios. <br/>
+<br/>
+At the end of that discussion, Tom thinks it may be possible to map the two methodologies. But I'm not exactly sure if that could be done if Tom's personas have levels.<br/>
+<br/>
+There is one extra point that I've thought of since we discussed that back in January. It is that I feel a single item of evidence should be kept together so that all the people referred to in that source will be kept in context to each other. But that context gets lost when you separate them into personas.<br/>
+<br/>
+e.g. An immigration record lists the grandparents, the parents, the children and the uncle who came across with all the detail about them. I'd keep it all as one evidence record, but Tom would translate it into ten persona.<br/>
+<br/>
+<br/>
+<br/>
+Tom and I still disagree fundamentally. He wants to attach the evidence to</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-07T19:43:09-08:00</div>
+<div class="text">"e.g. An immigration record lists the grandparents, the parents, the children and the uncle who came across with all the detail about them. I'd keep it all as one evidence record, but Tom would translate it into ten persona."<br/>
+<br/>
+"There is one extra point that I've thought of since we discussed that back in January. It is that I feel a single item of evidence should be kept together so that all the people referred to in that source will be kept in context to each other. But that context gets lost when you separate them into personas."<br/>
+<br/>
+<br/>
+In my approach the immigration record would be recorded as a single evidence event (the immigration) and ten persona records. The immigration event has ten role references to the ten persona records, so the eleven records form a tight, cohesive cluster of records. So Louis is wrong when he states that in my approach context gets lost; complete FUD. I have a tightly bound cluster of records, whereas Louis's approach keeps the person info contained in the evidence record as role substructures. The amount of information that needs to be recorded in Louis's approach and in mine is the same. The only difference is one level of indirection by promoting the person information into their own records. In my approach the persona records are all available to be used in the algorithms that support the research process. In Louis's approach all this information is hidden in sub-structures of the evidence records, though, admittedly, software can extract them and build the layer of persona records needed by the algorithms. But one wonders why one wouldn't design the model to support the major operations of the software application, rather than force the software to always have to preprocess data to get it into the form required. I think there is a big issue here that Louis either doesn't understand the power of the algorithms I am talking about, or he believes that those algorithms should not be implemented in software, but still left up to the person to do with paper and pencil. I believe that Louis believes that genealogical software should remain the conclusion-only systems of today. The only person are conclusions and those persons must point to the evidence records. This is really a mess, because the user would have to build up those conclusion persons by copying the relevant info (dates, places, attributes) from the evidence records into the conclusion records. In my approach no copying of info is ever needed. The only info that has to be added to upper level personas, since they already refer to all the lower level ones, and therefore all the information from those records, is information to resolve or explain inconsistencies between different lower level personas. <br/>
+<br/>
+Louis's definition of an evidence record is nearly identical to my definition of an evidence event record. As I have just stated twice in the last paragraph, with a penchant for repetition that I should learn to curb, in my approach, roles in evidence records are structured links to persona records, while in Louis's approach the "roles" are kept inside the his evidence records, and those roles are really nothing but personas relegated to substructure, second class citizen status.<br/>
+<br/>
+As Louis points out his approach wouldn't be able to handle the multi-tier cases that I talk about. He turns that into a plus by claiming that the multi-tier cases are unnecessary and just add complications; more FUD. Based on my experience doing automated record merging I know that multi-tier cases are almost required once the number of records reaches a certain level. And it is software that makes things complicated, not the underlying model. In fact the underlying model for a multi-tier approach is simpler than models for two-tier systems. The complication card can't be played in this case. I would expect that 95% or more of all cases where evidence is used to justify conclusion persons, two tiers are all that would be needed, but in the complicated cases it would sure be nice to have the ability to add layers.</div></div><div class="comment"><div class="from"><strong>WesleyJohnston</strong> 2011-11-07T19:59:51-08:00</div>
+<div class="text">Per the note that Geir sent, I would really like to discuss this in a forum dedicated to that, since it is not appropriate in this one. It really would be a discussion that will clarify things in a way that would probably help in designing a better GEDCOM.<br/>
+<br/>
+But I do not really know where in the wiki structure that such a discussion should happen.<br/>
+<br/>
+    Wesley<br/>
+<br/>
+&gt;gthorudToday 3:13 pm<br/>
+<br/>
+Wesley,<br/>
+<br/>
+Slightly of topic, but I am glad that there is now more of us with experience in parish/neighborhood reconstructions. In 2008 I did one for the 120+ main farms in a parish in Norway, covering approx. four centuries. I appreciate that there are more people seeing the importance capturing geographic "relations", they are very important when you get back to the times when the source material is limited, here especially before 1700. This should have implications for a future Place structure.<br/>
+<br/>
+(In my work I also noted that it was much more efficient to record sources separately, and preferably before you start on any conclusions - when working with the whole parish you do not want to go through the same original sources hundreds of times, it is better to digitize them before starting on the conclusions.)</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-11-07T21:34:29-08:00</div>
+<div class="text"><br/>
+Tom said: "This is really a mess, because the user would have to build up those conclusion persons by copying the relevant info (dates, places, attributes) from the evidence records into the conclusion records. In my approach no copying of info is ever needed."<br/>
+<br/>
+Tom. Your personas are your method of transfering data to the conclusion records. That is a programming decision and should not be forced upon all programmers. <br/>
+<br/>
+There are valid alternatives. If all the event/data/place/person information is kept with the evidence record, then once an evidence record is found to be applicable to a conclusion person, a smart genealogy program could allow a simple drag and drop or a simple single button click to copy the relevant source information to that conclusion person. No need whatsoever for those intermediate persona.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-07T23:14:26-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+"Your personas are your method of transfering data to the conclusion records. That is a programming decision and should not be forced upon all programmers."<br/>
+<br/>
+No data is transferred in my model. All data stays in the same place. Personas are simply linked or unlinked to persons a level above or below. We set or clear pointers; that's it. I also don't understand the point about forcing programmers. All models restrict implementors in some way -- your model, my model, GenTech model -- I don't see how you can claim any model "forces" a programmer more than any other.<br/>
+<br/>
+"There are valid alternatives. If all the event/data/place/person information is kept with the evidence record, then once an evidence record is found to be applicable to a conclusion person, a smart genealogy program could allow a simple drag and drop or a simple single button click to copy the relevant source information to that conclusion person. No need whatsoever for those intermediate persona."<br/>
+<br/>
+You reinforce my point that your model requires copying actions when conclusions are made. Even if you can have a smart way to do it, it still implies that you end up with redundant data in your records, and redundant data in general is a bad thing. What if you change data in an evidence record? With your approach you have to somehow know all the places in the conclusion records where the original form of all bits of evidence data had been previously copied to, and then you'd have to recopy all the modified data to all those places. Either your users will have to have perfect memories, or your database is going to have to be saddled with a complex journaling mechanism that, smart as I am, I would never want to have to program.<br/>
+<br/>
+Your final comment "No need whatsoever for those intermediate persona" seems to imply that you think the only justification for personas is to avoid copying information. If you really mean that then I can only assume you still do not grasp (or admit!) all the abilities that personas provide for advanced research-supporting software. I don't want personas to avoid copying stuff, even though they have that effect. I want them for all the services genealogical software can provide when the personas are available. I hope you were just being a wee bit disingenuous in that comment.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-11-07T23:38:26-08:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+"no data is transferred in my model".  Someone has to put it into the persona. They don't just get there on their own. If the user doesn't do it, then the programmer has to program it. If it gets in the BetterGEDCOM language, then for sure the programmer has to program it.<br/>
+<br/>
+When a person uses evidence to get new information, he has to document that in his conclusion person. He will write in his reasoning and in old programs will have to update the event information and add the source.<br/>
+<br/>
+In your method with personas, the researcher will write in their conclusions and link to the persona, and presumably inherit the persona's event information. It could be copied in just as easily.<br/>
+<br/>
+In my method with evidence records, the reasearcher will write in their conclusions and link to the evidence record. The most logical way is to copy the event information (which can be automated), but it could be linked just as easily.<br/>
+<br/>
+I am trying to promote evidence-based research by making the source reference material the important thing. It's got all the context. It contains more than just people which is all persona's are. It contains (in the example of 10 people in a ship crossing) the entire family connections, relative ages, timeline events, significant places - and all sorts of context that gets lost by watering it down and forcing it under an INDI structure. There are family events as well. I feel place events are important too. And even the relation of one piece of evidence to another (e.g. two gravestones next to each other) is very important. Completely lost in personas. <br/>
+<br/>
+I'm afraid you, Tom, are not getting my point.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-11-08T04:09:55-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I do not have the time to fully engage in yet another discussion of E&amp;C at the moment, especially since the two months I and others spent on it around May seems to have left no trace in memory of some. <br/>
+<br/>
+Regarding problems solved, at least one of them resulted in the "Superseded by" reference in the first pdf-document I (indirectly) referred to above. All the discussions are documented on the wiki, for those related to "superseded", see discussions in the 2-3 weeks before 20 May. Also, your model cannot live in a vacuum, so you have to describe interworking with the models of current programs/services , incl. GEDCOM – that was also discussed in May+/-.<br/>
+Re. using Citations as the glue between Conclusion and Evidence. There are many reasons for this – all mentioned in the discussions in May+/-, but the mechanism is in principle an extension of Louis's level 2 EVID tag (see the discussion referred to by Louis) since in my document the Citation record/entity can be used without actually producing a citation, simply providing the link to the evidence from e.g. a person record, as does the EVID tag. Note also that it is not the only "glue" in my document since it also incorporates a revision of Tom's model.<br/>
+<br/>
+Also, "keeping the evidence together"  as Louis mentions above was also discussed then, and in the other discussion I mentioned above.<br/>
+<br/>
+<hr/>
+<br/>
+Wesley, <br/>
+<br/>
+I would be interested in discussing "parish/neighborhood reconstructions", but at the moment I have to focus on the organization work. I am not an expert in that area, but someone has to do it – otherwise all the other discussions will be just, well, discussions. I don't know how long that work will take, it is a difficut task, but I assume at least one month. (One place that a discussion could take place is for example in the requirements catalogue – by creating a new requirement.)</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-08T05:07:36-08:00</div>
+<div class="text">Geir,<br/>
+<br/>
+I well remember your document of May. I read it carefully. It had good points, but it had several points that I disagreed with, and at the time I commented on those in detail. I don't know what you consider the state of that document, but I consider it as your personal start on a genealogical data model. Just as I consider DeadEnds as my personal start on that model.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-06T03:46:55-08:00</div>
+<div class="text">I have experience with two network approaches. The first was in my LifeLines program. In this program GEDCOM is the native database format and the records in the database are the normal INDI, FAM, SOUR, records, which I extended with EVEN (event) and allowed the user to create their own other custom records as well. I wrote a B-Tree "database" as the permanent storage. I indexed the database person names, so also have "name index records" in the database. This works extremely well. The database is lightening fast and out performs by a long shot other programs I have compared it against. (The records were syntactic GEDCOM only, which means the GEDCOM did not have to conform to any standard, it just had to be a structure of tags with values.)<br/>
+<br/>
+The second is the company I mentioned (which is Zoominfo, by the way). In that case our records are nothing but XML snippets that are indexed and organized using the Lucene indexing engine. That's it! We sent one engineer off to a week course on Lucene, where he got a copy of the Lucene book, and he had the new indexing schemes up and running within days. Some of those index files were gigabytes in size, true, but still our new performance, now written in non-native Java, put our native SQLServer system with native C++to shame.<br/>
+<br/>
+For me there is no difference between designing a network database and designing an "abstract" data model. In the model you create entities for the all the important noun/object concepts and you create links between the entities that capture the important relationships inherent in the model. To implement that model as a network database, each entity become a record type and each relationship becomes a link (maybe 1-1, maybe 1-n, maybe n-m) in the database. For all practical purposes you can think of the entities as unnormalized tables in a relational database sense.<br/>
+<br/>
+I'm glad you also mention the basic differences between databases that use regularized data, as in payroll, from databases that use real-world data, such as genealogy. Here's an example. On some census records the birth places of a person's father and mother are recorded. This is important information. Because most events and records don't mention this information, a "person table" in relational database probably would not have those two columns, and that data would be wholly lost. However, a network database, say with records based on XML or JSON or even GEDCOM, could have those fields when present in the data, and they would be indexed if there. If there, indexed and available; if not there, no impact on anything.<br/>
+<br/>
+Another example is dates. Dates in genealogy are highly irregular. There are "between" dates, "from-to" dates, computed dates, partially known dates (e.g, year, e.g., month &amp; year, e.g., month but not year, ...). In the usual genealogical database you're stuck if you need to records dates like these. Some give you "about", "before" and "after", but that's all.<br/>
+<br/>
+Another example is places. Places in genealogy are highly irregular. Another example is names, which the typical relational approach of first name, surname, sometimes middle names, is much too restrictive to the names we sometimes encounter from historical records or from non-western cultures. (My name is Thomas Trask Wetmore IV -- I have over 40 years of experience trying get the various systems I've interacted with to get my name right with the IV -- even today almost no systems get it right. I often get mail addressed to "Mr. IV"</div></div><div class="comment"><div class="from"><strong>WesleyJohnston</strong> 2011-11-06T09:55:25-08:00</div>
+<div class="text">I'm not sure how to move this ahead within the context of a Better GEDCOM, since I am not fully understanding how this would look, both for (1) purposes of operation as a standard within commercial genealogical software and (2) for purposes of sharing and merging genealogical databases in a non-messy way, which are the two things GEDCOM really is about.<br/>
+<br/>
+There is one other aspect that I am not sure how well it would fit -- but which I suspect your method would do a lot better. I have done a number of parish/neighborhood reconstructions, where the families are greatly inter-related over the course of several generations ... a true network. In doing this, the geographical network of their residences is extremely important to understand and manipulate analytically, including geographical relationships within a limited area, such as a block or a small town or a small region with several small towns. Who are the people who lived in this house over time? Who are the people who lived on the same street at this time? etc ... Do you see your approach as easily handling this sort of analysis well?</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-06T10:30:24-08:00</div>
+<div class="text">Moving ahead needs a little organization and cooperation. We have already listed a number of existing data models for genealogy and discussed a few of them at least a little bit. A committee of interested persons could begin with a proposed data model that combines good ideas from the ones already listed which could be modified by the group to a final form. A bit of a problem now is the fact that there are probably too few technical persons to be able to reach of meaningful consensus. Another bit of a problem is that this can't be done in a leaderless fashion.<br/>
+<br/>
+As far as your second aspect is concerned, your example is a really great example of "records-based" genealogy (what I usually call "evidence-based" genealogy). Older data models can't really handle your situation, because the persons in those models represent conclusions. In other words, one would have to do your parish reconstructions somehow "by hand" and once the analysis is done, you create person and family records that would summarize all the facts about the persons and families.<br/>
+<br/>
+Newer data models (e.g., DeadEnds, my favorite), have features very important for your type of analysis. The model encourages record level person and family records (sorry for having to overload the term record there) as well as conclusion level person and family records. In the DeadEnds model you would encode all your raw information into evidence level person records (the conventional term for these records, pretty much agreed to universally, is a "persona" record). There would be a SEPARATE persona record for every mention of every person in all your record sources. In addition, in the DeadEnds model, as in many other models nowadays, there are place records that can be linked together by the inclusion relationship. And place records can descend down to the level of individual addresses. So in a model like this you can have every person and place mention encoded as its own evidence record. Then you do all your analysis (which can be viewed as "building up your network"), not by hand, but by analyzing, primarily, the full set of persona records. The computer-based process allows you to link person and place records together into the proper network. If the software is good enough, it provides you a way to analyze the data enough so you can easily recognize the records to be linked. The result of the analysis is primarily the (nondestructive) linking together of all persona records that analysis determines to refer to the same real person. These "higher level" or "conclusion level" person records are the same data type as the person records, but they simply represent a person at a higher, further away from the evidence, level. And, there would/could be conclusion level family records that summarize the family groups. In some models the persona data type is explicitly different than the person record type, so the model promote a simple two-tiered system to relate evidence and conclusions. The New Family Search model is like this. In the DeadEnds model, with the evidence persona and the conclusion person being the same data type, there is no limit on the number of "tiers" one can build up, so each conclusion person can take the form of a "tree" of lower level person objects that are built up from the evidence by whatever analysis and conclusion processes you might undertake. I much prefer this latter approach, as it was the one I implemented for the ZoomInfo algorithms and it proved to be a great value in writing some pretty sophisticated matching and linking algorithms.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-11-06T13:18:05-08:00</div>
+<div class="text">I really shouldn't get involved because I don't have much time right now, but I couldn't help myself. :-)<br/>
+<br/>
+The place where Tom and I have agreed to disagree, and we take completely opposite sides on this, is the need for personas. I don't like creating an infinite number of people to be the placeholder for the source information. I believe that each item of source information should be a record onto itself. You should collect source information records that would contain their relevant events, dates, places and names involved. The names would be just that: names. They would not be people or personas. They would have their incorrect spellings and everything. <br/>
+<br/>
+The important thing is that the source records be the primary data to be analyzed - not the personas. Then similar to how Tom describes, the source records can be searched and analyzed, and your conclusion people can be enhanced with this additional information. Once you incorporate source information, that source information has become your evidence. <br/>
+<br/>
+Thus this becomes a true source -&gt; evidence -&gt; conclusion model.<br/>
+<br/>
+In my method, repositories (i.e. archives, libraries, online services) can go out and create databases of source information with searchable events, dates, places and names. No need to invent personas. <br/>
+<br/>
+Genealogists can search these. They'll find some that might be relevant. That turns them into their evidence (supporting or otherwise) which they include in their conclusions.<br/>
+<br/>
+Personas to me are an added unnecessary step. On top of that, their "tiers" to me add an unnecessary complication. <br/>
+<br/>
+I'm sorry Tom. But I have to give the other viewpoint to show that Personas are not agreed upon by everyone.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-11-06T13:36:32-08:00</div>
+<div class="text"><br/>
+Wesley:<br/>
+<br/>
+To do a town analysis, I would create a database only of conclusion people, using the RESI (Residence) family event to record the address and dates that each family lived in the home. That information would be available to some "intelligent" program that would then be able to produce the information you need.<br/>
+<br/>
+You would accumulate that information by developing your individuals and families as you would for any genealogy. Put the best conclusions together you can. Go through each source record one by one and incorporate the information into those conclusion people. <br/>
+<br/>
+If you can't tell if one source refers to the same person or two different people, make your best conclusion based on the information, and add your notes to the one person (or two people) to state you are inconclusive and need more evidence.<br/>
+<br/>
+My idea for handling your specific idea of grouping people is to add a GRP structure to GEDCOM. This would allow a program to analyze friends, neighbours, people in the same club, or whatever. In your case, you might want to group people who were on a specific street in a specific year. Or all those who lived in one house. Or whatever.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-06T21:30:53-08:00</div>
+<div class="text">Yes, Louis and I disagree. For me the persona is the key concept required to add the record/evidence level to genealogical data models.<br/>
+<br/>
+Louis is correct in saying that his evidence type records are sufficient for RECORDING the information needed to be analyzed from the actual physical evidence. What he doesn't see is that having that information in HIS FORMAT is nearly useless for algorithms that can be used to help users form hypotheses about which personas should be linked and matched to form the conclusion persons. RECORDING the information is far far different from being able to EFFECTIVELY USE the information.<br/>
+<br/>
+Using Louis's ideas on the village analysis problem, we would again have to fall back upon paper and pencil. We would have to look at, without any algorithmic support, all of his evidence records, decide, without any software help, which bits from which of those evidence records apply to which real persons, and then we would have to construct, by some means again completely unsupported by software, the final conclusion persons by copying, basically by hand, those bits from the evidence records into the conclusion persons. Though the evidence has been put into Louis's evidence records, the process of creating persons is still JUST AS MANUAL as if the evidence records were never actually created. There is basically NO POINT to the evidence records. Other than some documentation value they contribute nothing to the process of using genealogical software to automate in any real sense any process. You'd be better off xeroxing all the records and spreading them out on your desk, and then building the conclusion records directly from there.<br/>
+<br/>
+However, putting the data into persona form allows the data to be fully processable by algorithms that can manipulate the data.. THE PROCESS OF CREATING PERSONAS IS THAT OF ORGANIZING ALL THE DATA FROM THE ORIGINAL EVIDENCE INTO THE PERFECT FORM FORM TO ALLOW SOFTWARE TO HELP YOU ORGANIZE AND WORK WITH AND SUPPORT YOUR RESEARCH AND YOUR CONCLUSION BUILDING.<br/>
+<br/>
+Just consider this metaphor. Pretend that you have software that allows you to see all your personas as little index cards on your desktop. Imagine a user interface that allows you to move the cards around into groups that represent hypotheses about which real persons are represented by the personas. Imagine that the software allows you to join (and just as easily to un-join) personas into the groups (hypothetical conclusion persons) and to then show you how that group would force conclusions about the others personas that those persona are related to. The software could immediately point out impossibilities in your groupings, or immediately point out other groupings of other personas that are automatically implied by your hypotheses. The software could immediately retrieve all the personas that might be related to those you are currently considering, with statistical analyses performed to give you estimated probabilities that the personas represent the same conclusion person. THE SOFTWARE COULD AUTOMATICALLY SUGGEST THE MOST LIKELY (STATISTICALLY SOUND) GROUPINGS. This is the type of support that I feel is mandatory for the next generation of genealogical software that will truly SUPPORT THE RESEARCH PROCESS. Simply putting the data into evidence records enables none of this. Putting the evidence data into persona form supports all of it.</div></div><div class="comment"><div class="from"><strong>WesleyJohnston</strong> 2011-11-07T03:24:45-08:00</div>
+<div class="text">I have to agree with Tom on this. The issue is not whether it will be primary source records that will be analyzed and converted to evidence and conclusions. That will be what happens in either of the scenarios of Louis or Tom.<br/>
+<br/>
+Tom's metaphor vision greatly reminds me of my own vision that I presented at a KDD conference about 10 years ago (see <!-- ws:start:WikiTextUrlRule:6:http://www.mendeley.com/research/model-visualization-5/ --><a class="wiki_link_ext" href="http://www.mendeley.com/research/model-visualization-5/" rel="nofollow">http://www.mendeley.com/research/model-visualization-5/</a><!-- ws:end:WikiTextUrlRule:6 -->). At that time, Silicon Graphics had a great state of the art visualization manipulation system that let you visually explore your data in many creative ways. But what was really missing was the ability to visualize and compare how competing models worked with the data. And that was where the real power of the visualization tools should have been aimed.<br/>
+<br/>
+And this seems to me to be just the same as what Tom envisions for genealogical software, so that the Better GEDCOM should be aiming at enabling such power.<br/>
+<br/>
+I am also wanting to voice a concern that I have about the process of creating a Better GEDCOM -- that the perfect may become the enemy of the good. But I see that there is a thread about the effectiveness of Wiki that is starting to go in this direction. So I will post this thought there.</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2011-11-07T05:47:29-08:00</div>
+<div class="text">ok- let me start by saying I'm nowhere near being a technical type person so forgive me is this sounds somewhat naive but I do have a question...<br/>
+<br/>
+Are Tom's system and Louis' system incompatible? Could something be designed that could handle both and give the end user the option? Something like a basic and advanced setting or something?<br/>
+<br/>
+Or is that not even worth talking about?<br/>
+<br/>
+Andy</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-07T08:22:28-08:00</div>
+<div class="text">Two points, Andy.<br/>
+<br/>
+First, we'd need a more detailed description from Louis of his model. If his evidence records are structured into a form where what I call personas and evidence event records can be extracted easily, then software could create the personas by processing the evidence records. If Louis's evidence records do not have this necessary internal structure, then those records can't be used to support the software-assisted processes that I describe. And, of course, if Louis's evidence records have the necessary structure than his personas are there, just existing as sub-structures within evidence records. What is absolutely critical to realize is that the FUNDAMENTAL UNIT OF DATA, required by all algorithms that TRULY support the FULL GENEALOGICAL RESEARCH PROCESS, IS THE PERSONA. It is the key object required by all algorithms. It is the fact that Louis does not grasp this that makes me think that his vision for the future of genealogical software is simply a slightly better desktop system with no other substantial advances. I want it all, baby!<br/>
+<br/>
+Second, I want to point out that there is only ONE MINOR TWEAK you have to make to a genealogical data model in order to get the full potential of the persona approach. All you have to do is allow your model's person records to refer to an array of "lower level" person records that contain the information being grouped. Basically you get the whole schmear by adding one new relationship to one entity! I do have to say potential, however, because having the extra links won't get you anywhere until your software takes advantage of them.<br/>
+<br/>
+I also wanted to say something about Louis's hyperbole when he says the persona system requires an "infinite" number of persona records. Well the number of personas is simply a function of the number of evidence records, maybe two personas on average from each item of evidence. So if there are going to be an infinite number of personas there are going to half an infinity of evidence records!! Not a very convincing argument; really nothing more than FUD, something I think we should avoid appealing to when trying to argue the merits of different ideas.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-11-07T14:46:57-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+Back in May and June there was a long discussion about Tom's Multilevel Evidence and Conclusion model. Several serious problems were discovered, and solutions were proposed. Also, a principal model was suggested that would merge Tom's model with an alternative model that would keep Evidence and Conclusions separate, but linked via Citations, so you could choose one of the alternatives and even combine both of them. The document describing this also suggest ways to handle backwards compatibility with programs implementing Gedcom and interworking  between programs choosing to implement different parts of the merged model. It is unclear to me if the evidence "part" of that merged model correctly represents how Louis would like this to work, I have not seen his solution documented in detail. The document is introduced here <!-- ws:start:WikiTextUrlRule:8:http://bettergedcom.wikispaces.com/message/view/Defining+E%26C+for+BetterGEDCOM/39358416 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Defining+E%26C+for+BetterGEDCOM/39358416" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Defining+E%26C+for+BetterGEDCOM/39358416</a><!-- ws:end:WikiTextUrlRule:8 -->  The document was discussed extensively, but it has not been updated after the discussion, so there are things in there that should be fixed, but the overall approach should in my opinion not be changed.<br/>
+<br/>
+In the requirements catalog, there is also a discussion about storage of source data <!-- ws:start:WikiTextUrlRule:9:http://bettergedcom.wikispaces.com/message/view/Better+GEDCOM+Requirements+Catalog/38778280 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Better+GEDCOM+Requirements+Catalog/38778280" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Better+GEDCOM+Requirements+Catalog/38778280</a><!-- ws:end:WikiTextUrlRule:9 --> where, among other things, one document relating to various ways to store representations of source data in different representations is presented (direct links: <!-- ws:start:WikiTextUrlRule:10:http://bettergedcom.wikispaces.com/message/view/Better+GEDCOM+Requirements+Catalog/38778280#39698250 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Better+GEDCOM+Requirements+Catalog/38778280#39698250" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Better+GEDCOM+Requirements+Catalog/38778280#39698250</a><!-- ws:end:WikiTextUrlRule:10 --> <!-- ws:start:WikiTextUrlRule:11:http://bettergedcom.wikispaces.com/file/view/Geir+-+Storage+of+information+from+sources.pdf --><a href="http://bettergedcom.wikispaces.com/file/view/Geir+-+Storage+of+information+from+sources.pdf">http://bettergedcom.wikispaces.com/file/view/Geir+-+Storage+of+information+from+sources.pdf</a><!-- ws:end:WikiTextUrlRule:11 --> )  This document is related to the "merge" document mentioned above.<br/>
+<br/>
+Forgive me for not repeating the arguments for and against Tom's model, they have been discussed for halve a year, but although I have not seen Louis's solution, I think we at least need a proper solution for storage of evidence in several formats in a way that links it to conclusion persons. The capability of automatically suggesting possible relations etc. is lower on my priority list (and I think it can also be done based on evidence records), and so is also easy rearrangement of multilevel evidence and conclusion persons as in Tom's model. In any case, a solution must interwork with existing Gedcom (conclusion only) implementations, a problem that has not always been taken seriously.<br/>
+<br/>
+Geir</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-11-07T14:53:02-08:00</div>
+<div class="text">And, let me add, there is to me no more obvious way to link conclusions to evidence than to use citations.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-11-07T15:13:14-08:00</div>
+<div class="text">Wesley,<br/>
+<br/>
+Slightly of topic, but I am glad that there is now more of us with experience in parish/neighborhood reconstructions. In 2008 I did one for the 120+ main farms in a parish in Norway, covering approx. four centuries. I appreciate that there are more people seeing the importance capturing geographic "relations", they are very important when you get back to the times when the source material is limited, here especially before 1700. This should have implications for a future Place structure.<br/>
+<br/>
+(In my work I also noted that it was much more efficient to record sources separately, and preferably before you start on any conclusions - when working with the whole parish you do not want to go through the same original sources hundreds of times, it is better to digitize them before starting on the conclusions.)</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-12-15T13:58:38-08:00</div>
+<div class="text">Tom<br/>
+My problem with the GenTech model documentation is that I can't _understand_ from it what an assertion is. And for something as crucial as it is, that's a pretty big hole.<br/>
+<br/>
+However, I have seen another explanation that perhaps sheds a more useful light on things. Extracts follow:<br/>
+<br/>
+"The following article is from Eastman's Online Genealogy Newsletter and is copyright 1998 by Richard W. Eastman and Ancestry, Inc. It is re-published here with the permission of the author. This issue of the newsletter containing this article was originally published to subscribers on August 15, 1998, and is available at the Ancestry website at <!-- ws:start:WikiTextUrlRule:18:http://www.ancestry.com/columns/eastman/eastAug17-98.htm#concepts --><a class="wiki_link_ext" href="http://www.ancestry.com/columns/eastman/eastAug17-98.htm#concepts" rel="nofollow">http://www.ancestry.com/columns/eastman/eastAug17-98.htm#concepts</a><!-- ws:end:WikiTextUrlRule:18 -->.<br/>
+...<br/>
+[These] paragraphs ... are from John Wylie ... GENTECH Board member and ... a member of the Lexicon Working Group.<br/>
+The heart of the Data Model is the ASSERTION .... The ASSERTION records the act of analyzing evidence and coming to a conclusion about that evidence. While ASSERTIONs initially address evidence, they can also address prior ASSERTIONs. We often talk in genealogy about the need to cite sources, and use evidence. The ASSERTION is the basic tool for recording that analysis. Except when addressing previous ASSERTIONs, it will usually address the lowest level of SOURCE. This is sometimes called a snippet. It may be that part of a source that addresses a particular person (what we call a PERSONA). For example, the will of a fictitious John Smith, executed on 1 May 1850, may say "...and to my daughter Polly Adams, I give $100." From this I could assert that: John had a daughter called Polly. She was alive on 1 May 1850. And that she married an Adams. From another source, my knowledge of genealogy, I could also _assert_ that this Polly was the same person as his daughter Mary (Polly being a common nickname for Mary.)"<br/>
+<br/>
+(End of extract)<br/>
+<br/>
+Seems to me that the ASSERTION isn't there to normalise things, but to record the logic that goes into saying that said person has said characteristic. Unfortunately, the full documentation is poor at explaining what it is for and the quoted clip does a better job.<br/>
+<br/>
+Now, of course, for those of us with an enthusiasm to generate links between sources / evidence persons and conclusion persons on the fly, there may be no need for the concept of an ASSERTION! &lt; grin &gt; <br/>
+<br/>
+Now I've found that clip again (which is worth reading in full because it introduces concepts like unravelling logic when errors are found), I'll try to read the GENTECH model again.<br/>
+<br/>
+Adrian</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-12-15T14:01:55-08:00</div>
+<div class="text">Comments on my own comments..<br/>
+1. Why don't I check links BEFORE I send?<br/>
+<br/>
+2. Tom, you are right to say that the omission of direct relationships between real world entity types leads to a data model needing excessive consumption of coffee to understand. Presumably the GENTECH guys were so soaked in assertion based analysis that it had become their real world. <br/>
+<br/>
+3. Since the linked article isn't there, I'll paste my copy somewhere.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-15T14:52:26-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+I have read the statement and assertion sections of the GenTech models innumerable times over the past decade. I believe I understand them, but find them so hard to deal with that I have never been able to take the model seriously. I was around for the development of the model, actually was one of the catalytic speakers at the GenTech conference that kicked off the effort. I had many discussions with one of the authors about the extreme normalization that the committee insisted on putting into the model. I tried to convince him that it wasn't appropriate and that it would make the model very difficult to understand by filling it up with innumerable bewildering data types, which of course it did. I don't know whether it's fair to say the whole effort was a waste, but I don't see where it has had much influence. It is a little surprising to see how much press GenTech and the model gets, given that no one ever actually reads the documents or understands the model!<br/>
+<br/>
+As you have also surmised, the whole need for the Assertion object is because no key objects can refer to each other! The authors were so fixated on having a model that was normalized to the nth degree and all ready to plug into a relational database that it is really only understandable to a database guru. It has always been amazing to me how much insistence the authors put into saying that their model was not database centric at all, how defensive they are about in fact, when in actually the model is defined totally in terms of normalized relational database tables. The normalization hides and obfuscates all the good ideas that are in the model. If you look at it long enough you will see that the model allows the building up of trees of conclusions, just as I and others have advocated here in the DeadEnds and other models, but these trees are all trees of Assertions, which takes the already confusing Assertion data types and makes even further inscrutable.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-16T06:53:06-08:00</div>
+<div class="text">Adrian<br/>
+<br/>
+In it's "Genealogical Process Steps" flow diagram (<!-- ws:start:WikiTextUrlRule:24:http://www.ngsgenealogy.org/cs/GenTech_Projects --><a class="wiki_link_ext" href="http://www.ngsgenealogy.org/cs/GenTech_Projects" rel="nofollow">http://www.ngsgenealogy.org/cs/GenTech_Projects</a><!-- ws:end:WikiTextUrlRule:24 -->), the GenTech folks begin the process map with an item "Strategize for further research." They then identify three top level actions, I'll call them "Search," "Analyze Document," and "Analyze Evidence." <br/>
+<br/>
+The latter action, what I'm calling "Analyze Evidence," is the final step what is otherwise diagrammed as a long series of connected steps. <br/>
+<br/>
+In short, I believe the assertion process relates to "Strategize," "Analyze Document," and "Analyze Evidence."  <br/>
+<br/>
+In the "work breakdown" for "Strategize" and "Analyze Evidence" (lower part of chart), you see reference to "Analyze Pedigree" and/or "Analyze ... in focused area of Pedigree." <br/>
+<br/>
+As I interpret that first step (Strategy) and the last step (Analyze Evidence), both involve reasoning involving what I called the "body of evidence" or kaleidoscope in a recent Build a Better GEDCOM blog entry. <br/>
+<br/>
+Since that GenTech process map was produced in 1998, people like Thomas Jones and Elizabeth Shown Mills have advanced our understanding about analysis process, from my perspective.<br/>
+<br/>
+Myrt posted to the wiki* a handout from a Tom Jones course, "Inferential Genealogy." He outlines five steps (below); each of Jones steps seem to involve reasoning and anaylysis:<br/>
+<br/>
+-Start with a focused goal<br/>
+-Search broadly<br/>
+-Understand the records<br/>
+-Correlate the evidence<br/>
+-Write down results<br/>
+<br/>
+Hope this helps. --GJ<br/>
+<br/>
+*See the wiki page "Formulation Of The BetterGEDCOM Data Model."</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-16T07:02:28-08:00</div>
+<div class="text">P.S. In the Genealogical Proof Standard (The BCG Standards Manual, 2000), GPS, we find  references to same concepts from Jone's outline and Mills, _Evidence Explained_. The itemized list below comes from The Board for Certification of Genealogists Internet site:<br/>
+<br/>
+    * a reasonably exhaustive search;<br/>
+    * complete and accurate source citations;<br/>
+    * analysis and correlation of the collected information;<br/>
+    * resolution of any conflicting evidence; and<br/>
+    * a soundly reasoned, coherently written conclusion.<br/>
+<br/>
+For a great chart about the GPS, see "The Genealogical Proof Standard" <!-- ws:start:WikiTextUrlRule:8:http://www.bcgcertification.org/resources/standard.html --><a class="wiki_link_ext" href="http://www.bcgcertification.org/resources/standard.html" rel="nofollow">http://www.bcgcertification.org/resources/standard.html</a><!-- ws:end:WikiTextUrlRule:8 --></div></div><div class="comment"><div class="from"><strong>WesleyJohnston</strong> 2011-11-05T14:33:40-07:00</div>
+<div class="text">I see none of these boards that have any comments since 2010. So I am not sure there is any discussion really going on. But here goes ...<br/>
+<br/>
+As someone who designed relational databases for a Dow 30 company before I retired, I was really interested in the GenTech Model. But it did keep bumping up real-world situations that were better modeled as networks -- if there were network database software on which to run it.<br/>
+<br/>
+So I am very interested to see Tom Wettmore's comments here, going beyond relational databases.<br/>
+<br/>
+In the GenTech team's defense, I think their assumption that the underlying software would be running relational and not network databases was pretty well-founded in commercial reality ... and probably still is. So when they talk about being not database centric, perhaps they were not thinking outside the relational DB box but inside it. I really don't know what they meant though.<br/>
+<br/>
+If we have to live in a relational DB world, which commercially seems to be the case right now, then the GenTech model seems a good job of doing that for the things that are relational and a good effort to try to shoe-horn into a relational DB design those things that really would be better handled by a network DB.<br/>
+<br/>
+So I guess what I am wondering, since I have been retired for several years now, is whether there really is any viable commercial network database software that realistically could be used as the model by genealogical DB software companies to follow?<br/>
+<br/>
+If there is, then we really do need to broaden the design as Tom advocates. But if the reality is that we are stuck with relational, then we are stuck with relational.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-05T21:11:11-07:00</div>
+<div class="text">I worked for a company that had a massive database about persons and companies. The persons were employees and the companies were their employers. The complexity of the persons and companies was about equivalent to the complexity of persons and families in a genealogical database today. When I joined the company the database was a massive SQLServer relational database with 100 or more tables. This was a large database with hundreds of millions of records about persons and hundreds of millions of records about companies.<br/>
+<br/>
+We decided to scrap the relational database and replace it with a network database, where each record was an  XML structure, either a person or a family. We used a simple indexing technology to index the data. We also converted the code base that processed the data from native C++ to java. The resulting system was vastly smaller, vastly streamlined from the former, with a much simpler database and with algorithms running much faster.<br/>
+<br/>
+Network databases with modern indexing are easily as fast and effective as any relational database today.<br/>
+<br/>
+I like network databases because they are perfectly suited to representing data models without having to normalize the models into table-based forms in which you loose track of the coherence of the model.<br/>
+<br/>
+Genealogical software does generally use relational databases. I assume this is mostly because of the availability of cheap or free turn-key database, e.g., sqlite, mysql, etc, and because of the influence of conventional wisdom. One must also realize, that using relational tables to define genealogical models introduces restrictions at every turn, eg, field lengths and formats, inability to add extra information. These restrictions make sense in most relational database applications, e.g., payroll, where regularity in fields can be assured and makes lots of sense. But in a genealogical application, regularity of information is not a good assumption, so, in my opinion, relational databases are not a good fit.<br/>
+<br/>
+In my younger days, when I used to try to find catch phrases to accompany my various arguments about genealogical models, I used the term "tyranny of relational thinking" enough times to wear it out. So I won't use it again.</div></div><div class="comment"><div class="from"><strong>WesleyJohnston</strong> 2011-11-06T02:26:12-08:00</div>
+<div class="text">You really have my interest, Tom. (Sorry for mis=spelling your name in my first post.)<br/>
+<br/>
+I think you are probably exactly right about using cheap turn-key relational databases as the engines in genealogical software. I don't know how you motivate them in the network direction. Just like GEDCOM itself, there is huge inertia due to the years of reliance on relational.<br/>
+<br/>
+And there is definitely a learning curve. I cannot think network, since all my experience was entirely relational: so I have to learn network DB design. Any recommendations for websites to help me do that? Any good Windows network DB software that I can download to experiment with it without having to go under the hood into C++ compilers or deal with Linux or writing Java scripts?<br/>
+<br/>
+In my later years, I focused on data mining and realized very soon that there was a very real difference in apps such as payroll and apps that dealt with real-world data. You could see it in the toolsets that succeeded with each type. An early KDD conference challenge contest was won by Bayesian tools, and so people touted Bayesian, without realizing that the challenge was entirely what I consider man-made data. Man-made data (which is what payroll and HR are) also tend to live within the assumptions that classical statistics have of independence of variables. But in real-world data, that just does not hold up. Whether it is readings from monitoring devices on a hospital patient or from oil well logs, there is inherently a latent common cause that throws out the assumption of independent variables from the start. And the same sort of thing is probably true of relational vs. network database.</div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-15T14:38:10-08:00</div>
+<div class="title">Editing to quotes from Eastman ....</div>
+<div class="text">I found a better link, Adrian. <br/>
+<br/>
+Not that Dick Eastman wouldn't permit us to use the article, but if a DMCA were to be issued, prefer we not be on the receiving end. <br/>
+<br/>
+:)</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-15T14:51:35-08:00</div>
+<div class="text">Lemme know if I did your point justice.</div></div></div></body>
+</html>

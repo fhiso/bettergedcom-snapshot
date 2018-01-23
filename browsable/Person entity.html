@@ -1,0 +1,467 @@
+<html>
+<head>
+<title>BetterGedcom - Person entity</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+<h4 id="toc1"><a name="x---Person entity suggested name: Nominal Record"></a>Person entity suggested name: Nominal Record</h4>
+<br/>
+<strong>Questions:</strong> What is a person? What elements does each person have that are mandatory? What are the optional elements? What elements may belong to a person or may be better defined elsewhere?<br/>
+<br/>
+<h2 id="toc2"><a name="x-Definition and Issues"></a>Definition and Issues</h2>
+ This is the entity type for an individual human being. There are two types of Person entity types sometimes discussed. The first is a Person entity type that records only the information about a person that can be taken from a single item of evidence. This usually includes the person's name and one or two (sometimes no) other information. This kind of Person entity is sometimes called an evidence entity since its information is derived from evidence. Some proposed names for this entity type include Person, Persona, Nominal. The second kind of Person entity holds all the information that can deduced about a person, at that stage. This may include name, vital information from whatever sources have been found, residence information that might come from census records, and so on, to produce an entity that is as complete as possible. This second kind of entity can be referred to as a conclusion entity, because it contains all a researcher has found out about the person. Note that "conclusion" may give a misleading impression of finality - the term "current working hypothesis person" has also been suggested. Some names that have been proposed for this type of entity are Person and Individual.<br/>
+<br/>
+The evidence and conclusion / working hypothesis model is designed to support the process of Analysis, which uses Evidence as input to the Analysis process and outputs Conclusions (a.k.a. working hypotheses). This model enables the permanent recording of Evidence input and Conclusions output from each process of Analysis. Note further that the <em>output</em> conclusions from one analysis process could form the <em>input</em> evidence to a <em>further</em> iteration of analysis, and that therefore one entity can be both evidence and conclusion, since they are evidence and conclusion to different iterations of analysis. (c.f. Elizabeth Shown Mills' statement, "SOURCES provide INFORMATION from which we select EVIDENCE for ANALYSIS. A sound conclusion may then be considered "PROOF" from "Evidence Analysis: A Research Process Map.")<br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">Questions being considered about Person entities include:</span><br/>
+<ol><li>Which concept(s) of Person entity should the BetterGEDCOM model support? Most current data models and genealogy programs support a conclusion-only version, since this is the most obvious and meaningful for general users. It is difficult to envisage a conversion process that could split an existing conclusion (a.k.a. working hypothesis) only file into a file containing both evidence and working hypothesis persons, suggesting that the BetterGEDCOM data model must support, at least, working-hypothesis-only data. However the evidence and conclusion / working hypothesis version provides the kind of support a researcher needs into order to gather evidence and then infer the set of individuals mentioned. It is therefore <em>suggested</em> that the BetterGEDCOM model supports both evidence and conclusion / working hypothesis person concepts, while <em>also</em> allowing for working-hypothesis-only data.</li><li>If the BetterGEDCOM model supports both evidence and conclusion / working hypothesis person concepts, can they both be based on the same Person entity type and can they both be used simultaneously? Or would there have to be two separate kinds of Person entities? Consideration of the real-world genealogical attributes and relationships for a working hypothesis person suggest that they have all come from an evidence person, and that therefore the attributes and relationships are identical on the two. Further, the iterative nature of analysis referred to above suggests that an entity can be, at the same time, a working hypothesis and an evidence entity. This suggests strongly that the entity type is the <em>same</em> for both uses. Note that some optional minor attributes and relationships might differ between the two uses.</li></ol><br/>
+<h2 id="toc3"><a name="x-Analysis of attributes and relationships"></a>Analysis of attributes and relationships</h2>
+ Attributes and relationships can be categorised in at least two ways. Firstly:<br/>
+<ul><li>Attributes and relationships derived from, and known to, the real-world, such as name(s), dates of birth, occupations, marriages, etc.</li><li>Attributes and relationships used internally by the processes and software of genealogy / family history, such as UUIDs, Ahnentafel numbers, privacy flags, keys, etc. These are crucial to the processes and software but unlikely to be meaningful to the person in the street.</li></ul><br/>
+Another way to categorise is to split a person's attributes by type. This distinction is probably meaningful only to genealogists and software people but needs to be considered here. The original GEDCOM format split (most of) a person's real-world data into "events" and "attributes". Note that the GEDCOM use of the term "attribute" must not be confused with the use of the term attribute in data modelling. The distinction between "events" and "attributes" in GEDCOM was never, in the author's view, very clear, and some software using GEDCOM just referred to both as "facts". In the BetterGEDCOM model, there is an argument for extending the concept of "event" so that it may apply to more than one person. For instance, a birth event typically (but not always) involves three people - the child and two biological parents - but in GEDCOM applies only to the child, with the parents being implied by whatever the contemporary family is. A marriage can involve four people - bride, groom and two (sometimes) witnesses. A natural disaster can involve numerous people in the area. Residence can involve several people living as one household. In none of these cases, does the current GEDCOM structure allow easy, consistent and machine-readable recording of all participants in the event. If BetterGEDCOM does extend the "event" to allow participation by multiple persons, what about what GEDCOM refers to as "attributes"? The author can see no justification for extending "attributes", which I shall now call Characteristics, to apply to multiple people. A physical description only makes sense if it applies to one person only - the same words may be used elsewhere, but the phrase describes one person only. A name applies to one person only - again, the words may be used elsewhere, but the name applies only to one. Further, the difference between Characteristics and (multi-person) Events is not just one of number of people involved - but in the case of the Characteristics, if the Characteristic is entered, there is <em>always</em> a value of the Characteristic, e.g. the name, the actual physical description, a list of possessions or the occupation. It may be <em>useful</em> to have a descriptive text for an event but in many cases it is simply unnecessary as the event can be sufficiently "described" from its own attributes. The second way to categorise attributes and relationships of Persons is therefore:<br/>
+<ul><li>Characteristics - describe the current information known about a certain characteristic of a <em>single</em> person and, if present, require a <em>mandatory</em> value of some sort;</li><li>Events - describe an event that may affect <em>multiple</em> people and need <em>not</em> have a mandatory value.</li></ul><br/>
+Questions to be asked about attributes of Person:<br/>
+<ul><li>Should Events in BetterGEDCOM apply to one or multiple persons (rather than always just one)? (An alternative could be to create a Group entity for this event and apply the Event to the single Group, then trace through the Group to the Persons concerned)</li><li>Does the definition of a Characteristic make sense?</li><li>Is the categorisation into Characteristics and Events useful? Or should both concepts simply be referred to as Facts? (If the answer to the first two questions is "yes", then referring to both as Facts will obscure the applicability of a Characteristic to a single Person only).</li></ul><br/>
+(<em>Please respond to Questions on Discussion pages</em>)<br/>
+<br/>
+See "<a class="wiki_link" href="Event%20entity.html" target="_blank">Event entity</a>" for detailed consideration of Events.<br/>
+See "<a class="wiki_link" href="Characteristic%20entity.html" target="_blank">Characteristic entity</a>" for detailed consideration of Characteristics.<br/>
+<br/>
+<h3 id="toc4"><a name="x-Analysis of attributes and relationships-Attributes of Person entity attached directly to that entity, i.e. not to Events or Characteristics:"></a>Attributes of Person entity attached directly to that entity, i.e. not to Events or Characteristics:</h3>
+ An optional <span style="margin: 0px; padding: 0px;"> <span style="background-position: 100% 50%; cursor: pointer; padding-right: 10px;"><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Universally_unique_identifier" rel="nofollow" target="_blank">UUID (Universally Unique Identifier)</a></span>.</span><br/>
+<span style="margin: 0px; padding: 0px;">Flags for privacy and security</span><br/>
+<br/>
+<br/>
+<h3 id="toc5"><a name="x-Analysis of attributes and relationships-Potential facts about people to be stored as Characteristic entities (assuming it is part of the model)"></a>Potential facts about people to be stored as Characteristic entities (assuming it is part of the model)</h3>
+ Note that all of these Characteristics may occur multiple times - e.g. a Person may have several names over the course of their life, each to be recorded on one Characteristic entity.<br/>
+All these are <em>optional</em>.<br/>
+<span style="margin: 0px; padding: 0px;">Names (names should have date elements) - including nicknames, alternate names, married names, etc. Consider name templates: examples could include Western European, Patronymic, Matronymic, Medieval, geographical-titular noble [see below])</span><br/>
+<span style="margin: 0px; padding: 0px;">Title(s) - prefix/suffix; Nobility</span><br/>
+<span style="margin: 0px; padding: 0px;">Gender (male, female, unknown [intersex? should this element have a date sub-element?])</span><br/>
+<span style="margin: 0px; padding: 0px;">Award (e.g. medal, etc. Description is name of the award.)</span><br/>
+<span style="margin: 0px; padding: 0px;">Caste</span><br/>
+<span style="margin: 0px; padding: 0px;">Educational qualification (description is name of the qualification)</span><br/>
+<span style="margin: 0px; padding: 0px;">Military service (description is name of unit or service served in)</span><br/>
+National ID number / SSN, etc<br/>
+National or tribal origin<br/>
+Nationality<br/>
+Occupation (entity to include further attribute for employers, etc.)<br/>
+Patent or trademark <span style="margin: 0px; padding: 0px;">(description is short description of patent / tradmark)</span><br/>
+<span style="margin: 0px; padding: 0px;">Physical description</span><br/>
+Possessions<br/>
+Religious affiliation<br/>
+(<em>Many of the above have been extracted from GEDCOM 5.5 and their exact meaning is not always clear. This may, or may not, be an issue</em>)<br/>
+<br/>
+<h3 id="toc6"><a name="x-Analysis of attributes and relationships-Potential facts about people to be stored as Event entities (assuming it is part of the model)"></a>Potential facts about people to be stored as Event entities (assuming it is part of the model)</h3>
+<h3 id="toc7"> </h3>
+ All these are <em>optional</em>.<br/>
+Adoption<br/>
+Annulment of marriage<br/>
+Baptism / Christening<br/>
+Bar Mitzvah<br/>
+Bas Mitzvah<br/>
+Birth<br/>
+Blessing<br/>
+Burial<br/>
+Census<br/>
+Confirmation<br/>
+Cremation<br/>
+Criminal conviction<br/>
+Death<br/>
+Divorce, divorce filing<br/>
+Draft Registration<br/>
+Education (attendance at school, college, etc)<br/>
+Emigration<br/>
+Engagement<br/>
+First communion<br/>
+Funeral<br/>
+Guardianship<br/>
+Graduation (but see Educational Qualification)<br/>
+Immigration<br/>
+Marriage, marriage banns, marriage license, marriage contract / prenuptial agreement, marriage settlement, etc<br/>
+Naturalisation <br/>
+Ordination<br/>
+Probate granted<br/>
+Property<br/>
+Residence at a location<br/>
+Retirement<br/>
+Will (making of)<br/>
+<em>(Many of the above have been extracted from GEDCOM 5.5 and their exact meaning is not always clear (e.g. the difference between baptism and christening). This may, or may not, be an issue</em>)<br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">Question - Do we add the LDS events (e.g. sealing in a temple) that are listed in current GEDCOM </span>as standard BetterGEDCOM events, or do we specify that the software convert such facts as user defined extensions to BetterGEDCOM? (<em>Respond on Discussion pages, please</em>)<br/>
+<br/>
+<span style="margin: 0px; padding: 0px;">The following sentences and phrases are text left over from a previous version of this page and not included above for one reason or another:</span><br/>
+<ul><li><span style="margin: 0px; padding: 0px;"> "All records should also have a set of UUIDs for which it is known that this record represents" - the author is not clear on the meaning</span> of this phrase;</li><li><span style="margin: 0px; padding: 0px;">"Heraldry" This was a proposed event / characteristic - the author is unclear what is meant by this as it is a hugely complex topic;</span></li><li>"Membership" <span style="margin: 0px; padding: 0px;">This was a proposed event / characteristic - </span>I suggest this belongs to the relationship between a Person and a Group.</li><li>"<span style="margin: 0px; padding: 0px;">Certification</span>" This <span style="margin: 0px; padding: 0px;">was a proposed event / characteristic - its meaning is not clear enough to decide whether it is an event or characteristic;</span></li><li>"Surety / bonding" This <span style="margin: 0px; padding: 0px;">was a proposed event / characteristic</span> - its meaning is not wholly clear to me. I know of its use in marriage licences - what is the generic case?</li><li>"<span style="margin: 0px; padding: 0px;">Sample Media oriented Events: Likeness ..." </span>This <span style="margin: 0px; padding: 0px;">was a proposed event / characteristic - is this not simply the same as Physical Description but with added media?</span></li></ul>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>rwcrooks</strong> 2010-11-09T14:59:58-08:00</div>
+<div class="title">Alternate Name - Optional</div>
+<div class="text">Many people change their names, add a dit-name (Canada), change the spelling of names.<br/>
+<br/>
+This is an integral part of a person and identified solely with that person.</div></div><div class="comment"><div class="from"><strong>Anybodybutme</strong> 2010-11-10T03:00:35-08:00</div>
+<div class="title">Person entity and relationsips between Person entities</div>
+<div class="text">Person entity represents a human being who was born.<br/>
+Evidence for that birth is entered in Sources.<br/>
+Elements on the Person entity record the information in the birth certificate/parish record/etc. where this exists.<br/>
+- name at birth<br/>
+- gender at birth<br/>
+- date of birth<br/>
+- place of birth<br/>
+- date of death<br/>
+These can only occur once per birth. ?Any more once-only data items?<br/>
+<br/>
+Thinking about a Person from the perspective of Birth is most user friendly, so:<br/>
+<br/>
+Each Person entity has an optional, many-to-one relationship to a Mother. Optional because the information is not always known when evidence for the birth is discovered. This is a special relationship, different from all other Person to Person realtionsips. ?technology effected birth?<br/>
+<br/>
+Each Person entity has an optional, many-to-one relationship to a Father. ditto<br/>
+<br/>
+Each Person entity has optional many-to-many relationships with other Person entities who are siblings. (my first design approach to implementing this many-to-many relationship would be to define a Family entity - too easy to resist, and oh so handy for other stuff).<br/>
+<br/>
+Each Person entity has optional many-to-many relationships with other Person entities who are of the opposite gender and are the other biological parent.  This would seem to lock down the Family entity, as a clear mechanism to resolve the various many relationships. It allows unknown Fathers to be lumped together if the user so wishes, then separated out when required.<br/>
+<br/>
+Has this defined all the relationships that are essential between Person entities to define the Person's birth? <br/>
+<br/>
+Sibling is not an essential relationship, but I find it an easier route to understanding the requiements for the Family entity.<br/>
+<br/>
+Not ground breaking stuff, but of course it has already been ploughed many times.</div><div class="comment"><div class="from"><strong>Anybodybutme</strong> 2010-11-11T00:46:08-08:00</div>
+<div class="text">greglamberson wrote "In some cultures"<br/>
+The first post of this thread is relevant to my culture. I do not presume to speak for others.<br/>
+<br/>
+AdrianB38  wrote "a stream of quotes from sources that we rely on the application software to make sense of"<br/>
+Not sure that I need the software to make sense of it, however I agree that is the reality for the recent past, the family memories - two or three generations, perhaps, for my culture. Then it is a matter of recording the documentary evidence. The documents in my culture are represented by my proposed data model.  Quick and easy recording of the mass of people whom you believe may be your ancestors is a requirement. GEDCOM allows for that.<br/>
+<br/>
+greglamberson wrote "I must admit being in a bit of a stupor" and "Yes, well, unfortunately" and "Quite so - but"  The X of XML means Extensible.  Straight migration of GEDCOM to XML would be a starting point.  Once other cultures begin to add their inside knowledge, then the XML can be Xtended.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T02:10:29-08:00</div>
+<div class="text">There are clearly two types of person entities necessary in a data model. The person entity that holds only and exactly what can be extracted about a person from a single piece of evidence, and the person entity that represents all your conclusions about a single real person, which should be some representation that includes the collection of the first kind of person entities the user/researcher decides refer to the same real person. This is fundamental, basic, obvious, absolute, and if we can't start here or somewhere close to it I can't see any way to continue.<br/>
+<br/>
+It is not feasible to require any attributes to be required for person entities of the first kind. Say your evidence is this "John Smith's wife was 23 years old when they were married in 1844." If you required every person to have a name then you couldn't add John's wife to your database. But the fact that his wife as 23 in 1844 gives a lot of genealogical info. One. It says he had a wife; period; a critical bit of genealogical information. It says she was born some time around 1822; another critical bit of genealogical informaton. It says John and his wife were married in 1844.<br/>
+<br/>
+My conclusion is that a person entity of the first (evidence) kind only needs one known attribute to be a candidate for inclusion in a database, and that really means any attribute. If you have a name, great, but if you don't have a name, you don't want to loose the information you do have.. If a person needed to have a name the only way that info about John's wife could be added to a database would be as a note in John's entity, and notes are notoriously hard to have genealogy programs look at and analyze and do anything meaningful with.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T02:18:50-08:00</div>
+<div class="text">Asking whether the data model should be person centric or event centric implies it must be one or the other. Why? My contention has always been that both persons and events are primary concepts.<br/>
+<br/>
+If an event is not a primary entity then info about events must be subsumed somewhere else in the model, and the only reasonable other place is inside person entities. This is only appropriate for trivial cases like death events when other people are only involved in a most distant way.<br/>
+<br/>
+Any event worth its salt includes/mentions multiple people in different important roles. If the event could not stand alone in a model, then either every person entity playing a role in the event would have to contain redundant information about the event, or one person would have to be chosen to be the primary holder of info about the event and all other persons (we are obviously talking about person entities of the evidence kind here) would have to refer to the person holding the event information.<br/>
+<br/>
+I hope this is persuasive that least at the evidence level that person and event entities are both necessary and coequal in importance to the model.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-11T02:45:04-08:00</div>
+<div class="text">Anybodybutme, <br/>
+<br/>
+GEDCOM has in fact been ported to XML. This was done years ago. There are in fact several completed modifications of GEDCOM that have been developed using XML. The problem is these are not widely used. Why? In the case of direct ports of GEDCOM or slight modifications thereof, they frankly provide no significant benefit and so the developers have not committed development time to implementing them. In other cases, workable data models that have been developed have simply not caught on for a variety of reasons. However, one thing is sure: a simple port of GEDCOM provides no significant benefit to anyone. <br/>
+The structural problems of GEDCOM do not allow it to be merely expanded to accommodate other, more advanced concepts. The underlying data syntax (i.e., the GEDCOM format as described in Chapter 1 of GEDCOM 5.5 standard release), and likewise a simple adoption of XML in its place, is irrelevant. We have to fix problems associated with more advanced genealogical practice to have any value to developers at all and thus get something actually adopted and available to users.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-11T03:01:27-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I am merely hoping to drive discussion. Some of these concepts may in fact be pretty basic, but it is far better to allow a great deal of the community to discuss, understand and come to these conclusions themselves than just adopt some largely finished conceptual data model and hope everyone knows what it means, or worse yet, just not worry about what nontechnical types think and drive home a particular point of view.<br/>
+<br/>
+A great deal of this effort is about the process. We have intentionally started with a blank slate. I think we can very quickly gravitate to a data model concept and start adding significant detail to it. In my above comments, I haven't even really touched on the most critical aspects. For example, I don't think person or event concepts are the real points of contention. The question in my mind is how do we accommodate a proof process in a data model while working with conclusion-based data. However, I don't think jumping right to this is of benefit to everyone. <br/>
+There are many levels of discussion around, and I think we can allow them all to go on at the same time. It's not necessary or even desirable to drag everyone right to the most difficult concepts before engaging in some more basic discussion.</div></div><div class="comment"><div class="from"><strong>joehcole</strong> 2010-11-11T03:07:09-08:00</div>
+<div class="text">While I agree that there will need to be a Person object as part of the data model, I think for all intents and purposes a successful model will be based around the Event.<br/>
+<br/>
+The Person object should contain the UUID, and nothing else. We need this in order to link the same person across different events. The data model must avoid any duplication of data, any attribute stored against the Person object would inevitably be duplicated in an Event. For example, parents would be roles within a birth Event. Names may change, and require date ranges, so we would need a name Event.<br/>
+<br/>
+We also end up with a much cleaner, hierarchical structure rather than having to define different schemas for different objects, i.e. something like...<br/>
+<br/>
+&lt;event&gt;<br/>
+       &lt;attribute&gt;<br/>
+                  &lt;source&gt;<br/>
+<br/>
+...that way we don't get sidetracked working on different objects that then have to be made to work together, and all the tricky stuff that Greg mentions like proof and conclusion can be dealt with within that structure.<br/>
+<br/>
+Remember, the way we think about genealogy, which is person-centric, is not necessarily the best way for computer systems to work with the data.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-11T13:39:24-08:00</div>
+<div class="text">I also believe that the data model can accommodate both person entities and event entities. And the rules of data normalisation swiftly drive out things like Name from being attributes of the Person entity to being entities in their own right, leaving - as Joe suggests - probably very little against the Person entity. <br/>
+<br/>
+However, I am unsure that the successful model would be based around the event. I like the idea of an event being related to several people - e.g. a census, a marriage, the San Francisco earthquake. I am less keen on the idea of a "Name event" - just what does that mean in English? Not a baptism or a birth registration because those might not take place. Another oddity would be a "Physical description event". This is the sort of thing that is referred to as an attribute in GEDCOM type software. (A term I hate for 2 reasons: firstly its confusion with attribute in data modelling, secondly because the difference between an attribute and an event in GEDCOM is pretty slim). <br/>
+<br/>
+I initially envisaged a Person-Fact entity  - one Person may have one or more Person-Facts known about them. These Person-Facts would have a "type" and also a date-range and this could accommodate a person's name(s).<br/>
+<br/>
+My problem with this view is that the Event entity (which I like) and the Person-Fact entity then start to diverge, whereas many things could be viewed as either one thing or another (e.g. is military-service a fact or an event?)<br/>
+<br/>
+I would really like there to be one entity type to cover both Person-Fact and Event - but I am rebelling against calling it an Event!</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-11T13:46:32-08:00</div>
+<div class="text">"...the truth has only one value..."<br/>
+<br/>
+Yes Greg, I did mean it. A person can only be born once and there is a single specific date and time associated with that. <br/>
+<br/>
+That the birth date and time can be disputed is a different and separate matter. Indeed by the very nature of reality, we can never be 100% certain that we have got the exact and single truth. We actually agree that it's important to accommodate (somehow) the different views on when but it's also important to remember that we are dimly grasping towards the truth.<br/>
+<br/>
+(And it's another matter again when we think that even if we have only one conclusion about when someone was born, we could use several calendars to document it!)</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-12T15:37:21-08:00</div>
+<div class="text">I very much agree with Tom's reasoning. And I think what Joe said isn't so different at all from that.<br/>
+<br/>
+From a user's perspective, a logical structure for me would be something like this:<br/>
+<br/>
+Everything starts with a "source". Where does the following information come from? I could imagine defining "conclusion" or even "speculation" as a source (it should be shown who came up with it)<br/>
+<br/>
+Then, what information is there? Just put down everything thats in the source. If a person is mentioned, make a "person" and attach to it only the bits of information that are in the source. If an event is mentioned, make an "event", describe it and the relevant person(s).<br/>
+<br/>
+Every "person" is created for a "source", because only this is documented. To link the "persons" of different "sources" together, a kind of top-level "person-UUID" would be necessary. It should collect the different pieces of information, while keeping the integrity of the sources. Also, it must be possible to unlink information from the UUID. <br/>
+<br/>
+<br/>
+<br/>
+re Adrian:<br/>
+I think "person-facts" are fine and necessary. But events are something different. Events can have "facts", too. In your example of military service, I'd say it's an event (there are others at the same event - maybe that's a way to make the distinction?). But in the end, I guess it can be left to the developers of the programs what they consider an event and what a "person-fact".<br/>
+<br/>
+Another thing: Maybe "fact" is already too confident? How sure are you that everything is a "fact"? Maybe something more neutral, like "info"?<br/>
+<br/>
+This shows the need for a way to record "sureness"(?) or "confidence" for every "source" and every piece of information on it seperately. Maybe I believe what Aunty said at her 99th birthday about her childhood, but maybe she got the part about her great-grandma wrong...<br/>
+<br/>
+just my 2c ;-)</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-12T16:56:05-08:00</div>
+<div class="text">So far, keeping in mind I'm jumping from discussion to discussion at a frenetic pace without proper analysis, so far I totally agree and understand Joehcole's point of view. I'm not sure this is the right way to model data in this effort, but I think of genealogical data such that I too think a record that represents a person is essentially a container that has only a UUID and nothing else.<br/>
+<br/>
+From Tom's discussions here and elsewhere, I see he considers two sorts of person entities as essential. I don't get this yet. To me, a person record can be placed in a role within a relationship record/entity. (This wades into the issue with regard to having a family record or merely using child/parent event-type records. Anyway...<br/>
+<br/>
+Adrian, yes I suppose of course a person can only be born once, etc., but we are talking about documenting genealogical research, and for those purposes it seems we need to worry about accommodating multiple records for birth, not worrying about Platonic concepts that aren't part of the documentation process. Again, perhaps I just don't understand, so please don't take that the wrong way.<br/>
+<br/>
+Now getting into testuser42's post of 50 minutes ago.. This concept of a "person-fact" may be what Tom was referring to. I'm not sure. This concept is interesting, and it may be part of exactly what my methodology friends are clamoring for. This isn't a concept that I can identify in my genealogy software (not that that means anything).<br/>
+<br/>
+One thing I do have a problem with is combining several things about a "person-fact" into one item, because each item can have different veracity/surety, and if you just dump all the info about one person into one thing, how can you "rate" the information differently?</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-12T21:44:28-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+Trying to figure out where some of this belongs. In the Software side or the transport side of the data entry.<br/>
+<br/>
+I think, that the Identity of a Person needs to be unique and identifiable, Events that this person had, and the source of where this Person to Event was found.<br/>
+<br/>
+There may be a number of attributes to an event, Date, Location, other details, depending of the event. <br/>
+<br/>
+That individual will most likely have multiple Events, each with a Source.<br/>
+<br/>
+That needs to get from one location to the other. How those links are assembled in the transmission of that record is what is important, I think.<br/>
+<br/>
+I am not sure that the BetterGEDCOM should have anything to do with the "rating" of the data provided.<br/>
+<br/>
+There might be an attribute assigned to the Source, but that information should be sent along. The End Application as to do two thing here, 1) have the ability to have an evaluation attribute and pass it along, and 2) see at evaluation attribute and present it, if one is present.<br/>
+<br/>
+If the end application doesn't provide a rating attribute, its an I don't Care rating. The BetterGEDCOM just passes that information along. If the receiving application doesn't deal with a rating attribute, it 'drops that attribute on the floor' but should alert the user that an attribute was received, but "I" don't know what to do with it. (or, See Error Log)<br/>
+<br/>
+Maybe I am missing some of the technical aspects of this subject, for that I am sorry. But I am trying to read and understand the discussions on this wiki from a User's point of view.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-23T22:55:13-08:00</div>
+<div class="text">Ok. here's my take on the person entity.<br/>
+<br/>
+One it should be called person. After all that is what we are seeking.<br/>
+<br/>
+Two it needs the UUID. Name is optional.<br/>
+<br/>
+A person has: a hair color, an eye color, a adult height, a weight (or many), a sex, possibly now a sex alteration, a DNA sequence (probably needs to be broken out into multiple fields - or possibly it's own entity), some would say a race (not me though, there is only one: HSS, unless someone has some HS Neanderthalensis genes).<br/>
+<br/>
+I would, for convenience sake include a name, but this is better handled as a separate entity, as a researcher may change this many times and a person may wind up with multiple complete names.<br/>
+<br/>
+Some fields I wouldn't include.<br/>
+<br/>
+So:<br/>
+<br/>
++ = primary key<br/>
+<ul><li>= required</li></ul>F = foreign key<br/>
+<br/>
+PERSON<br/>
++ *UUID<br/>
+   sex at birth<br/>
+   hair color<br/>
+   eye color<br/>
+   height - adult height<br/>
+   privacy<br/>
+<br/>
+A PERSON can have events. places, notes, DNA, sources, researchers, conclusions, LDS. The privacy flag could be the key to control what is visible, and i the logical place to put it. This one field could control it all. The person is: private,restricted to family, restricted to granted users, dates restricted, birth restricted, death restricted, etc. Another way of course is every record has such a flag.<br/>
+<br/>
+I'm sure more persaon haves can be thought up.<br/>
+<br/>
+Person should be the central entity to the entire data model. It's worth taking the time to lock this one in.<br/>
+<br/>
+So next entity would be Name. Every person has a name, but it may not be knowable.<br/>
+<br/>
+NAME<br/>
++ *NameID<br/>
+F *UUID<br/>
+  Prefix<br/>
+  First<br/>
+  Middle Names<br/>
+  Used Name<br/>
+  Patronymic<br/>
+  Matronymic<br/>
+  Last<br/>
+  Family<br/>
+  Clan (Tribe)<br/>
+  Suffix <br/>
+  Confidence - how positive are you of this record  <br/>
+F Source  <br/>
+F Event<br/>
+<br/>
+I've added two foreign keys so that each name could be linked to the event and source from which it was derived. It may be that it would be better to pull those out into Name-Event and Name-Source tables. Which would simply look like:<br/>
+<br/>
+Name-Event<br/>
+*NameId<br/>
+*EventID<br/>
+<br/>
+This allows a many-to-many relationship. Which is probably preferable. But more work.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-10T05:16:35-08:00</div>
+<div class="text">Yes, well, unfortunately, many assumptions here are the very one which have been pointed out to me as being evidence that this model isn't adequate.<br/>
+<br/>
+In some cultures, a child can have multiple names that are parallel and serve different purposes. More important, the dates and places of birth, death and about any other ones can be disputed and be different according to different sources or different analysis of the evidence. The same is true for the mother/father relationships, not to mention that there can be different types of mothers: biological, adopted, etc.<br/>
+<br/>
+Thus the presentation you have given makes certain assumptions that probably will not sit well with everyone, particularly those who favor a more scholarly approach to research.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-10T14:15:25-08:00</div>
+<div class="text">"the dates and places of birth, death and about any other ones can be disputed and be different"<br/>
+<br/>
+Quite so - but the truth has only one value (possibly several names but that's another issue). <br/>
+<br/>
+So the question arises - does the data model represent the conclusions? Or options? Or the raw evidence? Obviously, this applies across the board, not just for an individual.<br/>
+<br/>
+If the conclusions, there should be only one birth event - albeit it might not say much beyond "Planet Earth" for birthplace. <br/>
+<br/>
+If options, then there could be several birth attributes (using "attribute" in a data modelling sense).<br/>
+<br/>
+If the raw evidence, then it's more like a stream of quotes from sources that we rely on the application software to make sense of.<br/>
+<br/>
+So basically, this has teased out a query about the scope of our data model.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-10T15:38:20-08:00</div>
+<div class="text">"...the truth has only one value..."<br/>
+<br/>
+I'm not sure if you're saying this to be provocative or you really man this.<br/>
+<br/>
+You want to know whether the data model will be person based, event based, etc. Right?<br/>
+<br/>
+Me too.<br/>
+<br/>
+Frankly, I would love to see someone take on explaining what these concepts even mean and begin a discussion about which to adopt. Right now, I must admit being in a bit of a stupor, just glad we're finally discussing all this stuff out in the open. <br/>
+<br/>
+I'm sure we'll quickly get to this, but for now, I think we're doing fine. <br/>
+<br/>
+However, if you want to start building pages about the different major types of data models, what they accommodate, what their shortcomings are, etc., then go right ahead. I'll probably do it in about a week if it doesn't happen sooner.</div></div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-25T09:41:12-08:00</div>
+<div class="title">Events and multiple persons?</div>
+<div class="text">In my update of the page I ask:<br/>
+Should Events in BetterGEDCOM apply to multiple persons? An alternative could be to create a Group entity for this event and apply the Event to the single Group, then trace through the Group to the Persons concerned<br/>
+<br/>
+This question can either be asked here or on the Event entity page but since it mentions Persons, I'll ask it here...</div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-25T10:11:54-08:00</div>
+<div class="text">Could you consider that if there is an event (interpetation/reading/translation) from a source document.<br/>
+<br/>
+Like 1910 fed census household<br/>
+<br/>
+3 people live there<br/>
+<br/>
+The Event or say INTR interpetation of the image/doc or story book<br/>
+Can be captured by the genealogist like so<br/>
+<br/>
+EventId3, SourceID78, INDI#12, Roll, Name,<br/>
+EventId4, SourceID78, INDI#57, Roll, Name,<br/>
+EventId5, SourceID78, INDI#87, Roll, Name,<br/>
+<br/>
+What ever you want to call this geneologist translation of the sourcedoc. <br/>
+<br/>
+There is one Sourcedoc, yet 3 seprate event/interpetations of the image to text.<br/>
+<br/>
+event@13 Sour@15 Indi@85, Type,Clas,Roll,date...<br/>
+event@15 Sour@15 Indi@45, Type,Clas,Roll,date...<br/>
+event@19 Sour@15 Indi@22, Type,Clas,Roll,date...<br/>
+<br/>
+event@19 <br/>
+Sour@15 <br/>
+Indi@22, <br/>
+Census,<br/>
+Type Clas,<br/>
+Name John Smithy<br/>
+Roll Head<br/>
+...<br/>
+<br/>
+This way you use the event/translate insert which links the INDI to a Sour. YET supplies all those various things people want like Altered birth date, or alt names aside what the actual INDI NAME says John Smith, the event name says John Smithy. <br/>
+<br/>
+INDI Your Geneologist Choosen name<br/>
+EVNT or INTERPET ID holds a single ref of information which points to a SOUR/DOC REF.<br/>
+<br/>
+So all the EVNT tag interpetation can list under an individaul AND all various inforamtion can be seen for what it is regardless of matching or not!?<br/>
+<br/>
+REASON if keeping one EVNT tag to ONE Person is if that info was mis read, a genealogist can correct that line without effect all the extra poeple it is attached to.<br/>
+<br/>
+Maybe an EVENT is not a good tag to source info, maybe an observers observation of the Sour line pointing to a sour.<br/>
+<br/>
+Would in be better if I just show an example? and how it eliminates many of the individual questions people pointed out before?</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-25T10:21:12-08:00</div>
+<div class="text">Real quick a Marriage cert. SOUR@142<br/>
+<br/>
+your can have four event/interpitations<br/>
+<br/>
+EVNT@34 INDI@65 marriage, cert, Bride, laura<br/>
+EVNT@34 INDI@65 marriage, cert, Groom, paul<br/>
+EVNT@34 INDI@65 marriage, cert, wintness, tom<br/>
+EVNT@34 INDI@65 marriage, cert, witness, joe<br/>
+<br/>
+Each line is for a sigle person but all point to ONE source doc, yet captures the observers interpetation of the dociments like age date place etc. Later if a name is miss read it can alway s look at the document and evalute if it needs to be updated as needed<br/>
+<br/>
+When a person sees John Smith in the INDI area and John Smithy in the Event capture. They can make they own hypothosis or call it proof by misspelling or name change.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-25T10:42:41-08:00</div>
+<div class="text">If you dont mind it is still a working db that I am modifing but I highlight this point in bright green <!-- ws:start:WikiTextUrlRule:2:http://www.stranskyfamilytree.net/SFTxmloutline.asp --><a class="wiki_link_ext" href="http://www.stranskyfamilytree.net/SFTxmloutline.asp" rel="nofollow">http://www.stranskyfamilytree.net/SFTxmloutline.asp</a><!-- ws:end:WikiTextUrlRule:2 --><br/>
+<br/>
+If it is hard to follow the four seperate xml areas I can translate it into GEDCOM style format to better understand. The main thing is that it can take care of many of the "waht abouts that have been written and uses less kbs than alot ofthos gedcom foramts in xml styles.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-25T10:57:28-08:00</div>
+<div class="text">mstransky,<br/>
+<br/>
+You mentioned "the genealogist" a couple of times. The Genealogist won't be involved with pulling information our of a string of data. The Application will. Same goes the other way. The researcher will enter data, but the application will back up that data, into a data string, and send it to the BetterGEDCOM.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-25T12:58:54-08:00</div>
+<div class="text">Russ (I think) mentioned in response to my question "Should Events in BetterGEDCOM apply to multiple persons? An alternative could be to create a Group entity for this event and apply the Event to the single Group, then trace through the Group to the Persons concerned" by:<br/>
+<br/>
+1. Reminding us that there may be only one person in the file. Perfectly true - all references to "multiple persons" should be understood to include the possibility of ONE only.<br/>
+<br/>
+2. He also said that the alternative (creation of a group) was "adding room for errors. At least that is my opinion". Personally, I agree with him.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-25T13:21:09-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+Correctly stated.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-25T16:02:43-08:00</div>
+<div class="text">"exactally" That is what I am afraid of by making a xml structure so complicated it almost becomes so complicated to make universal among everyone anyone and a burnded on itself and the end users of its structure.<br/>
+<br/>
+GEDCOM styles have created all these kinds of event-types TAG as if they were the defacto source it self. when are they are is the interpetation of the TRUE source in hand.<br/>
+<br/>
+1. "You can not put your hands on an event. But you can put your hands on a document source."<br/>
+ "IT IS THEE source document" which is what more then one persons is attached to.<br/>
+<br/>
+But before we attach the source document we can have a (EVENT/TRANSCRIBED TAG &lt;&lt;what ever you want to call it) a genealogist or reasearch who interpeats the data FROM the image to a text data fields. Such like names, age, date note..and on this STRING we connect this data as the ""go between"" to INDI and the SOUR where the data came from. <br/>
+<br/>
+2nd all the talk about defining diffrent types of source a out there is great!!!!, but dont make ALL these types actual STING TAG NAMES.<br/>
+<br/>
+You guys are the cream of the crop, to make the gedcom universal and most transversable to everyone and every appication and users it can reach.<br/>
+<br/>
+I could some it up in a 5-10 minute converstaion and you would go OH I get it, but trying to explain how make TAG STRINGS unique for every type of sourc document is shooting ourselves in the long run AND recreating that lauguage barrier to keep it univarsally functional among more than one group of users and application. NON FLEXIBLE but it would work, but as it grows you trap yourself stuck in a gedcom structure looking like gedcom.<br/>
+<br/>
+It sounds great covering all the possiblities right know, but other discussions are starting to scream GEDCOM structure as a chunky xml because it can be done that way.<br/>
+<br/>
+i think we are all better than that and just becarefull we are not reapting 3 steps forward but find ourself 2 steps back.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-25T16:14:04-08:00</div>
+<div class="text">I will make an viewable example, it is worth a thousand wrods. I think comunicating via message we miss each other when we say event like di they mean a string, and label, an actual event of a sub string of something. You have to views of a seeing it your minds eye as a xml format or are we just talking of a definition of a technical manual perpective literally or funactionally.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-26T02:37:40-08:00</div>
+<div class="text">Adrian asks: "Should Events in BetterGEDCOM apply to multiple persons? An alternative could be to create a Group entity for this event and apply the Event to the single Group, then trace through the Group to the Persons concerned"<br/>
+<br/>
+My answers:<br/>
+<br/>
+1.) Events must apply to multiple persons. That's because events apply to multiple persons.<br/>
+<br/>
+2.) Using a group to apply to the persons with the event referring to the group. Interesting idea of a way to make the event only indirectly refer to the multiple persons, but why do it? If you did this you imply that the group entity could be an evidence entity. Again, interesting. I always think of a group as a conclusion object. Interesting rethink. I have always thought that a group would refer to events for their evidence. But with this idea, groups could be like events and persons in the DeadEnds model: they could be roots of trees of other group records representing a decision tree of inferences, conclusions and hypotheses. But again, why add a new object into the part of the model where the records will be the most numerous? I assume that any software that supports evidence will end up with a database in which there are more evidence person and event records than any other, and this idea assumes there will be as many evidence group records as evidence event records. What benefit does one get by complexifying the model and implementation in this case?<br/>
+<br/>
+Tom Wetmore</div></div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-25T12:35:51-08:00</div>
+<div class="title">User defined events and characteristics (inc LDS events)</div>
+<div class="text">I pose this issue here, under Person, since it applies to both events and characteristics (to use my terminology)<br/>
+<br/>
+1. Do we accept, as I believe we must, that users can add their own types of event and characteristic? (User defined event types are common in GEDCOM based software, user defined "attributes" (i.e. characteristics), less so but they d exist - e.g. FamilyHistorian by Calico Pie)<br/>
+<br/>
+2. If we do accept it, then is there any point in adding more and more events and characteristics to the BG standard? Why not just advise people to use user-defined types? <br/>
+<br/>
+For instance, there is no event or characteristic defined in GEDCOM for the award of a medal. I am perfectly happy to work with my user-defined Characteristic - it's a Characteristic because it always has a value - the name of the medal. <br/>
+<br/>
+3. If we accept user defined Events, should we move the LDS church related events (sealing etc) from events defined in the standard to user defined events. In NO way is this to be read as a criticism of the Mormon faith - simply that in our endeavour to be neutral, a series of events dedicated to one church throws the balance out.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-25T12:52:35-08:00</div>
+<div class="text">Russ (I think) responded to me question "Do we add the LDS events ... as standard BetterGEDCOM events" with the following ...<br/>
+<br/>
+Absolutely, along with any other Events that might occur. <br/>
+<br/>
+The real issue here is Where do we get all of these Event names from? Oh, and clarification on some of these event names may have different meanings. "Ordination" is the one that in the above list that really sticks out.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-25T13:19:49-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+#1 - Yes, as the End User's application will probably allow it.<br/>
+<br/>
+The BetterGEDCOM may have to do what the GEDCOM did, as I understand it, create a Data Dictionary that the Applications might use and be understood by the Sending and Receiving application.<br/>
+<br/>
+#2 - Remember this is addressing the Sharing of Information. Both the Sending and Receiving application would have to know that the Event ID means. In an ideal world, the BetterGEDCOM would "learn" what the Event ID ids mean and add them to a list and share among applications or make that list available to the developers of the applications.<br/>
+<br/>
+XXXX means Yyyyyyy<br/>
+<br/>
+IF any Event ID is NOT understood by the Receiving Application, a clear Error Reason must be displayed to let the End User know what was dropped and why.<br/>
+<br/>
+That was my answer, but there is a good example, I think, to why we need to be 'smart' about this.<br/>
+<br/>
+Russ</div></div></div></body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>BetterGedcom - EVENT (BJD model)</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h2 id="toc0"><a name="x-EVENT"></a><span style="font-size: 13px; font-weight: normal; line-height: 19px;"> </span><strong><span style="font-size: 18px; line-height: 19px;">EVENT</span></strong></h2>
+<br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">I'm borrowing Adrian's model, and marking it up. This entity type represents the current information known about an event that may have affected or involved one or more persons, groups or locations. E.g. it might contain information about: the San Francisco earthquake; an individual's birth - with details of their parents; the residence of a group of people in a location; a marriage ceremony; the merger of several railroads; the split of a US Territory location into State locations, etc.</span><br/>
+<br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> Note this is not designed to record comprehensive data about historical events - rather to summarize them in relation to family history.</span><br/>
+<br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">Note 2 - I have concerns if an EVENT can affect entities of mixed types - e.g. if an event can affect both PERSONs and LOCATIONs, say. This might make the data model tricky to negotiate. I am inclined to place a restriction on them to say an EVENT can only affect one type at once.</span><br/>
+<br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">Attributes</span><br/>
+<ul><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Event-type - mandatory - defines what type of event this is, e.g. "birth", "residence", "merger". Values need to be defined by BG standard to accommodate all GEDCOM attributes or events that map over to BG EVENTs. In addition, BG must allow the user to extend this list of definitions as per current GEDCOM. User extensions must be identified in such a way as to be permanently safe from confusion with any new event-types defined by future BG standards (e.g. user extension values <em>might</em> be prefixed by underscore as in current GEDCOM).</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Event-name - optional - name or short description of this event - in some instances, no name is necessary because the type and the related people etc (with their roles) is sufficient to define the event. In other cases, a name (e.g. "San Francisco earthquake") may be of use.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Date</span> - optional - date or date range (coded up somehow), during or between which the event is believed to happen.</li><li>Location-pointer - optional - points to the LOCATION entity for the location at which this event takes place.</li><li>Location-qualifier - optional - if omitted, assume that the event takes place at the location in question. Possible values are codes corresponding to "at", "near", "from" or "to".</li><li>Additional-location-pointer - optional - points to the LOCATION entity for an additional location of relevance to this event. For instance, "emigration" really requires two locations, to define from where someone emigrates and to where.</li><li>Additional-location-qualifier - optional - if omitted, assume that the event takes place at the additional location in question. Possible values are codes corresponding to "at", "near", "from" or "to".</li><li>Surety - optional - a value on a scale indicating how certain the data is.<br/>
+<br/>
+</li></ul><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Relationships</span><br/>
+<ul><li>An EVENT may involve one or more PERSONs</li><li>An EVENT may involve one or more GROUPs</li><li>An EVENT may involve one or more LOCATIONs</li></ul>(<em>Possible</em> restriction that only one of the above three relationship types may hold at once for one EVENT - see above)<br/>
+<ul><li>An EVENT may take place at one LOCATION (note attribute to define this relationship is already written above - location-pointer)</li><li>An EVENT may additionally take place at one LOCATION (note attribute to define this relationship is already written above - additional-location-pointer)</li><li>An EVENT may have one or more RESEARCHERs. May want to add either internal to EVENT or separately unique data for each RESEARCHER (such as a date).</li><li>An EVENT may have one or more SOURCEs. May want to add either internal to EVENT or separately unique data for each SOURCE.</li></ul><h1 id="toc1"> </h1>
+<h1 id="toc2"> </h1>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-30T07:04:41-08:00</div>
+<div class="title">Location Qualifier</div>
+<div class="text">On the Page, is says:<br/>
+<br/>
+"Location-qualifier - optional - if omitted, assume that the event takes place at the location in question. Possible values are codes corresponding to "at", "near", "from" or "to"."<br/>
+<br/>
+Is this a Data Entry "qualifier" or Data Presentation Options?<br/>
+<br/>
+Does this imply, that when entering data into the database, there should be an option for the End User to put one of the Qualifiers and that field would be entered into the BetterGEDCOM?<br/>
+<br/>
+Or when the data is displayed in a report generated from the database, that "qualifiers" would be presented in the report with the appropriate syntax based on the other Location attributes?<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-30T09:38:03-08:00</div>
+<div class="text">Russ, <br/>
+<br/>
+All this implies is that the application developer has a mechanism to qualify and categorize the data, should they choose to use it. That's it. As you know, BetterGEDCOM isn't conceived as a database into which users will directly input data. We're just making allowances for data (which could be equated to an application feature or function) that a developer MIGHT use. They could also make no allowances for qualifiers, requiring users to enter things like "near" as text. In such a case, the BetterGEDCOM location qualifier would simply not be used.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-30T09:56:21-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+I used Adrian model here, I thought it was a good base to work from. <br/>
+<br/>
+My understanding is, we'd allow certain values in the location-qualifier to indicate that an event is either a point of origin or a point of destination, or is an approximate or precise location.<br/>
+<br/>
+So, I'd say a data presentation option, but also, a part of the actual location in some cases.<br/>
+<br/>
+Sometimes, an event comes from a history/news article or a personal letter, and may be qualified as near someplace, rather than at someplace. I think it's actually a neat feature. One which researchers could easily ignore, but provides useful information as a data element itself.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-30T10:12:51-08:00</div>
+<div class="text">Greg makes the most important factual statement that needs to always be in our minds.<br/>
+<br/>
+We will have absolutely zero control over how developers deploy the model we build.<br/>
+<br/>
+All we can do is design the model. There are exactly four things we can do to encourage compliance with the model.<br/>
+<br/>
+1) Make it robust enough to handle the necessary data.<br/>
+<br/>
+2) Keep it compact (i.e. I don't want to see a fifty page standard, and definitely won't consider one 5000 pages long).<br/>
+<br/>
+3) Have a process that will verify compliance, and certify those applications as compliant that pass say 80-85% of the standard, with a 100% on certain portions. There might even be levels of compliance: Bronze (conforms to base), Silver (80-89%), Gold (90-94%), Platuinum (95-100%).  <br/>
+<br/>
+Yes, I know, I think too much.</div></div></div></body>
+</html>

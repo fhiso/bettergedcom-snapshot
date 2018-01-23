@@ -1,0 +1,629 @@
+<html>
+<head>
+<title>BetterGedcom - evidence vs. conclusions</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h2 id="toc0"><a name="x-Adrian Bruce's Data Model Workspace - Evidence and Conclusions"></a>Adrian Bruce's Data Model Workspace - Evidence and Conclusions</h2>
+<h3 id="toc1"><a name="x-Adrian Bruce's Data Model Workspace - Evidence and Conclusions-Executive Summary"></a>Executive Summary</h3>
+<ul><li>Elizabeth Shown Mills refers to a process of Analysis that has input Evidence and output Conclusions;</li><li>The “evidence and conclusion” mode of working enables the permanent and separate recording of the input Evidence to an Analysis, and output Conclusions from that Analysis;</li><li>The “evidence and conclusion” mode of working is entirely optional in the BetterGEDCOM data model;</li><li>In the “evidence and conclusion” mode of working, we propose that input Evidence and outputs Conclusions are recorded on separate Person records;</li><li>If a person record is used as input to an Analysis, it is referred to as an “Evidence Person”;</li><li>If a person record is used to record output from an Analysis, it is referred to as a “Conclusion Person”;</li><li>A “Conclusion Person” can then be used as an input to the <em>next</em> Analysis and from then on is therefore both a “Conclusion Person” and an “Evidence Person”;</li><li>When repeated Analyses give rise to a chain or tree of Person stacked on Person, the current working hypothesis is the Person at the top of the chain.</li></ul><h3 id="toc2"><a name="x-Adrian Bruce's Data Model Workspace - Evidence and Conclusions-In detail"></a>In detail</h3>
+ The vast majority of family historians hold one record in their data files per person. As new sources come in, we mentally select data from those sources, analyse it, and if we conclude that the new information belongs to one of our existing people, we enter the details of the source into a new Source record, add the new information to our existing person, and, if we’re good, enter a citation and we also record some notes about our analysis somewhere.<br/>
+The records for this person on our file therefore contain all the current conclusions for this person. Hence we can refer to this as a “conclusion person”. But don’t get hung up on the finality of the word “conclusion” – it’s really a “current working hypothesis” for the person that we have in our files. But Elizabeth Shown Mills uses the term “conclusion”.<br/>
+<h3 id="toc3"><a name="x-Adrian Bruce's Data Model Workspace - Evidence and Conclusions-The problem"></a>The problem</h3>
+ Suppose I choose the wrong 1871 census record for my 4-greats grandmother, and then, after some time realise the error of my ways. How do I decide what to delete from my file? Obviously the 1871 census event goes. But will I remember that I’ve prematurely killed off my 4-greats grandfather because I saw that the erroneous person was a widow? Or is there other evidence that does kill him off? And what about the 1881 census for 4-greats grandmother? Is that one really her? Or is it the 1871 erroneous person again that I identified using data collected from that incorrect 1871 census record?<br/>
+It would be nice to select the 1871 census record and follow through the consequences of getting it wrong – where was the 1871 record itself used? Not only that but where have we used <em>any</em> information that depended on that 1871 record? Did our argument for saying the 1881 census was her, depend on the 1871 record or not?<br/>
+The problem is that if we have all the data for 4-greats grandmother held in one place, against one person, it gets difficult to disentangle everything. But, if we had the data in some sort of a tree (say), we would find the problem census record and follow it up the tree, seeing where it was used, not just directly, but indirectly as well.<br/>
+It is the aim of the “evidence and conclusion” idea to allow someone to construct just such a tree, to allow them to trace what might be called into question if we find an error. <br/>
+<h3 id="toc4"><a name="x-Adrian Bruce's Data Model Workspace - Evidence and Conclusions-BetterGEDCOM"></a>BetterGEDCOM</h3>
+ Many of us would like the BetterGEDCOM data model, and the corresponding physical file formats, to be able to accommodate the “evidence and conclusion” ideas. <br/>
+Q: “If I use an application program that supports BetterGEDCOM, do I have to use evidence and conclusion ideas?”<br/>
+A: Absolutely not. As I said above, the vast majority of family history files don’t use them now, and we’ve got to be able to convert those files into the new BetterGEDCOM file formats for import, export or storage. We can’t tell everyone to re-enter all their data in “evidence and conclusion” mode. Also, the majority of family historians just aren’t going to be interested in working like this, they’re content to just enter all their conclusions (working hypotheses) against one person record. <br/>
+So the BetterGEDCOM data model and the corresponding physical file formats must be able to accommodate working in both “evidence and conclusion” mode and the old-fashioned way – let’s call it “conclusion only” mode.<br/>
+More formally, the BetterGEDCOM data model must <em>allow</em> people to distinguish between evidence and conclusions but must <em>not</em> mandate them working in that mode.<br/>
+<h3 id="toc5"><a name="x-Adrian Bruce's Data Model Workspace - Evidence and Conclusions-A Process"></a>A Process</h3>
+ I understand that Elizabeth Shown Mills writes "Sources provide Information from which we select <em>Evidence</em> for Analysis. A sound <em>conclusion</em> may then be considered Proof" (from "Evidence Analysis: A Research Process Map” in “Evidence Explained”) (my italics).<br/>
+We all of us do something like this – perhaps some more successfully than others. There are lots of possible processes that might describe how we work – some more helpful than others. I’ll use this process description because it helps to explain working in “evidence and conclusion” mode. <br/>
+Like any process, this has sub-processes (“select <em>[Evidence</em> for Analysis]” and “Analysis”) and it has inputs and outputs. Let’s look at the “Analysis” sub-process. Its inputs are the Evidence that we’re going to analyse and its outputs are the Conclusions from that Analysis. When we are working in “evidence and conclusion” mode, we want to permanently record the Evidence input to the Analysis sub-process and the Conclusions output from that Analysis, keeping them clearly separate. And we need to record the logic of the Analysis as well. <br/>
+<h3 id="toc6"><a name="x-Adrian Bruce's Data Model Workspace - Evidence and Conclusions-Evidence is input to analysis, Conclusions are output from analysis"></a>Evidence is input to analysis, Conclusions are output from analysis</h3>
+ How do we record our input Evidence and our output Conclusions in the BetterGEDCOM files? Or other files equivalent to BetterGEDCOM? <br/>
+Bearing in mind that we want to keep input Evidence and output Conclusions permanently separate, the proposal is this:<br/>
+If the input Evidence is held in (say) one or more Person records, then the output Conclusions are entered into a <em>completely new Person record</em> that contains all the accepted data from the input Persons and excludes any data from the input Persons that our analysis has rejected.<br/>
+If an application uses BetterGEDCOM as its native file format, then the proposal describes how the application program stores its data.<br/>
+If an application only uses BetterGEDCOM as a means to import and export data as a means of data transfer, then it must be <em>able</em> to read or write a BetterGEDCOM file that contains data with input Evidence and output Conclusions permanently separated on different Person records as per the proposal. Hence, it will <em>probably</em> do something similar on its own files. <br/>
+<h3 id="toc7"><a name="x-Adrian Bruce's Data Model Workspace - Evidence and Conclusions-Example"></a>Example</h3>
+<ul><li><span style="margin-top: 0in;">John Smith is first found as a 5y old, in the 1880 census, living in New York. The information relating to John is manually extracted from the source, and a person entered into the application’s file containing only that data from 1880;</span></li><li><span style="margin-top: 0in;">A baptism for a John Smith is found in New York in 1875. Is this the same John? We don’t know yet. The information relating to this John is extracted from the source, and <em>another</em> person entered into the file containing only that data;</span></li><li><span style="margin-top: 0in;">We then mentally select the information from those two records, because we believe that they apply to the same human being;</span></li><li><span style="margin-top: 0in;">We do some analysis on the selected evidence and come to the conclusion (or working hypothesis) that, because of something, these two records refer to the same human. (Not sure yet where this analysis should be recorded);</span></li><li><span style="margin-top: 0in;">The two persons mentioned above have provided input Evidence to an Analysis, and are therefore referred to as “Evidence Persons”;</span></li><li><span style="margin-top: 0in;">Using the application, we then manually create a third person named John Smith where we record the details from both the baptism and census that our analysis has concluded are acceptably correct and belong to the same person. This third John Smith records the output Conclusions from an Analysis process, and is therefore referred to as a “Conclusion Person”. Again, feel free to regard this as a “Current Working Hypothesis Person” if you feel that Conclusions is too final a term but note that ESM uses the word “conclusion”;</span></li><li><span style="margin-top: 0in;">As part of the creation of the output “Conclusion Person”, the application must mark up the input “Evidence persons” so that they both point to the output “Conclusion Person”;</span></li></ul><h3 id="toc8"><a name="x-Adrian Bruce's Data Model Workspace - Evidence and Conclusions-Multiple layers"></a>Multiple layers</h3>
+ If we then find the 1900 census for our John Smith, we go through a similar Analysis process, with its own input “Evidence Persons” and its own output “Evidence person”. One input “Evidence Person” will contain only the data from the 1900 census. The other input “Evidence Person” will be the current working hypothesis for John Smith, the one that contains details from the 1875 baptism <em>and</em> the 1880 census. Assuming we can show the new census belongs to the same John Smith, then our <em>new</em> output “Evidence person” will be another new person record containing details from the 1875 baptism, the 1880 and 1900 census.<br/>
+We now have a tree of John Smith persons.<br/>
+The John Smith record containing just details from the 1875 baptism and the 1880 census is now an output “Evidence person” from the first Analysis and, at the same time, an input “Evidence Person” to the second Analysis. Because the 1875 / 1880 John Smith now points to the 1875 / 1880 / 1900 John Smith, we know that the 1875 / 1880 John Smith is no longer the <em>current</em> working hypothesis. <br/>
+The <em>current</em> working hypothesis is simply the one at the top of the tree. The <em>current</em> working hypothesis person does not point to anyone else – that is how we can distinguish that this person is the <em>current</em> working hypothesis person.<br/>
+<h3 id="toc9"><a name="x-Adrian Bruce's Data Model Workspace - Evidence and Conclusions-And only one layer"></a>And only one layer</h3>
+ Immediately after John Smith’s 1880 data has been entered into the file, there is only person record in the file for him. At this stage there has been no Analysis, so is this person an evidence person or a conclusion person? It is proposed that:<br/>
+This record does not point to any other person and is therefore the <em>current</em> working hypothesis person. Since a current working hypothesis person is usually a conclusion person, we can decide to call this person a conclusion person. <br/>
+Also, since the person contains only evidence from sources, we can decide to call this person an evidence person.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-21T18:29:12-08:00</div>
+<div class="title">What role does a Source Citation play in the Evidence vs Conclusion Model</div>
+<div class="text">I am still confused about The Evidence Model and the Conclusions, based on this and other pages.<br/>
+<br/>
+To me, you have to start with a Source. From that source you gather information and put Citations, from that Source on the Facts or Events, Relationships, etc.<br/>
+<br/>
+I don't see that in your model.<br/>
+<br/>
+Once the Citations are in place, then a review or Evaluation of the "Evidence"  or the data that is present would be made. <br/>
+<br/>
+The Citation is a factual piece of information. The Evaluation of that citation could be positive or negative.<br/>
+<br/>
+How does that link to the Evidence?<br/>
+<br/>
+If I have a collection of Facts or Events, I might evaluate them individually, then see if they make sense to determine that the gathered pieces of information are evidence for this person.<br/>
+<br/>
+After I evaluate the pieces, I might, or might not draw a conclusion.<br/>
+<br/>
+But that conclusion is date / time bound because I might find data later that is for or against what I have gathered before.<br/>
+<br/>
+I am probably NOT going to conclude anything with the first piece of information for that person. I can only guess, that the conclusion will change over time. I also may or may not even draw a conclusion.<br/>
+<br/>
+Russ</div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T10:10:55-08:00</div>
+<div class="text">Sorry the format of the above didn't come out the way it was on my screen.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-22T10:17:36-08:00</div>
+<div class="text">I am for consistency but don't know how we arbitrate it. I expect there will eventually be an agreed upon lexicon. I struggle to figure out what others mean as I assume they struggle to figure out what I mean, but I also consider this struggle for mutual understanding a key to making such a process work. I assume natural selection will happen as we stumble along and something will emerge. When I respond I try to either be consistent with my preferred terms or use the terms that others use that seem best to fit into a discussion. For example I don't normally use the term citation but I did in that last to fit in. To me a citation is a piece of text one uses to describe a source to be used as one of the list of sources to put at the end of a report. Since that seems very far away from a database record to me, I call the concept that I believe is about the same, a source reference, implemented in my model as a pointer to a source record that also has its own attributes that can specialize the source (e.g., the source might describe just a book, but the source reference could add a page number attribute).<br/>
+<br/>
+Evidence is a concept I continue to struggle with. I am more or less convinced that evidence is at the bottom of a "source chain." I don't think there has been any discussion of the idea of a source chain on the BG wiki yet, but it shows up in similar discussions from time to time. The idea of a source chain or source tree is that sources exist at different levels in a hierarchy. For example, a library can be a source, a set of volumes in the library can be a source that uses the library as a source, a book in a set of volumes can be a source, a chapter, page or paragraph in the book can be a source, with these descending sources linked together in a tree. To me "evidence" is the bottom source item in this hierarchy and is so granular that we can finally extract event and persons records from it. I guess I have a very practical definition of evidence -- it is the source, at whatever level I may choose to consider it, from which I extract event and person records and put them into computer records. To me a citation is a piece of text that describes that evidence within its overall source chain using the kinds of rules established by Elizabeth Shown Mills in her many publications about citing sources and explaining evidence. I think it is a goal in the definition of source entities in the BG model, that the source chains (which I do believe is a good idea) have the proper sets of attributes at the proper levels that the text of "professional level" citations can be automatically generated by reporting software.<br/>
+<br/>
+A conclusion object is an object that the researchers builds out of evidence. Therefore its an object that doesn't have a source reference (citation) pointing into the world of paper, books, libraries, microfilm, photos etc. Yes, its ultimate constituent parts refer to those things for their sources and justification, but a conclusion object is based only on a reasoned decision a researcher made. The reason and justification he used in making that decision is the only reasonable thing to use as a citation. What normally happens of course, is that the real citiations for the evidence items are shown in the list of sources and we all seem to just realize that the researcher has decided for us that the his/her conclusion persons refer to that evidence. Take a look at articles in any genealogical journal, especially those that purport to show the descendancy from an ancestor. Most articles like this are in the "Register" format. As you read these articles a consistent pattern arises. The author describes all the items of evidence he/she has found and then implicitly or explicitly shows how he/her has decided to group these evidence records in order to decide who was who and how they fit into families. When you look at the list of sources at the end, all you see are the sources of evidence, but the whole article has been chocker block full of conclusions that author has made about how to interpret the evidence. To me the fact that the justifications for these conclusions are not always explicitly stated is a bit of a lack, but these various publication forms of genealogical research have a long tradition.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T10:30:52-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+We'll get there, I am sure, or I sure hope so.<br/>
+<br/>
+To me, a "list of sources" is a bibliography.<br/>
+<br/>
+To me, what is listed in a report from a genealogy program, in the form of a Footnote or EndNote, as the Citation. The format of that Citation has been documented in Evidence Explained! by Elizabeth Shown Mills. <br/>
+<br/>
+A Citation to me, does not detail what I took out of what ever I am looking at, as I entered that information into fields that my program gives me, in the form of Facts or Events.<br/>
+<br/>
+I might put the details of what I found in that Source, in a specific place in that Source, the word for word information that I found there, but that might be a free form set of notes so that I could see what I found. But the Facts or Events would be in their own Facts or Events fields that the program gave me. I would then attach the Citation to those FACTS. In order for be to enter a Citation, the Source would already have to be in my file, or I enter the Source Information as I enter the Citation.<br/>
+<br/>
+Since I haven't seen, nor talked with anyone who has software that deals with the Evaluation of Evidence, nor reaching of a Conclusion, and mine certainly doesn't have these two features, I am not sure what that would look like. All I know is that I need to Evaluate, and I do, my Sources (as a whole) and the Citations specifically, when I think I know who this person really is. I do have a way to mark the Facts / Events that I think are true, but not a good platform to do that evaluation and reach some sort of conclusion.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-22T11:51:51-08:00</div>
+<div class="text">Russ - re your issues with the term Source Reference and its non-appearance in EE, etc. I think we're all agreeing on the bits we have in common but not all using the same terms.<br/>
+<br/>
+I'm slightly handicapped by only knowing ESM's earlier book, "Evidence - Citation &amp; Analysis for the Family Historian", but in that book, as I recollect, ESM produces templates for lots of types of citations as they will appear in a finished report. (Whatever "finished" means!) <br/>
+<br/>
+Nowhere, as I recollect, does ESM discuss the names for bits of data that get entered into a computer program. (Nor should she - she's defining the end-result).<br/>
+<br/>
+The problem arises with the mis-use that some programs make of the term "citation" and the contortions that some of us go through to avoid making the same error. In software like PAF (if I recall correctly), one enters a Source with all the detail that says the title of the book, which library it was found in, etc. When the fact is entered later, PAF and other programs allow the user to specify which source is being used, what the page number is within that source, whether it's primary, etc, etc. It refers to this entry as a citation - but it isn't because if you look at the GEDCOM it only reads something like "page 36, source S123, secondary" (I'm anglicising the tags). It doesn't tell you where the book is, when it was published, etc, in other words it's only half the citation as required by ESM. Yet PAF and others still refer to it as a citation. <br/>
+<br/>
+Now, you may well write the full ESM format citation against each fact in addition, but for those that don't, the software attempts to come up with an ESM format citation by blending "page 36, source S123, secondary" with the requisite info from the source. <br/>
+<br/>
+What I'm trying to do is come up with a name for "page 36, source S123, secondary" that is different from "citation". The name isn't in ESM because (in my book at least) she doesn't consider these intermediate stages. Hence, I may come up with terms like "source reference" to refer to the "page 36, source S123, secondary". If I do, I shall try to define it clearly...<br/>
+<br/>
+Incidentally - what PAF etc try to do is actually sensible - the publication info etc should only be entered once, and that's against the source, not against every single fact that comes out of this source.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T12:17:05-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+The Citation wouldn't tell you where Source is by the Bibliography would.<br/>
+<br/>
+The Source List or the First Use of the Reference Note WOULD tall you where the source is.<br/>
+<br/>
+From the QuickSheet, Citing Anestry.com Databases &amp; Images.<br/>
+<br/>
+Source List entry:<br/>
+<br/>
+Author or Creator<br/>
+Item Title<br/>
+Item Type<br/>
+Website Title<br/>
+URL<br/>
+Date<br/>
+<br/>
+This information would let the reader know that the information came from Ancestry.com (Website Title, and the URL)<br/>
+<br/>
+The First Reference:<br/>
+<br/>
+Author or Creator<br/>
+Item Title<br/>
+Item Type<br/>
+Website Title<br/>
+URL<br/>
+Date<br/>
+<br/>
+--- so far so good<br/>
+<br/>
+Specific Item of Interest<br/>
+Credit Line<br/>
+Source of the Source<br/>
+<br/>
+With this data entry, defining the Source, the Citation would provide the specifics relating to the Event being cited.<br/>
+<br/>
+I look at it this way. If I send you my research, I want you to be able to look at my Source and Citation, and see exactly what I recorded, fact / event by fact / event, if I send everything in my file. If I select which facts / events that I want, you should be able to tell, in the Source / Citation where I got my information from. You can accept or reject my research. That isn't the point, but I do want you to know where I got the information so that you can go look it up for yourself.<br/>
+<br/>
+Why? It my be a Source that you hadn't looked at before. Or, you may have found that this source is great or unreliable. I can to my conclusion, you can make your own conclusion.<br/>
+<br/>
+We're trying to get away from the fact that today, the GEDCOM that I send to another researcher, my source and citation information was a real mess, and of no use to the person receiving the information.<br/>
+<br/>
+I agree with you that the term "citation" is older software was flawed, but that is what we are trying to help them out with.<br/>
+<br/>
+If we define what a Source is, based on current genealogical standards, and what a Citation is, based on current genealogical standards, we, the users, will be able to share our information without it getting messed up.<br/>
+<br/>
+Since some software developers have provided their uses with a Template to enter Source and Citation information based on Evidence Explained!, the BetterGEDCOM effort should continue using the "common" terms that have been defined.<br/>
+<br/>
+That doesn't mean totally accepted, but if the developers of software have gone this far, and we want them to participate in this effort, we should use terms that understand.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-22T13:27:31-08:00</div>
+<div class="text">Russ, we agree on what the end result is supposed to look like - no problem. <br/>
+<br/>
+We also agree that the older use of "citation" was flawed. <br/>
+<br/>
+And I absolutely agree with your methodology.<br/>
+<br/>
+What I'm driving at is that the way the _data_ _model_ will come out, is that the ESM conformant "First Use of the Reference Note" will be made up of a bit entered when the source was entered (title of source,etc), and a bit entered when the fact is entered (page number, quality, etc). That 2nd bit is not an ESM conformant citation so I will need a name for it later on, so I can't use "citation" and I have to create a new term that ESM didn't _need_ to define.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-22T14:04:23-08:00</div>
+<div class="text">I believe I have been able to get at least the gist of what everybody meant so far, even though English is not my first language. Sometimes the questions of others helped a lot. <br/>
+<br/>
+I've only now really read the articles about evidence management at Ancestry Insider. I found this one particularily helpful for defining "evidence" among other terms:<br/>
+<!-- ws:start:WikiTextUrlRule:20:http://ancestryinsider.blogspot.com/2010/05/evidence-management-explained.html --><a class="wiki_link_ext" href="http://ancestryinsider.blogspot.com/2010/05/evidence-management-explained.html" rel="nofollow">http://ancestryinsider.blogspot.com/2010/05/evidence-management-explained.html</a><!-- ws:end:WikiTextUrlRule:20 --><br/>
+<br/>
+The definitions of source and citation are given as:<br/>
+ "A source—or its original—is something or someone you can touch." <br/>
+ "A citation is something you read that tells where to find the source."<br/>
+<br/>
+<br/>
+Tom's idea of a "source tree" is very interesting. It seems like it could save a lot of repetitious work, while clearly defining the exact "source" (the physical thing) and the "citation" down to the page, line and letter. <br/>
+(I think what you take out of the source that has been referenced as such, is a piece of "evidence".)<br/>
+<br/>
+As long as every level in that tree is a physical thing (or its copy), I guess it's right to name it a "source tree". The whole path through that tree would be the citation.<br/>
+Could every source (or just the top level(s)?) have a location, too? E.g. the library has an address, the book is in a numbered shelf, the page -- ok, the location of the page is obvious.<br/>
+<br/>
+<br/>
+If you've got a paper copy of a microfilm of a church register, how would you put this into the structure?<br/>
+And what about the JPG scan of that paper copy?<br/>
+<br/>
+Maybe we need a list of real-life examples for sources to see how to best address them.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-22T14:30:03-08:00</div>
+<div class="text">At Ancestry Insider, someone left a link to <br/>
+<!-- ws:start:WikiTextUrlRule:5:http://www.lineascope.com/ --><a class="wiki_link_ext" href="http://www.lineascope.com/" rel="nofollow">http://www.lineascope.com/</a><!-- ws:end:WikiTextUrlRule:5 --><br/>
+<br/>
+"Lineascope is an online application for capturing, analyzing, and presenting chains of genealogical information and evidence."<br/>
+<br/>
+It seems interesting from the outside. I've not played with it (don't have a google account), but maybe someone else is interested?</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-11-22T17:22:13-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+You said:<br/>
+<br/>
+"Since some software developers have provided their uses with a Template to enter Source and Citation information based on Evidence Explained!, the BetterGEDCOM effort should continue using the "common" terms that have been defined."<br/>
+<br/>
+Unfortunately, those templates provided by the software developers suffer from the same flaw as the GEDCOM- namely, they are each the particular developer's interpretation of Mills.<br/>
+<br/>
+For example, just look at the difference between those provided By Legacy's SourceWriter and those provided by FTM.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T20:09:51-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+Sorry, don't have Legacy to see the SourceWriter.<br/>
+<br/>
+I am not disagreeing with you. I don't now.<br/>
+<br/>
+When you compared the two, what was the difference in a GEDCOM output, today.<br/>
+<br/>
+That also doesn't mean that this project can't help make the changes.<br/>
+<br/>
+I hope so, any way.<br/>
+<br/>
+Thanks Andy.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-11-22T20:40:38-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+As you know, my main program is TMG although I do use FTM for the relationship calculator.<br/>
+<br/>
+I don't use GEDCOM at all except to load basic trees to Ancestry's Member trees so I didn't even bother to compare GEDCOM output of the two programs- I didn't need to, all I had to look at was the Source Templates they provided to see how different they were and from that I could tell that both would be mangled when fed into a GEDCOM and wouldn't look like themselves OR each other when they came out the other end.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T21:11:01-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+And what you posted is one of the problems we are trying to get at. Mangling any of our research.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-22T02:57:50-08:00</div>
+<div class="text">"I am probably NOT going to conclude anything with the first piece of information for that person. I can only guess, that the conclusion will change over time. I also may or may not even draw a conclusion."<br/>
+<br/>
+Russ - I too am uncertain yet about where citations go in the Evidence &amp; Conclusions model. However, I can say what I believe should apply to your last comment quoted above.  <br/>
+<br/>
+When a person is initially created from, say, a new child first seen on a census form, and only there so far, clearly there will be only one instance in the file (so far as we know) of this person. <br/>
+<br/>
+In this case, the child is entered into the file, taking the details from the single census source and so counts as an evidence-type person. <br/>
+<br/>
+However, the data from the same child does not get used anywhere else, so they are also a conclusion-type person. It's not much of a conclusion, of course, since it's just taking the data, as read, from the source, but it is your initial "conclusion".<br/>
+<br/>
+If you work the model this way, then (a) someone can be both evidence and conclusion at the SAME time and (b) you don't actually do anything to make that first conclusion. <br/>
+<br/>
+You may think this is a bit of a cheat in terminology - sorry, but I was trained as a mathematician and cheats like this are what we do all the time to save work!<br/>
+<br/>
+Later on, you may find a baptism for someone of the same name, in the same area, at roughly the right time, with the right parents' names. You'd enter the baptism source and a new evidence person that just extracts the details from the baptism. <br/>
+<br/>
+Then, once you have done some further analysis and concluded that this John Smith baptised in New York in 1875 is really the same as your John Smith who is 5y old living in New York in the 1880 census, then you can create a 3rd person to combine the data from the previous two. Because this uses the data from the previous two, then this 3rd one is a conclusion person, and the 1st 2 automatically stop being conclusion persons and are just evidence persons. <br/>
+<br/>
+Where I am unsure is what citations should get attached to the conclusion person. <br/>
+<br/>
+Oh, and if you get the 1900 census for our mythical John Smith, you'd create yet another evidence person that just extracted the details from the 1900 census, and in my personal view, once you'd made sure it's the same John Smith again, you'd just add the 1900 data to the existing conclusion person.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T04:29:31-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+Sorry, I am still confused and probably with terminology. And, where tasks are performed.<br/>
+<br/>
+I my mind, it goes like this:<br/>
+<br/>
+Source (a document with information)<br/>
+<br/>
+Citation (where in the Source did I find this information)<br/>
+<br/>
+Citations are attached to Facts or Events<br/>
+<br/>
+Those Facts or Events may or may not, as entered into some databases, be complete. A Census record will NOT give you complete Birth Information.<br/>
+<br/>
+Lets say that these Citations are "Evidence" about this person, facts or events in that persons life.<br/>
+<br/>
+This information is entered into my database.<br/>
+<br/>
+Gathering of more information from more Sources continues.<br/>
+<br/>
+So far, as far as I am concerned, there is NO conclusion. I don't want the software to draw any conclusion for me.<br/>
+<br/>
+At some point, I then need to Evaluate the Evidence.<br/>
+<br/>
+From what I can tell, there aren't any genealogy programs that have tools for us to do this Evaluation. We may have places to make notes on our Sources or Citations (Evidence) by not platform to do this Evaluation. It would be for the User to stop, for a moment, and do this evaluation.<br/>
+<br/>
+The software folks, and this is why this discussion is important for the BetterGEDCOM, need to develop some sort of tools to help with this evaluation.<br/>
+<br/>
+The software that I use has a place where I can mark a citation on a scale of 1 to 5. I don't know about other programs.<br/>
+<br/>
+I also have a feature to mark a Fact or Event as the "preferred" Fact or Event when the same Fact or Event is used by the same person. If the Fact name or Event name is used only once, it is marked as "preferred". The user can change that. But the program insists that the use of a Fact or Event is Preferred. <br/>
+<br/>
+That is OK, but is not a Conclusion. The program made a decision about the fact / event with the citation.<br/>
+<br/>
+The user needs to do the evaluation, and if the program developers give us a platform to look at the "big picture" of the individual, we should then be able to draw a conclusion based on the evidence at hand.<br/>
+<br/>
+At this point is where the BetterGEDCOM comes into play for the Conclusion aspect about this individual.<br/>
+<br/>
+I think that the BetterGEDCOM needs to be 'ready' to handle a "conclusion", but at what level. The Fact or Event level, the piece parts, or at the Person Level.<br/>
+<br/>
+What I think might happen is this, when the file is being generated for transport:<br/>
+<br/>
+Identify the Person, link or what ever term you want, the Facts or Events AND the Evidence for the Facts or Events to that person.<br/>
+<br/>
+Then, some sort of indicator that gets to the next step, IF the program has this type of feature (conclusion).<br/>
+<br/>
+The software should allow me to mark the events or facts that allow me to conclude that these pieces of information belong to this person. So the "conclusion" record (may not be the right term) should be marked and put into the string a data to be sent to the other user. This Conclusion Record should (must) include a Date / Time Stamp, based on when the User Marked that information as a conclusion.<br/>
+<br/>
+If there is not conclusion record, a Null Record could be sent or not record could be sent. That determination, I think, should come from the BetterGEDCOM.<br/>
+<br/>
+No "conclusion" record, don't sent anything, or a flag that says "no conclusion record".<br/>
+<br/>
+I think that my confusion comes from your term "Conclusion Person".<br/>
+<br/>
+I am not sure that the BetterGEDCOM can demand that a Citation be put on each Event or Fact, but IF there is a Citation on an Event or Fact the BetterGEDCOM MUST send it along, in the format that the software presents it.<br/>
+<br/>
+One User's opinion.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-22T08:02:48-08:00</div>
+<div class="text">I think Adrian's explanation is spot on. The citations (I call them source references) in evidence person records point to real sources somewhere physically out there in the world. When that third, "conclusion" person is created (using Adrian's example here) to join the two evidence persons, the evidence persons do not disappear, so obviously their citations do not disappear. The $64,000 question becomes what is the citation for the third person? It seems pretty obvious to me that it is the researcher's head and his ability to follow established genealogical practices and make good conclusions. In my "writings" (doesn't that sound posh) I have made the point that the sources in conclusion objects should be the researcher's rationale and justification for making the conclusion. And because the citations for all the evidence persons are still all there, these also provide the substantiation for the person as well.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T08:36:32-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Can we start to try to use common terms for 'things'.<br/>
+<br/>
+To me, a Source is a document, book, or records. A Citation defines where in that Source I found recorded information.<br/>
+<br/>
+Your term "source references", ot me, is confusing.<br/>
+<br/>
+I can translate Evidence to Citation in my terms.<br/>
+<br/>
+I still don't understand what the term "Conclusion person" means.<br/>
+<br/>
+Sorry, just trying to understand your terms.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-22T09:51:01-08:00</div>
+<div class="text">"A Citation defines where in that Source I found recorded information"<br/>
+<br/>
+Russ - one reason for Tom using the term "source reference" is that "citation" is _not_ supposed to be where in the source you find the info. If you look at "The Ancestry Insider" (on <!-- ws:start:WikiTextUrlRule:10:http://ancestryinsider.blogspot.com --><a class="wiki_link_ext" href="http://ancestryinsider.blogspot.com" rel="nofollow">http://ancestryinsider.blogspot.com</a><!-- ws:end:WikiTextUrlRule:10 --> ) and find the post for 26 May 2010, you'll find an explanation of what a citation really is. This isn't just me, Tom and The Ancestry Insider, but it springs from Elizabeth Shown Mills herself. <br/>
+<br/>
+If I attempt to very roughly summarise (and possibly get it wrong), a "citation" (in its correct usage) gives the full info for finding the bit of information that you're looking for. Not just the page number in the source, but where that source is held, what it's called, when it was published, etc. <br/>
+<br/>
+On the other hand, lots of software (PAF, Ancestry and ?) just define the citation as where in the source we find the info. And omit the "where is the source?" bit because (reasonably enough) you probably already wrote that down when you entered the source into your software.<br/>
+<br/>
+Now - here's my take on it - I really don't care about the difference between the correct use of the term citation and the incorrect, because it's all entered into the program in the same way! And we're years too late to change common usage. But some people do care and so they use terms like "source reference" instead to point to which source and where in the source. And I may have got Tom's usage incorrect - if so, apologies.<br/>
+<br/>
+In summary - I'm getting too old to expect everyone to use the same terms so frankly I've no problem with you using the term "citation" because I can translate it to my terms. Which I haven't written down yet...</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T10:10:01-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+For purposes of this discussion:<br/>
+<br/>
+<ul><li>source – 1. the origin that supplies information.1 2. “an artifact, book, document, film, person, recording, website, etc., from which information is obtained.”</li></ul><br/>
+<ul><li>citation –</li></ul><br/>
+1. “citations are statements in which we identify our source or sources or…particular [information].”<br/>
+<br/>
+2. “a citation states where you found [the cited] piece of information.”<br/>
+<br/>
+<ul><li>information –</li></ul>1. “knowledge obtained from investigation.” 2. “the content of a source—that is, its factual statements or its raw data.”<br/>
+<br/>
+<ul><li>evidence –</li></ul>1. “something that furnishes proof.” <br/>
+2. “information that is relevant to the problem.”<br/>
+3. analyzed and correlated information assessed to be of sufficient quality.<br/>
+4. “the information that we conclude—after careful evaluation—supports or contradicts the statement we would like to make, or are about to make, about an ancestor.”<br/>
+<br/>
+<ul><li>conclusion –</li></ul>1. “a reasoned judgment.”<br/>
+2. “a decision [that should be] based on well-reasoned and thoroughly documented evidence gleaned from sound research.”<br/>
+<br/>
+I don't see anywhere in here Source-Reference.<br/>
+<br/>
+A number of software vendors are now providing their users with templates to enter their Source information, and Citations, based on Evidence Explained!<br/>
+<br/>
+I guess that the point of what I am trying to make is why invent other terms for things that are almost "Standards". Many folks, doing family research might agree that EE! is 'the standard'. That is complimented by our software vendors providing Templates based on that 'standard'.<br/>
+<br/>
+Is the "Source Reference" the presentation of the Source and Citation, as found in Evidence Explained! Source Entry List, First Reference Note, and the Subsequent Note?<br/>
+<br/>
+Russ</div></div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-22T04:18:28-08:00</div>
+<div class="title">Hypotheses</div>
+<div class="text">I don't think I'm buying this distinction between conclusions and evidence. It seems that most people having a working process where all data is seen as a working hypothesis, and always subject to revision. Conclusion sounds so final, and far away from the evidence that lead to it.<br/>
+<br/>
+I guess I think of everything that I enter into my database as a working hypothesis.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-22T11:59:57-08:00</div>
+<div class="text">DS - I like the use of the term "hypothesis" and intend to alter my explanations to use it. Having said that, I think the people who make the distinction between evidence and conclusions / hypotheses tend to use the word "conclusion" and that word also appears in the quoted ESM sentences, so I'm probably stuck with it as a title.  However, my revised explanations can emphasise the word hypothesis.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T12:27:20-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+I agree with the lack of Analysis being missed. I suggest that the program that we use don't have a platform to perform that Analysis.<br/>
+<br/>
+Let say I am going to buy a piece of technology at a local office supply house. I visit their website because I want to compare three of the products with similar characteristics. I can't keep in my mind the data for each of the three items.<br/>
+<br/>
+However, the website gives me an option to select items and compare them. So, I select the three items that I am looking to purchase and can, side by side, compare the information provided.<br/>
+<br/>
+That is the platform or tool that I hope that the software folks provide to us. Hopefully, that by this group of folk bringing the topic up, the developers will listen.<br/>
+<br/>
+<br/>
+I still would like to know what a "Conclusion Person" means. It is clear to me the GRAMPS and DeadEnds knows what it means, but this, not so bright, end user doesn't.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-22T12:59:49-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+A conclusion person is a person that contains/refers to information from more than one item of evidence. Simply put, the information recorded in the person comes form more than one place.<br/>
+<br/>
+It couldn't be that simple could it? Well it almost is.<br/>
+<br/>
+The only complication comes when you look at where the information came from. Say you imported a Gedcom file and you have no idea of its provenance and it contains no sources. Say all the persons in it have a BIRT and a DEAT event. You might say this is not a conclusion person because all the info about the persons come from one place, the Gedcom file. But in this case you have absolutely no way of knowing where that info REALLY came from. So I'd have to call this a conclusion record and the source of this record, other than being the Gedcom it came from would be something like, "I conclude this is a person with a birth and death event because I was idiot enough to download unsubstantiated stuff into my data base, and I conclude that everything about this person is under suspicions but the heck with it because it adds to my family tree so I'll turn a blind eye to all that is good and holy and accept it." For records like this maybe we shouldn't try to call them evidence or conclusion records; might I suggest suspicion record?<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-22T13:09:23-08:00</div>
+<div class="text">Russ says "That is the platform or tool that I hope that the software folks provide to us. Hopefully, that by this group of folk bringing the topic up, the developers will listen."<br/>
+<br/>
+Let me share this user interface model I've had in the back of mind for DeadEnds for over a decade. Imagine a window on your computer and images of either index cards or slips of paper in the window that you can move around. Imagine that each card or slip of paper represents one of your evidence persons or one of your partially constructed conclusion persons. Imagine some algorithmic support that might pre-group the cards into rough piles where each pile represents suggestions for real persons. You then investigate the cards in the piles, able to call up all the details an each card. You rearrange the cards between piles or join or split groups to  reflect your best judgement on the real persons represented by the information and then you invoke an operation that joins all the cards in a selected pile into to higher level person record. There are few other details involved, but that's the essence. This model mimics what a real genealogist does by laying out all the evidence in front of them, reasoning about it, and grouping it into conclusions.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T13:20:05-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Rather then Conclusion Person, why not just Person.<br/>
+<br/>
+This is based on the fact that my "conclusion" is time bound and it will change over time. Because I just to stop researching on that person.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T13:23:53-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+That is a great model. That is what software developers need to provide us, the End User.<br/>
+<br/>
+It doesn't even have to start where you were, the software developers could start with a way to compare the evidence that I choose, side by side, so that I can draw the conclusion. THEN that program needs to give me a way to see that analysis and then to Share that analysis if I choose to.<br/>
+<br/>
+So, you were 10 years ahead of us.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-11-22T17:31:26-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+You said:<br/>
+<br/>
+"For records like this maybe we shouldn't try to call them evidence or conclusion records; might I suggest suspicion record?"<br/>
+<br/>
+Why even give them that dignity? Call them what they are- Junkology!<br/>
+<br/>
+;)</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-22T18:15:31-08:00</div>
+<div class="text">Russ says "Rather then Conclusion Person, why not just Person."<br/>
+<br/>
+I also prefer just Person. Again I stress the continuum as we build up our final persons. Since I think the same Person object is used throughout the continuum I prefer to call every Person object just a Person object from the lowest level Persons built from evidence to the large bloated Persons that summarize 10's if not 100's Persons taken from evidence. I've mentioned that I prefer a trees of Persons, trees that can have any number of levels, which is a concept that might really be too much for some people. Certainly some of these ideas would put a strain on any user interface and the ingenuity of software developers. It was that user interface metaphor of a desk and movable slips of paper that I imagine can make some of the complexities of building the continuum of person trees possible and even palatable to a user. I wish someone would provide such a model so I could play with it!<br/>
+<br/>
+I am a bit of a pedant. I just keep sticking in words like evidence and conclusion, so I can keep calling attention to the overall concepts I am trying to push.<br/>
+<br/>
+This is really a big question for BG. Should BG be like Gedcom and be devoted to carefully holding the results of our research. I think of this as Gedcom done right. I think this is a noble goal. Or should BG have an expanded set of concepts that supports the whole genealogical process? I think the latter is best, and one of the reasons I keep writing such long notes is that I want to gently coerce everyone else into thinking BG should support the whole process. But it is a big question. Just because I want something very much doesn't mean it's a proper goal. One thing that I think is in my favor is the fact that I don't think we have to greatly expand a model that would just support the Gedcom done right idea, to the idea of a model that also supports the research process. The reason I believe this is that the central concepts in a genealogist's mind while doing deduction and infering is still the same main concepts of event and person, and if we can expand our event and person concepts to support the whole process we get the whole process for free in our models. So I keep saying evidence records and conclusion records to 1) stress their similarities and 2) stress their suitability for supporting the full research process.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T20:44:53-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I agree that we should support the Genealogical Process. Be as consistent as possible. I try to use the terms I know and am trying to understand AND I am trying to get some real Genealogist to join us in the process. Some of the folk that do this, for a living perhaps. They should be joining us in due time.<br/>
+<br/>
+It's an opportunity for use to help the developers of our software, including applications on the Internet, to help with the goal of Sharing our Research.<br/>
+<br/>
+I think that our struggle is to set up what belongs in the software and what belongs in the transport of that research information.<br/>
+<br/>
+I don't want, for example, the BetterGEDCOM to define what a Conclusion is. And I do want the software to produce a "standard" useful Source and Citation string of information that is well defined so that the application at the other end understands what is in that information and present it to the End User.<br/>
+<br/>
+We need to have an idea of what we don't have, in our software platforms, to identify the couple of missing pieces, like Evaluation of our Evidence, and reaching a Conclusion (that is time bound and will change), but to also include the flexibility to allow to User to Make Choices at both ends of the sharing of the file.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-22T21:39:04-08:00</div>
+<div class="text">Tom and Russ,<br/>
+<br/>
+I don't think you guys have said a single word I don't agree with in this thread. I think we're all saying the same things from different perspectives and with different emphasis.<br/>
+<br/>
+I would only stress that my interest in exploring the research process and aspects of it lies explicitly in planning for the future and making sure we don't make some shortsighted determination to accommodate the practical, present-day data that hamstrings us in the future. If we can make decisions that are able to accommodate today's data but are more complimentary towards a structure that accommodates what we want for the future, then obviously we will all be better off.<br/>
+<br/>
+Russ, I would also hate to see us start defining genealogical terms beyond what is needed for manipulation of data. We need to make sure what others define and use fits in our model, but we can't be involved in actually steering either users or app developers into a specific way of doing things to the exclusion of alternatives.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-22T22:12:22-08:00</div>
+<div class="text">What about a grade or score for a person.<br/>
+<br/>
+I understand what they mean about a person being listed but not fully researched. On my DB I was going to have persons listed. The more documents attached to that person would get graded like 0-5 stars, or like a google popularity bar, or what ever, like make people BLACK FONT BOLD, and drift the font from Dark grey to light gray with less attachted reasearch.<br/>
+<br/>
+  So in a way those people out near the edge of ones extended tree would show light gray. This out right indecates a plausiable outline but has not been solidfied by the facts.<br/>
+<br/>
+Count Documents divide by equation then shade the font by darkness/lighten or even transparent like<br/>
+Just a suggestion</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-22T22:38:16-08:00</div>
+<div class="text">Anyone can see a person who has a name only attached to a father and mother with siblings would be considered just a referance point guidline (level-0)<br/>
+<br/>
+with common family knowledge of family members hear say birthdates, death and place you know someone spoke of it as a witness <br/>
+(level-2) <br/>
+<br/>
+Any attached documents like draft, census and such marriage record document matches hear say or hands on knowledge.(level-3) <br/>
+<br/>
+more than two major documents of same name and duplicated birth dates people that comply to other dcuments (level-4)<br/>
+<br/>
+(level 5) majority of the persons major facts are backed up with documents.<br/>
+<br/>
+I dont think you would have the need to express to anyone a person is a possiable lead or not. look at it like this you share your tree with another or someone with you. You/person looks and sees James son of Pual no dates no place and doucments to support an outline. You, the other person and I would all know the same thing. Now if James and his father have 15 documents between them we all can look at the attach document and know that person was researched and MATCHED, end of story. <br/>
+<br/>
+  Onthe note there is note documents, you only have a tale from a great aunt. Well document her story in a memo/note as you the auther of the information. then just attach a link from that person to the Document of great aunt nillies family memory of 1943.<br/>
+<br/>
+I dont think any one has to explain to a viewer if a outline is Hypotheses, Conclusion or Evidence, just let the facts and images speak for themselves and let the viewer be the jury. <br/>
+Person is a person , records is a record</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T04:40:35-08:00</div>
+<div class="text">dsblank,<br/>
+<br/>
+Actually you are right. I like the change in terms. I have been confused about the Conclusion vs Evidence discussion. What I have said a number of times that IF there is a Conclusion it MUST have a Date / Time stamp. That gets to your Hypotheses, I think. <br/>
+<br/>
+I agree, I was hung up on the Conclusion term as being final. In my data, it is NOT final, it WILL change.<br/>
+<br/>
+I am not sure that another 'term' is the way to go, but it might be, but if the BetterGEDCOM can agree what a Conclusion is or isn't, that it will change, and add a date time stamp to that conclusion, and make sure the software vendors understand this, we should be OK.<br/>
+<br/>
+Thanks again,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-22T07:46:14-08:00</div>
+<div class="text">Good point about conclusion sounding final. I have stressed a few times that the terms evidence and conclusion are on a continuum rather than at the two endpoints of a deductive process. I view the genealogical process as being one of building up a tree of decisions that group together more and more person records into more and more complete person records, with the goal that the most complete persons represent the real persons. The persons at the tops of the current set of decisions trees are the present day conclusion persons and all persons below in the trees are either previous conclusion persons, now part of a more complete person, or lower level evidence persons. Though I can see how the term conclusion can be confusing, it cannot be denied that each person in a person decision tree does represent an explicit conclusion on the researcher's part that persons below in the tree are all refer to the same person. Each of these conclusions should be supported by a source reference making it even more explicit that it is based on a decision made by a researcher. To me conclusion is a better synonym with decision that hypothesis is. <br/>
+<br/>
+Regardless, hypothesis does seem a worthy synonym for the term conclusion as I have intended it to mean, so the community, if they finally embrace evidence/conclusion at all, can make the decision. I would just ask though which of the two terms, conclusion or hypothesis, will lead to more or less final confusion to users in the end. I'm not making a judgement on this, but think the decision should be based upon it.<br/>
+<br/>
+Based on the point that one is "not buying the distinction between between conclusions and evidence" I have to ask a question. If there is no distinction, how should the records in a database evolve as more and more evidence is collected? There is the Gramps approach, which goes like this. New events are added to the database. New persons or existing persons are made to point to these events. If a user finds he thinks two persons are the same, those two persons are merged together, one disappears and the other ends up referring to all the events the original two did. The user gets to rearrange the events so that there are more preferred events and less preferred events when there is conflicting data. No decision trees are ever built up in this model, so not only is the complete history of how the mergings occurred lost, but the justifications of all previous mergings are also lost. The process if final. No going back because there are no links to the past. This method also makes it difficult for the researcher to create conclusion events (in my sense of the word) but I won't go there now. In the DeadEnds process I propose, events and their interrelated persons enter into the database at the same time and then the persons are built into decision trees with higher level persons allowed to summarize and infer the actual events that occurred. Lower level persons are never lost, all decisions are maintained with their justifications, and all decisions are reversible. Personally I believe there is no comparison between these two approaches. Nevertheless, there is definitely a distinction between evidence and conclusion (in my senses of the words) in BOTH methods. Merging persons in the Gramps model, and building person decision trees in the DeadEnds model, both transform (Gramps) or create (DeadEnds) objects that move further and further away from being pure evidence and closer and closer to being final conclusions. If one buys into either of these models, or any other model that allows new evidence to enter a database and effect its changes upon the state of the database, how can one not think in terms of evidence and conclusions?<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-22T10:39:50-08:00</div>
+<div class="text">Tom wrote: "If there is no distinction, how should the records in a database evolve as more and more evidence is collected?"<br/>
+<br/>
+I suggest the records evolve naturally because each (record) is re-assessed over and over again (ala "seasoned") as evidence is collected. <br/>
+<br/>
+The first edition, hardcover, of Elizabeth Shown Mills, _Evidence Explained_, included "Evidence Analysis: A Research Process Map." I have a laminated reproduction, c2007, of that material.<br/>
+<br/>
+(The concept has been referred to elsewhere in the BetterGedcom wiki, ala, "Sources &gt; Information &gt; Evidence.")<br/>
+<br/>
+Mills writes, "SOURCES provide INFORMATION from which we select EVIDENCE for ANALYSIS. A sound conclusion may then be considered "PROOF."<br/>
+<br/>
+On the back side of the Mills "map" re four blocks--one each for Sources, Information, Evidence and Proof.<br/>
+<br/>
+For our purpose here, me thinks, Mills' block "Proof" is instructive. In particular, she finishes with, "Quality proof does not rest upon any simple statement of fact conveniently offered by some source. Proof should rest upon the totality of the evidence."<br/>
+<br/>
+Since "totality of the evidence" changes with added source information, so goes our record, including the record and comments we make in our footnotes about our sources of information.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T10:47:32-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+Excellent !!!!<br/>
+<br/>
+Thank you.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-22T11:51:54-08:00</div>
+<div class="text">Well, I agree that these terms are both ill-defined for our purposes and that terms like "conclusion" carry a weight of finality that is not reflected in a standards-based approach nor reality. A common data model reference for genealogical software databases of today is that they are "conclusion-based" models. This is because these software products are based upon data models that manifest data in terms of conclusions rather than deliberative analysis, unanswered questions, and the like.<br/>
+I have over and over again stressed the need for us to define what we would like to see in a data model that would support the research process, compare it to the practical realities of today, and draw a line between the two (if the two cannot be reasonably combined in one step as is a common assumption). The current discussion only highlights our need to do this.<br/>
+<br/>
+Also, just to be clear. In the ESM model referred to, and over and over again in her writing, there is a crucial ANALYSIS step of that is ignored, assumed, etc. In simple cases, this doesn't present much of a problem. However, in representing complex genealogical information that doesn't lead to any conclusion, that requires extensive analysis, etc., we cannot continue to gloss over this step if we intend to ever address accommodating the research process.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-22T11:52:09-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+"I suggest the records evolve naturally because each (record) is re-assessed over and over again (ala "seasoned") as evidence is collected." <br/>
+<br/>
+I agree if we are talking about conclusion records, which is probably what we are, since these are the only kinds of records supported by current software. I know I've said these things so many times I must sound like a broken record ...<br/>
+<br/>
+Event and Person Evidence records -- they don't change because the evidence they come from does not change. They are the evidence converted over into event and person records, some might say they are created by "marking up" the evidence.<br/>
+<br/>
+Conclusion Person records (what 98% of all genealogy program users use) do change -- they grow as new evidence comes to light that gets added, and they shrink if the researcher believes there are more than one real person involved and has to split a record.<br/>
+<br/>
+We've been talking about two ways to implement this idea, the Gramps way and the DeadEnds way. in the Gramps way persons really are conclusion objects from beginning to end. They grow and change by pointing to more and more events. The event records don't change (well there is no Gramps reason why they can't, but normally an event is taken from an item of evidence so shouldn't change), but the person records do. If a person has to be split later the researcher has to create a new person and reassign the persons to the events. In the Gramps model, as generally understood, the events record the evidence and the persons record the conclusions. To me this takes us half way on an important journey to where genealogy software should be.<br/>
+<br/>
+The DeadEnds process has events and persons be both evidence and conclusions. Evidence events are created in the Gramps way. But also created are evidence person records that are the role players in these events. This set of records, the event record and the associated event records never change; they should be thought of as being bound together and inseparable. They are taken directly from evidence which is unchanging. The researcher then begins reasoning about these records and decides to create conclusion persons by grouping the evidence persons in groups that he/she believe represent different people. The conclusion persons then "point" to the evidence persons. I've mentioned how I prefer a tree-like structure rather than simple pointing to a list so that conclusion persons can be built up from evidence persons and other conclusion. The researcher at some point creates conclusion events, and binds the conclusion persons and events together the same way that evidence records are bound together. Conclusion person records are role players in conclusion event records and vice versa.<br/>
+<br/>
+This sounds complicated but with proper software support I am convinced that using a system like this would be no more complicated than using the conclusion-only systems of today. Of course that remains an unsubstantiated claim until someone shows how it can be done.<br/>
+<br/>
+Tom Wetmore</div></div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-22T13:15:27-08:00</div>
+<div class="title">Updates</div>
+<div class="text">I've updated the page to use the terms hypothesis and working hypothesis instead of conclusion in the explanations.<br/>
+I've also added a step-by-step example taken from the discussion to illustrate evidence and hypothesis (ex-evidence) persons.</div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T13:28:11-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+I liked the changes and need to digest them a little.<br/>
+<br/>
+Thank you for the rework of that page.<br/>
+<br/>
+Russ</div></div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-29T03:15:15-08:00</div>
+<div class="title">Attempted diagram</div>
+<div class="text">Hi, <br/>
+I've done a diagram ( <!-- ws:start:WikiTextUrlRule:1:http://bettergedcom.wikispaces.com/file/detail/bg-schema.pdf --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/file/detail/bg-schema.pdf" rel="nofollow">http://bettergedcom.wikispaces.com/file/detail/bg-schema.pdf</a><!-- ws:end:WikiTextUrlRule:1 --> ) to try and illustrate the evidence/hypothesis model and how it could work in BG. It's not finished because I kind of lost way. There will probably be errors because I didn't understand the concept too well. But maybe it might still be helpful to some people?</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-29T09:28:26-08:00</div>
+<div class="text">I think the diagram is excellent. I have a few comments.<br/>
+<br/>
+The source records and the event evidence record are exactly what I would hae done.<br/>
+<br/>
+I would not have had the first four hypothesis persons. That is because I would have put the sex and the birth vitals (see below) directly into the evidence persons, though I understand why it could be done as in the diagram.<br/>
+<br/>
+Quick aside. Even though I call the person records that are created directly from evidence the evidence persons, they really ARE NOT evidence, they are really the first set of conclusions derived from the evidence. Please don't let this get too confusing. I call evidence persons evidence persons because the are the first person records derived from evidence, not because they are evidence. I have tried to stress this point a few times, but it is a little subtle and may bear repeating once in awhile. As soon as we interpret the evidence in any way, and in this case this means creating event and person records, some level of interpretation must occur. Since this is happening, I am not bothered with putting a few clear implications from the evidence into the evidence persons. So, I would not have had a problem with inferring the sex of the spouses, nor would I have had a problem inferring their approximate birth years and putting this information into the evidence persons.<br/>
+<br/>
+Now to vitals. If you check the DeadEnds model you will see that a person record can have "vitals" included in them. Vitals are very much like events, except that the idea is used when there is very little real information available about the event, and there is only one role player mentioned. In this case DeadEnds allows the vital information to be kept inside the person record instead of in a separate event record. If you think about it, this is how GEDCOM handles all person events. DeadEnds allows this to be done for the basic vital events.<br/>
+<br/>
+So my diagram would have added the sexes and the birth vitals to the evidence persons, then gotten rid of the first four hypotheses persons and gone direct to the final two hypothesis persons.<br/>
+<br/>
+I think the way the conclusion event for the marriage is handled is exactly correct in the diagram.<br/>
+<br/>
+I would have added two more conclusion events, the birth events for the two spouses as conclusion events also.<br/>
+<br/>
+If we had a few more of  these data scenarios, and we were able to chart them out using the different model possibilities, I think the understanding that would ensue would be remarkable.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-12-02T20:17:57-08:00</div>
+<div class="text">Testuser42, I created a readable JPEG from your PDF which I'm going to add to its own page o people can see it more directly and comment on it using the discussion tab. This is a very good illustration.<br/>
+<br/>
+Tom, Even rote data entry involves some analysis. One must interpret the handwriting or even the type. There is absolutely no data entry possible without some analysis. I say this because sometimes people wonder, well, where's the place I can put my analysis? I would like to add analysis data points for very complicated situations, but overall, one can't completely separate analysis and evidence (or any other data, for that matter).</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-12-03T03:44:39-08:00</div>
+<div class="text">Greg said: "There is absolutely no data entry possible without some analysis."<br/>
+<br/>
+This is true, and why I would not call anything a "fact". Everything requires some analysis and interpretation. <br/>
+<br/>
+This is often not appreciated, especially when someone else is doing the interpretation, and it is found on-line. Someone had to interpret it!<br/>
+<br/>
+This is only going to get worse when things become transferable via an API (like FamilySearch). Then you don't even have to retype it, and further believe that it is a "fact".<br/>
+<br/>
+-Doug</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-12-09T11:20:05-08:00</div>
+<div class="text">Thanks, Greg, for the JPEG and page!<br/>
+<br/>
+Tom said: "I would not have had the first four hypothesis persons." <br/>
+Yeah, me neither, at first ;-) But I wanted to show another level, and was to lazy to make up another source... <br/>
+<br/>
+The "Vitals" make it much more simple and clean. I overlooked that part at first. Really a good idea!<br/>
+<br/>
+About analysis: My opinion is that you just need the possibility to add a note to anything. If you put your reasoning for a conclusion in the note that goes with it, what more would you need?</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-12-09T11:32:25-08:00</div>
+<div class="text">testuser,<br/>
+<br/>
+Regarding notes, as long as the note has a defined purpose, even a broad purpose, I'm fine with that.<br/>
+<br/>
+However, use of generic notes causes big problems. Notes can be (but certainly aren't necessarily) a way to mitigate badly organized data. This is a fine line, but I want to try to make sure we do a good job in striking a good balance.</div></div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-29T14:42:50-08:00</div>
+<div class="title">Re-write to use Analysis process </div>
+<div class="text">I have rewritten this page to incorporate ESM's Analysis process because I feel that using that process allows me to explain better what evidence and conclusion / working hypothesis persons are.</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-12-02T19:52:48-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+You're from the UK, aren't you? I would be most interested in how genealogical organizations in the UK express data as a part of the genealogical process.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-02T20:15:33-08:00</div>
+<div class="text">"You're from the UK, aren't you?" LOL,<br/>
+I was willing to call him 3 hrs ago long distance, and to discuss some items over the phone and found out he is in the UK. Oh Well!<br/>
+<br/>
+Anyway, where is this link to view the rewritten information for some clarification.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-12-02T20:33:30-08:00</div>
+<div class="text">Mike,<br/>
+<br/>
+He's simply incorporated new language into the main page. Should you care to compare old and new, use the HISTORY tab above.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-02T20:56:42-08:00</div>
+<div class="text">"HISTORY tab above" Ahh! thank you, first time I am to use them.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-02T21:56:10-08:00</div>
+<div class="text">AdrianB38,<br/>
+<br/>
+  I followed your step by step of John Smith. I took your data findings what you call as evidence and the hypothesis Person. Somewhere in there it seems that you were forced to create 3 people per evidence found? then had to link the 3 evidence people to 1 conclusion person?<br/>
+<br/>
+  I sent you and Greg a copy, I believe what I call a evidence record only needs to point to one person. For all any evidence records can point to the final one person. <br/>
+<br/>
+In case of a person needing to split and take have the evidence records shows no problem or destruction of data. or even in the case of a merge. <br/>
+<br/>
+Does the example of a hypothesis person as a tree default person work for you with quick view of all evidence records tagged ok, viewed, concluded, what ever you decide to name it?<br/>
+<br/>
+Am I hitting the ball park how to fundamentally do it to meet your needs?</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-12-03T15:12:41-08:00</div>
+<div class="text">Greg<br/>
+In case it's of use, I've added a page "personal notes on Family History in the UK" <!-- ws:start:WikiTextUrlRule:3:http://bettergedcom.wikispaces.com/personal+notes+on+Family+History+in+the+UK --><a href="http://bettergedcom.wikispaces.com/personal+notes+on+Family+History+in+the+UK">http://bettergedcom.wikispaces.com/personal+notes+on+Family+History+in+the+UK</a><!-- ws:end:WikiTextUrlRule:3 --> <br/>
+as you suggest with a link from <!-- ws:start:WikiTextUrlRule:4:http://bettergedcom.wikispaces.com/GOALS --><a href="http://bettergedcom.wikispaces.com/GOALS">http://bettergedcom.wikispaces.com/GOALS</a><!-- ws:end:WikiTextUrlRule:4 --><br/>
+because I can't find anywhere better at the moment!</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-12-03T17:05:00-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+Thanks for the incredible writeup! I've added a Gathering Information" Section for your page. I really hope you can inspire others to share their stories.</div></div></div></body>
+</html>

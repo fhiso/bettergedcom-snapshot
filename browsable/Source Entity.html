@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>BetterGedcom - Source Entity</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+ The source entity seems an ideal place to apply use of templates as described on the <a class="wiki_link" href="Use%20Of%20Templates.html">Use Of Templates</a> Page. How might sources be structured to best accommodate an expandable source template concept?<br/>
+<br/>
+<br/>
+<span style="margin: 0px; padding: 0px;"><span style="margin: 0px; padding: 0px;">Sources are the foundation on which much genealogical research is based. Most modern genealogy programs support reasonably well-formatted sources. In addition, most information included in a </span>published genealogy that is referred to as a citation is in fact information housed in the source entity within a computer database. These two are easily confused when speaking about the work of genealogy as it is expressed in genealogy technology databases.</span><br/>
+<br/>
+BetterGEDCOM exports will serve different purposes and will need to represent source citations for each bit of data as originally described in the maker's originating file. In addition, to reflect true sourcing of information, BetterGEDCOM files should express their source data as though each source of information is the identified BetterGEDCOM itself and the "source of the source" is that which was described in the maker's source file when data transfer between users is the intended purpose of the generated BetterGEDCOM file.<br/>
+<br/>
+<br/>
+<h2 id="toc1"><a name="x-Source Elements"></a>Source Elements</h2>
+ Using a template model for sources, the great majority of source elements would be generic fields mapped to templates. One source might best be comprised of dozens of elements. How can such elements be structured? <br/>
+<br/>
+Beyond variable fields for sources, what universal elements do all sources need?<br/>
+SourceID (UUID?)<br/>
+Repository Reference<br/>
+<br/>
+<br/>
+Please develop source templates ideas within the <a class="wiki_link" href="Use%20Of%20Templates.html">Use Of Templates</a> pages.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-23T12:30:38-08:00</div>
+<div class="title">XML-based Citation Style Language (CSL) </div>
+<div class="text">From the Zotero webstite (www.zotero.org):<br/>
+<br/>
+Zotero makes use of the newly developed XML-based Citation Style Language (CSL) to configure citation formatting. It has been designed to be an open, robust and international-ready standard, independent of any particular application, document format, or programming language. Although CSL has matured significantly, the availability of automated tools to develop and modify bibliographic styles is still limited.<br/>
+<br/>
+If you have some technical savvy, and are not afraid to edit XML by hand, take a look at the info on creating styles, or the step-by-step guide. If on the other hand you are wary of writing your own CSL style, you can still do a lot of the upfront work in getting the style developed. There is a good chance that one of the more technically inclined members of the Zotero community will help out if you are willing to put in a bit of work to kick things off.</div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-23T13:43:10-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+Please read this Blog entry:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:8:http://rootsandrambles.blogspot.com/2010/12/watch-out-for-overly-helpful-zotero.html --><a class="wiki_link_ext" href="http://rootsandrambles.blogspot.com/2010/12/watch-out-for-overly-helpful-zotero.html" rel="nofollow">http://rootsandrambles.blogspot.com/2010/12/watch-out-for-overly-helpful-zotero.html</a><!-- ws:end:WikiTextUrlRule:8 --><br/>
+<br/>
+Interesting topic<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-12-23T19:38:48-08:00</div>
+<div class="text">Interesting tool and language. The question is, how does this affect BG and how will genealogy programs use it.<br/>
+<br/>
+The citation/bibliography layout specifications could be used by genealogy progs, but many progs has their own way of doing it.<br/>
+<br/>
+"Import to Zotero" specification could perhaps be used by gen. progs - the prog could have functions similar to Zotero.<br/>
+<br/>
+Info stored in Zotero could be exported and imported into a gen. prog. This would be the method that requires the least implementation effort, but you will have to link it to other records in the gen. prog.<br/>
+<br/>
+Could it be used for more? <br/>
+<br/>
+Does Ancestry etc. support something that could be imported/captured by Zotero? What about the Familysearch API or other APIs, do they supply similar info?<br/>
+<br/>
+The implications for BG would be that it will have to handle the information fields (long list at end of the CSL spec) - and probably also a record structure ???? - that is stored in Zetero and specified by CSL - or a subset? There are also special rules for e.g. structuring the parts of names of authors etc.  How does these fields fit with other "standards" - eg. Mills. <br/>
+<br/>
+Are there competitors to (parts of) CSL?<br/>
+<br/>
+When playing with this I also discovered that there is an ISO standard for citations etc. ISO 690 (updated 2010) -- but you have to pay to get a copy. Don't know if anyone use it.<br/>
+<br/>
+I think we want this type of functionality, so it is worth exploring how it affects BG.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-24T00:46:47-08:00</div>
+<div class="text">Here's a thread by Jhy001, "John." <br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:7:http://forums.zotero.org/discussion/8049/advice-on-creating-a-history-evidence-style/#Comment_78044 --><a class="wiki_link_ext" href="http://forums.zotero.org/discussion/8049/advice-on-creating-a-history-evidence-style/#Comment_78044" rel="nofollow">http://forums.zotero.org/discussion/8049/advice-on-creating-a-history-evidence-style/#Comment_78044</a><!-- ws:end:WikiTextUrlRule:7 --><br/>
+<br/>
+On a less technical note, I wonder if Zotero would be somewhat scalable.<br/>
+<br/>
+Here's another thread. <br/>
+<!-- ws:start:WikiTextUrlRule:8:http://forums.zotero.org/discussion/12749?page=1#Item_2 --><a class="wiki_link_ext" href="http://forums.zotero.org/discussion/12749?page=1#Item_2" rel="nofollow">http://forums.zotero.org/discussion/12749?page=1#Item_2</a><!-- ws:end:WikiTextUrlRule:8 --></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-27T20:46:00-08:00</div>
+<div class="text">It's the Zotero concept that I'd like to see advanced. More particularly, however, Zotero is open-source, XML based and apparently well-funded. <br/>
+<br/>
+On the reverse end of the spectrum, I heard today that one major software vendor is not storing the otherwise "template appearing" source information as "elements."</div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-12T00:18:29-08:00</div>
+<div class="title">Follow up regarding online citations</div>
+<div class="text">To spotlight the benefits of online citations and how BetterGEDCOM might advance the related features, I intended to create a Build a BetterGEDCOM blog entry and use FamilySearch Historical Record collection sources as examples. Unfortunately, there are problems with those sources. So .. the project to blog about online citations turned into a blog about online source problems. <br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:10:http://theycamebefore.blogspot.com/2011/01/please-lets-not-wiki-familysearch.html --><a class="wiki_link_ext" href="http://theycamebefore.blogspot.com/2011/01/please-lets-not-wiki-familysearch.html" rel="nofollow">http://theycamebefore.blogspot.com/2011/01/please-lets-not-wiki-familysearch.html</a><!-- ws:end:WikiTextUrlRule:10 --><br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:11:http://theycamebefore.blogspot.com/2010/12/closer-look-at-familysearch-historical.html --><a class="wiki_link_ext" href="http://theycamebefore.blogspot.com/2010/12/closer-look-at-familysearch-historical.html" rel="nofollow">http://theycamebefore.blogspot.com/2010/12/closer-look-at-familysearch-historical.html</a><!-- ws:end:WikiTextUrlRule:11 --><br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:12:http://theycamebefore.blogspot.com/2010/12/are-familysearch-sources-really-subject.html --><a class="wiki_link_ext" href="http://theycamebefore.blogspot.com/2010/12/are-familysearch-sources-really-subject.html" rel="nofollow">http://theycamebefore.blogspot.com/2010/12/are-familysearch-sources-really-subject.html</a><!-- ws:end:WikiTextUrlRule:12 --><br/>
+<br/>
+In a post yesterday, AncestryInsider indicated he plans a series about what FamilySearch needs to do to fix those sources. <br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:13:http://ancestryinsider.blogspot.com/2011/01/where-did-igi-go.html --><a class="wiki_link_ext" href="http://ancestryinsider.blogspot.com/2011/01/where-did-igi-go.html" rel="nofollow">http://ancestryinsider.blogspot.com/2011/01/where-did-igi-go.html</a><!-- ws:end:WikiTextUrlRule:13 --></div></div></body>
+</html>

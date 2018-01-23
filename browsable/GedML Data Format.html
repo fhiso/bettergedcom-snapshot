@@ -1,0 +1,170 @@
+<html>
+  <head>
+    <title>BetterGedcom - GedML Data Format</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+ <br />
+Here is a reproduction of the beginning of two example files included with the GedML utilities that illustrate both its straight GEDCOM-to-XML translation and the differences between the data formats (syntaxes).<br />
+<br />
+
+
+<table class="wiki_table">
+    <tr>
+        <th>GEDCOM<br />
+</th>
+        <th>GedML<br />
+</th>
+    </tr>
+    <tr>
+        <td>0 HEAD<br />
+1 SOUR TMG<br />
+2 VERS 3.7<br />
+1 SUBM @SUB1@<br />
+1 GEDC<br />
+2 VERS 5.5<br />
+2 FORM LINEAGE-LINKED<br />
+1 DEST GED55<br />
+1 DATE 13 FEB 2000<br />
+1 CHAR ANSEL<br />
+0 @SUB1@ SUBM <br />
+1 NAME Michael Kay<br />
+1 ADDR <a class="wiki_link_ext" href="mailto:mhkay@iclway.co.uk" rel="nofollow">mhkay@iclway.co.uk</a><br />
+0 @I1@ INDI<br />
+1 REFN 1<br />
+1 NAME John Fitzgerald/Kennedy/<br />
+1 SEX M<br />
+1 CHAN<br />
+2 DATE 13 FEB 2000 <br />
+1 BIRT<br />
+2 DATE 29 MAY 1917<br />
+2 PLAC Brookline, MA, USA<br />
+1 DEAT<br />
+2 DATE 22 NOV 1963<br />
+2 PLAC Dallas, TX, USA<br />
+2 NOTE Assassinated by Lee Harvey Oswald.<br />
+3 CONT <br />
+1 NOTE Educated at Harvard University. Elected Congressman in 1945<br />
+2 CONT aged 29; served three terms in the House of Representatives.<br />
+2 CONT Elected Senator in 1952. Elected President in 1960, the<br />
+2 CONT youngest ever President of the United States.<br />
+2 CONT <br />
+2 CONT <br />
+1 FAMS @F1@<br />
+1 FAMC @F2@<br />
+0 @I2@ INDI<br />
+1 REFN 2<br />
+1 NAME Jaqueline Lee/Bouvier/<br />
+1 SEX F<br />
+1 CHAN<br />
+2 DATE 13 FEB 2000 <br />
+1 BIRT<br />
+2 DATE 28 JUL 1929<br />
+2 PLAC Southampton, Long Island, NY, USA<br />
+1 DEAT<br />
+2 DATE 19 MAY 1994<br />
+2 PLAC New York City, NY, USA<br />
+1 BURI<br />
+2 DATE 23 MAY 1994<br />
+2 PLAC Arlington National, VA, USA<br />
+1 FAMS @F1@<br />
+1 FAMS @F3@<br />
+1 FAMC @F4@<br />
+</td>
+        <td>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;<br />
+&lt;GED&gt;<br />
+&lt;HEAD&gt;<br />
+&lt;SOUR&gt;TMG&lt;VERS&gt;3.7&lt;/VERS&gt;<br />
+&lt;/SOUR&gt;<br />
+&lt;SUBM REF=&quot;SUB1&quot;/&gt;<br />
+&lt;GEDC&gt;<br />
+&lt;VERS&gt;5.5&lt;/VERS&gt;<br />
+&lt;FORM&gt;LINEAGE-LINKED&lt;/FORM&gt;<br />
+&lt;/GEDC&gt;<br />
+&lt;DEST&gt;GED55&lt;/DEST&gt;<br />
+&lt;DATE&gt;13 FEB 2000&lt;/DATE&gt;<br />
+&lt;CHAR&gt;ANSEL&lt;/CHAR&gt;<br />
+&lt;/HEAD&gt;<br />
+&lt;SUBM ID=&quot;SUB1&quot;&gt;<br />
+&lt;NAME&gt;Michael Kay&lt;/NAME&gt;<br />
+&lt;ADDR&gt;mhkay@iclway.co.uk&lt;/ADDR&gt;<br />
+&lt;/SUBM&gt;<br />
+&lt;INDI ID=&quot;I1&quot;&gt;<br />
+&lt;REFN&gt;1&lt;/REFN&gt;<br />
+&lt;NAME&gt;John Fitzgerald/Kennedy/&lt;/NAME&gt;<br />
+&lt;SEX&gt;M&lt;/SEX&gt;<br />
+&lt;CHAN&gt;<br />
+&lt;DATE&gt;13 FEB 2000&lt;/DATE&gt;<br />
+&lt;/CHAN&gt;<br />
+&lt;BIRT&gt;<br />
+&lt;DATE&gt;29 MAY 1917&lt;/DATE&gt;<br />
+&lt;PLAC&gt;Brookline, MA, USA&lt;/PLAC&gt;<br />
+&lt;/BIRT&gt;<br />
+&lt;DEAT&gt;<br />
+&lt;DATE&gt;22 NOV 1963&lt;/DATE&gt;<br />
+&lt;PLAC&gt;Dallas, TX, USA&lt;/PLAC&gt;<br />
+&lt;NOTE&gt;Assassinated by Lee Harvey Oswald.&lt;CONT/&gt;<br />
+&lt;/NOTE&gt;<br />
+&lt;/DEAT&gt;<br />
+&lt;NOTE&gt;Educated at Harvard University. Elected Congressman in 1945<br />
+&lt;CONT&gt;aged 29; served three terms in the House of Representatives.&lt;/CONT&gt;<br />
+&lt;CONT&gt;Elected Senator in 1952. Elected President in 1960, the&lt;/CONT&gt;<br />
+&lt;CONT&gt;youngest ever President of the United States.&lt;/CONT&gt;<br />
+&lt;CONT/&gt;<br />
+&lt;CONT/&gt;<br />
+&lt;/NOTE&gt;<br />
+&lt;FAMS REF=&quot;F1&quot;/&gt;<br />
+&lt;FAMC REF=&quot;F2&quot;/&gt;<br />
+&lt;/INDI&gt;<br />
+&lt;INDI ID=&quot;I2&quot;&gt;<br />
+&lt;REFN&gt;2&lt;/REFN&gt;<br />
+&lt;NAME&gt;Jaqueline Lee/Bouvier/&lt;/NAME&gt;<br />
+&lt;SEX&gt;F&lt;/SEX&gt;<br />
+&lt;CHAN&gt;<br />
+&lt;DATE&gt;13 FEB 2000&lt;/DATE&gt;<br />
+&lt;/CHAN&gt;<br />
+&lt;BIRT&gt;<br />
+&lt;DATE&gt;28 JUL 1929&lt;/DATE&gt;<br />
+&lt;PLAC&gt;Southampton, Long Island, NY, USA&lt;/PLAC&gt;<br />
+&lt;/BIRT&gt;<br />
+&lt;DEAT&gt;<br />
+&lt;DATE&gt;19 MAY 1994&lt;/DATE&gt;<br />
+&lt;PLAC&gt;New York City, NY, USA&lt;/PLAC&gt;<br />
+&lt;/DEAT&gt;<br />
+&lt;BURI&gt;<br />
+&lt;DATE&gt;23 MAY 1994&lt;/DATE&gt;<br />
+&lt;PLAC&gt;Arlington National, VA, USA&lt;/PLAC&gt;<br />
+&lt;/BURI&gt;<br />
+&lt;FAMS REF=&quot;F1&quot;/&gt;<br />
+&lt;FAMS REF=&quot;F3&quot;/&gt;<br />
+&lt;FAMC REF=&quot;F4&quot;/&gt;<br />
+&lt;/INDI&gt;<br />
+&lt;INDI ID=&quot;I3&quot;&gt;<br />
+&lt;REFN&gt;3&lt;/REFN&gt;<br />
+&lt;NAME&gt;John Vernou/Bouvier/III&lt;/NAME&gt;<br />
+&lt;SEX&gt;M&lt;/SEX&gt;<br />
+&lt;CHAN&gt;<br />
+&lt;DATE&gt;12 FEB 2000&lt;/DATE&gt;<br />
+&lt;/CHAN&gt;<br />
+&lt;FAMS REF=&quot;F4&quot;/&gt;<br />
+&lt;/INDI&gt;<br />
+</td>
+    </tr>
+</table>
+
+<br />
+The complete files from which these snippets were taken are here:<br />
+<br />
+<a href="files/KENNEDY.GED">KENNEDY.GED</a><br />
+<br />
+<br />
+<a href="files/kennedy.xml">kennedy.xml</a><br />
+<br />
+<h2 id="toc1"><a name="x-GedML DTD"></a>GedML DTD</h2>
+ <a class="wiki_link_ext" href="http://users.breathe.com/mhkay/gedml/dtd.html" rel="nofollow" target="_blank">Here</a> is the GedML DTD.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>BetterGedcom - Zotero blogPost graphic-example</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h4 id="toc0"><a name="x---Home &gt; BetterGEDCOM Sandbox &gt; BetterGEDCOM Test Suite &gt; GJ Cases &gt; Zotero blogPost graphic-example"></a><a class="wiki_link" href="Home.html">Home</a> &gt; <a class="wiki_link" href="BetterGEDCOM%20Sandbox.html">BetterGEDCOM Sandbox</a> &gt; <a class="wiki_link" href="BetterGEDCOM%20Test%20Suite.html">BetterGEDCOM Test Suite</a> &gt; <a class="wiki_link" href="GJ%20Cases.html">GJ Cases</a> &gt; Zotero blogPost graphic-example</h4>
+<br/>
+Showing how Zotero captured data into the fields/keys.<br/>
+<br/>
+The underlying blog post is here<br/>
+<a class="wiki_link_ext" href="http://theycamebefore.blogspot.com/2011/09/technophoo-have-no-fear.html" rel="nofollow">http://theycamebefore.blogspot.com/2011/09/technophoo-have-no-fear.html</a><br/>
+<br/>
+<img alt="Zotero_blogPost_graphic-example.png" src="files/Zotero_blogPost_graphic-example.png" title="Zotero_blogPost_graphic-example.png"/>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>ACProctor</strong> 2011-12-25T04:27:18-08:00</div>
+<div class="title">User Interface</div>
+<div class="text">I just want to make a comment here that may prove useful to some. It's relevant because the same issue shows as a weakness in the current SourceTemplates data model.<br/>
+<br/>
+The element descriptions shown here are part of the User Interface and hence not part of the primary definition of the corresponding source-type. This may sound a little pernickety but it's extremely important during localisation.<br/>
+<br/>
+Going back to our source+citation threads, the 'Definition' (i.e. the number of elements, their tag names,  and their data-types) are held as a function of some Key representing the source-type. As discussed elsewhere, I strongly favour a URI but we'll stay generic here.<br/>
+<br/>
+The element descriptions, as shown in this image, must be held in a different place and would be a function of the same Key plus the user's Locale. It would include all things relevant to soliciting data from that user's computer interface. As well as the element descriptions, it would include descriptions of the source-types themselves that would be used in any drop-down list.<br/>
+<br/>
+Finally, there should be a third set of data that relates to what a few of have called the report-writer module. This is basically the software module that generates readable content in a full report, a chart, or on the screen. This where a normal written citation reference (incl reference note and/or blibliography) would be generated from the stored electronic version. As a result, it must be a function of the same Key plus the user's Locale plus a citation style. The style could be a "standard" one like CMOS or a custom private one that would be guaranteed to be portable for all your source-types.<br/>
+<br/>
+Tony</div></div></body>
+</html>

@@ -1,0 +1,42 @@
+Monday 11 June 2012 
+BetterGEDCOM Developers Meeting
+
+Attending: Andrew Hatchett, Geir Throud, GeneJ, Roger Moffat, Tamura Jones; Louis Kessler
+
+ANNOUNCEMENTS
+Kin2 - http://www.tamurajones.net/KiN2.xhtml
+MyHeritage passes 1 billion (1X109) profiles. http://www.myheritage.com/ 
+
+INTRODUCTIONS
+
+NOTICE OF PRIOR MEETING NOTES
+
+
+BUSINESS
+(a) Old Business:
+(Please try to reference or link to prior meeting notes)
+1. Advanced wiki-back up and restore project (Greg Lamberson)
+2. 
+3.
+
+(b) New Business:
+1. How can we change the flat dialog for the purpose of GX discussions on the BetterGEDCOM wiki.
+2. Getting GEDCOMX (and BG) discussions into a project framework
+PERSON := <person ID="XREF:PERSON"> {1:1} <<IDENTIFIER>> {0:M} <<LIVING>> {0:1} <<GENDER>> {0:1} <<NAME>> {0:M} <<FACT>> {0:M} <<SOURCE>> {0:M} <<NOTE>> {0:M} <<ATTRIBUTION>> {0:1} </person> {1:1}
+3. Tamura says 
+A genealogist should record what a family was. 
+A genealogist cannot dictate what a family is.
+
+FOR THE RECORD:
+(a) Comments or questions by BetterGEDCOM members/participants 
+1. MyHeritage is going to start matching records to the tree (Tamura prediction http://www.tamurajones.net/MyHeritageBuysFamilyLink.xhtml ) 
+2. 
+3.
+
+(b) Comments by or questions of FHISO organizers
+1. 
+2.
+3.
+
+WRAP UP:
+Roger – MAC Retina display.

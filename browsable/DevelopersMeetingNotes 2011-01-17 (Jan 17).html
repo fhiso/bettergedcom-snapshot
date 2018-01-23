@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>BetterGedcom - DevelopersMeetingNotes 2011-01-17 (Jan 17)</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<span style="line-height: normal;"><strong>BetterGEDCOM Developers Meeting</strong></span><br />
+<span style="line-height: normal;"><strong>17 January 2011 Meeting - AGENDA INPUT</strong></span><br />
+<span style="line-height: normal;"><strong>Moderator: DearMYRTLE (please send email through WikiSpaces!</strong></span>)<br />
+<br />
+<span style="line-height: normal;">An invitation to each subscriber of BetterGEDCOM including GoToMeeting.com log in info was sent via WikiSpaces email and is listed on the BetterGEDCOM <a class="wiki_link" href="Calendar.html">Calendar</a> page.</span><br />
+<br />
+<span style="line-height: normal; margin-left: 0.25in; text-indent: -0.25in;"><strong>0.</strong> <strong>Approval of minutes from last meeting.</strong> So moved, seconded and approved.</span><br />
+<span style="line-height: normal; text-indent: -0.25in;"><span style="font-family: Symbol; font-size: 12pt;">· </span><strong>Notes</strong> <a class="wiki_link" href="3%20Jan%202011%20Dev%20Meeting%20Notes.html">Monday, 3 Jan 3 2011 Meeting Notes</a> </span><br />
+<span style="line-height: normal; text-indent: -0.25in;"><span style="font-family: Symbol; font-size: 12pt;">· </span><strong>Related Discussion</strong> </span><br />
+<span style="line-height: normal; text-indent: -0.25in;"><span style="font-family: Symbol; font-size: 12pt;">· </span><strong>Survey</strong> <a class="wiki_link" href="Survey%20Results%20-%203%20Jan%202011%20Developers%20Meeting.html">Survey Results - Regarding 3 January 2011 Developers Meeting</a> </span><br />
+<span style="line-height: normal; text-indent: -0.25in;"><span style="font-family: Symbol; font-size: 12pt;">· </span>These meetings determine what will be discussed during the next week, or posted as a survey/voting item.</span><br />
+<br />
+<span style="line-height: normal;"><strong>0.1 What about the agenda items from the Jan 3 meeting that were not discussed then?</strong> Some partial discussion included below.</span><br />
+<br />
+<span style="line-height: normal;"><strong>I. Goals</strong></span><br />
+<span style="line-height: normal;"><strong>Per Goal #1 to develop a data file format facilitating the archiving and transfer of genealogy data among users includes the following requirements.</strong></span><br />
+<span style="line-height: normal;"><strong>Requirements:</strong></span><br />
+<ol><li><span style="line-height: normal;">Use an existing, non-proprietary syntax (on which to build genealogical-specific definitions <em><span style="color: red;">(postponed).</span></em></span></li><li><span style="color: red; line-height: normal;"><span style="color: windowtext;">Be robust in the event of data corruption -- </span><em>not function BetterGEDCOM</em></span></li><li><span style="line-height: normal;">Be accommodating of all possible types and lengths of data - <em><span style="color: red;">to discuss further on survey monkey.</span></em></span></li><li><span style="line-height: normal;">Use Unicode (only) for the consistent encoding, representation and handling of text expressed in most of the world's writing systems. - <em><span style="color: red;">approved</span></em></span></li><li><span style="line-height: normal;">Utilize a container specification to hold separate supporting files such as multimedia - <em><span style="color: red;">approved.</span></em></span></li><li><span style="line-height: normal;">Support a mark-up language to allow formatting (such as HTML) in all appropriate data fields <em><span style="color: red;">approved.</span></em></span></li></ol><br />
+<span style="line-height: normal;"><strong>(b) Proposal for the revised Goal 3:</strong></span><br />
+<span style="line-height: normal;">The BetterGEDCOM language should define data relating to the study of genealogy.</span><br />
+<span style="line-height: normal;">BetterGEDCOM’s data model shall be adequately versatile to accept and transfer data from commonly available genealogy programs. <em><span style="color: red;">approved</span></em></span><br />
+<ul><li><span style="line-height: normal;">The coverage of the types of genealogical data will allow faithful import of data from all current, common genealogical software with no material manual intervention, subject to the limits of the applications involved. <em><span style="color: red;">Discussed but not voted.</span></em></span></li></ul><br />
+<span style="line-height: normal;"><strong><span style="background: none repeat scroll 0% 0% yellow;">SUMMARY</span></strong></span><br />
+<span style="line-height: normal;"><strong>ITEM: New Goals Page</strong></span><br />
+<span style="line-height: normal;">It was resolved that GeneJ and 2 others would take the goals, and rework them with the term “Comprehensive genealogy data file transfer” composed by Tamura as the goal, and all other topics as “requirements”.</span><br />
+<br />
+<span style="line-height: normal;"><strong>ITEM: Limit Discussion and Voting</strong></span><br />
+<span style="line-height: normal;">It is agreed that this week we will confine our discussions on the wiki to :</span><br />
+<span style="line-height: normal; text-indent: -0.25in;">1. Comments on the revision of the Goals Page (link to be sent to all via wikispaces email.)</span><br />
+<span style="line-height: normal; text-indent: -0.25in;">2. The Survey Monkey this week will include vote on: &quot;Requirement: That BetterGEDCOM is to accommodate of all possible types and lengths of data.&quot;</span><br />
+<br />
+<span style="line-height: normal;"><strong><span style="background: none repeat scroll 0% 0% yellow;">NOT DISCUSSED</span></strong></span><br />
+<br />
+<br />
+<span style="line-height: normal;">The BetterGEDCOM programme will produce:</span><br />
+<ul><li><span style="line-height: normal;">a data model describing the data in scope;</span></li><li><span style="line-height: normal;">a documented syntax for that data, codified in a form appropriate to the technology chosen for BetterGEDCOM;</span></li><li><span style="line-height: normal;">a means to allow extension of the definitions by software companies and users.</span></li><li>(c) Why has internationalization been dropped as a goal?</li></ul>Support for as many cultures and countries as possible has been removed from Goal 5 after the Jan 3 Developer meeting. So it seems that it is now not a goal to develop a standard that is internationally recognized.<br />
+Alternative text has been proposed in the recent discussion of Goal 5, and should be considered:<br />
+&quot;Goal 5 BetterGEDCOM aims to support recording of information about real life in an open ended set of cultures, countries, time periods and belief systems. It should not be biased towards any one of these.&quot;<br />
+<br />
+<span style="line-height: normal;">II Workspace Management</span><br />
+<br />
+<span style="line-height: normal;">III RootsTech</span><br />
+<br />
+<span style="line-height: normal;">IV The BetterGEDCOM &quot;Hook&quot;</span><br />
+<ul><li><span style="font-family: Symbol; font-size: 12pt;">· </span>a.k.a. the Unique Selling Point / the &quot;Sizzle&quot;, etc.</li><li><span style="font-family: Symbol; font-size: 12pt;">· </span>USP for Users - The entity rich view (multi-person events, ships, organisations, changing places?)</li><li><span style="font-family: Symbol; font-size: 12pt;">· </span>USP for Software Developers</li><li><span style="font-family: Symbol; font-size: 12pt;">· </span>Proof of concept demonstration model / animation?</li><li><span style="font-family: Symbol; font-size: 12pt;">· </span>Suggestion by Louis for Hook/USP (based on my ongoing indepth discussion with Tom):</li><li><span style="font-family: Symbol; font-size: 12pt;">· </span>Better GEDCOM is: &quot;The Evidence Based Genealogy Model&quot; (EBG)</li><li><span style="font-family: Symbol; font-size: 12pt;">· </span>Program suffixes: .EBG or .BGE are both available.</li><li><span style="font-family: Symbol; font-size: 12pt;">· </span>An alternative acronym we can call it for fun is: Everyone's Better GEDCOM.</li><li><span style="font-family: Symbol; font-size: 12pt;">· </span>Reasoning: The evidence/conclusion model is the biggest thing missing from GEDCOM. BetterGEDCOM's EBG model will finally provide for it.</li></ul><br />
+<br />
+DearMYRTLE: Please style the notes to include the date of the meeting such as 17 Jan 2010 BetterGEDCOM Developers Meeting not &quot;Second GEDCOM meeting&quot;, as our surveys will use the dated terminology.<br />
+Also please be careful to use exact wording, not our own, when taking notes. Thank-you.<br />
+<br />
+<br />
+GeneJ's Notes from second meeting:<br />
+1. Motion by Andy H., seconded by James T., to accept &quot;Minutes&quot; to the First Developers Meeting.<br />
+Action: There was no objection.<br />
+2. Pat commented about conflict in how consensus is determined specifically as same relates to &quot;votes&quot; held during Developers Meetings. To the point, there is a significant population difference between those who are registered for the wiki and those who are so registered and also participating a Developers meeting.<br />
+Proposals:<br />
+(a) From Pat: Modify by declaring, for each Developers Meeting vote, quarum shall mean those registered wiki members in that Developers Meeting at the time the vote is cast.<br />
+(b) From GeneJ: Determining consensus a two stages. (a) During meeting, develop a &quot;developers statement,&quot; recognizes same as passed at the meeting. (b) Post that &quot;developers statement&quot; to the WIKI and allow for all members of the wiki to discuss or vote on the item in accordance with process outlined during the First Developers Meeting.<br />
+Action: No action was taken. (Go to Meeting was reset, so that no action was taken.)<br />
+3. The meeting continued with discussions about BetterGEDCOM goals. (See point 4)<br />
+4. It was proposed by Tamura and others, and there seemed consensus among those in attendance, we should set up a NEW wiki page for goals discussion. The first goal should be the only goal. All the other topics now listed as goals (items 2-7) should be listed as subgoals or strategies, below the main goal. GeneJ (and she hopes others) will work to create the new page. An E-mail will be sent to all Wiki members when the page has been created.<br />
+5. Pat proposed a second BetterGEDCOM SurveyMonkey; it will be related to a specific entry in the prior listing of BetterGEDCOM goals. The SurveyMonkey questionnaire will encourage participants to include opinions as part of the survey.<br />
+6. Pat proposed that, for the coming week, Wiki activity be limited to two important topics, as follows: (a) a second SurveyMonkey for BetterGEDCOM (see item 5), and (b) Work on the NEW Goals wiki page. By this proposal, Pat asked Wiki members specifically _not_ create or post to wiki discussion pages<br />
+<br />
+Meeting concluded at about ?11:40 PST.
+    </div>
+  </body>
+</html>

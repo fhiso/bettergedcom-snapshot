@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>BetterGedcom - GenXML</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h4 id="toc0"><a name="x---Main element types in GenXML"></a>Main element types in GenXML</h4>
+<ul><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">file - The file structure is the very first structure of the GenXML-file. This tells the parser which version of the GenXML format the file uses and at what level it is.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">header - The header structure includes information about the system that created the GenXML file, and about the owner of the database.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">repository - The repository structure represents a repository of sources, like a library or a public record office.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">source - The source structure represents a book, a collection of documents, or similar. It may be printed, hand-written, in electronic form, or on microfilm/-fiche.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">excerpt - The excerpt structure represents a single excerpt (like “John was the third son of Robert” or “John was 64 years old in 1759”) extracted from a source.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">eventtype - The eventtype represents a certain event type (such as marriage, birth, retirement), user defined or application defined.</span><br/>
+The description field makes event types language dependant. It may seem a drawback that the event types can't easily be translated from a language to another. But event types may be quite different in different cultures, and an automatic translation may not retain the correct meaning. It is therefore important to understand that the event types is a part of the database as well as other genealogical data, and the database can only be translated by a qualified person.</li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">person - The person structure represents a single individual. If, however, there are two persons, each with their own data, that may be the same individual, there may be created a third person that, through the subpersons substructure, combines the two persons into one. If it is certain that the two person records really represents the same individual, they should be merged into one instead of using the subpersons structure. Note that no data except a name may be connected to a person record using the subpersons structure.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">place - The place structure represents a place where some event happened. It is not intended for postal addresses.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">assertion - </span>The assertion represents a piece of conclusional data for a person, such as the birth date, hair color or relationships.</li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">objective - The objective structure represents a research objective. A research objective consists of one or more research tasks. The research objective is split into one task for each affected person.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">task - The task structure represents a research task. A research task may be related to a specific person, and to a specific source. It may (and should) also be part of a research objective.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">total - The TOTAL structure is always the last one in the file and must always be included. The purpose is to tell the importing program how many structures that should have been imported.</span></li></ul><br/>
+<h4 id="toc1"><a name="x---Definitions of elements"></a>Definitions of elements</h4>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">&lt;repository&gt;</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> attributes: (id, lang?)</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> content: (name, address?, email?, uri?, note?, change?, ext*)</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> &lt;/repository&gt;</span><br/>
+<br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">&lt;source&gt;</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">attributes: (id, class?, kind?, media?, lang?)</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> content: (author, title, shorttitle, published?, (isbn | issn)?, (repositoryref* | sourceref)?, template?, sourname*, place*, object*, note?, change?, ext*)</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> &lt;/source&gt;</span><br/>
+<br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">&lt;excerpt&gt;</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> attributes: (id, lang?)</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> content: (text?, quality?, page?, sourceref, level?, note?, change?, ext*)</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> &lt;/excerpt&gt;</span><br/>
+<br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">&lt;eventtype&gt;</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> attributes: (id, class, active?, lang?)</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> content : (description, gedcomtag ?, roles ?, principalfmt ?, withnessfmt ?, print ?, note ?, ext*)</span><br/>
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> &lt;/eventtype&gt;</span><br/>
+<br/>
+&lt;person&gt;<br/>
+attributes: (id, sex, lang?)<br/>
+content: (personalname, (subpersons | (excerptref*, object*) ), note?, change?, ext*)<br/>
+&lt;/person&gt;<br/>
+<br/>
+&lt;place id?&gt;<br/>
+attribute: (id?, tp?, lang?)<br/>
+content: ( prefix?, name, place*, alias?, date?, cords?, ext* )<br/>
+&lt;/place&gt;<br/>
+<br/>
+&lt;assertion&gt;<br/>
+attributes: ( id, datatype?, lang? )<br/>
+content: ( (alias | relationship | attribute | event | info),<br/>
+(excerptref* | (assertionref, assertionref) ), object*, note?, change?, ext*)<br/>
+&lt;/assertion&gt;<br/>
+<br/>
+<h4 id="toc2"><a name="x---General Substructures"></a>General Substructures</h4>
+<ul><li>Stringlang - General string with language attribute.</li><li>Normstringlang - General normalized string with language attribute.</li><li>Object - Objects represents a file. An object may be included as a reference to an external file or completely included in the GenXML file.</li><li>Address - The address structure represents an postal address of something, someone or where something happened. It is formatted as it would be for example on a mailing label.</li><li>Personalname - The personalname structure records the name of a person. The structure is used for two purposes:<br/>
+1. In the person structure for storing the name used to identify the person in the database.<br/>
+2. In the alias structure for storing the name found in a source. In many cultures in may be useful to normalize the name, while storing the name exactly as found in the source in the referred excerpt structure.<br/>
+The name is split into name parts.</li><li>Coords - This structure holds the geographical coordinates of a place name.</li><li>Date - The date structure represents a specific date (known or unknown) when something happened, or it may represent a period of time.<br/>
+Note that the original date phrase belongs in the excerpt structure. The date structure holds the dates that are to be presented in reports.</li><li>Simpledate - Simpledate represents a single date. The format of the date itself is based on the XML Schema Specification‟s dateTime datatype. Please note that the time zone part of dateTime is not a part of simpledate. The reason for this is that in an GenXML event, the time zone is defined by the recorded place. If the place is unknown, so is the time zone.</li></ul><br/>
+<h4 id="toc3"><a name="x---Substructures of the Person Structure"></a>Substructures of the Person Structure</h4>
+<ul><li>Subpersons - The subpersons structure is used for combining two (and only two) persons that probably (but not necessarily) were the same individual. For more information, see the person structure.</li></ul><br/>
+<h4 id="toc4"><a name="x---Substructures of the Assertion Structure"></a>Substructures of the Assertion Structure</h4>
+<ul><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Alias - The alias structure stores a name of a person as found in a source. The user may want to normalize it, though, and refer to an excerpt (from the encapsulating assertion structure) with the exact spelling.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Relationship - The relationship structure represents a parent-child relationship. The father-child and mother-child relationships may (and should if both relationships come from the same source) be combined into a single relationship structure.<br/>
+Note that GenXML does not guarantee the match between selected father/mother tag and their recorded sex, as this depends on the user who entered the data and the application which accepted the data.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Attribute - The attribute structure represents an attribute or characteristic of a person. As opposed to events, attributes typically take place over a period of time. However, the most important difference between events and attributes is that attributes have a text of some sort. For example the attribute “hair colour” will need to store the actual hair colour, and the attribute “education” will need to store the kind of education and school.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Event - The event structure represents an event in the life of one or more persons. An event is something that happened at a certain moment – a certain day. There are however a few exceptions, like residence.<br/>
+The event may include many participants that have different roles in the event, principal or subordinate. In some events, for example the invasion of Normandy 5. June 1944, there are a very large number of principal participants. (In such “group”-events, talking of subordinate participants has little meaning.)<br/>
+All events have at least one principal participant. However in some cases the principal participant may be unknown. Therefore the principal field is not mandatory.<br/>
+Note that although the parents of a child do have a subordinate role in the birth event of the child, the parent-child relationship should not be recorded using this mechanism. Instead use the relationship structure.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Info - The info structure represents general information that does not fit well into other assertion structures.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Personref - The personref structure represents a link between an assertion and a person. A sequential number may be supplied. This states the sequence of assertions for a person. The number should be unique for each person, but it is not required. The sequence of assertions with equal sequential numbers for the same person, must be regarded as not specified.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">PersonrefRole - The personrefrole structure is a pointer to a person that has a subordinate role in the event of which personrefrole is a subject.</span></li></ul><h1 id="toc5"> </h1>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-29T05:28:07-08:00</div>
+<div class="title">Person in GenXML</div>
+<div class="text">Trying to understand this piece of the GenXML:<br/>
+<br/>
+person - The person structure represents a single individual. If, however, there are two persons, each with their own data, that may be the same individual, there may be created a third person that, through the subpersons substructure, combines the two persons into one. If it is certain that the two person records really represents the same individual, they should be merged into one instead of using the subpersons structure. Note that no data except a name may be connected to a person record using the subpersons structure.<br/>
+<br/>
+Why is this so complicated?<br/>
+<br/>
+person - The person structure represents a single individual<br/>
+<br/>
+That person would have attributes and relationships. The sending and receiving application should be able to do the rest.<br/>
+<br/>
+What am I missing?<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-29T10:39:29-08:00</div>
+<div class="text">My guess is, that this is a way of creating new "conclusion" persons (that means non-destructive merging). I get the feeling that GenXML usually only has one &lt;person&gt; element for a real life person. This would always be a "conclusion" person, based on various &lt;assertions&gt;. <br/>
+If this is a better way than what Tom proposes (i.e. constructing a tree of &lt;person&gt; elements), I have no clue.<br/>
+When Christoffer drops by, I hope we'll know more.</div></div><div class="comment"><div class="from"><strong>cowe</strong> 2010-12-06T11:01:46-08:00</div>
+<div class="text">The subpersons structure is an alternative to merge two persons. In this way you may keep the research process history which may be useful in case new evidence later turns up and shows the two persons to really be two different individuals.<br/>
+<br/>
+I have however not implemented this so far. Possibly there are better ways of handling such situations, but a simple merge may actually add information without evidence.<br/>
+<br/>
+Regards,<br/>
+Christoffer</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-06T12:36:03-08:00</div>
+<div class="text">I have read Tom's Model and got a chance to email a bit with him. Which was good. Because of some confusion I will ask this. Tom has a person listed and is for the loop/attaching evidence records to, just like the other term above "subpersons structure" <br/>
+<br/>
+a. are all person in the outline navi area the same as all these shadow persons which are almost duplicates.<br/>
+<br/>
+b. or the persons in the outline navi area same the same, while there is another area where these shadows of people dont interfear? then when you make your final choice you turn the evidence records to point at the real person.<br/>
+<br/>
+c. either a or b, you will never really delete any shadow people of real people to hold your research path as a documented reminder how you did it letting all the extra shadow people records stay there as a place marker?<br/>
+<br/>
+I have seen a few message where a person coined is at times used in two seprated area functions with records, or it just sounded like that. I know you can do it both ways but maybe that would clear it up if one would answer it. People think the shadow person merged into a real person place marker can cuase record damage. when you have three types of birth evidence and each date may be off by a day or week. <br/>
+  I am use to old school merge where they force you to choose a record and write over an evidence record, then you only have 1 out of two records left.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-06T12:53:22-08:00</div>
+<div class="text">Christoffer,<br/>
+<br/>
+What is unclear to me is exactly what a subperson is, as you have not yet defined on your model page. Is it a substructure that fits inside the person structure, or is it a another whole person structure that the first person structure points to? I believe you mean the former just by the words, but it would be good to know for sure.<br/>
+<br/>
+I also wonder why you only want there to be two subpersons? What's wrong with many? For example, I have found my great-great grandfather in a series of city directories over a span of about 20 years. I want to keep all of those 20 evidence persons and I'd like to put them all together at once as part of a conclusion person.<br/>
+<br/>
+I find it interesting that you support both a destructive merge and a non-destructive one. In a destructive merge, how do you keep the sources for the various sub-parts of the merged person straight. For example, if the birth event came from one source, occupation from another, residence from another. I assume you can put a source pointer into your records at any point to handle this? That is also the GEDCOM way which does work when supported.<br/>
+<br/>
+Tom Wetmore</div></div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-29T11:11:20-08:00</div>
+<div class="title">Some thoughts</div>
+<div class="text">I like the name, place and address structures. They seem powerful and clear.<br/>
+Places can have a date - maybe we would want an event, too?<br/>
+<br/>
+I like the classes for eventtypes, and the handling of language-specific event names.<br/>
+<br/>
+I would probably need an example to see how the assertion structure works. But generally this seems a way to keep evidence and conclusion explictly seperate, so that might be helpful for clarity.<br/>
+<br/>
+I don't completely understand the subperson-structure. If possible, I'd like to put &lt;person&gt;s in a tree to make clear who they're based on.<br/>
+<br/>
+Notice that GenXML doesn't have a group object at all. You would create an event with many participants to achieve a similar result.<br/>
+<br/>
+Because there is no &lt;group&gt;, there are no families either. This job is done with the &lt;relationship&gt; structure. If that works, I'm OK with it.<br/>
+<br/>
+I don't completely agree with the definitions for Attributes and Events (point in time vs time span). But that's not important.<br/>
+<br/>
+I like that most (all?) objects get an UUID, and many can have a date-time for last changed. I might want to add a reference to the person who did the changes, so that this info is not lost when giving data away.<br/>
+<br/>
+The idea of "levels" that keep an imported GenXML intact and seperate is a good one. <br/>
+<br/>
+I don't see anything about using a zipped container for the XML and all related files. I think this should be possible in BetterGedcom.</div></div></body>
+</html>

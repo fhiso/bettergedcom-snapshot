@@ -1,0 +1,1145 @@
+<html>
+<head>
+<title>BetterGedcom - BG Data Model Discussion</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+ This page is the starting point for major discussions on a genealogical data model for BetterGEDCOM. Also, thoughts, comments and other input on the discussion tab of this page above will be added here. If you have significant input to the BetterGEDCOM data model, please add it here. If you have a comment, a minor point or something you don't feel is quite clear enough to add, please place it on the discussion tab.<br/>
+<br/>
+<h2 id="toc1"><a name="x-Data Modeling Introduction"></a>Data Modeling Introduction</h2>
+ To begin with, you might want to study the <a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Data_modeling" rel="nofollow" target="_blank">Data Modeling article at Wikipedia</a> to understand how data modeling is supposed to work. This is meant to be useful and instructive rather than trying to get anyone to adhere to a rigid process or structure.<br/>
+<br/>
+<h3 id="toc2"><a name="x-Data Modeling Introduction-Bottom Up vs. Top Down"></a>Bottom Up vs. Top Down</h3>
+ There are those who say this effort should take each data element, one at a time, and build a data model from the bottom up. Others say this approach is foolhardy, and that one must start with an overall philosophy first. There are ample opportunities for both approaches, and these discussions in each will obviously influence. Whether you favor a "big picture" or a "devil in the details" approach, you should be able to find a place to hash our your ideas.<br/>
+<h4 id="toc3"><a name="x-Data Modeling Introduction-Bottom Up vs. Top Down-Bottom Up Approach"></a>Bottom Up Approach</h4>
+ This approach states that while the data model is of critical importance, it will be built incrementally, element by element, rather than with any preconceived ideas from other models. All other models are a source of inspiration but none is a blueprint. This approach starts with each core element, carefully defines it and slowly builds up the data model. In this way it seeks able to build the best practical model rather than one that matches any particular philosophy form the outset.<br/>
+<h4 id="toc4"><a name="x-Data Modeling Introduction-Bottom Up vs. Top Down-Top Down Approach"></a>Top Down Approach</h4>
+ This approach begins with a particular philosophy and lets this philosophy develop the elements of the data model. Core to this approach is a study of previous data models and understanding what each is trying to achieve. Certainly no work here can be done without some knowledge of data models and their philosophies.<br/>
+<br/>
+<span style="font-size: 17px; line-height: 25px;"><strong>Add Your Voice To the Discussion</strong></span><br/>
+This is a community project, and your opinion is valued and indeed needed. If you don't see the part of the discussion you think is important, it is because you haven't added it. Please jump in an participate, or your valuable input will be missed! If you have general comments to make or don't know where to put your ideas, just use the <u>Discussion</u> tab above to write your thoughts, and they will be added here by the moderators. If you see a section that pertains to the issue you feel you can elaborate on or help with, please go ahead and edit this page. Any ancillary elaboration that would clutter this main discussion can be added via the <u>Discussion</u> tab above. A rule of thumb: If your comments clarify or help define better, add to this page. If your comments are part of a debate, use the <u>Discussion</u> tab.<br/>
+<br/>
+<br/>
+<ul><li><a href="file/view/Who+Is+John+Smith.pdf/180048755/Who%20Is%20John%20Smith.pdf" target="_blank">Article: Who Is John Smith: Adventures In Genealogical Data Modeling</a> - discusses the absence of an analysis layer in today's genealogy databases and how it distorts person records - originally posted as a <a class="wiki_link_ext" href="http://genmadscientist.wordpress.com/2010/11/16/who-is-john-smith-adventures-in-genealogical-data-modeling/" rel="nofollow" target="_blank">blog entry</a></li></ul><hr/>
+<h1 id="toc5"> </h1>
+<h3 id="toc6"> </h3>
+<h1 id="toc7"><a name="Individual Data Elements Discussions"></a><a class="wiki_link" href="Individual%20Data%20Elements%20Discussions.html">Individual Data Elements Discussions</a></h1>
+<br/>
+<h1 id="toc8"><a name="Evaluation Of Existing Data Models"></a><a class="wiki_link" href="Evaluation%20Of%20Existing%20Data%20Models.html">Evaluation Of Existing Data Models</a></h1>
+<br/>
+<h1 id="toc9"><a name="Formulation Of The BetterGEDCOM Data Model"></a><a class="wiki_link" href="Formulation%20Of%20The%20BetterGEDCOM%20Data%20Model.html">Formulation Of The BetterGEDCOM Data Model</a></h1>
+<br/>
+<br/>
+<h3 id="toc10"> </h3>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-10T05:57:25-08:00</div>
+<div class="title">Location management</div>
+<div class="text">I would propose this thread to discuss details related to how locations can/should be stored.<br/>
+<br/>
+As a starter, I give some issues that I can see with the current GEDCOM and most software.<br/>
+<br/>
+- language specific naming<br/>
+<br/>
+- hierarchical locations suffer from historical changes (conquests, wars, treaties, etc)<br/>
+<br/>
+- not everybody agrees to historical changes: some consider a period as a foreign occupation while others may see this as justified annexation. A typical recent example could be the Falkland Islands, under the British flag, but considered by some to be occupied territory from Argentina.<br/>
+<br/>
+- one physical location can have multiple hierarchies, depending on the context: administrative, judicial, religious, ...<br/>
+<br/>
+- matching between such hierarchies would be great (e.g. to match a baptism (religious) to a birth (administrative), but the covered areas are not always a match (e.g. parish vs. town)<br/>
+<br/>
+- some locations need to be more an area than a point location, e.g. to state where a profession was performed, or a title was held (a priest for a parish, a town responsible, people from the nobility)<br/>
+<br/>
+Comments are welcome!</div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-12T11:14:17-08:00</div>
+<div class="text">Maybe this is already common knowledge, but if not it might be helpful:<br/>
+There's a big database "GOV - the genealogical gazeteer" covering Germany and quite a bit of the rest of Europe here:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:18:http://gov.genealogy.net/Locale.do?language=en&amp;country=us --><a class="wiki_link_ext" href="http://gov.genealogy.net/Locale.do?language=en&amp;country=us" rel="nofollow">http://gov.genealogy.net/Locale.do?language=en&amp;country=us</a><!-- ws:end:WikiTextUrlRule:18 --><br/>
+<br/>
+I think it's been designed and is maintained by the people behind<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:19:http://www.genealogy.net/ --><a class="wiki_link_ext" href="http://www.genealogy.net/" rel="nofollow">http://www.genealogy.net/</a><!-- ws:end:WikiTextUrlRule:19 --><br/>
+<br/>
+This is mostly a German project, a vast resource for everything concerning genealogy. There are a lot of intelligent and knowledgable people involved there -- at least that's what I'm assuming ;-), being just a user of their website(s) and services. But maybe you could get some of these people to contribute here? I'm sure they could add valuable perspectives.<br/>
+<br/>
+<br/>
+Contact adresses I've found on the website are:<br/>
+<!-- ws:start:WikiTextUrlEmailRule:22:gov-support@genealogy.net --><a class="wiki_link_ext" href="mailto:gov-support@genealogy.net" rel="nofollow">gov-support@genealogy.net</a><!-- ws:end:WikiTextUrlEmailRule:22 --><br/>
+<!-- ws:start:WikiTextUrlEmailRule:23:vorstand@compgen.de --><a class="wiki_link_ext" href="mailto:vorstand@compgen.de" rel="nofollow">vorstand@compgen.de</a><!-- ws:end:WikiTextUrlEmailRule:23 --><br/>
+<br/>
+Mailinglists of potential interest can be found at:<br/>
+<!-- ws:start:WikiTextUrlRule:20:http://list.genealogy.net/mm/listinfo/gedcom-l --><a class="wiki_link_ext" href="http://list.genealogy.net/mm/listinfo/gedcom-l" rel="nofollow">http://list.genealogy.net/mm/listinfo/gedcom-l</a><!-- ws:end:WikiTextUrlRule:20 --><br/>
+<!-- ws:start:WikiTextUrlRule:21:http://list.genealogy.net/mm/listinfo/genealogie-programme --><a class="wiki_link_ext" href="http://list.genealogy.net/mm/listinfo/genealogie-programme" rel="nofollow">http://list.genealogy.net/mm/listinfo/genealogie-programme</a><!-- ws:end:WikiTextUrlRule:21 --></div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-12T11:21:21-08:00</div>
+<div class="text">...to add to my post:<br/>
+The GEDCOM 5.5EL (meaning "Extended Locations") proposal was developed by the "Society For Computer Genealogy" and a number of authors of German geneaology software.</div></div><div class="comment"><div class="from"><strong>AntonyKC</strong> 2010-11-12T11:46:30-08:00</div>
+<div class="text">I would like to suggest that this forum should separate the discussion of the data formats for locations from that of the universal gazetteer, the data base linking place names (spatial referencing by geographical identifiers) to coordinates.  I am sceptical that the universal gazetteer is actually feasible, given how poorly mapped large parts of the world are, the political issues over authority, etc.<br/>
+<br/>
+The problems you have been discussing of time-dependent spatial referencing (by geographical identifiers and/or coordinates) are not unique to genealogy, of course.  Having been involved in ISO/TC 211, Geographic information/Geomatics, for over a decade I am somewhat biased, but I think that our suite of standards (including ISO 19136:2007, Geographic information - Geography Markup Language) will cater for a lot of your needs, and anything that is missing can be added to the standards.<br/>
+<br/>
+While ISO standards have to be bought, unfortunately, there is a comprehensive standards guide that can be downloaded from the ISO/TC 211 web site at: <!-- ws:start:WikiTextUrlRule:7:http://www.isotc211.org/ --><a class="wiki_link_ext" href="http://www.isotc211.org/" rel="nofollow">http://www.isotc211.org/</a><!-- ws:end:WikiTextUrlRule:7 --><br/>
+<br/>
+Regards<br/>
+Antony</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-12T12:12:34-08:00</div>
+<div class="text">I think we're veering off here a little bit, at least from my perspective.<br/>
+<br/>
+I do NOT advocate that place entries within BetterGEDCOM be tied to ANY external or universal geographic mapping system or anything like that. People should absolutely be able to specify places as they want to, whether anyone else understands them or not. <br/>
+I am merely suggesting we add support for passing information about where a particular geographic mapping system has reference to the place the original user is referring to. The entirety of the mapping of that place, conformance of recording that information, etc., should and would be something done within the genealogical application the person was using. <br/>
+<br/>
+Remember BetterGEDCOM (for purposes of this initial project) is merely a way to store data uniformly between programs. We're not trying to add features to actual genealogy software but we do want to accommodate pass along all data that has been accumulated. Right now there are lots of ways users map the places in their genealogy databases, and all I'm advocating is a way for BetterGEDCOM to be able to receive that mapping information and pass it along.<br/>
+<br/>
+Regarding URIs, I am not sure this is needed or appropriate, as that sort of thing is something the app developer would have to decide upon and implement. However, if URI reference format is appropriate, then great.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-12T12:26:51-08:00</div>
+<div class="text">Dallan, I totally agree that inability to edit discussion comments or even format them is extremely annoying, particularly for a wiki... <br/>
+<br/>
+Dallan said, "The problem with using user-entered data as the basis for your place database is that users are not good at entering place data..."<br/>
+<br/>
+Yes, I know this, and this was actually debated extensively during one of the GEDCOM 5.x revisions 15 or 20 years ago. I've read some of the notes. On the one hand, it's a nice concept that everyone would have nicely identified places that conform to some wonderful, universal, noncontroversial geographical mapping system somewhere. But in practice, things just don't work that way. Even if such a database existed, genealogists would still want to be able to cite inexact, vague or idiosyncratic places. I fully support giving folks the option to pass this sort of geographical mapping equivalency information but I completely oppose making such a system mandatory. This would be like insisting on everyone map their relatives to people who have been recorded in census records. It sounds vaguely ok but in practice it's a horrible idea.</div></div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-13T07:33:47-08:00</div>
+<div class="text">testuser42,<br/>
+<br/>
+WOW - This database is incredible.  Germany is the most complicated country I can think of with respect to historical places, and these guys are doing a terrific job.  THANK YOU for sharing it.<br/>
+<br/>
+greglamberson,<br/>
+<br/>
+I'm not arguing that every user-entered place must correspond to a standardized place.  Just that "automatic gazetteer generation" (google it sometime) using user-entered places as your source has problems associated with it.  If a records-manager can map a user-entered place to a standardized place, then the user-entered place can be shown on a map without the user having to enter lat/lon themselves; for user-entered places that can't be mapped you don't get this feature.  That's all.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-13T09:31:25-08:00</div>
+<div class="text">Dallan, Perhaps this explanation will help resolve our different ideas on location identity and management. <br/>
+<br/>
+BetterGEDCOM, won't care how places are entered. BetterGEDCOM is a genealogical Switzerland: It is neutral on matters of preference for one system or another. Thus, however location information was entered, BetterGEDCOM doesn't care. If there were some location qualifier that the software program used, largely guiding users to enter places that were identifiable, then great. BetterGEDCOM doesn't care. However, the information that identified that place  in that system should be able to be exported with the location value and subsequently imported into another software program. Period.<br/>
+<br/>
+To be useful, would software programmers have to use this feature? Absolutely. Are they required to? Absolutely not. Is it within BetterGEDCOM's scope to require software developers adopt some location management system? Not within this initial project.<br/>
+<br/>
+Here's an interesting idea: Could we develop a BetterGEDCOM Location Extension that did specify the sort of system you refer to? Absolutely. Such a project would be exactly the sort of thing that BetterGEDCOM would like to see develop as a secondary project. Within the scope of this initial project, however, such an effort would be counterproductive in that it would force developers to adopt a particular approach to location management, and that would be a deal-breaker for lots of vendors. <br/>
+<br/>
+Does this resolve our differences?</div></div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-13T15:45:54-08:00</div>
+<div class="text">Sorry, I didn't think we had any differences.  I'm fine with storing places as free-form text strings.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-29T21:03:12-08:00</div>
+<div class="text"><br/>
+xvdessel:<br/>
+<br/>
+I have expressed it in the "Location Entity Over Time" thread: <!-- ws:start:WikiTextUrlRule:25:http://bettergedcom.wikispaces.com/message/view/Location+entity/30668879 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Location+entity/30668879" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Location+entity/30668879</a><!-- ws:end:WikiTextUrlRule:25 --><br/>
+<br/>
+but I'd like to re-emphasize that I'm totally against a location-time stamp combination. <br/>
+<br/>
+I feel a specific location should be a single entity. If it changes names over time, then that should be within the entity. My example (using extended GEDCOM) is:<br/>
+<br/>
+0 @P43@ PLAC<br/>
+1 NAME Townsville<br/>
+2 DATE From 1832 to 1912<br/>
+1 NAME Citiesville<br/>
+2 DATE From 1912<br/>
+1 LATI N18.150944<br/>
+1 LONG E168.150944<br/>
+<br/>
+I believe this will quite easily handle DearMYRTLE's concern. <br/>
+<br/>
+In other words, the entity should be "Location" and NOT "Time-Location".<br/>
+<br/>
+Adding time onto any entity (known as time-stamping) gets into huge complexities. If identical places in different times are kept separate, then how will it be known they are identical? You'll have to add a connector - the first level of complexity. I was involved in an SAP data warehouse project, where the designers insisted on time-stamping the data. It was a disaster.<br/>
+<br/>
+If a person changes name, or sex, or hair color, do you want to make them a "time-person" entity?<br/>
+<br/>
+I also am one to believe that events can and should be assigned to locations, rather than just people, when it is appropraite in that they pertain to the location. (e.g. Fire in 1848), but that's another matter.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-29T21:08:06-08:00</div>
+<div class="text">... and I don't like places as free-form strings. <br/>
+<br/>
+People are messy and uncontrolled, and without structure, they will create a mess of places. That will make it impossible for a program to put together a useful Place Index. Putting data together from multiple people and trying to organize places will be a disaster. <br/>
+<br/>
+I'm for structure here.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-29T21:12:43-08:00</div>
+<div class="text">Greg:<br/>
+<br/>
+I would not start a secondary project before the first one's even off the ground. <br/>
+<br/>
+If a secondary project is required, then the model selected is much too complicated.<br/>
+<br/>
+Even talking about a gazetteer of places is way beyond what BetterGEDCOM is about.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-29T23:39:09-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+Adding a time element to a location entity is not at all the same thing as time-stamping.  Time-stamping refers to adding an indicator to the data specifically related to when the data was last changed.<br/>
+<br/>
+If the key for the Location entity was a combination of a time-place, yes, that could be a problem. I think the key for nearly every entity we use will be a UUID. Issues of duplication you raise will therefore be moot.<br/>
+<br/>
+Regarding location structure, that's the job of the software app. We're just trying to provide a place for data to reside, however it looks when we get it.<br/>
+<br/>
+Regarding other projects, there are several future projects in mind. That has no bearing on this project.</div></div><div class="comment"><div class="from"><strong>DearMYRTLE</strong> 2010-11-11T21:41:46-08:00</div>
+<div class="text">With regards place structure -- what about a US town that existed historically in one of 3 counties in a state, but now exists in a 4th county?<br/>
+<br/>
+What about working with GoldBug? Art has passed away, but his coder still works the AniMap product.</div></div><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-12T02:25:56-08:00</div>
+<div class="text">When I proposed the idea of a reference database, I think (and this seems to be comfirmed by several comments above) that we should go for a database that includes the time as a dimension: no location should be defined without an associated time delimitation (which could be infinity on both start and/or end time). Obviously, each location, no matter at what time it existed, should also have world coordinates (or an area definition if possible). And ideally such a location should be hierarchically linked to related larger locations (town,county, ..., country). It could be more than on higher location, if the parent location changed in some way during the lifecycle of the location itself (e.g. a town can exist for 300 years, but have belonged to 3 different counties over that period). <br/>
+<br/>
+I would therefore propose the naming convention of a "time-location" as follows:<br/>
+A time-location is a point or an area that corresponds to a commonly known location during a specific period of time. One time-location could have multiple area definitions if its area changed over the period of its existence. A time-location could be independent of any organization (e.g. nature locations), but most time-locations should be related to an organization structure (administrative, judicial, religious, ...) which often implies a hierarchical relation to one or more time-locations of a higher level in the same organization structure.<br/>
+<br/>
+For users, this could mean the following: If a software supports such reference db system, then you would first select a number of time-locations that you want to use in your data. If you selected one time-location (e.g. your currently existing town), the software could recommend you to also select historical versions of that location, or related areas that cover a similar location (e.g. a parish).<br/>
+Whenever you then want to enter a location for an event (e.g. a birth), you would be presented with locations that are time-relevant: It does not make sense that a birth in 1970 took place in a town that only existed up to 1920. Moreover, the system could insist that a baptism should be located in a parish rather than a town. But still, as both a baptism and a birth event have time-locations with deductible coordinates, a good software could match one to the other.<br/>
+<br/>
+What is important for the end user here is that such system implies a more strict data entry. Just have a look at this page:<br/>
+<!-- ws:start:WikiTextUrlRule:15:http://en.wikipedia.org/wiki/Alexandria_%28disambiguation%29 --><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Alexandria_%28disambiguation%29" rel="nofollow">http://en.wikipedia.org/wiki/Alexandria_%28disambiguation%29</a><!-- ws:end:WikiTextUrlRule:15 --><br/>
+and you will understand that a software that stores simply "Alexandria" as a location can never expect to have such data exported and reused with any degree of usability. Hence, the end user should first indicate which "Alexandria" he commonly wants to refer to (e.g. Town=Alexandria, County=Jefferson County, State=New York, Country=United States of America) and for which time periods (depending on the historical changes related to this town). When exporting, the exact data (in a format to be decided, but this is less relevant to the user) can then be provided, which ensures that the receiver (software and hence the end user) cannot misunderstand that time-location.<br/>
+<br/>
+To all previous posters:<br/>
+are there any open initiatives today that target such a time-location database?<br/>
+<br/>
+Xavier</div></div><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-12T02:58:09-08:00</div>
+<div class="text">I agree with Greg that we should not enforce the use of one location system or another (Google maps, ...), but the standard should reference in a unique way a time-location (see above) in some commonly available database. What I would therefore recommend to have a look at URI's. Most people only think of http as a URI scheme, but there are many others, both official (e.g. mailto for mail addresses, geo for physical locations) and unofficial (e.g. secondlife, for a location in the virtual world). We could go for such a structure, simply stipulating the structure of the URI. This does not bear any link to databases or software that stores/uses it (just like http: can be used by many web servers and browsers).<br/>
+<br/>
+An example syntax could then be:<br/>
+<br/>
+<tt>timeloc:<em>&lt;server&gt;/&lt;unique-time-location-id&gt;</em></tt><br/>
+or<br/>
+<tt>timeloc:</tt></div></div></div>&lt;server&gt;/&lt;organization-type&gt;:&lt;time-location-id&gt;[/&lt;lower-level-time-location-id&gt;[/..]][?[time=[from-time]-[to-time]]][&lt;other-optional-attributes&gt;<br/>
+<br/>
+The first version requires a lookup on the site of the data provider to obtain all the details. The second contains much more details but has a risk of becoming unusable when something changes in the database. A simple example:<br/>
+Today I record this location:<br/>
+<tt>timeloc:<em>thetimelocserver.com/administrative:belgium/antwerp/aartselaar?time=1750-</em></tt><br/>
+because the mentioned town still exists. But tomorrow it could no longer exist, in which case the correct reference would become:<br/>
+<tt>timeloc:</tt>thetimelocserver.com/administrative:belgium/antwerpen/aartselaar?time=1750-2010<br/>
+This is similar to a web link that stops working over time. Using some good tools however, one should be able to rebuild a more correct version of the broken URI afterward (just like some pages get linked to their new hosts), but it may cause problems.<br/>
+<br/>
+Xavier<div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-12T03:02:10-08:00</div>
+<div class="text">To avoid confusion, in my last example, I did not mean to change the antwerp into antwerpen, only the period change is relevant.<br/>
+If an editor can change this, feel free to do so.<br/>
+<br/>
+Sorry</div></div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-12T03:56:10-08:00</div>
+<div class="text">The only open initiative that I know of is at WeRelate.org, which is an open-content wiki.  If there were another initiative, I would be happy to adopt it.</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-12T04:18:11-08:00</div>
+<div class="text">DallanQ, is there an API for, say, downloading WeRelate's places? <br/>
+<br/>
+Also, I guess you could figure out when a place was called what it was by looking at the records that reference a place. For example, if "Ben Davis, Indiana" was referenced by an event which had a date from 1926, then that would give you some data about when that place-name was used.  However, not sure if everyone references places by their time-sensitive names.</div></div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-12T04:24:00-08:00</div>
+<div class="text">xvdessel, <br/>
+<br/>
+I wanted to clarify my last comment.  The only open-content database that I know of that attempts to integrate time+place is the set of place pages at WeRelate.org.  These place pages are available in XML format under an open-content license.  If there were another time+place open initiative, I would happily drop the one at WeRelate.  But I haven't been able to find anything.  And I've looked fairly extensively.  There are some databases, like TGN (which is not open-content), that include _some_ historical information, but it's very limited.<br/>
+<br/>
+greglamberson,<br/>
+<br/>
+Yes, what I'm suggesting is that if you don't want to force the user to create this table by entering the data for each place themselves, then the software needs to have a way to generate this information based upon the string the user has entered (e.g., "Shoreview, MN" becomes L2=Shoreview, L3=Ramsey, L4=Minnesota, L5=United States, Lat=..., Lon=...).  <br/>
+<br/>
+The question is, how is the software going to do that?  Either you put the onus on each software developer to create their own database of historical+current places (which is what's currently the case), or you create a free database of historical+current places (where you can represent that a town was in 3 counties and is now in a 4th).  If you want to go down the latter route, how will you do that?  Either you create your own database from scratch, or you generate your database from data that someone else has.  I couldn't find anyone with historical data, so I created the pages at WeRelate and make them available under an open-content license.<br/>
+<br/>
+So you could take the pages at WeRelate as your database.<br/>
+<br/>
+Or you could create your own database from scratch and think of WeRelate as one of the providers.<br/>
+<br/>
+Or you could punt and say that every genealogy vendor is on their own to convert user-entered place strings to structured place data.<br/>
+<br/>
+DearMYRTLE,<br/>
+<br/>
+You can download GIS (shape) files for historical county boundaries here: <br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:22:http://publications.newberry.org/ahcbp/ --><a class="wiki_link_ext" href="http://publications.newberry.org/ahcbp/" rel="nofollow">http://publications.newberry.org/ahcbp/</a><!-- ws:end:WikiTextUrlRule:22 --><br/>
+<br/>
+You could use this information to say which counties a town would have been in over time, so long as you knew when that town was founded.  But this is US-only.  I haven't been able to find similar resources outside the US.  The best website I've found is statoids.com, but they just talk about high-level changes.</div></div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-12T04:55:22-08:00</div>
+<div class="text">greglamberson,<br/>
+<br/>
+I wish I could edit my responses (kind of annoying that I can't do this in something that calls itself a wiki).<br/>
+<br/>
+"So you could take the pages at WeRelate as your database" would be clearer as "So you could take the pages at WeRelate and use them to create your database".<br/>
+<br/>
+dsblank,<br/>
+<br/>
+There isn't an api.  Like wikipedia, you download the data in a big XML file and you have to process it yourself.  A file is available for download at: <br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:18:http://backup.werelate.org/pages.xml.gz --><a class="wiki_link_ext" href="http://backup.werelate.org/pages.xml.gz" rel="nofollow">http://backup.werelate.org/pages.xml.gz</a><!-- ws:end:WikiTextUrlRule:18 --><br/>
+<br/>
+Be aware that it's rather large - it decompresses to 6G.  It contains *all* pages at WeRelate.  You'll have to process it to extract the place data yourself.<br/>
+<br/>
+Once you did this and extracted the fields from the place pages into a database, you could use that information to create a "user-entered place string to structured place data" service.  That's what I do to standardize user-entered place strings when gedcom's are uploaded.<br/>
+<br/>
+The problem with using user-entered data as the basis for your place database is that users are not good at entering place data.  Suppose that you have 10,000 users, and 10 of them have a place called "Shoreview, Hennepin, Minnesota" in their database.  Does that mean that Shoreview was once in Hennepin county?  Or does it mean that those 10 users were confused?  You don't really know.<br/>
+<br/>
+You're better off if you can access the places found in the original records, but they have their own problems.  Place-strings found in original records often use abbreviations and lack mid-level jurisdictions.  FamilySearch for example uses their own internal place database to standardize place strings found on historical to standardized places because of these issues.</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-12T05:50:22-08:00</div>
+<div class="text">DallanQ, thanks for the detailed info! This might be useful for other reasons, too. I'm always looking to see how Gramps can connect to other resources.</div></div><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-12T06:00:28-08:00</div>
+<div class="text">DallanQ, 2 reactions:<br/>
+<br/>
+- maintenance of such a DB: I think you need to use typical Web 2.0 techniques here. End users could propose records for addition, but only editors could accept it. Editors can be responsible for a specific hierarchical section (I believe DMOZ (www.dmoz.org) works like that as well), e.g. one or two counties in the US, on which they can prove their knowledge by validating and accepting user proposals. After some time, they can then evolve to editors are higher levels.<br/>
+<br/>
+- regarding the XML of an expected database. Ideally, such database should be accessible with other things that a full dump request. Via a specific request (see my URI discussion above) such database should be able to provide only the records that relate in a particular way to some given input data (e.g. an existing time-location, or a lat/long position, or even simply a town name and a date). Depending on what is asked, the database could then provide child locations (e.g. all locations within one county or state), all historical time-locations that map within distance X from the lat/long coordinates, etc. In such a way, any software developer can embed standard XML calls to such a db to fetch the right data. Another element could be to provide any known translation or name variant of a time-location as an answer (e.g. Aachen, Aken and Aix-la-Chapelle all refer to the same German town). Obviously, the software would then store that data locally (a kind of cache) for future reference, but in case the user enters an unknown location, the database can provide possible time-locations that match.<br/>
+<br/>
+I think such databases should be free in consultation mode (to allow anyone that receives a file with such reference to look it up), but maybe not necessarily in search mode (i.e. when a user in a software enters some elements and wants to search the database for any matching time-location).<br/>
+<br/>
+I'm not sure whether it should be BG to define such an URI and the required functionalities, or whether it should be a separate initiative. But I think it is definitely linked in some way to a new BG standard, as the current way of location storage in GEDCOM is really a mess (partially the standard, but more importantly how it is used by most software today).<br/>
+<br/>
+And yes, I also hate it not to be able to re-edit my posts.<br/>
+<br/>
+Xavier</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-12T06:28:03-08:00</div>
+<div class="text">Before we get too far here, let me throw down a few concepts I also think are key.<br/>
+<br/>
+First, I do agree that a location entity has a time and space element. I do not think that this combination defines the place absolutely (that is, I don't think the combination of these two items represents a key in a database talbe). A location entity should perhaps have a UUID-type key as well, because I think two places can have the same time and name components, even in a hierarchical naming system.<br/>
+<br/>
+Any mapping of location entities to external mapping systems should be a sort of relational mapping, not some indication of absolute equivalent identity. In other words, there should be no attempt to combine the two into one element. This is probably more important for the future when this might be possible, but I still think it's an idea we should codify now.<br/>
+<br/>
+The location database I favor is one that exists solely in a single database. This database's location entities _can_ have relationships with those in other, perhaps "authoritative" location databases, but they certainly don't have to.</div></div><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-12T07:40:32-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+Then I have some fundamental concerns about BG. If you don't want, at some point in time, to enforce people/software to use some means of time-location unification that can be matched to some other user's data using a similar unification, then you will continue to end up with unmatchable location data like we have today.<br/>
+<br/>
+Simple example: a search for the family name Claes and the town of Rumst on Geneanet, leads to these forms:<br/>
+Rumst      Antwerpen, Belgium<br/>
+Rumst      Belgium<br/>
+Rumst (B)      Antwerpen, Belgium<br/>
+Rumst,2840,vlaanderen,belgië      Antwerpen, Belgium<br/>
+Rumst,provincie Antwerpen      Antwerpen, Belgium<br/>
+Rumst(Reet)      Belgium<br/>
+Rumst,2840      Belgium<br/>
+Rumst, Antwerp      Antwerpen, Belgium<br/>
+Rumpst      Belgium<br/>
+<br/>
+(Rumpst is the old written form. Reet is part of Rumst, but at the date mentioned by the researcher, Reet no longer existed as an official town. You are lucky no French researcher wrote things like Rumst, Anvers, Belgique)<br/>
+I know the town very well, and I'm pretty sure all of them refer to one single town (which has changed in size over time, but even that is unrelated to the above diversity).<br/>
+<br/>
+Hence, I hope that, probably in a level approach (see other discussion), at some point we should enforce the use of relations to centralized databases for locations. I think software vendors are much closer to such changes than to decision process storage aspects.<br/>
+<br/>
+I agree that there will remain exceptions, e.g. when a location is only partially readable. But these are unmatchable by nature, and should only be used as an exception. The same holds for some date information that is de facto invalid (e.g. a date of February 30th) but should be recorded as such. Some software offer 2 date fields for such cases (a free one and a standardized one, used for sorting, calculations, ...). Again such exceptions should cover only a few percent of the data, and this is not where we complain about in GEDCOM.<br/>
+<br/>
+Regarding your first point, I'm not sure I understand your point. A date and a location are indeed is not the (primary or unique) key, because (see my time-location proposal) the date should be a time period, not a date: locations have started to exist (e.g. they are founded) and can cease to exist (like to former East-Germany). Locations only are relevant within that period. Potentially, at some later date, that same name &amp; hierarchy was reused for a similar time-location, but that is a different period and thus another time-location. And the time period can extend to infinity (e.g. for all places that currently exist).<br/>
+<br/>
+The unique key is thus:<br/>
+- a time period<br/>
+- an organization structure (E.g. Government-administration)<br/>
+- a hierarchy tree starting from the world top level down to the desired detail level (e.g. a town, a church, ...)<br/>
+<br/>
+I live in a very weird country (Belgium) which has completely different structures depending on the area of competence. And this leads to some political troubles here. Typically the federal election areas do not map to the regions or communities that control things like towns.<br/>
+But still, if you are precise enough in the organization you are covering (e.g. Government-administration is not the same as Government-Judicial or Government-Election areas or Government-Military or Government-Diplomatic maybe, to include embassies etc), then I'm pretty sure you can obtain a unicity.<br/>
+<br/>
+Note that I did not mention a geographical location or area yet. Over the given time period, the time-location can have evolved in size or even location (moving church?? Why not?). Hence, the boundaries &amp; related timespans when they were valid are an information element that belong to this location.<br/>
+<br/>
+Maybe it would make things easier if I would use timespan-location as a name?<br/>
+<br/>
+As far as I know, there has never been 2 distinct locations that existed at a common time point and with identical hierarchies within the same organization structure, except for very delicate cases like some that I mentioned in my very first post to this topic (war, occupation vs. rightful ownership, e.g. Jerusalem or the Falklands). Some locations can have unclear borders at some point in time, and some organizations have had deviant structures (alternate popes in France etc). There are language issues etc (see also my first post).<br/>
+<br/>
+Xavier</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T04:14:59-08:00</div>
+<div class="text">A User Question:<br/>
+<br/>
+Is this Location Database, External to the genealogy program on my PC?<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-11T04:46:26-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+Currently there are several different things that happen:<br/>
+1. Existing GEDCOM uses place entries that are not part of a database structure. This means:<br/>
+a. The same place is isn't represented as a database entry and merely referred to but instead each instance of a place is handled as a separate entry; and<br/>
+b. The place names as contained in a GEDCOM file are simple text entries that don't have any geographical referential information other than the name. That is, there is no placement of the GEDCOM place information on any mapping system. Any determination of a place's actual location is done by genealogical software based upon its ability to interpret the name as typed;<br/>
+2. Genealogical software programs have place databases. These place databases may or may not have the ability to use eternal mapping systems (e.g., GPS, Google Maps, GNIS, etc.);<br/>
+3. External mapping systems: Systems like Google Maps provide the ability to equate geographic names to places on mapping systems either internal to their systems or via more universally recognized methods such as longitude/latitude, etc.<br/>
+<br/>
+What all this means practically speaking is that within your genealogy software or service, you may have t resolve your places to various external mapping systems depending on the capabilities of the genealogy software or service. The moment you export your data via GEDCOM, any information mapping that was done within a particular genealogy application will definitely be lost. <br/>
+<br/>
+I believe we should do 2 things: <br/>
+<br/>
+1. Establish what would essentially be a table of geographic names within BG's structure rather than treating each place entry in each record as a separate entry; and<br/>
+2. Include referential data fields for several external geographic mapping systems so that once a place has been paired with a place in one of these systems that the process would not have to be repeated after any subsequent exports and imports of data.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T06:56:15-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+Thank you. I still may be a little confused, but let me see if I understand this.<br/>
+<br/>
+Right now, my software asks me to resolve a placed name. It is matched up to an external mapping system. I can accept the external "place name" or Ignore the suggested "place name".<br/>
+<br/>
+The external mapping system is current information. My data may be hundreds of years old. I have to work around that within my program, because I may know that the jurisdiction lines changed over time. The "point on the map" didn't change, just it's name.<br/>
+<br/>
+However, due to some features that are available to me in the program I use, I may double enter the name of that pin point. Depending on what I am doing with that information, I may change which pin point I want to use at for that feature.<br/>
+<br/>
+When Sharing my research, I would want to share the selected data entry (Historical or Current) to the person I am sharing my information with. I should be able to mark which entry or both entries (could be more), then allow the person I am sharing the information deal with the information I am providing. Their External Mapping System may be different than mine.<br/>
+<br/>
+The external mapping system would have to have a Time sensitive table, I think, if there is an external system in place.<br/>
+<br/>
+This issue that I DO think needs to be addresses is the format of the data in that entry.<br/>
+<br/>
+A Time Element should be looked at. If no entry, Current place would be default.<br/>
+<br/>
+The various levels of Jurisdiction would have to be spelled out. Are the levels of Jurisdiction in the structure of the data exchanged? Then a Table would have to be created. I would have no clue what the international view of Jurisdictions impact would be.<br/>
+<br/>
+I am sure I missed many things here, I am only reflecting some of the issues that I have seen among the User Community that I participate in.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-11T09:12:01-08:00</div>
+<div class="text">Here's an idea: what if we started an open-source project to generate a location database from a Wikipedia dump.  Unique location ids are based upon wikipedia titles.  Location attributes (such as lat/lon) are determined from the infobox templates that appear on most place pages.  Jurisdictional relationships are determined from the navigational templates that appear at the bottom of most place pages.  The program could be run periodically over a wikipedia dump to create an XML file containing a place database.  <br/>
+<br/>
+Anyone could download the XML file, or use it to create a historic-place name standardizer or geocoder web service.<br/>
+<br/>
+There are similar efforts out there: dbpedia.org, but since their focus is not just on locations, the location data is pretty messy.  The challenge would be to develop parsers for the various types of templates that appear on place pages.  You could possibly use JWPL: <!-- ws:start:WikiTextUrlRule:6:http://code.google.com/p/jwpl/ --><a class="wiki_link_ext" href="http://code.google.com/p/jwpl/" rel="nofollow">http://code.google.com/p/jwpl/</a><!-- ws:end:WikiTextUrlRule:6 --> to help.<br/>
+<br/>
+I volunteer to work on this if others are interested.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-11T11:50:08-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+The great thing about this is it's all completely customizable. The systems that are used to map locations aren't so much of concern as the basic concept. We don't have to adopt any one standard, but we could definitely support any number of geographical mapping systems. <br/>
+<br/>
+Dallan, <br/>
+That's certainly a wonderful idea. However, as far as an actual system, it seems like something developers of a particular app would be more likely to adopt. However, given this sort of extensibility, they could very easily adopt this sort of thing.<br/>
+<br/>
+Here's an example of what a place entry could look like for what I man:<br/>
+<br/>
+Fields:<br/>
+<br/>
+location1(L1)= Detailed Location=mother's house<br/>
+L2=City=Carbondale<br/>
+L3=County=Williamson<br/>
+L4=State=Illinois<br/>
+L5=Country=United States<br/>
+L6=LongitudeDecimal=37.7216741<br/>
+L7=LatitudeDecimal=-89.2238760<br/>
+(location provider 1)LP1=Location Provider 1=Microsoft Virtual Earth<br/>
+(location provide reference 1)LPR1= Location Provider Reference 1=(whatever this service needs to find and locate the place)<br/>
+LP2=Location Provider 2=Google Earth<br/>
+LPR2=Location Provider Reference 2=(whatever this provider needs to find and locate the place)<br/>
+<br/>
+Also, dates for locations are needed. My database provides this capability. Do the products you work with provide a capability to provide a date for which a location is applicable? This is one appropriate way to deal with some differences is place names. Obviously this won't work for Kashmir, and it's poorly implemented in the US geographic systems I am familiar with, but it's a start.</div></div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-11T14:20:54-08:00</div>
+<div class="text">I think the question for you is: do you want to make your users enter this information for each of the places in their gedcom, or are you willing to settle for something less that you can get from a standard repository (like wikipedia)?  <br/>
+<br/>
+I am not aware of a single comprehensive repository of place information that includes historical places, especially when you want dates as well.  I've spent a long time looking.  That's why I created the places wiki at WeRelate.org.  The WeRelate place wiki pages include the ability for users to add date ranges to jurisdictional relationships (and alternate jurisdictional hierarchies), but the the date ranges and alternate jurisdictions must be added by hand and it's a monumental task. See for example: <!-- ws:start:WikiTextUrlRule:10:http://www.werelate.org/wiki/Place:Aberdeen,_Aberdeenshire,_Scotland --><a class="wiki_link_ext" href="http://www.werelate.org/wiki/Place:Aberdeen,_Aberdeenshire,_Scotland" rel="nofollow">http://www.werelate.org/wiki/Place:Aberdeen,_Aberdeenshire,_Scotland</a><!-- ws:end:WikiTextUrlRule:10 --><br/>
+<br/>
+I think you end up with several options:<br/>
+<br/>
+(a) each user enters this information for the specific places in their own gedcom.<br/>
+<br/>
+(b) each records manager provider acquires a database of current geographic locations and adds what historic locations and relationships they can think of.<br/>
+<br/>
+(c) someone develops an open-content current+historical geographic database by starting with an extract from wikipedia and either lets people add historic relationships to it over time, or encourages wikipedians to allow storing historic relationships in the templates on wikipedia pages.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T16:32:58-08:00</div>
+<div class="text">Dallan,<br/>
+<br/>
+I am trying to understand users entering information into a GEDCOM file. I hope that you mean enter information into my genealogy database and that database help deal with the Place Name / Location Name.<br/>
+<br/>
+Right now, my software looks at a website for the current day location name.<br/>
+<br/>
+If I want to add the historical accuracy, I have to find other resources so that I can apply the Time sensitive location name. I am learning where that historical information is, but sometimes it's difficult.<br/>
+<br/>
+Your Item C would be great.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-11T17:21:41-08:00</div>
+<div class="text">Since this seems to be the topic for adding requirements about places here are some more, rather simple ones:<br/>
+<br/>
+1- A place name "record" should store a default prefix, typically a preposition - eg. in or at. It must be possible to override this in an event instance.<br/>
+<br/>
+2- In many source records a number (or identifier, probably also containing letters) may be used to identify the place, the same number may occur in many sources. A place may have several such numbers. eg. because the numbering  system has changed over time. The identifier may have several parts. It should be possible to store such multi part numbers and an identifier for the numbering system. This could also be used to access land record sources via the web - such services exists - and there exists map services where the same numbers are used. The same number may also be part of a nation wide solutions for unique land property identifiers that e.g. allows me to find out who owns the property today.<br/>
+<br/>
+3- User defined flags associated wit a place<br/>
+<br/>
+4- A value that will surpress higher levels when the place name is printed, because the name is not ambiguous and is assumed to be known by the reader.<br/>
+<br/>
+5- The type of place (Country, City, Parish, Municipality, County etc) must be stored in a place record<br/>
+<br/>
+6- A place type eg, farm, church, house, school etc.<br/>
+<br/>
+And there are certainly more issues …..</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T17:47:53-08:00</div>
+<div class="text">gthorud,<br/>
+<br/>
+Trying to understand #1 (default prefix).<br/>
+<br/>
+Isn't that preposition dependent on how that Place Record is uses?<br/>
+<br/>
+I just want to be able to enter the Place Name and let that place name be transported.<br/>
+<br/>
+How that place name is used, in, lets say a report generator, is when that preposition would be added and/or controlled. Not in the transport of the information.<br/>
+<br/>
+Please let me know if I am missing something here.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-11T18:15:46-08:00</div>
+<div class="text">Re #1 - I GUESS you assume that you can choose the preposition based on the type of place? Unfortunately that is not the case in all countries/languages. Eg, here we have "at" cities and "in" cities, while English have only "in" cities - as far as I know.  The only way to handle in/at is to store the appropriate prep with the place name. And that info must be transferred to other systems, so one does not have to re-enter that info in the receiving program.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-11T18:45:09-08:00</div>
+<div class="text">This thread is hopping.<br/>
+<br/>
+Dallan,<br/>
+<br/>
+I think the Location Provider and Location Provider Reference field I mention above should be completely optional rather than anything filled out by users. I envision that, within a software application or service (such as WeRelate.org), a place entered can be mapped to a location page (as is current practice). What I propose is that the place entry within the place database, which would be a table specific to that user's data (this I suppose would have to be generated at werelate.org based upon the places that actually occur within any given user's dataset), would have optional LP and LPR fields as I show above. For werelate.org these fields would be populated with LP1=werelate.org (or whatever you refer to your mapping system as) and LPR1=<!-- ws:start:WikiTextUrlRule:6:http://www.werelate.org/wiki/Place:Cincinnati,_Hamilton,_Ohio,_United_States --><a class="wiki_link_ext" href="http://www.werelate.org/wiki/Place:Cincinnati,_Hamilton,_Ohio,_United_States" rel="nofollow">http://www.werelate.org/wiki/Place:Cincinnati,_Hamilton,_Ohio,_United_States</a><!-- ws:end:WikiTextUrlRule:6 --> (for Cincinnati, OH). Any provider that any application used could then be appended to this field, but of course this function would have to be adopted by software developers.<br/>
+<br/>
+The function that I envision for this is largely something that would have to be accommodated by software vendors to be really functional, but it wold be totally optional and completely extensible. I wouldn't advocate saying "we recommend using Google Maps" and then providing fields for this service and no other.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-11T20:11:26-08:00</div>
+<div class="text">On 11 nov 11:46 GMT+1 Greg wrote.<br/>
+<br/>
+I believe we should do 2 things: <br/>
+<br/>
+1. Establish what would essentially be a table of geographic names within BG's structure rather than treating each place entry in each record as a separate entry; and<br/>
+<br/>
+2. Include referential data fields for several external geographic mapping systems so that once a place has been paired with a place in one of these systems that the process would not have to be repeated after any subsequent exports and imports of data.<br/>
+<br/>
+Re.1. I agree that there should be a place structure that each occurrence (eg. in an event) of a place/place name/placeona (persona for places) can refer to. This will be one of the most important improvements that we can do – in my opinion. This structure needs further work. Each entry should only occupy one level in the place hierarchy, and may thus have records above it and below it, possibly belonging to several hierarchies.<br/>
+<br/>
+Re.2. I think that each place in 1. could have several identifiers (possibly multi parts in sequence?) that will be accompanied by an ‘identifier scheme identifier’. There could even be an identifier type associated with it, in case the receiver does not know the scheme identifier. <br/>
+<br/>
+One use of such an identifier would be to access a map system, another to access source records, etc. (See my entry with issues 1-6 above, especially #2) One ID may be used for several purposes or several IDs may be needed, the receivers application will know or can be configured to know, what can be done with an ID following a particular scheme. The identifier may implicitly determine if this is a historic place, or current, but I think a date or time period should be supplied in addition to the IDs. (We are likely to see a historic map and information service in my country next year.) Yet another application of an identifier can be to identify the data record for the place/place name etc, cf. discussions re. UUIDs elsewhere on this wiki.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-10T06:15:54-08:00</div>
+<div class="text">All excellent points. One thing that I personally come back to all the time is the inconsistency with which geographical name changes are accepted and incorporated by various mapping services. I am referring to changes that occur due to undisputed jurisdictional changes such as borders changing in U.S. counties. When you introduce the idea of disputed changes, the problem gets far more complicated.<br/>
+<br/>
+<br/>
+What are your feelings about Geography Markup Language ( <!-- ws:start:WikiTextUrlRule:3:http://en.wikipedia.org/wiki/Geography_Markup_Language --><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Geography_Markup_Language" rel="nofollow">http://en.wikipedia.org/wiki/Geography_Markup_Language</a><!-- ws:end:WikiTextUrlRule:3 --> )? This tool is hardly a solution for the problems you mention but it is a related tool I feel should be used. (But how?)</div></div><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-10T07:57:20-08:00</div>
+<div class="text">I agree that GML could certainly be an element of a solution, i.e. to pinpoint a physical location or area. Furthermore, it can be an aid in matching software as it could allow to calculate distances between 2 records that each have a GML-encoded location, and thus decide (based on tolerances) whether it could be the same location or not.<br/>
+<br/>
+I'm not sure whether undisputed changes are an issue. If a reference database knows for given entities (e.g. a county) and given date ranges what the covered area is, then one could deduce one from the other (e.g. from date+GML to administrative location or from date+location to an approximate GML). But indeed, as you pointed out, mapping services (or any other reference db) is a prerequisite to be able to work with this.<br/>
+The difference with disputed changes is that, when using such reference db to enrich the user's data, depending on the db, you could end up with one or the other of several disputed hierarchical locations. And that means also that matching by hierarchical analysis (which is how most genealogical web searches work) is very tricky. The same applies to undisputed changes if a search or matching is done without any date information (and thus you cannot be certain that both records use the same 'version' of a hierarchical location).<br/>
+I agree that many of these problems are probably too complex to tackle straight away, but these are things to keep in mind for the longer term.<br/>
+<br/>
+One key element could be that for locations a standard recommends not to specify locations itself, but rather a URI or URN that refers to a reference db (like ISBN numbers do). This can avoid language issues and improve search and matching tools greatly. But who will manage and maintain such reference db?</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-10T13:07:59-08:00</div>
+<div class="text">First off, I certainly believe there should be a location database accommodated within the standard rather than some free-form entry of places. The software I use has a location database, and I would like to avoid reidentifying the locations of all these places each time I do an import/export. Thus URI/URN, long/lat, GPS, etc., location data should be accommodate. What place standards exist that should be accommodated? What does GNIS use? What other systems in various regions or even worldwide exist that we should accommodate?<br/>
+<br/>
+I firmly believe that if someone has identified a place within their data that the corresponding information for that place should be passed so they don't have to resynchronize their places as is now the case.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-10T06:09:25-08:00</div>
+<div class="title">Discussion regarding how to develop a data model</div>
+<div class="text">Taken from the main page to form basis for a discussion on the matter:<br/>
+<br/>
+From Tom Wetmore:<br/>
+First step is an overall data model. This can't be done bottom up. I would suggest taking some proposals for models as a starting point. The stuff I see about Person entity below misses the point because it doesn't mention whether we are talking about the mention of a person in an event taken from evidence or if we are talking about an individual we have constructed out of all the research we have done.</div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-10T11:52:40-08:00</div>
+<div class="text">2 - If you export your data for someone else, do you want then to provide that complete reasoning, or only the conclusion data?<br/>
+<br/>
+I would like to control what I export period.<br/>
+<br/>
+I may or may not want to exchange / export either of those pieces of information.<br/>
+<br/>
+If I were a professional genealogist, which I am NOT, I might want to export Only the Conclusions I reached.<br/>
+<br/>
+If I were sharing with a family member or a newly found cousin, I probably wouldn't share either of your items. The person I am sharing with, may need to draw their own conclusions based on the material they have.<br/>
+<br/>
+Control / Options to include or exclude is what I would want.<br/>
+<br/>
+Hope that helps,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-10T12:00:32-08:00</div>
+<div class="text">3 - If you import data, do you only see the imported data as a source (input to your conclusions), or could you be willing to import the complete reasoning as such, and allow it to match with the reasoning you made, e.g. to determine why the same source data leads to different conclusions in the head of someone else?<br/>
+<br/>
+First, I would want to view that information OUTSIDE of my own file. Initially, I don't want it part of my file.<br/>
+<br/>
+I would hope that my program would let me completely or selectively import and merge information from that file, into my file.<br/>
+<br/>
+When I do select to include information, I to include a complete 'record'. Record may not be the right term.<br/>
+<br/>
+Taking the "Event" as described in Question 2, I would want the attributes of that Event, included all of the Source-Citation information what was recorded in the file.<br/>
+<br/>
+I may or may not want the conclusions or information supporting that conclusion. If I were to include that, I would NOT want it to over write what I might already have.<br/>
+<br/>
+I might want to compare the two conclusions and draw a new conclusion, delete a conclusion, combine the conclusions.<br/>
+<br/>
+Options is the thread here.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T17:31:19-08:00</div>
+<div class="text">4 - Do you see export &amp; import only to exchange data with peer researchers, or also to allow people to change from one software to another with a minimal loss of data? It should be clear that each of these uses has clearly other requirements!<br/>
+<br/>
+I think that answer is yes.<br/>
+<br/>
+I may or may not know if the person I am sharing my research with is a Peer or not.<br/>
+<br/>
+Bottom line, Yes I want to be able to share my research with a minimal loss of information.<br/>
+<br/>
+What happens to the date after it is received, I can't control. I can guess it will be completely accepted, completely rejected or somewhere in between.<br/>
+<br/>
+I haven't merged a GEDCOM file into my main file for years. I have my "standards" in data entry.<br/>
+<br/>
+That does not mean that I don't review a GEDCOM file that I receive. Usually what is helpful is the Source of the data in that other file.<br/>
+<br/>
+Since we are talking about Importing and Exporting, I would further request to my genealogy software developer that each entry that I do include in my file, from that GEDCOM use, in addition to any and all Source / Citation information, include the information as to where that information came from. That is, the information that is in the very beginning of that GEDCOM file.<br/>
+<br/>
+So, lets take an Event. That Event would have a Source-Citation associated with it. I want that included. But, in addition the Filename, Date of Import, and Originator of that File in a format that would be consistent with Evidence Explained!. <br/>
+<br/>
+Please don't read that the Source-Citation for the Event in that file needs to meet that standard, but the originator of the file should be.<br/>
+<br/>
+Does that help?<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T17:35:58-08:00</div>
+<div class="text">5 - After you imported data X into your data Y, when you export that for someone else, do you want to flag the X-data as yours, or should it indicate the original source where you got it from? If X contains data Z, do you want to see the complete path via which you obtained it?<br/>
+<br/>
+Yes, see my answers to Question 4. This is a very good question.<br/>
+<br/>
+I hadn't really read this question when I answered Question 4, but I can tell you, that every once in a while I find an event that does not have a Source-Citation associated with it, that I know that I received in an early GEDCOM file, which is why I asked for that new Source-Ciation (GEDCOM file origins).<br/>
+<br/>
+I certainly would want to pass that information along to any export that I would produce. In other word, Here is where I found this information. An online source, a physical document, a GEDCOM file.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T17:42:12-08:00</div>
+<div class="text">6 - If you store a location, do you want the system to insist on a limited list of values (e.g. all known towns, etc) as that could increase the reuse of your data later on (i.e. to cope with translation and other issues)?<br/>
+<br/>
+I think I answered this question on the Location discussion.<br/>
+<br/>
+The offering of a suggested Place Name / Location is helpful, but I may or may not accept it.<br/>
+<br/>
+I currently accept an Place name, based on a current place name, but if I knew that at the Time of the Event that Place had another name, I would add an additional, historically based, time sensitive Place name.<br/>
+<br/>
+The best example is the where I lived in the late 1950's. It has a different name now. So, the place name when I lived there, in the 50's is what was entered. But, I would also use the current name to take advantage of some other features that the software provides.<br/>
+<br/>
+I should be saying this on each post. This is just one User's opinion.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-12T05:34:37-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+thanks for your input! I hope many others will follow.<br/>
+<br/>
+Yes, I'm a genealogist (if I have time for it) and 15+ year professional experience in IT &amp; software (banking sector).<br/>
+<br/>
+I'm living and researching in Europe where very often (period &lt;1750) the information in the archives is very limited (of a baptism only mentions father &amp; mother, godfather &amp; godmother. If you are lucky the priest mentioned in which church the parents were married, but almost never any dates are mentioned). Hence, the deduction mechanism is of key importance. However, I don't know any software that allows to record first 20 separate events, and then, one by one, allows to stitch them together into one single conclusion. Typically, the fact of NOT finding something is often also a piece of data (e.g. if a individual has only 1 birth in the region that matches its name &amp; approx. birth date, the fact that the neighboring towns don't have that name/date combination is an element to decide which birth act to accept).<br/>
+<br/>
+By my IT background, I learned the importance of a good model. But I also understand that end users view things from their perspective, and it is finally for them we do the work (including for ourselves when we use software).<br/>
+<br/>
+And from your answers, it may be clear that your requirements seem to be quite high, which is logical. Whether all that is achievable is another story! But others have already commented on that (E.g. will software vendors use a new standard?).<br/>
+<br/>
+Xavier</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-12T07:36:53-08:00</div>
+<div class="text">Xavier,<br/>
+<br/>
+Thank you for your reply.<br/>
+<br/>
+I spent 30 years in the communications industry with that last 10 or so, helping to write User Requirements for several software systems.<br/>
+<br/>
+I have spent the last 10 years working / helping users of a specific Genealogy software program. Some of my requirements, I hope, reflect some of User Requirements that I have seen in the past.<br/>
+<br/>
+I do hope that other Users jump in and help with these requirements.<br/>
+<br/>
+If I don't start high, I won't get there.<br/>
+<br/>
+I also hope that some more software vendors participate as well. After all, this project's hope, is to allow Users, like myself, Share my research with others.<br/>
+<br/>
+But, I am happy to participate in the development of the requirements.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-21T19:55:06-08:00</div>
+<div class="text">Personally, I think the question is asking the wrong question. But this is purely from my perspective as a software consultant who has designed systems for clients with varying levels of technical knowledge.<br/>
+<br/>
+I think the goal should be to involve the participants in a discussion similar to Xavier's list of questions above.<br/>
+<br/>
+In order to know how to design the system you have to know what your goal and expectations are. You have to know what features you want, what data you need to collect and any actions that need to be performed.<br/>
+<br/>
+The technical people should help by guiding the questions in constructive ways so that answers to questions help to construct the model. If the questions are posed correctly, the data model builds itself.<br/>
+<br/>
+For example, I think it is safe to say we know some base objects we need to collect information on. I think it's also safe to say we know some base requirements we have for any data model.<br/>
+<br/>
+So a good starting point would be to define a base model from which we need to add.<br/>
+<br/>
+For example, we know have people.<br/>
+People have events, places, references, etc. associated with them.<br/>
+<br/>
+We also know we have requirements about how to handle the data. Like the excellent questions and answers provided above.<br/>
+<br/>
+I'd like to add, that I think a great deal of the work and a great deal of data structure could be gleaned from the Gentech data model. Not that I'm advocating their entire solution, but the data elements are a good source of information. I probably wouldn't implement them the way they went and I skimmed over a great deal of the cruft before the data definitions. Plus it would be overkill for some people, like me. But then, there's things there that I'd use and there's things in Gramps I don't. (A preview button on this page would be nice.)</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-22T03:10:23-08:00</div>
+<div class="text">Brian,<br/>
+<br/>
+The requirements are "simple" from this Users point of view.<br/>
+<br/>
+I want to Share my family history information, in my genealogy software, with another User, who may or may not use the same software. No data to be lost, and there may be Media within my file.<br/>
+<br/>
+The project is to lay the ground work for the Transport of that data.<br/>
+<br/>
+The request is not who to present that data, only get it from one place to another.<br/>
+<br/>
+I understand that is not an easy task.<br/>
+<br/>
+One End User's opinion.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-22T12:44:46-08:00</div>
+<div class="text">Hello Xavier,<br/>
+<br/>
+thanks for these very good questions. I agree with a lot or nearly everything that Russ wrote.<br/>
+So maybe I'm just putting the same thing in different words, but here it goes:<br/>
+<br/>
+<br/>
+- do you want your computer software to insist on storing the complete decision process you made to reach a conclusion in your genealogy?<br/>
+<br/>
+I want to be able to store the decision process that made me reach the current conclusion. A simple note would suffice, I think.<br/>
+If I come to a different conclusion later (because of new evidence or new understanding of the old one), I want to save this new conclusion and the process. But I want an option to keep the earlier conclusion stored away as a reminder (with a time-stamp?), so I don't make the same mistake again. If I decide to trash the old conclusions, that should be possible. <br/>
+<br/>
+<br/>
+- If you export your data for someone else, do you want then to provide that complete reasoning, or only the conclusion data?<br/>
+<br/>
+Everybody should be able to decide what he wants to export. Privacy might play a role etc.<br/>
+But to be really helpful, I would export everything (sources/evidence, reasoning, conclusion) about the persons and events that I export. I think the software should default to this behavior, and offer options to leave out parts.<br/>
+<br/>
+<br/>
+- If you import data, do you only see the imported data as a source (input to your conclusions), or could you be willing to import the complete reasoning as such, and allow it to match with the reasoning you made, e.g. to determine why the same source data leads to different conclusions in the head of someone else?<br/>
+<br/>
+I would be willing to look at other people's reasoning and conclusions. If I agree, I'll take their conclusions (maybe add a "me, too"). If I don't, I'll take their sources only (if I think they're useful to me).<br/>
+If I only had conclusion data without reasoning and evidence, that would only be an aide to further research, if at all.<br/>
+<br/>
+<br/>
+- Do you see export &amp; import only to exchange data with peer researchers, or also to allow people to change from one software to another with a minimal loss of data? It should be clear that each of these uses has clearly other requirements!<br/>
+<br/>
+Both.<br/>
+<br/>
+<br/>
+- After you imported data X into your data Y, when you export that for someone else, do you want to flag the X-data as yours, or should it indicate the original source where you got it from? If X contains data Z, do you want to see the complete path via which you obtained it?<br/>
+<br/>
+The complete path would be ideal. <br/>
+If I didn't change anything about a source/evidence record, then it might be OK to leave the previous "owner"-info.<br/>
+If I agree to a conclusion and don't change it, adding my "me, too" might give this conclusion more credibility for future researchers.<br/>
+<br/>
+<br/>
+- If you do an import from someone who already provided you some data before, do you expect your software to eliminate duplicates (i.e. data that did not change between the previous upload) and flag new data or updates for you to examine?<br/>
+<br/>
+Yes, that would be very helpful.<br/>
+<br/>
+<br/>
+- If you store a location, do you want the system to insist on a limited list of values (e.g. all known towns, etc) as that could increase the reuse of your data later on (i.e. to cope with translation and other issues)?<br/>
+<br/>
+Ideally, the software would offer me a list of previously used places (pop-up or autocompletion as I type?). <br/>
+Places would come in an evidence and a conclusion version, too. If a source just says "Newton", I can only put that down. If I believe that this Newton is the Newton in C County, I put that and my reasoning behind that into the conclusion place.<br/>
+If I enter a new place without a source, it is just a conclusion place. I should be able to add a "certainty" to this, just like any other conclusion. Of course I should be able to add sources later.<br/>
+The conclusion place should also collect data that isn't about any event of a person. Many things just concern and define the place, like a change of name, or government. <br/>
+I would love a geneaology program that helps me gather more data about a place, like coordinates, historical and current information.<br/>
+Places could be nested in other Places, like Country - State - County - City - Neighborhood etc.  Since these relations are only valid at a certain time, it should be possible to save a time-span with these nestings, and to allow multiple "parent"-places. <br/>
+<br/>
+<br/>
+Again, thanks for these clever questions. I hope my user's POV may be of a little help to you techie experts who do the hard work :)</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-24T11:01:12-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+It's very apparent that your requirements are anything but simple. But then you might also think that walking on two legs is simple. In reality, very little is simple. First off you want to use "your" genealogy software. Which means any format or tool would have to be able to read the data from your genealogy software. This would possibly involve thousands of hours of reverse engineering of that program's storage mechanism. Or getting your genealogy software maker to write an export feature for the new format. But you have just given us a base specification from which to work. <br/>
+<br/>
+Sadly, if we take that approach we're likely going to wind up with a model that is huge and cumbersome. As everyone will want to use whichever one they are already using. Which would encompass in the end every conceivable format.<br/>
+<br/>
+But, I think you knew that when you wrote it.<br/>
+<br/>
+Does your current software record everything the way you like it? Is there nothing missing? Is there nothing that you don't like about it?<br/>
+<br/>
+Are we talking about building a data model and a program? It would seem to me, one result would be at least some useful code. I've built data models before and the code almost writes itself in the process, if done right. <br/>
+<br/>
+My ideal is always to start simple.<br/>
+<br/>
+We need a data model to have any idea where we want to go. This can really only be done element by element. However, it doesn't mean we can't use prefabricated structures and: cut out, copy and paste in the changes we want.<br/>
+<br/>
+Take person for example, we seem to be of two minds here, one is an "evidence person" and another a conclusion person. Well let's simplify. You have instead a person. Jus a plain old person. If some evidence later points out that that person is two people, then all the model need handle is allowing a "split" transaction. You can take any piece of evidence in a person and split it out as another person with the same name. When splitting a person into two, you can choose which bits of data go with that person. Problem solved, and there is no need for a evidence person or conclusion person. You collect evidence on one person and later conclude it is more than one person. Keep it simple. Or at least obvious. After all if you're researching John Thomas Smith you're goal is one specific John Thomas Smith, not two or three or four. Why start with four and later have to merge them?<br/>
+<br/>
+Alternatively, any decent genealogy program should have no problem merging two or more John Thomas Smith's. So users would be free to take either approach. Although, I'd think merging is more work than splitting. Many people have a tendency to take the hardest road, given free reign, myself included.<br/>
+<br/>
+Of course, the problem is not in the data model, but in the implementation. Of course, I can see the other viewpoint, I have in one town. of about 1000 people, six Johann George Schmidt's all living at the same time, with births spanning a number of years, and several wives with the same first and ruf names and all with children overlapping. One couple is mine. Another his parents.<br/>
+<br/>
+So, I say start simple, we'll complicate it fast enough. No need ot make any judgments at this stage.<br/>
+We need the following type of data: person, place, source, citation, conclusion, event. We could also include: relation and characteristics.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-24T11:16:15-08:00</div>
+<div class="text">Brian,<br/>
+<br/>
+Yes, my request, as ONE User of a software program, is Simple. Get the Data from my Software Package and transport it to another End User, and 'don't mess with the data' in the transport.<br/>
+<br/>
+To Get there, is not simple.<br/>
+<br/>
+Does my program do everything I want? Absolutely NOT. BUT, if I start by asking for software limitations, or making the requirement simple, I'll end up with something simple.<br/>
+<br/>
+The hope is, that this BetterGEDCOM group will lay out want the Users Really want and the technical types (not me) can help lay the ground work for the developers to come to the table to see how or what the developers can do. <br/>
+<br/>
+Just so that you know, when I see "evidence person" I stop reading. I have a Person. I am gathering and documenting "who" that person is, through Facts or Events, along with that documentation. That "person" WILL change, based on new evidence. I WILL find conflicting information.<br/>
+<br/>
+That said, I think you and I agree on this.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-10T09:22:56-08:00</div>
+<div class="text">I agree with Tom that we need to have at least an idea of the high level model we try to achieve. How can you talk about "data about events" or "data about a person" if it is unclear which direction you want in your model, what you mean by "an event" and "a person".<br/>
+<br/>
+Therefore, the first key decisions will most likely be around the scope: does the model cover only conclusion data with reference to sources (like GEDCOM does) or do we want to extend it to source data elements, the decision process, and the resulting conclusions.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-10T10:02:00-08:00</div>
+<div class="text">Tom,<br/>
+xvdessel,<br/>
+<br/>
+I sort-a understand what data models are, don't want to guess at what that means, but I am not sure we are there yet. Clearly, developers need to know or create the data models.<br/>
+<br/>
+This wiki was created, because we, Users of various genealogy applications have an issue. WE Want to Share our Research with others without loosing information and what is shared is selectable by the user.<br/>
+<br/>
+Now, if I had a Data Dictionary for the software that I might be using, that is Field Name, its properties, and what it's used for, I might be able to come up with a data model. But, I don't want to do that.<br/>
+<br/>
+Please help us create that Data Model. Oh, I think, to do that, we need to have developers at the table. That is what we are trying to do.<br/>
+<br/>
+I am not sure that I care if the end result is a GEDCOM or some other 'thing'. All I know is that the current GEDCOM feature doesn't work the way I want it to.<br/>
+<br/>
+Please help us.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-10T10:54:19-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+I can agree that an end user really does not care what and how the software does to exchange the data from one user to another. That is indeed an issue for the techies.<br/>
+<br/>
+But that does not remove the burden from the end users, to come up with "business requirements". Let me put forward some questions to clarify what I mean by this:<br/>
+<br/>
+- do you want your computer software to insist on storing the complete decision process you made to reach a conclusion in your genealogy?<br/>
+- If you export your data for someone else, do you want then to provide that complete reasoning, or only the conclusion data?<br/>
+- If you import data, do you only see the imported data as a source (input to your conclusions), or could you be willing to import the complete reasoning as such, and allow it to match with the reasoning you made, e.g. to determine why the same source data leads to different conclusions in the head of someone else?<br/>
+- Do you see export &amp; import only to exchange data with peer researchers, or also to allow people to change from one software to another with a minimal loss of data? It should be clear that each of these uses has clearly other requirements!<br/>
+- After you imported data X into your data Y, when you export that for someone else, do you want to flag the X-data as yours, or should it indicate the original source where you got it from? If X contains data Z, do you want to see the complete path via which you obtained it?<br/>
+- If you do an import from someone who already provided you some data before, do you expect your software to eliminate duplicates (i.e. data that did not change between the previous upload) and flag new data or updates for you to examine?<br/>
+- If you store a location, do you want the system to insist on a limited list of values (e.g. all known towns, etc) as that could increase the reuse of your data later on (i.e. to cope with translation and other issues)?<br/>
+Each of these questions relates to possible options or key choices in the data model. E.g. the last one could mean that a data model stores a globalized identifier of a location rather than a free text location, but more importantly that locations relate to a centrally managed reference database which could make it language-independent etc.<br/>
+<br/>
+I hope this clarifies a bit why the data model is important.<br/>
+<br/>
+Xavier</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-10T11:00:44-08:00</div>
+<div class="text">Xavier,<br/>
+<br/>
+I sorry that you concluded that a Data Model was not important. I KNOW it is.<br/>
+<br/>
+What I will try to do, is to answer your great questions, one at a time, over the next couple of hours. I want to think a couple of them through.<br/>
+<br/>
+I do have a question for you though. Do you do family research and do you share your research? I ask, because I will then know how to answer the questions that you asked.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ<br/>
+<br/>
+-- Oh, this is the dialog we need here. Thank you.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-10T11:48:26-08:00</div>
+<div class="text">Xavier,<br/>
+<br/>
+1 - do you want your computer software to insist on storing the complete decision process you made to reach a conclusion in your genealogy?<br/>
+<br/>
+Wow, don't know how to easily answer that question.<br/>
+<br/>
+The software show 'save' information as I leave a field.<br/>
+<br/>
+Now sure what a 'complete decision' means to you.<br/>
+<br/>
+I enter information into fields into the program. Most of the fields are Events. Today, an event might have four attributes or fields. And this is just an example:<br/>
+<br/>
+Event / Fact Name:<br/>
+Date of Event:<br/>
+Place of Event:<br/>
+Description of the Event:<br/>
+<br/>
+I may or may not have the three fields completely filled in. I may only have the Event and the Date of the Event.<br/>
+<br/>
+Doing research, I want to document that Event. Where did I get that information from?<br/>
+<br/>
+I enter what I have, and cite the source of that information.<br/>
+<br/>
+No conclusion yet, just recording the event.<br/>
+<br/>
+I may have the same Event / Fact from various sources, each providing pieces of information.<br/>
+<br/>
+Each would be recorded separately. If I find the same information, previously recorded, in another source, I'll add that Source-Citation to the existing event.<br/>
+<br/>
+At some point in time, I need to Evaluate what I have collected for that Event. Following that Evaluation is when I might reach a conclusion.<br/>
+<br/>
+I may conclude that I can not reach a final conclusion, as I might be missing some element or I might have to resolve some conflicting information.<br/>
+<br/>
+That is why I am not able to completely answer your question. But, maybe I did.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div></div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-11T08:57:55-08:00</div>
+<div class="title">Evolutionary vs Revolutionary</div>
+<div class="text">One thing to keep in mind is that most genealogy record managers are built by small companies with very limited development resources. I think one of the problems with prior efforts in this area is that they were too different from the GEDCOM data model, and it wasn't clear how much the differences were going to help the average genealogist.<br/>
+<br/>
+If you want the record managers to adopt a new data model, I think you'll want to make it easy for them to adopt (not involve a lot of programming) and you'll want to articulate clear advantages to their customers.<br/>
+<br/>
+Here's an example of what I mean. I'm not advocating that we shouldn't promote XML; XML is a huge improvement over GEDCOM.  This is just an example of a simple change that would give clear benefits.<br/>
+<br/>
+Currently it's next to impossible to share pictures and other media associated with a GEDOM, because most GEDCOM files just store media as file paths.  So come up with a jar/zip file format for a GEDCOM file and associated media (call it .gar maybe). Then users can create files that contain all of the pictures referenced from a GEDCOM, send those files to their relatives, and their relatives could load the files and have the pictures linked.</div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-12T07:10:39-08:00</div>
+<div class="text">Here are a few more things that would help improve existing gedcom support:<br/>
+<br/>
+(1) A standard way (like a _living tag) to mark someone as living. Currently when someone has no dates, in order to determine whether they are living (so we don't publish data about them publicly) we have to start looking at dates on their relatives.  It's a pain.<br/>
+<br/>
+(2) Standardize on name pieces, or at least a requiring full-names to be in "name-prefix given-name(s) /surname/ name-postfix" format.  <br/>
+<br/>
+(3) For source citations, standardize on either a text sub-field or a note.  Currently both are allowed by the standard.  Some programs use both, some use just the text and throw away the note, others use just the note and throw away the text.  It makes it nearly impossible to export a gedcom that will work for all programs.<br/>
+<br/>
+(4) Standardize on a way to represent the type of parent-child relationship: adoption, biological, etc.<br/>
+<br/>
+(5) You may want to allow people to attach sources and notes to relationships (e.g., child-parent, or person-spouse), in addition to sources on individuals and family objects.</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-11-12T07:24:59-08:00</div>
+<div class="text">"<br/>
+(4) Standardize on a way to represent the type of parent-child relationship: adoption, biological, etc."<br/>
+<br/>
+At the risk of setting off a firestorm...<br/>
+<br/>
+I've said this before and I'll say it again... there is only one type of genealogical parent-child relationship-biological. any other type such as adoptions, fosterings, et al are mere social relationships and *not* genealogy and as such have no place in genealogy reports such as genealogy charts, reports, etc.- they are family history; genealogy and family history are *not* the same thing.</div></div><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-12T07:53:16-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+To avoid your expected firestorm, I think that I can say that many researchers don't agree with you, for at least following reasons:<br/>
+- many children are born from another biological father that the one who pretends (or even thinks) he is the biological one. This was true in the past, and still is (proven by research). Hence, unless you have very extensive DNA test budgets, forget to reach back 300 years in a purely biological way.<br/>
+- What people become is a combination of nature (biological relations) and nurture. Many researchers value the latter, even if the former may be more important.<br/>
+- Even biologically speaking, there is an issue, if you take into account surrogacy. A child can be born out of carrier mother X under a surrogacy agreement, grow up within family of parents Y and Z, but biologically inherit the genes from U and V. And wait till science can combine exotic pieces of DNA from different people to build tailor-made babies.<br/>
+<br/>
+Hence, I think point 4 still stands as a point for most of us.<br/>
+<br/>
+Xavier</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-12T08:05:23-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+Thank you for the firestorm topic. I do understand what you are saying.<br/>
+<br/>
+The thought of a BetterGEDCOM was for Sharing of Information. So, it's a way to transport information in my Genealogy software with you with your software.<br/>
+<br/>
+The issue of Family History vs Genealogy is interesting. I would throw in another Group to the mix, 'Name collectors'. Please, we don't need to take a tangent on that firestorm.<br/>
+<br/>
+The difference, I think is not the Transport of information, nor the software that is used. Be that online on a computer you and I might us. It would be how You and I use our Software.<br/>
+<br/>
+So, for the purpose of the BetterGEDCOM project, you and I need control over what we see or bring into our software. In other words, WE need options on what we USE. The transport needs to be transparent to the use of the data that is included in the transport.<br/>
+<br/>
+If I am close in the three categories above, we need to be able to share what we have.<br/>
+<br/>
+Let me throw "One Name Projects" into the Name collector category, just for discussion. I know of a One Name Project that I would like to see information from. The BetterGEDCOM project is implemented (at some point in time), I would want that One Name Project file sent to me. I would open that file in my software. During Import, I would want to control what is brought into my new file on my computer.<br/>
+<br/>
+Lets say, that in the file, during import, I find the ancestor I have been looking for. I'd like to be able to Identify that specific person, Bring in ALL of his ancestors, siblings, spouse(s), and descendants and toss the rest. That is what I want to look at. I may or may not bring that information into my own file. But that would mean that I have ALL of the information, most specifically research material (Source-Citations), and not loose anything in the file that was created by the One Name project.<br/>
+<br/>
+One step further, in reviewing that One Name project file, I see another Ancestor, who I know about, but is in a different family line. So, I would want to go back into that One Name project file, and export another set of Individuals, into a new / different file.<br/>
+<br/>
+I am not a Name collect, but not the Genealogist that you are. I have become more of the Family Historian that you mentions.<br/>
+<br/>
+Won't address the Name collector group, but for you, and I do hope you reply to this, that You be able to control ONLY the Genealogical Parent-Child relationships that you want to see. If we, the folks helping define our requirements, we should be able to "toss" those social relationships that you mention and not have them included when imported. So, the marking of relationships are very important.<br/>
+<br/>
+I would just add, that I would want to see a list of those 'tossed' relationships at the completion of the opening of that file.<br/>
+<br/>
+All that to say is that we need to have the flexibility to transport data collected by the End User.<br/>
+<br/>
+One User's opinion.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-11-12T09:31:18-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+What I am saying is that yes, we do need a way to show social relationships; but that way should *not* be by tricking the software into believing that that relationship is in any way genealogical in nature. In other words, a child adopted by someone should *never* be shown as a child of the person who adopted them.<br/>
+<br/>
+Presently there is no way to do this except with notes unless one links the child as an actual child of the adopted parent.<br/>
+<br/>
+We need other linkages that clearly define these social relationships that will *always* show these distinctions, be it in charts, family group sheets, narratives, or whatever so that a step, foster, or adoptive relationship can never- under *any* ciscumstances, be mistaken for an actual biological relationship.<br/>
+<br/>
+That is what I'm asking for.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-12T09:51:25-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+Do me, that is a software requirement, not the vehicle to transport the data. The transport has to be transparent, not to make any changes to what is presented.<br/>
+<br/>
+It's in the export or import of the data, in my humble opinion, is where your requirement goes. By the way, I am supporting what you are asking, just don't want the BetterGEDCOM to do that.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-12T10:01:08-08:00</div>
+<div class="text">Andy,<br/>
+<br/>
+then I can clearly follow your point. And indeed, we may need a wider area of relation types.<br/>
+<br/>
+However, I don't think it is up to the standards for data exchange to define how users want to view and/or print the relationships that are maintained by the system. A godfather has also a relation, be it a different one from a parent. It should be left to the software to decide which options it gives to the end user about this. Some software will keep it simple, others may indeed use a specific attribute (line style, ...) to indicate the particular relationship or could even allow the user to filter non-biological relationships.<br/>
+<br/>
+But we agree on the bottom line that the exchange standards need ways to define all types of relationships.<br/>
+<br/>
+Just out of curiosity: In the case of a carrier mother who puts a baby on the world from an implanted embryo, who do you flag as biological mother? The carrier mother or the woman who gave her egg cells to build the embryo?<br/>
+And let's take it a bit further: Like Dolly, one could have a fertilized egg, remove all chromosomes and replace them by the chromosomes of an adult person. Note that the mitochondrial DNA is probably still the one of the fertilized egg, not of the adult donor. Who would be the mother here? And the father? I know it is future, but when scientists did frog cloning, nobody believed it was possible for mammals.<br/>
+<br/>
+Xavier</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-11-12T10:35:52-08:00</div>
+<div class="text">Xavier,<br/>
+<br/>
+In my mind, it is always the "sperm Father" and the "egg Mother" of the fertilized egg who are the biological parents- no matter what my be done to or with that fertilized egg at a later date.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-14T15:03:39-08:00</div>
+<div class="text">Andy - I wholly support the idea that the exact relationship of a child to a so-called parent should be capable of exact definition.<br/>
+<br/>
+My only point would be that BG _must_ accommodate family historians not just genealogists. Over in the UK many (most?) of us consider ourselves family historians, looking at the wider aspects of the family in all its forms.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-14T15:27:10-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+Limiting myself to your comment, "...BG _must_ accommodate family historians not just genealogists."<br/>
+<br/>
+Personally, I use the term "genealogist" to encompass both concepts. The thought of one without the other is repulsive to me.<br/>
+<br/>
+I have lately begin to think of genealogy as the collection of the data and family history as the analysis of that data, but other than that, I am unable to draw a distinction.<br/>
+<br/>
+Rest assured, the needs of anyone considering themselves either a genealogist or a family historian are exactly what we should focus on. You'll get no disagreement there.</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-16T05:36:29-08:00</div>
+<div class="text">Re: Dallan's evolutionary GEDCOM extension suggestions:<br/>
+<br/>
+I've put the 6 mentioned here, with comments. This should be an entire project. This may be more important and have a larger impact that the BG project itself.<br/>
+<br/>
+(0) A standard way to represent their UUID. I think that this has evolved to be _UID.<br/>
+<br/>
+We also need a way to represent a set of these. If two person's are later found to be the same person, then we need a way to represent that, and to show which is the primary UUID. We have thought some about this and how it can be used to later merge information back (say after two researchers have made edits). <br/>
+<br/>
+(1) A standard way (like a _living tag) to mark someone as living. Currently when someone has no dates, in order to determine whether they are living (so we don't publish data about them publicly) we have to start looking at dates on their relatives. It's a pain.<br/>
+<br/>
+This is an interesting bit of information somewhere between evidence and conclusion. Gramps has a very sophisticated program to compute living (also used for computing estimated births and deaths, which can be added and marked as "calculated" dates). But a living tag is interesting (we use a living mark in our web-based app, because computing living status can be expensive). The living designation might need to have justification (linked to the person's date that provided the evidence, in case that changes). Also, it should have a current date attached to the living status guess, so that the date can be taken into account later. Perhaps add estimated DOB, and DOD, if missing.<br/>
+<br/>
+(2) Standardize on name pieces, or at least a requiring full-names to be in "name-prefix given-name(s) /surname/ name-postfix" format. <br/>
+<br/>
+Yes, these distinctions are lost when we go to GEDCOM. Gramps has one of the most sophisticated name representations of any application. Just recently we added multiple surname support. But most is lost in GEDCOM export.<br/>
+<br/>
+(3) For source citations, standardize on either a text sub-field or a note. Currently both are allowed by the standard. Some programs use both, some use just the text and throw away the note, others use just the note and throw away the text. It makes it nearly impossible to export a gedcom that will work for all programs.<br/>
+<br/>
+How could this be done?<br/>
+<br/>
+(4) Standardize on a way to represent the type of parent-child relationship: adoption, biological, etc.<br/>
+<br/>
+Ideas?<br/>
+<br/>
+(5) You may want to allow people to attach sources and notes to relationships (e.g., child-parent, or person-spouse), in addition to sources on individuals and family objects.<br/>
+<br/>
+Yes, another thing that Gramps XML handles, but is lost in GEDCOM. Ideas?<br/>
+<br/>
+-Doug</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-19T07:22:27-08:00</div>
+<div class="text">@AdrianB38, <br/>
+<br/>
+Modern genealogy recognizes extended families. See _Numbering your Genealogy_ for established standards (US) about recognizing adoptions, step-children, etc. <br/>
+<br/>
+Now, how well modern genealogical software is able to support those standards, well, that is probably a whole other party. <br/>
+<br/>
+Hope this helps. --GJ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-11T18:22:46-08:00</div>
+<div class="text">Dallan,<br/>
+<br/>
+We certainly want to plan for the future and encourage adoption of best practices, but we are most immediately concerned with the practical ability to import and export data. Here's the core of the immediate project's problems to solve as I imagine them right now:<br/>
+1. Can we accommodate a conclusion-based data model and an assertion/theory model at the same time? <br/>
+2. If these two cannot be accommodated elegantly within the same data model, where should the line be drawn between the need to capture data from existing products and elements which are desirable to adhere to good genealogical methodology regarding theories and building proofs for assertions?<br/>
+3. What are the implications of the above on software developers who are tasked with making today's genealogical software programs map to this data model? Do we need to tackle less ambitious goals to accommodate practical development problems? Should we provide mere stubs for certain data classes (e.g., theory, assertion stubs for evidence/source data class) to signal to developers a path for future development without burdening them with wholly new data constructs to accommodate?<br/>
+<br/>
+Regarding multimedia formats that could be compressed, this concept which GRAMPS uses has already been suggested and adopted in discussions elsewhere today.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-11T18:40:01-08:00</div>
+<div class="text">The multimedia transfer problem has been discussed in at least three other topics, see the discussions Goal2 under Goals, and 'XML for Multimedia ...' under Home - and there is a third one I can't find.</div></div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-12T05:04:54-08:00</div>
+<div class="text">I was just using that as an example of something that you could propose that would have clear benefits to users without creating a lot of extra work for the records-manager vendors, and therefore be more compelling for the records-manager companies to adopt.<br/>
+<br/>
+The challenge that you face here is that I don't see any of the major records managers are participating.  Without their buy-in, this effort will suffer the same fate as previous efforts have in this area over the past 10 years.<br/>
+<br/>
+You need to convince at least some of the major records-manager vendors that your changes will be worth spending their development resources to implement.  I think your most important goal is:<br/>
+<br/>
+What changes can we make to the existing gedcom model that will provide clear benefits to users with a minimal amount of effort implementation effort required, so that our changes have a chance of being adopted by the records-manager vendors someday?<br/>
+<br/>
+Until you address at that goal, this is just an academic exercise.</div></div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-12T05:43:35-08:00</div>
+<div class="text">Let me give you an example of what you're up against with this effort to create a better gedcom.<br/>
+<br/>
+Attaching a globally-unique ID to every person in a GEDCOM is a good idea. It means that when I share my GEDCOM with a relative or with an online service like new FamilySearch or WeRelate, and then I want to send an updated version of that GEDCOM later, it's easy for the online service or the records-manager used by the relative to determine which people have been updated, deleted, or added, because everyone in my GEDCOM is identified by a globally-unique identifier.  This makes merging the changes much easier and more accurate.  So we have clear user benefit.<br/>
+<br/>
+The code to create a globally-unique ID is not difficult to write.  It's less than a page.  FamilySearch has even made example code available.  So we have "easy to implement".<br/>
+<br/>
+This idea has been around for a long time and several records-manager vendors have adopted it.  By convention, they store the ID in a (non-standard) gedcom tag called _UID.  So we don't face the problem of: "If I do it and nobody else does, there's no benefit".  Others are already doing it, so there's clear motivation to the remaining records managers to add it.<br/>
+<br/>
+Given the above, what percent of GEDCOM's do I see with _UID tags?  You'd think it would be pretty high. It's less than 40%.<br/>
+<br/>
+Furthermore, some of the GEDCOM's with _UID tags don't actually store globally-unique IDs in them.  There are some records managers that allow the GEDCOM user to store whatever text they want to in the tag, and it's not required to be unique even within the GEDCOM, much less globally.  So in order to take advantage of the _UID tag, I have to first determine if this is from a vendor that stores true globall-unique IDs in that tag, or one that allows users to store whatever they want in that tag.<br/>
+<br/>
+Just getting vendors to store globally-unique IDs in a _UID tag in the existing GEDCOM file format would be a big win.  <br/>
+<br/>
+It's not as much fun to identify the current user-facing problems with GEDCOM, figure out how to fix them and work with the vendors to adopt your changes, as it is to come up with an entirely new file format.  But if you want to have an impact, that's where you need to begin.</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-12T05:59:02-08:00</div>
+<div class="text">I couldn't agree with DallanQ more.<br/>
+<br/>
+Perhaps a useful role that people here could play is creating a smooth path from current GEDCOM to BG, whatever it may be. For example, if we could all make sure that our current GEDCOMs supported an agreed-upon set of extensions (like _UID) then that would be a big step in moving forward.<br/>
+<br/>
+Gramps is set to add a _UID (and related infrastructure) to its system. Any advice is welcomed. Anything else that we should all advocate to make common extensions?</div></div><div class="comment"><div class="from"><strong>xvdessel</strong> 2010-11-12T06:16:57-08:00</div>
+<div class="text">Maybe (but if I remember well, this idea was already mentioned years ago in some of the historical GEDCOM-related efforts, and I even think I commented on that back then) we should build a leveled standard whereby a software can claim to respect the standard up to a given level.<br/>
+We could say that level 1 is the current GEDCOM level, with only basic data covered. Level 2 could then be a more strict GEDCOM-like adherence, e.g. including things like Unique IDs, more exotic types of events, etc.<br/>
+Level 3 would then be a new BG-level, but still at the level of conclusion data. It could include new concepts related to locations, date formats, event types and roles, character sets, gay marriages, Surrogate mothers, ...<br/>
+Level 4 would then enter the raw event data and decision process.<br/>
+<br/>
+To validate software, a set of files could be published for each level, whereby the test involves importing the test data into the software, perform a predefined data search (when and where was person X born?) and data entry (enter a new child for parents X and Y) and export all (or part) of the data again into the required format. After that, a publicly available program can compare the result file to a sample output file and give a percentage score.<br/>
+<br/>
+I believe similar mechanisms are used to benchmark browsers and many other software.<br/>
+<br/>
+Xavier</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-12T06:49:55-08:00</div>
+<div class="text">Dallan,<br/>
+<br/>
+We have significant support from several major vendors. I wouldn't expect to see their participation actively, because they're commercial entities, and frankly, they won't. Who pays software developers to take part in completely open community efforts? Who allows their developers to announce their participation in an effort such as this?  But they're certainly watching, and we certainly are considering that aspect of things very carefully. Don't worry about that. We're on it. However, you're not going to see some big logo that says, "SuperGenealogySoftware Pro 2010 Approved" here.<br/>
+<br/>
+Regarding your UUID example, this I think reflects the fact that a great deal of users  use old software that is simple and works but may not be under current development. This phenomenon is significant but it is also not of great concern. GEDCOM is very useful to many people, and while many of us think it's horrible, it actually works just fine for a great number of people. Every program can import GEDCOM, and why would existing applications simply abandon an import/export enigine that works and is already developed. It doesn't concern me that GEDCOM may still be in use in 5 or 10 years by the troglodytes. Heck, they're using software that's essentially 15 years old now! (And we all know who they are.) However, this phenomenon also won't hamper adoption by vendors with current products that are interested in remaining competitive in the commercial space where value-add is imperative.<br/>
+<br/>
+xvdessel,<br/>
+<br/>
+We certainly intend to have different standards that deal with different aspects of genealogical technology standards. We will thus definitely have different levels of comliance that adhere to different standards modules, as it were.</div></div><div class="comment"><div class="from"><strong>DallanQ</strong> 2010-11-12T06:50:24-08:00</div>
+<div class="text">I found the reference to the FamilySearch provided code:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:6:http://www.mail-archive.com/ldsoss@lists.ldsoss.org/msg00695.html --><a class="wiki_link_ext" href="http://www.mail-archive.com/ldsoss@lists.ldsoss.org/msg00695.html" rel="nofollow">http://www.mail-archive.com/ldsoss@lists.ldsoss.org/msg00695.html</a><!-- ws:end:WikiTextUrlRule:6 --><br/>
+<br/>
+I can't believe it's been 4 years already.  How time flies :-)<br/>
+<br/>
+Java and other programming languages also have built-in functions for generating UUIDs.</div></div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-16T09:11:41-08:00</div>
+<div class="title">Person names, identity and analysis</div>
+<div class="text">I have just blogged about the lack of an analysis layer in genealogy software databases of today:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:4:http://genmadscientist.wordpress.com/2010/11/16/who-is-john-smith-adventures-in-genealogical-data-modeling/ --><a class="wiki_link_ext" href="http://genmadscientist.wordpress.com/2010/11/16/who-is-john-smith-adventures-in-genealogical-data-modeling/" rel="nofollow">http://genmadscientist.wordpress.com/2010/11/16/who-is-john-smith-adventures-in-genealogical-data-modeling/</a><!-- ws:end:WikiTextUrlRule:4 --><br/>
+<br/>
+I'll attach this as a document to the main page.</div></div><div class="comment"><div class="from"><strong>brichcja</strong> 2010-12-02T01:52:36-08:00</div>
+<div class="title">XML format for census data?</div>
+<div class="text">Hi all. This is slightly off topic, but not irrelevant, and I suspect that people here will know the answer....<br/>
+<br/>
+Is there a standard XML format for representing historic census data? It strikes me that the rigidly hierarchical nature of the old censuses maps very well onto the tree structure of the XML-DOM model. I appreciate that all the people out there who provide census data to the web, be it amateurs just extracting one name for their own hobby, or the LDS, must have some kind of database structure to store it, but is there a standard public-domain version out there? If everybody started sharing their census data in the same way, it would have all the same benefits as the betterGedCom; in fact, it would even feed into it.<br/>
+<br/>
+Cheers,<br/>
+<br/>
+Chris</div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-12-02T04:16:35-08:00</div>
+<div class="text">Chris,<br/>
+<br/>
+Gramps has census XML format that it has been developing, but only for the actual census columns. The data is stored in the Gramps database on events connected to each person. It would be very easy to extract the census data from the people and create an XML with headers, though. In fact we have a report that does that, except goes to text rather than XML.<br/>
+<br/>
+For more information see:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:11:http://gramps-project.org/wiki/index.php?title=Census_Addons --><a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=Census_Addons" rel="nofollow">http://gramps-project.org/wiki/index.php?title=Census_Addons</a><!-- ws:end:WikiTextUrlRule:11 --><br/>
+<!-- ws:start:WikiTextUrlRule:12:http://gramps-addons.svn.sourceforge.net/viewvc/gramps-addons/trunk/contrib/Census/ --><a class="wiki_link_ext" href="http://gramps-addons.svn.sourceforge.net/viewvc/gramps-addons/trunk/contrib/Census/" rel="nofollow">http://gramps-addons.svn.sourceforge.net/viewvc/gramps-addons/trunk/contrib/Census/</a><!-- ws:end:WikiTextUrlRule:12 --><br/>
+<!-- ws:start:WikiTextUrlRule:13:http://gramps-addons.svn.sourceforge.net/viewvc/gramps-addons/trunk/contrib/Census/census.xml?revision=461&amp;view=markup --><a class="wiki_link_ext" href="http://gramps-addons.svn.sourceforge.net/viewvc/gramps-addons/trunk/contrib/Census/census.xml?revision=461&amp;view=markup" rel="nofollow">http://gramps-addons.svn.sourceforge.net/viewvc/gramps-addons/trunk/contrib/Census/census.xml?revision=461&amp;view=markup</a><!-- ws:end:WikiTextUrlRule:13 --><br/>
+<br/>
+Hope that helps,<br/>
+-Doug</div></div><div class="comment"><div class="from"><strong>brichcja</strong> 2010-12-02T06:51:06-08:00</div>
+<div class="text">Thank you. I'll have a look and see if I can make any sense of it.<br/>
+<br/>
+Chris</div></div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-16T09:53:19-08:00</div>
+<div class="title">SFT.xml Model</div>
+<div class="text">What is the consensus for tracking gedcom FAM. I have heard people for it and against it.<br/>
+<br/>
+Currently I have two models that work like so<br/>
+<br/>
+1.) PID which captures the individuals FatherID and MotherID. anytime a person is picked the Father and Mother ID act like the filter for.<br/>
+Any other individuals in the PID with matching parents are displayed as siblings along with the selected individual.<br/>
+This can also match the parents and display any other children linked to parents outside of this family structure aswell.<br/>
+This uses no GEDCOM fam records<br/>
+<br/>
+2.) PID which does not capture the mother and father ID, a second db is used FID.xml The FID captures the Male and Female in a family bond ID.<br/>
+The PID line set has a Child of ID = FID record set. Once an individual is selected the cid is captured and matches the FID, the FID familyID is display pulling Father display and mother display and any matching individual children to this group as siblings.<br/>
+Also each parent ID pulls up matches of other marriages or BONDS between two individuals to display those not married, or conceived children out side of a marital bond. this uses GEDCOM FAM record but only needs the male and female ID no Child id is need because the FID acts as a match to the childID in the PID.xml<br/>
+<br/>
+I prefer #2) this also allows a researcher or end user to create a place-marker on a bond between two people for start and end, even if they had no children. This input fields are preferred input fields that are desired but are not RECORDS. An EID.xml will capture the marriage record and link to this place-marker file. also it benefits   <br/>
+<br/>
+Gedcom is the closest like #2, but has better flexiblity in matches and less dual linking through out a gedcom databasee.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-12-16T14:31:32-08:00</div>
+<div class="text">My feeling is that the consensus drifted around the family entity being just a sub-type of GROUP. GROUP is needed (by some people) for all sorts of things like business partnerships and can also serve as the entity type for families. Presumably with some sort of sub-type to identify them. <br/>
+<br/>
+Alongside this, my view of the consensus is that things like birth / adoption events involved the child and parents / step / adoptive parents, each with a defined role in the event and this gave you the exact relationship, instead of relying on this woolly "Child in a Family" concept which ignored that one could be a step-child of one parent and a biological child of the other.<br/>
+<br/>
+BUT - since these were my personal preferences, I could be misinterpreting the consensus.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-12-16T15:13:36-08:00</div>
+<div class="text">Mike,<br/>
+<br/>
+My question would be "how do you handle relationships"?<br/>
+<br/>
+What is your model's definition of a Family?<br/>
+<br/>
+If you have a "family of 3", Mother, Father, Child, how are these handled beyond the PID?<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-16T17:06:07-08:00</div>
+<div class="text">@ Adrian, <br/>
+<br/>
+  you bring up a very good point about the old gedcom indi and fam area was mainly for generic default displays for navigation and placeholders of just a handful of records. <br/>
+  Over the years many users were forced to reuse those areas for other purposes like, adoption, business, bonds between to people, and step children. Many created sub classses inside this area making more complex than it has to be.<br/>
+<br/>
+ My FID (parents of a family) and PID (person individuals) functions the same way INDI and FAM records. BUT<br/>
+PID holds no records<br/>
+FAM only stors bonds between two individuals, no children listed.<br/>
+<br/>
+here is a basic FAM.xml for just cause say the node 'F' for father 'M' for mother, other data like bond begin and bond end with places.<br/>
+This is data selected by the user as default and is not a record but a place-marker for quick view. say 'g' fr group or family or bond what ever people view it as. displayed is seven groups.<br/>
+<br/>
+&lt;FIDxml&gt; <br/>
+   &lt;data&gt;<br/>
+      &lt;set&gt;&lt;g&gt;1&lt;/g&gt;&lt;f&gt;123&lt;/f&gt;&lt;m&gt;24&lt;/m&gt;&lt;&lt;(all the users generic display data)&gt;&gt;&lt;/set&gt;<br/>
+      &lt;set&gt;&lt;g&gt;2&lt;/g&gt;&lt;f&gt;123&lt;/f&gt;&lt;m&gt;22&lt;/m&gt;&lt;&lt;(all the users generic display data)&gt;&gt;&lt;/set&gt;<br/>
+      &lt;set&gt;&lt;g&gt;3&lt;/g&gt;&lt;f&gt;124&lt;/f&gt;&lt;m&gt;87&lt;/m&gt;&lt;&lt;(all the users generic display data)&gt;&gt;&lt;/set&gt;<br/>
+      &lt;set&gt;&lt;g&gt;4&lt;/g&gt;&lt;f&gt;67&lt;/f&gt;&lt;m&gt;54&lt;/m&gt;&lt;&lt;(all the users generic display data)&gt;&gt;&lt;/set&gt;<br/>
+      &lt;set&gt;&lt;g&gt;5&lt;/g&gt;&lt;f&gt;87&lt;/f&gt;&lt;m&gt;102&lt;/m&gt;&lt;&lt;(all the users generic display data)&gt;&gt;&lt;/set&gt;<br/>
+      &lt;set&gt;&lt;g&gt;6&lt;/g&gt;&lt;f&gt;87&lt;/f&gt;&lt;m&gt;36&lt;/m&gt;&lt;&lt;(all the users generic display data)&gt;&gt;&lt;/set&gt;<br/>
+      &lt;set&gt;&lt;g&gt;7&lt;/g&gt;&lt;f&gt;2&lt;/f&gt;&lt;m&gt;95&lt;/m&gt;&lt;&lt;(all the users generic display data)&gt;&gt;&lt;/set&gt;<br/>
+     &lt;set&gt;many many more entries here&lt;/set&gt;<br/>
+      .........................<br/>
+   &lt;/data&gt;<br/>
+&lt;/FIDxml&gt;<br/>
+<br/>
+Now in the PID <br/>
+&lt;PIDxml&gt; <br/>
+   &lt;data&gt;<br/>
+      &lt;set&gt;&lt;p&gt;67&lt;/p&gt;&lt;c&gt;2&lt;/c&gt;&lt;&lt;(all the users generic display data)&gt;&gt;&lt;/set&gt;<br/>
+     &lt;set&gt;many many more entries here&lt;/set&gt;<br/>
+      .........................<br/>
+   &lt;/data&gt;<br/>
+&lt;/PIDxml&gt;<br/>
+<br/>
+Ok Person 67 is a child of (family/group#2) from here you can navigate to thier mother#22 and father#123)<br/>
+<br/>
+If you choose to select person#123, you will note he has a bond to other people women #22 and #24.<br/>
+<br/>
+That is for navigating upwards throw records.<br/>
+Downwards. Say the man#123 was choosen<br/>
+the FAMxml pulls up two matches*<br/>
+<hr/>
+display*[G#1 matched with women #24]<br/>
+   filterPID match any for g=1<br/>
+display*[G#2 matched with women #22]<br/>
+   filterPID match any for g=1<br/>
+<hr/>
+So whie looking at a family of a person, the siblings listed can display the nuclear family of 4 matching siblings AND a step child from a bond by marriage or blood from either spouse.<br/>
+<br/>
+However adrain brings up a good point. adopted children with unknown genetic parent place-markers. <br/>
+Note that the same way PID loops to the FID up and down via navigation. Captures all children and step children.<br/>
+<br/>
+With Adoption EID.xml works the same way.<br/>
+EID Marriage event can tag back to a PID as HUSB also the WIFE roll of the same event links back to the female. Same goes for a legal record Adoption.<br/>
+<br/>
+ Since these are not records but defualt user or research preferred display markers. The real thing is the EID.xml where you enter various class and type records. each eid line points back to PID's linking adoptions to a group, marriages between two person and witness to the same event. I will get into that shortly. I what to show the FID and PID grouping first and show the navigation does work. I did a functional test on my site and can display pedigree, household, and desendants very easily.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-16T17:08:18-08:00</div>
+<div class="text">error correction <br/>
+display*[G#2 matched with women #22]<br/>
+filterPID match any for g=2<br/>
+<br/>
+#22 was to be g=2 not 1.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-16T17:16:41-08:00</div>
+<div class="text">Here for example my sister had two childern two seprate fathers<br/>
+She is the pid in question # 161<br/>
+<!-- ws:start:WikiTextUrlRule:12:http://www.stranskyfamilytree.net/gen%20project/view-family/family.asp?pid=161 --><a class="wiki_link_ext" href="http://www.stranskyfamilytree.net/gen%20project/view-family/family.asp?pid=161" rel="nofollow">http://www.stranskyfamilytree.net/gen%20project/view-family/family.asp?pid=161</a><!-- ws:end:WikiTextUrlRule:12 --><br/>
+<br/>
+Both children were put up for adoption and I have a way to do that. Adrain I know what you mean, this was one of my pet peeves also.<br/>
+<br/>
+The EID.xml that captures the event "Adoption"<br/>
+Each person plays a roll, birth mother, birth father if known. The child , the adopting parents each. One source record in the SID.<br/>
+Each EID entry for rolls and data from source doc point to EACH of the corrosponding PID's<br/>
+<br/>
+that is how you link many people to one event. flag eid lines sets as confirmed or disputed, or to review later. This is how you import export records individually, not mash them inside the INDI, pid have no recordds in them, PIDs are just visaul placemarkers for navigation, and a collected of records tied to a group piont per person.<br/>
+<br/>
+LOL I am babbling again!!!</div></div></div></body>
+</html>

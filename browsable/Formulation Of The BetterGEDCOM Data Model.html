@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>BetterGedcom - Formulation Of The BetterGEDCOM Data Model</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+ Here we will begin piecing together how BetterGEDCOM might facilitate data models that address the <a class="wiki_link" href="Evidence%20and%20Conclusion%20Process.html">Evidence and Conclusion Process</a>.<br/>
+<br/>
+<h2 id="toc1"><a name="x-The Big Picture"></a>The Big Picture</h2>
+<br/>
+We hypothesize two distinct data models. The first we describe as a "conclusion model" the second, an "evidence and conclusion model." To our knowledge, no solution has been adopted that accommodates both kinds of data while preserving the integrity of both.<br/>
+<br/>
+So who cares? We are a practical project with the goal of faithfully expressing all the data in a genealogy database without distortion as it is passed from an existing software application, into our specified BetterGEDCOM data format, and then presumably back into another software application. Unfortunately, this is the defining problem in genealogy data modeling. Any questions regarding other aspects of categorizing data take a back seat to this for a large number of folks who actually design genealogy software. Failure to address this issue is seen in technical circles as the primary roadblock to innovation.<br/>
+<br/>
+We as a group must either resolve this problem or abandon the idea of an evidence model and move on. It's that simple. There are signs we can devise a solution to this problem, and we have in fact just started. Let me suggest that we need to frame our solutions to the problem of reconciling these two concepts thusly (although this is not presented as authoritative):<br/>
+<ol><li>Conclusional data must be represented explicitly (i.e., it must be defined and distinct and follow certain rules)</li><li>Evidence data must be represented explicitly</li><li>How these two might coexist in a dataset must be clear as well as how one might transition from one mode to the other</li></ol><br/>
+I think framing any solution that includes evidence-type data in this manner will allow us to proceed swiftly to matters more apparent to end users.<br/>
+<br/>
+<h2 id="toc2"><a name="x-Working Definitions"></a>Working Definitions</h2>
+ As mentioned above, we need working definitions to use in our work. Let's get to it.<br/>
+<br/>
+<br/>
+<br/>
+<hr/>
+<br/>
+<a class="wiki_link" href="Data%20Model%20proposed%20by%20Adrian%20Bruce.html">Data Model proposed by Adrian Bruce</a> Nov 2010<br/>
+<a class="wiki_link" href="Data%20Model%20proposed%20by%20Brian%20J%20Densmore.html">Data Model proposed by Brian J Densmore</a> Nov 2010<br/>
+<a class="wiki_link" href="Illustration%20Of%20Evidence-Hypothesis%20Model.html">Illustration Of Evidence-Hypothesis Model</a> submitted by testuser42 under the discussion of evidence vs. conclusions in Adrian Bruce's model.<br/>
+<a class="wiki_link" href="Model%20Fragment%20-%20Mashup%20Of%20Evidence%20%26%20Conclusion%20Models.html">Model Fragment - Mashup Of Evidence &amp; Conclusion Models</a> by Greg Lamberson<br/>
+<br/>
+While the current working models included in the <a class="wiki_link" href="Data%20Models.html">Data Models</a> section and in the sidebar are certainly "in the running" as candidates for our model, I would hope we develop our ideas on the data model, its purpose and goals rather than devolving into a mere competition between possibilities. <br/>
+<br/>
+<h3 id="toc3"><a name="x-Working Definitions-Top-level element"></a>Top-level element</h3>
+ I believe that this element needs to be properly descriptive and unique enough to be distinct in order to facilitate searches and other such functions. My suggestion is:<br/>
+&lt;genealogy-datastore&gt;
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>brianjd</strong> 2010-12-03T12:46:11-08:00</div>
+<div class="title">formulation rules</div>
+<div class="text">How do we know when we are ready to begin building the formulation, and when to add/edit elements and define entities? <br/>
+Or when to add them to our own sub-pages like Adrian and myself have done?<br/>
+How will the decisions be made? out in the open, or do we have a members only area? Secret meetings and Handshakes? Or an open process? How will we know when we have reached a consensus on a topic and it is time to post the result?</div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-03T12:57:05-08:00</div>
+<div class="text">Without going into how a DB should be constructed. Without saying this piece of info needs to be placed inside such and such tag node.<br/>
+<br/>
+What I have seen, thought it would be a thing of the past, but seems to resurface.<br/>
+<br/>
+For a more research minded person handling records and sources. They have needs for a tool to lay out a crumb trails to follow. The old apps utilized the next available thing. The tree pedigree area, apps would attach evidence to a created person even thought this person may or may not be in the tree outline. This has cause some problems for users having excessive hypothetical people listed with the rest of there actual people in there known tree. sometimes apps would display tree outlines, and have pedigrees and db merges. Some times these shadow people caused conflicts to a users work in app add-on tools.<br/>
+<br/>
+I and many agree that the old gedcom structure is outdated. I also say its flexibility to be creative was limited, and apps need a way to display crumb trails of evidence and that crutch was to utilized the outline tree area. Now more and more talks go on how Pedigree and Family may not be an import part of proving the real important stuff like FACTS.<br/>
+<br/>
+With out facts how, how can you know what path you are on! - true,<br/>
+Researchers at times want a system that is very strict in  organizing facts and data.<br/>
+<br/>
+While that is very true, a fact is a fact, not that a "translucent or shadow" person should be created along in the area where a user does not want extra persons floating around it the name lists and popping up in the family print outs and stuff.<br/>
+<br/>
+What I am getting at is because of both sides wanting the best experience and tools from any applications.  If think maybe many don't realize that over time we were very limited to boundaries working with the data. each side took use of an existing function hindering the others view of a great experience.<br/>
+<br/>
+PURPOSE: How to make BetterBG give the best user experience for anyone. and make it a universal guideline of terms to be used and included. Thats great, but it should not say where that data will be stored.<br/>
+<br/>
+I say lay all the cards on the table, wishes and wants for a better experience. An dlet the techies and dev construct a db that functional does what is requested fundamentally by BG. And BG should not say how a db should store db in nodes or within child nodes. Leave that up the creative devs to present it and put it to an actual functional test.<br/>
+<br/>
+Example: if a User says I want to be able to view and choose or review place names changes over time like a pedigree view. FINE!<br/>
+BUT we can not have the other side say, NO that part of the model structure is for people only. Or a researcher wants shadow people or bread crumb trails tools. A user can not say NO my area is for actual defined people in my tree.<br/>
+---- Leave it to the techies and devs  create the need things. Let them just try to present a structure that can meet all needs WITHOUT being told how to build it.</div></div></div></body>
+</html>

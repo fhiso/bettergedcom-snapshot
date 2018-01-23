@@ -1,0 +1,1207 @@
+<html>
+<head>
+<title>BetterGedcom - Pending Definitions</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<a class="wiki_link" href="HOME.html">HOME</a> &gt; <a class="wiki_link" href="DEFINITIONS.html">DEFINITIONS</a> &gt; Pending Definitions<br/>
+See also Wiki pages <a class="wiki_link" href="Glossary%20of%20Terms.html">Glossary of Terms</a>, <a class="wiki_link" href="Supplemental%20Glossary%20from%20_Evidence%20Explained_%2C%202007.html">Supplemental Glossary from _Evidence Explained_, 2007</a><br/>
+<br/>
+<br/>
+These are definitions under discussion. There are discussion thread for each of these terms. Please make your comments on those threads. This page is intended to be used by the definitions monitor to propose definitions and to edit definitions based on the discussions.<br/>
+<br/>
+<span style="text-decoration: line-through;">Source Element - </span><strong>Citation Element</strong> - An identifiable field in a citation that is associated with particular data. [<a class="wiki_link_ext" href="message/view/Pending+Definitions/36844882" rel="nofollow">Link to Discussion</a>]<br/>
+<span style="text-decoration: line-through;">Source Template</span> -<strong>Citation Template</strong> - Specifies Citation Elements, arrangement of same and punctuation necessary to form a citation. [<a class="wiki_link_ext" href="message/view/Pending+Definitions/36845860" rel="nofollow">Link to Discussion</a>]<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Added to the "<a class="wiki_link" href="Glossary%20of%20Terms.html">Glossary of Terms</a>" <br/>
+<table class="wiki_table">
+<tr>
+<td><a class="wiki_link" href="Glossary%20Of%20Terms.html#QUAY">QUAY</a><br/>
+</td>
+<td>4 April 2011, GeneJ<br/>
+</td>
+</tr>
+<tr>
+<td><br/>
+</td>
+<td><br/>
+</td>
+</tr>
+<tr>
+<td><br/>
+</td>
+<td><br/>
+</td>
+</tr>
+<tr>
+<td><br/>
+</td>
+<td><br/>
+</td>
+</tr>
+<tr>
+<td><br/>
+</td>
+<td><br/>
+</td>
+</tr>
+</table>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-02T03:33:58-08:00</div>
+<div class="title">Pending Definitions Page</div>
+<div class="text">This page holds newly proposed definitions from the moderator that are currently under discussion. Please use the discussion threads to comment on these definitions or to suggest more terms. This page is intended for the use of the definitions monitor (currently me) to keep the definitions current and reflecting comments. After discussion seems complete definitions will be moved from this page and added to the final definitions page.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-02T03:37:03-08:00</div>
+<div class="title">Location of Discussion Threads</div>
+<div class="text">Unfortunately, the location of the threads discussing the first terms added to the Pending Definitions page are attached to the "Glossary of Terms" page, so you'll have to go there to view those discussions.<br/>
+<br/>
+Discussions of new terms added to this page should be attached to this page.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-02T09:35:40-08:00</div>
+<div class="title">Assertion -- Proposed Definition</div>
+<div class="text">I just added a proposed definition for the term Assertion to the Pending Definitions page.<br/>
+<br/>
+There is, IMHO, only one important issue that Better GEDCOM must come to grips withs in deciding how to implement the concept. (Given of course, you believe the concept deserving, and if you support the evidence and conclusion model, I would assume that you do).<br/>
+<br/>
+The issue is this. Should Assertions be implemented with a separate model Entity, or should Assertions be implemented as a Relationship in which Facts (e.g., instances of Entities or Attributes of Entities) refer to the thing (e.g., instances of Sources, Evidence, Proof Statements) that justifiy/sourcs/provenance/prove them?<br/>
+<br/>
+Here is the first cut of the definition for your convenience:<br/>
+<br/>
+Assertion -- An Assertion is a logical statement that claims the truth or falsity of some Fact. It consists of the Fact itself and a justification for the Fact's truth of falsity. In the genealogical context the Fact might be the existance of some instance of an Entity, say a Person or an Event, and the justification might be the Evidence or Source from which the Fact was extracted. If the fact is a Conclusion made by a researcher, then the justification may be a proof statement describing both the record search and the resulting reasoning that lead to the Conclusion. In some Models there is a separate Assertion Entity so therefore all Assertions are represented in a Database as separate records that assoicate facts with their justifications. This is the approach taken in the GenTech Model. In nearly all other genealogical Models, Assertions don't exist as separate records, but as references from Facts (either instances of Entities or Attributes of Entities) to their justifications (either Source or Evidence Records or a Proof Statement).<br/>
+<br/>
+<br/>
+Tom W.</div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-02T18:53:12-08:00</div>
+<div class="text">I think that the definition of an Assertion and an Assertion entity/relation should be split into two different definitions. The first definition should not decide how it is implemented in the data model. Se my comments about making different definitions for different contexts, using qualified terms, in the discussion of Individual.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-03T11:13:32-08:00</div>
+<div class="text">"An Assertion is a logical statement that claims the truth or falsity of some Fact." <br/>
+<br/>
+I don't think assertions are, much less are limited to, "statement[s] that [claim] the truth or falsity of some fact."</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-03T12:43:30-08:00</div>
+<div class="text">Based on the advice on this thread I have updated the proposed definition of Assertion. I felt I got some contradictory advice here, which somewhat cancelled some things out. The main message was that my definition is too long. I pared away a lot of it and here is the results:<br/>
+<br/>
+Assertion -- An Assertion is a statement that claims the truth or falsity of a Fact. The Fact might be the existence of a Person or the truth of a name Attribute, and the claim might be based on the Source that supplied the Fact. In some Models an Assertion is an Entity, and their computer representations have Assertion Records. In other Models an Assertion is Relationship between an Entity with the Face and an Entity with the Evidence. Computer representations based on these models implement Assertions as References between Records.<br/>
+<br/>
+I continue to mention the three levels required to understand the concept from the Better GEDCOM point of view -- what it really is, as it appears in a model, and as it appears in a computer representation. I sense some opposition to this approach, but I feel it is mandatory.<br/>
+<br/>
+Tom W.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-08T08:40:35-08:00</div>
+<div class="text">(1) The Evidence Explained definition of assertion is "assertion: a claim or statement of 'fact.'"<br/>
+<br/>
+Please explain why, for our purpose, and words "the truth or falsity of..." are helpful, much less proper.  <br/>
+<br/>
+<br/>
+(2) In the case of Evidence Explained, an assertion is a "claim or statement"; in the proposed definition, it is always a statement. Can you explain why you felt that change or difference is important to us?<br/>
+<br/>
+Thank you. --GJ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-08T10:04:20-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+The important concept behind an Assertion is that it is a Fact/Statement/Claim/Predicate/Information/Data backed up or justified or provenanced or sourced by Evidence. This is why in a Data Model it is often treated as a Relationship between two Entities, the first representing the Fact, the second representing the Evidence.<br/>
+<br/>
+As soon as the word Claim is involved, as it is in mine and the EE definition, there is an issue of truth to deal with. A Claim is a declaration that a Fact is true. An Assertion connects that Claim to the Evidence that purports to establish its truth. As researchers it is up to us to decide whether or not the Evidence does indeed establish that Claim. The EE definition is written in a way that avoids saying this outright, but does not hide it. I believe this demonstrates that what I wrote is correct, which, for a definition, seems to mean that it might be proper also.<br/>
+<br/>
+You haven't directly said that you believe my definition to be wrong, though you seem to be implying that it might be unhelpful and improper. It would be useful to me if you could explain why you feel this.<br/>
+<br/>
+Here is a suggested rewrite of my definition that hides the words truth and falsity, but means the same thing, and might be more appealing to you:<br/>
+<br/>
+Assertion -- An Assertion is a claim or statement of a Fact. The Fact might be the existence of a Person or the value of a name Attribute, and the claim might be based on the Source that supplied the Fact. In some Models an Assertion is an Entity, and their computer representations are Assertion Records. In other Models an Assertion is a Relationship between an Entity with the Fact and an Entity with the Evidence. Computer representations based on these models implement Assertions as References between Records.<br/>
+<br/>
+You also asked why I felt that a change or difference in wording was important. Frankly I didn't think about it; I simply wrote what I felt was the best way to capture the concept. I think the wordings are semantically equivalent. It is strange to me that your second comment claims that in my definition "it is always a statement", since in my definition I only use the word "statement" only once, and in that single context I explicitly say  "a statement that claims the truth or falsity of a fact." So with respect your second comment doesn't make sense to me.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-08T14:17:48-08:00</div>
+<div class="text"><br/>
+At first read, I thought this might be a case where the definition was needlessly contrived. After a couple of re-reads, however, me thinks we have apples and oranges. <br/>
+<br/>
+You write: <br/>
+(1) "The important concept behind an Assertion is that it is a Fact/Statement/Claim/Predicate/Information/Data backed up or justified or provenanced or sourced by Evidence ... <br/>
+(2) "A Claim is a declaration that a Fact is true. An Assertion connects that Claim to the Evidence that purports to establish its truth."<br/>
+<br/>
+In that context, what you are calling an "assertion," seems part of my logic, reason, proof or even proof argument, etc.  Conversely, what I call an assertion is just your "fact"/statement/claim ...., etc."--considered separate from whether or not there is any evidence in support (much less any explanation, logic, reason, proof or proof argument, etc. relating the former to the latter).<br/>
+<br/>
+Claim was one of the definitions I left out of the wiki supplement. From Evidence Explained, 2007, "claim: an assertion of 'fact' for which no evidence is supplied or else the evidence is insufficient or not yet adjudged." Let me know if you want me to add that definition to those on the Wiki supplement. <br/>
+<br/>
+On a separate but related note, we are talking about historical research, so I'd personally like to see care exercised about words like "falsity or truth." We deal often with opinions and personal observations. At least for me, research is largely an effort to learn more, to understand, interpret and put things in historical context. In the case of "assertion," by avoiding use of the words "falsity or truth," we also avoid the related philosophical debate.    <br/>
+<br/>
+"She wrote, 'I remember the look on father's face when the news came. As scary as that day in 1929 was, none of us could have predicted how much the Great Depression would come to shape our lives.'"<br/>
+<br/>
+P.S. Just learned you sometimes become logged out of Wikispaces if you open a link in a tab. Should you not realized you've become logged as a guest, your post seems to go poof.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-08T16:03:27-08:00</div>
+<div class="text">An Assertion is a Statement of Fact that carries with it a Claim and implication that it is true. The difference between us is whether or not the reason that justifies that claim is required before we can call something an Assertion. As you say, the definition of Claim doesn't require there to be any Evidence, but to me an Assertion is really more than a Claim. It is an "aggressive" Statement that something is true and therefore should have accompanying Evidence. It is in this distinction that we differ.<br/>
+<br/>
+Question: If an Assertion is really nothing more than a Statement, or even a Statement that is assumed to be true, why would we need the extra concept of an Assertion at all? If it's just the same as a Statement why not throw it away and stick with Statement?<br/>
+<br/>
+Question: If you were looking for a new ancestor and you knew nothing about him yet, but you nevertheless made the Statement, "My ancestor's name was George", what would you call that Statement? I think the difference between us might be that you would call it an Assertion, while I would it an Hypothesis, where that word means a Statement that might be true, but there is not enough Evidence yet to prove it one way or the other.<br/>
+<br/>
+I think it makes sense to define an Assertion as a Statement with justification and a Hypothesis as a Statement without justification.<br/>
+<br/>
+All that being said, however, your definition of the word Assertion is closer to the dictionary definition.<br/>
+<br/>
+I am influenced by the fact that on the computer Model side an Assertion is an Entity or a Relationship that joins together factual Entities and Justification Entities (Sources, etc). There would be no reason to invent such a concept in a computer Model unless we were fulfilling this need.<br/>
+<br/>
+I think we need a word for the idea of the combination of a Statement and its justification. We obviously have to have Statements that link to their Evidence, and Conclusion Statements that link to the logical arguments used to "prove" them. It is my belief that the word Assertion is right for these combination concepts. The fact that such a use doesn't agree exactly with ESM is not an issue with me, but I don't think this is the case for you.<br/>
+<br/>
+Do you think we need these combined concepts? If so, do you have any suggestions for what to call them? How about a Supported Statement or a Justified Claim or something like that?<br/>
+<br/>
+I will rework the definition so that there is not an automatic assumption that there must be justification as part of the Assertion to see what you think about it.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-08T20:41:06-08:00</div>
+<div class="text">Hi Tom:<br/>
+<br/>
+At this point, I hope you'll consider keeping the definitions at a high level, and limited, where a larger group of stakeholders are more likely to find agreement.<br/>
+<br/>
+I think that was Russ' point to me about the term "Repository."<br/>
+<br/>
+From that, then, I'd suggest not combining concepts. <br/>
+<br/>
+Let's get the hair off of these dogs so we can see the meat.    --GJ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-09T03:33:21-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+You have not answered the various questions I've posed in my last couple responses. I have tried to respond seriously and carefully to yours.<br/>
+<br/>
+At this point, I don't see any reason to change my direction of trying to craft definitions that cover the "high" level, the model level, and the representation level. If the consensus is that they be formatted as separate side by side definitions for the three levels, instead of being combined into one definition, I think that is a great idea. That was my first preference, but an early comment caused me to join them up.<br/>
+<br/>
+You may not fully realize that we are not creating a set of definitions for genealogical researchers and program users. We are trying to create the set of definitions needed for the technical work of creating a genealogical data model and for deciding how to represent that model in computer files.<br/>
+<br/>
+The notion of having to craft definitions in order to appeal to a large group of non-technical stakeholders, instead of crafting them to fulfill the actual needs of the technical work of Better GEDCOM, is an idea that is foreign to me and something I cannot agree to.<br/>
+<br/>
+At this point it is clear to me that you think my approach is wrong. If you do believe this, I suggest you say it clearly and directly, and you then suggest another way to handle the definitions. If you get agreement I will not be offended and I will gladly step aside.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-09T04:50:16-08:00</div>
+<div class="text">I have just updated the Assertion definition in line with GeneJ's comments that an Assertion is a claim and that a claim does not require evidence.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-09T08:52:55-08:00</div>
+<div class="text">Thank you.<br/>
+<br/>
+You wrote,"You may not fully realize that we are not creating a set of definitions for genealogical researchers and program users. We are trying to create the set of definitions needed for the technical work of creating a genealogical data model and for deciding how to represent that model in computer files."<br/>
+<br/>
+I don't know what to tell you, Dad. I've had modeling experience in another field. As far as these definitions are concerned, I hope we will communicate more effectively about the data model when we have a more complete set of essential genealogical definitions in place. <br/>
+<br/>
+As to the definition of assertions, thank you. We find assertions in materials we work with (our sources), and we create assertions in materials we develop. When we share our materials with others, those materials become their sources.<br/>
+<br/>
+Housekeeping:<br/>
+You wrote, "If an Assertion is really nothing more than a Statement, or even a Statement that is assumed to be true, why would we need the extra concept of an Assertion at all? If it's just the same as a Statement why not throw it away and stick with Statement?"<br/>
+<br/>
+Perhaps a posting by Elizabeth Shown Mills from 2004 on APG-L is directive. <!-- ws:start:WikiTextUrlRule:28:http://archiver.rootsweb.ancestry.com/th/read/apg/2004-08/1092707376 --><a class="wiki_link_ext" href="http://archiver.rootsweb.ancestry.com/th/read/apg/2004-08/1092707376" rel="nofollow">http://archiver.rootsweb.ancestry.com/th/read/apg/2004-08/1092707376</a><!-- ws:end:WikiTextUrlRule:28 --><br/>
+"Bob [Velke] is right that "fact" is a word to avoid in genealogy because, in many<br/>
+minds, the word "fact" means "true" or "proved."<br/>
+Two standard terms that are used now [16 Aug 2004] instead of fact are "assertion" or<br/>
+"information statement." Evidence, on the other hand, is our interpretation<br/>
+and use of an information statement. What I consider to be evidence on a<br/>
+point, someone else might see as irrelevant (at least until I enlighten them<br/>
+&lt;g&gt;)."<br/>
+<br/>
+(GJNote, thread continues with Mills' comment about the concept of QUAY, for those who are interested.)<br/>
+<br/>
+Tom wrote, "If you were looking for a new ancestor and you knew nothing about him yet, but you nevertheless made the Statement, "My ancestor's name was George", what would you call that Statement? I think the difference between us might be that you would call it an Assertion, while I would it an Hypothesis, where that word means a Statement that might be true, but there is not enough Evidence yet to prove it one way or the other."<br/>
+<br/>
+A hypothesis is a special kind of assertion, isn't it; ditto, a conclusion. It's nice to have a term that can generically cover so much territory (especially those of us who hold their nose when they type the word "fact")<br/>
+<br/>
+Hope this helps.--GJ<br/>
+<br/>
+P.S. I'm not sure which questions I didn't respond to in the next earlier post. Buzz me or comment here and I will do my best.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-09T09:14:43-08:00</div>
+<div class="text">err... posting, not thread.<br/>
+I should have written, "_posting_ continues with a Mills' comment about the concept of QUAY, for those who are interested."</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-02T09:52:21-08:00</div>
+<div class="text">Why not let an assertion be an assertion be  an assertion, and separately define terms for the different steps or processes by which different genealogists arrive at an  assertion. <br/>
+<br/>
+The Evidence Explained definition for assertion is "assertion: a claim or statement of 'fact.'</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-03-02T09:57:25-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+I agree.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-02T11:36:43-08:00</div>
+<div class="text">I believe that any concept that is going to be realized in our model, as Assertion assuredly will, has to be described in enough detail that all ramifications about its possible meaning, use and possibly even its implementation have a chance to be better understood.<br/>
+<br/>
+The word assertion has been used on this wiki a number of times by a number of persons in a number of contexts with a number of different implied definitions. Like "we'll add assertions to the model" or "our model should be based on assertions." I find these statements to be tautologically true but effectively meaningless, because there is no context around them. Saying that an assertion is "a claim or statement of fact" and then saying that "our model should be based on assertions" means that "our model should be based on claims or statement of facts". Very nice indeed. I believe in that. I really, really do. But what in the world does that really mean, and how does it help anyone understand what  Better GEDCOM is up to or how the Better GEDCOM model should be developed or structured? In my definition I have made it clear what an Assertion is, how Assertions can fit into a larger genealogical Model, and while doing so have described the two main ways they are usually dealt with. My hope is that putting this kind of information into a definition will prevent confusion later.<br/>
+<br/>
+The message I am getting is that this my definitions have too much detail. In the definitions I am trying to draw on my research and knowledge and maybe some wisdom about genealogical data models. I know where and when and how these terms have been used. I have seen just about every confusion and misunderstanding that has occurred over their usage. I believe this knowledge should be packaged somewhere to help avoid future deadends and misunderstandings. My naive belief is that these definitions are a good place to do that. That may not be the case. I'll write up and propose a few more definitions to see if people think I am continually on the overkill side of things. If so I'll try to find some other arrangement.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-02T12:51:30-08:00</div>
+<div class="text">Tom wrote, "I believe that any concept that is going to be realized in our model, as Assertion assuredly will, has to be described in enough detail that all ramifications about its possible meaning, use and possibly even its implementation have a chance to be better understood."<br/>
+<br/>
+At least some would suggest that the more detail you try to add, the more ramifications you try to describe, the less folks will even read, much less try to understand the very thing which you have sought to clarify.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-02T22:46:35-08:00</div>
+<div class="title">Person -- Updated Proposed Definition</div>
+<div class="text">Here is a revised definition for Person. I have taken the advice from various comments to choose the term Person as the preferred term. Individual is now only mentioned as the term used in some models to stress the difference between conclusions versus evidence.<br/>
+<br/>
+As Geir (and I previously) has pointed out many of the important terms are used in three quite different contexts -- as real objects in the real world, as entities in a model and as records or as attributes of records in computer representations. My plan is to write my definitions in a way that the contexts are each covered. As is done in this definition of Person. See the definition of Repository for another example.<br/>
+<br/>
+Here is the updated definition:<br/>
+<br/>
+Person -- A real human being who exists or existed. Used in Models for the Entity representing human beings. In Models that contain both Evidence and Conclusion based Entities the terms Evidence Person or Conclusion Person might be used. Some Models use the term Individual for the Conclusion level Person Entity or the term Persona for the Evidence level Person Entity. The term Person is also used as the name of the Record type that hold information about Persons in computer Databases and Files.<br/>
+<br/>
+Tom W.</div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-03T04:38:38-08:00</div>
+<div class="text">It is nice to have only one term.<br/>
+<br/>
+Re. the last sentence, I think it should talk about records in BG if we are going to have such.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-03T05:57:03-08:00</div>
+<div class="text">Tom, seems eminently sensible and thorough to me.</div></div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-03-03T07:18:07-08:00</div>
+<div class="title">Data Model - Model</div>
+<div class="text">Tom,<br/>
+<br/>
+I really appreciate you taking on this task for Definitions. Thank you.<br/>
+<br/>
+I do have a question. Can you translate this text:<br/>
+<br/>
+"A Network or Structure of Entities and their Relationships, used to represent a restricted knowledge domain or ontology. Models provide a map for describing and understanding the domain. Models are used as specifications for the design of computer Databases whose Records represent Instances of the Model's Entities."<br/>
+<br/>
+Into something that is far less Technical, specifically addressing this project.<br/>
+<br/>
+If you are to attract and involve other End Users, like my self, WE need to be able to understand it.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-03T15:05:29-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+How about:<br/>
+<br/>
+Data Model -- A Data Model is a Set of Entities and Relationships that represent a restricted domain of human knowledge.<br/>
+<br/>
+Will that attract end users?</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-03-04T04:39:04-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+What does "restricted domain of human knowledge" mean.<br/>
+<br/>
+Isn't a Data Model to show how Entities, that is pieces of data, Relate to other pieces of data, and how these Entities are defined by Properties or Attirbutes?<br/>
+<br/>
+For example, and this is a humble End User talking:<br/>
+<br/>
+The Data Model for a "Name" Entity.<br/>
+<br/>
+Number of Characters allowed (limited, number, unlimited), Types of Characters allowed (Alpha, Alphanumeric, WCHAR entries), and how that Entity might related to other Entities. Person entity for example.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-04T11:36:12-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+Would you prefer: A Model is a set of Entities and the Relationships BETWEEN them?  I wasn't defining Attribute or Entity or Relationship in the Model definition. You can refer to my definition of Attribute for that if you like. And an upcoming definition of Entity and Relationship.<br/>
+<br/>
+A restricted domain of human knowledge is a limited yet still conceptually complete subset of human knowledge. For example, all the important concepts required to support genealogical research. If you can't understand this I am at a loss.<br/>
+<br/>
+Your note about name is a specification for the computer representation of name values. My definition of a name would be something like:<br/>
+<br/>
+Name (Personal) -- The words by which a Person is known or referred to. In genealogical Models a Name is an Attribute of a Person Entity. In a computer representation a Name is a Field of a Person Record. The computer representation of a Name's value is typically restricted with rules about length, character set, and overall formatting.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-04T11:47:55-08:00</div>
+<div class="text">Based on recent comments the updated definition for Model is:<br/>
+<br/>
+Data Model; Model -- A set of Entities and their Relationships, used to represent a restricted area of human knowledge. Models are used as specifications for the design of computer databases and file formats whose Records represent instances of the Entities. Models in the genealogical area include the key concepts of Genealogy, e.g., Sources, Evidence, Persons, Events, Names, Dates, Places, and others.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-03-04T12:07:05-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Simple question.<br/>
+<br/>
+What is an Entity for this project?<br/>
+<br/>
+If an "entity" is a set of data entries in a genealogical database, then I understand. If that is the case, why can we say that.<br/>
+<br/>
+Your examples, to me, are Data Entries in a database.<br/>
+<br/>
+A set of Data Entries in a database and their relationship will be provided in this Wiki. Models ....<br/>
+<br/>
+<br/>
+<br/>
+I am so sorry that I am so stupid that I don't understand "restricted domain".<br/>
+<br/>
+I have already commented on the Name (Personal). Thank you.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-04T12:50:20-08:00</div>
+<div class="text">Russ - Re "If an 'entity' is a set of data entries in a genealogical database"<br/>
+<br/>
+Apologies for the pedantry but I want / we need a definition that covers things properly and doesn't allow software suppliers wriggle room. <br/>
+<br/>
+In this particular case, a BetterGEDCOM file is not a database in any normal sense of the word but we can still talk about entities that are represented in a BetterGEDCOM file.<br/>
+<br/>
+Entity needs to be an upcoming definition but I always start with the phrase "A thing in which we are interested...." What follows then is lots of hand-waving and talking about examples, all of which is tricky to convey in an web-page. So the initial definition should not include words like database - in case it isn't - or file - in case it isn't - or computer system - 'cos we ain't got one yet. <br/>
+<br/>
+It may then be helpful to go on to say that an entity may be represented by a record on a file or in a database.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-03T07:20:29-08:00</div>
+<div class="title">Term Definitions and Better GEDCOM ?</div>
+<div class="text">In Geir's last comment on the proposed definition for Person, he suggested that Better GEDCOM be mentioned in the part where we say that a Person is also a record in a database. I think he is suggesting that in some of the terms we actually commit to what is in effect a decision about the design of Better GEDCOM, in this case, that Better GEDCOM will support a Person Entity and a Person Record.<br/>
+<br/>
+I had been avoiding going this far in the definitions, but I will be happy to if people are willing to have a few apparent decisions about Better GEDCOM show up in the terms.<br/>
+<br/>
+In the case of Persons it is a forgone conclusion that Better GEDCOM will have that Record type, so it maybe moot in that context.<br/>
+<br/>
+Opinions?<br/>
+<br/>
+Tom W.</div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-03T11:13:08-08:00</div>
+<div class="text">The sentence I commented on was "The term Person is also used as the name of the Record type that holds information about human beings in computer Databases and Files."<br/>
+<br/>
+I am not sure we need to refer to definitions in other general contexts. <br/>
+<br/>
+The list of definitions must be able to define the things that will occur in BG, and the terms used in BG, but maybe not before we need them. <br/>
+<br/>
+I assume the Definitions will also have to wait with the definitions of data model entities.<br/>
+<br/>
+I can only say that this is a balancing act and we are unfortunately likely revisit the definitions later.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-03T11:42:15-08:00</div>
+<div class="text">Tom - I believe that the definitions in a Glossary, certainly at our stage of the proceedings - should be independent of any current or (assumed / presumed) future implementation or design of a system.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-03T13:40:48-08:00</div>
+<div class="text">I think the list of definitions should be less of a tutorial and rather provide the terminology for BG. <br/>
+<br/>
+A person can therefore at the moment be defined as just "Person -- A Person is a real human being who exists or existed."  <br/>
+<br/>
+When we agree on the terms needed in other contexts, model and record, we can add to the definition or create other definitions.<br/>
+<br/>
+Or it might at this stage have a remark saying something like "A user entity and a user record could be defined later."</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-03-03T13:47:17-08:00</div>
+<div class="text">Gier,<br/>
+<br/>
+I absolutely agree with you. The details should be when is needed in later in the requirements.<br/>
+<br/>
+Why should there be a user entity or a user record? Shouldn't it be User. Not sure was a user record is, unless it is a User Entered Record. Isn't that just a Record?<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-03T14:59:44-08:00</div>
+<div class="text">Geir,<br/>
+<br/>
+I disagree.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-04T07:32:05-08:00</div>
+<div class="text">I have probably not understood the purpose of definitions. As I see it, we need something that can specify the agreed and chosen (preferred) terminology to be used in BG (at least agreed for the moment). If we can not have some terms selected and defined, the work on the Requirements Catalog and other pages will be difficult. If we need to provide a tutorial, well, I don't think that should have priority. And if it does not have priority, it will save some work at this stage.<br/>
+<br/>
+For example, there are many real world objects that will/could be represented in a data model and in records. There is no need to repeat that general aspect for every object unless we know that there will be a representation in the model/records. Also, someone that does not already know that a person can be represented in a model or in records is not likely to know what a model or a record is. (And such a reader will have absolutely no idea about what an evidence and conclusion entities are.)<br/>
+<br/>
+On the other side of the issue I agree that the Definitions should not specify things about BG before it is agreed, but we can't wait forever before we start specifying definitions for BG. We have to include agreements in the Definitions as we go along.<br/>
+<br/>
+Maybe there is a need to discuss 1) the purpose(s) of the definitions, and 2) who we expect the reader to be - what qualifications. A list of definitions that satisfies all purposes and audiences will be difficult to write.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-03-04T09:36:30-08:00</div>
+<div class="text">Geir,<br/>
+<br/>
+Perhaps the question is really:<br/>
+<br/>
+Who is the audience of these Definitions? Developers or End Users or Both.<br/>
+<br/>
+At the moment, I think it needs to be Both. If it's just for developers, then I'll stop reading them. There are several already that I don't understand. Not the I need to understand them, but I consider myself a simple End User.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-04T14:30:56-08:00</div>
+<div class="text">To me, the audience of the glossary / glossaries is anyone who reads this stuff - so that's both interested end users and software developers. However, that does not imply that every person reading the glossary needs to understand every term. Only the ones they _need_ to. To me - if someone reads a document and sees a term that they don't understand, they should read the glossary. I don't see any necessity to read and understand all of the glossary first.<br/>
+<br/>
+It will be necessary that the IT geeks among us agree on our own terms and we'll put probably put those terms into the glossary. But nobody would expect end-users to read and understand those particular definitions.<br/>
+<br/>
+While it's tempting to say "split it into real world and IT", the fact is that there's an awfully wide grey area of crossover where I'd hope that some real world people can help.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-03T15:13:15-08:00</div>
+<div class="title">Attribute -- Proposed Definition</div>
+<div class="text">I have just added a proposed definition for Attribute to the list of proposed definitions. Here it is:<br/>
+<br/>
+<br/>
+Attribute -- An Attribute is a quality or a feature that is a characteristic or inherent part of someone or something. In a Model an Attribute is a property of an Entity, having a name or tag to identify it and a value to give it meaning. In a computer representation an Attribute is a field of a Record.</div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-04T08:07:24-08:00</div>
+<div class="text">It seems to me that the model and records terms should be Attribute. It seems like this def also define the term to real world, which there is a lot of objections to - incl me. I's too techy.<br/>
+<br/>
+Also, if the term attribute is used in the real world, many readers would assume that the info about such an attribute will be represented by an attribute in the model or records. A different real world term would avoid this.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-04T08:09:16-08:00</div>
+<div class="text">Correction: It seems like this def also define the term to real world,<br/>
+<br/>
+should read<br/>
+<br/>
+It seems like this def also defines the term to BE USED IN THE real world,</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-04T11:39:25-08:00</div>
+<div class="title">Name (Personal) -- Proposed Definition</div>
+<div class="text">In responding to Russ about the definition of Model, I wrote a definition for Name (Personal), and added it to the Proposed Definitions page.<br/>
+<br/>
+Here it is:<br/>
+<br/>
+<br/>
+Name (Personal) -- The words by which a Person is known or referred to. In genealogical Models a Name is an Attribute of a Person Entity. In a computer representation a Name is a Field of a Person Record. The computer representation of a Name's value is typically restricted with rules about length, character set, and overall formatting.</div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-03-04T11:57:31-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Thank you. Looks great.<br/>
+<br/>
+Some where and I think it gets into the requirements, is to how the "Name" is handled.<br/>
+<br/>
+Three "attributes" come to mine.<br/>
+<br/>
+1) Name in one or many fields<br/>
+<br/>
+I think that some programs put the full name into one field, but others may have multiple fields (Given name, Middle Name, Surname) to name a few.<br/>
+<br/>
+2) AKA<br/>
+<br/>
+Also Known As - probably should be a separate field, but I have seen users enter<br/>
+<br/>
+GivenName (AKA Name) Middlename Surname<br/>
+<br/>
+(for example)<br/>
+<br/>
+3) Names as Titles<br/>
+<br/>
+Lord Baltimore<br/>
+<br/>
+But the definition you provided is great.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-04T16:24:58-08:00</div>
+<div class="text">This definition does not say anything about how a name should be modeled or encoded in BG, it is just a tutorial. Or .... considder the following:<br/>
+<br/>
+"In genealogical Models a Name is an Attribute of a Person Entity." If there is a data model defined for BG, does this mean that the BG model must have a Person entity, and must the name be an attribute in that entity?<br/>
+<br/>
+"In a computer representation a Name is a Field of a Person Record."<br/>
+Since BG will describe a computer representation, does this mean that BG must define a Person Record? <br/>
+<br/>
+Many fields or structure in BG will have a  "length, character set, and overall formatting." - do we need to say that about every structure we define?<br/>
+<br/>
+(When we come to BG, I do not think that a persons name shall be restricted to be encoded in one field.)</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-04T16:57:46-08:00</div>
+<div class="text">Maybe it is better to say "In some genealogical Models ..." and "In some computer representations ..."</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-04T17:55:16-08:00</div>
+<div class="text">Gier,<br/>
+<br/>
+Good suggestions. I'll make the changes. Thanks.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-04T13:38:45-08:00</div>
+<div class="title">Entity -- Proposed Definition</div>
+<div class="text">I have just added a definition for Entity to the page of Proposed Definitions.<br/>
+<br/>
+Here it is:<br/>
+<br/>
+<br/>
+Entity -- An Enity is a component of a Data Model. It represents and abstracts a set of objects from the real world. An Entity is composed of Attributes that define its structure; Attributes are abstractions of properties or characteristics of the real objects. An Entity may be in Relationships with other Entities in the Model. When a Model is represented on a computer, a Record is usually defined for each Entity, with Fields that correspond to the Attributes.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-07T09:24:40-08:00</div>
+<div class="text">Would it not be a good idea to add "Entities are things that we wish to hold information about"?<br/>
+<br/>
+Otherwise we've got no real handle on which objects out there get to make it as Entities.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-06T08:40:13-08:00</div>
+<div class="title">Event -- Proposed Definition</div>
+<div class="text">I just added a first cut, proposed definition of Event to the proposed definitions page. Here it is:<br/>
+<br/>
+<br/>
+Event -- An Event is something that happens in the real world at a time and place. Events of genealogical signficance involve Persons who often play specific roles with respect to the Event. Some Events, such as birth or marriage, establish Relationships between Persons. Some genealogical Models include Events as an Entity, some include them as Attributes of the Person or other Entities, and some include them both ways. Analogous to Models, the computer representations of Events can be as separate records or as fields within records.</div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-06T09:59:22-08:00</div>
+<div class="text">Considering previous discussions I think it should say<br/>
+<br/>
+"... a time or period of time, and at one or more places ..." and<br/>
+<br/>
+"... may involve Persons ..."</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-06T11:02:38-08:00</div>
+<div class="text">Gier,<br/>
+<br/>
+Thanks for your comments. I've made the changes.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-06T12:43:25-08:00</div>
+<div class="text">Thinking back to Louis' comments in the discussion over the difference between Event and Attribute, I found the concept of the event changing something to be useful, especially when considering events that happen over a period of time and trying to decide if they are attributes or events.<br/>
+<br/>
+Would it be useful to add this in, e.g.:<br/>
+"An Event is _a_change_ that happens in the real world at one or more places and at a time or over a period of time" ??</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-06T12:57:30-08:00</div>
+<div class="text">I think the change is exactly what we do NOT want in the definition if we want to merge Gedcom attributes and events. See the latest discussion about this.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-06T14:34:29-08:00</div>
+<div class="text">OK - let me go over my conclusions from that thread. We started with the requirement that "Assuming that the BetterGEDCOM project distinguishes events from ... attributes ..., then BetterGEDCOM must define and publish a clear definition of the difference between the two concepts"<br/>
+<br/>
+And I finished by saying "I see no reason to worry about the distinction between an attribute for a person and an event that applies only to one person - there's no serious distinction that I can envisage in the future BG Data Model"<br/>
+<br/>
+What this doesn't mean is that there's _no_ distinction between an attribute and a single person event. It just means that any difference is too small to be of interest to the BG data model. <br/>
+<br/>
+You could take an analogy from physics and say that the difference between an attribute and a single person event is at a sub-atomic level. But the difference between a neutron and a proton still exists, even if it's of little interest to a biologist, say.<br/>
+<br/>
+So either we don't define either event and "attribute" at all, or we define them both, separately and clearly. If we do the latter, we can add a statement to the Glossary saying that we expect the 2 to look very similar in the Data Model or - as I would prefer - we don't attempt to predict the final conclusion in the Glossary.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-06T08:58:31-08:00</div>
+<div class="title">Relationship -- Proposed Definition</div>
+<div class="text">Here is a proposed definition for Relationship, just added to the Proposed Definitions page.<br/>
+<br/>
+Relationship -- A Relationship is a connection between two or more persons, objects or concepts. Models consist of Entities and Relationships, where the Relationships are viewed as labeled connections between Entities. In some Models a Relationship can take the form of an Attribute of one Entity that refers to another Entity. In computer representations Relationships are often fields of Records that refer to other Records.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-06T12:53:40-08:00</div>
+<div class="text">I'm not too happy about the sentence:<br/>
+"In some Models a Relationship can take the form of an Attribute of one Entity that refers to another Entity"<br/>
+<br/>
+Philosophically (IT warning /on) relationships and attributes are separate things in a data model. I know that in the _implementation_ of the model, it's done exactly how you describe, indeed, you can still be in a data model stage when you add those pointer attributes. But in a very real sense the relationship isn't those attributes, it exists independently. (Uselessly without the attributes, of course!)<br/>
+<br/>
+So I'd remove that sentence and alter the end sentence to "In computer representations Relationships are often _implemented by_ fields of Records that refer [can we have "point to"? AB] to other Records."<br/>
+<br/>
+(IT warning /off)</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-06T13:37:32-08:00</div>
+<div class="text">A relationship in the real world can also be represented by records in an implementation, and can even be represented by entities in a data model. Pick and choose ...</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-06T15:07:54-08:00</div>
+<div class="text">Adrian, Gier,<br/>
+<br/>
+I have removed the sentence that Adrian referred to. Of course he was right.<br/>
+<br/>
+There are a lot of sub-issues still hiding in the cracks under this floor.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-06T09:11:48-08:00</div>
+<div class="title">Record -- Proposed Definition</div>
+<div class="text">Just added following to Proposed Defs:<br/>
+<br/>
+Record -- In computing a Record is number of Fields of information that are handled as a whole. Records conform to restrictions that specify the sets of  Fields a Record of a particular type may have, and the possible values those Fields may contain. Computer databases consist of potentially huge numbers of Records of potentially many types.</div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-06T10:12:06-08:00</div>
+<div class="text">In our work it is important to say that a record is part of a file</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-06T10:59:05-08:00</div>
+<div class="text">Geir,<br/>
+<br/>
+Thanks. I've updated the definition from your suggestion.</div></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-03-06T17:27:42-08:00</div>
+<div class="title">Place/Location -- Proposed Definition</div>
+<div class="text">Another definition needed is for Place. The term place is used in GEDCOM but I've seen it also referred to as "location". I don't personally care which is used, as long as just one is picked.<br/>
+<br/>
+Place seems obvious, but we'll have to define it carefully in terms to answer questions such as: "Is it the same place if the country changes?". There's also the question of identification of it and the hierarchy of places. What about lower levels, such as a hospital in a city, or a room in the hospital, or a specific bed in the room - as the place where you were born.<br/>
+<br/>
+I'm not sure how far we should go here, Tom, but at least something is needed.<br/>
+<br/>
+Louis</div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-08T18:19:08-08:00</div>
+<div class="text">Here are some place related proposed definitions:<br/>
+<br/>
+Place - A place is a geographic area that may be larger than a country and in theory as small as a single point. Examples of place types are buildings, farms, cities, church parishes, military districts, postal areas, states and countries. The geographic area representing a place may change somewhat over time, i.e. it may grow or shrink. Places, and information about places, may be represented in data models, databases and files.<br/>
+<br/>
+Place Name – A name of a place, often found in sources. A place may have several names at the same time or at different periods of time, and there may be several places with the same name within a given context. A place may have different names in different languages. Place names may be represented in data models, databases and files.<br/>
+<br/>
+Place Hierarchy - A place may be located within other higher level places covering larger areas, which may themselves be located in even higher level places, forming a hierarchy. The highest level in the hierarchy is often a country, and the lowest for example a farm. A place may be a member of several hierarchies, often defined by different organizations in public administration. Hierarchies may change over time, e.g. when a local place is included in another country, but the local place does per definition stay the same. Place Hierarchies may be represented in data models, databases and files.<br/>
+<br/>
+Place Name Hierarchy - A place hierarchy is identified by the names (and optionally types) of the places in the hierarchy during a certain period of time, a Place Name Hierarchy, often found in sources. Place Name Hierarchies can be represented in the current Gedcom by a comma-separated list of names. A hierarchy of names of higher level places provides an additional context for the identification of a place by name, but does not always identify the place uniquely. Place Name Hierarchies may be represented in data models, databases and files.<br/>
+<br/>
+Place types – A classification of a place. Examples of place types are buildings, farms, cities, church parishes, military districts, postal areas, states and countries. The classification may change over time (e.g. a school building changing into a factory), but the type of the highest level places often stay the same). Different terms may be used for a type that essentially means the same classification, possibly using different languages. Place Types may be represented in data models, databases and files.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-08T18:24:51-08:00</div>
+<div class="text">In the third last sentence there is a parenthesis at the end that should not be there. And some cases of small/capital letters that should be changed.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-09T04:55:44-08:00</div>
+<div class="text">I have just added all of Gier's definitions regarding places to the list of proposed definitions. The only one I have reservations about is the Place Name Hierarchy, but they are all now open for comment.<br/>
+<br/>
+I do believe there are two or three very large questions that must be answered with regard to places, but not within the context of these definitions. Those same questions are front and center with OpenGen and Ancestry.com.<br/>
+<br/>
+Thanks, Gier.</div></div><div class="comment"><div class="from"><strong>theKiwi</strong> 2011-03-09T06:02:09-08:00</div>
+<div class="text"><ul class="quotelist"><li>buildings, farms, cities, church parishes, military districts, postal areas, states and countries</li></ul><br/>
+This needs to be extended beyond countries for to allow for example for<br/>
+<br/>
+ "Southern Africa" for someone traipsing around the southern part of Africa with the Missionary Robert Moffat before there were any (recognised) countries there,<br/>
+<br/>
+or<br/>
+<br/>
+"At Sea, Atlantic Ocean" for someone dying and buried at sea on the journey from England to New Zealand.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-09T06:56:37-08:00</div>
+<div class="text">Gier,<br/>
+<br/>
+I would second was Roger is saying. The geographical hierarchy should extend to the continent level (and beyond [smiley]?). I have many "Loyalist" ancestors (persons who remained loyal to Britain during the American revolution) and after their exile to the Maritime provinces of (now) Canada, there was a significant amount of border crossings, and a significant amount of confusion about which country they were in at various times of their lives.<br/>
+<br/>
+In my database I also have had to include oceans as places, since I have relatives who were lost at sea and relatives who immigrated across oceans. <br/>
+<br/>
+But I think you would agree that both these things are trivial additions to your concepts.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-09T07:33:50-08:00</div>
+<div class="text">I have made the necessary changes - and even included something from Tom's original definition - and changed halve a sentence in Place Name Hierarchy.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-09T14:26:33-08:00</div>
+<div class="text">Should one or the other of the place definitions include the concept of Global Positioning or latitude/longitude?</div></div><div class="comment"><div class="from"><strong>theKiwi</strong> 2011-03-09T15:33:59-08:00</div>
+<div class="text">Re: Should one or the other of the place definitions include the concept of Global Positioning or latitude/longitude?<br/>
+<br/>
+Yes this should be able to be stored, along with a key that identifies the format in which it is stored - eg degrees.decimalDegrees or Degrees Minutes Seconds, and probably also if it's using N S E W or + - as well.<br/>
+<br/>
+I think this is what should be in a LOCAtion field perhaps, with the "words (Christchurch, Canterbury, New Zealand) " being in a PLACe field.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-09T16:07:30-08:00</div>
+<div class="text">I think lat/long is one of many things that can be recorded about a place. In many cases a place does not have one, but a billion or more such coordinates. I do not think it should be included since a place as defined here is something, and I am not sure hove to describe it, that is not necessarily bound to one or more points at all times. Also there are other identification schemes that can identify a place. I think what we have is sufficient to make people understand what a place can be.<br/>
+<br/>
+We will obviously come back to coordinates when we start talking about what can be recorded for a place.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-09T16:09:34-08:00</div>
+<div class="text">hove = how</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-09T16:29:24-08:00</div>
+<div class="text">Cool.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-09T18:16:54-08:00</div>
+<div class="text">Testuser,<br/>
+<br/>
+Thanks for the reference to the German work. I am currently reading about their _LOC record structure, but it is a long time since I have read German. It seems they are relaying to some extent on government identifiers and among others the database that has been mentioned earlier in our discussions. These two things make the need to have a lot of info in the file and the info types becomes open ended to the extent that they are contained in databases that could be queried by a program. I will read more .... interesting. <br/>
+<br/>
+At least there seems to be others that have similar requirements as us.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-06T18:53:28-08:00</div>
+<div class="text">I should perhaps clarify that when I say the address changes when a place is in a new country, I mean the complete postal address.<br/>
+<br/>
+<br/>
+Also, the definition of Event should also be extended to say more explicitly that an Event may involve Places only, without any persons.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-06T21:40:50-08:00</div>
+<div class="text">Just added a very vanilla definition for Place. I too prefer Place over Location.<br/>
+<br/>
+I think it is too early to discuss the possible format of Place Field Values.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-06T21:49:54-08:00</div>
+<div class="text">Comments on Lous's comments<br/>
+<br/>
+"Also, I also feel very strongly that Places be a top-level record. Information about the place can then be associated with it - the most important being latitude and longitude. "<br/>
+<br/>
+I agree that Places should be Entities (therefore records which are by definition top-level), but that they can also be sub-Attributes of Event Entities or Attributes. (This is the "there should only be one way of doing things" versus the "could I please use my own common sense when deciding how to record place information" argument that we had before.) Though I believe that Latitude and Longitude should be allowed Attributes for all Places, they can rarely be accurately known (what is the Latitude and Longitude of the State of Connecticut?), and for this reason alone, can't agree that they are the most important information there is about Places. I would say that the Place's name has that distinction.<br/>
+<br/>
+"And I have argued despite some disagreement by others, that places should be allowed to have their own events (e.g. River flooded city in May 1950) and facts (e.g. Capital city of the country from 1851 to 1877). Many genealogy programs use timelines of notable events such as these, and they need something to hang onto."<br/>
+<br/>
+I would twist the first part of that around to say that Events don't have to have Person role players. Then the River flooding Event is simply a normal Event with a normal Date (you seemed to have changed what you were talking about from Places to Dates, but the distinction is still the same). And yes, certainly you must have freedom to add other Facts to Events other than just Date and Place and Role Players.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-03-06T22:52:08-08:00</div>
+<div class="text">To summarize, in GEDCOM format, instead of:<br/>
+<br/>
+0 @I5@ INDI<br/>
+1 BIRT<br/>
+2 PLAC Paris, France<br/>
+3 place details of all sorts<br/>
+<br/>
+I'd sooner have:<br/>
+<br/>
+0 @I5@ INDI<br/>
+1 BIRT<br/>
+2 PLAC @P15@\<br/>
+3 plac info for this event for this indi<br/>
+<br/>
+0 @P15@ PLAC<br/>
+1 place details specific to the place</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-07T03:30:46-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+I would replace your "instead of" with "in addition to" and your "I'd sooner have" with "we also have".</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-07T04:45:31-08:00</div>
+<div class="text">For many reasons, for example that Gedcom currently refers to names, that what an event will refer to is a name found in a source, that places may have several names over time or at the same time, for backwards compatibility and several other reasons - I think we need a solution with a top level Place Name (or other term) record - like:<br/>
+<br/>
+0 @I5@ INDI<br/>
+1 BIRT<br/>
+2 PLACNAME @PN15@\<br/>
+3 plac info for this event for this indi<br/>
+<br/>
+0 @PN15@ PLACENAME  --- lowest level<br/>
+1 HIGHERLEVEL @PN16@<br/>
+0 @P45@ PLAC<br/>
+1 info about place name and more (so that name is really a to restricting name for the structure, it is rather a record for info about a place that can change - non common) <br/>
+<br/>
+0 @PN16@ PLACENAME<br/>
+1 HIGHERLEVEL @PN17@<br/>
+0 @P46@ PLAC<br/>
+1 as above<br/>
+<br/>
+0 @P45@ PLACE<br/>
+1 place details specific to the place and common for all PN for the place<br/>
+<br/>
+0 @P46@ PLACE  -- higher level<br/>
+1 as above<br/>
+<br/>
+See my posting of Feb 4 - currently last posting - here <!-- ws:start:WikiTextUrlRule:25:http://bettergedcom.wikispaces.com/message/view/Mike%27s+Model/31964569?o=40 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Mike%27s+Model/31964569?o=40" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Mike%27s+Model/31964569?o=40</a><!-- ws:end:WikiTextUrlRule:25 --><br/>
+<br/>
+Geir</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-07T04:51:44-08:00</div>
+<div class="text">Correction <br/>
+<br/>
+<br/>
+0 @PN15@ PLACENAME --- lowest level<br/>
+1 NAME xxxxx                      &lt;---NAME<br/>
+1 HIGHERLEVEL @PN16@<br/>
+1 @P45@ PLAC                      &lt;---LEVEL ONE<br/>
+1 info .....<br/>
+<br/>
+Same correction in @PN16@</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-07T07:16:42-08:00</div>
+<div class="text">Gier,<br/>
+<br/>
+I think your idea of having a PlaceName as an Attribute/Field that is independent of a Place is a subtle concept that will be lost on some. But since I constantly talk about concepts that are subtle enough that I have failed to explain them in fifteen years, that is not a criticism, more of a commiseration. Actually your idea is to have the PlaceName as its own Entity, which I understand and am only temporarily ignoring.<br/>
+<br/>
+I would summarize your idea by saying that a Place is intended to be a specific Place "node" in an independent, and unique tree of hierarchical Entity instances/Records that identify Places by breaking them up hierarchically into geographical areas. Then the PlaceName is an Attribute/Field with at least two components -- the Name to use for that Place in the context of a particular Event, say, and a Reference/Pointer to the a Place Entity/Record that will be somewhere in a Place Entity/Record hierarchy. Then the PlaceName Attribute/Field can have other sub-Attrributes/sub-Fields to refer to other aspects of the Place from within the context of the Attribute/Field (e.g., a historical fact, a note about why the place name was chosen, and so on).<br/>
+<br/>
+In your note you suggest that these PlaceNames actually be at the top-level, that is, be an Entity and have Records representing them. I think this puts your idea even further away from the comfort level of most people. Do you really think that places and locations are "important enough" to require TWO Entities when currently GEDCOM has no Entities for Places and other models have at most one. I'm not convinced you are right or wrong, but you sure are on the cutting edge. I wonder if enough people will think deeply enough about this to understand what you are suggesting and what its implications are.<br/>
+<br/>
+Note that your "PlaceName as Entity" approach requires the "double indirection" you show in your examples. An Event needs a Place so it points to a PlaceName Record. That Record has some information about the historical context of that particular PlaceName and then it points off to a Place Record. That Place Record has more info about the Place but now in the geographical context,  and it in its own turn points off to the next higher level Place Record in the geographical hierarchy. And note that the original reference from the Event to the PlaceName may also have its own sub-attributes to clarify the details of this particular use of that name in the Event. Good or bad, this is a complex mechanism, and there will be some challenges in the user interfaces of applications that use it to make is smooth and transparent and easy to deal with.<br/>
+<br/>
+(This complexity is not meant as a criticism. It is not more complex than the tree-mechanism for solving the Evidence and Conclusion problems that I have been writing about, which I believe is important and necessary.)<br/>
+<br/>
+All that said, I think you have a good description of a difficult problem and a solution that seems to work. My worry is that you might want to force that solution onto the simpler cases -- see my comments below on that. I think the challenge will be to convince others of its importance, and if it gets included, how it can be implemented well in applications.<br/>
+<br/>
+I think that having the PlaceName as an Attribute/Field instead of an Entity/Record, might be more palatable.<br/>
+<br/>
+But here is what I think is a very important point, and could be the killer for your idea. There are many, many, many, many, many times when the PlaceName is completely unnecessary. Most people use names for places that are taken right out of the normal Place hierarchy, so that Events would usually "want to" point right to a Place Entity/Record without the intermediary of a PlaceName Record. I see the PlaceName as simply a way to solve certain naming problems that occur in some complex cases, so should not be used to complicate the far more common cases that are much less complex. If your Events could refer to EITHER a PlaceName OR a Place then this level of complexity would only be used where it is needed.<br/>
+<br/>
+In fact, why couldn't a PlaceName Record just be thought of as another kind of Place Record in the first place? Couldn't you figure out a way to do that? It might mean that the overall Place hierarchies might not be unique, and they might get complex in their own right, but isn't this really where that complexity belongs?<br/>
+<br/>
+My other major hobby is bird watching, and I have written tons of software to support that hobby also. When recording where birds are seen, recording the location is important. These locations have the same complexities as occur in genealogical places. My implementation for places in my birding software is exactly the "hierarchical tree of names and places" that I advocate for genealogy. I have places at many levels, some that give some problems (e.g., a national wildlife refuge that is in three municipalities). So the hierarchies are much more complex than just pure containment, but I have had no problems making them work. Of course I don't have the complication of places whose names have changed over time to deal with, but I'm not sure that would be an insurmountable problem.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-07T08:42:36-08:00</div>
+<div class="text">Re the proposed definition of Place: <br/>
+"A position or location or point in space"<br/>
+<br/>
+I'd tweak this to make it more clear that the place could be an area. <br/>
+"A point or area in space." Do we need position? Or location? Isn't "point or area" adequate? <br/>
+<br/>
+Maybe "A point or area in on, under or over the surface of the planet" - otherwise "in space" sounds a bit too much like Star Trek.<br/>
+<br/>
+I know this isn't the place to discuss the details of the model for how places are used, but while you're throwing pseudo GEDCOM around, don't forget we need to be able to say "near London, England". (Well, I think we do!) I would suggest that the relationship is to "London, England" with a qualifier, and that there isn't a place called "near London, England".<br/>
+<br/>
+And to give my answers to Louis' questions:<br/>
+ - "Is it the same place if the country changes?" - I think, yes. If it's a point on Planet Earth, then the point doesn't change - only its relationship with jurisdictions.<br/>
+(NB - arguably jurisdictions are organisations, not places! Hmm)<br/>
+<br/>
+"What about lower levels, such as a hospital in a city, or a room in the hospital, or a specific bed in the room" - I think all of these should be admitted under the heading of Place - which is why I started to use Location as the entity, to emphasise the difference from this absurd GEDCOM cut-off that puts address totally independent of place.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-03-07T14:35:23-08:00</div>
+<div class="text">Have a look at what the german programmers have agreed on concerning the "PLAC" tag in GEDCOM:<br/>
+<a class="wiki_link_ext" href="http://wiki-de.genealogy.net/GEDCOM/PLAC-Tag#Vereinbarungen_zu_PLAC" rel="nofollow">http://wiki-de.genealogy.net/GEDCOM/PLAC-Tag#Vereinbarungen_zu_PLAC</a><br/>
+It's in German, but the GEDCOMese is international... and maybe Babelfish can translate the rest.<br/>
+In chapter *P4 Ortsdatensätze*, they are building on the previous GEDCOM 5.5 EL (extended locations?) agreement, and they have the makings of a nice hierarchic place structure (if I understand it correctly). <br/>
+They use a custom _LOC for the top-level-places, because this way they stay within the GEDCOM rules. There are EVENts, there are NAMEs and DATEs.<br/>
+They still allow the "normal" GEDCOM PLAC, it is still the prefered method.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-03-07T14:41:22-08:00</div>
+<div class="text">BTW, here is a starting point to the other pages of their effort:<br/>
+<a class="wiki_link_ext" href="http://wiki-de.genealogy.net/Kategorie:GEDCOM-Tag-Diskussionsstatus" rel="nofollow">http://wiki-de.genealogy.net/Kategorie:GEDCOM-Tag-Diskussionsstatus</a><br/>
+<br/>
+"GEDCOM-Tag-In Abstimmung", has tags that are currently being voted on;<br/>
+"GEDCOM-Tag-In Diskussion" are currently in discussion;<br/>
+"GEDCOM-Tag-Fertig abgestimmt" have come to an agreement;<br/>
+"GEDCOM-Tag-Vorläufig" seem to be provisional placeholder page(s)</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-08T16:49:53-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Thank you for all the superlatives you use when commenting my model, and that you are using so many words just to say that it is complex.<br/>
+<br/>
+Most of what I have proposed has been implemented in genealogy software that has been available in the market for years. It is at least an order of magnitude less complex than that of a nested hierarchy of Evidence-Conclusion persons, which I have not seen any full implementation of so far. <br/>
+<br/>
+You say I am forcing a solution onto the simpler cases – since the basic structure of the solution is designed to be backwards compatible, it will in principle be the choice of implementers if they want to make any changes to their internal databases, but they will then not be able cater for the user requirements that my proposal tries to cater for.<br/>
+<br/>
+I do not consider the splitting of a place record into two records a problem, it is no problem for current databases.<br/>
+<br/>
+The current Gedcom focuses only on persons in genealogy, but as has been said many times in the discussions, there is more than people in the world, and in the lives of people. We have to start to acknowledge that.<br/>
+<br/>
+I see that I it is not only you that need to educate people about solutions ....<br/>
+<br/>
+There is at least one sentence in your comments that I am not sure I understand completely: "It might mean that the overall Place hierarchies might not be unique, and they might get complex in their own right, but isn't this really where that complexity belongs?"<br/>
+<br/>
+Geir<br/>
+<br/>
+PS. I may have a go at one or more definitions related to place.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-03-06T17:38:07-08:00</div>
+<div class="text">Also, I also feel very strongly that Places be a top-level record. Information about the place can then be associated with it - the most important being latitude and longitude. <br/>
+<br/>
+And I have argued despite some disagreement by others, that places should be allowed to have their own events (e.g. River flooded city in May 1950) and facts (e.g. Capital city of the country from 1851 to 1877). Many genealogy programs use timelines of notable events such as these, and they need something to hang onto.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-06T18:33:22-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+I think we should keep place, rather than location. I don't see a need to change from the existing Gedcom term in this case. I assume that a Place can be a Country or other "area".<br/>
+<br/>
+I also think we need to define Place names, because that is what we currently have in Gedcom.<br/>
+<br/>
+I agree about what you say about events, that is why I proposed to change Event so that it does not require a person to be involved.<br/>
+<br/>
+Agree about top level record for Place, and it should be able to contain - or refer to a separate record - several Place name structures (also carrying identifiers of the other names in the hierarchy in current Gedcom). There are many more important things to put in a Place record than the coordinates. But Tom may not want all this in the definition ...<br/>
+<br/>
+I think the idea that a place can change might be because of the current name hierarchy in Gedcom. My understanding is that a place stays the same even if it is in a new country - but the address and the name hierarchy changes. If I have a photo attached to a Place, it is still the same house on the picture, I don't want to have to attach it to another place. <br/>
+<br/>
+I am not sure I understand the issue you mention about lower levels.<br/>
+<br/>
+Does anyone know if anyone has tried to represent a timeline in Gedcom? We need it for BG.</div></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-03-06T17:49:39-08:00</div>
+<div class="title">Repository -- Proposed Definition</div>
+<div class="text">"An institution such as an archive, government office or library, or any other site or location or service, ..."<br/>
+<br/>
+I think this is too restrictive.<br/>
+<br/>
+Is not the collection of information I have filed in my personal library a repository?<br/>
+<br/>
+Is not the collection of information my great aunt Becky had in her head a repository?<br/>
+<br/>
+When I got information from my great aunt Becky, I recorded the source as "interview 4 May 1974 with Great Aunt Becky" amd the repository as "Great Aunt Becky".<br/>
+<br/>
+Then I store this in my personal library. If anyone gets it from me, then the source was the specific binder where I keep that secondary record in my library, and the repository is my library.<br/>
+<br/>
+The source of the source was of course the interview with my great aunt Becky.<br/>
+<br/>
+When a library burns down, that repository is lost. When my great aunt Becky passed on, her repository also passed on. People now have to get it from the secondary source, which is my personal library.<br/>
+<br/>
+So I think we need the Repository definition to be a big more flexible.<br/>
+<br/>
+Louis</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-06T21:22:41-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+I am going with the conventional definition of Repository, that it is a collection of Sources, and I am going with the conventional definition of what Sources are. So I don't think any restrictions should be removed.<br/>
+<br/>
+I don't think many would agree that your Aunt Becky's head is a Repository. But I think most would agree that either you Aunt Becky's head is a Source, or that each interview you had with Aunt Becky is a Source (that would be the conventional view taken by the Evidence Explained mob). Now, of course you aunt's head is a repository (note lower case) of all kinds of information about all kinds of things, but it is not a Repository in the sense conventional to genealogical data models.<br/>
+<br/>
+In terms of your personal library that can clearly be considered a Repository, as long as it contains a collection of Sources. If instead of containing Sources (capital letters) it only contains copies of the specific pages from the Sources you were interested in, then your library is not a Repository in the conventional sense, "just" a collection of images of the information used to create genealogical Evidence records. As much as possible a Repository should be a place that ANY researcher could go to to find complete copies of Sources, not a place that only friends's of Louis Kessler could visit or a place that only has selected extracts from Sources.<br/>
+<br/>
+But of course, when you are creating Repository and Source records in your own databases you are free to reinterpret these two concepts any way that makes sense to you.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-07T05:21:22-08:00</div>
+<div class="text">Wrt. a personal library - I agree with Louis - it can be a repository as good as any other. There is no rule stating that a Repository can contain only primary sources - and a personal library can also contain huge amounts of primary sources. A copy of a source is in my view also a source. The use of repository is primarily to tell where the source is, independent of access restrictions.<br/>
+<br/>
+If you call the source "An interview with xxx", I am not sure you have to record a Repository for xxx, but you may want to record the address of xxx - where do you put that - maybe against a repository or do you create a person record? I think I would prefer the latter.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-07T06:21:13-08:00</div>
+<div class="text">Gier,<br/>
+<br/>
+I hope you didn't think I said that a repository had to hold original sources to be a repository, and I agreed that Louis's personal library can be a repository.<br/>
+<br/>
+Certainly the repository for an interview is not going to be the brain of the interviewee. If it has a repository at all it is where the interviewer keeps it. I agree that all sources don't have to have repositories. For example, if a source is a well known book for which there are thousands of copies in existence, why worry about its repository; I mean, which one are you going to pick?. In this day and age, when census images are freely available on the web from different sites, it's hard to get excited about recording their repositories either (or even their sources -- whoops I never said that). That probably puts me a peg or two down on the genealogical maturity model scale.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-07T08:51:02-08:00</div>
+<div class="text">Posting link to related discussion of repository definition<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:2:http://bettergedcom.wikispaces.com/message/view/Glossary+Of+Terms/35068382 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Glossary+Of+Terms/35068382" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Glossary+Of+Terms/35068382</a><!-- ws:end:WikiTextUrlRule:2 --></div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-07T09:01:56-08:00</div>
+<div class="text">What about gravestones? Each stone is surely a Source, so surely the definition of Repository should be broad enough to cover a graveyard or cemetery? Because we surely want to store all the "how to get to" details (such as address) once against the graveyard, we need to put the graveyard in as a Repository. <br/>
+<br/>
+PS Tom - re on-line images. I've always felt it odd that so many of them are described by the microfilm identity. Why??? What am I going to do with _that_? Yeah, that's me going down too...</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-07T09:26:20-08:00</div>
+<div class="text">hahahahahah....</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-03-07T13:38:21-08:00</div>
+<div class="text">The reason why allowing a person to be a repository is a practical one. Then the genealogy software can list all the sources that originated from that person. Otherwise the sources are all left dangling.<br/>
+<br/>
+Most people leave out the fact that much of their own genealogy is from their personal knowledge, which for 98% of their data will be extremely accurate. The next person using their dataset or getting their GEDCOM will not know where this was from unless the sources are supplied (personal knowledge of me) or as many sources (notes taken by me on this date, family tree chart drawn by me, etc), and if "me" can be a repository, then they are all attributed properly. <br/>
+<br/>
+AFAIAC, every source should be assigned a repository to state where it was obtained. If a source is secondary, then if possible, the source of the source should be identified, and that source should have its repository assigned as well. To me, that's the only way evidence can be traced back properly.<br/>
+<br/>
+Louis</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-06T20:54:50-08:00</div>
+<div class="title">Model -- Pedantic Essay One</div>
+<div class="text">There are lots of words we are using, in different contexts, and with overlapping meanings. I know I tend to go into tutorial mode, and I hope you will bear with me a few more times.<br/>
+<br/>
+I really want to talk about Attributes, but to get there let's start with a Model. A Model is made of up Entities, Relationships between the Entities, and Attributes of the Entities.<br/>
+<br/>
+Entity -- The Model components that represent key concrete concepts in the real world, noun type things that you can touch and feel.<br/>
+<br/>
+Relationship -- A named connection that links Entities. They represent real relationships in the real world that link together instances of the Entities; a noun-type things that you cannot touch and feel.<br/>
+<br/>
+Attributes -- Attributes give Entities their structure, identity and uniqueness. An Entity is defined by the set of Attributes it is composed of. There are two key things about Attributes. First each has a Name so it can be distinguished from the others. Second each has a set of possible Values. These are the values that an instance of the Entity from the real world can have for the Attribute. There are many types of Attributes, and therefore many types of Values that an Attribute can have. Here is a list Value types.<br/>
+<br/>
+1. No value -- some Attributes are optional conditions, so just having that Attribute is all that's needed -- for example a Person Entity could have the Living Attribute. If an instance of the Entity has the Attribute is is alive; if not then dead. The Attribute has no Value. This is nearly the same idea as a Boolean Attribute, which is an Enumerated Attribute with the values of True and False and maybe Unknown. For example, a (required) isLiving Attribute could be equivalent to the Living conditions Attribute if its possible values were True and False.<br/>
+<br/>
+2. Enumerated Values -- some Attributes have values that come from an enumerated set of values; the sets can be small or large. For example the Sex Attribute is enumerated and has the values of Male, Female, and Unknown. All it means to be enumerated is that there is a finite set of values that an Attribute can have, and that theoretically they could all be listed. Obviously the Boolean Attributes are Enumerated Attributes.<br/>
+<br/>
+3. Patterned Values -- some Attributes have values that must obey a set of formatting rules. These sets are countably infinite. Good examples include Dates, Places, Names, and Numbers.<br/>
+<br/>
+4. Unpatterened Values -- some Attributes have values with no restrictions on their format. The best examples are String-valued Attributes where the Strings are allowed be arbitrarily long and to contain any characters. Realistically there are no values really like this, as the String value must make semantic sense, but there are no computer-enforced restrictions (or very few) that can assure such a string makes semantic sense.<br/>
+<br/>
+5. Structured Values -- some Attributes have an internal structure that must be further broken-down into a list of sub-Attributes. This is a recursive definition because each of these sub-Attributes must obey the same rules and have the same Value types as the top-level Attributes. A good example of this kind of Attribute is what I very restrictedly call a Vital Event. A Vital Event is an Attribute of an Entity that describes an Event that the Entity participated in and was the primary or only role player in. Such an Attribute value must be structured because the Value itself needs sub-Attributes, in this case the Date of the Vital Event, the Place, and other details.<br/>
+<br/>
+It is very important to keep separate two very real but very different concepts of a genealogical Event, first as a real, top-level Entity, and second as an Attribute of the Entity that the Event happened to.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-07T09:22:37-08:00</div>
+<div class="text">"It is very important to keep separate two very real but very different concepts of a genealogical Event, first as a real, top-level Entity, and second as an Attribute of the Entity that the Event happened to"<br/>
+<br/>
+I know you want to be able to store Events as independent entities AND details of them as attributes of a person. (E.g. the entity "Birth of John Smith" with 3 people involved; plus, under "John Smith"s own attributes, the date and place of his birth, as per current GEDCOM). Hence the paragraph prior to the highlighted sentence. <br/>
+<br/>
+Personally, I have to think twice when I read your sentence, so I daren't think what others have to do.<br/>
+<br/>
+Could we reduce confusion by saying that "We want to store data from a genealogical Event, first as a real, top-level Entity and second, for ease of access(?) we want to store its date, place, etc, as sub-attributes of the Entity that the Event happened to"<br/>
+<br/>
+We thus avoid apparently saying that the same thing gets stored as both an Entity and an Attribute.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-07T11:31:37-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+I'd like to say something more about this statment I made:<br/>
+<br/>
+"It is very important to keep separate two very real but very different concepts of a genealogical Event, first as a real, top-level Entity, and second as an Attribute of the Entity that the Event happened to."<br/>
+<br/>
+What I really want to stress is that today, genalogical systems use both these approaches to Events. GEDCOM only has the Event as an Attribute approach, and other models have only the Event as an Entity approach. Some models, to add to the confusion, have both (e.g., DeadEnds).<br/>
+<br/>
+The reason I talk about this so much is that I worry that when we talk about Events we are often coming at it from one of these two points of view and we get confused by what the other is saying. Unless we fully understand the differences between these the concepts of an Event as an Attribute and an Event as an Entity we may be destined to argue and be confused.<br/>
+<br/>
+I am not trying to make a plea that Better GEDCOM use both these concepts (though I really do think it is a good idea, and will plead that case more in the future I am sure.) What I am trying to do is make sure that when Better GEDCOM does make the decision about how to fit an Event into its Model, and how to represent it as a Record, that we will all fully understand the "semantics" of these type versions of Events and we are making the decisions with our eyes wide open.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-07T12:14:29-08:00</div>
+<div class="text">Ah - understand a bit more what you were driving at there. In that case - I suggest you simply add your words - "Genealogical systems use both these approaches to Events. GEDCOM only has the Event as an Attribute approach, and other models have only the Event as an Entity approach. Some models, to add to the confusion, have both (e.g., DeadEnds)" at the very end of your first discussion post. (Well, add it if you ever post it anywhere again). Makes a lot more sense to me now you're clear you're documenting options for how to model Event.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-06T21:07:30-08:00</div>
+<div class="title">Fact -- Proposed Definition</div>
+<div class="text">Here is the proposed definition of Fact. Basically everything is a Fact, so this is not a very useful in order to distinguish things from each other.<br/>
+<br/>
+<br/>
+Fact -- An item of information. In a Model the Attribute Values of Entity instances are Facts, and the existence of the Entity instances themselves are Facts. In computer representations Records and Fields are Facts. Basically everything is a Fact, so the term is not useful in distinguishing any one thing from any other.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-08T06:39:25-08:00</div>
+<div class="title">Evidence -- Proposed Definitions(s)</div>
+<div class="text">I just put up proposed definitions for Evidence. I broke the definition into five separate definitions in an attempt to show the array of meanings. I would hope to combine them into one final definition. But in the current form they may be easier to comment upon. The dictionary definition is a paraphrase of the relevant meaning of the word from a dictionary. The EE definition comes from "Evidence Explained". The E&amp;C definition covers what evidence means from the perspective of the Evidence and Conclusion Process. The Model and Computer definitions cover what Evidence means from the points of view of a Data Model and a computer representation.<br/>
+<br/>
+Evidence (dictionary) -- the available body of facts or information indicating whether a belief or proposition is true or valid; information given personally, drawn from a document, or in the form of material objects, tending or used to establish facts; signs; indications;<br/>
+<br/>
+Evidence (EE) -- information that is relevant to a problem; forms used in genealogy include Best Evidence (original records of the highest quality that survive), Direct Evidence (information that answers or solves a specific research question by itself), Indirect Evidence (relevant information that does not answer a research question by itself), Negative Evidence (an inference based on the absence of information that should exist under given circumstances), and Confilicting Evidence (relevant piecees of information from different sources that contradict each other).<br/>
+<br/>
+Evidence (E&amp;C Process) -- Information upon which conclusions may be based.<br/>
+<br/>
+Evidence (Model) -- Any Entity, Attribute or Relationship instance that is wholly created from available information.<br/>
+<br/>
+Evidence (Computer) -- Any Record or Field of a Record that contains data wholly derived from available facts or information.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-09T09:58:34-08:00</div>
+<div class="text">Hi Tom,<br/>
+<br/>
+Might you explain what you mean by "actual evidence."</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-09T13:07:32-08:00</div>
+<div class="text">I didn't use that phrase on this thread. Do you remember where I said it? All I can say now is that I probably didn't mean anything special, and was likely being my usual blowhard self.<br/>
+<br/>
+I'll go look at "actual" definitions now to see if I have changed the wording to include it.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-09T13:13:48-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+YES, found it. I did change the wording. Here's why. I've been taught never to use the word being defined inside its own definition!!<br/>
+<br/>
+However, in these special cases of my three-level definitions you sometimes want to refer to the concept at an earlier level to help define it at a later level. That is exactly what is happening here. I am trying to define Evidence at the Model and Computer levels, and in those definitions I want to refer to Evidence as we understand it in the real or the EE world. So the phrase "actual Evidence" means "real Evidence", NOT a model entity and NOT a computer record.<br/>
+<br/>
+Sorry I didn't remember.<br/>
+<br/>
+Here are the definitions as they exist now. I was just trying to get around breaking the first law of definition writing!! Do you see any easy way out of my dilemma?<br/>
+<br/>
+Evidence (Model) -- Any Entity, Attribute or Relationship instance that is wholly created from the available actual Evidence.<br/>
+<br/>
+Evidence (Computer) -- Any Record or Field of a Record that contains data wholly derived from the available actual Evidence..</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-09T13:15:48-08:00</div>
+<div class="text">Maybe instead of "actual Evidence" I could say "Evidence (real world)" or something like that.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-09T14:11:31-08:00</div>
+<div class="text">Thanks. I just wanted to start to make a distinction between information IN a source and the evidence a researcher infers after vetting of the source and it's content.  <br/>
+<br/>
+P.S. Or even Evidence (EE) ...</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-08T06:42:40-08:00</div>
+<div class="title">Conclusion -- Proposed Definitions(s)</div>
+<div class="text">Also just "published" the following definitions of Conclusion using the same five categories chosen for Evidence.<br/>
+<br/>
+Conclusion (Dictionary) -- A decision reached by reasoning from given premises.<br/>
+<br/>
+Conclusion (EE) -- A decision; to be reliable it must be based on well-reasoned and thoroughly documented evidence gleaned from sound research.<br/>
+<br/>
+Conclusion (E&amp;C) -- Information derived by making decisions based on available Evidence.<br/>
+<br/>
+Conclusion (Model) -- Any Entity, Attribute or Relationship instance that is created by reasoning and making decisions from available Evidence.<br/>
+<br/>
+Conclusion (Computer) -- Any Record or Field of a Record that contains data created by reasoning and making decisions from available Evidence.</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-08T06:52:18-08:00</div>
+<div class="text">I just changed the word Evidence to Information in the last three definitions of Conclusion. This is because Conclusions can also be based on reasoning about previously made Conclusions.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-08T06:58:54-08:00</div>
+<div class="title">Field -- Proposed Definition</div>
+<div class="text">Just published this proposed definition for Field:<br/>
+<br/>
+Field -- In computing a named item that makes up a part of Record; the content of the item is data that represents the value of a fact or item of information.</div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-03-09T06:33:22-08:00</div>
+<div class="text">I think a clarification is needed wrt if a field contains a single value or can be a structure containing several values (a string, number, etc.), or if an attribute may be represented by several fields. <br/>
+<br/>
+Currently a record is defined as containing attributes, each represented by a field. That model is too simple and restrictive. And in some data models an entity can only contain one attribute of each type.<br/>
+<br/>
+If we don't introduce a new "structure" level in between, a field must be able to represent a structure of values or an attribute must be able to be represented by several structured fields, or both. And there is the issue of multiple instances of attributes and/or fields.<br/>
+<br/>
+The problem is that different models/syntaxes/xxx use different terms. Either we make a choice or we state that we have not made a choice - which will be a problem in discussions.<br/>
+<br/>
+I have not thought enough about how to solve this, but wanted to raise the issue.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-09T06:46:10-08:00</div>
+<div class="text"><br/>
+Geir,<br/>
+<br/>
+I agree and have been worrying about the same thing. I'll try to add that nuance later today or tomorrow and then let you know so you can comment further.<br/>
+<br/>
+Please re-read what I wrote under the thread "Model -- Pedantic Essay One" here on this same page. In there I outline the 5 kinds of values that an Attribute can have. And of course, Fields, as representations of Attributes, must be able to hold all 5 types as well. As you will see, my 5th type of value is the one you are talking about, the recursive sub-Attribute one.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-08T07:09:08-08:00</div>
+<div class="title">Fun With PFACTs</div>
+<div class="text">For elucidation and edification I present you with the following dictionary definitions ...<br/>
+<br/>
+Property -- An attribute, quality, or characteristic of something.<br/>
+<br/>
+Attribute -- A quality or feature regarded as a characteristic or inherent part of someone or something.<br/>
+<br/>
+Feature -- A distinctive attribute or aspect of something.<br/>
+<br/>
+Aspect -- A particular part or feature of something.<br/>
+<br/>
+Trait -- A distinguishing quality or characteristic, typically one belonging to a person.<br/>
+<br/>
+Characteristic -- A feature or quality belonging typically to a person, place, or thing and serving to identify it.<br/>
+<br/>
+Quality -- A distinctive attribute or characteristic possessed by someone or something.<br/>
+<br/>
+Fact -- A thing that is indisputably the case. An item of information used as evidence.<br/>
+<br/>
+Condition -- The state of something especially with regard to its apperance, quality, or working order. A particular state of existance.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-08T08:51:00-08:00</div>
+<div class="text">I guess if you look up "feature" and also don't understand "aspect", you might be in trouble. Which, to be serious, shows how difficult writing a dictionary is.<br/>
+<br/>
+And to be less serious, the circular nature of at least part of the "feature" and "aspect" definitions reminds me of my favourite (non-serious) IT definition:<br/>
+<br/>
+Recursion - see recursion.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-08T09:23:36-08:00</div>
+<div class="text"><br/>
+"Recursion - see recursion."<br/>
+<br/>
+Adrian, You just made my day. I can take the rest of the day off. Thanks!</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-03-08T21:36:41-08:00</div>
+<div class="text">Adrian can take the rest of the rest of the rest of the ... day off.<br/>
+<br/>
+Whoops that doesn't leave anything.</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-28T17:41:37-07:00</div>
+<div class="title">Proposed Definitions Moved to Glossary</div>
+<div class="text">After a couple weeks of inactivity with regards to the proposed definitions, I have moved them to the glossary. I consider them now "out of my control" and back under "wiki rules," so if you believe they should be changed please use your best judgement.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-30T16:19:40-07:00</div>
+<div class="title">Source Element - proposed definition</div>
+<div class="text">Source Element - In an Application, an identifiable field in a citation that is associated with particular data. Examples of Source Elements are, author, title, publisher, etc.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-30T17:33:44-07:00</div>
+<div class="text">Proposed revision<br/>
+<br/>
+<strong>Source Element</strong> - In an Application, an identifiable field in a citation that is associated with particular data. Examples of Source Elements are, author, title, publisher, etc. Only sometimes is the formatting of a Source Element specified by it's identity; sometimes formatting is specified in the Source Template and other times, with a Local Modification.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-04-02T08:30:39-07:00</div>
+<div class="text">I am confused by the word Source in this term. As the definition states, it is a field in a citation, so why is it not a Citation element?<br/>
+<br/>
+Re. the second sentence, it assumes that some elements have special formating implied by it's name (type). This must be stated before the second sentence, with one or more examples.<br/>
+<br/>
+The following needs not be captured in the definition at this moment, but could be incorporated in a future revision:<br/>
+<br/>
+Also, if you intend to transfer "Local modifications" and templates in BG, there must be a precedence between rules for elements, rules implied by templates and "Local modification". I assume templates could (not always) overrule element rules, and the local one could overrule (not alway???) both of the others.<br/>
+<br/>
+It is also a question, if a source element would identify a "data type" (eg. text, name) as in eg. RootsMagic.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-02T09:48:34-07:00</div>
+<div class="text">(1) Citation Element works for me, too. <br/>
+<br/>
+Russ, what do you think? <br/>
+<br/>
+(2) How about we limit the definition to the first sentence until we have documented the different ways formatting becomes recorded.  <br/>
+<br/>
+(3) I agree also that at some point, we separately need terminology to describe element ?characteristics and/or categories.</div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-30T16:34:04-07:00</div>
+<div class="title">Source Template - proposed definition</div>
+<div class="text">Source Template - Also known as a Source-Citation Template. In an Application, Source Template specifies the Source Elements, arrangement of same and punctuation necessary to form a citation.</div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-04-01T18:27:04-07:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+I would hope that you reconsider the term "Source-Citation Template". In looking at Evidence Explained!, A Source "List Entry" stands alone with fields that make up what is in the Source List Entry.<br/>
+<br/>
+Now, Fields in the Source List Entry make up the First (Full) Reference Note.<br/>
+<br/>
+I think that the Source List Entry would make up a Source Template and should be separate from the "Citation".</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-02T08:34:28-07:00</div>
+<div class="text">Hi Russ,<br/>
+<br/>
+Thank you. <br/>
+<br/>
+When you say, "reconsider," do you mean it would be okay to drop reference to the word "Source-Citation" from the template definition?<br/>
+<br/>
+The shorter and more straight forward the better, I think. <br/>
+<br/>
+Additional References:<br/>
+<br/>
+From Mills, Evidence Explained, p. 43 (Fundamentals of Citation, part 2.4), "Citations, types of," she recognizes three types as "source lists" "reference notes" and "source labels."<br/>
+<br/>
+In the glossary to that same work, Mills provides "citation" as, "the statement in which one identifies the source of an assertion. Common forms of citations are source list entries (bibliographic entries), reference notes (endnotes or footnotes), and document labels."<br/>
+<br/>
+When we see Mills "QuickSheet Models" we are viewing examples of what she calls the source list entry citation and the reference note citation, with the latter presented as both "First (full) Reference Note" and Subsequent (Short) Note").<br/>
+<br/>
+Different applications refer differently to "templates" and "citations" and even the fields that make up the those items. <br/>
+<br/>
+Your input from working with users is invaluable. --GJ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-04-02T08:38:29-07:00</div>
+<div class="text">Again, I would prefer the term Citation Template, rather than Source Template. These templates are not used to produce sources, assuming that a source is eg. a book.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-02T09:03:01-07:00</div>
+<div class="text">Our postings crossed. <br/>
+<br/>
+Citation Template works for me (see comment just added in Local Modifications)<br/>
+<br/>
+Russ, what do you think?</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-04-02T09:27:17-07:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+Sorry if I am not clear, I am asking you to reconsider the term Source-Citation (anything).<br/>
+<br/>
+gthorud is actually making my point. I wasn't going to go there, but I will.<br/>
+<br/>
+I think there are TWO "templates" required. A SOURCE Template and a Citation Template.<br/>
+<br/>
+The Source Template says the Source is a Book, or Artifact, or Census Record (online, film, etc). That 'template' will become the Source List. <br/>
+<br/>
+The Citation "template" WILL include information from the Source Template an adds information that makes up the First (full) Reference Note AND a few fields from the Source Template may be uses in the Subsequent (Short) Note.<br/>
+<br/>
+You will probably have multiple First (full) Reference Notes and Subsequent (short) notes from a given Source, right?<br/>
+<br/>
+Its a matter of what fields are used for the Source, and what the fields are for the Reference Notes.<br/>
+<br/>
+For example: (page 240) The Civil Division, Household ID, Persons of interest, are not Source Information, but ARE Reference Notes fields.<br/>
+<br/>
+The Jurisdiction, Census ID, Schedule, along with others ARE Source information.<br/>
+<br/>
+This specific issue has been around for a long time. That is, Source, Citation, Source-Citation are confusing enough.<br/>
+<br/>
+When I pick up a Book, I create a Source entry into a program. I am NOT creating a Citation.<br/>
+<br/>
+I will then enter data from that Source, then add the "other" information, after selecting that Source Entry, and add the other details "The Civil Division, Household ID, Persons of interest" into the Citation fields for that data entry.<br/>
+<br/>
+If the Source Fields and the Citation Fields are understood, then the application can generate the fields, put them into the Better GEDCOM file, and can be read at the other end, knowing the fields and what they mean and present them to the End User how ever the application wants to.<br/>
+<br/>
+This way, the application can use 'templates' in their presentation to the end user or NOT. They could just generate a string of "words" OR they can populate fields on a screen.<br/>
+<br/>
+Just for drill, I looked at Family Tree Maker, Legacy Family Tree, and Roots Magic each have Source screens and data input / output and Citation information input / output.<br/>
+<br/>
+Earlier Versions of Family Tree Maker didn't have the Template option, but what I have described, I think, will still work.<br/>
+<br/>
+Like Randy Seaver, in his postings on this topic, I spent a lot of time cleaning up the free form "source-citation' from Family Tree Maker. That included a "repository" for the Source-Citation. With the Templates, a Citation should NOT have a Repository. It would have a Page Number from the Source (if a book). The Source (the book) Would have a Repository.<br/>
+<br/>
+I think, that the term "Citation Template" rather than a "Source Template" is not the way to go. I think they are two different 'templates'.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-02T10:30:01-07:00</div>
+<div class="text">Hi Russ,<br/>
+<br/>
+I think you are looking for definitions a step or two ahead of where we are.<br/>
+<br/>
+The term "Citation Template" is referring to a specific template used by an application to create a specific "source list entry" or "reference note."  (Aside from the say concept of editing the reference note output we find, for example, in Family Tree Maker for Mac.)<br/>
+<br/>
+Aren't you distinguishing between (a) parts of a reference note citation that are "citation details" or "citation text" and (b) all the other parts that make up that same citation. <br/>
+<br/>
+I've struggled with a good term for those "other parts," but there will be a BetterGECOM term for those collective parts! --GJ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-02T10:40:15-07:00</div>
+<div class="text">@ Russ, <br/>
+<br/>
+PS see BetterGEDCOM Home &gt; EE &amp; GPS Support &gt; Sources and Reference Notes - Sources and Citations in GEDCOM for "Inner Workings of Sources and Citations in GEDCOM."<br/>
+<br/>
+GEDCOM's "Source_Citation" record structure points to (so to speak, incorporates by reference) the relative  Source_Record, which in turn points to both the Source_Repository_Citation and the Source_Publication_Facts. <br/>
+<br/>
+While there are some issues in the way GEDCOM sets out to collect all the information for the "Source_Citation," it recognizes elements for all those "Record Structures" make up the "Source_Citation."</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-04-02T10:50:36-07:00</div>
+<div class="text">GeneJ<br/>
+<br/>
+Citation Details and Citation Text are Family Tree Maker terms. I am NOT talking about them. Those are fields names in Family Tree Maker. I am referring to the Reference Notes Fields that are in EE!<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-02T11:12:27-07:00</div>
+<div class="text"><br/>
+<br/>
+So, if we are both working with EE (I only have the 2007 electronic version), see page 240--it's her example for "Digital Images-Online commercial site Place and Year lead in Source List"<br/>
+<br/>
+On EE page 240, without regard to the names she place on the fields, do you, as I do, see three "Citation Templates?" <br/>
+<br/>
+P.S. Various applications use the terms "Citation Details" and "Citation Text"; some have additional fields as part of the same concept.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-04-02T14:40:59-07:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+No, I do not see three "citation templates".<br/>
+<br/>
+Fields<br/>
+<br/>
+Jurisdiction - Source *<br/>
+Census ID - Source *<br/>
+Schedule - Source *<br/>
+Item Type Format - Source *<br/>
+Website Title - Source *<br/>
+URL (Digital Location) - Source *<br/>
+Year - Source<br/>
+<br/>
+<br/>
+<ul><li>items are included in the Reference Note, Plus</li></ul><br/>
+Civil Division - Citation<br/>
+Page ID - Citation<br/>
+Household ID - Citation<br/>
+Person(s) of Interest - Citation<br/>
+Date - Citation<br/>
+Credit Line (Source of this Source) - Citation<br/>
+<br/>
+The Source "Template" fields are listed above, in the order that is presented on Page 240.<br/>
+<br/>
+The Reference "Template" fields include some Source Fields and the Citation Fields.<br/>
+<br/>
+The Subsequent Note "Template" is a subset of the above.<br/>
+<br/>
+So, in doing this, I'll back away from a Citation Template, and replace that, to keep with the EE! format, with a Reference Note Template.<br/>
+<br/>
+The fields appear to be important<br/>
+<br/>
+The order of the fields appear to be important<br/>
+<br/>
+The I also think the difference between a Source Field and a Citation Field is key<br/>
+<br/>
+Knowing the fields and what they represent, would then get the application generating and the application recovering the data will know HOW that information should be formatted. For example, Web Site title should be in italics.<br/>
+<br/>
+The string of fields would help define what the data is trying to present. Like, the string of fields would say that this information is for a Digital Image from a Commercial Website.<br/>
+<br/>
+Again, this is not how the data in presented to the End User on a set if screens. In your Citation Details and Citation Text example, the DATA is there, but the fields are also "behind" the data. Some of what I said was "citation" fields would be in the Citation Details box and some would be in the Citation Text box. How those fields are presented in another application may be in different fields on a screen. Not addressing that.<br/>
+<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-02T19:06:43-07:00</div>
+<div class="text">We have a working definition for the word Citation. As below, it's coming directly from Mills:<br/>
+<br/>
+Citation - (from Evidence Explained, 2007; electronic version, p. 820) "statement in which one identifies the source of an assertion. Common forms of citations are source list entries (bibliographic entries), reference notes (endnotes or footnotes), and document labels." See the referenced text for numerous examples and discussions about citations, often therein referred to as "reference notes."<br/>
+<br/>
+Each of the 170 QuickCheck models in Evidence_Expained (2007) contains three citations. Each citation references fields that are arranged and punctuated in a certain way--if you will, a "Citation Template," ala Mills.<br/>
+<br/>
+Mills herself has refered to the QuickCheck "formats" as "templates" (APG-L, 22 Nov 2008), "several of the software programs that have just been upgraded or are in the process of being upgraded are creating their templates from the 170 QuickCheck Models from EE. Those who are also offering their users specific citation examples for each template are, of course, creating their own examples. They are not lifting the specific models from EE, and some "interpretation" on their part is necessarily involved. However, my publishers and I are granting open rights to the QuickCheck templates (formats) that have all the parts graphed and labeled--open rights, so long as their source is cited, of course :). This, we hope, will eventually give genealogists uniformity in citation across all the programs, to facilitate the exchange of data between programs and to simplify the confusion we now have when one program uses a term in one way and another uses it differently." <br/>
+[<!-- ws:start:WikiTextUrlRule:17:http://archiver.rootsweb.ancestry.com/th/read/apg/2008-11/1227385593 --><a class="wiki_link_ext" href="http://archiver.rootsweb.ancestry.com/th/read/apg/2008-11/1227385593" rel="nofollow">http://archiver.rootsweb.ancestry.com/th/read/apg/2008-11/1227385593</a><!-- ws:end:WikiTextUrlRule:17 -->]<br/>
+<br/>
+Hope this helps. --GJ<br/>
+<br/>
+P.S. Separately, here's the example of the full reference note from Mills, Evidence (1997), pg. 74. This example is titled "Census, Federal 1850-70 (filmed). You can see how the arrangement of the elements is different.<br/>
+<br/>
+1. Abner Lake household, 1870 U.S. census, Lawrence County, Illinois, population schedule, Christy Township, Bridgeport post office, page 29, dwelling 38, family 38, National Archives micropublication M593, roll 245.<br/>
+<br/>
+The bibliography for this entry read:<br/>
+<br/>
+Illinois. Lawrence County. 1870 U.S. Census, population schedule. Micropublication M593, roll 245. Washington: National Archives.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-02T19:21:27-07:00</div>
+<div class="text">I should have above written, "Each of the 170 QuickCheck models in _Evidence Explained_ (2007)..."<br/>
+<br/>
+As I read the APG-L entry by Mills referred to in that just earlier posting, the whole of her posting may be on point. <br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:13:http://archiver.rootsweb.ancestry.com/th/read/apg/2008-11/1227385593 --><a class="wiki_link_ext" href="http://archiver.rootsweb.ancestry.com/th/read/apg/2008-11/1227385593" rel="nofollow">http://archiver.rootsweb.ancestry.com/th/read/apg/2008-11/1227385593</a><!-- ws:end:WikiTextUrlRule:13 --><br/>
+<br/>
+Here is another paragraph from her entry.<br/>
+<br/>
+In responding to a third party's question, "I did find some help regarding bibliography format in your book on page 258, 6.3, "Arrangement of Elements in Source List (Bibliography). Consequently, I just wanted to be clear that, "Source List Entry Arrangement" (Book) and "Source List Entry" (QuickSheet) were the same, the former an abbreviated listing," Mills responds as below:<br/>
+<br/>
+"With the Ancestry image edition of census records that you inquired about, we're not dealing with a book. ... However, 6.3's discussion of "Arrangement of Elements in Source List (Bibliography)" and the QuickSheet column for "Source List Entry" are talking about one and the same. An entry in a Bibliography (aka source list) is the citation for that source--a citation that is almost always more generic than the footnote/endnote. Both bib entries and footnote/endnote<br/>
+citations are composed of various elements (year, type of census, geographic locale, etc.). When creating a bib entry for a set of original records, we typically have choices as to what element we want to emphasize in our<br/>
+organization of the bibliography. With censuses, for example, we may prefer<br/>
+to arrange our entries by year or by state or by county, etc."</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-30T17:32:50-07:00</div>
+<div class="text">Proposed revision:<br/>
+<br/>
+Source Template - Also known as a Source-Citation Template. In an Application, Source Template specifies the Source Elements, arrangement of same and punctuation necessary to form a citation. Only sometimes is the formatting of a Source Element specified in a Source Template; sometimes formatting is specified in the Source Elements and still other times, by Local Modification.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-30T20:35:00-07:00</div>
+<div class="text">Another revision:<br/>
+<br/>
+Source Template - Also known as a Source-Citation Template. In an Application, Source Template specifies the Source Elements, arrangement of same and punctuation necessary to form a citation. Source Templates are sometimes identified by unique Source Type or Source Group names.<br/>
+Only sometimes is the formatting of a Source Element specified in a Source Template; sometimes formatting is specified in the Source Element definition and still other times, by Local Modification.</div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-30T16:42:45-07:00</div>
+<div class="title">Local Modification (a source concept) - proposed definition</div>
+<div class="text">Local Modification - Changes made to a citation other than to edit data in a Source Element or arrangement and punctuation in a Source Template.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-30T17:30:04-07:00</div>
+<div class="text">Proposed revision<br/>
+<br/>
+<strong>Local Modification (a source concept)</strong> - Changes made to a citation other than to edit data in a Source Element or to provide for arrangement and punctuation in a Source Template. Sometimes formatting of a Source Element is specified by Local Modification; other times, in the Source Element definition and yet other times, in the Source Template.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-30T19:16:18-07:00</div>
+<div class="text">Maybe the third time is a charm.<br/>
+<br/>
+Local modifications are recorded edits or changes the user makes to a citations in the database other than entering information in a Source Element and/or Source Template.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-04-02T07:53:40-07:00</div>
+<div class="text">I am not sure I understand why the word Local is used here. Local in what context?<br/>
+<br/>
+Also, the termi is so general that it could apply to anything, so i think the word Citation should be in the definition.<br/>
+<br/>
+My understanding is that this will result in a citation that is somewhat different from what the Source Template (which I think should be called Citation template because it is about more than just a source) would produce - i.e. overruling the template in reports etc.<br/>
+<br/>
+What about Customised Citation?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-02T09:01:35-07:00</div>
+<div class="text">Hi Geir,<br/>
+<br/>
+I like Customized Citation!! (See *** below)<br/>
+<br/>
+Then should we have "Citation Templates" (rather than source templates?"... recognizing there are three forms common to genealogy applications:<br/>
+<br/>
+Source List Entry<br/>
+First (full) Reference Note<br/>
+Subsequent (short) [Reference] Note. <br/>
+<br/>
+<ul><ul><ul><li>The example we've been working with came from FTM-Mac. We haven't shown the examples yet, but I was also trying to capture a TMG concept.</li></ul></ul></ul>In TMG, the template can be used for more than just "arrangement" and "punctuation"--users can add text to a template. A couple of examples are below. <br/>
+If GEDCOM defines templates to be just the source elements, arrangement of same, and punctuation, then we need some way of describing the text additions that are not currently being exported to GEDCOM.<br/>
+<br/>
+Examples from TMG template parts:<br/>
+1) the word "citing" in example that follows:<br/>
+....., citing [M1]," where M1 is the source of the source, say, "NARA micropublication MXXX, roll 973." <br/>
+2) the words "Herein after cited as," in example that follows:<br/>
+..."Herein after cited as, [ITAL:][SHORT TITLE][:ITAL]," where "Short Title" is "History of Defiance."</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-04-02T10:40:16-07:00</div>
+<div class="text">I don't see why templates could not have text, but I am not a citation expert. But you need to identify the language for a template - or a collection of templates - but that might be needed for other reasons as well. <br/>
+<br/>
+There are no citation templates in Gedcom.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-02T13:06:08-07:00</div>
+<div class="text">@Geir, <br/>
+<br/>
+When the data fields are few, and each can be defined so uniquely, it's likely most vendors in 1995 would have arranged and formatted those data fields similarly. <br/>
+<br/>
+GEDCOM provided for the identity of a "type" (book, film, etc.), but in the GEDCOMs I've been reviewing, I'm rarely seeing that field reported.</div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-04T06:44:22-07:00</div>
+<div class="title">Terms to clarify "Source Type" and "Source Form"</div>
+<div class="text"><br/>
+We have a definition for "Source Type"--it reads:<br/>
+<br/>
+Source Type - term being used temporarily to describe the source. Examples include terms like database, index, bound manuscript, typescript, photograph, letter, E-mail, listserve archive.<br/>
+<br/>
+We should also have a definition for Source Form. From the Research Process Map (Mills, 2006), the two forms of sources are below:<br/>
+<br/>
+Original Source: One that is still in it's first oral or recorded form.<br/>
+<br/>
+Derivative Source: Material produced by Copying an original or manipulating its content--eg. abstracts, compilations ... transcripts, translations ... "<br/>
+<br/>
+The Research Process Map continues with descriptions of different derivatives that "carry weight that might be equivalent to originals"; these are Duplicate Original, Image Copy, and Official Record Copy.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-12-11T06:33:42-08:00</div>
+<div class="title">Citation Element</div>
+<div class="text">See this wiki page "Pending Definitions" for the entry, "Citation Element" currently written, "An identifiable field in a citation that is associated with particular data." <br/>
+<br/>
+There is a prior discussion on the development of this term. See "Source Element - proposed definition." <br/>
+<!-- ws:start:WikiTextUrlRule:3:http://bettergedcom.wikispaces.com/message/view/Pending+Definitions/36844882 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Pending+Definitions/36844882" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Pending+Definitions/36844882</a><!-- ws:end:WikiTextUrlRule:3 --></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-12-11T12:50:13-08:00</div>
+<div class="text"><em>Citation Element: An identifiable field in a citation that is associated with particular data.</em><br/>
+<br/>
+When I was adding definitions to the BG glossary, I took pains to deal with three levels that occur for many concepts in the BG world. If these levels are not kept sharply in mind, then discussions about them lead to confusion when the participants come to the discussion from different levels.<br/>
+<br/>
+1. Real World -- in the real world a person is a real person, an event is an occurrence that actually happened, a citation is a <em>piece of text</em> we <em>see</em> in a literature cited context in a book or report, and so on.<br/>
+<br/>
+2. Data Model -- when we create a model for some aspect of the world, we create a collection of classes (or entities or types) to represent the most important concepts in that sub-world. Thus in a genealogical data model we will have classes for persons and events and citations. We also define the relationships between those entities.<br/>
+<br/>
+3. Computer Representation -- when we develop a computer application based on a data model, we must find a way to represent many instances (or objects) of the classes defined by the data model. Exactly how we do this is dependent on why we are doing it and what database technology we may use to help do it. If we are interested in storing or exchanging data, the computer representation can be based directly on the structure of the model. If we are interested in using the data in a computer program, we have to represent the instances in a way that is compatible with the database technology we choose. If we are using a network database, we can base the database records on the model entities. If we are using a relational database, we have to convert the model through a process called normalization, that will modify and add records types, and in the end seem very different form the model.<br/>
+<br/>
+In the definition that GeneJ stated here, she is defining a citation in the real world. This is fine, but in all discussions we have been having about source types and citation elements, we are not in the real world, we are in the model and representation realms.<br/>
+<br/>
+The issue from BG’s point of view is how real world citation elements (and the sources they describe) are to be modeled and represented. I hope we all know what they actually <em>are</em> as described here by Genej.<br/>
+<br/>
+I have described many times what I believe are the proper model objects necessary to model sources and citations, and I have given a number of examples of how these model objects would be used to define instance objects. My model for sources and citation includes three things:<br/>
+<br/>
+Source -- A class that represents a real-world source of evidence; can be hierarchical.<br/>
+<br/>
+Source reference -- A component of a class (e.g., person, event, even source) that allows the class to refer to a model source, representing in the real world, an item of real-world evidence in a real-world source.<br/>
+<br/>
+Citation element -- A model-level attribute of either a model source or source reference, that represents important, specific information about the real-world evidence. This citation element is close to a direct modeling of real-world citation element as defined by geneJ. But now in the model we know where that real-world concept will show up in computer representations.<br/>
+<br/>
+If these concepts seem subtle, it’s because they are, but when we engage in model building, these are the concepts we must be fully familiar with.</div></div></div><div class="comment"><div class="from"><strong>bamcphee</strong> 2012-03-05T14:13:28-08:00</div>
+<div class="title">Family History Information Standards Organisation</div>
+<div class="text">Family History Information Standards Organisation - FHISO<br/>
+<br/>
+also<br/>
+FHISO - <br/>
+Family History Information Standards Organisation</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-03-05T14:17:53-08:00</div>
+<div class="text">I suggest the we add the following descriptor to the primary definition, so it would read, as below:<br/>
+<br/>
+Family History Information Standards Organisation, also FHISO--a standards setting organisation (fhiso.org) <br/>
+<br/>
+Let's book it, shall we! --GJ</div></div><div class="comment"><div class="from"><strong>bamcphee</strong> 2012-03-05T14:20:28-08:00</div>
+<div class="text">OK</div></div><div class="comment"><div class="from"><strong>bamcphee</strong> 2012-03-05T14:43:12-08:00</div>
+<div class="text">After further thought, and viewing other acronym definitions on this wiki, maybe <br/>
+<br/>
+FHISO - Family History Information Standards Organisation - A standards setting organisation formed to support Family History and Genealogy.<br/>
+<br/>
+Family History Information Standards Organisation would be the link to fhiso.org</div></div></div></body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>BetterGedcom - Sources and Citations in GEDCOM</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h4 id="toc0"><a name="x---Home &gt; EE &amp; GPS Support &gt; Sources and Reference Notes - Sources and Citations in GEDCOM"></a><a class="wiki_link" href="Home.html">Home </a>&gt; <a class="wiki_link" href="EE%20%26%20GPS%20Support.html">EE &amp; GPS Support</a> &gt; Sources and Reference Notes - Sources and Citations in GEDCOM</h4>
+<br/>
+<h1 id="toc1"><a name="Sources and Citations in GEDCOM"></a>Sources and Citations in GEDCOM</h1>
+ Moderator's Note: Suggestions for improvement welcome. <br/>
+Discussion Tab Guidelines: A discussion topic has been started for each of the headings on this page; feel free to begin a discussion of your own, as well.<br/>
+<br/>
+<h3 id="toc2"><a name="Sources and Citations in GEDCOM--Page Quick Links"></a><strong>Page Quick Links</strong></h3>
+<a class="wiki_link" href="Sources%20and%20Citations%20in%20GEDCOM.html#Summary">Summary</a><br/>
+<a class="wiki_link" href="Sources%20and%20Citations%20in%20GEDCOM.html#Inner workings of GEDCOM source methodology">Inner workings of GEDCOM source methodology</a><br/>
+<ul><li><a class="wiki_link" href="Sources%20and%20Citations%20in%20GEDCOM.html#GEDCOM SOURCE_CITATION">SOURCE_CITATION</a></li><li><a class="wiki_link" href="Sources%20and%20Citations%20in%20GEDCOM.html#GEDCOM SOURCE_RECORD">SOURCE_RECORD</a></li><li><a class="wiki_link" href="Sources%20and%20Citations%20in%20GEDCOM.html#GEDCOM SOURCE_REPOSITORY_CITATION">SOURCE_REPOSITORY_CITATION</a></li><li><a class="wiki_link" href="Sources%20and%20Citations%20in%20GEDCOM.html#GEDCOM SOURCE_PUBLICATION_FACTS">SOURCE_PUBLICATION_FACTS</a></li></ul><a class="wiki_link" href="Sources%20and%20Citations%20in%20GEDCOM.html#GEDCOM test results">GEDCOM test results</a><br/>
+<br/>
+<hr/>
+<br/>
+<a name="Summary-Sources and Citations in GEDCOM"></a><br/>
+<h2 id="toc3"> </h2>
+<h1 id="toc4"><a name="Summary"></a><span style="color: #ff0000;">Summary</span></h1>
+ "Before you decide something is broken, it's a good idea to know how it was designed to work." -- Reading between the BetterGEDCOM lines<br/>
+<br/>
+Data based <em>Applications</em> allow for the creation, application and reporting of <em>Reference Notes</em> and/or <em>Source List Entries</em> using "<em>Citation Elements</em>" (source information Data Fields in Applications) and "<em>Templates</em>" (provides for arrangement of the Citation Elements and punctuation). Some Applications allow the user to make <em>Customized Citations</em>, too. GEDCOM supports the transfer of only a few Data Fields, mostly generic Citation Elements such as Author, Title, Publisher, Date, etc. When Applications use comparatively larger and/or more complex source source systems vendors group Citation Elements together and assign these groups to available GEDCOM Data Fields to effect the transfer. [1] [2] This means in a GEDCOM file, data now being exported as Author is often not or not just author data, Title is no longer just title data, and so on and so forth. It becomes a manual process to untangle the data upon import. <br/>
+<br/>
+[1] <em>Terry's TMG Tips</em>, "<a class="wiki_link_ext" href="message/view/BG+data+support-Evidence+Explained+and+GPS+/35991094" rel="nofollow">Considerations for Exporting Sources to GEDCOM 5.5 Files.</a>"<br/>
+[2] <em>Gena-Musings</em>, <a class="wiki_link_ext" href="http://www.geneamusings.com/2011/02/software-programs-gedcom-files-and.html" rel="nofollow">Software Programs, GEDCOM Files and Source Citations....</a> and BetterGEDCOM discussion "<a class="wiki_link_ext" href="message/view/BG+data+support-Evidence+Explained+and+GPS+/35996580" rel="nofollow">Do Genealogy Template Sources Survive When Passed Through GEDCOM?</a>"<br/>
+<br/>
+<br/>
+<h1 id="toc5"><a name="Links"></a><span style="color: #ff0000;">Links</span></h1>
+<ul><li>Main page - <a class="wiki_link" href="BG%20data%20support-Evidence%20Explained%20and%20GPS.html">BetterGEDCOM data support for _Evidence Explained_ and the Genealogical Proof Standard</a></li><li>BetterGEDCOM-"<a class="wiki_link" href="Original%20GEDCOM%20Data%20Model.html">Original GEDCOM Data Model</a>"</li><li>BetterGEDCOM-<a class="wiki_link_ext" href="https://spreadsheets.google.com/ccc?hl=en&amp;key=tcaCQEmk8ueSf4a-b2mBqrg&amp;hl=en#gid=0" rel="nofollow">GEDCOM Source/Reference Note Components</a> (Excel Spreadsheet)</li><li>BetterGEDCOM-"Citations: Different Strokes for Different Folks." (Page and graphics coming)</li><li>BetterGEDCOM discussions (current)</li><li>Noteworthy BetterGEDCOM pages and discussions: <a class="wiki_link_ext" href="message/view/Shortcomings+of+GEDCOM/31633551" rel="nofollow" target="_blank">What's Wrong With Sources?</a>; XXXX ; XXXX; XXXX</li><li><em>Ancestry Insider</em>, "<a class="wiki_link_ext" href="http://ancestryinsider.blogspot.com/2010/05/of-sources-and-citations-all-bets-are.html" rel="nofollow">Of Sources and Citations: All Bets are off</a>"</li><li>[more links to come]</li></ul><br/>
+<a name="Inner workings of GEDCOM's source methodology"></a><br/>
+<h1 id="toc6"><a name="Inner workings of GEDCOM's source methodology"></a><span style="color: #ff0000;">Inner workings of GEDCOM's source methodology</span></h1>
+<br/>
+GEDCOM recognizes about ten Data Fields (Author, Title, Publisher, Date, etc.) by which all Citation data is exported. The Data Fields are grouped as follows<br/>
+<br/>
+<a name="GEDCOM SOURCE_CITATION"></a><br/>
+<strong><a class="wiki_link_ext" href="message/view/Sources+and+Citations+in+GEDCOM/36770590" rel="nofollow">SOURCE_CITATION</a></strong>: Each Source_Citation relates to one or more <em>assertions</em> in the GEDCOM record. GEDCOM's Source_Citation points to a single Source_Record, which identifies a <em>parent-level source.</em> The Source_Citation record <em>also</em> provides Data Fields for <em>child-level records</em> specific to the related assertion. These mechanics recognize that sources have a one to many relationship with Reference Note citations. When the Source_Record defines a whole book, the unique Source_Citation Data Fields would typically point to a passage on a page in that book, and provide for analytical comments and "source of the source" related to the full citation. The Data Fields in GEDCOM's Source_Citation group are listed below.<br/>
+<ul><li>PAGE (WHERE_IN_SOURCE)</li><li>TEXT (TEXT_FROM_SOURCE)</li><li>QUAY - See BetterGEDCOM Requirements Catalog, "Certainty Assessment (QUAY)" [link pending]</li><li>MULTIMEDIA_LINK - See BetterGEDCOM XXXXX [link pending]</li></ul><br/>
+<ul><li>SOURCE_RECORD (see below)</li></ul><br/>
+<a name="GEDCOM SOURCE_RECORD"></a><br/>
+<strong><a class="wiki_link_ext" href="message/view/Sources+and+Citations+in+GEDCOM/36770662" rel="nofollow">SOURCE_RECORD</a>:</strong> As above, GEDCOM's Source_Records have a one to many relationship to Source_Citation records. GEDCOM defines the Source_Record data as, "a bibliographic description of the source cited.." Thus, GEDCOM assumed the details of a "parent level" source record (part of the Reference Note) to be the same as the details found in a bibliography or Source List Entry, and vice-versa. (In practice, this is often not the case.) The SOURCE_RECORD includes pointers to two other records, the SOURCE_REPOSITORY_CITATION and SOURCE_PUBLICATION_FACTS. GEDCOM's available Source_Record fields are listed below.<br/>
+<ul><li>AUTH (SOURCE_ORIGINATOR)</li><li>TITL (SOURCE_DESCRIPTIVE_TITLE)</li><li>ABBR (SOURCE_FILED_BY_ENTRY)</li><li>TEXT (TEXT_FROM_SOURCE)</li></ul><br/>
+<ul><li>SOURCE_REPOSITORY_CITATION (see below)</li><li>SOURCE_PUBLICATION_FACTS (see below)</li></ul><br/>
+<a name="GEDCOM SOURCE_REPOSITORY_CITATION"></a><br/>
+<strong><a class="wiki_link_ext" href="message/list/Sources+and+Citations+in+GEDCOM" rel="nofollow">SOURCE_REPOSITORY_CITATION</a></strong>: This record holds a pointer to the REPOSITORY_RECORD and is a place holder for two other GEDCOM Data Fields:<br/>
+<ul><li>REPOSITORY_RECORD (REPO)<ul><li>NAME (NAME_OF_REPOSITORY)</li><li>ADDR (ADDRESS_STRUCTURE)</li></ul></li><li>CALN (SOURCE_CALL_NUMBER)</li><li>MEDI (SOURCE_MEDIA_TYPE)</li></ul><br/>
+<a name="GEDOM SOURCE_PUBLICATION_FACTS"></a><br/>
+<strong>SOURCE_PUBLICATION_FACTS</strong>:<br/>
+<ul><li>WIP</li></ul><br/>
+<br/>
+<a name="GEDCOM test results"></a><br/>
+<h1 id="toc7"><a name="GEDCOM test results"></a><span style="color: #ff0000;">GEDCOM test results</span></h1>
+<br/>
+<h1 id="toc8"> </h1>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-29T16:32:28-07:00</div>
+<div class="title">GEDCOM SOURCE_CITATION</div>
+<div class="text">This is a section of the BetterGEDCOM Wiki Page, "Sources and Citations in GEDCOM," under the heading, "Inner workings of GEDCOM's source methodology."<br/>
+<br/>
+Suggestions? Questions? Clarifications?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-29T16:33:51-07:00</div>
+<div class="title">GEDCOM SOURCE_RECORD</div>
+<div class="text">This is a section of the Wiki Page, "Sources and Citations in GEDCOM," under the heading, "Inner workings of GEDCOM's source methodology."<br/>
+<br/>
+Suggestions? Questions? Clarification?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-29T16:37:17-07:00</div>
+<div class="title">GEDCOM SOURCE_REPOSITORY_CITATION</div>
+<div class="text">This is a section of the Wiki Page, "Sources and Citations in GEDCOM," under the heading, "Inner workings of GEDCOM's source methodology."<br/>
+<br/>
+Suggestions? Questions? Clarification?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-07-15T11:39:10-07:00</div>
+<div class="title">Link to very old discussion, "What's Wrong With Sources?" on the page, "Shortcomings of Gedcom"</div>
+<div class="text">What's wrong with sources?<br/>
+<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:3:http://bettergedcom.wikispaces.com/message/view/Shortcomings+of+GEDCOM/31633551?o=0 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Shortcomings+of+GEDCOM/31633551?o=0" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Shortcomings+of+GEDCOM/31633551?o=0</a><!-- ws:end:WikiTextUrlRule:3 --></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-07-26T11:37:12-07:00</div>
+<div class="title">GEDCOM Source_Citation question.</div>
+<div class="text">Reference: <br/>
+<!-- ws:start:WikiTextUrlRule:19:http://bettergedcom.wikispaces.com/Sources+and+Citations+in+GEDCOM --><a href="http://bettergedcom.wikispaces.com/Sources+and+Citations+in+GEDCOM">http://bettergedcom.wikispaces.com/Sources+and+Citations+in+GEDCOM</a><!-- ws:end:WikiTextUrlRule:19 --><br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:20:http://bettergedcom.wikispaces.com/Original+GEDCOM+Data+Model --><a href="http://bettergedcom.wikispaces.com/Original+GEDCOM+Data+Model">http://bettergedcom.wikispaces.com/Original+GEDCOM+Data+Model</a><!-- ws:end:WikiTextUrlRule:20 --><br/>
+<br/>
+<br/>
+Question<br/>
+From the GEDCOM 5.5 document, I recorded GEDCOM's Source_Citation as below:<br/>
+<br/>
+ *PAGE (WHERE_IN_SOURCE)<br/>
+ *TEXT (TEXT_FROM_SOURCE)<br/>
+ *QUAY - See BetterGEDCOM Requirements Catalog, "Certainty Assessment (QUAY)" [link pending]<br/>
+  *MULTIMEDIA_LINK - See BetterGEDCOM XXXXX [link pending]<br/>
+  *SOURCE_RECORD (see below)<br/>
+<br/>
+I often see the word "Note" associated with the Source_Citation exclusive fields. <br/>
+<br/>
+Is the word "Note" being used to refer to the "text" field, or is a "Note" field developed at the Source_Citation level?<br/>
+<br/>
+What am I missing? --GJ</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-07-26T12:15:06-07:00</div>
+<div class="text">From my copy of GEDCOM 5.5 (and showing ONLY the version using Source-Records, i.e. not the in-line version):<br/>
+<br/>
+SOURCE_CITATION:=<br/>
+<br/>
+n SOUR @&lt;XREF:SOUR&gt;@ /* pointer to source record */ {1:1} p.55<br/>
+ +1 PAGE &lt;WHERE_WITHIN_SOURCE&gt; {0:1} p.55<br/>
+ +1 EVEN &lt;EVENT_TYPE_CITED_FROM&gt; {0:1} p.43<br/>
+   +2 ROLE &lt;ROLE_IN_EVENT&gt; {0:1} p.53<br/>
+ +1 DATA {0:1}<br/>
+   +2 DATE &lt;ENTRY_RECORDING_DATE&gt; {0:1} p.43<br/>
+   +2 TEXT &lt;TEXT_FROM_SOURCE&gt; {0:M} p.54<br/>
+     +3 [ CONC | CONT ] &lt;TEXT_FROM_SOURCE&gt; {0:M}<br/>
+ +1 QUAY &lt;CERTAINTY_ASSESSMENT&gt; {0:1} p.38<br/>
+ +1 &lt;&lt;MULTIMEDIA_LINK&gt;&gt; {0:M} p.33,26<br/>
+ +1 &lt;&lt;NOTE_STRUCTURE&gt;&gt; {0:M} p.33<br/>
+<br/>
+So - your version missed<br/>
+ - the Event and Role-in-event (I've never felt the need for them, so I don't blame you)<br/>
+ - the entry recording date (which I do use)<br/>
+ - the note <br/>
+<br/>
+For what it's worth, the only ones I regularly fill in are:<br/>
+ - entry recording date<br/>
+ - quality (as primary or secondary, normally)<br/>
+Often I fill in the note, often with a comment about the values - e.g. if it's a census and this is linked to the birth event, I fill in the deduced range for the birth date. In such a case, the values go into the text-from-source to save looking at the source itself.<br/>
+<br/>
+Having said that, if the source record represents a "lump" source such as a city directory or Wikipedia, rather than a single vital certificate or census schedule (say), then things like page, text and note will also get filled in with the relevant extracts.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-07-26T12:37:45-07:00</div>
+<div class="text">TYTY. <br/>
+<br/>
+:), I just wrote about lumpers and splitters in the response on Citation Graphics. --GJ</div></div></div></body>
+</html>

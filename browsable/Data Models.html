@@ -1,0 +1,778 @@
+<html>
+<head>
+<title>BetterGedcom - Data Models</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<a class="wiki_link" href="Home.html">Home </a>&gt; <a class="wiki_link" href="Data.html">Data Models Home</a> &gt; Data Model Summary Page<br/>
+<br/>
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+//<![CDATA[
+function googleTranslateElementInit() {
+ new google.translate.TranslateElement({
+   pageLanguage: 'en'
+ }, 'google_translate_element');
+}
+//]]>
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
+</script><br/>
+<br/>
+There are different ways to look at genealogical data, some practical and some theoretical. Depending on what the goals are, one or more of these approaches are useful to study or be familiar with.<br/>
+<br/>
+Please be particularly careful when using information from other sources in this section, as the information applicable to these different data models may be under copyright or other usage restrictions.<br/>
+<br/>
+<h2 id="toc0"><a name="x-Original GEDCOM Data Model"></a><a class="wiki_link" href="Original%20GEDCOM%20Data%20Model.html">Original GEDCOM Data Model</a></h2>
+ The original GEDCOM Data Model actually has several versions. Please see the <a class="wiki_link" href="Original%20GEDCOM%20Data%20Model.html">GEDCOM Data Model Page</a> for details. Please also note that discussion of the GEDCOM Data Model largely refers to the subpart of the overall GEDCOM standard that refers to genealogical data structures and formats. For example, in the GEDCOM 5.5 Standard, Chapter 2 describing the Lineage-Linked GEDCOM Form is the section that is applicable. Chapter 1 of the GEDCOM 5.5 Standard refers to the low-level data syntax which will be superseded by the use of XML.<br/>
+<br/>
+GEDCOM sought to be a practical implementation of of a portable genealogical data model. It is not under development and is considered to be at the end of its development by its owner/developer, FamilySearch.<br/>
+<br/>
+<h2 id="toc1"><a name="x-CommSoft's Event GEDCOM"></a><a class="wiki_link_ext" href="http://deadendssoftware.com/EventGEDCOMDraft1.0.pdf" rel="nofollow" target="_blank">CommSoft's Event GEDCOM</a></h2>
+ CommSoft's proposal from 1994 included some excellent modifications to lineage-linked GEDCOM, including both Events and Places as record level objects.<br/>
+<br/>
+<h2 id="toc2"><a name="x-GenTech Genealogical Data Model"></a><span style="font-size: 17px; line-height: 25px;"><strong><a class="wiki_link" href="Data%20Models.html#mce_temp_url#">GenTech Genealogical Data Model</a></strong></span></h2>
+ This data model, sponsored in part by the <a class="wiki_link_ext" href="http://www.ngsgenealogy.org/cs/GenTech_Projects" rel="nofollow" target="_blank">National Genealogical Society</a> (of America), is excellent in that it seeks to define a model that can include ALL genealogical data. However, it is so inclusive and open that it is probably unusable as a practical model (which its developers themselves recognize). It nevertheless remains a useful tool for considering genealogical data, and I encourage those interested in this topic to study it.<br/>
+<br/>
+<h2 id="toc3"><a name="x-GRAMPS Data Model"></a><a class="wiki_link" href="GRAMPS%20Data%20Model.html">GRAMPS Data Model</a></h2>
+<a class="wiki_link_ext" href="http://gramps-project.org/" rel="nofollow" target="_blank">GRAMPS</a> is an open-source software product available free for many operating systems. The GRAMPS model is noteworthy because it actually stores genealogical data in XML format, which is a hierarchical computer formatting language that is widely used and was proposed as a successor to the proprietary format used in the GEDCOM standard.<br/>
+<br/>
+<h2 id="toc4"><a name="x-DeadEnds Data Model"></a><a class="wiki_link" href="DeadEnds%20Model.html">DeadEnds Data Model</a></h2>
+<span style="margin: 0px; padding: 0px;">The DeadEnds Data model was created by Tom Wetmore to be the underlying model used in his DeadEnds system of genealogical programs.</span><br/>
+<br/>
+<h2 id="toc5"><a name="x-GenXML"></a><a class="wiki_link" href="GenXML.html">GenXML</a></h2>
+<span style="margin: 0px; padding: 0px;"><span style="background-clip: initial; background-origin: initial; background-position: 100% 50%; cursor: pointer; padding-right: 10px;"><a class="wiki_link_ext" href="http://cosoft.org/genxml/" rel="nofollow">GenXML</a></span> was created by Christoffer Owe as an XML-based alternative to Gedcom. It is inspired by the Gentech GDM. There's a <span style="cursor: pointer;"><a class="wiki_link_ext" href="file/detail/GenXML30.pdf" rel="nofollow">PDF</a></span> which gives an in-depth description of the format.</span><br/>
+<br/>
+<h2 id="toc6"><a name="x-WeRelate Data Model"></a><span style="font-size: 17px; line-height: 25px; margin: 0px; padding: 0px;"><strong><span style="background-clip: initial; background-origin: initial; background-position: 100% 50%; cursor: pointer; padding-right: 10px;"><a class="wiki_link_ext" href="http://www.werelate.org/gedcom.rnc" rel="nofollow">WeRelate Data Model</a></span></strong></span></h2>
+<span style="margin: 0px; padding: 0px;"><span style="background-position: 100% 50%; cursor: pointer; margin: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 10px; padding-top: 0px;">WeRelate uses a <span style="background-clip: initial; background-origin: initial; background-position: 100% 50%; cursor: pointer; padding-right: 10px;"><a class="wiki_link_ext" href="http://lmonson.com/blog/?p=4" rel="nofollow">slightly-modified version of GedML</a></span> (with additional modifications to correct some ANSEL character mappings) to convert the GEDCOM to XML. It maps the raw XML produced by GedML into a restricted schema that is simpler to process. We have found that nearly all incoming GEDCOM data can be mapped to this simplified schema. (Data from incoming GEDCOM's that does not fit into the model is added as notes or text.) The resulting XML is then added as XML "data islands" to the various wiki pages. Part of the motivation for the model is to make it easy for end-users to understand differences. When a user asks for a "diff" between two versions of a page, they are see a wikipedia-like diff screen directly on the XML (and so far nobody has complained).</span>If I had to do it over again I would change the model somewhat, but it's working well overall.</span><br/>
+<br/>
+<h2 id="toc7"><a name="x-GedML Data Format"></a><span style="margin: 0px; padding: 0px;"><a class="wiki_link" href="GedML%20Data%C2%A0Format.html">GedML Data Format</a></span></h2>
+<span style="margin: 0px; padding: 0px;"><span style="background-position: 100% 50%; cursor: pointer; padding-right: 10px;"><a class="wiki_link_ext" href="http://homepage.ntlworld.com/michael.h.kay/gedml/index.html" rel="nofollow" target="_blank">GedML</a></span> is a set of strict GEDCOM-to-XML translation utilities which has no defining schema since it apparently relies on the underlying GEDCOM to be compliant. The GedML data model is actually the GEDCOM data model, but its includsion here is useful for the purposes of understanding the basic differences between GEDCOM and XML in terms of syntax. </span>Original distribution: <a href="files/GedML.zip">GedML.zip</a> and modified version that is referred to in the WeRelate Data Model <span style="font-family: 'Lucida Grande',Arial,Helvetica,sans-serif; line-height: normal;"><a href="files/gedml-dist.zip">gedml-dist.zip</a> .</span><br/>
+<br/>
+<h2 id="toc8"><a name="x-GenBridge"></a><span style="font-weight: normal; line-height: 25px;"><strong>GenBridge</strong></span></h2>
+ GenBridge is a commercial product owned by <a class="wiki_link_ext" href="http://www.whollygenes.com/Merchant2/merchant.mvc?Screen=PROD&amp;Product_Code=GENBRDG-DL" rel="nofollow" target="_blank">WhollyGenes</a>, the makers of The Master Genealogist. GenBridge is a technology that WhollyGenes licenses that is capable of understanding several genealogical data formats. However, its developers note that it is an <em>import</em> technology and not designed for exporting of data. As a commercial product, it is not available to dissect its data model, but it is an important product to make note of.<br/>
+Message-ID: &lt;mailman.6.1305561741.28486.gencmp@rootsweb.com&gt;<br/>
+<br/>
+<h2 id="toc9"><a name="x-The Family Pack"></a><a class="wiki_link_ext" href="http://thefamilypack.org/index.htm" rel="nofollow" target="_blank">The Family Pack</a></h2>
+ In a discussion "Event-oriented genealogy software for Linux" on the usenet group "soc.genealogy.computing", Nick Matthews posted about his project. See Message-ID: &lt;mailman.6.1305561741.28486.gencmp@rootsweb.com&gt; or <a class="wiki_link_ext" href="https://groups.google.com/d/msg/soc.genealogy.computing/olvCudoQR8w/WDx-1hLZjR4J" rel="nofollow" target="_blank">GoogleGroups</a> He says it "is at a very early stage, there's no functional program yet but there is code and the beginnings of a practical (I hope) database design at thefamilypack.org"<br/>
+From the homepage: "The Family Pack is an ambitious open source project to create a new cross platform genealogy program. The project will involve designing a new genealogical database, creating a program to make use of it, and finally, organising ways of providing some standard universal data sets."<br/>
+The database follows the GenTech Model, there is a Reference Entity in the place of GenTech's Assertion Object. This could be a good test to see if that model is indeed to complicated for real-life software, or if it can be used after all.<br/>
+<br/>
+<h2 id="toc10"><a name="x-GEDCOM Alternatives"></a><a class="wiki_link_ext" href="http://www.tamurajones.net/GEDCOMAlternatives.xhtml" rel="nofollow" target="_blank">GEDCOM Alternatives</a></h2>
+ See Tamura Jones' excellent article giving an overview of GEDCOM alternatives. It includes the history of many of the data models mentioned above as well as a number of others. There are also many links to the various models at the bottom of the article. (Note that Internet Explorer less than Version 9 cannot view Tamura's pages.)<br/>
+<br/>
+<h2 id="toc11"><a name="x-Other Software Product Data Models"></a>Other Software Product Data Models</h2>
+ Please add any others you know of or are familiar with that would be useful to examine or consider, particularly if you represent any of the efforts to devise a GEDCOM-like standard based on XML.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-03T19:26:24-07:00</div>
+<div class="title">Forays into Genealogy Data Base Modeling</div>
+<div class="text">Here's a blog post with the above title examining some db modeling issues working from a TMG dataset:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:2:http://solumslekt.org/forays/blue.php --><a class="wiki_link_ext" href="http://solumslekt.org/forays/blue.php" rel="nofollow">http://solumslekt.org/forays/blue.php</a><!-- ws:end:WikiTextUrlRule:2 --></div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-03T19:58:46-07:00</div>
+<div class="title">XML-based genealogical data models</div>
+<div class="text">This page lists the most complete list of XML-based genealogical data models I have seen.<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:2:http://xml.coverpages.org/genealogy.html --><a class="wiki_link_ext" href="http://xml.coverpages.org/genealogy.html" rel="nofollow">http://xml.coverpages.org/genealogy.html</a><!-- ws:end:WikiTextUrlRule:2 --></div><div class="comment"><div class="from"><strong>rwcrooks</strong> 2010-11-09T14:56:08-08:00</div>
+<div class="text">I haven't had much luck with Tamura Jones' web site.  He (or she) seems so hung up on writing to a certain standard that IE won't open the pages.  IE has at least a 60% market share of browsers.<br/>
+<br/>
+I think that this is a lesson that we should take to heart when developing this standard.  That is, Whatever we do has to work in the real world, not just be theoretically elegant.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-09T15:09:59-08:00</div>
+<div class="text">Tamura (a "he") has some very good information and thought-provoking ideas about this whole topic. <br/>
+<br/>
+I've had issues viewing his site with Chrome but not with Firefox, so I just use that.<br/>
+<br/>
+There is no doubt this will be a practical effort, and the balance between being practical and striving to better practices will no doubt be a huge point of contention.</div></div><div class="comment"><div class="from"><strong>Aylarja</strong> 2010-11-09T15:27:02-08:00</div>
+<div class="text">The site worked fine for me using one of the latest stable Chrome releases. I am not a fan of how the tamurajones site opens links within its own frameset - years ago in my web-development days, this was considered bad practice. But the site does have quite a bit of interesting information, especially the link to the GenXML 2.0 schema (<!-- ws:start:WikiTextUrlRule:0:http://www.cosoft.org/genxml/doc20/default.html --><a class="wiki_link_ext" href="http://www.cosoft.org/genxml/doc20/default.html" rel="nofollow">http://www.cosoft.org/genxml/doc20/default.html</a><!-- ws:end:WikiTextUrlRule:0 -->). In my opinion, if a BetterGEDCOM end product will include any kind of text-based output file, XML will be the key.</div></div><div class="comment"><div class="from"><strong>DearMYRTLE</strong> 2010-11-09T17:37:29-08:00</div>
+<div class="text">My Firefox 3.6.12 on this Windows 7 platform works well when accessing Tamura Jones' website.</div></div><div class="comment"><div class="from"><strong>dalegrind</strong> 2010-11-09T20:53:53-08:00</div>
+<div class="text">This was listed on on wikipedia ( <!-- ws:start:WikiTextUrlRule:10:http://en.wikipedia.org/wiki/GEDCOM#Alternatives_to_GEDCOM --><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/GEDCOM#Alternatives_to_GEDCOM" rel="nofollow">http://en.wikipedia.org/wiki/GEDCOM#Alternatives_to_GEDCOM</a><!-- ws:end:WikiTextUrlRule:10 --> ) way before Tamura did.<br/>
+<br/>
+Not in the list was:<br/>
+<br/>
+GenoPro uses XML as its core file format, and its file extension .gno is a zipped-XML file. The user may rename the file extension .gno to .zip for editing the content of the genealogy document with a text editor. GenoPro can also import and export data in the GEDCOM format.( <!-- ws:start:WikiTextUrlRule:11:http://en.wikipedia.org/wiki/GenoPro --><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/GenoPro" rel="nofollow">http://en.wikipedia.org/wiki/GenoPro</a><!-- ws:end:WikiTextUrlRule:11 --> )<br/>
+<br/>
+Family.Show ( <!-- ws:start:WikiTextUrlRule:12:http://en.wikipedia.org/wiki/Family.Show --><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Family.Show" rel="nofollow">http://en.wikipedia.org/wiki/Family.Show</a><!-- ws:end:WikiTextUrlRule:12 --> )has its own interesting format which it says uses an Open Package Convention ( <!-- ws:start:WikiTextUrlRule:13:http://en.wikipedia.org/wiki/Open_Packaging_Conventions --><a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Open_Packaging_Conventions" rel="nofollow">http://en.wikipedia.org/wiki/Open_Packaging_Conventions</a><!-- ws:end:WikiTextUrlRule:13 --> ) file format (*.familyx) to save family data, stories, and photos in one file. Only issue is that this program is not a real program.<br/>
+<br/>
+Personally I have just started collecting my family history and have after a fair bit of research decided to go with Gramps only because of its XML format.<br/>
+<br/>
+I hope that what ever BetterGEDCOM looks likes that it will not reinvent the wheel and take advantage of existing XML formats available.</div></div><div class="comment"><div class="from"><strong>TamuraJones</strong> 2010-11-09T21:19:14-08:00</div>
+<div class="text">Dale, I am sure there are many such lists. <br/>
+Greg listed several already.<br/>
+<br/>
+I do believe my overview is currently the most extensive, most focussed and up to date, with introduction dates for each standard, and all links working. Bonus feature is that is posted on a site that genealogy developers frequent :-)<br/>
+<br/>
+By the way, the format any app uses isn't too interesting, until the developer puts it forward it as a standard others might adopt, as the GRAMPS project did.<br/>
+<br/>
+After all, the idea of a standard file format is that we do not worry about the proprietary formats, not even if these are modern or elegant.<br/>
+<br/>
+It may be interesting to document file formats used by various application, but that would result in another, separate overview.<br/>
+I have no plans to make such an overview, but would certainly enjoy reading it if you did make one.</div></div><div class="comment"><div class="from"><strong>TamuraJones</strong> 2010-11-09T21:38:13-08:00</div>
+<div class="text">rwcrooks,<br/>
+<br/>
+Microsoft may not have a great track record, but IE 9 displays the site just fine. Older versions do not support web standards. That is a problem with these older versions, and a major reason many users changed to Firefox, Opera, Flock, Safari, Chrome and now IE 9 and RockMelt.<br/>
+<br/>
+There is a lesson there for vendors; do support the standards, as others will not go out of their way to support the alternative "standard" set your broken product just because of your market share. Instead, users will vote by opting for a product that does support the standards.</div></div><div class="comment"><div class="from"><strong>Aylarja</strong> 2010-11-09T21:40:52-08:00</div>
+<div class="text">dalegrind,<br/>
+<br/>
+Interesting reference to the Open Package Convention. Following that link makes clear that at least one very heavy hitter - Microsoft - adapted OPC for the most-recent version of its Word, Excel, and Powerpoint file formats. The .docx, .xlsx, and .pptx files are essentially compressed packages of XML files and various other files required to make the resulting document, spreadsheet, or presentation. Note that OPC is an open standard, not a proprietary format, although, like XML, it is tailored for specific uses.<br/>
+<br/>
+A format like this for packaging genealogy data and multimedia files seems to me a worthy candidate for consideration.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-10T14:00:08-08:00</div>
+<div class="text">I have a slight problem with the title of this discussion - "XML-based genealogical data models". <br/>
+<br/>
+The (logical) data model exists to inform the requirements capture and requirements analysis stages. <br/>
+<br/>
+XML is how something is implemented and enters at the later stages of design and build.<br/>
+<br/>
+If you do things "properly", then the (logical) data model looks the same whether it's XML or GEDCOM-style tagging that's used to implement the stuff. <br/>
+<br/>
+Note that the physical data model comes into the design stage and that may well alter depending on whether the target is XML,  GEDCOM-style tagging or an RDBMS.<br/>
+<br/>
+We should be aiming first for the logical data model because this is the underlying truth, on which one builds the necessary tweaks, fiddles and arcane practices to actually implement the design.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-10T15:18:34-08:00</div>
+<div class="text">You're right. XML is at least partially irrelevant. Indeed GedML data format, an existing format which is liked on the left, illustrates how easily the exact same data in GEDCOM format can be expressed exactly in XML.<br/>
+<br/>
+The thing that does make XML stand out is the fact that there are several already-defined XML-based schema/namespaces that can be used with any other XML-based data format. Strictly speaking, perhaps "Modern Genealogical Data Models" or "Post-GEDCOM Genealogical Data Models" would be better terms.<br/>
+<br/>
+However, since every other effort with goals similar to ours has used XML and XML will in fact be what we use, use of the term "XML-based" doesn't bother me.<br/>
+<br/>
+Regarding our first goal, we are happy to have people mill around and explore various ideas here right now (this being our 26th hour of being public). Many people aren't as familiar with XML as you are, and if they want to explore its concepts, well, we're thrilled that they are learning about it.<br/>
+<br/>
+Let me point out that without knowing where we're going, it's hard to design a data model. Our first order of business is to more clearly define our goals, but in the meantime, there is no reason we can't have discussion about the various areas that are new to certain people or that they have a particular affinity for.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-20T23:24:27-08:00</div>
+<div class="text">Hi, good idea to do a wiki!!!<br/>
+<br/>
+I got fed up when gedcom search results in 2003-8 still pointed back to 2002 gedcom posts.<br/>
+<br/>
+I got bored and started coding my own gedcom model for XML. not saying mine is great. I never like being trapped to one monopoloy software display and horrible export functions. that is another story of its own.<br/>
+<br/>
+Well I will just post a link, just click skip to public access <!-- ws:start:WikiTextUrlRule:14:http://www.stranskyfamilytree.net/gen%20project/admin-login.asp --><a class="wiki_link_ext" href="http://www.stranskyfamilytree.net/gen%20project/admin-login.asp" rel="nofollow">http://www.stranskyfamilytree.net/gen%20project/admin-login.asp</a><!-- ws:end:WikiTextUrlRule:14 --><br/>
+I even did GEDCOM converters to xml and 90% complete.<br/>
+<br/>
+I am willing to do what I can on the side IF there really is a group effort for a "BetterGEDcom". I was on other gedcom boards and all they did was fight to monopolize there own software and not create some kind of opensource code which could convert gedcom to a complete xmlgedcom as is.<br/>
+<br/>
+<br/>
+I am/was 75% done with a three part xml file, the last 4th xml was to store all pdfs, images, notes, scrapebooking.<br/>
+<br/>
+It not at all hard to design, I can post that in another message as give and take alittle.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-20T23:44:38-08:00</div>
+<div class="text">All should could agree on<br/>
+<br/>
+take a GEDCOM file 5 or 6 and convert it to a true xml structure as is with the 4 char tags as node name. call it say "Xgedcom.xml"<br/>
+<br/>
+2nd, create multiple xslt convert displays<br/>
+say like so<br/>
+Xgedcom.xml &gt;&gt;xslt&lt;&lt; Gramps.xml<br/>
+Xgedcom.xml &gt;&gt;xslt&lt;&lt; ancestry.xml<br/>
+Xgedcom.xml &gt;&gt;xslt&lt;&lt; familytreemaker.xml<br/>
+etc...etc...<br/>
+<br/>
+They already can convert gedcom to any other platform. So level the playing field and break down some monopolies.<br/>
+<br/>
+consider that even other sites/software export either xml or gedcom file again, then just convert THAT exported gedcom to Xgedcom.xml then translate it via xslt to which monopoly xml standard you want to view it in.<br/>
+<br/>
+What I have learned is once the major software holder see that "A group of people" created a standard that "OUR CUSTOMER" can export a gedcom and take to another platform in minutes. <br/>
+<br/>
+ I could make a list of the pros and cons of many major and minor software and parsers out there. <br/>
+<br/>
+ Why a gedcom to xgedcom.xml? well <br/>
+1st: most major software will export back to a plain gedcom file as is, but losing pictures and many scrapbooking notes on the software application.<br/>
+2nd: most software programs will not convert a persons hard work into a compeditors platform.<br/>
+<br/>
+this leaves one choice, everything some where ends up around this xgedcom.xml with as is gedcom 4 letter tags. <br/>
+<br/>
+Just think, if you can create a xml standard that can &lt;&lt;xslt&gt;&gt; to other plateforms AND retain scrapbooking and photos you/we would have a upper hand where people would use such xsly converters to migrate to the "BetterGEDCOM.xml" via stepping stone from "xgedcom.xml"<br/>
+<br/>
+I dont know maybe I am noyt making sense? maybe some else can say it more clear what steps need to be taken.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-05T17:58:14-07:00</div>
+<div class="text">Tamura Jones did a comprehensive summary today of all the GEDCOM alternatives over the years, including this one:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:4:http://www.tamurajones.net/GEDCOMAlternatives.xhtml --><a class="wiki_link_ext" href="http://www.tamurajones.net/GEDCOMAlternatives.xhtml" rel="nofollow">http://www.tamurajones.net/GEDCOMAlternatives.xhtml</a><!-- ws:end:WikiTextUrlRule:4 --><br/>
+<br/>
+Very worth looking at with plenty of supporting references at the bottom. This is a summary listing, and much needed. I haven't compared the two, but I'm pretty sure this listing lists several initiatives not listed in the above list.</div></div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2010-11-13T16:58:18-08:00</div>
+<div class="title">Some considerations</div>
+<div class="text">In no particular order:<br/>
+An object oriented approach.  This makes it possible e.g. to specify "Name" without worrying what sort of name; "Name would be a base class of which inherited surnames, patronymics, etc. would all be subclasses.  Extensibility can be provided by adding new subclasses.<br/>
+<br/>
+Separate entities for:<br/>
+Evidence (e.g. a parish register record)<br/>
+<br/>
+Events in the Evidence (there could be more than one, e.g. an account of the mother dying in childbirth covers two genealogically significant events, the birth and the death)<br/>
+<br/>
+Names and roles of people in the Evidence, a name is not a person, it's the name of a person and a name as encountered in an Evidence document is usually simply one person's attempt to record the sounds he thought he heard when the name was pronounced - or even worse, a transcriber's attempt to read one person's attempt...<br/>
+<br/>
+Historical reconstruction of a person.  We cannot represent real people.  For the most part the people genealogists consider are dead and gone.  I could show you a picture of some of my parents but I wouldn't be showing you my parents, just a picture.  What we are aiming for is a set of historical reconstructions of people who we think existed but these are interpretations of the Evidence.  I consider it elementary that Evidence and Interpretation should be clearly distinct and that using the same data structure for both is a major failing of GEDCOM.  For the most part this entity is simply a hub for a set of links to other entities and contains little information.  It would, however, contain a definitive name for the person.<br/>
+<br/>
+Links between Name/role and Reconstruction.  Making a reconstruction my merging names is a dreadful way to work; changing one's mind about an identity is a nightmare.  Instead we link the various Name/role objects to the hub of the Reconstruction object.  This not only allows linking one Reconstruction object to many Name/role objects, it also allows removal of the link if it proves incorrect.  It also allows one Name/role object to be linked to multiple Reconstruction objects if we're not sure - for instance I had a John Goddard whose age at death is recorded but this yields a year of birth which has two matching baptismal records which took a long time to sort out.  It follows from that that the link could include some measure confidence.  In turn a measure of confidence could be negative to record the fact that we can eliminate a particular identity.<br/>
+<br/>
+Relationship.  One subclass would be a family but others could be apprenticeships, emigrant voyages or any other relationships in which a family historian might be interested.<br/>
+<br/>
+Links from Reconstruction objects to Relationship objects.<br/>
+<br/>
+Places - and the ability to put places into multiple hierarchies (ecclesiastical, civil, etc) and to make such memberships time-dependent.<br/>
+<br/>
+<br/>
+Unique IDs for objects.  If Alice and Bob send Carol copies of the same object her software should be able to detect the duplicate and only import it once.<br/>
+<br/>
+Once published an object must not be altered.  If that were allowed duplicates could not be handled properly.  If an amended version is needed it must be a new object quoting the ID of the old object it amends.</div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-14T09:21:53-08:00</div>
+<div class="text">igoddard,<br/>
+<br/>
+I am trying to get an handle on this discussion but am having a difficult time understanding the Evidence Driven object.<br/>
+<br/>
+Now, I am a User wanting to Share information with another User. The BetterGEDCOM discussion is to be the vehicle to do that. Get data from my to someone else or somewhere else without loss of information.<br/>
+<br/>
+To me, and I am only one user, its up to me to provide the Evidence to an event in my data entry, where I provide the elements that define that Event in a Source-Citation.<br/>
+<br/>
+Now, that Source and that specific Source-Citation may be "linked to" a number of other Events for this specific person as well as other persons.<br/>
+<br/>
+Yes, I started with that piece of Evidence taken from a Source-Citation and record what I found in my genealogy database.<br/>
+<br/>
+That is the information that needs to be passed along to someone or somewhere else for processing there.<br/>
+<br/>
+Outside of that, I will do some evaluation of the evidence and may draw my own conclusion of that evidence. But, at this point in time as we define what a BetterGEDCOM is, that information does not need to be shared. The receiving end, should do the same thing. Evaluate what I already have and what was presented in the BetterGEDCOM. The Evaluation and any Conclusion after it is received may or may not be the same as the Sender's evaluation and/or conclusion.<br/>
+<br/>
+I have been trying to figure out how starting the BetterGEDCOM with Evidence will work.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-21T00:11:36-08:00</div>
+<div class="text">Hi I went in circles a few times and really thought about this. GEDCOM is almost like a xml file, but GEDCOM is in sections, like sources, family relations (outlines), households, etc.<br/>
+<br/>
+People keep trying to make a ONE xml file that fits all.<br/>
+<br/>
+I did a four part seprate XML files that links to each other like an MS access database.<br/>
+<br/>
+1st xml outline by KEYID father mother child relations...<br/>
+<br/>
+2nd xml absolute KEYID person vitals, covers dob, death, name m last, etc...(EVERYONE HAS ONE)<br/>
+<br/>
+3rd xml source RECID links to KEYID attached notes, other brith certs, immgration, draft cards,...(NOT EVERYONE HAS ONE)<br/>
+<br/>
+4th xml RECID links location to view such image, doc, or notes. from a web page node holds image path, or client side cmptuer folder location and file name.<br/>
+<br/>
+I have about 75% done already but there is room for change.<br/>
+<br/>
+Then if one ever wishes to view it in other software platform a xslt can redisplay each xml into a gedcom again<br/>
+<br/>
+Source.....xml3<br/>
+indi.......xml2/4<br/>
+household..xml1<br/>
+scapebook..xml4<br/>
+?hmmm?.....xml idea genealogist info as data entry of a record source.<br/>
+<br/>
+note most records going back to gedcom would merge xml2 and 4 as child nodes under the INDI id.<br/>
+<br/>
+point if you wish to share and outline with someone half way around the world, you don't have to give them the scrapbook images, just think vital documents floating freely on others hands, not a good idea if you really dont know them.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-21T03:45:31-08:00</div>
+<div class="text">mstransky,<br/>
+<br/>
+I think it's great that you have done all of this work. I saw your other posts. Thank you for joining this effort.<br/>
+<br/>
+I do take exception to your comment "you don't have to give them the scrapbook images".<br/>
+<br/>
+Sorry, but that is probably one of the biggest issues that helped get this started.<br/>
+<br/>
+I am a User of a genealogy software package. I have images throughout my file. Some are images of people and places, but others are images of Sources. These images that support a citation.<br/>
+<br/>
+I want to share my research with another user, probably a different software package. I want ALL of what I have Transported to that other user. I WILL control What is being sent.<br/>
+<br/>
+The BetterGEDCOM is to Transport my information to the other user.<br/>
+<br/>
+Having said that, the trick her, dealing with images, is How To transport those images. There where you technical folks come in.<br/>
+<br/>
+I help, or try to help, users of the program that I use. There are at least issues here. 1) is file size, and 2) ability to look at the data in a GEDCOM file.<br/>
+<br/>
+What I want, send everything, would probably create a monster file, if everything was in an email, for example. That's how most of these exchanges take place today, right? My file would probably NOT be able to be handled by my email program, or the other persons email program. Today, a GEDCOM file, without images, would probably be able to be shared.<br/>
+<br/>
+So, the question here is, how to get the DATA from one place to the other, complete, unchanged, nothing missing, AND how to get the images from one place to the other.<br/>
+<br/>
+In trouble shooting the exchange of a current GEDCOM file, requires opening that GEDCOM file in a Text Editor, and look for a problem "record". Let say that my software gave me an Error Message about a person. I would find that person in the GEDCOM and either correct it or delete that record.<br/>
+<br/>
+So, the ability to "see" the BetterGEDCOM information MAYBE important.<br/>
+<br/>
+I am not saying that this couldn't be done in the application that is sending or received the data, but how does the End User resolve or diagnose the problem with the data transfer has a problem.<br/>
+<br/>
+I don't know XML, so I don't know if XML will help in this diagnoses, but I am only trying to reflect what is happening now, and try to get the BetterGEDCOM to help identify, not resolve, these issues.<br/>
+<br/>
+<br/>
+Thanks again for joining this group.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-21T08:03:50-08:00</div>
+<div class="text">I have about 500 known people I KNOW which are linked to about 5000 more people. I started with ancestry, they shared my gedcom to the public which other merged to theres. Now  on theres they have mycousin married yto my ggfathers brother? <br/>
+Then I went to family tree, great layouts and scrapebooking, then I tried to export my info to xml and they dropped all my notes, pictures, and hard work leaving me with a stripped gedcom.<br/>
+<br/>
+Here is why I thought most people hit that common ground of the gedcom 5 or 6. This is hard for me to explian, but I started making a gedcom converter which takes all gedcom tags AS IS like souc, deat or indi and makes them the tag names. if you have a small or fair size gedcom paste it at <br/>
+<!-- ws:start:WikiTextUrlRule:25:http://www.stranskyfamilytree.net/ged2xmlconverter.asp --><a class="wiki_link_ext" href="http://www.stranskyfamilytree.net/ged2xmlconverter.asp" rel="nofollow">http://www.stranskyfamilytree.net/ged2xmlconverter.asp</a><!-- ws:end:WikiTextUrlRule:25 --><br/>
+a basic 4 level deep one works 99% of the time. but each time you click next step, you will see each line to xml conversion I make. <br/>
+<br/>
+I tried a very large 5 level deep gedcom, and missed a few small tags, but the final result after the six steps you will see this "Xgedcom.xml" I invision it like a rosetta stone. <br/>
+Then with a few versions of xslt any xgedcom can be redisplayed into the desired xml format people want to use.<br/>
+<br/>
+I even gave it a thought what happens when a node is not translated, well any node NOT use say lke a picture location or some notes, they should be wraped in an xte "xml translate error" then when a person pulls up the display of a person they can seen notes and information to reconfigure in that format. out of sight is out of mind, you never know what info gets lost, this way everyone can seen any unused info as a reminder or flag it for later.<br/>
+<br/>
+diagnose: my asp text convert to xml is easy, I grab the first 3-4 letters create a node, then stick the info on the line between that node which is wrapped by the ID@ SC@ or FAM@.<br/>
+<br/>
+way diffrent xslt?<br/>
+one platform may have single text node "fname, lname, M." and another one might have seperate nodes for surname and given name.<br/>
+<br/>
+so this is where you use diffrent xslts to translate away from xgedcom.xml to them respectfully.<br/>
+<br/>
+once this is done and the wheel starts spinning people will use such a place on the web. then the final step is the kicker.<br/>
+<br/>
+Once the big software companies see their customer base migrating to another platform will create better export functions. If people can not export there work properly to put on the web with scrapbooking, images and so on.<br/>
+<br/>
+ If that day comes and is level, the software that really has the better templates, outline views, print functions, and WEB up load will be a platform people will use and finially let the monopoloy die.<br/>
+<br/>
+Sorry Russ, I could say 20times more info clearer then the time it takes me to express it by typing it. I am redoing my site to update old profile files and xslt outputters and xml readers that I collected over the past 10 years. give me a few weeks to bring up many of the project exmples from deep inside my site to the top page and navigation.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-21T08:16:53-08:00</div>
+<div class="text">mstransky,<br/>
+<br/>
+Ancestry.com, nor a number of computer based programs don't export to xml. I am responding to "then I tried to export my info to xml and they dropped all my notes". Now, I only really know one program, but haven't seen mentioned any others exporting to xml. I am sure they are around, but I haven't seen it in the small community that I hang out with 'online'. <br/>
+<br/>
+Many programs will export to a GEDCOM file. <br/>
+But, the issue is at hand, is that they don't do it the same way. Thus the issue the BetterGEDCOM is trying to address.<br/>
+<br/>
+The program I use exports my data, but no links or anything about any media in my file.<br/>
+<br/>
+When I shared my GEDCOM file, with another user, using a different program, all of my Sources were messed up. I don't know if the problem with source information was my end or the other end. It doesn't matter, but that is what we are trying to address.<br/>
+<br/>
+I hope that you technical folk help develop a tool (system) that will define for the program developers what information is required to be transported between two users, no matter what program sends the information nor the program that receives it.<br/>
+<br/>
+I think that we all hope that the development folks for the various applications that we use, will join in this effort. Without them joining this effort, we are not using our time wisely. The best that I can tell, there are developers that "are watching".<br/>
+<br/>
+Am looking forward to your contributions to this Wiki.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-21T09:31:49-08:00</div>
+<div class="text">"...but haven't seen mentioned any others exporting to xml. I am sure they are around, but I haven't seen it in the small community that I hang out with 'online'. "<br/>
+<br/>
+FYI, Gramps has been using XML as its archive file format for at least 10 years. Even in 2000, XML was an obvious choice for people who wanted to share data.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-21T09:34:27-08:00</div>
+<div class="text">dsblank,<br/>
+<br/>
+I don't use Gramps, so, I wouldn't know. I have seen it discussed and have seen some suggesting that it be the way to go. As a user, I'll leave this up to the techies working on this wiki.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-21T10:37:10-08:00</div>
+<div class="text">Sorry for the confusion, but lately when I make a mistake in posting, I remember I can delete the entire posting with the mistake, correct it and repost...<br/>
+<br/>
+Reading this most recent exchange I feel compelled to make the following observation:<br/>
+<br/>
+The problem isn't necessarily a matter of simple import and export of information. The problem lies in properly categorizing that information uniformly so that the resulting data export and import retain the integrity of the research to the largest extent possible.<br/>
+<br/>
+The problem is with the underlying data models, not in manipulation of GEDCOM or XML.<br/>
+<br/>
+MStransky, there is no doubt what you're talking about is possible. In fact, a great deal of what you're talking about has already been done elsewhere. In fact at least one major organization (besides the GRAMPS folks) already does what amounts to a straight GEDCOM-to-XML conversion before manipulating their data any further for import.<br/>
+<br/>
+Certainly there are lots of things possible with XML, but the problem we're trying to solve is to develop a more uniformly adequate underlying data model to accommodate the data.</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-21T10:51:42-08:00</div>
+<div class="text">Greg said:<br/>
+<br/>
+"The problem is with the underlying data models, not in manipulation of GEDCOM or XML."<br/>
+<br/>
+I'd go even further: The problem is not with just GEDCOM or XML, nor even the underlying data models, but in the ways the fields are used by users.<br/>
+<br/>
+Related to the maxim: garbage in; garbage out. But it isn't just about the data being garbage, it is the fact that different people do research differently, and we are trying to impose some standards on that. <br/>
+<br/>
+A good genealogy application can help in following some standard, but even then, different people will choose different applications because they allow different uses.<br/>
+<br/>
+Don't know what one can do about that.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-21T11:15:09-08:00</div>
+<div class="text">Doug, <br/>
+<br/>
+Other than cringing at your phrase, "...we are trying to impose some standards..." I couldn't agree more.<br/>
+<br/>
+Even under perfect circumstances it is possible to express the same information in different ways by the same user using the same application, due to their interpretation of that data. Our job is to make sure to the extent possible that the information as entered is categorized in a uniform fashion.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-21T11:37:17-08:00</div>
+<div class="text">Just a few points about topics brought up in this thread ...<br/>
+<br/>
+igoddard's views seem in parallel with what's been discussed, though I think the idea that BG should be object-oriented is not an issue to worry about. The idea of a "name record" is precisely and exactly the idea of an "evidence person," (you may recall I've suggested we look up "nominal record linkage" with Google to get a good idea of the historical basis behind processing evidence records into conclusions, and a "nominal record" is exactly a name record is exactly an evidence person), which is, as the name implies, almost always just a name. The notion of a reconstruction object is the same as a "conclusion object." Near complete agreement.<br/>
+<br/>
+Then there are the war stories about Gedcom import and export. BG was formed to solve this problem. Have faith.<br/>
+<br/>
+I don't understand the angst over XML and how many XML files there should be. XML is a syntax for expressing hierarchical text-based trees. So is Gedcom. So are lots of others things. Gedcom trivially maps to XML. So does any other kind of hierarchical data.<br/>
+<br/>
+The idea that XSLT can be used to transform genealogical data expressed from XML form to "anything else" is a true and wonderful idea, and if BG ever makes it, and has a well-defined XML file-based format, one can imagine a secondary industry popping up that does all sorts of interesting transformations on these files with XSLT (creating charts, books, forms, computing statistics, supporting complex searching and matching). These aren't things of concern in the design of BG. They are inevitable outcomes. Even if the archival form of BG were not XML, it would be trivial for someone to write a converter to XML, which would open up the full world of XSLT possibilities. None of this has any bearing on the design of the BG model.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-21T14:13:21-08:00</div>
+<div class="text">I will try to answer all that I missed today.<br/>
+<br/>
+"Ancestry.com, nor a number of computer based programs don't export to xml." yes and no.<br/>
+<br/>
+Sorry ancestry export to gedcom and back in 2000 they all were no where close to each other. the xml xsl viewer was done by a michael k something back then. Since then I have seen ideas pushed off the table as the years go.<br/>
+<br/>
+I think it can be done quiet quickly.<br/>
+Eaxmple<br/>
+xml std#1 node &lt;Fname&gt;John&lt;/Fname&gt;&lt;Lname&gt;Smith&lt;/Lname&gt;<br/>
+<br/>
+you get an xslt to read Fname and Lname and "CONTACT" join then with text representing the converted std#2 node such like<br/>
+<br/>
+text output<br/>
+&lt;GIVN&gt;John&lt;/GIVN&gt;&lt;SURN&gt;Smith&lt;/SURN&gt;<br/>
+<br/>
+then just copy paste and save as xml<br/>
+<br/>
+std#1 read by xslt and output text as std#2<br/>
+then save as xml.<br/>
+<br/>
+Has FTM or Ancestry export to xml or still have limited conversion % to and from Gedcom?<br/>
+<br/>
+Oh, also you can take an xml and use xslt to display it  as text like GEDCOM format, then just copy paste and save it as a flat gedcom text file.<br/>
+<br/>
+This can be done and has been done. we all need the multiable xslt's to read std#1 and translate thenm to the others like std#2, std#3 and std#4. and vis versa for the others  back to other standards including a xslt to to file text gedcom, that us we be to upload into a software program.<br/>
+<br/>
+<hr/>
+missing is a gedcom/scrapbook db that I was shot down by big avocates to major program developers.<br/>
+<br/>
+say on your computer or web site, you have a folder called "GENEDOCS" inside that you have folders call "DOC01" DOC02" etc....<br/>
+the xml you change root node as "C:/" or "ROOTPATH". Now inside that folder images are kept like SOUR01.bmp SOUR02.jpg etc....<br/>
+say photo is sour01 and marriage doc is sour02<br/>
+<br/>
+When we/if ever agree on a 4part.xml to do such below is not standard but just an example how.<br/>
+&lt;xml&gt;<br/>
+  &lt;doc&gt;01&lt;/doc&gt;<br/>
+  &lt;type&gt;marriage&lt;/type&gt;<br/>
+  &lt;date&gt;1978/04/11&lt;/date&gt;<br/>
+  &lt;note&gt;Jim and Marys marriage cert.&lt;/note&gt;<br/>
+<br/>
+&lt;/xml&gt;<br/>
+on 2.xml you like Jim and mary to that document like family source houshold<br/>
+<br/>
+&lt;xml&gt;<br/>
+  &lt;INDI&gt;@01    <br/>
+     ....other common nodes.....<br/>
+    &lt;DOC&gt;02&lt;/DOC&gt;<br/>
+    &lt;DOC&gt;54&lt;/DOC&gt;<br/>
+    &lt;DOC&gt;554&lt;/DOC&gt;<br/>
+&lt;/INDI&gt;<br/>
+   &lt;INDI&gt;@02    <br/>
+     ....other common nodes.....<br/>
+    &lt;DOC&gt;02&lt;/DOC&gt;<br/>
+    &lt;DOC&gt;66&lt;/DOC&gt;<br/>
+<br/>
+    &lt;DOC&gt;98&lt;/DOC&gt;<br/>
+&lt;/INDI&gt;<br/>
+&lt;/xml&gt;<br/>
+<br/>
+<br/>
+Picture that xml 1-3 display gedcom as is but that 4 xml is a document source<br/>
+<br/>
+Your filter each person by ID = 01<br/>
+use that key ID as INDI01 match all records in the doc xml AND filter type marriage, death, photo, etc....<br/>
+<br/>
+You can display the indi information, then dislay doc records match by KEYID with match and filter for. Even revesre a doc KEY like SOURID and see who is link to it like a group photo. and back and forth.<br/>
+<br/>
+OK say we have a complete 4 part xml parts 1-3 mimic the stand gedcom, <br/>
+...source info<br/>
+...indi records<br/>
+...fami records<br/>
+we are just makeing a 4th part as doc<br/>
+...doc records notes, type and root location<br/>
+<br/>
+if one ever wants to share the DOC xml just copy the folder "ARCHIVES" and attach it.<br/>
+<br/>
+Sure that can never be use inside a flat gedcom, but parts 1-3 will convert 100%.<br/>
+<br/>
+As long as your 1-3 parts transffer to other platforms into xml just add the copy of part four which still links INDI # to the DOC numbers with all the notes and the images are just hand off as a folder file structure which can be read web based or by standalone computer.<br/>
+<br/>
+I hope this was not too much, but this is how I see it. Sorry it is not the greatest but that is how I am allready doing my database and also for an archive site for WWII image publications and next searchable PDFs.<br/>
+<br/>
+That site has 1.2mb xml files, close to 15,000 images and articles in text form.<br/>
+those major software companies say that can not be good, the site would crawl.<br/>
+ that because they thought it was in ONE file, I have them in multi xml files that cross ref each other. If you want to see check out <!-- ws:start:WikiTextUrlRule:87:http://www.wartimepress.com/ --><a class="wiki_link_ext" href="http://www.wartimepress.com/" rel="nofollow">http://www.wartimepress.com/</a><!-- ws:end:WikiTextUrlRule:87 --><br/>
+I am still working a user interface portal for members later on.<br/>
+<br/>
+My point is if I can handle that amount of images like genealogy records like scrapbooking then I know it can handle a genealogy website or standalone family shoe box.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-13T19:21:15-08:00</div>
+<div class="text">igoddard,<br/>
+<br/>
+Logically speaking (as in computer logic, not common sense [and oddly, they're not at all the same thing]), given the data we are talking about is genealogical/relational, and there are going to be cross-use of different data classes, it is not useful to represent the data as belonging to a "name" class of object first and foremost.<br/>
+<br/>
+XML uses a hierarchical data representation and most genealogy software uses relational database, so to represent information in an object oriented model doesn't do much good, at least for me.<br/>
+<br/>
+You are spot-on in saying that evidence and interpretation of the same is a failing of GEDCOM. This is probably the single most important reason as to why using the GEDCOM data model is not a path forward. My question is how can we accommodate the research process now without breaking the data model of current conclusion-based genealogy programs. <br/>
+<br/>
+I don't understand your Reconstruction object. PErhaps I'm not switching my brain to an object-oriented model concept sufficiently to understand.<br/>
+<br/>
+As I read on, I only get more lost. Maybe I need a picture. Could you diagram it and post a picture on an appropriate data model page or perhaps just make your own new page io nothing else makes sense?</div></div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-22T18:54:33-08:00</div>
+<div class="title">Converters, which platforms do them, where to find?</div>
+<div class="text">I am new here I have done genealogy over the past 15 years. The past 10 years I have more or less built my own xml codes to run them.<br/>
+<br/>
+Without trying to say what we should do or could do I thought just to ask for some information and from that information just do it.<br/>
+<br/>
+I see the four main platforms discussed here are <br/>
+GEDCOM, GenTech, Gramps and GMxml<br/>
+<br/>
+Q1. I am sure each one can read a GEDCOM file and output gedcom, but do any of them output any kind of xml format? <br/>
+Q2. If any of them do, can they import back in that xml format?<br/>
+<br/>
+I only remember back in the day where they never shared any open source xslt or even converts. If that is still the case today, that makes my job hard from scratch.<br/>
+<br/>
+I am willing to try and spend some of my spare time sandboxing online converter codes.</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-22T19:05:13-08:00</div>
+<div class="text">Well, we're new too. This effort started officially only 2 weeks ago.<br/>
+<br/>
+The four entired you refer to are merely ones which have direct bearing on our work so far and that people have chosen to examine in some detail You'r e most welcome to delve into some of the many other examples. If you don't see any particular work presented, it's just because no one has gotten around to presenting it.<br/>
+<br/>
+GEDCOM is obviously the only successful, ubiquitous effort to do what we're trying to do. Thus it's very relevant. GenTech is in fact only a theoretcal model, and while it is useful to study, it's not useful as a practical model. GRAMPS is an open-source project with an XML data store in use around the world that also happens to have a multiplatform front-end genealogy app sitting in front of it. GedML merely shows how XML and GEDCOM SYNTAX are equivalent.<br/>
+<br/>
+Regarding your questions, GRAMPS is all XML all the time. None of the others are applications but merely ways to format genealogical data. GenTech is really barely even that, since it's not in use in any way by anyone.<br/>
+<br/>
+I hope this helps answer your questions.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-22T19:08:04-08:00</div>
+<div class="text">Oh, GRAMPS certainly can import and export GEDCOMs. I didn't mean to imply it couldn't but rather that it definitely is a mature product, particularly when it comes to genealogy data in XML format.</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-22T19:40:02-08:00</div>
+<div class="text">Greg is correct when he says "GRAMPS is all XML all the time" and "GRAMPS certainly can import and export GEDCOMs" as well. Of course, when exporting to GEDCOM, Gramps is lossy (it loses infomation) because the data model matches the XML which is more complex than what GEDCOM allows.<br/>
+<br/>
+Gramps also export (and imports) other formats in a lossless way: we have a couple of SQL formats. There are also some other formats that we support including a spreadsheet one, but that is used for making batch edits or additions, and only reads/writes part of the data model.<br/>
+<br/>
+Gramps has a plugin system for writing importers and exporters. One could use Gramps as a converter, given that its data model held all the data that you wanted to include.<br/>
+<br/>
+Check out the links on the left hand side of this wiki for a start.<br/>
+<br/>
+-Doug</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-22T19:58:14-08:00</div>
+<div class="text">Thanks guys, I just sent greglamberson a quick review looking at software versions and plateforms and came done to three that are opensource, are xml and funny thing is gramps was one of them.<br/>
+<br/>
+It states that it is computer based, and not one of the web based softwares. So I was thinking if I was to upload a gedcom into gramps, then spit it back out as xml. I could do my my xslt convert to that xml file. from that I can incorperate my web codeing that edits and modifies in from the web. <br/>
+<br/>
+My opion so far seems that gramps is "A leader" in keeping thing opensource, in xml. I have dealt directly with one of thee largest software providers about allow them access to some databases for help with a membership portal to a larger collection then the Nat'l arch's, they ask us to just turn over everything to them and more or less walk away from the table empty handed? <br/>
+<br/>
+I believe in making a dollar to fund a service, but I don't believe in taking other people hard work and gather data to make a buck of them, then to share it with the world for a buck. If you don't pay you can not even get access to update your own file(s)? that is why I believe in controlling your own work, but still can share.<br/>
+<br/>
+I like opensource and xml. <br/>
+So with Gramps I seen a few online examples of their web output templates, Err Kind of rough and and too much at once. Maybe I had a bad example site of a web based gramps.<br/>
+<br/>
+My thought is if gramps outputs in xml, I can make a converter or modifiy my xml/webcode to make better view templates. From their some one esle can write in in PHP if they want. <br/>
+<br/>
+But let me down load Gramps and run it through a ringer first, then I can see what I have to work with first.</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-22T20:37:07-08:00</div>
+<div class="text">mstransky said:<br/>
+<br/>
+"Thanks guys, I just sent greglamberson a quick review looking at software versions and plateforms and came done to three that are opensource, are xml and funny thing is gramps was one of them."<br/>
+<br/>
+Great!<br/>
+<br/>
+"It states that it is computer based, and not one of the web based softwares. So I was thinking if I was to upload a gedcom into gramps, then spit it back out as xml. I could do my my xslt convert to that xml file. from that I can incorperate my web codeing that edits and modifies in from the web."<br/>
+<br/>
+Many people have made different kinds of addons to Gramps. One is a web-based direct XSLT Gramps XML viewer, called Gramps Exhibit. <br/>
+<br/>
+"So with Gramps I seen a few online examples of their web output templates, Err Kind of rough and and too much at once. Maybe I had a bad example site of a web based gramps."<br/>
+<br/>
+Yes, the Gramps static website creation is pretty good, but we are working on a new project that creates a live, dynamic website. <!-- ws:start:WikiTextUrlRule:16:http://gramps-connect.org/ --><a class="wiki_link_ext" href="http://gramps-connect.org/" rel="nofollow">http://gramps-connect.org/</a><!-- ws:end:WikiTextUrlRule:16 --> is a demo. Uses the same Gramps data model, but exports to SQL tables through Django in Python.<br/>
+<br/>
+"But let me down load Gramps and run it through a ringer first, then I can see what I have to work with first."<br/>
+<br/>
+Welcome aboard!</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-22T20:47:57-08:00</div>
+<div class="text">Thanks, I am gonna get my feet wet in gramps and see what is do-able?!</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-22T21:02:09-08:00</div>
+<div class="text">greglamberson and dsblank,<br/>
+<br/>
+  You both know of that other WWII archive site that I am speaking of. I have alot of stuff spinning in my head. Like say how lds you can download some records, well I have thoughts for that site to have a gen export record. Like say you find a family person and photo(s) and story with a picture(s) I what to allow people to export that as a snipped it, then they just have to add that record into that (Hmmm so called standard). I know people say what we should have, I am already thinking past that and why were are not there yet. <br/>
+<br/>
+ I look at it this way, one hand washes the other, if Gramps is willing to do what others dont do or refuse to even give in allitle. Work with what works best for you. And then share feely with others how to do it, LOL.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-23T00:35:09-08:00</div>
+<div class="text">Hi,<br/>
+<br/>
+Note, you do not really "need" to install Gramps for using its GEDCOM to XML converter (or XML to Gedcom)!<br/>
+<br/>
+See, <a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=Gramps_3.2_Wiki_Manual_-_Command_Line#Examples" rel="nofollow">command line samples</a>.<br/>
+<br/>
+Doug, I suppose GUI and CLI are now independant.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-23T00:57:04-08:00</div>
+<div class="text"><em>One is a web-based direct XSLT Gramps XML viewer, called Gramps Exhibit.</em><br/>
+<br/>
+A <a class="wiki_link_ext" href="http://members.tele2.nl/m.d.nauta/grampsExhibit/KootExhibit.xml" rel="nofollow">demo</a> is available (load in memory), and a list of current (1.3.0) XPath(s) is on Gramps' wiki. Minor changes for next version (1.4.0).</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-23T02:35:41-08:00</div>
+<div class="title">DeadEnds Data Model</div>
+<div class="text">I have just put version 2.0 of the DeadEnds data model up on my DeadEnds page. It was almost exactly ten years ago that I wrote the first version of the model. There really hasn't been all that must change, though I've now expressed the specifications in a rule syntax that is detailed enough to fully describe one way to represent model objects as hierarchical trees of text nodes.<br/>
+<br/>
+The DeadEnds model is used by my experimental DeadEnds software applications, and it represents my current views on the most effective data model for use in the genealogical research process. It includes the features needed to support the evidence and conclusions (aka hypotheses) nature of genealogical data and research.<br/>
+<br/>
+Of course, I believe this is the perfect solution to the BG efforts, but I doubt that belief will be much of an influence!<br/>
+<br/>
+You can find the document at<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:14:http://deadendssoftware.com/DeadEndsModel.2.pdf --><a class="wiki_link_ext" href="http://deadendssoftware.com/DeadEndsModel.2.pdf" rel="nofollow">http://deadendssoftware.com/DeadEndsModel.2.pdf</a><!-- ws:end:WikiTextUrlRule:14 --><br/>
+<br/>
+The original Dead Ends Model document is also available at<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:15:http://deadendssoftware.com/DeadEndsDataModel.pdf --><a class="wiki_link_ext" href="http://deadendssoftware.com/DeadEndsDataModel.pdf" rel="nofollow">http://deadendssoftware.com/DeadEndsDataModel.pdf</a><!-- ws:end:WikiTextUrlRule:15 --><br/>
+<br/>
+Tom Wetmore</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-23T08:41:59-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+First off, WOW. This is huge. Thanks for updating your data model and posting it. I tried to save the new doc as a PDF, but it's got some HTML wrapper or something, so I couldn't just save the doc.<br/>
+<br/>
+My immediate thought is, Could you express this in a DTD and could someone familiar with GRAMPS then use it as a data model for testing with their front-end?</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-23T20:36:11-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+I am not experienced with DTD's, Scheme, or Relax NG, beyond the ability, that is, to write this sentence. I will do a little reading and thinking about this, but don't have hopes I could do anything quickly. Which I guess is too bad, because the DeadEnds model is, in my opinion, exactly the right superset of the Gramps model and other models, to truly be the first example of a model that fully encompasses the world BG wishes to model. The notation I have used to specify the model harkens back twenty years or more when people weren't squirming under the universal XML gag order. If I were to DTDify, Schemeify or Relax NGify the DeadEnds model I guarantee the text of the specifications would be longer and probably harder to understand than the list of rules in my document. <br/>
+<br/>
+Tom W.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-24T01:02:22-08:00</div>
+<div class="text">Hi,<br/>
+<br/>
+Note that Gramps schemes have been written after database changes ... and Gramps does not validated according DTD, it is one data model for documentation!<br/>
+<br/>
+If you want to generate a DTD and you are not familiar with this grammar. Some <a class="wiki_link_ext" href="http://xml2dtd.sourceforge.net/" rel="nofollow">tool</a> could generate a basic quick model.<br/>
+<br/>
+Anyway, for testing DeadEnds Data Model into Gramps, we could try to modify one of current <a class="wiki_link_ext" href="http://gramps.svn.sourceforge.net/viewvc/gramps/trunk/src/plugins/import/" rel="nofollow">import plugins</a> or <a class="wiki_link_ext" href="http://gramps-addons.svn.sourceforge.net/viewvc/gramps-addons/trunk/contrib/" rel="nofollow">addons</a>.</div></div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-24T15:45:46-08:00</div>
+<div class="title">Sandbox comparison for all models</div>
+<div class="text">Guys, I think it is time to choose or create a sandbox page. each of the four models can slowly incorperate a working model that people can copy and paste to an offline testing.<br/>
+<br/>
+Say pick the kennedy's or create the Simths we start of with basic structure then add in one of those compliants or disputs and EACH model gets a reitifacte to to as we all step by step see what works and does not or what can be made better.<br/>
+<br/>
+Take the example of family nuclear, or the one talk today. or say Thin and Tall how it makes or breaks.<br/>
+<br/>
+If we did do this other people can view and see about making xlst or converters to translate them back and forth.<br/>
+<br/>
+I would love to see the same (DATA) represented in each format as the same DATA to see its layout.<br/>
+<br/>
+Is that worth doing? a hands on approach for others to follow, make color text show to change to or other colors need to add?   Something to put our hands on and follow as people are trying to describe their format.</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-24T16:25:42-08:00</div>
+<div class="text">Mike, Please see the big, boldfaced item to the left called BetterGEDCOM Sandbox.<br/>
+<br/>
+I don't think we have anything like a definitive list of models, but I also don't think following a linear process for all this is necessary or even desirable.<br/>
+<br/>
+you're certainly encouraged to explore the concepts and problems here in whatever way you want. I think you can create whatever pages needed. Please try to incorporate the pages where they should be logically. Also, pleasze don't get mad if someone comes along ans slices, dices or otherwse moves things around. This is a wiki meant for collaboration, not authored articles. Such content should be referred to or added as distinct documents if it must retain its own integrity.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-24T16:35:57-08:00</div>
+<div class="text">No problem, I am not offend at all, Sorry if I wrote to much. I just thought some in hand is worth thousand words then asssume what someone is thinking of about X? <br/>
+<br/>
+Do you have a example of an approach? I have been looking for one but only found defenitions. Its like tell someone an electroincs schematic over the phone without a drawing. It would realy be great to see an actual format with working data in it. It kind of keeps viewers on track without  out assuming what it would look like.<br/>
+<br/>
+Sorry if I missed the page if you have one.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-24T16:54:42-08:00</div>
+<div class="text">Mike, Here's my advice: Start adding your point of view or whatever you think is needed or helps illustrate things. Just do it.<br/>
+<br/>
+This isn't a TV show. lol</div></div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-29T02:39:45-08:00</div>
+<div class="title">GenXML</div>
+<div class="text">The GenXML-format seems worth taking a closer look at. Christoffer is on this wiki, but seems to modest (or busy) to promote his ideas.<br/>
+So I'm taking up the slack ;-)<br/>
+<br/>
+The PDF <!-- ws:start:WikiTextUrlRule:20:http://bettergedcom.wikispaces.com/file/detail/GenXML30.pdf --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/file/detail/GenXML30.pdf" rel="nofollow">http://bettergedcom.wikispaces.com/file/detail/GenXML30.pdf</a><!-- ws:end:WikiTextUrlRule:20 --> gives a detailed description with examples.<br/>
+Would the techies here please analyse the pros and cons of GenXML?<br/>
+<br/>
+Things that seem nice to this user here are<br/>
+- it's an example in XML-syntax, so we can see how a BG in XML might look like.<br/>
+- it seems to support the evidence/conclusion model (there's an "assertion" structure)<br/>
+- place structure can be hierarchic<br/>
+- sources can be hierarchic<br/>
+- some thoughts about handling imported data<br/>
+- name-structure seems thorough<br/>
+<br/>
+Worth examining are also<br/>
+- relationship structure<br/>
+- person and subperson structure (only 2 persons can be combined)<br/>
+- structure to help with research (tasks and objectives)<br/>
+<br/>
+Christoffer, if you read this - maybe you could give some insights? <br/>
+Is GenXML already in use somewhere?</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-29T03:15:34-08:00</div>
+<div class="text">There's no doubt GenXML is worth looking at in detail. I hope somebody will get to it. Personally, I'm about 2 weeks behind as it is.<br/>
+<br/>
+Why don't you start a page giving your thoughts on it at:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:4:http://bettergedcom.wikispaces.com/Evaluation+Of+Existing+Data+Models --><a href="http://bettergedcom.wikispaces.com/Evaluation+Of+Existing+Data+Models">http://bettergedcom.wikispaces.com/Evaluation+Of+Existing+Data+Models</a><!-- ws:end:WikiTextUrlRule:4 --></div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-29T04:19:13-08:00</div>
+<div class="text">I might try to start a page, though I don't really know anything about databases or data-structures. But I might put my questions on a page as a starting point...<br/>
+<br/>
+First another question to Christoffer: <br/>
+What do the symbols mean in the charts on page 9 and 10 of the PDF?</div></div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-01-11T13:45:39-08:00</div>
+<div class="title">Gedcom XML 6.0</div>
+<div class="text">I have to admit, I hadn't looked at this specification before... Please check out the GedXML60.pdf <!-- ws:start:WikiTextFileRule:24:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/file/GedXML60.pdf?h=52&amp;w=320&quot; class=&quot;WikiFile&quot; id=&quot;wikitext@@file@@GedXML60.pdf&quot; title=&quot;File: GedXML60.pdf&quot; width=&quot;320&quot; height=&quot;52&quot; /&gt; --><div class="objectEmbed"><a href="/file/view/GedXML60.pdf/174896399/GedXML60.pdf" onclick="ws.common.trackFileLink('/file/view/GedXML60.pdf/174896399/GedXML60.pdf');"><img alt="GedXML60.pdf" height="32" src="http://www.wikispaces.com/i/mime/32/application/pdf.png" width="32"/></a><div><a class="filename" href="/file/view/GedXML60.pdf/174896399/GedXML60.pdf" onclick="ws.common.trackFileLink('/file/view/GedXML60.pdf/174896399/GedXML60.pdf');" title="GedXML60.pdf">GedXML60.pdf</a><br/><ul><li><a href="/file/detail/GedXML60.pdf">Details</a></li><li><a href="/file/view/GedXML60.pdf/174896399/GedXML60.pdf">Download</a></li><li style="color: #666">70 KB</li></ul></div></div><!-- ws:end:WikiTextFileRule:24 -->...<br/>
+<br/>
+There are a few points I find interesting in it. In no particular order:<br/>
+<ul><li>Multi-role-events at record level</li><li>Has a "group" record as well as a "family" record</li><li>Groups can have a "parent group"</li><li>Adoptions are covered</li><li>Addresses are covered with some detail, but places don't seem to exist as separate records(?)</li><li>They use "class, type" (or "genus, species") for events and groups. E.g.: Event Type="christening" VitalType="aftbirth"</li><li>When sources are transcribed, elements of that source can be given markup (e.g. "NameDoc") to be referenced later. This seems to me to be a smart thing. It is half-way to implementing evidence-level records, I think. Or do I interpret the possibilities of this wrong?</li><li>Citations are similarly marked up.</li><li>The &lt;BasedOn&gt; tag. This is their way of keeping conclusions and reasoning clear. The example has this only in a &lt;group&gt;, I'm not sure they planned on having this in other records, too. In the &lt;IndividualRec&gt;, there can be a link to a &lt;DupIndiv&gt; duplicate person. Maybe these tags do more or less the same and could be combined? There seems to be no provision for having "conclusion events".</li></ul><br/>
+Another thing: In the introduction, the developers write:<br/>
+<ul class="quotelist"><li><em>There have been previous GEDCOM 6.0 drafts available at various times. This draft is quite different, and supercedes those. They were more elaborate and ambitious, and were not well received, either within or outside our organization.</em></li></ul>Hm. Hope we don't end up like that...</div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-11T17:30:41-08:00</div>
+<div class="text"><br/>
+Testuser42 (whoever you are):<br/>
+<br/>
+Yes, the 6.0 draft is fairly close to what could BetterGEDCOM could end up as.  It definitely needs is a Place entity and maybe an Evidence entity. Then the details could be looked at.<br/>
+<br/>
+The earlier drafts included a few things that were taken out that I liked.<br/>
+<br/>
+Specifically, in the Dec 28, 2001 draft, on page 15, I liked the References used to cite the primary source when this was a secondary source citation. In other words, the source of the source.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-01-13T15:38:14-08:00</div>
+<div class="text">Louis, the PDF at the link is the "Dec 28 2001" version, I think. I've not seen a later draft - if you know one, could you post a link?<br/>
+<br/>
+I also like the idea of indentifying the source2 of a source1. But the way it's done looks a bit clumsy to me. Wouldn't the whole source1 be a secondary one? So that the link to the "higher" source2 would fit nicely inside the source1 record? This is again building a tree...<br/>
+But that's probably just cosmetics ;)<br/>
+<br/>
+What I find remarkable is the mark-up of text in the "extract" (p 11) and "citationText" (p 13)<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;xml&quot;&gt;&amp;lt;Extract&amp;gt;&lt;br/&gt;&amp;lt;IndivDoc&amp;gt;The prominent citizen of &amp;lt;ResidenceDoc&amp;gt;San Francisco&amp;lt;/ResidenceDoc&amp;gt;,&lt;br/&gt;&amp;lt;NameDoc&amp;gt;John &amp;lt;SurNameDoc&amp;gt;Henry &amp;lt;/SurNameDoc&amp;gt;&amp;lt;/NameDoc&amp;gt;, was actually born in&lt;br/&gt;&amp;lt;BirthPlaceDoc&amp;gt;Los Angeles&amp;lt;/BirthPlaceDoc&amp;gt;. According to his&lt;br/&gt;&amp;lt;RelativeDoc&amp;gt;&amp;lt;Relationship&amp;gt;sister&amp;lt;/Relationship&amp;gt;, Jane Franklin&amp;lt;/RelativeDoc&amp;gt;, he was born on&lt;br/&gt;the morning of &amp;lt;BirthDateDoc&amp;gt; October 12, 1954&amp;lt;/BirthDateDoc&amp;gt; at Grand View&lt;br/&gt;hospital.&amp;lt;/IndivDoc&amp;gt;&lt;br/&gt;&amp;lt;/Extract&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.xml  {font-family:monospace;}
+.xml .imp {font-weight: bold; color: red;}
+.xml .es0 {color: #000099; font-weight: bold;}
+.xml .br0 {color: #66cc66;}
+.xml .sy0 {color: #66cc66;}
+.xml .st0 {color: #ff0000;}
+.xml .sc-1 {color: #808080; font-style: italic;}
+.xml .sc0 {color: #00bbdd;}
+.xml .sc1 {color: #ddbb00;}
+.xml .sc2 {color: #339933;}
+.xml .sc3 {color: #009900;}
+.xml .re0 {color: #000066;}
+.xml .re1 {color: #000000; font-weight: bold;}
+.xml .re2 {color: #000000; font-weight: bold;}
+.xml span.xtra { display:block; }
+
+-->
+</style><pre class="xml"><span class="sc3"><span class="re1">&lt;Extract<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;IndivDoc<span class="re2">&gt;</span></span></span>The prominent citizen of <span class="sc3"><span class="re1">&lt;ResidenceDoc<span class="re2">&gt;</span></span></span>San Francisco<span class="sc3"><span class="re1">&lt;/ResidenceDoc<span class="re2">&gt;</span></span></span>,
+<span class="sc3"><span class="re1">&lt;NameDoc<span class="re2">&gt;</span></span></span>John <span class="sc3"><span class="re1">&lt;SurNameDoc<span class="re2">&gt;</span></span></span>Henry <span class="sc3"><span class="re1">&lt;/SurNameDoc<span class="re2">&gt;</span></span><span class="re1">&lt;/NameDoc<span class="re2">&gt;</span></span></span>, was actually born in
+<span class="sc3"><span class="re1">&lt;BirthPlaceDoc<span class="re2">&gt;</span></span></span>Los Angeles<span class="sc3"><span class="re1">&lt;/BirthPlaceDoc<span class="re2">&gt;</span></span></span>. According to his
+<span class="sc3"><span class="re1">&lt;RelativeDoc<span class="re2">&gt;</span></span><span class="re1">&lt;Relationship<span class="re2">&gt;</span></span></span>sister<span class="sc3"><span class="re1">&lt;/Relationship<span class="re2">&gt;</span></span></span>, Jane Franklin<span class="sc3"><span class="re1">&lt;/RelativeDoc<span class="re2">&gt;</span></span></span>, he was born on
+the morning of <span class="sc3"><span class="re1">&lt;BirthDateDoc<span class="re2">&gt;</span></span></span> October 12, 1954<span class="sc3"><span class="re1">&lt;/BirthDateDoc<span class="re2">&gt;</span></span></span> at Grand View
+hospital.<span class="sc3"><span class="re1">&lt;/IndivDoc<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/Extract<span class="re2">&gt;</span></span></span></pre>
+<!-- ws:end:WikiTextCodeRule:0 --><!-- ws:start:WikiTextCodeRule:1:
+&lt;pre class=&quot;xml&quot;&gt;&amp;lt;CitationText&amp;gt;&lt;br/&gt;&amp;lt;AuthorDoc&amp;gt;James Gardner&amp;lt;/AuthorDoc&amp;gt;, &amp;quot;&amp;lt;ArticleDoc&amp;gt;Study of Early Birds&amp;lt;/ArticleDoc&amp;gt;,&amp;quot;&lt;br/&gt;Vol. IV of &amp;lt;TitleDoc&amp;gt; &amp;lt;html:I&amp;gt;Birds of the Southwest&amp;lt;/html:I&amp;gt;&amp;lt;/TitleDoc&amp;gt; (1997), p. 14-16 in&lt;br/&gt;&amp;lt;AuthorDoc&amp;gt;Fred Fredericks&amp;lt;/AuthorDoc&amp;gt;, &amp;lt;TitleDoc&amp;gt;&amp;lt;html:I&amp;gt;A Summary of Great Bird Studies&lt;br/&gt;&amp;lt;/html:I&amp;gt;&amp;lt;/TitleDoc&amp;gt; (San Jose: Big Johns Publications, 1986). Fredericks' work contains a complete&lt;br/&gt;reprint of the article by Gardner.&lt;br/&gt;&amp;lt;/CitationText&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.xml  {font-family:monospace;}
+.xml .imp {font-weight: bold; color: red;}
+.xml .es0 {color: #000099; font-weight: bold;}
+.xml .br0 {color: #66cc66;}
+.xml .sy0 {color: #66cc66;}
+.xml .st0 {color: #ff0000;}
+.xml .sc-1 {color: #808080; font-style: italic;}
+.xml .sc0 {color: #00bbdd;}
+.xml .sc1 {color: #ddbb00;}
+.xml .sc2 {color: #339933;}
+.xml .sc3 {color: #009900;}
+.xml .re0 {color: #000066;}
+.xml .re1 {color: #000000; font-weight: bold;}
+.xml .re2 {color: #000000; font-weight: bold;}
+.xml span.xtra { display:block; }
+
+-->
+</style><pre class="xml"><span class="sc3"><span class="re1">&lt;CitationText<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;AuthorDoc<span class="re2">&gt;</span></span></span>James Gardner<span class="sc3"><span class="re1">&lt;/AuthorDoc<span class="re2">&gt;</span></span></span>, "<span class="sc3"><span class="re1">&lt;ArticleDoc<span class="re2">&gt;</span></span></span>Study of Early Birds<span class="sc3"><span class="re1">&lt;/ArticleDoc<span class="re2">&gt;</span></span></span>,"
+Vol. IV of <span class="sc3"><span class="re1">&lt;TitleDoc<span class="re2">&gt;</span></span></span> <span class="sc3"><span class="re1">&lt;html:I<span class="re2">&gt;</span></span></span>Birds of the Southwest<span class="sc3"><span class="re1">&lt;/html:I<span class="re2">&gt;</span></span><span class="re1">&lt;/TitleDoc<span class="re2">&gt;</span></span></span> (1997), p. 14-16 in
+<span class="sc3"><span class="re1">&lt;AuthorDoc<span class="re2">&gt;</span></span></span>Fred Fredericks<span class="sc3"><span class="re1">&lt;/AuthorDoc<span class="re2">&gt;</span></span></span>, <span class="sc3"><span class="re1">&lt;TitleDoc<span class="re2">&gt;</span></span><span class="re1">&lt;html:I<span class="re2">&gt;</span></span></span>A Summary of Great Bird Studies
+<span class="sc3"><span class="re1">&lt;/html:I<span class="re2">&gt;</span></span><span class="re1">&lt;/TitleDoc<span class="re2">&gt;</span></span></span> (San Jose: Big Johns Publications, 1986). Fredericks' work contains a complete
+reprint of the article by Gardner.
+<span class="sc3"><span class="re1">&lt;/CitationText<span class="re2">&gt;</span></span></span></pre>
+<!-- ws:end:WikiTextCodeRule:1 -->Could this be a way to build Evidence Records? Is it more than just the transcription of a source?</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-13T19:01:12-08:00</div>
+<div class="text"><br/>
+See the "GEDCOM Data Model" page in the left menu where I had already updated with links to the various GEDCOM documents.<br/>
+<br/>
+Sorry, I said it wrong in the above post. The 28 Dec 2001 draft is the most recent. The earlier one which I should have referred to is the 2 Oct 2000 draft. <br/>
+<br/>
+That's one way to build evidence records. There are lots of different ways. We'll need to figure out some way of determining which is best.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-01-14T04:19:13-08:00</div>
+<div class="text">testuser42 asked "Could this be a way to build Evidence Records?"<br/>
+<br/>
+To me the &lt;Extract&gt; looks like a step but what I'd say is that it needs a lot more work because it's not clear to me how one would relate the marked up bits to the individual. For instance, why isn't Jane Franklin's name marked up? <br/>
+<br/>
+Seems to me that what we are _not_ seeing is an impartially marked-up text but one where the important bits have been extracted mentally, the analysis done, and then, as a final step, the genealogist has gone back and marked up the bits to be used. In other words, I'm not sure this gives us any more than a straight list of deduced items would have done - albeit, it's certainly easier to see where those items come from.</div></div></div><div class="comment"><div class="from"><strong>WKinner</strong> 2011-09-20T13:19:54-07:00</div>
+<div class="title">GEDC</div>
+<div class="text">I want to call your attention to an XML format for genealogy called GEDC, freely available at <!-- ws:start:WikiTextUrlRule:2:http://www.sunflower.com/~billk/GEDC/index.htm --><a class="wiki_link_ext" href="http://www.sunflower.com/~billk/GEDC/index.htm" rel="nofollow">http://www.sunflower.com/~billk/GEDC/index.htm</a><!-- ws:end:WikiTextUrlRule:2 -->. GEDC 2.0 comes with full documentation, a Windows desktop application, and several XSLT scripts. GEDC is completely file based, particularly adapted to handling data in smaller multiple genealogies rather than a single monolithic database. It addresses the need for conflicting and ambiguous evidence. Places are shared. Formats for the display of names, dates and places are user configurable, while types for events, places, sources, etc may be defined as needed.<br/>
+<br/>
+GEDC is a mature specification that has seen heavy daily use. I build and maintain a couple dozen genealogies with GEDC, the largest containing nearly 40,000 persons.</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-09-21T04:04:35-07:00</div>
+<div class="text">Thanks for posting this info. I don't know if any of us were aware of this model. This is a great addition to our list. The GEDC model has Evidence (called Accounts), Personas (called Mentions), Places as first class, hierarchical citizens, n-role Events, hierarchical Sources, and other "advanced" features. It has well-thought out substructures for Names and Dates. Very similar to the DeadEnds model in this regard, the GEDC model is darned close to exactly what Better GEDCOM should be striving for. I'd recommend everyone download the package and start by reading the files GEDC.pdf and GEDC20.rnc.<br/>
+<br/>
+GEDC has a two-tiered structure for handling evidence and conclusions, and as many of you know the DeadEnds model is N-tiered, which I still believe to be the better approach for handling evidence and conclusions.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-09-21T12:50:01-07:00</div>
+<div class="text">Sometimes I wonder where my brain is. I've just finished reading all the GEDC documents, with a slowly growing feeling a deja vu. GEDC has an approach to evidence and conclusions, where Person and Event records hold conclusions, and Accounts and Actors hold evidence. But Accounts and Actors are not records, they are substructures in Events. In other words all evidence in a GEDC system must be kept inside a conclusion object. I don't like this, and I had a sneaking suspicion that I had expressed my ideas about this before.<br/>
+<br/>
+Well I just did a search through my system and discovered that I had started a discussion on the very topic on the XML genealogy list back in May 2009, a discussion that involved not only the author of GEDC, but the legendary XML/Saxon/xt/XSLT/XPath guru Michael Kay himself; like I have BOOKS by this guy.<br/>
+<br/>
+Here is the URL to my leadoff post. You can follow the rest from there. I was in fact just about to start off another note, very similar to this lead off note here, without at all fully remembering that I had already fully expressed my ideas a little over two years ago. Yikes! It would be embarrassing if I didn't have being old at hand for an easy excuse.<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:6:http://tech.groups.yahoo.com/group/GenealogyXML/message/3179 --><a class="wiki_link_ext" href="http://tech.groups.yahoo.com/group/GenealogyXML/message/3179" rel="nofollow">http://tech.groups.yahoo.com/group/GenealogyXML/message/3179</a><!-- ws:end:WikiTextUrlRule:6 --></div></div><div class="comment"><div class="from"><strong>TamuraJones</strong> 2011-09-21T14:13:57-07:00</div>
+<div class="text">Both GEDC and GEDC 2.0 are included in my overview of GEDCOM Alternatives.<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:4:http://www.tamurajones.net/GEDCOMAlternatives.xhtml --><a class="wiki_link_ext" href="http://www.tamurajones.net/GEDCOMAlternatives.xhtml" rel="nofollow">http://www.tamurajones.net/GEDCOMAlternatives.xhtml</a><!-- ws:end:WikiTextUrlRule:4 --><br/>
+<br/>
+If you find any that aren't in there, let me know :-)</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-09-23T05:42:12-07:00</div>
+<div class="text">I have written up some comments about the GEDC model; they are available at:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:4:http://bartonstreet.com/deadends/GEDCComments.pdf --><a class="wiki_link_ext" href="http://bartonstreet.com/deadends/GEDCComments.pdf" rel="nofollow">http://bartonstreet.com/deadends/GEDCComments.pdf</a><!-- ws:end:WikiTextUrlRule:4 --><br/>
+<br/>
+In my opinion the GEDC model is one of the best available and Better GEDCOM should consider it carefully. Many thanks to WKinner for reminding us of its existence. There very few changes that I believe are necessary to make GEDC most effective would make it nearly equivalent to the DeadEnds model.</div></div></div></body>
+</html>

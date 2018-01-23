@@ -1,0 +1,510 @@
+<html>
+<head>
+<title>BetterGedcom - C from E</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h4 id="toc0"><a name="x---HOME &gt; BetterGEDCOM Sandbox &gt; BetterGEDCOM Test Cases &gt; GJ Cases &gt; C from E"></a><a class="wiki_link" href="HOME.html">HOME</a> &gt; <a class="wiki_link" href="BetterGEDCOM%20Sandbox.html">BetterGEDCOM Sandbox</a> &gt; <a class="wiki_link" href="BetterGEDCOM%20Test%20Cases.html">BetterGEDCOM Test Cases</a> &gt; <a class="wiki_link" href="GJ%20Cases.html">GJ Cases</a> &gt; C from E</h4>
+<a class="wiki_link" href="HOME.html">HOME</a> &gt; <a class="wiki_link" href="Sources%20%26%20Citations.html">Sources &amp; Citations</a> &gt; <a class="wiki_link" href="GJ%20Cases.html">GJ Cases</a> (User Requirements) &gt; C from E<br/>
+<br/>
+Geir, Adrian, Testuser and I worked on how to "source" conclusions from evidence some time back. Several of the evidence developers had some problems with the solutions that had been developed, so I hope to describe the user requirement here.<br/>
+<br/>
+[It may take me a few step to get this just right and P.S. Louis ... If you are reading this, might you point me to examples in Behold where there are multiple conflicted representations of evidence for birth and/or death?]<br/>
+<br/>
+<em><span style="background-color: #ffffff; color: #274e13; font-family: Molengo; font-size: 15px;">During the National Genealogical Society 2011 conference, Tom Jones quoted Helen Leary, saying "<span style="color: #990000; text-decoration: none;"><a class="wiki_link_ext" href="http://twitter.com/#%21/ngsgenealogy/status/69040859223560193" rel="nofollow">Conflicting evidence is incompatible with a conclusion</a></span>."</span></em><br/>
+<br/>
+<h3 id="toc1"><a name="x--Case 1 - Birth but once (v1)"></a>Case 1 - Birth but once (v1)</h3>
+ You have been researching Jane Doe for many years. Various records located that might help you reach conclusions about her birth are listed below. Assume that you have created unique record/event record/tag/persona pfact/evidence pfact, for the each of the various items listed, and that for each of those entries, you have developed a full citation.<br/>
+<br/>
+If you are using personas, please assume that each time you make an entry, you also "believe this is the same person because XXXX."<br/>
+<br/>
+Questions<br/>
+1. As you entered the events/tags, have you been reporting one of the birth entries as "primary" or "preferred?" Is each each event records/tags, etc. associated with a single source citation? How and where do you report about birth event conflicts?<br/>
+2. If you assume an event-based system, how do each of the various events/entries about Jane's birth report for Jane's biological mother? (Assume we all believe the conclusion mother is Eliza Jane _ Doe.)<br/>
+3. What is your conclusion person event/tag/pfact for Jane's birth? What source or sources (what citations) do you report for that conclusion birth event/tag/pfact?<br/>
+<br/>
+Various Records:<br/>
+(a) Williams County, Ohio, 1850 U.S. Census XXXX; Janey Doe, age 3, born Ohio; she has apparent brother, Thomas, age 4, also born Ohio. The head of household is John Doe; his apparent wife is Eiza Jane.<br/>
+(b) Williams County, Ohio, 1860 U.S. Census XXXX; reports Jane Doe to be age 15, born Ohio.<br/>
+(c) Williams County, Ohio, John Doe Probate file (1863); his will of 1863, mentions minor heir Jane Doe and provides for payment to her when she marries or turns 18, which ever is first.<br/>
+(d) Williams County, Ohio, Joseph Calle and Jane Doe marriage record, 1867; Jane Doe declares she is over the age of 18.<br/>
+(e) Williams County, Ohio, 1870 U.S. Census XXXX, Jane Calle, apparent wife of Joseph Calle, she is age 20, born Ohio.<br/>
+(f) Tombstone of Jane Calle (1851-1879), wife of Joseph Calle, Bryan Cemetery, Williams County, Ohio.<br/>
+(g) Letter (1930) written by Jane (Doe) Calle's daughter, Marie (Calle) Jacobs. Marie writes that her mother, Jane (Doe) Calle, was born 26 Feb 1850 at Bryan, Ohio; died there not long after Marie was born. Marie states her own birth as December 12, 1877, at Bryan.<br/>
+(h) Jane (Doe) Calle's brother, Thomas Doe, died 12 Jan 1912. Thomas' Ohio death certificate reports his birth 14 March 1847; parents as John and Eliza Jane Doe. The informant on was reported to be Thomas' widow. Thomas Doe is buried in the same cemetery as Jane (Doe) Calle; his tombstone carries dates 1847-1912.<br/>
+<br/>
+Comments:<br/>
+It's my impression that most software already allows users to enter and source multiple events. This would allow users to enter a separate event/tag/pfact for each of the records in the list above. The problem, at least as I described it to Louis recently (comment in "<a class="wiki_link_ext" href="http://www.beholdgenealogy.com/blog/?p=883#comments" rel="nofollow" target="_blank">Ordering of Events by Date</a>"), is then being able to representing a conclusion event and associating that event with the relevant evidence (the proof for the conclusion). This was the problem Adrian, Geir, TestUser and I worked on last May, but some thought our solution was too complex.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-01-02T08:28:07-08:00</div>
+<div class="title">Conflicting evidence is incompatible with a conclusion</div>
+<div class="text">Did we ever come to a resolution over the phrase "Conflicting evidence is incompatible with a conclusion"? Or did people just endlessly quote Tom Jones for sheer effect?<br/>
+<br/>
+Personally I think the statement - as it's quoted, which may not be what was said - is a nonsense. I think what was surely meant was "_Unresolved_ conflicting evidence is incompatible with a conclusion." Note that resolving the conflict (e.g. by saying "The census enumerator misread the original as it's clear this is the same family by the perfect match on the other 6 children") does not REMOVE the conflicting evidence - that's still sat there, in the source. All it does is say "Fine, for the purposes of this exercise we're going to come to a different conclusion"</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-06T12:04:40-08:00</div>
+<div class="text"><br/>
+Hi Russ,<br/>
+<br/>
+You are correct that ESM provides alternative ways of developing the bibliographic entry. I'm sure there are many folks who still sort their census bibliographic entries by household, too. (Since developing those materials, I've learned how to access the bibliography entries in FTM-Mac.) <br/>
+<br/>
+I use a State-County lead. The following bibliographic citation template corresponds to the reference note template I posted above. <br/>
+[STATE]. [COUNTY]. [YEAR] U.S. Census, population schedule. Digital image(s)&lt; [WEBSITE OWNER].&gt; [ITAL:][WEBSITE][:ITAL]. [URL] : [ACCESS DATE].*<br/>
+*This assumes "access date" is a vendor's data type (like RootsMagic). If it's not, then you need a different element and the value will then often be user defined such as "2001-present."<br/>
+<br/>
+BTW, we have census screen shots on the wiki about one of the FTM-Mac census source types, "Software Citations."  <!-- ws:start:WikiTextUrlRule:31:http://bettergedcom.wikispaces.com/Software+Citations --><a href="http://bettergedcom.wikispaces.com/Software+Citations">http://bettergedcom.wikispaces.com/Software+Citations</a><!-- ws:end:WikiTextUrlRule:31 --><br/>
+<br/>
+<br/>
+Russ wrote, "the way that FTM2012 has Templates, set up, based on EE!, the template provides Source Fields and Citation fields." <br/>
+You are referring to the forms/templates that are, in FTM, based on underlying citation templates. Although it may be a nit, FTM-M has elements/fields at the "source" and then additional fields, "citation detail" and "citation text," etc. that become available when you "cite" a source/"add new source citation."  All the elements and fields are "citation elements," though, and they are compiled in different ways to form reference notes and bibliographic citations. <br/>
+<br/>
+FTM has a feature that allows users who aren't happy with the default programmed citation result for the reference note to just add or delete information separate from the forms or citation templates. See the tab, "Reference Note" on the "Edit Source Citation" window. You can type/edit to your hearts content in this "Reference Note" window it includes buttons for formatting (italics and underlining). Such changes do not update or revise the information entered in the forms/templates. <br/>
+<br/>
+Russ wrote, "In what you posted, you have included the Source and the Citation."<br/>
+If you look, I believe you'll see that, using your terms, FTM-M reference notes include "the Source and the Citation," too.<br/>
+<!-- ws:start:WikiTextUrlRule:32:http://bettergedcom.wikispaces.com/Software+Citations --><a href="http://bettergedcom.wikispaces.com/Software+Citations">http://bettergedcom.wikispaces.com/Software+Citations</a><!-- ws:end:WikiTextUrlRule:32 --><br/>
+In my reference note citation template, the element "[CD]" is comparable to FTM-M's field/element "Citation Details"=GEDCOM's PAGE I could have added another field, "[CM]" which would have been comparable to FTMs field/element, "Citation Text." (If you noticed, RootsMagic has converted its GEDCOM PAGE field to "Research Notes" in RootsMagic v5.)<br/>
+<br/>
+As an aside, the citation template in the earlier posting came from TMG. It doesn't come preloaded with EE templates--I "define" my master source, including that I define how my programmed citations are to be developed (so I'm "defining" which elements will appear in my form/template). <br/>
+See also, "Programmed Citations, a general overview." <br/>
+<!-- ws:start:WikiTextUrlRule:33:http://bettergedcom.wikispaces.com/message/view/A+Data+Model+for+Sources+and+Citations/48011898 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/A+Data+Model+for+Sources+and+Citations/48011898" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/A+Data+Model+for+Sources+and+Citations/48011898</a><!-- ws:end:WikiTextUrlRule:33 --><br/>
+<br/>
+I happen to be a census splitter (see "Citation Mechanics," <!-- ws:start:WikiTextUrlRule:34:http://bettergedcom.wikispaces.com/Citation+Mechanics --><a href="http://bettergedcom.wikispaces.com/Citation+Mechanics">http://bettergedcom.wikispaces.com/Citation+Mechanics</a><!-- ws:end:WikiTextUrlRule:34 -->). <br/>
+<br/>
+Russ wrote, "The other thing, is that the End User will most likely NOT see the data elements as in fields."<br/>
+Without regard to semantics, that may be the case with FTM, but it is not the case with RootsMagic and Legacy. See the "Software Citations" RootsMagic screen shots. The "citation templates/elements" are to the right of the "fields/forms/elements." As the user fills in the blanks, those "templates" are populated. If the user prefers some alternate presentation, they either massage the data entry or create a custom template. (Legacy offers the same feature; we just don't have screen shots posted because Legacy doesn't have a source type compatible to the example on "Software Citations.")<br/>
+<br/>
+Lots of details here ... pardon the typos. -GJ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2012-01-06T12:37:56-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+Sorry I can't post images here, as I think FTM2012 and FTMM-1 or 2, which ever you have, are different in the Reference Note. I added the Town, after the State and County, and the Town was listed as part of the SOURCE piece of the Reference Note.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-06T12:50:59-08:00</div>
+<div class="text">Hi Russ,<br/>
+<br/>
+When I need to add an image, I create a wiki page, and then upload and add the image to that  new page. I add text to explain the image.  <br/>
+<br/>
+Once the page has been saved, just add the link to the page in a discussion.  <br/>
+<br/>
+If you don't need to add any text, then you might be able to upload the image using the "pages and files" section of the wiki. Once it's uploaded, I think you can also add a link to the file in a discussion. (I haven't tried this.)<br/>
+<br/>
+In the FTM-M screenshot, the template I used had a field "Township/Civil District" at the source level.  <br/>
+<br/>
+I only have FTM-M1, all $99 of it. Since I've only had it about a year, it will be a while before I can update. When the beta for FTM 2012 came out, I had about 48 hours with it until the expiry, but I did make a quick "forms" comparison to FTM-M templates I'd been testing. Any screen shots you can add would be much appreciated. --GJ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-06T13:04:17-08:00</div>
+<div class="text">Hi Russ,<br/>
+<br/>
+I have a copy of RootsMagic5, and you have FTM 2012. <br/>
+<br/>
+If you want to, we could set up another wiki page to use as a summary, and work on a handful of select sources and citations. We could present the default fields and then work to reverse engineer the default citation templates.  <br/>
+<br/>
+I have Legacy 7.5 here, too. --GJ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2012-01-06T13:19:07-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+I have all three. Give me an (1) example of what you want and I'll post all three on the Blog.<br/>
+<br/>
+I find the Blog much easier to use. <br/>
+<br/>
+I was hoping that the Source / Template / Citation Element issue that I tried to raise would show some sign of hope that it was important, so  I had not put anything up. I still think that understand the "fields" (probably a bad term) in the Template / thus the source, and the Citation, with an common understanding of which Template (EE!) is used, the stream of data in the BetterGEDCOM file could be formatted correctly (per the receiving application) to the end user.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-01-06T14:00:55-08:00</div>
+<div class="text">Gene: "Why don't you just eliminate the concept of standardized elements all together. Just recognize the two levels and allow vendors and users to define their own requirements"<br/>
+<br/>
+I think where you're using (non-existent??) software that allows definition and export of "output" citation templates (sorry - I know you don't consider them output but it's the best words I can use to distinguish them from lists that just define data) and you have umpteen source-types, then you could work it like that.<br/>
+<br/>
+However, as soon as you either want to swap templates or import into a non-template using app, then you run into issues if you don't agree standardised elements - e.g. you have "author" covering the writer, translator, editor concepts and I have "creator" with a sub-type of "writer", "editor", "translator", etc. If I can't just use your attached template, I'm into hard work to decide where your stuff fits into my formats.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-06T14:06:46-08:00</div>
+<div class="text">Hi Russ:<br/>
+<br/>
+I'm listing below 4 different sources; each a unique source type and all reasonably common. We've already done work on these and have references from EE. We have digital images of all but the last entry. Ditto, for all but the last entry, the underlying images or sources are readily available.  <br/>
+<br/>
+If you are game, for each of the four, we could (a) take screen shots reporting all the entries in the various forms, (b) compare the "reference notes" each program generates for each of the entries. (If you decide we should, we can compare the short reference notes--Legacy and RootsMagic only--and the bibliographic entries from all three programs.)<br/>
+<br/>
+The reverse engineering is a process of relating the variables (from the forms) to the reference notes (and, if we opt so, the short reference notes and bibliographies). --GJ<br/>
+<br/>
+<br/>
+(1) 1880 U.S. Census <br/>
+<!-- ws:start:WikiTextUrlRule:27:http://bettergedcom.wikispaces.com/Citation+Graphics#112%201880%20US%20Census --><a href="http://bettergedcom.wikispaces.com/Citation+Graphics#112%201880%20US%20Census">http://bettergedcom.wikispaces.com/Citation+Graphics#112%201880%20US%20Census</a><!-- ws:end:WikiTextUrlRule:27 --><br/>
+References: EE, 2007, p. 240 [QuickCheck, Online commercial site], 250 [QuickCheck, 1880-1930, NARA films], 279-282 [1880, 1890, 1900 and 1910-1930 U.S. census].<br/>
+Cite this source for an event/fact about Asa Thomas' birth.<br/>
+<br/>
+(2) 1850 U.S. Census database entry<br/>
+<!-- ws:start:WikiTextUrlRule:28:http://bettergedcom.wikispaces.com/Citation+Graphics#105%20US%20Cen%20Database --><a href="http://bettergedcom.wikispaces.com/Citation+Graphics#105%20US%20Cen%20Database">http://bettergedcom.wikispaces.com/Citation+Graphics#105%20US%20Cen%20Database</a><!-- ws:end:WikiTextUrlRule:28 --><br/>
+References: EE, 2007, p. 254 [QuickCheck, database online], 275 [online databases], 277 [Ancestry census database].<br/>
+Cite this source for an event/fact about where Asa Thomas' parents were born<br/>
+<br/>
+<br/>
+(3) Vital Record/published New England Town Records<br/>
+<!-- ws:start:WikiTextUrlRule:29:http://bettergedcom.wikispaces.com/Citation+Graphics#120%20VR%20Hardwick --><a href="http://bettergedcom.wikispaces.com/Citation+Graphics#120%20VR%20Hardwick">http://bettergedcom.wikispaces.com/Citation+Graphics#120%20VR%20Hardwick</a><!-- ws:end:WikiTextUrlRule:29 --><br/>
+Reference: EE 470<br/>
+Cite this source as another alternate event/"fact" for Asa Thomas' birth <br/>
+<br/>
+(4) Simple Journal entry, 1964 “Founders of the American Firestone Family” article by George Ely Russell. <!-- ws:start:WikiTextUrlRule:30:http://bettergedcom.wikispaces.com/The+George+Ely+Russell --><a href="http://bettergedcom.wikispaces.com/The+George+Ely+Russell">http://bettergedcom.wikispaces.com/The+George+Ely+Russell</a><!-- ws:end:WikiTextUrlRule:30 --><br/>
+Reference: EE, 779, “Journal Articles: Print Editions” (QuickCheck Model), and (b) 798, “Basic Format: Journal Articles.” <br/>
+I'll add relevant images from this article (we will only need a few lines); we can then use this source for an event/fact that "Hans Nicholas Firestone, born 25 March 1712 at Berg."</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-06T16:47:17-08:00</div>
+<div class="text">HI Adrian,<br/>
+<br/>
+(1) OooO ... as for "software that allows definition" ... you know I'm not using non-existant software. I've posted the screen shots and added a discussion about the process ... If I were a more experienced Legacy or RootsMagic user, I'd post the custom builds/citation templates in those programs, too. <br/>
+<br/>
+(2) You wrote, "as soon as you either want to swap templates or import into a non-template using app, then you run into issues if you don't agree standardised elements"<br/>
+<br/>
+I am out of ideas then, Adrian. <br/>
+<br/>
+There are programs that are "non-template" based, but not all vendors are "non-template," either. Isn't this a given--not all vendors will enable all functionality.  <br/>
+<br/>
+Here in the states, the citation is a part of our Genealogical Proof Standard; it's even written into the APG Code of Ethics. On the wiki, back in March, we identified programmed citations and styles as a featured trend, growing in popularity. We have researched and reported about the problems, and we know that every day, millions of users around the world enter citations to enabled software using these programmed citations--and their documentation "breaks apart" or is mangled upon transfer. As much or more than any other user problem, this issue was an impetus behind BetterGEDCOM. <br/>
+<br/>
+Geir has reviewed the problems and written a good plan based on an inclusive set of requirements. It's an 80-20 plan. Andy has even found a way to identify the most accessed Ancestry.com offerings. --GJ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-01-07T13:06:33-08:00</div>
+<div class="text">Gene - re "you know I'm not using non-existent software." Absolutely. The bit I was suggesting might not exist is the ability to export the templates. (Not the data, the templates for the data.) And in my book, you sitting there getting bored copying and pasting (well I'd get bored) the templates doesn't count as exporting. Exporting is TMG or GenBox or whatever exporting the templates themselves in a file. Does that happen? If it does I'd like to understand what the exported templates look like and if there is any compatibility across programs.<br/>
+<br/>
+"Isn't this a given--not all vendors will enable all functionality". Trouble is, there's exclusions and there's exclusions. I can quite happily cope with the idea that not every vendor supports personas, evidence and conclusion persons, etc. Because they are features that not all software would support. But as good as all software supports "citations", so to make accurate transmission of citation related data dependent on features that are only seen in those programs supporting templated citations, seems to be building in failure from the start. It'll either be - "BG claims to support accurate transmission of citations but it doesn't work in my software or his, or hers or... Must be BG is rubbish" - or it'll be "XYZ Software Co claims to support BG but it doesn't support the citation bit - XYZ are lying..." Better by far to have the templated citation support a separate option that can be clearly included in or out. <br/>
+<br/>
+I understand citations are important - it's the templating of them that I suspect is of less interest across the globe than you might think. Maybe I'm wrong and I'm certainly not defending the lack of interest in templating.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-08T12:21:38-08:00</div>
+<div class="text">Hi Adrian,<br/>
+<br/>
+Technically I have two ways of exporting templates, but both would be misleading in terms of the requirements considered by Geir's solution.<br/>
+<br/>
+Adrian wrote, "Better by far to have the templated citation support a separate option that can be clearly included in or out."  Aren't we just describing an added requirement? Ala, how will needed information be stored in programs that do not support programmed citations? I believe Geir's proposal assumed only some programs would support programmed citations. (We have been quite keen to a solution that incudes metadata.) <br/>
+<br/>
+"I understand citations are important - it's the templating of them that I suspect is of less interest across the globe than you might think. Maybe I'm wrong and I'm certainly not defending the lack of interest in templating."<br/>
+<br/>
+There are citations, there are programmed citations, and soon we will have metadata ... and then separately there are forms.<br/>
+<br/>
+We have recognized programmed citations as a trend, growing in popularity. From experience on the various user mailing lists, I know software supporting programmed citations is popular outside of the United States, I just don't know how many of each flavor are actually in use in the different countries. TMG sells a "UK" version. <br/>
+<br/>
+There are other related trends considered in Geir's proposal--the need for an international solution and user "options"; support for Internet services, and users who want simplified approaches to citations. We want genealogical metadata, too.<br/>
+<br/>
+I wrote earlier that, as much or more than anything, "mangled" citations gave rise to BetterGEDCOM--Geir's proposal considers a solution to these mangled citations and it recognizes other trends or standardization needs.<br/>
+<br/>
+In current discussions, you, Tom, Louis, Tony and others are making important contributions to the thinking about an inclusive set of requirements. It may be time to being a thread directly attached to Geir's proposal page, in which we summarize the requirements, especially these additional requirements. <br/>
+<br/>
+I'm already tinkering off wiki on some 80-20 stuff. --GJ<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+*I've said before that a term other than "evidence" be used to describe what are the abstracts and extracts referred to in the other thread.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-01-08T16:35:27-08:00</div>
+<div class="text">Gene - you ask "how will needed information be stored in programs that do not support programmed citations?"<br/>
+<br/>
+I have tried to say many times that the information will need to be specified in some form - whether it's items defined in BG for all source types, items defined in BG for individual source types; items defined by vendors for individual source types; items defined by individuals for individual source types (just like custom events). In other words, we want to use the equivalent of programmed citations but ONLY to define the data content, not how it appears. That will then allow its storage. Once stored, it can be transmitted because it will have its defined label with it.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-08T17:10:57-08:00</div>
+<div class="text">Hi Adrian, <br/>
+<br/>
+TY and sorry, I didn't mean to "ask" ...but, as you commented, I had intended to suggest the requirement involved specifying how that information woud be stored.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-01-04T20:23:05-08:00</div>
+<div class="text"><br/>
+GeneJ said:<br/>
+<br/>
+"That the systems are not compatible is further evidenced by the different arrays of default templates in the different programs--one has 170, another has about 400 and a third, between 1000 and 1500. As well, that all of the programs enable customization in one way or the other."<br/>
+<br/>
+Then why not define the to-be-the-standard set of Citation Templates for BetterGEDCOMs SourceCitations.com initiative? Those programs, and every other, will then have "THE" standard to use, and you can define in the standard whether customization is allowed, and if so, where and how.<br/>
+<br/>
+I'm always in favor of doing the work first, and arguing what to do with it (whether to include it in BetterGEDCOM or not) after - because the process of doing the work reveals insights and problems that would never have been seen in the myriad of precursive arguments.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-01-04T20:24:13-08:00</div>
+<div class="text"><br/>
+... I meant for the SourceTemplates.org initiative.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-04T20:50:32-08:00</div>
+<div class="text">Hi Louis,<br/>
+<br/>
+There have been several discussions about the SourceTemplates.org initiative, there are some postings to the wiki.  <br/>
+<br/>
+Geir's proposal was discussed with Dovy in a Developers Meeting before publishing same to the wiki. I think they are waiting for BetterGEDCOM to rally round. In the mean time, AncestorSync is readying their underlying release for RootsTech. <br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:8:http://bettergedcom.wikispaces.com/DevelopersMeetingNotes+2011-11-28+%28Nov+28%29 --><a href="http://bettergedcom.wikispaces.com/DevelopersMeetingNotes+2011-11-28+%28Nov+28%29">http://bettergedcom.wikispaces.com/DevelopersMeetingNotes+2011-11-28+%28Nov+28%29</a><!-- ws:end:WikiTextUrlRule:8 --><br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:9:http://bettergedcom.wikispaces.com/message/view/Sub-Project+SourceTemplates/43916580 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Sub-Project+SourceTemplates/43916580" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Sub-Project+SourceTemplates/43916580</a><!-- ws:end:WikiTextUrlRule:9 --></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-04T22:06:26-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Very briefly, <br/>
+<br/>
+(1) Your nos. 3 and 4 (see my earlier posting for the links) would only be developed for some source types in the various cultures. We've used some rough ratios, like 80-20; if that turns out to be 95-20, all the better. We must still make it possible for the balance of those source types to be exchanged.     <br/>
+<br/>
+(2) I can't speak to the specifics of your 3 &amp; 4, but unless you intended the pair to be based on a single style or user preference, then the citation elements provided for a given source type will support more than one style/preference. Unless we are able to communicate which style/which preference, a receiving application will not know. For example, how is a receiving application to know if your census citation was written in Register style or Evidence Explained … or "Adrian's way," for that matter. And why would any developer (or user) want an application to be bogged down with an ever increasing set of style definitions--many of which might never be used? <br/>
+<br/>
+I'd like to write more about metadata and flexibility, but I'm just beat. As you probably saw, the DTO group was hard at work today. --GJ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-01-05T14:23:17-08:00</div>
+<div class="text">"then the citation elements provided for a given source type will support more than one style/preference" <br/>
+Yes. <br/>
+<br/>
+"Unless we are able to communicate which style/which preference, a receiving application will not know"<br/>
+Yes<br/>
+<br/>
+"For example, how is a receiving application to know if your census citation was written in Register style or Evidence Explained … or "Adrian's way," for that matter"<br/>
+It can't. <br/>
+<br/>
+"And why would any developer (or user) want an application to be bogged down with an ever increasing set of style definitions--many of which might never be used?"<br/>
+They probably won't. That's why we need a citation style language to define output (to screen or report) templates for "citations" (i.e. bibliography, 1st &amp; 2nd reference etc).<br/>
+<br/>
+Now - we agree on the issues. We just seem to be proposing different solutions. Let me take an example of what a source record in BG _might_ look like:<br/>
+Title="John Doe &amp; Martha Roe, 23 May 1767; Register of Marriages for the Chapelry of Witton (Jan. 1754 - May 1770)" <br/>
+Author="St. Helen's, Witton, Cheshire"<br/>
+Published="digital image of original published in 'The Cheshire Collection, Church of England Parish Registers 1538-1910', FindMyPast"<br/>
+SourceType="Parish Register UK"<br/>
+ActualText="blah blah"<br/>
+Repository="FindMyPast"<br/>
+RepositoryCallRef="Original register ref: CRO P53/4/1"<br/>
+<br/>
+The citation elements provided for this will support more than one style/preference. Certainly will - rather extraordinary if they didn't.<br/>
+<br/>
+A receiving application will not know which style/preference to use. Very true. Now - why does it matter? First question - has it got the right data? Yes. That's on the BG file. Is that data unambiguous? I think so. Will the receiving application understand that if I print this out, I will ensure that Repository "FindMyPast" will be accompanied by its URL? No, it won't understand it. But it will know what the URL is because that's held against the Repository "FindMyPast" elsewhere in the BG file.<br/>
+<br/>
+Does this mean that the recipient has to create yet another template themselves? No - that's why we need a citation style language to define output (to screen or report) templates for "citations". If I sent the marriage out, then in the perfect world, I would also send the output template or send a reference to a standard agreed templates for UK Parish Registers.<br/>
+<br/>
+Then by putting the template and the data together, the recipient can recreate my citation. And if it looks different - well, it doesn't matter if US genealogists put the author's name after the title because it's unpublished, or put it before like I do. (I'm making up differences). Because the data is there in the BG file marked up and even though the citation is different, the DATA is correct because it's all marked up.<br/>
+<br/>
+I can see no way in which this solution doesn't work. So far as I can see, the only difference is that you are insisting the templates have to be defined by BG as part of the BG language and be part of the BG data. There is no point to this - as the IT people have said time and time again, for anything more than trivia, it pays to separate the contents of the data from the presentation of the data. The templates and the BG data need to be defined in step, otherwise what is "author" in one will be "creator" in the other or some such issue. Therefore the same people on BG who understand citation styles ought to help to define the styles. But the citation style language is a different project and it would produce different files - which could be linked, like image files, or sent separately.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-01-05T14:32:44-08:00</div>
+<div class="text">There is a further reason for separating output citation templates from BG. How many non-US applications support them? I bet very few. If you stick output citation templates into BG, then suddenly you demand all these applications do things they've never done before to gain BG compatibility.<br/>
+<br/>
+They all support individuals, families, source, etc. They all support export / import via GEDCOM (else they wouldn't be looking at BG). Only a percentage will support output citation templates - putting output citation templates into BG will automatically mean the others fail to support BG right from the start. Doesn't seem a very good idea to me. (Remember, they're squealing about XML which is just a plumbing job compared to GEDCOM. Templates is a major piece of work and I bet half the globe really DOESN'T CARE).<br/>
+<br/>
+Far better to have a separate initiative for these templates that can be picked up by those software suppliers that can deal with it and want to. Remember, BG ensures the correct data is present. The citation templates simply ensure that data is presented in the correct fashion.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-05T15:37:22-08:00</div>
+<div class="text">@ Adrian,<br/>
+<br/>
+"That's why we need a citation style language to define output (to screen or report) templates for "citations" (i.e. bibliography, 1st &amp; 2nd reference etc)"<br/>
+<br/>
+Except for your description of my work as "output," this is why Geir's document makes the recommendations it makes, and why I have commented that, until the solution exists, the only way to transfer your citations is to revert to the old way--just type them out.<br/>
+<br/>
+As I've said otherwise, I never "get" to filling out forms unless I have a programmed citation template. Lacking the solution, there won't be a form for me to fill out. --GJ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-05T15:42:59-08:00</div>
+<div class="text"><br/>
+"Far better to have a separate initiative for these templates that can be picked up by those software suppliers that can deal with it and want to" <br/>
+<br/>
+Well, when that is all done, then I suppose BetterGEDCOM would have some possible basis for Tom's 3 &amp; 4.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-06T06:26:08-08:00</div>
+<div class="text">@ Adrian,<br/>
+<br/>
+Why don't you just eliminate the concept of standardized elements all together. Just recognize the two levels* and allow vendors and users to define their own requirements. It will also support third party metadata, as others have done or do the work to make same available. --GJ<br/>
+<br/>
+*I suggest calling them master source or source_record and "assertion level" or "source details"; I don't warm up to Tom's term "source reference" because that terminology is somewhat in conflict with established terms in metadata.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2012-01-06T06:39:54-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+Question:<br/>
+<br/>
+But, if you had Standardized Elements, then the sending application and the receiving application would know what to do with that element.<br/>
+<br/>
+I am really thinking about the Template issue.<br/>
+<br/>
+If a template had a designation and could contain these elements, the receiving application would know that it is a template (some designation by BetterGEDCOM), then the application would know that the 3rd Standardized Data Element should be  Italic, then the application would present the citation correctly.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-06T08:31:24-08:00</div>
+<div class="text">Hi Russ,<br/>
+<br/>
+Notice: Techies look away, Bear gonna employ user-speak.<br/>
+<br/>
+There is a notion that templates are needed to convey formatting, but that is not the case in practice--templates often contain "bits" of contextual information. <br/>
+<br/>
+For example, when I converted from Evidence to Evidence Explained styled templates, I wrote new 1880-1930 US census population schedule templates for my most common source type. It's form is somewhat as below (I'm a splitter; showing here a full reference note and changing elements and element names for the sake of simplicity): <br/>
+<br/>
+[YEAR] U.S. Census, [COUNTY], [STATE], population schedule, [CIVIL DISTRICT]&lt;, [PAGEREF1]&gt;, enumeration district (ED) [ENUMERATION DISTRICT]&lt;, [PAGEREF2]&gt;&lt;, [HOUSEHOLD ID]&gt;, [RECORD OF INTEREST] household&lt; as of [DATE]&gt;; digital image(s),&lt; [WEBSITE OWNER],&gt; [ITAL:][WEBSITE][:ITAL] ([URL] : accessed [ACCESS DATE])&lt;, cites National Archives micropublication [REFERENCE]&gt;&lt;; [M1]&gt;&lt;; [CD]&gt;&lt;. [M2]&gt;.<br/>
+<br/>
+You can see that I have "contextual" information written into the template; as far as data entry was concerned, I had a pretty efficient set up. I took the same approach with other census templates and after I had a couple thousand entries updated (sigh), I learned GEDCOM only transferred "elements." So, I rewrote all the templates and I'm still working to get those "couple thousand" corrected. Even today, though, many of my templates have contextual information in them.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2012-01-06T08:56:08-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+In what you posted, you have included the Source and the Citation.<br/>
+<br/>
+Doesn't EE! give you TWO ways to ReCord a Census Record? Year and Year and State.<br/>
+<br/>
+The other thing, is that the End User will most likely NOT see the data elements as in fields. Having said that, the way that FTM2012 has Templates, set up, based on EE!, the template provides Source Fields and Citation fields.<br/>
+<br/>
+These are the Source Fields:<br/>
+<br/>
+[YEAR] [STATE] [COUNTY] (IF Year State is selected) [WEBSITE OWNER] [WEBSITE] [YEAR]  [URL] <br/>
+<br/>
+{YEAR] is year the Census records were published.<br/>
+<br/>
+The rest are in the Citation fields.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-03T12:32:26-08:00</div>
+<div class="text">Hi Adrian,<br/>
+<br/>
+" people think evidence can change" <br/>
+:-( now I think I'm just getting my chain pulled. <br/>
+<!-- ws:start:WikiTextUrlRule:7:http://bettergedcom.blogspot.com/2010/12/what-is-research-having-fun-with-body.html --><a class="wiki_link_ext" href="http://bettergedcom.blogspot.com/2010/12/what-is-research-having-fun-with-body.html" rel="nofollow">http://bettergedcom.blogspot.com/2010/12/what-is-research-having-fun-with-body.html</a><!-- ws:end:WikiTextUrlRule:7 --> <br/>
+See also Mills, _Evidence Explained_, 2007, 15.<br/>
+<br/>
+I actually think user requirements are driving the discussions about sources and citations--it's just not an inclusive set of user requirements. Separately, though, "leave the _templates_ in your application"--hahaha. Those taking this position ought to just say what they mean--"We don't use 'em and have no intention of transferring your reference notes and bibliographies. If you want those to transfer, just type 'em out."</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-03T13:04:33-08:00</div>
+<div class="text">Err... really should have said, "unless you want your reference notes and bibliographic entries to look the way we think they should look, you'll have to just type 'em out if you want them to transfer."</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-01-03T14:14:35-08:00</div>
+<div class="text">"unless you want your reference notes and bibliographic entries to look the way we think they should look, you'll have to just type 'em out if you want them to transfer."<br/>
+<br/>
+I don't believe OUTPUT templates belong in BG. By which I mean...<br/>
+<br/>
+Templates in current apps serve TWO purposes - defining WHAT data is to be captured for that source type and how it is PRESENTED on screen or in a report.<br/>
+<br/>
+What belongs in BG is the means of capturing what data belongs to each type of source record. That's about what data we hold so is firmly in BG's scope. <br/>
+<br/>
+What is outside BG's scope, in my view, is the stuff about how that data is formatted when it's shown in a printout or on the screen. For instance, that the date is in format dd/mmm/yyyy or mmm/dd/yyyy or... Or that "New England ..." is in italics. Or that the bibliography entry for a census includes the XXX but not the ZZZ. All these are specified in what I call the output template. Why don't I want it in BG? Well, for a start what language are we going to use to specify these templates? Depend on it, 3 different current template using apps will have 3 different means of doing it. And if they can't agree on getting the data right, what chance do we have of getting them to agree that (say) TMG's or Zotero's output template definition language is the one to use? Or even agree that templates could be transferred? ("Our mechanisms are so superior that it is pointless to attempt to transfer them into others applications" sounds like one possible response.) That's why we separate data and presentation. One is bad enough, both together has about as much chance as getting Republicans and Democrats to agree on anything - said from the western side of the Pond. <br/>
+<br/>
+What I have said is that if a language can be agreed for the output templates (or part agreed) then the templates could be transferred in the BG file package but not as part of the BG data. Think of images. We would be thought idiots of the first order if we attempted to define a means of encoding images. But difficulties exist in transferring images so we propose that a package (e.g. a zip file) be created containing not just the "real" BG data but also the attached images.<br/>
+<br/>
+Similarly, I would propose that if software company X did export its templates, then the templates could be zipped up with the BG data in the zip file. BG the standard would known nothing of the templates could could easily transfer them in the zips just like images.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2012-01-03T14:18:01-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+I do NOT think the "leaving the templates to the application" is a smart think to do. However, I do think that as an End User, I want the Application to identify and to present to ME, the user, the output, as defined in Evidence Explained!. BUT, and I think this may be where applications fall down, is that the Data Elements, outlined in Evidence Explained! have been implemented correctly.<br/>
+<br/>
+As the applications gives me the right fields to provide input to create the proper Template generated output, that application needs to hand off to BetterGEDCOM the Same data elements defined by that template. AND receive from BetterGEDCOM the proper data elements so that the application can do "its thing".<br/>
+<br/>
+Template 46<br/>
+Data Element 1<br/>
+Data Element 2<br/>
+Data Element 3<br/>
+End Template 46<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-03T17:06:40-08:00</div>
+<div class="text">Hi Russ <br/>
+<br/>
+Data Elements. "I think this may be where applications fall down, is that the Data Elements ...." <br/>
+<br/>
+I knew you felt this say and I worked on that reasoning with Yates, FTM, RM and Legacy. I don't know if anyone on the planet who has worked harder to get those elements and values to line up. <br/>
+<br/>
+It's the underlying language that differs between the programs. The elements and values are different, but all that is really based on the language. When combined the different languages and different elements/values don't produce the same result. (I know, sigh.)<br/>
+<br/>
+We've done many tests; have published or circulated information about a couple. In a test about the simple journal entry (see, "The George Russell" for the 1964 article), I wrote three citations (reference notes and bibliography), and then tried to produce the same results in three programs--FTM-M, RootsMagic and Legacy. I produced a total of nine citations (three from each program)--six of the nine were different than my control. <br/>
+<br/>
+The differences in results are random (by source type, though, of course). In one of the tests (above) a program dropped the author, article title and its location from the bibliography. In another test we've published, one program dropped the civil district from the reference note about a census. There are many more punctuation differences, which of course are even more tedious to observe.<br/>
+<br/>
+So, assuming you can even identify corresponding pre-packaged templates, and even if there were identical elements (= in theory, set up a perfect element/value transfer), the results "break" when you move from Program A to Program B. (This gets back to that same user requirement I mentioned … it's about the reference note and the bibliography=it's about trust).<br/>
+<br/>
+Okay, so what if they are different? Transferring from me to you might not be a problem (lots of folks would expect to review every entry sent to them by a third party … especially source hounds like you and me). BUT, synching/transferring from me to me just doesn't work, and, it's a silent failure (no warning). Since this is a numbers game (ala, I have 6000 master sources and bibliographic entries, and 40000 reference notes), fix-after-the is not a reasonable workaround, especially given that some programs have well in excess of 1000 different default source types. <br/>
+<br/>
+So, it is common that results are not equal (from program to program) and even vary from Mills. To me this suggests there are frequent customizations to those default templates. Not all these programs use the same customization techniques. In the case of FTM-M, customizations can be entered free form (actually overwriting the programmed elements/programmed citation--my description).<br/>
+<br/>
+The comments above pretty much assume all the elements and values in all the programs matched, and comparable templates exist in all the programs (none of which is true today). But we know the elements and values are different. And also … <br/>
+<br/>
+The data type differences are material, and data types are integral to each language.<br/>
+<br/>
+There is a significant structural/mechanical difference between FTM-M and the other two programs. RootsMagic and Legacy use a "source details" form/template at what I call the assertion level. Any number of distinct fields may appear in that "source details" form/template. FTM-M uses the more traditional GEDCOM fields at the assertion level. (In RootsMagic v5, I believe that what was GEDCOM "PAGE" is now "Research Notes.")<br/>
+<br/>
+There are structural differences, too, between the content (elements/values) of RootsMagic and Legacy's "source details" form/template. (What one puts in the Master Source appears in the source details of the other program).<br/>
+<br/>
+I guess I could go on and on, because I think there are far more issues to consider in an "element only" approach. If folks really believe the element only approach will do more than just "break" the existing program language, I hope they will conduct and share the research showing otherwise.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-03T17:12:17-08:00</div>
+<div class="text">Sorry for all the typos in above. --GJ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-01-04T02:57:37-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+Your long note is a valid indictment of GEDCOM's inadequacies in not providing enough data elements. It is not an indictment of data elements.<br/>
+<br/>
+The results of GEDCOM-only experiments simply prove those inadequacies and the inconsistencies of how program developers have interpreted GEDCOM.<br/>
+<br/>
+Those results don't have anything to do with Better GEDCOM, other than to continue to support my requirement that Better GEDCOM must be a data format that includes the data models implied by the set of good genealogical programs.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-04T03:01:54-08:00</div>
+<div class="text">Actually, Tom,<br/>
+<br/>
+Oh, please explain how you could conclude the post of late yesterday had anything to do with GEDCOM only experiments? --GJ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-01-04T06:45:27-08:00</div>
+<div class="text">I believe it is easy to understand. Every transfer, either to and from the same program, or between two programs, involves a GEDCOM export and import, whether that is visible to the user or not.<br/>
+<br/>
+In your experiments you are doing two things -- first seeing if the user interface of a program allows you to enter a particular type of citation -- second seeing if you can do round trip or two way transfer of those citations.<br/>
+<br/>
+Neither of those things has anything to do with Better GEDCOM other than being a warning that Better GEDCOM must ENABLE (note stress) intelligent application developers to be able to support two way transfers of citations created by any other program. The results of these experiments have nothing to do with the ultimate nature of sources and citations, and neither has any bearing on the issue of data level versus presentation level. For me it is just a long distraction that takes us away from the real issues, which are (repeating for the umpteenth time) doing "my tasks three and four," which is determining the source types BG should support, and the citation elements that are needed to support each one.<br/>
+<br/>
+My DeadEnds model, expressed by the document I made available, handles all these data issues simply and completely -- the model is set up to handle any number of source types, any number of citation elements, that can be shaped to create any kind of citation you wish. That model is data only, as it assumes that application developers are sufficiently intelligent (as they have proved themselves to be in many instances) to be able to apply a template approach to get citations prepared into publishable form. There are no templates in the DeadEnds model, because the DeadEnds model separates data from presentation (though I believe a strong argument can be made that notes be allowed to have simple semantic markup for things such as headings, list elements, and emphasis, though none of these are presentation level).<br/>
+<br/>
+Some seem to have taken the view that those of us who believe that templates should be application only, that Better GEDCOM should be data only, are villains who are set out to destroy Better GEDCOM because of some hidden agendas of our own. For me this demonstrates an abysmal lack of understanding.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-04T06:52:15-08:00</div>
+<div class="text">Hi Tom,<br/>
+<br/>
+I'm still reading your posting, but actually, I didn't have to make any GEDCOM transfer to accomplish my findings. <br/>
+<br/>
+I either already know the "template" or have done what I consider the necessary work to reverse engineer a knowledge of the template. <br/>
+<br/>
+Based on that work, I know that even if the receiving program was sent an ideal set of your "data" the result will not be the same as it had been in the sending program.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-04T07:17:53-08:00</div>
+<div class="text">@Tom,<br/>
+<br/>
+I realize your Dead Ends model meets all of your needs. <br/>
+<br/>
+It may surprise you to realize that users of other developers programs are big fans of the support in those programs. <br/>
+<br/>
+That the systems are not compatible is further evidenced by the different arrays of default templates in the different programs--one has 170, another has about 400 and a third, between 1000 and 1500.  As well, that all of the programs enable customization in one way or the other.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-01-04T08:06:32-08:00</div>
+<div class="text"><em>Based on that work, I know that even if the receiving program was sent an ideal set of your "data" the result will not be the same as it had been in the sending program.</em><br/>
+<br/>
+GeneJ,<br/>
+<br/>
+Not sure what you mean here. Are you saying that if Better GEDCOM were released as a data only system, we would necessarily have the same problems we have now with GEDCOM? And since you said 'your "data"' are you suggesting that that would be my fault, or at least the fault of the people who believe that BG should just hold data level information?<br/>
+<br/>
+Why do you believe that the results of the experiments have any predictive power with respect to Better GEDCOM? Don't you see those experiments as simply a demonstration that Better GEDCOM needs a more comprehensive data model for sources and citation elements. Can you provide any solid reasoning why performing "tasks 3 and 4" is not sufficient for creating a data model that will allow complex citations on one system to be passed through unchanged to any other system that supports Better GEDCOM?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-02T08:35:54-08:00</div>
+<div class="text">Hi Adrian,<br/>
+<br/>
+"_Unresolved_ conflicting evidence is incompatible with a conclusion." <br/>
+<br/>
+That is exactly as I read it, and so long as folks believe "sources [and citations]" should be separated from conclusions, and that the Genealogical Proof Standard is FUD, I suppose folks like me will continue to quote Tom Jones ... and further that some will see it as "sheer effect." <br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:8:http://bettergedcom.wikispaces.com/message/view/Sources+and+Citations/48324558 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Sources+and+Citations/48324558" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Sources+and+Citations/48324558</a><!-- ws:end:WikiTextUrlRule:8 --><br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:9:http://bettergedcom.wikispaces.com/message/view/Sources+and+Citations/48595258 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Sources+and+Citations/48595258" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Sources+and+Citations/48595258</a><!-- ws:end:WikiTextUrlRule:9 --></div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-01-02T12:18:29-08:00</div>
+<div class="text">Sorry Gene that doesn't make sense to me...<br/>
+<br/>
+If you quote it - why?<br/>
+<br/>
+And what has the GPS got to do with it? GPS provides a set of measures that imply a skeleton process, so far as I can see. A step in the GPS implies the resolution of conflicting evidence, so I'm missing the point of a quote that is a (presumably) misleading version of that step. <br/>
+<br/>
+The "Report Writing" topic was an attempt to discuss how to mark up the data and so create the sort of rich reference notes that you produce from your current applications. That's about output and is independent of how the conclusions enter the database, whether through an informal process of reasoning or a formal set of reasoning cross-checked explicitly against the GPS.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-02T17:18:27-08:00</div>
+<div class="text">Well, <br/>
+<br/>
+Direct evidence that is uncontroverted doesn't require a proof, right. <br/>
+<br/>
+I don't think the statement is misleading ... but then again I strive to practice my genealogy in the spirit of the GPS.  <br/>
+<br/>
+As for the "Report Writing" topic ... well, my reference notes are not about "output." I said it a dozen times. <br/>
+<br/>
+I'm glad that some developers took to creating the powerful technology that supports programmed citations. If they hadn't, I'd be typing those formed reference notes right into my software for each and every assertion. <br/>
+<br/>
+If that is the only way reference notes can be shared in BetterGEDCOM, I supposed a lot of us will be going back to the old way of doing things.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-01-03T07:59:20-08:00</div>
+<div class="text">Gene<br/>
+"Direct evidence that is uncontroverted doesn't require a proof, right?"<br/>
+I think you're using "proof" in a different manner from me. If I have a birth record saying "Simeon Doe was born Manchester, Lancashire, 26 Jan 1801", that sounds like direct evidence to me. Yes, in the absence of any contradictory evidence, it doesn't require any further processing. But what we _do_ need somewhere attached to the assertion or whatever is the "proof of identity" - i.e. is it "my" Simeon Doe? (assuming I have one already) - e.g. something like "the Manchester parish records for 1700-1900 show only one Simeon Doe being born / baptised, only one being married (previously identified as 'mine') and only one being buried  (previously identified as 'mine'). Ditto censuses. Therefore by lack of alternative we deem this to be mine." So - no, we don't need any further analysis of the evidence but we do need a proof, the proof of identity.<br/>
+<br/>
+"I don't think the statement is misleading ... but then again I strive to practice my genealogy in the spirit of the GPS" Well, you'll need to excuse my dedication to terminology here from my mathematics and computing background. You already said you agreed with my interpretation that the word "unresolved" ought to be in there, so in practical terms of what we do, we're in agreement. I imagine that your dedication to GPS makes you interpret and adapt phrases and stick in - very correctly - the extra steps. On the other hand, my own backgrounds in maths, IT and the occasional times I tried to write down procedures make me absolutely concerned to remove all ambiguities. (That often seems a pious hope rather than an achievable objective). My objection to "Conflicting evidence is incompatible with a conclusion" is that a piece of evidence does NOT change during my research (unless I misread the writing). That's the literal truth of what evidence is - as Louis says, "just the facts", so it can't change and it'll always be conflicting so we can never come to a conclusion. Huh? Clearly both you and I deal with it, we do come to a conclusion and we don't lie awake at night concerned we've broken the GPS or whatever mental model I have of proof. Sticking the word "unresolved" in makes it work - "_Unresolved_ conflicting evidence is incompatible with a conclusion". The fact that none of the Google repeats of the phrase explain this leads me to worry that:<br/>
+1. people think evidence can change or<br/>
+2. people reinterpreted the phrase like you but haven't made it clear for the less adept what's really going on or<br/>
+3. people really don't care about precise words - and besides, it's a good shock phrase and to  with logic.<br/>
+<br/>
+"my reference notes are not about "output." I said it a dozen times." OK - whatever word you want to describe them with, they exist in your data and we want to try and store them in BetterGEDCOM.<br/>
+<br/>
+"If [typing those formed reference notes right into my software for each and every assertion] is the only way reference notes can be shared in BetterGEDCOM, I supposed a lot of us will be going back to the old way of doing things." Nooooo - this is why I'm so frustrated - we were trying to work out what data is needed to support "the powerful technology that supports programmed citations", in other words what _data_ does BG need to hold to support storing the data for those powerful reference notes? (Bear in mind that BG is about data - the majority of us would prefer to leave it to the templates in _your_ application to decide how that stored data is displayed in your reference note, whether printed or simply visible on screen.<br/>
+<br/>
+Bear in mind I can't help you from experience because my software doesn't support complex reference notes and templates. I have got GENBOX (in read-only mode now) on my desktop PC but that is dead, deceased, an ex-PC.</div></div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2012-01-05T18:35:44-08:00</div>
+<div class="title">Sources, Citations, and Templates</div>
+<div class="text">Just in case anyone wants to start work on them- here is a list of Ancestry's most popular databases. Wouldn't that make a good start for the 80-20 solution?<br/>
+<br/>
+1-1910 United States Federal Census    <br/>
+2-1930 United States Federal Census    <br/>
+3-1920 United States Federal Census<br/>
+4-1900 United States Federal Census<br/>
+5-1880 United States Federal Census<br/>
+6-1870 United States Federal Census<br/>
+7-1860 United States Federal Census<br/>
+8-Social Security Death Index<br/>
+9-1850 United States Federal Census    <br/>
+10-England &amp; Wales, FreeBMD Marriage Index: 1837-1915    <br/>
+11-England &amp; Wales, Birth Index: 1916-2005        <br/>
+12-England &amp; Wales, FreeBMD Birth Index, 1837-1915    <br/>
+13-England &amp; Wales, Marriage Index: 1916-2005    <br/>
+14-New York Passenger Lists, 1820-1957        <br/>
+15-England &amp; Wales, Death Index: 1916-2005    <br/>
+16-1901 England Census    <br/>
+17-1841 England Census    <br/>
+18-1851 England Census    <br/>
+19-1891 England Census<br/>
+20-1881 England Census<br/>
+21-1861 England Census<br/>
+22-Quebec Vital and Church Records (Drouin Collection), 1621-1967    <br/>
+23-1871 England Census<br/>
+24-World War I Draft Registration Cards, 1917-1918</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-08T14:42:46-08:00</div>
+<div class="text">Yes, Andy, <br/>
+<br/>
+This certainly is an important part of 80-20. --GJ</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2012-01-08T15:10:59-08:00</div>
+<div class="text">Well- when those are finished, I've got the next 24. *grin*<br/>
+<br/>
+btw- anyone know if FamilySearch has a list somewhere of their most searched databases? <br/>
+<br/>
+If there is such a list, it might be interesting to compare the two.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-08T15:12:34-08:00</div>
+<div class="text">"The next 24," ....  OooO, I think Andy is on his way to a hit series.</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2012-01-08T15:20:39-08:00</div>
+<div class="text">LOL! You realize that Ancestry has 30,500+ databases- right? <br/>
+<br/>
+That means I can produce 1,271 lists. <br/>
+*evil grin*<br/>
+<br/>
+;)</div></div></div></body>
+</html>

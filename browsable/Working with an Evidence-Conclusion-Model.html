@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>BetterGedcom - Working with an Evidence-Conclusion-Model</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"><a name="The way most software works: Conclusion Persons only."></a>The way most software works: Conclusion Persons only.</h1>
+<br/>
+You know something about a Person that you want to record. Let's say, your Grandma.<br/>
+You open your genealogy program, create a new Person, enter the things you know:<br/>
+Grandma's Name, Birthday, a few other things, ok, that's enough for the beginning.<br/>
+Then you might go on adding your Grandpa, Name, Birthday etc. You'd probably link both via a Marriage event.<br/>
+<br/>
+The two Person Records the software created internally are Conclusion Persons. You have collected a number of things you know (PFACTs and Events) into each of them. You have concluded that this and that PFACT belong to this and that Person. Later, you may add more PFACTs (marriage date) and events (births of children). If you're thorough, you will try and add Sources that prove your entries.<br/>
+<br/>
+So you manage to get a copy of Grandma's birth certificate. To your surprise, you see that the date on the birth certificate is actually a day later than the date you remembered, and that your Grandma had a second name you didn't know about.<br/>
+So now you will have to decide what to do with this new information.<br/>
+You might add the second name after the first one, no harm in that. You might mark the preferred name, if your software lets you do that. You might add a note saying "Grandma never used the second name". But it's probably not going to be easy to "source" one part of the name seperately from the other, so if you don't make notes to keep track, you might forget where which part came from.<br/>
+<br/>
+What about the alternate birth date? It's an official document, so it has to be right, right? But Grandma used to celebrate her birthday on the day before? Why would she do that? What to do now?<br/>
+You will probably have to use one date only in the field for "birthday". Lots of programs (not all!) can't handle alternative dates, so you would need to add a note with the alternative date and an explanation why there's uncertainty and where the other date came from.<br/>
+<br/>
+The Grandma person record is still a conclusion record. It gets a little crowded if you want to keep up with all the changes and uncertainties. Nonetheless, this conclusion record is still capable to hold everything you find out about Grandma. If you have a very good software, you might be able to keep conflicting PFACTs, and have the sources documented. This is probably as good as software can get using the "conclusions only" model.<br/>
+If you're not so lucky, your software may force you to throw away the PFACT that you think less likely. If, later, you see that you made a wrong decision, then you'll have to re-enter the old PFACT including its source - and probably throw away the other PFACT again! In a Conclusion Person only software, you might end up with lots of important notes inside or outside the software. <br/>
+<br/>
+<h1 id="toc1"><a name='How software MIGHT work with additional "Evidence" Persons.'></a>How software MIGHT work with additional "Evidence" Persons.</h1>
+<br/>
+You would probably start just as above, by entering things you know about Grandma. Ideally, the software should ask you for a source as you enter each PFACT or Event. You would select "I just know it, duh!" or similar as the source.<br/>
+Then, when Grandma's birth certificate shows up, you will have to change things. This could be done just in the same entry masks as before. You enter the name from the certificate, and the date, and you add the source "Grandma's birth certificate" to both PFACTs.<br/>
+<br/>
+Now, your screen might look exactly as it did with the other software. But probably it will have the "old" PFACTs visible somewhere. Because that's the main difference: Things don't get thrown out or overwritten. Unless you delete things manually, all the information you collect will be available. You will be able to choose a previous PFACT if you find it is right after all. You will be able to remove a PFACT or Event from Person A and connect it to Person B.<br/>
+<br/>
+So how will this be done? How will the software handle the data internally?<br/>
+<br/>
+I'm no programmer, so I'm not sure of the smartest way a software would do these things. I see more than one way this could be done. Here's my understanding of what could be happening:<br/>
+<br/>
+In the beginning:<br/>
+<ul><li>The moment you create a new Person, the software will create a new "Conclusion Person Record". As you enter PFACTs, and source them with "Duh!", these will be collected in an "Evidence Person Record". There will be a Source Record created for "Duh!" and the Evidence Person Record will point to that Source. The "Conclusion Person" will point to the "Evidence Person".</li><li>Alternatively, as long as there's only one Source, there will only be one "Person Record" and this would be an "Evidence Person".</li></ul><br/>
+Adding Information:<br/>
+Additional information creates new "Evidence Persons". There will be the Source "Grandma's Birth certificate", and one Evidence Person connected to it. This Evidence Person will have only and exactly the PFACTs that are found in the birth certificate. The previous Evidence Person(s) are left untouched. The "Conclusion Person" adds links to the new Evidence Person (If there was only an Evidence Person before, a Conclusion Person will be created with links to both the old and the new Evidence Persons). <br/>
+<br/>
+The Conclusion Person will be where your decisions are recorded. You will choose a preferred PFACT if there are conflicts, and you will be able to give a reason for your decision. This reason will be attached to the link in the Conclusion Person that points to the Evidence Person that holds the PFACT(s) that you prefer.<br/>
+If you want to change the preferred PFACT, the software would make another link the preferred link, and the reasons you give would be attached to that link. Possibly reasons for the change could also be attached to the "demoted" link. The software would never remove any links from a Conclusion Person, unless you explicitly tell it to. <br/>
+<br/>
+If you find out that the birth certificate you had was actually not your Grandma's, then you could delete this source, and the software would delete the resulting Evidence Person. It would then find the Conclusion Person(s) that link to the Evidence Person and remove the links. But it would be even better if you would NOT delete the source: You should add a warning to it, so you know there's another person out there that is very similar to your Grandma. The software could store that warning with the Evidence Person, and then let you keep all the links but mark them as "dangerous" too.<br/>
+<h2 id="toc2"><a name='How software MIGHT work with additional "Evidence" Persons.-Alternate workflow: Starting with Evidence'></a>Alternate workflow: Starting with Evidence</h2>
+<br/>
+While researching your genealogy, you will come across fascinating documents that give lots of information about many people. There might be information that could become useful later on – but you will probably not know it when you first stumble upon that piece of evidence. Or there might be information that doesn't concern your subject directly, but gives a good impression of the time and place your subject lived in.<br/>
+<br/>
+So, it might be that you want to get all the information that this piece of evidence holds into your computer program.<br/>
+<br/>
+Software that supports the "Evidence-Conclusion-Process" might be a great help there:<br/>
+In such a program, you would create a new "Source Record" without having to create any kind of Person. You could import a scan of the document and include it in the Source. Then, you would be able to create "Evidence Persons" and "Evidence Events": for every Person mentioned in the Source, there would be an Evidence Person that holds exactly the PFACT information that is in the source about him. An Event mentioned in the Source might be a barn burning down, or a ship sinking, or a baby born. If the Event concerns only one person, it would probably be recorded in the Evidence Person. If there is no one connected to the Event, or more than one Person, then it would be a seperate Evidence Event with links to Evidence Persons.<br/>
+Your Subject would be just one of the Evidence Persons that came out of this Source, but he would be connected through the Source to all the information that was in the original document.<br/>
+<br/>
+This way of working might not be for everyone – but it isn't mandatory. It's just made easier because of the separation of "Evidence" from "Conclusions". <br/>
+<h2 id="toc3"><a name='How software MIGHT work with additional "Evidence" Persons.-Some basic rules:'></a>Some basic rules:</h2>
+<ul><li>One physical piece of Evidence will be recorded in one Source Record</li><li>One Source Record can lead to one or many Evidence Persons and Evidence Events</li><li>An Evidence Person or Event will never be changed after it has been created.<br/>
+(One exception: if there was a mistake in deciphering the Source. But even then, the first version could be retained - the new interpretation of the Source could be wrong, too!)</li><li>Usually, there would only be one Conclusion Person for every "Real Life Person"</li><li>This Conclusion Person collects all the Evidence Persons and Events that there are for that "Real Life Person"</li><li>In some cases, Conclusion Persons might be created from other Conclusion Persons. I could imagine that merging two Conclusion Persons could be done in a non-destructive and easily reversible way if the software created a new Conclusion Person that just points to the older ones, and indicates the preferred PFACTs for the combined Person.</li></ul><h1 id="toc4"> </h1>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>testuser42</strong> 2011-03-04T16:40:52-08:00</div>
+<div class="title">About this page</div>
+<div class="text">I wrote this to help myself and others understand how the work-flow of genealogy software looks today, and how it might change or stay the same if the software would support the Evidence-Conclusion Process better.<br/>
+<br/>
+This text should ideally be just a draft. In the end might be a text that explains the real-life implications of Evidence-Conclusion-Model support. Ideally, it should be understandable for everybody who has ever used any genealogy program. <br/>
+<br/>
+I haven't tried a lot of different softwares, so I haven't got too much of a clue what is possible in other (better) programs than mine. But I think the Conclusion-Only model leads to the same problems in any implementation, so these should be universal.<br/>
+I tried to be clear in my wording, but I'm sure I can be misunderstood. Please correct me where I'm not clear enough, or ask and I'll try to explain myself. (Re-Reading, I think I've used the words "source" and "to source" in a sloppy way. Or is it OK?). I've used PFACT since this has no meaning than the one Tom gave to it, so it can't be misunderstood.</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-05T08:11:43-08:00</div>
+<div class="text">Test User,<br/>
+<br/>
+I think you have done an excellent job summarizing how things are done with current applications, the problems that it causes, and I think you have done a very good job imagining ways that systems of the future could help solve the problems. As I read your comments I see a description of a process very similar to the Evidence and Conclusion Process that gets discussed on this wiki once in awhile, which is the process that I believe must become the basis of the next generation of genealogical software products, so also indicates an important direction for Better GEDCOM to take. I might not agree with your vocabulary in every instance, but that doesn't really matter; I think you have captured the real nub of the problems that I think Better GEDCOM must solve. Thanks for sharing your thoughts.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-06T07:57:32-08:00</div>
+<div class="text">I like it</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-06T11:59:53-08:00</div>
+<div class="text">TesterUser,<br/>
+<br/>
+Please explain what you mean by the term "Conclusion-Only model."</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-06T12:25:21-08:00</div>
+<div class="text">I would describe the "one day or the next" issue about the grandmother's birth date as a conflict between two direct sources. From your description, it does not rise to the level of an identity conflict or pose other conflicts with the body of evidence. <br/>
+<br/>
+I fail to see why we need all these extra steps to record the information. <br/>
+<br/>
+See the example below. I used short, clipped inline comments here (in lieu of full reference notes): <br/>
+<br/>
+ELIZABETH CLARK, b. 22 Feb. 1760  [NHVR (delayed, as Elizabeth Preston)], d. in Rumney 17/19 June 1807, ae 47 [The (Dover) Sun (1807)  (as 19 June 1807); GS, Rumney Depot  (as 17 June 1807)]....</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-03-06T14:45:17-08:00</div>
+<div class="text"><em>Please explain what you mean by the term "Conclusion-Only model."</em><br/>
+Gene, I think of a program using a "Conclusion-Only model" if it can't seperate the "Evidence"-level from the "Conclusion"-Level. Such a software has no separate record for the information that you get from a piece of evidence. Instead, this information will be stored mixed with information with other origins, under one umbrella person or event. The researcher makes conclusions or hypotheses as to which information belongs to one person. This is why it's a "conclusion person", and a "conclusion-only" model.<br/>
+<br/>
+That works OK, every software that exists now works this way. But if your conclusions are wrong, it's not so easy to undo them. And you won't get back the very first level of "evidence" information, because this has been destroyed.<br/>
+<br/>
+<br/>
+You are right about the Grandma's birthday example, it is a very simple example of a conflict between two direct sources. I'm sure you don't need all the possibilities that the "evidence-conclusion" model offers for that one. <br/>
+<br/>
+How do you enter your inline comments or reference notes in your software now? My program only has "notes", and I use them in a similar way as your example. My software only allows one date for birth, so I have to store any alternate dates in that note field, too. I know that there are better programs...<br/>
+<br/>
+The thing is, IMHO: Any software that supports the "e-c" model will be much more flexible with any problems. It will be able to store your argumentation or reasoning/proof statement and it will be able to make sense of it. For a simple problem like this, it could even output a report in exactly the same style as you provided above. Because the conflicting evidence will be stored, and your conclusions will be stored.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-03-06T15:05:18-08:00</div>
+<div class="text">Gene also said :<em>I fail to see why we need all these extra steps to record the information.</em><br/>
+<br/>
+I think there won't be any visible extra steps for the user. Everything will be under the hood.<br/>
+<br/>
+But also, I have a feeling that you're pointing to a difference in how people work: <br/>
+<br/>
+Some people will want to record all their thoughts/hypotheses etc in their computer program, even if these are not yet well proven. They will then try to do the "proving" with the help of the data they have in their program.<br/>
+<br/>
+Others will only put things into the database that they've proven well enough already. They will probably work with other software and paper to establish the proof.<br/>
+<br/>
+A good program needs to accommodate both kinds of users, and I think this can only be done with the "e-c" model.</div></div></div></body>
+</html>

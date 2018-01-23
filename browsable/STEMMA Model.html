@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>BetterGedcom - STEMMA Model</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+STEMMA<span style="vertical-align: super;">®</span> ("Source Text for Event and Ménage MApping”) is the data model and source format I was already working on when I first joined BetterGEDCOM. A draft copy of the specification was uploaded around January 2012 at <span style="font-family: 'Arial','sans-serif'; font-size: 16px;"><a class="wiki_link_ext" href="http://www.parallaxview.co//familyhistorydata" rel="nofollow">www.parallaxview.co//familyhistorydata</a>.</span><br/>
+<br/>
+Tony<br/>
+<br/>
+<hr/>
+<br/>
+[2012-04-27]<br/>
+<br/>
+I've finally got around to collecting together my <a class="wiki_link_ext" href="http://www.parallaxview.co/familyhistorydata/research-notes" rel="nofollow">STEMMA research notes</a> and making them almost readable. The 70+ pages have now been upload to the STEMMA site as a resource for any similar work on family history data to utilise. They cover a wealth of topics, as may be seen from the main page, and include references to other material as well as independent observations and viewpoints. All feedback is welcome but constructive feedback is more than welcome :-)<br/>
+<br/>
+<hr/>
+<br/>
+[2012-07-16]<br/>
+<br/>
+<a class="wiki_link_ext" href="http://www.parallaxview.co/familyhistorydata" rel="nofollow">STEMMA</a> has just undergone a major revision. It has now passed from being a draft specification to the first fully working version.<br/>
+<br/>
+A number of its features have been streamlined or revised as a result of it being applied to my own data, and following further research. The copious associated <a class="wiki_link_ext" href="http://www.parallaxview.co/familyhistorydata/research-notes" rel="nofollow">research notes</a> have been updated in keeping with the new specification. Those prior pages are now supplemented by a <a class="wiki_link_ext" href="http://www.parallaxview.co/familyhistorydata/data-model" rel="nofollow">Data Model</a> section that shows the model being applied to a number of case studies. A PDF copy of the same material is attached below.<br/>
+<br/>
+New or improved features include:-<br/>
+<br/>
+<ul><li>Rationalised way of extending partially controlled vocabularies in order to support custom types, subtypes, roles, styles, and other tag values.</li><li>Unified approach to defining core and custom properties for Persons and Places.</li><li>Streamlined handling of multi-valued properties (and of Citation/Resource parameters) such as 'Roles'.</li><li>Support for local-events (i.e. that only affect one person).</li><li>Support for Events with multiple sources of information, i.e. multiple sets of properties for each associated Person.</li><li>Support for Dublin Core semantic tags for both Person/Place properties and Resource/Citation parameters. Support for their machine-readable OpenURLs.</li><li>Streamlined approach to Person and Place names that retains their unified handling but accommodates name types, name styles and sorting for different cultures.</li><li>Support for Dual Dates (aka Double Years).</li><li>Support for URL hyperlinks in narrative.</li><li>Support for general reference notes in narrative.</li><li>Copyright and other permissions/prohibitions.</li><li>Identification of physical artefacts as Resources.</li><li>Extended inheritance mechanism to Resources (e.g. attachments) and Citations (e.g. sources) so that the same details may be shared between multiple entities.</li></ul><br/>
+The Data Model case studies include examples such as:<br/>
+<br/>
+<ul><li>Evidence and Timelines</li><li>Multi-Source Events</li><li>Personal Events</li><li>Double Years</li><li>Multi-Role Event</li><li>Complex Citation Reference</li><li>Multiple Births Spanning Midnight</li><li>Recording Oral history</li><li>Evidence, Reasoning, and Conclusion</li></ul><br/>
+<hr/>
+<br/>
+[2013-05-28]<br/>
+<br/>
+STEMMA V2.0 has now been published. This has undergone a considerable number of refinements to both stengthen and streamline its specification. Features include:<br/>
+<br/>
+<ul><li>Better support for recording transcriptions, including uncertain characters, marginalia, original emphasis, alternative spellings/meanings.</li><li>Better separation of evidence from conclusion for marked-up references and for Property values.</li><li>Generic Group concept that can be used to model time-dependent sets of Person, e.g. family units.</li><li>Support for attribution of individuals, whether represented within the family history or external to it. Contact details, including address, phone, email addresses, Web sites, and messaging systems.</li><li>Revised date-string representation for world calendars.</li><li>Downloads section.</li></ul><br/>
+<hr/>
+<br/>
+® STEMMA is a registered trademark of Tony Proctor.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-12T10:29:44-08:00</div>
+<div class="title">E&amp;C; and S&amp;C;</div>
+<div class="text">I believe that any non-trivial design that has an overarching guiding design principle is going to better than a piecemeal design. It's a bit like picking a colour scheme before decorating your house - one route looks like a kids colouring book and the other one has an aesthetic appeal to it. I only mention this because I don't yet see it in BG. It feels very goal-orientated at the moment (IMHO).<br/>
+<br/>
+I tried to take this approach in STEMMA - as in all my design/architecture work - and one of the main concepts that underpins it is the structured narrative. I just want to drop a quick note here about how this helped me address Evidence &amp; Conclusion, and Source &amp; Citations.<br/>
+<br/>
+Although STEMMA's approach to citations is pretty different to most, it primarily addresses what I've called "simple citations", i.e. those involving only one source. From this point of view, all the stuff we've discussed on citation formatting templates applies equally to STEMMA.<br/>
+<br/>
+However, narrative can be added to a &lt;Citation&gt; element which then allows simple 'author annotation' to be generated in the associated reference. Whenever the citation reference is generated, that annotation would be attached to it.<br/>
+<br/>
+OK, so what about "compound citations" - those involving multiple sources, and/or explanations of how it supports/contradicts assertions?<br/>
+<br/>
+Well, STEMMA's narrative text can be broken into segments, each of which can be given a tag and attributes like Surety, Inference, etc. Each can embed references to other text segments, as well as Persons, Places, Events, Citations, Resources. The idea being that it can structured as a decision tree showing where a conclusion (or conjecture) came from since those links may refer to other more-concrete conclusions, or sources of actual evidence.<br/>
+<br/>
+Now each datum (e.g. a date-of-birth, parent, place of residence) can be given similar attributes to those of the text segments. This means, for instance, that a single datum could link to a text segment which could point to any inference and all the supporting sources. This would appear as a footnote (or endnote) to that datum wherever it was used.<br/>
+<br/>
+Why is this significant? Well, it means citation formatting templates only need apply to "simple citations" - possibly with simple appended annotation - which would seem to simply a lot of our previous discussions. The other cases (e.g. "compound citations") are then produced as general footnotes that may reference those properly formatted citation references. There is an important point here but I may not be making it well - I believe we should let citation references handle just one source (with appropriate elements) and use another mechanism to build more-general footnotes. Remember, citation references are just one type of footnote. Source lists and bibliographies would be unaffected since they are simply an enumeration of the discrete sources.<br/>
+<br/>
+Tony (...preparing to duck when the flame throwers turn on me)</div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-01-12T17:07:39-08:00</div>
+<div class="text">Hi Tony, thanks for these clarifications!<br/>
+<br/>
+I feel that your approach should certainly be feasible. And it's really quite different to all the other models I've tried to understand.<br/>
+<br/>
+If I understand the STEMMA model right, it has only one "level" (see <!-- ws:start:WikiTextFileRule:0:&lt;img src=&quot;http://www.wikispaces.com/site/embedthumbnail/file/multilevel2.png?h=52&amp;w=320&quot; class=&quot;WikiFile&quot; id=&quot;wikitext@@file@@multilevel2.png&quot; title=&quot;File: multilevel2.png&quot; width=&quot;320&quot; height=&quot;52&quot; /&gt; --><div class="objectEmbed"><a href="/file/view/multilevel2.png/221704094/multilevel2.png" onclick="ws.common.trackFileLink('/file/view/multilevel2.png/221704094/multilevel2.png');"><img alt="multilevel2.png" height="32" src="http://www.wikispaces.com/i/mime/32/image/png.png" width="32"/></a><div><a class="filename" href="/file/view/multilevel2.png/221704094/multilevel2.png" onclick="ws.common.trackFileLink('/file/view/multilevel2.png/221704094/multilevel2.png');" title="multilevel2.png">multilevel2.png</a><br/><ul><li><a href="/file/detail/multilevel2.png">Details</a></li><li><a href="/file/view/multilevel2.png/221704094/multilevel2.png">Download</a></li><li style="color: #666">51 KB</li></ul></div></div><!-- ws:end:WikiTextFileRule:0 --> for what I mean with "level"), with all the datums (=PFACTs) in this one record, with flags that tell whether a given PFACT is evidence or conclusion. As I see it, all the top-level Census Events in the example at the end of the PDF are evidence, and the Birth Event then collects these with a narrative that records your conclusions for the birth. But the Person Record holds links to the "conclusion" Birth Event as well as all the "evidence" Census Events. The Person is a "conclusion" Person then. Would there be an evidence Person (="Persona") in your model at all? Or would you record an evidence Event instead? Is there always an Event to record?<br/>
+<br/>
+The Narration is kind of a Note on steroids, but in a good way. I think Tom had similar ideas, but didn't put them in writing in this much detail. The combination of allowing Notes/Narrations everywhere and the simple ability to have links to all kinds of other records inside, makes them very useful for recording conclusions and constructing more complex arguments for citations or footnotes.<br/>
+<br/>
+I can't judge if this model is functionally the same as DeadEnds or Louis' version. To me, it looks a bit more complicated, but that may be just because it's different ;-) <br/>
+<br/>
+<br/>
+<br/>
+BTW, I think BG doesn't have <em>an overarching guiding design principle</em> (yet?) because nothing concrete has been agreed upon yet. <br/>
+There's definitely a design principle in Tom's "Dead Ends" model, and Louis hasn't written down his future model, but he's made clear his design principles. Actually, to me, Tom's and Louis' ideas aren't really far apart, but your model is "sufficiently different" indeed...<br/>
+So we might need to come to an agreement on some basic differences: Do we want single-level or multi-level, or something in between? Are all these capable of fulfilling our requirements equally well? Is there an objective way to determine what's better, or does it come down to semantics and taste?<br/>
+<br/>
+<br/>
+PS: Just for the record, here is the first announcement of STEMMA and the discussion thread: <br/>
+<!-- ws:start:WikiTextUrlRule:19:http://bettergedcom.wikispaces.com/message/view/Data/48757831 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Data/48757831" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Data/48757831</a><!-- ws:end:WikiTextUrlRule:19 --></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-01-12T23:47:25-08:00</div>
+<div class="text">I believe the DeadEnds model has everything in STEMMA already covered, is a fully integrated design, is simpler, and, importantly, is multi-level in TestUser's parlance.</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-13T02:56:35-08:00</div>
+<div class="text">Thanks for the detailed reply testuser42 (I apologise for not knowing your name).<br/>
+<br/>
+It's hard to compare like-for-like with the different models because those overarching design principles make them each more than just the sum of their parts.<br/>
+<br/>
+You're correct in that STEMMA only has a Person and no Persona. The Person may start as some inferred Person (a "skeleton") and then become more real as the evidence accumulates ("fleshing it out"). Or it may turn out to be a figment or a duplicate too.<br/>
+<br/>
+However, PFACTS don't equate one-to-one with the things in STEMMA. The data in the Person such as d.o.b, parents, etc., are all technically the result of evidence rather than direct transcripts of it. The EventRef, CitationRef, etc., elements in the Person allow "properties" to be logged - these being direct evidence from the cited sources. The BirthEvent exists if the Person exists and so avoiding the distinction between Person/Persona also avoids it between Event/Eventa (if you know what I mean). Direct evidence for the birth - if it existed - would be cited in the associated Event element. In effect, an entity with no cited sources is more vague than one with lots of sources.<br/>
+<br/>
+I appreciate that this is not the norm, and I'm not pushing it as any type of solution. It may be more connected with the way I think and work, but then the other models may also be influenced in a similar way, or by what current products do, or by what GEDCOM supports. In effect, I can't say who's approach is more significant at a fundamental level. I do feel, though, that a similar guiding principle is need for BG and it may come from a mixture of  our personal endeavours.<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-01-14T03:55:27-08:00</div>
+<div class="text">Hi Tony, I'm Klemens.<br/>
+<br/>
+I agree it's always good to see different ideas and possible solutions. In the end, BG will be better for it, because we can really work out pros and cons. I also agree that a mixture of ideas will be a probable outcome, and this shouldn't automatically be a bad thing.<br/>
+<br/>
+(aside:)<br/>
+<br/>
+Tony and Tom, have you had a look at the GEDCOM X work? You can take a peek at the work-in-progress here: <br/>
+<!-- ws:start:WikiTextUrlRule:23:https://gedcom.ci.cloudbees.com/ --><a class="wiki_link_ext" href="https://gedcom.ci.cloudbees.com/" rel="nofollow">https://gedcom.ci.cloudbees.com/</a><!-- ws:end:WikiTextUrlRule:23 --><br/>
+You can download the complete snapshot as a zip file<br/>
+<!-- ws:start:WikiTextUrlRule:24:https://gedcom.ci.cloudbees.com/job/gedcomx-snapshot/ws/ --><a class="wiki_link_ext" href="https://gedcom.ci.cloudbees.com/job/gedcomx-snapshot/ws/" rel="nofollow">https://gedcom.ci.cloudbees.com/job/gedcomx-snapshot/ws/</a><!-- ws:end:WikiTextUrlRule:24 --> <br/>
+or look through the files online. There's already some documentation, e.g.<br/>
+<!-- ws:start:WikiTextUrlRule:25:https://gedcom.ci.cloudbees.com/job/gedcomx-snapshot/ws/gedcomx-rs/target/enunciate/build/gedcomx/model/gx.html --><a class="wiki_link_ext" href="https://gedcom.ci.cloudbees.com/job/gedcomx-snapshot/ws/gedcomx-rs/target/enunciate/build/gedcomx/model/gx.html" rel="nofollow">https://gedcom.ci.cloudbees.com/job/gedcomx-snapshot/ws/gedcomx-rs/target/enunciate/build/gedcomx/model/gx.html</a><!-- ws:end:WikiTextUrlRule:25 --><br/>
+<!-- ws:start:WikiTextUrlRule:26:https://gedcom.ci.cloudbees.com/job/gedcomx-snapshot/ws/gedcomx-conclusion/target/enunciate/build/gedcomx/model/index.html --><a class="wiki_link_ext" href="https://gedcom.ci.cloudbees.com/job/gedcomx-snapshot/ws/gedcomx-conclusion/target/enunciate/build/gedcomx/model/index.html" rel="nofollow">https://gedcom.ci.cloudbees.com/job/gedcomx-snapshot/ws/gedcomx-conclusion/target/enunciate/build/gedcomx/model/index.html</a><!-- ws:end:WikiTextUrlRule:26 --><br/>
+Some good stuff in there. <br/>
+I don't see the complete model yet, but if FS goes to implement this, IMHO it will be a huge step in the right direction.<br/>
+Discussion of GEDCOM X should probably go <a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Data/48419278" rel="nofollow">here</a><br/>
+<br/>
+(aside/)<br/>
+<br/>
+<br/>
+That said, I still like the design of Tom's DeadEnds model best ;)<br/>
+IMHO, it does a very good job of "mapping" reality into a clean and simple structure. If we add the linking power of your Narratives to Tom's Notes, I think we're pretty much done. <br/>
+Louis wants to keep all the information that one source has in one Evidence Record. Well, I think that could be allowed in the Source record, it wouldn't really clash with Personas or anything else.</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-14T05:01:52-08:00</div>
+<div class="text">I can't find a full set of documentation for DeadEnds (Tom?).<br/>
+<br/>
+I do remember not liking its handling of dates when I last looked. I personally felt it hadn't made a clean distinction between computer-readable dates and humanly-readable dates.<br/>
+<br/>
+The multi-level stuff like Personas is obviously very different to my own but I'm pragmatic there. I just need to see some case histories, ...which then brings me back to another topic I started about "test cases". If we had some stock ones then we could better compare like-for-like by representing the same cases in different formats. We could then "cherry pick" the best parts from each.<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-01-14T10:03:34-08:00</div>
+<div class="text">I see your point about dates, because I don't make a distinction between human readable and computer readable dates. Frankly I have no interest in using ISO standards of any kind in a genealogical file format. I'm a crumugeon about certain things and this is one of them. I believe that genealogical data is first and foremost "humanistic" data, and all attempts to restrict that data by using fixed formats, standardized formats, and so on, is overkill and leads to problems. I have accepted that I am in the vast minority in this area, and accept that a Better GEDCOM standard, if it were ever to materialize, would probably use a number of standards.<br/>
+<br/>
+I've been in the computer business for 45 years, and I know than any argument that tries to claim that data must adhere to very strict standards in order to be useful in computer applications is spurious. I've allowed wholly free format for dates in my LifeLines program since its inception 24 years ago, and I write a simple parser that can generally figure out those dates well enough to make very adequate sort keys. And if you think about it, good sort keys is the only practical "computing" purpose that a date value has.</div></div></div></body>
+</html>

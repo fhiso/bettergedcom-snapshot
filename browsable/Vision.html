@@ -1,0 +1,368 @@
+<html>
+<head>
+<title>BetterGedcom - Vision</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"><a name="Vision Statement"></a><strong>Vision Statement</strong></h1>
+<br/>
+<h2 id="toc1"> </h2>
+<span style="display: block; text-align: center;"><em><span style="font-size: 14pt;">BetterGEDCOM will be a file format for the exchange and long-term storage of genealogical data.</span></em></span><br/>
+<h2 id="toc2"> </h2>
+<span style="display: block; text-align: center;"><em><span style="font-size: 14pt;">It will be more comprehensive than existing formats and so become the format of choice.</span></em></span><br/>
+<h2 id="toc3"> </h2>
+<ul class="quotelist"><ul class="quotelist"><ul class="quotelist"><ul class="quotelist"><ul class="quotelist"><ul class="quotelist"><li>-- written by Adrian, Feb 9, 2011. (See <a class="wiki_link" href="Introduction%20to%20Goal%20and%20Requirements.html">the Goals page</a>)</li></ul></ul></ul></ul></ul></ul><h1 id="toc4"> </h1>
+<h1 id="toc5"><a name="Louis' Proposed Vision Statement"></a><strong>Louis' Proposed Vision Statement</strong></h1>
+<br/>
+<h2 id="toc6"> </h2>
+<span style="display: block; text-align: center;"> <em><span style="font-size: 18.6667px;"> BetterGEDCOM will be a file format for genealogical data that separates source information from conclusions. </span></em> </span><br/>
+<h2 id="toc7"> </h2>
+<span style="display: block; text-align: center;"> <em><span style="font-size: 18.6667px;"> It will allow repositories to catalog their source information in a standardized format </span></em> <em><span style="font-size: 18.6667px;"> that can be searched and downloaded by genealogy software. </span></em></span><br/>
+<br/>
+<span style="text-align: center;"><span style="display: block; text-align: center;"><em><span style="font-size: 18.6667px;">This will allow genealogists to develop their conclusions based on the evidence (supporting source information)</span></em></span></span><br/>
+<br/>
+<span style="text-align: center;"><span style="display: block; text-align: center;"><em><span style="font-size: 18.6667px;"> and save it in the same standardized format.</span></em></span></span>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-12T21:23:13-07:00</div>
+<div class="title">Proposed Vision Statement</div>
+<div class="text"><br/>
+Everybody:<br/>
+<br/>
+I'm going out on a limb and trying to jumpstart BetterGEDCOM again, which seems to need a boost.<br/>
+<br/>
+Yes, we have a lot of goals on the goals page, but there is no direction. What BG needs is an overall purpose. That is known as a Vision Statement. <br/>
+<br/>
+Looking through the goals, it is clear that the "Main Goal" written by Adrian back in February is really the Vision Statement. Please take a good look at it. <br/>
+<br/>
+A Vision Statement is supposed to be your guide, and define what you ultimately want to attain. It does not have to tell you how you will get there, but just what you want to get to. <br/>
+<br/>
+We've been working for 9 months now. Lots of great discussion has taken place. And the Vision of making a "more comprehensive" format does seem to be the one everyone has been persuing. <br/>
+<br/>
+But I don't think that will work for three big reasons.<br/>
+<br/>
+1. "More comprehensive" by definition means "More complicated and harder to implement". As a programmer, I know that is a reason I wouldn't want it. And, if I had to use it, it is likely that I wouldn't program it exactly the same way other programmers would, and GEDCOM transfers would have more incompatibilities rather than fewer - and that is not the result we want at all.<br/>
+<br/>
+2. If the purpose is "exchange of genealogical data", then an intermediate file is always a bad solution. It will either have to be very complicated to handle every possible program, or data will be lost. Programs like AncestorSync that transfer directly between two programs will do a much better job for data transfer.<br/>
+<br/>
+3. If the purpose is "long-term storage of genealogical data", then on the storage side, the longer something complicated is stored, the more likely it will become out of date. The standard will change over time, and starting with a comprehensive standard will only result in complications forever more.<br/>
+<br/>
+So then, I conclude, and feel free to debate with me on this, that a simple standard, no more complicated than current GEDCOM is required. <br/>
+<br/>
+And how do we then make BetterGEDCOM relevant and something that the genealogical community will want and need?<br/>
+<br/>
+My answer is to provide one important item that is missing: To separate evidence from conclusions. <br/>
+<br/>
+Currently evidence is not even a term in GEDCOM. It is hidden within a misleading SOURCE_CITATION term that nobody really understands or uses correctly and isn't even a record unto itself.<br/>
+<br/>
+I feel it necessary and important to make Evidence an important part of BetterGEDCOM and break it out properly.<br/>
+<br/>
+Then genealogists will be able to derive their conclusions properly from the evidence they find.<br/>
+<br/>
+But to me, the real exciting thing, and the part that may make BetterGEDCOM relevant and necessary, is if we make this Evidence/Source/Repository part of BG something that repositories everywhere will want to adapt. It can be a relatively simple XML or some other format file that libraries and archives and departments of vital statistics and census bureaus can use to post their data on their websites.<br/>
+<br/>
+This is one thing we DO NOT have. A standard format for posting genealogy evidence.<br/>
+<br/>
+So let's create that, and then also create give the way to save the genealogist's conclusions drawn from that evidence.<br/>
+<br/>
+Together, the evidence and conclusions will make up BetterGEDCOM.<br/>
+<br/>
+And the way I see it, it won't be too different from GEDCOM and will not be difficult for existing venders to convert to.<br/>
+<br/>
+To me, this is the big thing GEDCOM needs, and I think it is the only way we might make BetterGEDCOM relevant.<br/>
+<br/>
+Please consider what I am saying. I have the ideas to take this forward if everyone's interested. If not, I'll quiet down again, and just go back to assisting as necessary.<br/>
+<br/>
+But we do need a common vision and something for us all to work towards.<br/>
+<br/>
+Louis</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-14T21:34:36-07:00</div>
+<div class="text">I think the vision page now sends the wrong message. If we want "vision" to be on the navigation bar with such prominence, I'd prefer to see Adrian's more inclusive text only. <br/>
+<br/>
+If we want individual participants to add their opinions, maybe those should be on linked pages or in discussions. <br/>
+<br/>
+The way the vision statement is written now, it doesn't help us enlist support for of the current project focus--Geir's Architecture for Sources. <br/>
+<br/>
+I just updated the home page to reflect that current focus. --GJ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-08-15T03:54:58-07:00</div>
+<div class="text">I agree that a new solution for citations will take a lot of work and time. If you want a quick solution for Evidence I see no other way than to (in principle) use the current fields in Gedcom, and use them strictly as they were intended - not as currently used by many programs. You may need to add a source type, and possibly fields solely intended to enable an evidence solution, and possible incorporating "hooks" for a more advanced solution if they are finished in time (just mentioning the latter as a possibility, I do not know what those hooks would be at the moment.)<br/>
+<br/>
+You can jumpstart the project without scraping the rest of the project - from a new reader's view.<br/>
+<br/>
+What surprises me is that there seems to be little interest in things that I guess are less controversial. For example, just specifying a zip-based solution for multimedia or try to tackle extensions to Gedcom that many programs have implemented - e.g. roles in events. By mentioning this, I am not saying that I am against work on Evidence (I will contribute at my own pace) - but think about it.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-08-15T05:00:05-07:00</div>
+<div class="text">1. I would dearly like BG not to expire with a whimper, so I am happy to discuss refocussing.<br/>
+<br/>
+2. One option is indeed to concoct a small, limited change to GEDCOM. I _think_ this is what Louis is proposing. <br/>
+<br/>
+3. If that is so, then his proposed vision statement misses the point. It should say something like...<br/>
+"BetterGEDCOM will be a file format for the exchange and long-term storage of genealogical data. [my first sentence]<br/>
+"It will initially deliver a small incremental change to the GEDCOM Standard ?.?.? [choose the base version, please], allowing software developers to build on their existing code-base while delivering an advance to the user community."<br/>
+<br/>
+I could support this approach if I put my software support hat on, rather the mathematician's hat. (One says "P" for pragmatic, the other says "P" for Perfect.)<br/>
+<br/>
+I believe that this wording sets the scene more accurately about the anticipated size of workload. It also focusses us on the issue of copyright etc and how we deal with the 18-stone gorilla that is sitting in the room with the copyright to GEDCOM. <br/>
+<br/>
+It also focusses us on the software developers - without whom we are wasting our time.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-15T09:54:40-07:00</div>
+<div class="text">There are users, and I believe vendors, who view citations as a place to optionally record a "book and page number."  <br/>
+<br/>
+In truth, I find GEDCOM fully inadequate in supporting the organization of information about the sources genealogists typically use. If it can't keep that information organized, then it can't support the development of citations, much less communicate the style by which users want their citations to be formed.<br/>
+<br/>
+As I understand the development of genealogical software, the first versions didn't provide for any sources to be recorded, much less citations be formatted. While GEDCOM 5.5 is a great step forward from no provision, it fell short of Lackey and reflects a 1995 viewpoint, which I'll characterize as "book and page number."<br/>
+<br/>
+Back in those days, part of the GPS included a provision for the preponderance of the evidence. To some extent, if you just kept track of how many times the same "micro data" was repeated, a user might have thought they were providing for the GPS.<br/>
+<br/>
+The BCG did away with "preponderance" of the evidence, and today many of us depend on methodologies that involve correlating evidence, diversity of source types, and weighing other factors about the source in reaching conclusions. <br/>
+<br/>
+Now, GEDCOM didn't adapt to meet changes. Because no industry standard emerged, vendors seeking to tap into user demand have, one by one, made the substantial research and development investment. No doubt each new development effort "borrows" a bit from the one who came before, but the cost to each vendor has been substantial.<br/>
+<br/>
+This development effort incorporates information needs that are about substance and form, in the same way that Mills, Evidence Explained addresses substance and form, albeit, US centric.<br/>
+<br/>
+Vendors once again see themselves facing user demands with no industry action.<br/>
+<br/>
+(1) In order to serve a global market, some vendors find the need to produce two products. These are commonly US and UK, with additional language support. Alas, the source structure of the US or UK based products are different. Concepts in Geir's "Architecture of Source..." go a long way to helping developers produce ONE product that could be marketed world-wide.  Letting the ball slip suggests we again let vendors down, because each one has to suffer all the R&amp;D and at the end of the day, the emerging products will be dependent on say AncestorSynch to exchange data.<br/>
+<br/>
+(2) Libraries, archives and repositories are using standardized metadata to catalog their holdings--more and more, the standards by which source information is developed is being determined at a scholarly level. These data standards go further than the substance matters in Evidence Explained. Today a user has to default to third party software to build and share personal research libraries that DO understand these standardized needs, and these third party products increasingly support online citations.  <br/>
+<br/>
+Both of the issues noted are leading edge issues. GEDCOM didn't seek to be in front of issues like these ....  --GJ</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-08-21T07:36:59-07:00</div>
+<div class="text">I would like people to think about a way forward for BG.<br/>
+<br/>
+Do we go for a total revamp of GEDCOM - which, in my perception, was how this started? - but we seem to be losing the necessary numbers of active members to allow us to gain a consensus for that level of work.<br/>
+<br/>
+Do we go for a small change to GEDCOM? What I described above as "a small incremental change to the GEDCOM Standard ?.?.? [choose the base version, please], allowing software developers to build on their existing code-base while delivering an advance to the user community."<br/>
+<br/>
+If this is the chosen course, how do we identify and deal with issues of copyright relating to GEDCOM? And how do we interest any software developers? We have all sorts of ideas for them in the Requirements Catalogue. I'm tempted to say we don't need any more requirements - we need procedural thoughts!</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-08-21T07:55:01-07:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+I continue to read all of the messages on this Wiki. However, most of the developer's postings are way over my head. I am just just an end user of one genealogy program. I have used two others for testing purposes.<br/>
+<br/>
+This project started because Dear MYRTLE and I could not share, successfully, our genealogy research. That is the problem that started this.<br/>
+<br/>
+The basic reason that we could not share our information is Source/Citation information.<br/>
+<br/>
+There are hundreds of pages on this Wiki addressing how this might be done in the future. (I might suggest 'distant future'). I don't disagree with that, but it's not addressing the near term issue.<br/>
+<br/>
+To me, to address the sharing of Citation information, is to define the "fields" that make up a Source and Citation, based on Evidence Explained!<br/>
+<br/>
+I have started a spreadsheet a number of times, to do that, but have given up because that wasn't the direction of this project.<br/>
+<br/>
+I say Evidence Explained! because, in the US at least, that is the de Facto "standard".<br/>
+<br/>
+Taking each of the 170 - 200 "templates" and breaking each down into fields. What are the "fields" that make up a Source / Citation based on those templates.<br/>
+<br/>
+It may mean that a Template Identifier is needed, based on EE!, then defining the fields.<br/>
+<br/>
+The "attributes" of the fields, in my opinion, should be defined by the application presenting the result of the Source / Citation. The BetterGEDCOM should transport the data, and let the application present the appropriate format, like Italic's and in what order the fields are presented.<br/>
+<br/>
+I do appreciate all of the User Related work that GeneJ has done, and the developer's group have done, but that is all Future work. <br/>
+<br/>
+Now, that may be OK, but this project, in my opinion, does not have a "product" to present to the Application Developers. Application developers being the Genealogy Programs we, as end users, run on our computers or online.<br/>
+<br/>
+I think that if we had a 'small' product to present, then we can get the application developers to the "table" to get to the next step(s). Do the fancy stuff. Encourage genealogist to so their research and record their research in a new way. The "new way" being some of the work that GeneJ and you all have done.<br/>
+<br/>
+Only one User's Opinion.<br/>
+<br/>
+Great Question.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-08-22T04:03:41-07:00</div>
+<div class="text">Hi all,<br/>
+<br/>
+I've been checking in about twice a month or so, trying to catch up on things. I'm sorry I've not had time for any productive work. <br/>
+<br/>
+But on the other hand, I felt I didn't know what to contribute to the discussions about Sources and Citations. I'm really not an expert here, and it seems to me that you are doing good work.<br/>
+<br/>
+About the general direction -<br/>
+I think an easy option would be to take Tom's "Dead Ends" model and go with it for starters. It has a lot of what we were talking about. Try it out with real data, run it as a prototype "Better Gedcom". Then we could finetune, add the missing pieces and change the things that we find are not working.<br/>
+<br/>
+I believe that E&amp;C is the most important thing that BG should handle. I also think Citations are very important, but we have a well-thought out proposal for E&amp;C (Tom's Dead Ends) and not yet for Citations.<br/>
+<br/>
+I also think that implementing E&amp;C is not easy for the software makers. It will probably need a lot of rewriting, much more than standardizing Citations. So, getting Citations in the software should be easy once we have a good idea how to organize the items. Getting E&amp;C to work will take more time and effort -- so maybe it would be good to get an early start.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-22T07:43:27-07:00</div>
+<div class="text">I guess it all depends on what you consider small or "uncomplicated." <br/>
+<br/>
+<br/>
+Russ suggests small might be agreeing on terminology for the fields in Evidence Explained’s 170 Quick Check models (170x3=510 templates) that are US centric. John Yates determined there were over 3000 field instances in those models (and that is _just_ the 1=2007 version of her models). Yates recently reported more than 550 unique or different elements, which is consistent with the work BetterGEDCOM did on this earlier. Myrt might share some of Russ' opinion, as she recently inquired about John Yates model. <br/>
+<br/>
+Louis prefers no substantial change from GEDCOM's source types, data types, or elements. Small might mean evaluating details about various vendor export practices so that so we can agree on which vendor has the "best" work-around (does the least damage). But ... But ... BetterGEDCOM did an original overview of the programs with comparatively larger source systems. Several million users work with these applications. More below, but we know that the programs get to sort of the same place but use different techniques and add bells and whistles along the way. Because GEDCOM can't communicate with these source systems, vendor export comparisons have begun by manually inputing metadata to each system separately. One export might work for census but not for vital records. Anyone want to work on the "estray" records?  If by some chance we were able to increase the through put of vendor A's output from say 10% to 15%, the same approach might decrease the throughput from vendor B. Even if we had the materials, documenting those effects is not a small effort. And what if vendor A changes their bells and whistles? <br/>
+<br/>
+Everyone on BetterGEDCOM is well intended, but narrow focus is not always equal to small effort. We may see the possible small/short term solutions differently, because we assess the problem differently.<br/>
+<br/>
+I have access to about six programs; severa implemented an interpretation of Mills. While some programs are more alike than others, no two two programs implemented Mill's style the same way or to the same extent. (a) As to the latter, RootsMagic has templates from Evidence, Evidence Explained and various Quick Sheets. We know Legacy has more than 1000 Mills template sets. I could be wrong, but I think FTM-Mac has the templates from the 170 Quick Check Models in Evidence Explained. (b) From the graphics created about RM and FTM-Mac (see "About Citations" &gt;"Software Citations"), not all applications have compatible fields (including tabs with fields), not all apply the same citation mechanics and there is little consistency in terminology between them. Vendors who have not implemented Mills tend to have smaller source systems, one or more even have exceptionally unique systems. <br/>
+<br/>
+@ Adrian asked about a way forward now ... I'll focus on what I think is the path between the rock and a hard place.<br/>
+<br/>
+ELEMENTS<br/>
+Sticking with the concept of elements, John Yates suggested recently that for "fields" to be inclusive (beyond the EE 2007) to say 99% of researchers needs across the globe, you might have 3000 fields ("citation elements"). That's a lot of elements, a lot for any group to try and agree on.<br/>
+<br/>
+Comparatively, Geir has a very smart approach. It's a sort of 80-20 rule (20 percent of the work produces 80 percent of the value ... see<br/>
+Wikipedia, "Pareto Principle"). So, from Yates' 3000 elements to satisfy 99% of all needs, we define the essential part - say 60 or even 80 fields,<br/>
+and stop defining there. Golly, we could start by focusing on the bibliography to develop 40 great universally acceptable elements!<br/>
+<br/>
+Let vendors transfer custom elements on export with an assigned a data type (text or a name, etc., with the default being text--I would guess 90% or more would pass as the default). This approach to elements means, for example, that Roots Magic could begin to export the many elements it uses to support the short footnote, as short elements, even though FTM-Mac may not have a user field for that same element.<br/>
+<br/>
+If a group of different program users wants to work beyond the initial 40 or 60 or 80 elements, I don’t doubt BetterGEDCOM would support that effort, if only as a recommendation. For now, however, if we have difficulty reaching 40 elements (some would prefer zero), we won’t ever reach agreement on hundreds.   <br/>
+<br/>
+P.S. BetterGEDCOM did work on Yates' EE elements--managing them from 3000 to the some 500 unique elements. Further work was done to reduce the list to about 235 by eliminating similar elements with different names. The full reference note part of that effort has been posted to BetterGEDCOM for many months.  I’m not aware that anyone advanced the effort, not even Yates, himself.<br/>
+<br/>
+SECURITY AND ITALICS<br/>
+Yes. Codes work. Lets just accept this and move down the road. <br/>
+<br/>
+<br/>
+LEVELS<br/>
+I've used the word "level" to describe the difference between the master source (or source group or source or source_record) and the assertion<br/>
+level. Some program incompatibility exists because even if the element is the same, vendors don't all all define the element at the same level.<br/>
+<br/>
+As well, there seems some desire on the part of Mills and Robert Raymond (at least as far as ICE was concerned), to have the master source define only the bibliography. That concept is probably incompatible with some user practices.<br/>
+<br/>
+Now then, we can go all the way back to GENTECH to find references to higher-lower level sources, in addition to the assertion level. And<br/>
+lookie, it's also part of Geir's document.<br/>
+<br/>
+After the functional review of the different software systems, I suggested adding the lower level source and allowing programs to apply elements at any level (higher, lower or assertion)--this overcomes what I see as other needless export standards issues.<br/>
+<br/>
+I'll leave it to Geir, Adrian and Louis to call whether the level concept is more complicated than the functional issues it was intended to resolve. (I'll just repeat again that those level nuances between programs and users seem to be needless standardization battles.)<br/>
+<br/>
+TEMPLATES<br/>
+As an export standard, we can't require programs actually form citations. We aren't yet in a position to release a set of default templates<br/>
+acceptable world wide, and it doesn't make sense to me to expect vendors outside the US to support US centric templates.<br/>
+<br/>
+Now, Geir has developed a very smart approach to using source types, data  types, elements and modules that will support default citations and meet world wide needs.<br/>
+<br/>
+In the mean time ... why can't we lift the roadblock.<br/>
+<br/>
+If RootsMagic can export a template why wouldn't we provide a field in which RootsMagic conveys that information.<br/>
+<br/>
+If FTM-Mac prefers or is not able to export a template, but can send a template reference/template identifier, by name or EE page reference<br/>
+number, why not have a field the enables that export.<br/>
+<br/>
+If programs can also export the text of the citations, why not provide them the fields in which to convey that data.<br/>
+<br/>
+In truth ALL these components are part of Geir's long term approach, but they seem things we could do now, if we could get beyond the two extreme views--give me Mills or give me GEDCOM.  <br/>
+<br/>
+MARKETING ... how about this. <br/>
+BetterGEDCOM's long term plan features a core group of readily identifiable source types, data types, elements and citation styles suitable for use by any web- or desktop-based applications across the globe. The concepts will be welcoming to users working with a first source, and those who have well honed skills. In short, it will be a smart, relevant system.<br/>
+<br/>
+To prepare for the implementation of this long term plan, BetterGEDCOM is announcing a group of genealogical technology standards relative to  exchanging source information and citation details from user to user. These standards come right from the text of the BetterGEDCOM long term plan and are intended to allow vendors to immediately will support full and faithful export from the originating program. <br/>
+<br/>
+Future implementation will focus on ....</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-22T07:44:50-07:00</div>
+<div class="text">Oops. I got a little choppy there at the end. Hope you get the idea.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-08-22T08:46:53-07:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+Based on your comments, it appears that this project is a Long Term Project, with all of the various concepts that have been discussed on this Wiki.<br/>
+<br/>
+That is great and wonderful. Go for it.<br/>
+<br/>
+That is not what I signed up for. We started with a 'short term' identify and fix the ability to share our research.<br/>
+<br/>
+My major concern, is that WE don't have the resources AND will MISS our window of opportunity, with the other projects that are floating around the internet.<br/>
+<br/>
+Going back to being quiet.<br/>
+<br/>
+Good Luck,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-08-26T12:47:26-07:00</div>
+<div class="text">I have also been keeping track of Better GEDCOM progress, but haven't felt able to provide any constructive contributions to the current discussions.<br/>
+<br/>
+Personally I think the most important questions in front of Better GEDCOM deal with the questions of supporting evidence -- should evidence be supported and if so, how? There has been some threads on this topic, and a proposal by Geir, as well as my DeadEnds proposal, and there has been a lively discussion of this topic on the FSDN (Family Search Developers Network) mailing list. But right now this topic seems to be off the table for Better GEDCOM, which is unfortunate.<br/>
+<br/>
+The current discussions on citations and sources are important, but they deal with issues of trees not forests. It's been clear for basically ever that the issue with citations is to decide upon a set of source types and one or more source records and a set of record attributes (called citation elements in this context) to put in the records. The forest issues are well treated in the DeadEnds model (a hierarchical tree of source records that range from the lowest level of citations to the highest level of repositories). It seems to me that the Better GEDCOM effort is on hold awaiting the creation of a few simple lists of citation elements and source types.<br/>
+<br/>
+There is the associated question of whether source templates are part of Better GEDCOM or whether they are part of the application, or whether they are third party add-ons. It really doesn't matter, as long as Better GEDCOM has the minimal set of citation elements required by the templates. There is no need to decide on Chicago or Mills or New York Times or London Times or Der Speigal or Le Mond or whatever before we can move on to other things.<br/>
+<br/>
+I understand why and how my thoughts about these two areas (evidence and citations) are at odds with those of some others. The current citation-centric discussions are based around the tacit assumption that the most important way to get genealogical databases to be able to share information is to get the citation world in order and all else will follow. While I think of the citation area as almost trivial, just figure out an inclusive set of 20 or so citation elements, and settle on a simple recursive source record structure. I am much more concerned with the future of genealogical software, and what aspects of the underlying model are necessary to enable desireable features that are hard to implement with today's models. And for me all these issues center around questions of better handling of evidence and the new features that are possible when the evidence is available for computing. I don't think anything meaningful will come out of Better GEDCOM until we get back to issues of representing evidence and representing the results of research.<br/>
+<br/>
+In a real sense my concerns for Better GEDCOM may become moot fairly soon, as the AncestorSync project continues to unify more and more genealogical desk top systems and server family tree APIs with a single model that can convert data between any two formats. If that model will allow person records to exist at multiple levels then the AncestorSync model will also be ready for the future. And it will meet the stated goals of Better GEDCOM.</div></div><div class="comment"><div class="from"><strong>DearMYRTLE</strong> 2011-08-27T08:14:19-07:00</div>
+<div class="text">You may wish to follow the public comments to my blog post located at:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:56:http://blog.dearmyrtle.com/2011/08/bettergedcom-update.html --><a class="wiki_link_ext" href="http://blog.dearmyrtle.com/2011/08/bettergedcom-update.html" rel="nofollow">http://blog.dearmyrtle.com/2011/08/bettergedcom-update.html</a><!-- ws:end:WikiTextUrlRule:56 --><br/>
+<br/>
+Ol' Myrt here set up the BetterGEDCOM wiki in mid-Nov 2010 with the hopes that a grassroots effort would improve genealogy data file transfers. Today I'd like to share some thoughts about the project.<br/>
+<br/>
+1. There is currently a GEDCOM standard, with which the genealogy software programmers have elected not to fully comply during the last 15 years.<br/>
+<br/>
+<br/>
+2. GENTECH attempted to codify a GEDCOM standard with backing from professional genealogists and a core group of coders, but the initiative fell flat years ago.<br/>
+<br/>
+<br/>
+3. Absent a timely, viable BetterGEDCOM standard with accompanying product that can be readily assimilated by genealogy vendors, AncestorSync (from the same folks who brought us FamilyInsight) has great potential as a "bridging" solution facilitating file sharing among researchers on a variety of platforms.<br/>
+<br/>
+<br/>
+4. BetterGEDCOM is stronger in the "international" front, while AncestorSync is stronger "getting a product out of the pipeline."<br/>
+<br/>
+<br/>
+5. FamilySearch has specifically chosen not to work with BetterGEDCOM, though it is accustomed to approving certified affiliates. This is most likely because BetterGEDCOM doesn't have a product for them to evaluate.<br/>
+<br/>
+<br/>
+6. Ancestry.com has not participated in any BetterGEDCOM discussions.<br/>
+<br/>
+<br/>
+7. Other major software vendors (as defined by great numbers of end users) are not interested in working with us on BetterGEDCOM as a standard, using their time instead to upgrade their individual products to meet current consumer demands.<br/>
+<br/>
+<br/>
+8. Acknowledging AncestorSync's file transfer capabilities through BetterGEDCOM's independent review is an extension of testing we've done with other programs to describe issues of compliance with current GEDCOM standards. Scrambled data fields and lost data are important issues that have been tracked. If AncestorSync avoids the usual pitfalls, test results will tell the tale.<br/>
+<br/>
+<br/>
+9. I look forward to testing AncestorSync V4 which will involve end-user to end-user file transfers. At this point, AncestorSync is in V1 beta.<br/>
+<br/>
+<br/>
+10. It would be better if the *new* de facto genealogy data exchange process isn't owned by a company. We have learned from Microsoft's monopoly.<br/>
+<br/>
+<br/>
+ALL THAT BEING SAID<br/>
+<br/>
+<br/>
+A.  I believe AncestorSync will gain full acceptance in the industry by vendors and end-users alike. Vendors favor a no-effort solution to GEDCOM file transfer issues, and end-users just want the sharing to happen seamlessly.<br/>
+<br/>
+<br/>
+B. The concept of archiving genealogy data may be an obsolete thought, given a dynamic program like AncestorSync that plans to maintain file transfer criteria for older versions of genealogy software. Genealogists are becoming increasingly adept with the use of Dropbox, Mozy and other file syncing and backup services.<br/>
+<br/>
+<br/>
+C. BetterGEDCOM work can continue with GEDCOM file data models and source citation architecture, but I seriously doubt we can gain acceptance in the industry without strategic partnership(s).<br/>
+<br/>
+<br/>
+D. While collaboration works fine to discuss data models and architecture, but creating an actual product takes funding, man hours, and a top-down project management system. Failing that, here at BetterGEDCOM, with just a few active though highly qualified participants, Ol' Myrt is still herding cats.<br/>
+<br/>
+<br/>
+E. I favor BetterGEDCOM collaborating with AncestorSync.<br/>
+<br/>
+<br/>
+SUMMARY<br/>
+<br/>
+Personally, I don't care if AncestorSync gets there before BetterGEDCOM does, just that the work gets done.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-13T09:02:32-07:00</div>
+<div class="text"><br/>
+One clarification:<br/>
+<br/>
+If you go to <a class="wiki_link_ext" href="http://www.thinkgenealogy.com/wp-content/uploads/Genealogy%20Research%20Map%20v2.pdf" rel="nofollow">Mark Tucker's Genealogy Research Process Diagram</a>, you'll see the Source, Information and Evidence circles. <br/>
+<br/>
+To me, the Information and Evidence is the same thing. "Information" is what it is (non-intepreted) from the repository's point of view, and the same information becomes "Evidence" once it is interpreted by the genealogist to derive conclusions. <br/>
+<br/>
+I really like these definitions and in the future will try to distinguish them in this way.<br/>
+<br/>
+p.s. Does anyone know Mark Tucker and would want to see if he might want to get involved in BetterGEDCOM if we are going to try to implement some of his ideas?</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-13T09:05:08-07:00</div>
+<div class="text"><br/>
+... and note in Mark's diagram that the Citation circle connects Source and Information. It is complicated and does not have to be part of a version 1.0 BetterGEDCOM. Source, Information and Evidence are the important circles to do right away. Research Goals, Citation and Proof Argument can be added, if so desired, in future versions.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-13T09:16:37-07:00</div>
+<div class="text"><br/>
+I do see that on <a class="wiki_link_ext" href="http://www.thinkgenealogy.com/2011/03/17/genperfectmy-ideal-genealogy-software/#more-2148" rel="nofollow">Mark's GenPerfect article</a>, Mark mentioned BetterGEDCOM, and Myrt commented to him about it and he responded. I also commented that the domain name GenPerfect.com is available.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-08-14T15:29:26-07:00</div>
+<div class="text">I have nothing against a solution for evidence, but I think it is going a bit far to redefine BetterGEDCOM to be only about that (and citations). Redefining the project in such a way gives the wrong impression to new readers what can be found on this wiki, I am absolutely not in favor of “scraping” much of the work we have done in this way. It should be possible to develop a solution for evidence without redefining the overall goal of the project, just as we have been doing with all the other functionality or whatever, by creating one or more pages for it that can be accessed from the sidebar on the left.<br/>
+<br/>
+Transfer of evidence has previously been discussed on the wiki in at least the following contexts<br/>
+-    Requirements catalogue – Data09<br/>
+-    The page Defining E&amp;C for BetterGEDCOM <!-- ws:start:WikiTextUrlRule:7:http://bettergedcom.wikispaces.com/Defining+E%26C+for+BetterGEDCOM --><a href="http://bettergedcom.wikispaces.com/Defining+E%26C+for+BetterGEDCOM">http://bettergedcom.wikispaces.com/Defining+E%26C+for+BetterGEDCOM</a><!-- ws:end:WikiTextUrlRule:7 --> <br/>
+The solutions discussed there must be considered – I don’t mean the linking of personas and conclusion persons – to me that is a different issue (or a solution that will not solve the problem).<br/>
+<br/>
+I don’t see a point in developing a solution unless you can also handle citation information.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-14T18:22:42-07:00</div>
+<div class="text"><br/>
+Geir:<br/>
+<br/>
+It seems maybe then that E&amp;C is the most important part of BetterGEDCOM. <br/>
+<br/>
+Trying to standardize citations is a huge endeavor. If the rest of BetterGEDCOM has to wait until citations are standardized, it will be a long wait. <br/>
+<br/>
+That work could and should continue in parallel. <br/>
+<br/>
+But BetterGEDCOM has been around for 9 months and the longer it takes to produce our first formal document, the less relevant we become. I think our time is running out and we have to develop a Version 1 solution and it will have to be without E&amp;C because that will take too long.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-08-14T18:25:07-07:00</div>
+<div class="text"><br/>
+Furthermore: OpenGen appears to have dissolved. <br/>
+<br/>
+And our BetterGEDCOM group seems to only have a half-dozen people left who are doing anything. <br/>
+<br/>
+Like I said in my first message in this topic, I'm trying to jumpstart BetterGEDCOM again ... before it dissolves as well.</div></div></div></body>
+</html>

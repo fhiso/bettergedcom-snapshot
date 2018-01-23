@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>BetterGedcom - A request for help compiling GEDCOM DATE information</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+I'm developing a <strong>C++</strong> Date Class (<strong>GED-DATE</strong>) in aid of parsing <strong>GEDCOM</strong> files. What I need help on is collecting as many examples as possible from the 'wild'. This may include non-standard forms as well <strong>_DATE</strong> comes to mind). What I want to be able to parse what is out there (<em>thanks Mulder</em>). As an example in my dev directory I have:<br/>
+<br/>
+<ol><li>allged.ged</li><li>example.ged</li><li>myers.ged</li><li>simple.ged</li><li>torture.ged</li></ol><br/>
+For a total of 54358 lines of <strong>GEDCOM</strong> data and 5969 lines of <strong>DATE</strong> information. Hardly a sufficient sample, but a start.<br/>
+<br/>
+I gathered my test file with a command line of:<br/>
+<br/>
+C:\grep DATE *.ged &gt; dates.txt<br/>
+<br/>
+If those of you willing to help out would do the same for as many .ged files as you might have and either link or post the results in this discussion I would greatly appreciate it. In addition if you know of any links to additional .ged files that are available to the public links to those would be very helpful.<br/>
+<br/>
+<span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;">You might ask of what use would this be to BetterGedcom? Without getting into (hopefully) any politics it is my feeling that BG will need to handle legacy </span><strong>DATE</strong><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;"> forms in any attempt to move ahead. This would certainly include the material I'm looking for. A second consideration is that this will be open source and possibly of use to BG when it comes time to cut code. My plan is to be able to parse and convert any </span><strong>DATE</strong><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;"> form excepting </span><strong>DATE_PHRASE</strong><span style="font-family: Lucida Sans Unicode,Lucida Grande,sans-serif;"> of course, and provide a date arithmetic (ranges, age, etc.) as well as a variety of output formats. I believe I'm not the only one who stared at <strong>+1</strong> <strong>DATE</strong> <strong>PLUV</strong> <strong>0012</strong> without knowing that it really (Gregorian bias here...) was equivalent to <strong>+1 DATE FROM</strong> <strong>20</strong> <strong>JAN</strong> <strong>TO</strong> <strong>18</strong> <strong>FEB</strong> <strong>1804</strong> (I think I got that right :) )?</span><br/>
+<br/>
+Also for those interested in the '<strong>DATE</strong>' problem, it would be quite useful to me to hear what people might like in such a creation or any other discussion on the subject.<br/>
+<br/>
+hsmyers<br/>
+(hsmyers atsign gmail dot com)<br/>
+usual sig='s --hsm
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2013-05-29T17:35:31-07:00</div>
+<div class="title">Discussions</div>
+<div class="text">Discussions have not been turned off. Just click the double bubble next to Edit.</div><div class="comment"><div class="from"><strong>louiskessler</strong> 2013-05-29T18:51:57-07:00</div>
+<div class="text">Thanks, Andy.  I gues the "new" format of wikispaces threw me off.</div></div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2013-05-29T17:44:55-07:00</div>
+<div class="title">Large GEDCOM</div>
+<div class="text">If you want a *very* large GEDCOM for testing, look for the stobie.ged on rootsweb. It contains over 400,000+ people.</div><div class="comment"><div class="from"><strong>hsmyers</strong> 2013-05-31T08:42:35-07:00</div>
+<div class="text">I will most certainly do that---400k x say 2 DATEs per equals 800k candidates for testing. When I'm not messing with GEDCOM libraries, I write Perl code to parse chess games and my regression test for move parsing is about 1.5million so this plus the other site posted is very probably going to put me way above that!</div></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2013-05-29T18:51:04-07:00</div>
+<div class="title">GEDCOMs via Google</div>
+<div class="text">Try: <!-- ws:start:WikiTextUrlRule:4:https://www.google.com/search?q=%220+head%22+filetype%3Aged --><a class="wiki_link_ext" href="https://www.google.com/search?q=%220+head%22+filetype%3Aged" rel="nofollow">https://www.google.com/search?q=%220+head%22+filetype%3Aged</a><!-- ws:end:WikiTextUrlRule:4 --> which lists 23,600 GEDCOM files.<br/>
+<br/>
+Hopefully that will be enough for you. :-)<br/>
+<br/>
+Louis</div><div class="comment"><div class="from"><strong>hsmyers</strong> 2013-05-31T08:39:16-07:00</div>
+<div class="text">Yes I believe that just might be the ticket---thankfully I've a small herd of terabyte drives :)</div></div></div></body>
+</html>

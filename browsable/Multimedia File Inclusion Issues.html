@@ -1,0 +1,353 @@
+<html>
+<head>
+<title>BetterGedcom - Multimedia File Inclusion Issues</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"><a name="Multimedia inclusion and referencing issues"></a>Multimedia inclusion and referencing issues</h1>
+<br/>
+<h1 id="toc1"><div id="google_translate_element"></div>
+<script type="text/javascript">
+//<![CDATA[
+function googleTranslateElementInit() {
+ new google.translate.TranslateElement({
+   pageLanguage: 'en'
+ }, 'google_translate_element');
+}
+//]]>
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
+</script></h1>
+<h3 id="toc2"><a name="Multimedia inclusion and referencing issues--These issues have been discussed in the following topics:"></a>These issues have been discussed in the following topics:</h3>
+<a class="wiki_link_ext" href="message/view/GOALS/29930043" rel="nofollow">message/view/GOALS/29930043</a><br/>
+<a class="wiki_link_ext" href="message/view/GOALS/30141635" rel="nofollow">message/view/GOALS/30141635</a><br/>
+Please don’t write more about this issue there, use the Discussion tab for this page<br/>
+<h3 id="toc3"><a name="Multimedia inclusion and referencing issues--The following is just a first attempt to capture some of the issues."></a>The following is just a first attempt to capture some of the issues.</h3>
+<hr/>
+<br/>
+<h2 id="toc4"><a name="Multimedia inclusion and referencing issues-1. Introduction"></a>1. Introduction</h2>
+<h4 id="toc5"><a name="Multimedia inclusion and referencing issues-1. Introduction--The goals say that the BetterGEDCOM (BG) should include a standard container specification to accommodate ancillary Multimedia resources. With Multimedia we mean digital resources that may represent photos, scanned images, video, sound, documents, web pages, diagrams, maps, (database,?) etc. Importantly, we need the ability to incorporate resources in formats that are as yet unknown to us (such as emerging audio codecs). Some resources (e.g., video) may demand high performance, which means we must not introduce significant overhead for media objects."></a>The goals say that the BetterGEDCOM (BG) should include a standard container specification to accommodate ancillary <span style="line-height: 19px;">Multimedia</span> resources. With Multimedia we mean digital resources that may represent photos, scanned images, video, sound, documents, web pages, diagrams, maps, (database,?) etc. Importantly, we need the ability to incorporate resources in formats that are as yet unknown to us (such as emerging audio codecs). Some resources (e.g., video) may demand high performance, which means we must not introduce significant overhead for media objects.</h4>
+<h4 id="toc6"><a name="Multimedia inclusion and referencing issues-1. Introduction--A resource may reside in a file or in information available via an internal computer interface or via a data network."></a>A resource may reside in a file or in information available via an internal computer interface or via a data network.</h4>
+<br/>
+<h3 id="toc7"><a name="Multimedia inclusion and referencing issues-1. Introduction-1.1 Other wiki references:"></a>1.1 Other wiki references:</h3>
+<ul><li>a. A separate wiki page, <a class="wiki_link" href="Container%20%26%20File%20Issues.html">Container &amp; File Issues</a>, was created by jbbeni, with contributions by Russ and Greg; see also the discussion attached to that page, "<a class="wiki_link_ext" href="message/view/Container+%26+File+Issues/30246559" rel="nofollow">Zip?</a>"</li></ul><br/>
+<h2 id="toc8"><a name="Multimedia inclusion and referencing issues-2. User requirements"></a>2. User requirements</h2>
+<h3 id="toc9"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.1 A solution should allow"></a>2.1 A solution should allow</h3>
+<ul><li><h4 id="toc10"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.1 A solution should allow-a. internal references: transfer of multimedia files together with the genealogy data"></a>a. internal references: transfer of multimedia files together with the genealogy data</h4>
+</li><li><h4 id="toc11"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.1 A solution should allow-b. external references: referencing to multimedia resources not transferred together with the genealogy data. These resources may be stored on some media or computer, or may be accessible via a data network"></a>b. external references: referencing to multimedia resources not transferred together with the genealogy data. These resources may be stored on some media or computer, or may be accessible via a data network</h4>
+</li><li><h4 id="toc12"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.1 A solution should allow-c. many-to-one references: resources may be referenced by many types of entities in the genealogy data, e.g. a source, person, place, excerpt, note? etc. (to be discussed). Multiple entities should be able to “share” (point to) a common reference structure when the object is the same, possibly part of a “media-s” structure within the genealogy data file, that supports organization/management/grouping of the media references."></a>c. many-to-one references: resources may be referenced by many types of entities in the genealogy data, e.g. a source, person, place, excerpt, note? etc. (to be discussed). Multiple entities should be able to “share” (point to) a common reference structure when the object is the same, possibly part of a “media-s” structure within the genealogy data file, that supports organization/management/grouping of the media references.</h4>
+<br/>
+<h4 id="toc13">&lt;&lt;We may need a separate page for transfer of multi media mangement information in the genealogy data file&gt;&gt;</h4>
+</li><li><h4 id="toc14"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.1 A solution should allow-d. Uniform Resource Identifiers: identification of the resource (within one or more contexts)"></a>d. Uniform Resource Identifiers: identification of the resource (within one or more contexts)</h4>
+</li><li><h4 id="toc15"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.1 A solution should allow-e. ??grouping of media objects that should be access at the same time, e.g. photo and sound – cf. Gedcom 5.5.1"></a>e. ??grouping of media objects that should be access at the same time, e.g. photo and sound – cf. Gedcom 5.5.1</h4>
+</li><li><h4 id="toc16"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.1 A solution should allow-f. Resource descriptive information: transfer of information about the object (object type (MIME?), origin/creator/author/publisher, (file) size, title, description, caption, creation time, identification of e.g. persons shown, type of “objects” shown in media (e.g. persons, landscapes, houses), copyright, informal/short identifier/name, setting (type of circumstances/event when created), user defined attributes and attribute types/flags, quality classification, creating program name&amp;version, tags, research notes, duration – and more – or less."></a>f. Resource descriptive information: transfer of information about the object (object type (MIME?), origin/creator/author/publisher, (file) size, title, description, caption, creation time, identification of e.g. persons shown, type of “objects” shown in media (e.g. persons, landscapes, houses), copyright, informal/short identifier/name, setting (type of circumstances/event when created), user defined attributes and attribute types/flags, quality classification, creating program name&amp;version, tags, research notes, duration – and more – or less.</h4>
+<br/>
+<h4 id="toc17"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.1 A solution should allow-Discussion: Some of this information may duplicate other info in the genealogical data or in the object. This may or may not be desirable in some cases."></a><strong>Discussion</strong>: Some of this information may duplicate other info in the genealogical data or in the object. This may or may not be desirable in some cases.</h4>
+</li></ul><br/>
+<h3 id="toc18"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.2 A solution could also allow"></a>2.2 A solution could also allow</h3>
+<ul><li><h4 id="toc19"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.2 A solution could also allow-g. reference to one or more specific parts of the resource in a type-specific way"></a>g. reference to one or more specific parts of the resource in a type-specific way</h4>
+</li><li><h4 id="toc20"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.2 A solution could also allow-h. the receiver is able to check the integrity and authenticity of the object"></a>h. the receiver is able to check the integrity and authenticity of the object</h4>
+</li><li><h4 id="toc21"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.2 A solution could also allow-i. resources could be access controlled"></a>i. resources could be access controlled</h4>
+</li><li><h4 id="toc22"><a name="Multimedia inclusion and referencing issues-2. User requirements-2.2 A solution could also allow-j. transfer of multimedia in a program-to-program exchange of genealogy data (this may be outside the scope, but the solution could be influenced by such future capabilities)"></a>j. transfer of multimedia in a program-to-program exchange of genealogy data (this may be outside the scope, but the solution could be influenced by such future capabilities)</h4>
+</li></ul><br/>
+<h2 id="toc23"><a name="Multimedia inclusion and referencing issues-3. Technical solutions"></a>3. Technical solutions</h2>
+<h3 id="toc24"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.1 Internal files"></a>3.1 Internal files</h3>
+<h4 id="toc25"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.1 Internal files-These are files transferred together with the genealogy data file, in a Container file. (Multimedia objects are not stored in XML in the genealogy data file due to efficiency considerations.)"></a>These are files transferred together with the genealogy data file, in a Container file. (Multimedia objects are not stored in XML in the genealogy data file due to efficiency considerations.)</h4>
+<ul><li><h4 id="toc26"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.1 Internal files-a. The container files type should be standardized, widely available, application independent, license free, platform independent, durable, possibly compressing (and optionally secure)."></a>a. The container files type should be standardized, widely available, application independent, license free, platform independent, durable, possibly compressing (and optionally secure).</h4>
+</li><li><h4 id="toc27"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.1 Internal files-b. It should allow a hierarchy of files"></a>b. It should allow a hierarchy of files</h4>
+</li><li><h4 id="toc28"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.1 Internal files-c. All implementations must support one default Container file type"></a>c. All implementations must support one default Container file type</h4>
+</li><li><h4 id="toc29"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.1 Internal files-d. The Container type could be assigned a file extension, e.g. “.gedsomething” (.gedz?)"></a>d. The Container type could be assigned a file extension, e.g. “.gedsomething” (.gedz?)</h4>
+</li><li><h4 id="toc30"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.1 Internal files-e. The genealogical data file may be transferred outside of a container if there are no multimedia objects to be transferred (as a .ged file today)."></a>e. The genealogical data file may be transferred outside of a container if there are no multimedia objects to be transferred (as a .ged file today).</h4>
+</li><li><h4 id="toc31"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.1 Internal files-f. The container must support long file names, using a defined set of charaters, be able to handle the / \ problem, and file attributes."></a>f. The container must support long file names, using a defined set of charaters, be able to handle the / \ problem, and file attributes.</h4>
+</li></ul><br/>
+<strong>Discussion</strong>: One possible Container file type is zip (possibly with an internal packaging structure). The Open Packaging Conventions (OPC) has been mentioned in this context, and there are most likely others ((OOXML (Open Office XML, aka Open XML), ODF (OpenDocument Format), OpenDocument)). Also "ISO-Image" (used for images of CD/DVDs - ISO-9660 based or UDF? based) <strong>Expertise needed!</strong> Some existing standards may be too complex, but maybe it is possible to specify restrictions on their use. Some of them may contain other useful functionality not mentioned on this page.<br/>
+<br/>
+<h3 id="toc32"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.2 External references"></a>3.2 External references</h3>
+<h4 id="toc33">&lt;&lt;Needs much more work and discussion&gt;&gt;</h4>
+<h4 id="toc34"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.2 External references-Needs to identify the location of the object (e.g. an URL/URI), access method if any (e.g. HTTP), possibly transfer method (eg. e-mail), transfer time, - or may indicate that the identifier of the object should be used to obtain this info, if stored on the receivers system. E.g. if the submitter has previously received the media from the receiver, and thus do not need return them."></a>Needs to identify the location of the object (e.g. an URL/URI), access method if any (e.g. HTTP), possibly transfer method (eg. e-mail), transfer time, - or may indicate that the identifier of the object should be used to obtain this info, if stored on the receivers system. E.g. if the submitter has previously received the media from the receiver, and thus do not need return them.</h4>
+<br/>
+<h3 id="toc35"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.3 Considerations independent of “internal” and “external”"></a>3.3 Considerations independent of “internal” and “external”</h3>
+<h4 id="toc36"><a name="Multimedia inclusion and referencing issues-3. Technical solutions-3.3 Considerations independent of “internal” and “external”-The structure in the genealogy data file that references/describes the multimedia objects should in principle be the same for internal and external objects, but some info will be different."></a>The structure in the genealogy data file that references/describes the multimedia objects should in principle be the same for internal and external objects, but some info will be different.</h4>
+ Both the internal and external methods may be used in the same genealogic data file.<br/>
+<br/>
+<h2 id="toc37"><a name="Multimedia inclusion and referencing issues-4. Backward compatibility issues"></a>4. Backward compatibility issues</h2>
+<h4 id="toc38"><a name="Multimedia inclusion and referencing issues-4. Backward compatibility issues--None? What about Gedcom 5.5.1?"></a>None? What about Gedcom 5.5.1?</h4>
+<br/>
+<h2 id="toc39"><a name="Multimedia inclusion and referencing issues-5. Grouping of functionality/support levels"></a>5. Grouping of functionality/support levels</h2>
+<h4 id="toc40">&lt;&lt;Something to think about later&gt;&gt;</h4>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-13T20:50:09-08:00</div>
+<div class="title">ISO image?</div>
+<div class="text">I admit this isn't an area I know a lot about right now. Certainly I'm very familiar with archival formats, but I've never dealt with archival formats from a development point of view but rather as a user.<br/>
+<br/>
+Consider this: Many software applications burn CDs for data transport, but this data can't then be imported or exported (typically). However, an "ios image" which is a format used to store images of CDs and DVDs is an efficient compressed file that has its own filesystem independent of any one operating system. (File systems used for iso images are either ISO-9660 based or UDF based, I think.)<br/>
+<br/>
+The issue with file formats is really one about what is easier for developers to adopt. I don't think users care much, as long as it doesn't mess with the data. Obviously naming conventions would be an issue, as well as any filesystem structure or conflicts between names if any filesystem structure changes occurred.<br/>
+<br/>
+I wonder if using an iso image format is a good option. Anyway, I look forward to see what those who know a lot more about this than I do have to say.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-14T06:44:45-08:00</div>
+<div class="title">Goal title and scope</div>
+<div class="text">I suggest that we change the title of this page to "Multimedia transfer (rather than inclusion) and referencing issues." And that we move the inclusion bullet from goal 2 to a new goal 6 - which reflects the new title of the page. Inclusion is just halve the scope - as I see it, and could be interpreted as inclusion in the BG file.<br/>
+<br/>
+Comments?</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-15T11:40:05-08:00</div>
+<div class="text">I think we're getting a little mixed up here.<br/>
+<br/>
+Of course, the purpose of BetterGEDCOM in terms of what we're doing is to allow genealogists to transfer all their data and documents. HOWEVER, the first part of the standard is NOT a transfer mechanism, speaking from a technology point of view. The first part of the project involves merely a way to format data uniformly.<br/>
+<br/>
+The "transfer" portion of the initial work is done by humans who import and export the data, put it on a flash drive and put it in their pockets. Subsequent work will involve allowing computer programs and services to directly synchronize and transfer data, depending on the rules we set up to allow such transfers. That's what transfer involves from a technology point of view.<br/>
+<br/>
+There is no question whatsoever that getting all data and documents into an out of programs completely is what we're doing.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-15T12:38:17-08:00</div>
+<div class="text">Perhaps semantics? <br/>
+<br/>
+What every the uniform data format IS, it should be capable of recognizing the media as a source and as content that seeks a citation.</div></div><div class="comment"><div class="from"><strong>jbbenni</strong> 2010-11-15T13:08:39-08:00</div>
+<div class="text">There's been some good discussion.  I feel the need to regroup and pin down what I think is established, and what questions remain.   Bear with me, here's the world according to jbenni...<br/>
+<br/>
+Quoting Wikipedia:  <em>GEDCOM, an acronym for GEnealogical Data COMmunication, is a de facto specification for exchanging genealogical data between different genealogy software. </em><br/>
+<br/>
+So BG, like OG (Old/Original GEDCOM), is a specification for data exchange.  Computers typically exchange data in streams or files, and for this purpose files seem like the obvious winner.  They are easily exchanged and archived.   An application that is BG compliant need not use BG internally, but it must be able to import data from valid BG files and export data to valid BG files without loss.  This is key.<br/>
+<br/>
+So what kind of data to exchange?  Genealogy data is, broadly, conclusions and evidence.  In the early days of GEDCOM evidence was generally in the form of a textual citation to an external official record or document.  Before scanners and copiers, there wasn't much choice.  But now evidence is increasingly in the form of files that are digital copies of original sources.  (Images of official records, PDF or scanned pages of books, digital photos of grave markers with geocodes and timestamps, video recordings of family histories as told by elders, etc.)<br/>
+<br/>
+So it's fair to say there has been a sea-change in the amount and kind of evidence data that is included in a genealogy project, and that GEDCOM has serious limitations as an exchange format for digital evidence (in addition to its other limitations discussed elsewhere).  BG must do better, and must remain a super-set of GEDCOM in this area (perhaps in all areas).<br/>
+<br/>
+There's solid consensus that the conclusions and all the meta-data about evidence belongs in XML.  It's an obvious choice.  No serious dissent, and besides it's in the goals.<br/>
+<br/>
+There's good consensus that evidence in the form of digital source files be rolled up into a (ZIP-like) container file, with provision for certain important characteristics:<br/>
+1. Support native file formats for multimedia, including new ones yet to come.<br/>
+2. Low overhead (both space and time efficient).  This means providing selectivity for compression and encoding choices.  (E.g., Do compress XML, don't compress or base64 encode video)<br/>
+3. Allow "indirection" and "relative addressing" -- these are techniques to provide convenient and portable ways to reference content in the container that endure across import/export actions<br/>
+4. Identifying and cataloging content <br/>
+<br/>
+Although I've said it in my own words, and others may say it better, I believe the concepts above are pretty well accepted by the BG community.  A couple of open questions remain:<br/>
+<br/>
+1. Given that a container is expected to be used to hold certain digital files, is there such a thing as a BG XML file that exists outside the container structure?<br/>
+2. Given the need for a container in at least some cases, is there an existing body of work we can utilize to save effort in specifying and implementing the container?<br/>
+<br/>
+With question 1 there are multiple views already expressed in this discussion.  Some suggest that BG refers to the XML part of the payload, and that the container (in whatever format is chosen) be separate from that XML.  Others suggest that BG means a container that always includes an XML part, and optionally includes other files as necessary.  <br/>
+<br/>
+Although my opinion is on record, I can see pros and cons.  And I remain open to persuasion.  I intend to split that topic out as a separate discussion thread, and see if we can achieve consensus here.<br/>
+<br/>
+The second question is really just a technicality.  The choice of container format and technology doesn't really interact with goals, unless there are requirements implications (like does the container need to provide access control to files within it?).  I will try to separate that out too, and probably put it in the sandbox since it has less to do with goals.  <br/>
+<br/>
+I admit that there may be other questions about containers and file inclusion that I'm overlooking or haven't fully recognized.  Help me out by stating the questions simply, and giving them their own thread if needed.<br/>
+<br/>
+Agree?</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-15T14:07:21-08:00</div>
+<div class="text">Can someone present some real word arguments why the xml structure containing the genealogy data (and not multimedia) should NEVER be allowed to exist as a file outside a container?</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-15T14:25:08-08:00</div>
+<div class="text">As a simple user of a genealogy program, I want to share my research with another researcher. However the data gets from me to the other user, I hope that you techies can make that happen.<br/>
+<br/>
+What is not fully implemented in the current GEDCOM is media files. Some programs my contain links to media.<br/>
+<br/>
+What is more important now, is that there may be Media linked in one genealogy program to People, Places, Relationships, and Sources. Those media files need to get from one place to another.<br/>
+<br/>
+Lets take a Marriage Certificate and a Wedding Photo. Those two media objects will be linked in one program to the People in the Photo, the Names of People in the Marriage Certificate, The Place, perhaps, and certainly they could serve as Source material.<br/>
+<br/>
+How it gets transported, I wouldn't know, but when it arrives at the other end, it needs to be extracted and presented to the other user with the same links between the People, Places, Events/Facts, and Source material. Images and all.<br/>
+<br/>
+One User's opinion.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-15T14:25:29-08:00</div>
+<div class="text">As a simple user of a genealogy program, I want to share my research with another researcher. However the data gets from me to the other user, I hope that you techies can make that happen.<br/>
+<br/>
+What is not fully implemented in the current GEDCOM is media files. Some programs my contain links to media.<br/>
+<br/>
+What is more important now, is that there may be Media linked in one genealogy program to People, Places, Relationships, and Sources. Those media files need to get from one place to another.<br/>
+<br/>
+Lets take a Marriage Certificate and a Wedding Photo. Those two media objects will be linked in one program to the People in the Photo, the Names of People in the Marriage Certificate, The Place, perhaps, and certainly they could serve as Source material.<br/>
+<br/>
+How it gets transported, I wouldn't know, but when it arrives at the other end, it needs to be extracted and presented to the other user with the same links between the People, Places, Events/Facts, and Source material. Images and all.<br/>
+<br/>
+One User's opinion.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-15T15:14:48-08:00</div>
+<div class="text">Russ and GeneJ,<br/>
+<br/>
+You both bring up completely different points that are, in my opinion, far more vital: How multimedia files are associated to data uniformly.<br/>
+<br/>
+PLEASE, as this topic has been so badly mangled, can we please just end this discussion and split this up into other topics?</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-15T15:23:10-08:00</div>
+<div class="text">And you suggest which topics?</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-15T18:22:12-08:00</div>
+<div class="text">Since you insist that anyone can do what they want on this wiki, I have re-entered the link to the multimedia page in on the navigation bar.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-15T18:36:15-08:00</div>
+<div class="text">The last entry was aimed at Greg. I intend to update the Multimedia page tomorrow, with a reference to the container page, and focus more on the overall issue of multimedia - an area where the container will be one instrument.</div></div><div class="comment"><div class="from"><strong>jbbenni</strong> 2010-11-16T06:46:28-08:00</div>
+<div class="text"> I didn't intend to insist any such thing!  So thanks for clarifying the intended audience of your comment.<br/>
+<br/>
+I'm learning as we go about what is possible and what is appropriate for this Wiki.  (And I'm chagrinned that I have authority to create pages but not delete them, and that I can't rename my own pages either!)<br/>
+<br/>
+Titles are important, and brevity is helpful, so I welcome you revising the title/link.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-16T07:20:16-08:00</div>
+<div class="text">I have dropped the intention of updating the multimedia page for now, I think there is need for more discussion first. I don't like to see wasted work.</div></div><div class="comment"><div class="from"><strong>jbbenni</strong> 2010-11-14T06:55:58-08:00</div>
+<div class="text">Interesting.  You are emphasizing the distinction between transfer and inclusion.  Can you elaborate?<br/>
+<br/>
+I see the issue as a need for a container file format that is:<br/>
+1. Durable, for archive purposes<br/>
+2. Transportable across platforms and applications for import/export data sharing<br/>
+3. Self-sufficient, in that the container holds both the XML payload and the native formatted ancillary files, along with enough meta information to navigate and cross-connect the whole thing.<br/>
+<br/>
+If I'm correct, BG isn't an application, it's a file format.  In my view, that means BG <strong>IS</strong> a container file format (like ODF) that holds (among other things) an XML payload where the GEDCOM replacement resides.<br/>
+<br/>
+Are we heading in the same direction?</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-14T07:28:12-08:00</div>
+<div class="text">gthorud,<br/>
+Well, for the purposes of the current project, we're not focusing on the transfer of anything. We're merely worried about what state and format things are IN. Transferring them into or out of those formats is another matter. This may seem like a silly distinction, but it is actually vitally important to stay within the scope of the project. Communications/transfer issues and application-related issues (i.e., import/export) are separate concerns. <br/>
+<br/>
+jbbenni, I agree wholeheartedly with your point of view here.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-14T10:03:34-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+I just wanted to add a User's Opinion here. <br/>
+<br/>
+I want everything in a program on my PC, transferred to where ever I am sending the information to. <br/>
+<br/>
+Knowing that the information on my PC may be Media, that does need to be, and should be addressed separately, for now, from the rest of the information being shared.<br/>
+<br/>
+I think that understanding of what makes up Media on my PC is important. Understanding what makes up Media on another platform is important. So, understanding what is "out there" is what is being discussed.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-14T19:44:53-08:00</div>
+<div class="text">Jbbenni<br/>
+<br/>
+You write ”BG IS a container file format (like ODF) that holds (among other things) an XML payload where the GEDCOM replacement resides.” <br/>
+<br/>
+I don’t know if it is this that Greg agrees wholeheartedly to?<br/>
+<br/>
+This may be a misunderstanding or we have different opinions about how this should be done. It may be that the term inclusion (contained in the original heading) that is misleading. My intension in the first entry in this topic was to say that exactly that – it is misleading, but I see that what I wrote can be interpreted in several ways.<br/>
+<br/>
+The current state of affairs is that multimedia will not be included in the Better Gedcom FILE, which is XML encoded. <br/>
+<br/>
+It is my understanding that the Container is not needed when the genealogy data file is not accompanied by multimedia, although the g-data could be alone in a Container – e.g. for the purpose of compression. Thus I think of a <br/>
+<br/>
+BG-file as a Gedcom file today, with changed/extended information and xml encoding, with no multimedia within it,<br/>
+<br/>
+and it is in my view equivalent to what I have called “genealogy data file” on the page. I don’t think one should be required to use zip or an ISO-image or whatever Container – in order to transfer only the genealogy data. Tell me if I am wrong. <br/>
+<br/>
+One way or another, we will have to define the term BG-file and “BG-file format” in the Glossary, and use that instead of “genealogy data”. Since these are extremely important terms, I would like to have agreement on a definition before we proceed – see above.  <br/>
+<br/>
+When BG-file is defined, we can define a “BG Container file”, a “BG Container” (the “envelope”) and ”“BG Container file format” (which may turn out to be zip or ISO-image when precisely defined some time in the future). So a “BG Container file” consist of a “BG Container” which contains <br/>
+·    (?zero or) one (or more?) BG-file AND<br/>
+·    zero or more multimedia files.<br/>
+<br/>
+<br/>
+Greg<br/>
+<br/>
+I agree that the term transfer is not a good choice either. Suggestions? Maybe “Append” – that is the only word that my dictionary suggests, leading to “multimedia appendixes”??<br/>
+<br/>
+I also see that the term “internal reference” could be improved because what is provided  is not only reference, but also the Container, while “external reference” is only reference – and it may be desirable to get rid of the word internal altogether.<br/>
+<br/>
+And I still think we should have a 6’th goal:<br/>
+<br/>
+BetterGEDCOM should utilize a standardized file container to hold separate appended files such as multimedia, and should allow references from within the BetterGEDCOM data to these files or other files available via e.g. data communication networks.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-14T20:03:49-08:00</div>
+<div class="text">Well, it's not imperative that I agree to it, first off.<br/>
+<br/>
+Secondly, I think that there are many ways to handle multimedia files or other supporting files. These files can technically be embedded within XML (which is not really advisable), or we can use a container format, and I'm sure there are other options whether or not they are particularly good ideas. <br/>
+<br/>
+It's a good thing to explore all the possible options, so I'm pretty ok with whatever directions this goes right now. We do need to consider all the possibilities, and also keep in mind that as long as it serves the purposes of the project (i.e., the data files can be included easily somehow), there may be something that is far easier for developers to incorporate, and their input, which isn't even available yet, may change direction of our ideas entirely.<br/>
+<br/>
+For the purposes of uniformity, do we need a container format to be consistent with or without any additional files attached? I don't know. It is true that XML benefits greatly from compression, but this is the sort of thing that I think software developers will have a great deal of input on later in the process, and I'm fine with that too.<br/>
+<br/>
+As for the language of inclusion and the goal language and so forth, I don't really think it makes a huge difference. As usual, I recommend that if you feel strongly about it, go right ahead and change/add it.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-15T10:43:08-08:00</div>
+<div class="text">I'm kind of in the transfer camp, too. <br/>
+<br/>
+While the point may have been expressed, I'm hopeful BetterGEDCOM recognizes media for its content AND source value. <br/>
+<br/>
+Let's make sure the sources transfer WITH the media.</div></div></div><div class="comment"><div class="from"><strong>jbbenni</strong> 2010-11-14T06:47:41-08:00</div>
+<div class="title">Examples of container file technology</div>
+<div class="text">BG isn't the first project that wants the benefits of XML for its core data, plus the ability to include supporting resources in their native file formats.  Office suites, for example, need to be able to include photos, sound, video, and charts into documents and presentations.  A container file approach supports this perfectly, with the advantage that it will work with future native file formats too. <br/>
+<br/>
+Major examples of XML plus a container include:<br/>
+1. OPC (Open Packaging Conventions), see <a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/Open_Packaging_Conventions" rel="nofollow">http://en.wikipedia.org/wiki/Open_Packaging_Conventions</a>.  This container specification is part of the larger Office Open XML (OOXML or OpenXML) standard developed by Microsoft for Office 2007 and beyond.  <br/>
+2.OpenDocument (ODF or "Open Document Format for Office Applications"), see <a class="wiki_link_ext" href="http://en.wikipedia.org/wiki/OpenDocument" rel="nofollow">http://en.wikipedia.org/wiki/OpenDocument</a>.  This is a competing approach that was developed by an open consortium, adopted by OpenOffice.Org, and has OASIS standardization and pretty good worldwide support.  <br/>
+<br/>
+Because OpenOffice.Org technology was designed with Open Source licensing and cross platform support from its inception, it may be a particularly good fit for BG.<br/>
+<br/>
+For details on the OpenDocument's container technology, see <a class="wiki_link_ext" href="http://docs.oasis-open.org/office/v1.2/cd05/OpenDocument-v1.2-cd05-part3.odt" rel="nofollow">http://docs.oasis-open.org/office/v1.2/cd05/OpenDocument-v1.2-cd05-part3.odt</a>  It has provisions for compression, encryption and digital signing -- but I didn't see access control.  I don't consider lack of access control for parts to be a problem, although it was mentioned as desirable in discussions.  It imposes some conditions on compliance that might be beneficial (e.g., requires a "manifest" and MIME information).<br/>
+<br/>
+There's at least one discussion of how OpenDocument and OPC have some degree of interoperability, suggesting the container portions of the respective projects are in fact compatible:  <a class="wiki_link_ext" href="http://www.oreillynet.com/xml/blog/2007/07/can_a_file_be_odf_and_open_xml.html#comment-1027843" rel="nofollow">http://www.oreillynet.com/xml/blog/2007/07/can_a_file_be_odf_and_open_xml.html#comment-1027843</a><br/>
+<br/>
+Should we promote OpenDocument to the Sandbox section as a provisional candidate for the BG container format?  If not, why not?<br/>
+<br/>
+Thanks!</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-14T07:42:14-08:00</div>
+<div class="text">jbbenni,<br/>
+<br/>
+Absolutely. I suggest you make a new page for multimedia file and container issues (or something like that) subordinate to the Sandbox page and put a link there to it. Do you know how to do this? If not, let me know and I'll do it.</div></div></div><div class="comment"><div class="from"><strong>jbbenni</strong> 2010-11-15T13:47:24-08:00</div>
+<div class="title">Is the XML inside the container, or are they separate files?</div>
+<div class="text">This question is split-out from a discussion in [[Multimedia File Inclusion Issues:Goal title and scope]].<br/>
+<br/>
+There's already pretty good consensus that in some cases, notably when including digital source files, BG needs a container to encapsulate multiple files in various native formats, and to provide an address framework for them.<br/>
+<br/>
+So is the BG XML payload always delivered inside the container file, or is the BG XML in a standalone file with the container file as an option "on the side"?<br/>
+<br/>
+Arguments for keeping XML and the container in separate files:<br/>
+1. Keep it simple.  XML is recognized as the best format for the "guts" of a BG file, and containers aren't always needed.  <br/>
+2. Humans can read XML, but not container files.  One of the best things about XML is that both humans and computers can deal with it.  Especially when developing and debugging, it's much easier to look inside an XML file to see what's going on.  <br/>
+<br/>
+Arguments for having the XML inside the container:<br/>
+1. The XML content can be dependent on the state of the container, and cross-linked information recorded in two separate files will inevitably get out of synch.  We can eliminate complexity and fragility if BG always imports/exports to a SINGLE FILE that is complete and contains a snapshot of everything in an internally consistent way.  <br/>
+2. It's easier to specify, design, implement, and educate users about a single file than a situation that can create one, the other, or both.<br/>
+3. Backups and automation become simpler if a single file is at issue, rather than a pair (or cluster) of interdependent files with different modification times.<br/>
+<br/>
+Potential compromise:  BG operates on containers that always include the XML, but the XML can also be emitted "on the side".<br/>
+<br/>
+This ensures that the BG container is always complete and consistent, yet allows for the convenience of XML access in text editors and such. <br/>
+<br/>
+Comments?</div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-15T18:08:00-08:00</div>
+<div class="text">The title seems to be a little too limiting wrt the number of choices. <br/>
+<br/>
+I can't see that anyone have suggested an alternative where the BG xml payload should ALWAYS be kept outside the container in a separate file, so I assume that is agreed.<br/>
+The Subject line makes me think that you consider this an alternative, that is probably not the case.<br/>
+<br/>
+I think the user should have two or three choices <br/>
+<br/>
+1) have the BG xml payload as a separate file outside the container (possibly no multimedia at all) <br/>
+<br/>
+2) the payload and the multimedia is within the same container file (this is your 2'nd alternative), and maybe<br/>
+<br/>
+3) the payload is in a file (outside any container or alone in a container) and the multimedia is in a separate container file with no payload. The cross-linking becomes more complex, but one will always have to be able to reference data outside the file where the payload is, so one could investigate the possibility. It is not much more complex - it should be possible with eg. a common unique reference within the files, linking them together.   (I assume 3) is the same as your first alternative).<br/>
+<br/>
+<br/>
+The alternative I do not want to see is that (4) the payload should be required to be in a container even when there is no multimedia. One of several reasons is that there should not be a requirement that all BG implementations must support multimedia using the container - especially if the container is complex to implement. <br/>
+<br/>
+I am sorry but I am not sure I understand what you mean by "The XML content can be dependent on the state of the container, and cross-linked information recorded in two separate files will inevitably get out of synch." What is "State" of the container? Why is it "inevitably"?</div></div><div class="comment"><div class="from"><strong>jbbenni</strong> 2010-11-16T06:41:17-08:00</div>
+<div class="text">Thanks gthorud, for your good comments.  <br/>
+<br/>
+I may have read too much into someone else's comments, but I did think there was interest by someone other than me in having the XML payload always outside the media container.  I'm happy with taking that option off the table (as you did) unless someone makes a case for it.  I favor option 2 (your numbering or mine), when both XML and media data is present.  I think we agree on that.  The interesting case is when there is XML payload, but no media is present.  Should the XML be in a container, as a standalone file, or (perhaps strangely) offered as both?<br/>
+<br/>
+Consider this scenario:  A BG project that starts life as pure XML with no media files.  Each time the BG project is archived or exchanged, the XML payload would be the only content.  But eventually some media is added to the project.<br/>
+<br/>
+Would you want to see the XML as standalone before the media is added, but inside the container afterwards? <br/>
+<br/>
+I'd rather see the XML inside the container from the outset, even if it means the container is overkill at first. <br/>
+<br/>
+As for my comments about the XML content depending on the state of the container and inevitably getting out of synch, I may have leapt too far.  Clearly, the XML should have the ability to reference items in the container.  But with that capability comes a risk: a link from the XML can be broken by a change to the container.  For example, when a file in the container is renamed or removed/moved (possibly to another path within the container) then the XML link can "broken" -- resulting in what is sometimes called a "dangling pointer".<br/>
+<br/>
+In my experience with archival systems, the best way to protect against this problem is to make sure the XML and the container directory reflect the same "state of the system".  One sure fire approach is to write both at the same time, and read both together.   This means they need to be effectively treated as one file, so they might as well be one file.  That's the justification I'm offering.<br/>
+<br/>
+You were right to question my earlier blanket statement, and I hope I've provided a reasonable justification (above).   Thoughts?</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-16T09:18:08-08:00</div>
+<div class="text">Regarding the issue of whether the BG payload should be able to exist as a file outside a container, or not. The answer is very dependent on the MINIMUM possible implications of always having a container, wrt:<br/>
+<br/>
+a)    Minimum File size overhead (in terms of encoding and any extra data to transfer<br/>
+<br/>
+b)    Minimum Processing overhead<br/>
+<br/>
+c)    Minimum implementation effort for the container, on all platforms (using no container requires no implementation effort)<br/>
+<br/>
+d)    Minimum functionality – e.g. will the container allow transfer of the BG data without compressing them. <br/>
+<br/>
+e)    Will the software used for the container be around in 30 years? Is it so simple to implement that it does not matter?<br/>
+<br/>
+f)    How easy is it to determine what “container functionality” is used in a file? Is it easy to find out if I support, or do not support, the functionality in a received file. <br/>
+<br/>
+g)    Most likely more aspects to be considered.<br/>
+<br/>
+<br/>
+Re. c)  Is there code publicly available for all platforms/programing environments that can be used in COMMERCIAL implementations without problems?<br/>
+<br/>
+Re. d)  For very long time storage, the implications of a bit error in a compressed file is much larger for a compressed file than for a non-compressed file. Therefore compression should not be used for long term storage of the xml coded BG gen data (i.e I am not talking about eg. video where the requirements are different). I am not sure, but I think the strategies in archives for long term storage is to store the bits and pieces in a complex multimedia file as individual files –and use general functionality of the archiving system to tie things together, although they will also store the complex file. <br/>
+<br/>
+Also, will there be interworking problems if the sender is using more functionality in the container than the receiver supports. If there is no container, the options are fewer.<br/>
+<br/>
+So, in order to make a discussion, one must dig into the various container alternatives, but I am reluctant to go too far into that unless we have people that have some knowledge with us, and it could be a lot of work. Also there are other issues in BG that I would like to work on in this early phase.<br/>
+<br/>
+<hr/>
+Re “dangling pointers” – I think I understand your point, and agree that it is desirable to have all info in one “place”, and we are not preventing anyone from writing a consistent file with BG data and multimedia, and no dangling pointers. But, should we prevent everyone from creating a file with reference to files outside the container? I think not.  I think the user should be able to choose. (Eg. many Web-links are very likely to become “dangling” after some time, but do you want to prevent inclusion of URL/URNs?).</div></div><div class="comment"><div class="from"><strong>jbbenni</strong> 2010-11-16T12:09:48-08:00</div>
+<div class="text">There are always tradeoffs.  But most of what you mention applies to any use of a container--  whether the XML is the only thing in it or otherwise. Consideration of functionality (e.g., compression option), long term survivability, feature set, licensing, and other aspects are valid questions about ANY use of containers. They don't really bear on the question of whether the XML goes into the container in the special case when there's no other data.<br/>
+<br/>
+Your item c) actually argues against coding for XML outside the container.   That is, we can save implementation effort if XML is ALWAYS in the container, rather than having to code two different cases. <br/>
+<br/>
+Lastly, I don't suggest that external references be restricted, and URIs/URLs are good candidates for external references.  I do suggest they be handled differently than internal references, and that we plan to accommodate broken external references.  But there's no excuse for a broken internal reference, and you are right that putting all the cross-linked info in one place is the way to avoid that.  I think it's the best way to avoid it, and so XML belongs inside the container most of the time.  I suggest that it be all the time, to reduce complexity and provide a more consistent behavior.<br/>
+<br/>
+I don't mean to stand in the way of anyone working on other BG issues at this phase.  An ongoing discussion of containers needn't be an obstacle to other work.</div></div></div></body>
+</html>

@@ -1,0 +1,598 @@
+<html>
+<head>
+<title>BetterGedcom - Location entity</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<span style="font-family: Arial,Helvetica,sans-serif;">There is a need for an entity for an individual location. This will allow descriptive information, events, pictures, and anything else pertaining to a location to be defined together.</span><br/>
+<br/>
+<span style="font-family: Arial,Helvetica,sans-serif;">A number of issues related to Locations are discussed here: <a class="wiki_link_ext" href="message/view/BG+Data+Model+Discussion/29953155" rel="nofollow">message/view/BG+Data+Model+Discussion/29953155</a> </span><br/>
+<br/>
+<h2 id="toc0"><a name="x-Objective vs. Subjective Location Entities"></a><span style="font-size: 1.3em; margin: 0px; padding: 0px;">Objective vs. Subjective Location Entities</span></h2>
+<br/>
+<span style="font-size: 13px; font-weight: normal; margin: 0px; padding: 0px;">Different points of view:</span><br/>
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 13px; font-weight: normal; margin: 0px; padding: 0px;">1. Objective places only: Subjective or free-form location entries will only cause problems and should not be included in BetterGEDCOM.</span><br/>
+<ul><li>This approach assumes all locations can be mapped objectively and without ambiguity.</li></ul><span style="font-size: 13px; font-weight: normal; margin: 0px; padding: 0px;">2. Subjective places only: All places must be free-form and not tied to external geographic mapping or naming systems or conventions.</span><br/>
+<ul><li>not advocated by anyone to date</li></ul><span style="font-size: 13px; font-weight: normal; margin: 0px; padding: 0px;">3. Subjective places with objective geographic naming/mapping system references: Place names in BetterGEDCOM file format should be free-form and not be subjected to any external naming rules but should also include extensions within the data stream allowing reference to different geographic naming/mapping systems and information needed to map within those systems.</span><br/>
+<ul><li>This approach provides free-form flexibility for users while also preserving data for use of geographic information systems.</li></ul><br/>
+<h2 id="toc1"><a name="x-Location Modifiers"></a>Location Modifiers</h2>
+ Location entries need to accommodate modifying adjectives, such as:<br/>
+<ul><li>near</li><li>outside</li><li>either/or ??</li><li>suburban</li><li>probably/possibly? (not sure about this)</li><li>?</li></ul><br/>
+<h3 id="toc2"><a name="x-Location Modifiers-Location Events"></a>Location Events</h3>
+<span style="margin: 0px; padding: 0px;">(Locations may have events. These define something that happens regarding this location at a specific date and time. The "birth" and "death" of locations should be noted as event for the location, although we may want to name them something else, e.g. "Formed", "Built", "Established", "Dissolved", "Burnt Down", "Parceled". This is useful for recording farm histories passed down and split up through inheritance.) This concept is at the least very open to question. </span><br/>
+<br/>
+<h3 id="toc3"><a name="x-Location Modifiers-Location Time &amp; Date"></a>Location Time &amp; Date</h3>
+ (Every location has both a time and date element. This is not to say that these two together define an objective, absolute location.) <br/>
+<br/>
+<span style="font-size: 15px; line-height: 18px;"><strong>GEDCOM and Places</strong></span><br/>
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 13px; font-weight: normal; margin: 0px; padding: 0px;">The existing GEDCOM identifier for a place has unlimited levels separated by commas, with a limit of 120 characters; it also supports naming the jurisdictional entity titles with the PLAC.FORM element. A global default place hierarchy can be defined in the HEADER, which is overridden by a local PLAC.FORM entry. It is incorrectly assumed that GEDOM only supports 4 levels : (1) city, (2) county, (3) state, (4) country. Two more lower levels are needed prior to the city. (1) location within site, and (2) site. The site would be the specific place of interest within the city. It can, for example, be an address or the name of a building or a park or a cemetery. The location within site would be used to subdivide sites, e.g. bedroom, Apartment B210, or Section 3; Row 4; Plot 40.</span><br/>
+<br/>
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 13px; font-weight: normal; margin: 0px; padding: 0px;">Therefore, an entire location might be something like:</span><br/>
+<ul><li>Section 3; Row 4; Plot 40, Silver Plains Cemetery, Winnipeg,, Manitoba, Canada</li></ul><span style="font-size: 13px; font-weight: normal; margin: 0px; padding: 0px;"><span style="font-family: Arial,Helvetica,sans-serif;">﻿</span>where two commas indicate a missing placeholder (in this case, the county). <strong>[Missing placeholders are not relevant to BetterGEDCOM.]</strong></span><br/>
+<span style="font-family: Arial,Helvetica,sans-serif; font-size: 13px; font-weight: normal; margin: 0px; padding: 0px;">﻿</span><br/>
+<span style="font-size: 13px; font-weight: normal; margin: 0px; padding: 0px;"><span style="font-family: Arial,Helvetica,sans-serif;">﻿</span>Missing placeholders are not needed for leading levels. e.g. if the first 5 levels are left out, then no commas are needed, e.g.:</span><br/>
+<ul><li><span style="font-family: Arial,Helvetica,sans-serif;">﻿</span>United Kingdom</li></ul>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-23T06:02:49-08:00</div>
+<div class="title">Location Entity Over Time</div>
+<div class="text">After reviewing the Location Entity, there are a couple of issues that need to be considered.<br/>
+<br/>
+Location Name Changes, over time.<br/>
+<br/>
+Jurisdiction Changes, over time.<br/>
+<br/>
+This is a reality, but there may be a need to acknowledge this and to provide for a date associated with the Location Entity.<br/>
+<br/>
+I think it's up to the sending and receiving application to do the mapping of where the Location is, and its details, like GPS coordinates, but either the sending or receiving application may have allowed for a "historical" location name, and the receiving application may not. (or the other way around).<br/>
+<br/>
+If the Location Entity is associated with a Fact or Event, and that fact or event has a date associated with it, what impact does that have on the Location Entity. Does that date need to be associated with the Location Entity?<br/>
+<br/>
+That date might have an indication that the Location Entity was a "historical" location name.<br/>
+<br/>
+Just asking the question.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-29T13:22:16-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+It seems like you do not support events for places just because you are not used to it. That is not a very good reason. Don't you see that places can appear in sources without being attached to a person? Are other practices that what you are used to forbidden?</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-29T13:41:26-08:00</div>
+<div class="text">gthorud,<br/>
+<br/>
+I reserve the right to be completely wrong all the time as well as to change my opinion.<br/>
+<br/>
+In this case, however, I think places already have events. Just as a person has a role in any event, so does a place. Perhaps I just don't understand it. On the other hand, perhaps the idea of events for places is mostly an idea suitable for geographic applications. Either way, I think it's probably up to the user and the application to decide. <br/>
+<br/>
+But basically, I still don't get it or understand it. Or do I?</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-29T14:43:04-08:00</div>
+<div class="text">Greg, you are right that in many cases events play a role in an event where there is also a person mentioned. But often there are e.g. tax lists where only the name of the farm is mentioned, together with its size/value, or the amount of crops and cattle “produced” on the farm – or the tax paid – but the owner or user is not mentioned. Or something happened on that farm - e.g. a flod, a fire, a murder, a visit by an important person, a battle or whatever that did not involve any of the persons in my family that owned the farm. Such events are also of interest in the genealogy/history of my family. Often genealogies are produced containing only names and birth/death years, but in order to make them more interesting we have to spice them up with other info, and that is often info related to places they owned or where they lived. The way I see it, there is no difference between having events for places than having them for persons.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-29T15:04:41-08:00</div>
+<div class="text">Greg - since Locations (or Places if you prefer) change over time, it seems sensible to allow the creation of events to mark those changes. <br/>
+<br/>
+For instance, "Greater Manchester Metropolitan County" was created in 1974. It was abolished in ... (whenever). I don't think just putting a time on the name conveys the full meaning. I think we need to record the creation event, linked to the location.<br/>
+<br/>
+OK, you may wonder why I want to record this in a family history data file, but I might, not least to record why Manchester changes from Lancashire to Greater Manchester to Manchester(?).<br/>
+<br/>
+Such an event is, I believe, to look at the file, a top-level entity in its own right, which is linked to the place.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-29T15:12:26-08:00</div>
+<div class="text">I have created a separate topic about the "Genealogy of places/locations".</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-29T15:19:23-08:00</div>
+<div class="text">gthorud,<br/>
+<br/>
+I'm pretty sure a person paid any such taxes, whether or not the name is mentioned. Such information strikes me as good evidence, but I don't think that's an event because there's no person. That's just me, though.<br/>
+<br/>
+However, if the real issue here is whether or not a person reference is mandatory to enter an event. What are the implications if there is no person reference requirement? None that I can think of. <br/>
+<br/>
+This is essentially incorporating the requirements of timelines, or so it appears to me.<br/>
+<br/>
+Overall, I think the idea is absurd for my own usage. However, I can also see that other people might consider me an obstinate dunderhead for thinking so. Really, what I think doesn't matter.<br/>
+<br/>
+If what you're talking about here is really just an event without a person requirement, right now I'm not seeing that as a problem from the standpoint of the data model. However, I would like to see this discussed some more and in the context of incorporating timeline information.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-30T07:54:37-08:00</div>
+<div class="text">"If what you're talking about here is really just an event without a person requirement..."<br/>
+<br/>
+That's certainly what I've been thinking of - events would be top-level entities (if there is such a term), potentially without any relationship to _any_ other entity.<br/>
+<br/>
+And I don't see any issues from not having any related person, place, group or whatever.<br/>
+<br/>
+My example is that I might enter some basic information about the San Francisco earthquake just in case my GG uncle was involved in it. That would be entered first, without a linked person because I'm not quite sure at the start whether he's involved or not. Then I add the relation to San Francisco and only later do I add a relation to him.<br/>
+<br/>
+Or another example might substitute a global trade depression, where no place applies (OK, apart from Planet Earth).</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-30T21:10:34-08:00</div>
+<div class="text">Ok, I have a few ideas to offer. Maybe I can bring some unity to the two sides of the argument. I see no reason to deny locations having events. I'm not sure how useful it would be to have that, but obviously locations have events. Ergo, they are entitled to create events in a genealogy program.<br/>
+<br/>
+However, having dates in locations, are useful for many purposes, Something that mere events will have trouble unifying.<br/>
+<br/>
+I have three examples to consider. I'm going to play fast and loose with the real history of the locations, because I have no desire no to research it an give a correct history.<br/>
+<br/>
+Lorentz Rambshurster died in 1683, leaving the family farm to his three sons. The Rambshurster farm split into three farms with new names at the date of the proving of the will in 1685. <br/>
+From one location you now have three, with separate futures (pasts to us). You could create an event and link the three places and the original one, giving roles to each place. Or you could create three new places (you have to anyway), and link all three to the parent location. Now you have a location history tree. From 1685 forward you have one name for a portion of the Rambshusrter farm and prior to that another name. I say, it's easier to trace back to find where to search by following the location tree , than it is to find the relevant event.<br/>
+<br/>
+Example two 1849, Wisconsin Bad Axe County is formed. Laura Larson is born in Coon Valley Bad Axe county in 1863. In 1865 Bad Axe county is renamed. In 1866, Bad Axe County is divided into Jones County and Trempeleau County. In 1868, Lars Larson and Chritine Larson die of influenza and Laura moves in with her sister. In 1870 Laura is found on the 1870 census in Trempeleau County. But no birth record is found for her, because she wasn't born in Trempeleau County. Her record is found in Jones County, because the County seat  of Bad Axe County is in Jones County, not Trempeleau. Now certainly you coul make events for the renaming and for the county splitting, and then pray you can remember what those events were, without having to read through the event list. Or You could use the fact that Trempeleau County's parent location is Jones County, and that Jones County's parent is Bad Axe County, and the name of the County in 1863, was Bad Axe County. So, I could either search the events to find that out or make two clicks of the location parent link and find it two clicks away.<br/>
+<br/>
+Are we burying events into locations by giving them dates? Sure! But does it make research easier? Sure thing!<br/>
+<br/>
+Third example Hesse-Cassel. That should be all I need to say on that, to anyone who has ever done ANY research in the former state Hesse. Hesse has had so many changes over the years, I just use one name for places in Hesse and damn the consequences. If I had a way to link places along a timeline in Hesse, oh how easy it would be. You want to make me search through a dozens/hundreds/thousands of events that happened to Assenheim over a three hundred year span of my family living there to find the proper name of Assenheim, Hesse-Darmstadt/Rodelheim-Salms/Rodelheim/Salms/Hesse/...? Forget that! But let me travers a timleline location tree towards the root, and I'd be happy to oblige.<br/>
+<br/>
+Am I lazy. Whenever I can be, absolutely. Sometimes you don't need to know the whole history of a place to fill your needs (like choosing the right name to use for an event). <br/>
+<br/>
+You might want to look at how I envisioned it in my proposed model. <!-- ws:start:WikiTextUrlRule:19:http://bettergedcom.wikispaces.com/PLACE+%28BJD%29 --><a href="http://bettergedcom.wikispaces.com/PLACE+%28BJD%29">http://bettergedcom.wikispaces.com/PLACE+%28BJD%29</a><!-- ws:end:WikiTextUrlRule:19 --><br/>
+<br/>
+Maybe I've convinced someone that dates in Location are a useful thing? If not, I gave it my best shot. Sometimes you don't need an event, you just need a reference point.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-30T22:00:33-08:00</div>
+<div class="text">This is one of those issues where I have completely changed my mind.<br/>
+<br/>
+The phrase that shook me out of my intransigent position was: farm genealogies. I do Swedish research. That concept I totally get. Please disregard anything I might have said earlier.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-12-01T07:58:26-08:00</div>
+<div class="text">Me too! Parts of Germany had a similar farm scheme, and I think so did Denmark. I do research there too, But way to much to remember, all the little gotchas in every country. I think dates in locations will prove to be very useful and tying locations to previous names also. Sure we could make events for them, but we want to make researching easier not harder. If we have to tweak the model a bit away from accepted database rules, practices and procedures, so what. <br/>
+<br/>
+After all that is the point of the project, to look outside the box and find a Better GEDCOM, from a researcher standpoint. Not from a geek standpoint. I admit I have issues thinking as an end user at times. I'd like to know if I convinced Louis?</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-12-02T11:35:38-08:00</div>
+<div class="text">Brianjd,<br/>
+<br/>
+The examples in your previous entry are concerned with efficiency. I do not think a single pointer to a parent entry will be a sufficient, but there is nothing preventing a program from implementing internal structures to speed up things – if they need to. You are mixing implementation and transfer format.<br/>
+<br/>
+You can not store the needed information in simple pointers, you need events. Also it seems like you are mixing relations between localities (and their parent/child locations) and the relations between localities on different levels in the location hierarchy (eg. city, country, county).<br/>
+<br/>
+No one is forcing you to enter all information in the complex examples you describe, and you should not prevent others from doing it.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-12-02T20:24:42-08:00</div>
+<div class="text">First off I kept the model simple, to start. It's better to add new things than throw in stuff you may later regret.<br/>
+<br/>
+Secondly, efficiency is good. We should strive for an efficient data model. Third a pointer always resolves to something that that is a data object which contains the desired information. The reason to use a pointer if to prevent writing duplicate information over and over again. The current GEDCOM model makes liberal use of pointers. I see no good reason to alter that approach. <br/>
+<br/>
+Third there is still much that needs refining in my data model. If a single pointer is not sufficient a linked list or tree of data pointers can be used. I'm not mixing relations between localities and the parent/child and different jurisdictional levels. I failed to include the pointer (or reference if you like) to the next higher jurisdiction. I'll fix that soon. But, I may wind up throwing this version away and doing something slightly different. This approach I proposed has some very real problems. But it is a starting point.<br/>
+<br/>
+I'm not advocating the need to do or force or prevent any of the examples I gave. I am simply trying to point out the real world issues that will happen and have happened. We should plan for these things.<br/>
+<br/>
+I'm merely trying to get a concrete model in fornt of people to get the design going. It's easier to tackle the theory, requirements and building of a data model if you have something concrete you can refer to and mark up. Theory is great but it lacks form. People tend to be much more visual. Plus this is such a complex task it'd be hard for the average person to memorize every detail. <br/>
+<br/>
+Adrian, has made some very insightful comment on my place model. Talking of taking out the name from the record and placing them in an array or tree or some other type of heirarchy as a characteristic. THe dates would naturally go with them.<br/>
+<br/>
+I'm not saying that the names aren't an event, but that this is a good case where duplication of some of that data is a good thing. If you want to make an event out of it, my model doesn't prevent that. My whole point with dates with the location names is purely for the convenience of the researcher.<br/>
+<br/>
+Say you have to add a child born in 1734 in Assenheim. In 1734 Assenheim belonged to the Solms Barony In 1724 it belong to Rodelheim. In 1784 it belonged to Solms-Rodelheim. So the child's parent was born in Assenheim, Rodelheim, Wetterau, Hessen-Darmstadt, Holy Roman Empire of the German Nation.<br/>
+The child was born in Assenheim, Solms,... . That child's child was born in Assenheim,Solms-Rodelheim....<br/>
+<br/>
+Now would you rather search through a lot of history to look up which name to use when entering a new birth, or would you rather get a pull down list of places, you've already entered, with a date range and simply choose the right one.<br/>
+<br/>
+If you think my examples are complex, I should tell you my genealogy is full of complex examples like this. I have thousands of records and fully a third of them are on farms in Sweden and Germany absolutely riddled with property splits and name changes, and district changes. This Assenheim example was one of the simplest. I could have chosen a farm in Sweden. But then the example would take up pages to fully explain. I have numerous American examples too. My family settled in New Haarlem in 1652.<br/>
+<br/>
+I want a new GEDCOM, that will be efficient and assist me in the speedy entry of information, not one that bogs me down more. Forcing users, or programs, to search events to find out which placename to use for a new event is going completely discourage users from adopting the model and will lead to a worthless WorseGEDCOM. At least in my opinion. <br/>
+<br/>
+Adding events for location name changes is worthy in it's own right, but it does nothing to solve the problem of finding quickly which darn name to use. There are 500 placenames (full) in my tree, and that's ignoring all the name changes. Because it's simply too much work with existing programs and GEDCOM to add the thousands of place names I should be using.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-27T15:36:25-08:00</div>
+<div class="text">Russ if the Hard source documents have location evideance like person evidance would not the title of the property be Millers Manor, Smiths Manor, while the address data remains the same for street and zip code for cross comparision.<br/>
+<br/>
+I have the same thing, Hall family property was changed later to Rose Hill in Copiah Co MS. I think I will have to think on that because I have the same problems for many entries. maybe a link from one Source ID or something to point saying equal = Location?<br/>
+<br/>
+Even worse when street names change and your at the same address # town  city and state, just the street change looks like a move?</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-27T15:55:13-08:00</div>
+<div class="text">Ok just like person has a name chage but not that both names maybe on the same document.<br/>
+Those are like aka names pointing both at the personID and sourceID.<br/>
+<br/>
+A place has a name change, say with the idea of some to have a GPS location,<br/>
+<br/>
+Say GPS-evidence or location-evidence,<br/>
+<br/>
+That data set would link Location to source and on the evidance records could list all the aka names like we would for a persons aka names?<br/>
+<br/>
+What do you think?</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-27T16:16:55-08:00</div>
+<div class="text">I think the same place should be a single location entity. Just because the name has changed, the location has not. Same as if a person changes their name. It's still the same person. <br/>
+<br/>
+So to me, the change of the location name could be marked as an event associated with the location. If you don't like that, then the alternative would be to have a "name" element for the location that has a date-range associated with it.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-27T16:18:29-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+One doesn't need the entire history of a place in one's database to print a report about all the events that happen at that place. Likewise, a place may very well be relevant to a person without their having been present for all the events affecting that place's name or jurisdiction.<br/>
+<br/>
+No one is suggesting that historical events related to how a place name might change aren't relevant to a person's life. However, they may or may not be. you're essentially requiring that such information be entered. This is what I don't think is realistic.<br/>
+<br/>
+I think people should be able to record as much or as little about a geographic place as they want. I don't think that to refer to a place in West Virginia that a person must enter events about Acts of Congress during the Civil War into their genealogy database.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-27T16:33:26-08:00</div>
+<div class="text">Louis, My most recent entry referred to your comments earlier in the day.<br/>
+<br/>
+Now I think part of the argument is becoming clearer: Locality as a set of coordinates versus a place with historical context.<br/>
+<br/>
+I firmly stand in the idea of places as important in their historical context. Time element is important. So is jurisdictional context when jurisdiction is in dispute. Certainly physical location is very important, but within the limited scope of the use of place information in genealogy, I don't see value in referring to places as mere coordinates. Taking places out of their historical and cultural context for reference doesn't suit my needs. If my ancestor referred to his home in what is now Delaware as Sverge Nova (or whatever), I want it recorded in my database like that. I don't want it converted to mere physical coordinates. I also don't want it referred to as Delaware or New Netherland, Maryland, Pennsylvania, or any other possible definition of its jurisdiction, depending on who you ask.<br/>
+<br/>
+I think what you're looking for is better accomplished in geography tools.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-27T17:12:44-08:00</div>
+<div class="text">My guesstimate is that at least 1/3 of genealogy books published around here are structured according to places/locations (in most cases farms). So, I want my program to be able to sort the info that way, and events for places would be very helpful for that purpose.<br/>
+<br/>
+I think the time aspect relates both to the location/place and it's name(s), but if this can be handled by events alone is difficult to say at the moment.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-27T17:17:27-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+Don't mix up how the program presents the data to you from how it is stored. <br/>
+<br/>
+For database purposes, normalizing the essence of a "location" is that it is not a set of coordinates, but it is the object you are talking about. e.g. A certain city, a certain house, a certain cemetery plot. <br/>
+<br/>
+The coordinates are a data item that describes the location. They are not the location. <br/>
+<br/>
+Also the name of the location is also a data element about the location. It is what the location was called during a certain time period. It is not the location.<br/>
+<br/>
+If locations were entered as records in GEDCOM, they should have worked something like this:<br/>
+<br/>
+0 INDI @I43@<br/>
+1 BIRT <br/>
+2 DATE 1853<br/>
+2 PLAC @P43@<br/>
+<br/>
+...<br/>
+<br/>
+0 @P43@ PLAC<br/>
+1 NAME Townsville<br/>
+2 DATE From 1832 to 1912<br/>
+1 NAME Citiesville<br/>
+2 DATE From 1912<br/>
+1 LATI N18.150944<br/>
+1 LONG E168.150944<br/>
+<br/>
+Now the program should be smart enough to accept either accept Townsville or Cityville as the birth place when it is entered. And it could even be smart enough to display the name of locations as they were called at the date of the event.<br/>
+<br/>
+But the main thing is you have one unambiguous place that can be a single entity.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-27T17:58:25-08:00</div>
+<div class="text">"Don't mix up how the program presents the data to you from how it is stored."<br/>
+<br/>
+My thoughts exactly. I would also point out that we're not talking about a "program" here. We're talking about data. <br/>
+<br/>
+The data I'm worried about is that which was used to describe the place in context. I totally agree that reference data for geographic information systems such as coordinates or URIs for specific systems like Google Maps or whatever should be included. <br/>
+<br/>
+"...normalizing the essence of a 'location' is that it is not a set of coordinates, but it is the object you are talking about."<br/>
+<br/>
+WHAT!?!?!? Normalizing data has nothing to do with anything except the data as it is manifested. Data in a database is not manifested as a house or city or a cemetery plot. Perhaps that the 16th normal form? &lt;/smirk&gt;<br/>
+<br/>
+"But the main thing is you have one unambiguous place that can be a single entity."<br/>
+<br/>
+Unfortunately, in reference to genealogical data in particular, it's neither possible nor particularly desirable to reduce absolutely everything to an unambiguous place. <br/>
+<br/>
+Places have various location reference information, descriptive information (including time, jurisdiction, etc.), and they may or may not be identifiable as unambiguous places.  As much as one might like it to be so, places cannot be universally defined as absolute or unambiguous thingamabobs, at least for the purposes of genealogical research. You'll have too much data fall outside such a definitive model.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-27T20:27:02-08:00</div>
+<div class="text"><br/>
+Greg,<br/>
+<br/>
+Well, I guess here we'll have to agree to disagree. We seem to be thinking completely differently on this. <br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-29T03:48:58-08:00</div>
+<div class="text">Greg, I believe you wrote on the page that the two approaches (places having time vs places having events) are mutually exclusive.<br/>
+Actually - why? <br/>
+What problems would there be if we allowed both?</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-29T04:03:33-08:00</div>
+<div class="text">After reading this discussion and the Page description, I want to withdraw my suggestion about the need for a Date.<br/>
+<br/>
+I agree that the Place information be free form. There may be the need for other attributes, but the date is not one of them.<br/>
+<br/>
+Reason: As a place name changes overtime, it's the application that is giving me, the end User, some indication that the place name, in the database is right or wrong. The database or the end user needs to determine if the place name, as presented or shared. The application or user would need to know if that Place name was correct for that date that an event took place.<br/>
+<br/>
+Bottom line, the date for a place, is not important for the BetterGEDCOM. In my opinion.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-29T11:34:01-08:00</div>
+<div class="text">Testuser, I wrote that because I was trying to reincorporate deleted information quickly. That statement very well may be completely wrong.<br/>
+<br/>
+I still have no idea how you get to a point at which places have events. Frankly, in a genealogy database, I think the idea is absolutely absurd. Whatever that's worth.<br/>
+<br/>
+Russ,<br/>
+<br/>
+I think you're confusing data a user might need or want with teh data needed for particular information in a database. Regarding places, perhaps a date VALUE isn't imperative, but the ability to enter one is. If you're suggesting an application offer the ability to allow or deny use of a particular place field based upon a time constraint, where exactly do you think that time constraint value is going to be stored?<br/>
+<br/>
+A time element, whether used or not, is certainly critical to a location entity. Perhaps not for a particular entry, but regarding database structure, it's key.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-27T11:24:08-08:00</div>
+<div class="text">Locations have events. e.g. Country was formed in 1833. Country broken up in 1892. Therefore from the 2 events, the country existed from 1833 to 1892. <br/>
+<br/>
+If the name of the country changes, then it is a name change event, just as if a person's name changes.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-27T11:35:12-08:00</div>
+<div class="text">Events are associated with individuals. Events happening to places aren't necessarily relevant to anyone's personal life. They're certainly not likely to be significant enough for any genealogist to associate these events with a particular person's life.<br/>
+<br/>
+Perhaps if we were talking about geography data, your observation might be apropos. However, in genealogical research, associating dates with places is entirely reasonable. Requiring events to supply time relevance for a geographic location is not.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-27T11:47:21-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+Absolutely not! <br/>
+<br/>
+Events happening at places are EXTREMELY  individuals. Events in the town of your grandfather affected his life and may give you clues as to some of his history you may not know. <br/>
+<br/>
+If you find out that there was an influenza breakout in his town, and some of his family died around then but you don't know how, where else do you document information about this breakout unless you associate it with the town? There needs to be one place to store this and the location is the logical place.<br/>
+<br/>
+These items then can go into timeline programs that can put your ancestors lives into context.<br/>
+<br/>
+Unless I've got somewhere to properly store all the info I've collected about my ancestral towns in my genealogy program, then I'll look for another genealogy program. <br/>
+<br/>
+And if BetterGEDCOM cannot transfer this information (events about the towns) to another program, then I'll look for a GEDCOM better than BetterGEDCOM.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-27T11:48:39-08:00</div>
+<div class="text">make that:<br/>
+<br/>
+... are EXTREMELY important.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-27T12:02:49-08:00</div>
+<div class="text">I think you are correct in observing that locations can have events, but we may have a hard time convincing program developers about this. <br/>
+<br/>
+Locations are in most cases properties, and I assume that in most countries there are legal documents produced when this type of location is created – e.g. by a splitting a larger property or when two or more smaller properties are merged – or a combination division/merging. These are the birth and death events of a property (or location.) – and note - in most cases involving two or more locations.<br/>
+<br/>
+Other events are name changes, census records, tax lists, statistics, transactions.<br/>
+<br/>
+Unfortunately only a couple of programs are able to produce proper reports documenting the history of a location and the families that owned it or lived there, with photos and maps. Producing such reports is the only way I know that allows you to document the genealogy of a population in an area – without a lot of duplication of info.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-27T12:05:45-08:00</div>
+<div class="text">My last entry was in response to Louis' first entry -- a lot happened in the meantime.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-27T12:27:07-08:00</div>
+<div class="text"><br/>
+Genealogy is microhistory. You're suggesting that to express any difference in a place's name, we need to enter all the historical references to that place, particularly in regard to how that place name might change, to persons. That's not realistic.<br/>
+<br/>
+No one denies that events happening related to place changes aren't important. What is doubtful is that such events are likely to be part of anyone's genealogy. Conversely, we are not likely to suggest that someone enter all the events relevant to US History to study and document their American ancestors in their genealogy software.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-27T13:17:45-08:00</div>
+<div class="text">Greg:<br/>
+<br/>
+If location information is relevant to someone's genealogy because their ancestors lived there at the time and it might lead them to hypothesis and conclusions, then they probably would want to enter that information somewhere they can review it. Isn't that realistic?<br/>
+<br/>
+And if locations are made an entity in BetterGEDCOM, and if program designers are going to use BetterGEDCOM, then they will finally have the capability to produce proper location reports that include information and events about the location, as well as links to all the people events that refer to the location.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-27T14:42:37-08:00</div>
+<div class="text">Interesting discussion!<br/>
+<br/>
+You can see a location as point in a 2- or 3-dimensional space, defined by coordinates.<br/>
+Time adds a 4th dimension.<br/>
+What IS at a location at a certain time? Still only a location. What happens there? An event.<br/>
+<br/>
+That's if you take location as a point in a coordinate system.<br/>
+<br/>
+But if you give that location a name, like "Miller Manor", then that thing has a time-span (life-span). That thing also still has events.<br/>
+<br/>
+But how is that relevant to BG? <br/>
+What do we want to record, and how?<br/>
+<br/>
+What Louis said made me think of village histories (chronicles?) or house histories. I think that those aren't geneaology, but very closely related. So if we could make the BG standard accomodate both, I think genealogy could profit. I don't think we should make the standard support everything that's necessary for village chroniclers.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-27T15:02:22-08:00</div>
+<div class="text">I have a project dedicated to following my father's movements during WWII. Lots of the places then were set up as air bases in Europe. <br/>
+<br/>
+Another traces and ancestors movements during the Siege of Quebec (1775). <br/>
+<br/>
+During WWII, military photographers caught pictures almost any where they could. One day, all the work about my father's time line, locations and group assignments might lead to some great "captured on film" moments.  <br/>
+<br/>
+:) --GJ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-27T15:02:54-08:00</div>
+<div class="text">*oops ... set up as temporary air-bases in Europe.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-27T15:16:52-08:00</div>
+<div class="text">testuser,<br/>
+<br/>
+I think the issue with the Location Entity is NOT the Place, but the Location Name at a point in time. The same GPS coordinates, but the name of the jurisdiction name changed.<br/>
+<br/>
+Millers Manor in YYYY<br/>
+<br/>
+Smiths Manor in YYYY+10ys<br/>
+<br/>
+Same place, different owner and different name.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-23T09:38:05-08:00</div>
+<div class="text">I frankly assume that any location entity has a time element. However, even a time element won't deal with locations with disputed jurisdictions.<br/>
+<br/>
+Basically I think all locations need their own date entity. How an application deals with working out that date and any conflict it might have with an event's date is out of our purview.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-27T09:22:23-08:00</div>
+<div class="text">I disagree with locations having a time element. That is not correct because it doesn't have any context. Something has to happen at that time.<br/>
+<br/>
+Thus is something happens at a time, what you have is an event. I believe we should allow events to be associated with a location. <br/>
+<br/>
+Example: Your grandfather's house is the location. The events might be: House built in 1804 by Jack Jones. Kitchen added by John Jones is 1823. Fire in 1846 destroyed shed, etc. <br/>
+<br/>
+There could also be objects associated (e.g. pictures) associated with the location, and evidence to support events, etc. <br/>
+<br/>
+A location is almost like a person. The subtle difference is that events for a person happen at a time at a certain place. Whereas events for a place happen at a time possibly with certain people.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-27T09:40:31-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+This has more to do with the NAME of the Place at a given point in time. For example, the township that I grew up in, no longer exists. My brother and I graduated from the same building, but the name of the town had changed the year between our graduation.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-27T09:43:40-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+I would appreciate that you restore the Wiki Page to it's previous state. You deleted, what I consider, important aspects of this element.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2010-11-27T11:03:04-08:00</div>
+<div class="text"><br/>
+<br/>
+Russ,<br/>
+<br/>
+I deleted very little. Please add back in whatever it is you feel that was important.  <br/>
+<br/>
+The key point is that assigning a date-time to a place will is effectively allowing events for places. And doing the latter is something I see as necessary and would be the correct way to implement the date-time assignment.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-27T11:12:26-08:00</div>
+<div class="text">Louis,<br/>
+<br/>
+But, the issue at hand, is the "name" of the Location at a specific point in time.<br/>
+<br/>
+How are you proposing that a Location changed it's name over time?<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-27T11:20:12-08:00</div>
+<div class="text">How can a location not have a time element? I reject that idea categorically.</div></div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-23T23:27:09-08:00</div>
+<div class="title">Location entity form</div>
+<div class="text">I disagree with some of the definition  for this entity.<br/>
+<br/>
+I can see the date reference.<br/>
+<br/>
+Here's What I would say:<br/>
+<br/>
+LOCATION<br/>
++ *UUID<br/>
+  *Location Text (or built from below entries)<br/>
+   Street and Number<br/>
+   locale<br/>
+   town<br/>
+   district<br/>
+   county<br/>
+   state<br/>
+   region<br/>
+   Parish<br/>
+   Country<br/>
+   zipcode<br/>
+   Coordinates<br/>
+   date from<br/>
+   date to<br/>
+<br/>
+Now it could be we use templates here, because there are many combinations and name. Ireland has townlands. NYS has towns, Minnesota has townships, etc.</div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-24T07:40:50-08:00</div>
+<div class="text">Yes, there should be templates for places. <br/>
+Maybe the software would provide these, and then map the data into a tree? The "names" of a level could be saved as a "type", something like this:<br/>
+<br/>
+&lt;place type="Country"&gt;Ireland<br/>
+  &lt;place type="Townland"&gt;Some Name&lt;/place&gt;<br/>
+&lt;/place&gt;<br/>
+<br/>
+(&lt;place&gt; is shorter than &lt;location&gt;)<br/>
+That way, even if we don't know what a "Townland" is, we would know the place it has in a hierarchy.<br/>
+<br/>
+Should the resolution(?) of places be left to the user? Or should the software require a certain number of levels (eg equal to country, state, county, town, address)?<br/>
+<br/>
+I believe we would need to have the freedom to add levels in between these lowest common denominator-levels. Because they will not be the lowest common denominator everywhere on the planet. <br/>
+<br/>
+Right now in Germany, the very detailed levels could be:<br/>
+<br/>
+Super-Country(?): European Union<br/>
+Country: Germany <br/>
+State: Bavaria<br/>
+Region: Upper Bavaria<br/>
+County: Bad Tölz-Wolfratshausen<br/>
+Community(?): Kochel am See<br/>
+Municipality: Schlehdorf<br/>
+Town: Schlehdorf<br/>
+Street: x-street <br/>
+House-number: 1<br/>
+Floor: 2<br/>
+Apartment: 3<br/>
+<br/>
+But not every "State" has "Regions", and not every "City" is in a "County".<br/>
+<br/>
+The religious parish, deanery, diocese... levels should also form a tree. A location could then be defined with a "public-administration"-place and a "religious"-place (each with a date range, of course)<br/>
+<br/>
+I guess the religious-place-tree can use the same standard &lt;place&gt; element, just with the religious names as type=""-attribute</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-24T08:11:25-08:00</div>
+<div class="text">Me again.<br/>
+I was thinking about Objective vs. Subjective Location Entities.<br/>
+I think we need both.<br/>
+<br/>
+So, how about an analogy to the "evidence-" and "conclusion-person":<br/>
+A "conclusion-place" is just a name, with notes and a date range. This is where the subjective free-form text goes. I imagine you would put the name of a place here just like you find it in a source.<br/>
+<br/>
+If you do your research and can link that name to an administrative place, then you are building the tree of "evidence"-places.<br/>
+<br/>
+What if there are a number of "conclusion places" taken from evidence that seem to refer to the same physical location? (e.g. "Newtown" and "Newton"?)<br/>
+<br/>
+Re-reading this from the top, I think the analogy isn't working that way. <br/>
+If I start with a source, the place mentioned on it should surely be more of an "evidence"-place. Have I just switched the names?<br/>
+I guess you would link them under a new conclusion place, but maybe there's a better way?</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-24T08:13:05-08:00</div>
+<div class="text">... last line should be moved up two lines...</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-24T11:40:26-08:00</div>
+<div class="text">Frankly, I assume the use of templates with place names if at all possible. There are too many variances in place name components to not use templates if at all possible.<br/>
+<br/>
+I certainly agree with the UUID. Regarding the date, my idea is that we use whatever date element results from that discussion anywhere a date is needed.<br/>
+<br/>
+Testuser, you're right to say that the evidence and conclusion concepts are missing here as well. In fact, they're missing across the board. This is one of the main issues with the data model discussions. Finding the best AND the most practical place to inset another data entity (i.e., another layer of complexity), is the problem.</div></div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-24T10:36:30-08:00</div>
+<div class="title">Place Hierarchy</div>
+<div class="text">"The existing GEDCOM identifier for a place has 4 levels separated by commas"<br/>
+<br/>
+Hang on - I dispute that totally. Even PLACE_HIERARCHY just defines "a sequence from the lowest to the highest jurisdiction". Nothing about how many.<br/>
+<br/>
+The number of elements in a hierarchy depends on all sorts of things and isn't even consistent in a culture at any one time. For instance, I normally use 3 elements for the UK "Nantwich, Cheshire, England" (settlement, county, country). But I reserve the right to occasionally add a suburb first (e.g. "Vauxhall, Nantwich, Cheshire, England"). In another variation, I also omit counties where they are misleading - for instance, for much of its history, London was split between Middlesex and Surrey. But it makes no sense to have both "London, Middlesex, England" and "London, Surrey, England", so I just have "London,, England" - though note the place-holder.<br/>
+<br/>
+Thus, we need to accommodate multiple naming styles in any one file.</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-29T11:51:54-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+1. It would be impossible to not follow BetterGEDCOM's rules. It will certainly be possible to not follow BetterGEDCOM's definitions. Database rules make little sense outside of the database.<br/>
+2. Since "GFSDHGFSDhahjweflkJHWETR#@$%45" would be a valid place value, I'm  having difficulty imagining something regarding places that would be a problem for anyone. Do you have an example?</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-29T12:07:24-08:00</div>
+<div class="text">"What happens to the Place record if it doesn't follow the BetterGEDCOM 'rules'?"<br/>
+<br/>
+Good question. It depends on how badly it breaks the rules. <br/>
+<br/>
+If the application software that I am using, uses the BetterGEDCOM file format as its own native file format (equivalent to some application programs today that use GEDCOM as their native file format) then given that the application software got it into a BG format file in the first place, it should just export the data unchanged if I create a BG format file for data transfer purposes.<br/>
+<br/>
+If you were to import the same BG file into your application software, then if that software doesn't understand things, it needs to tell you on an error report of some sort.<br/>
+<br/>
+If the application software that I am using, uses something else as its own native file format, then the aim must surely be that whatever I've entered into my software and thence onto my file, should come out the other end. If it's a seriously bad issue, then it needs to tell you on an error report of some sort.<br/>
+<br/>
+This means that the rules for Place data (or anything) should be as minimal as possible - no rules about the number of nodes in the name, for instance; no rules about "Manchester, Lancashire, England" having to exist alongside "Lancashire, England" and "England".<br/>
+<br/>
+I actually find it difficult to think of any validation needed in the Data Model for places other than the name of the place having something in it.<br/>
+<br/>
+I keep coming back to this need to be able to import (say) 99.9% of the data on 99.9% of GEDCOM files - and that means that we need minimal rules. <br/>
+<br/>
+Anyone who wants to tighten up genealogical practices by applying extra validation in the BG data model needs to think again.<br/>
+<br/>
+That does NOT mean no-one tightens up genealogical practices - it just means it has to be done through a switch in the application program, i.e. it's not done through the structure of the BG data model requiring XYZ to be mandatory, but the application having a setting to switch that validation on.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-29T13:12:06-08:00</div>
+<div class="text">I don't see why we have to use the old comma separated Gedcom way to identify a place. I think each level of such a string should be represented by separate place entity in BG, with pointers to one or more higher levels. So "Manchester, Lancashire, England" would be represented as three entities in BG - how anyone maps that into the structure of the application - as one or three entities is the application's problem.<br/>
+<br/>
+Greg, how do you envisage that templates should be used in this for places?</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-29T13:28:44-08:00</div>
+<div class="text">1. That whole comma/placeholder issue is totally irrelevant in BetterGEDCOM. A part of a place, like only a city name, will look like this:<br/>
+<br/>
+&lt;l04&gt;"Cincinnati"&lt;/l4&gt;<br/>
+<br/>
+<br/>
+A template would look like this:<br/>
+&lt;location-template&gt;<br/>
+..&lt;template-name&gt;"Standard US"&lt;/template-name&gt;<br/>
+..&lt;l01 name="Detail 1" /&gt;<br/>
+..&lt;l02 name="Detail 2" /&gt;<br/>
+..&lt;l03 name="Detail 3" /&gt;<br/>
+..&lt;l04 name="City" /&gt;<br/>
+..&lt;l05 name="County" /&gt;<br/>
+..&lt;l06 name="State" /&gt;<br/>
+..&lt;l07 name="Country" /&gt;<br/>
+..&lt;l08 name="Zip Code" /&gt;<br/>
+..&lt;l09 name="Longitude (Decimal)" /&gt;<br/>
+..&lt;l10 name="Latitude (Decimal)" /&gt;<br/>
+..&lt;l11 name="..." /&gt;<br/>
+..&lt;l12 name="..." /&gt;<br/>
+<br/>
+<br/>
+<br/>
+Something like that. I don't know, though.<br/>
+<br/>
+Entry of such a place fragment by itself would be totally fine. Heck, anything will be fine. Any validation of a place entry would have to be done by the application. However, we must make accommodation for inclusion of referencing systems, which is a separate issue.<br/>
+<br/>
+In short, we need to require the inclusion of lots of data but we won't be mandating anyone use these fields. That's what I envision.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-30T20:21:23-08:00</div>
+<div class="text">There is no way a GEDCOM place will break BetterGEDCOM. Here's why, the GEDCOM will be read as GEDCOM, not a BetterGEDCOM, hence it will use the GEDCOM Location template, which is simply a comma delimited string of names. It will look identical to the way it looks in GEDCOM.</div></div><div class="comment"><div class="from"><strong>WesleyJohnston</strong> 2011-11-14T20:02:46-08:00</div>
+<div class="text">I am seeing a lot of different notions about how BetterGEDCOM will handle places -- templates, the idea that missing levels do not matter to BetterGEDCOM, the notion that the 4-level place hierarchy is an illusion. Is there really any agreement about how BetterGEDCOM will handle places, since to me these ideas seem to be conflicting?<br/>
+<br/>
+The reality of use by both Ancestry and FamilySearch is the 4-level hierarchy, regardless of what GEDCOM theoretically can support. This leads to all sorts of torments. Ancestry has entries such as "Chicago Ward 33, Cook, Illinois, USA" in their census records, for example. Ward number really is a very important fact when trying to deal with censuses in large cities, so that it does need to be recorded, but this form of recording it squished into the city level is not the way BetterGEDCOM should work.<br/>
+<br/>
+And there is no real way for them to handle house numbers and streets within the 4-level hierarchy. These are critically important to parish reconstructions, where they are the most important piece of location information, since the vast majority of the records in such a database are for the same town or few towns in a small area (e.g. parish).<br/>
+<br/>
+The same is true of specifications of rural addresses: Lot 5, Concession VI, Whitby Township, Ontario, Ontario, Canada just does not fit within the 4-level hierarchy.<br/>
+<br/>
+We can talk about ways to fix this, but we cannot ignore the reality that there is a huge base of existing data that strictly adheres to the 4-level hierarchy -- even if it means torturing the data . Somehow we have to address how this transition can be facilitated or there will be great resistantce by the 4-level place ideologues.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-11-15T00:52:33-08:00</div>
+<div class="text">In DeadEnds Places are usually records. Each record may point to the Place record of the place that encompasses it. That is, the DeadEnds approach to Place records is recursive and hierarchical. Place records form a tree, where the tree is flattened out to a comma-separated string for display purposes. There is no limit on the number of levels, and there is no limit on what the different levels can mean, although most anyone would ever want to use have a predefined enumerated value to specify them.<br/>
+<br/>
+For example, the city of New London, Connecticut, would have a Place record. That record would refer to the Place record of New London County, which would refer to the Place record of Connecticut, which would refer to the Place record of the United States. That's an example of a typical simple four-level pattern. The city of Norwich, Connecticut, which is also in New London County, would refer to the same New London County Place record that New London (the city) does. This recursive approach minimizes the amount of information required to still record maximum detail about places. It allows third parties or application developers to create standardized Place hierarchies. It allows notes and media references to be added to records anywhere in the Place hierarchy and then all records that have that Place in its hierarchy has access to those notes and media references. For example, the New London city Place record can refer to photos, books describing the history of the city, and so on.<br/>
+<br/>
+Though in DeadEnds, a Place can also be just an attribute of an Event if required. This is useful when the user doesn't know how a newly discovered place name fits into the overall hierarchy of Places, or for some reason just wants to keep this particular Place unique and outside the standard hierarchy.<br/>
+<br/>
+So DeadEnds is set up to handle any convention any system today has and any imaginable system in the future might have. A four level system can be imported into DeadEnds with no loss. Converting an arbitrary DeadEnds Place structure into a four-level system is simple but would result in data loss if there were more than four levels or there were levels outside the standard four levels (e.g., election districts, wards, addresses, parishes [except in Louisiana], hamlets, post offices).<br/>
+<br/>
+I have suggested that DeadEnds be a starting point for developing the BG data model, and I think it has all your Place concerns covered.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-11-15T05:14:21-08:00</div>
+<div class="text">Hi Wesley, <br/>
+<br/>
+As your time permites, will you look over entries in the Requirements Catalog, below, to see if your requirements/issues have been described. <br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:9:http://bettergedcom.wikispaces.com/Better+GEDCOM+Requirements+Catalog#Data-Place01 --><a href="http://bettergedcom.wikispaces.com/Better+GEDCOM+Requirements+Catalog#Data-Place01">http://bettergedcom.wikispaces.com/Better+GEDCOM+Requirements+Catalog#Data-Place01</a><!-- ws:end:WikiTextUrlRule:9 --><br/>
+<br/>
+Scroll to:<br/>
+Data-Place05, "Place Identifiers" and Data-Place06, "Location to include address."<br/>
+<br/>
+There are many discussions that page. I didn't see that a discussion had been opened about either Data-Place05 or Data-Place06.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-11-15T08:57:22-08:00</div>
+<div class="text">"we cannot ignore the reality that there is a huge base of existing data that strictly adheres to the 4-level hierarchy -- even if it means torturing the data"<br/>
+<br/>
+Indeed - we have requirements Conversion01 and Data01 "Backwards compatibility" to remind us that stuff should be importable into BG. Loading 4 level locations into a BG compatible database should work - even if the resulting location names are sometimes, as you say, a touch odd. The issue is conversion in the opposite direction, when it could be a case of perversion rather than conversion. Even so, I hope I'm not accused of ignoring the issue if I say that the most sensible people to deal with that are the people programming the load from BG compatible files into GEDCOM compatible files.<br/>
+<br/>
+The tricky problem with a load from BG compatible "locations" into GEDCOM compatible "places" is if the BG "location" hierarchy includes an optional address line or so at the front - how does that get ripped off and put into a separate GEDCOM ADDR line? Well, one option would be to specifically mark up the address part of the location separately from the place part. That is something where BG could contribute. Though even here it's very much user dependent - I bet I put different bits into the ADDR in GEDCOM compared to others.</div></div><div class="comment"><div class="from"><strong>WesleyJohnston</strong> 2011-11-15T09:07:16-08:00</div>
+<div class="text">AdrianB38 wrote: "Indeed - we have requirements Conversion01 and Data01 "Backwards compatibility" to remind us that stuff should be importable into BG."<br/>
+<br/>
+Importing of old GEDCOM into new GEDCOM (aka BG) is "upward compatibility" and not "backward compatibility". I have not looked at these two requirements, but if they are using "backward compatibility" with that meaning, then they need to be revised.<br/>
+<br/>
+"Backward compatibility" in this case would be the ability of BG to convert -- or as you correctly state "pervert" -- into old GEDCOM structure. I don't think we should try to have backward compatibility.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-11-15T12:04:18-08:00</div>
+<div class="text">Wesley - oh bother, I thought I was using the correct term, but I do remember for some reason getting myself confused over it. I have replaced "Backward compatibility" with "Compatibility with GEDCOM" - the requirement makes it clear which direction the data needs to be compatible.</div></div><div class="comment"><div class="from"><strong>NeilJohnParker</strong> 2011-11-15T16:19:40-08:00</div>
+<div class="text">Better GEDCOM must state very clearly what the objectives of each data structure is; and I would like to suggest that it must be capable of representing the real world both as we would like it to be but also as it was recorded in past genealogical documents. Therefore, if there are place hierarchy names in the real world that have 2, 3, 4, 5 or n levels we must be capable of representing them. If a existing software such as ancestory.com limits theirs to 4, we can not deny reality by arbitrarily limitting Better GEDCOMs to 4 else why are we trying to improve GEDCOM.<br/>
+<br/>
+<!-- ws:start:WikiTextUrlEmailRule:2:NeilJohnParker@Telus.net --><a class="wiki_link_ext" href="mailto:NeilJohnParker@Telus.net" rel="nofollow">NeilJohnParker@Telus.net</a><!-- ws:end:WikiTextUrlEmailRule:2 --></div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-29T00:51:47-08:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+Yes, basically everything related to how GEDCOM deals with places is irrelevant. I expect the use of templates to address most of the issues with place definitions.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-29T03:49:49-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+But, if the application generates a GEDCOM vs a BetterGEDCOM, during a lengthy transision, what happens to that Place?<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-29T11:14:29-08:00</div>
+<div class="text">I don't understand the question...</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-29T11:20:38-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+What happens to the Place record if it doesn't follow the BetterGEDCOM "rules"?<br/>
+<br/>
+Russ</div></div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-29T15:08:15-08:00</div>
+<div class="title">The genealogy of places/locations</div>
+<div class="text">Where I come from, when you get back to the time before parish records exists (1700+/-30) the genealogy of places is an important source (evidence, whatever) for working with the genealogy of persons. In most cases a farm (or part of a farm) would be inherited by children of the previous user/owner – so if you know the names of the owners – say in 1630 and 1660 there is a good chance that the two are father and son – or father and son in law. Also, when a farm was split, it was often two sons that each got a halve (or so) of their fathers farm. There were (and is) laws that would make it difficult for persons outside a biological family to take over a farm. <br/>
+<br/>
+Thus, it is important to keep track of the genealogy of farms – i.e. that one farm was created by splitting another farm or merging other farms. In most cases in this century there is no record of a land transaction or a probate, you just know from geography and/or the name of the farms that e.g. one farm was created by splitting/merging other farms. Often there are tax lists where only the name of the farm is mentioned, together with its size/value, or the amount of crops and cattle “produced” on the farm – or the tax paid – but the owner or user is not mentioned.<br/>
+<br/>
+Therefore, I would like to have a way record the genealogy of farms.<br/>
+<br/>
+And, this does not only apply to farms. Over time, many regions, parishes and even countries are created by splitting/merging other regions etc.<br/>
+<br/>
+This transition from one farm to another may be recorded by an event, e.g. a probate or a sale, or if there is no record, you could tie the places together by having a “birth event” for a place with no date or other info – with the “parent(s)” being another place(s) – in the same way as for persons.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-30T08:07:20-08:00</div>
+<div class="text">Logically, to record a split:<br/>
+ - We need a "split" event for that split so we can describe what we know;<br/>
+ - A relationship to the input farm, with a role of "original";<br/>
+ - A relationship each to the output farms, each with a role of "split off";<br/>
+<br/>
+But it potentially goes a bit beyond this if you wanted the application to understand what the location "split" event means - except this is probably nothing to do with the BG format and everything to do with the application program.<br/>
+<br/>
+I'd guess we need "split" and "merge" plus something to do with reallocating responsibility for an area (e.g. transfer of a town from one county to another).<br/>
+<br/>
+Although reallocation could be implied by a name change ("A, B County, C State" to "A, D County, C State")? Probably depends on how people want to do it.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-30T20:06:36-08:00</div>
+<div class="text">I have an alternate suggestion. Rather than recording a split. Locations could be self referential. By that I mean a location can point to a parent location. That way any place can be traced back in time as the name changes, or it splits and splits again. I've updated my proposed model to cover that issue. What a great idea that is! Useful in the States too. like trying to find Bad Axe County, Wisconsin. Renamed and resized, chopped up.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-12-01T13:48:33-08:00</div>
+<div class="text">Brian - location-to-location relationships are also attractive to me. I sort of vaguely opted for events to keep the area of the data model round Locations matching that round Persons.<br/>
+<br/>
+I could be persuaded either way...</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-12-01T14:03:13-08:00</div>
+<div class="text">You could mimic a design like person pedigree like PersonID, you just use LocationID<br/>
+<br/>
+If the place chops up into two or more they are like children. If an area changes names, you just drop down to a new childID. The over all can mimic a local Pedigree like people pedigree, in stead of names, you use towns gps and stuff.  Also locals and people share events that can be grouped together as well.</div></div></div></body>
+</html>

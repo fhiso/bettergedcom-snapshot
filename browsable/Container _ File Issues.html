@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>BetterGedcom - Container &amp; File Issues</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+<br/>
+<h2 id="toc1"><a name="x-Container Format Alernatives"></a>Container Format Alernatives</h2>
+ The goals include a provision for a Container file format that is capable of storing various digital files in native formats. <br/>
+<h3 id="toc2"><a name="x-Container Format Alernatives-Important criteria for the container format include:"></a>Important criteria for the container format include:</h3>
+<ol><li>Cross-platform and cross-codebase. BetterGEDCOM (BG) is a data exchange format, and needs to support a wide audience</li><li>Encapsulates files in virtually any format, including formats yet to be invented</li><li>Support cataloging files in the container so that contents can be referenced easily and references should survive export/import.</li><li>Allow control over encoding (e.g., base64), compression (none or choice of compression algorithms), and encryption</li><li>Support a hierarchical directory-like structure for included files</li><li>Provide indirection so that convenient references to content can be used. Indirect references must survive import/export and persist for archiving</li><li>Need not provide access-control to individual elements (if you can read the container, you can read each element. If you can write the container you can write each element).</li><li>Provides a single entity that can be relied upon to be internally consistent and complete, without stale pointers and broken references (external references can't be guaranteed).</li><li>Should be free of burdensome licensing and royalty conditions, ideally open sourced.</li></ol><br/>
+<h3 id="toc3"><a name="x-Container Format Alernatives-Pre-existing candidates for BetterGEDCOM's container technology:"></a>Pre-existing candidates for BetterGEDCOM's container technology:</h3>
+<ul><li>For Office documents after Office 2007, Microsoft adopted an XML in a container model and uses a ZIP compatible container. The container is specified separately as OPC ("Open Packaging Conventions").</li><li>An Open Source OASIS standard for OpenDocument (ODF) includes a description of both the XML spec and a container spec. This is similar, and potentially interoperable with OPC, but they differ in some respects.</li></ul><br/>
+<h3 id="toc4"><a name="x-Container Format Alernatives-What other candidates should be considered for the Container format?"></a>What other candidates should be considered for the Container format?</h3>
+<br/>
+Is OpenDocument a solid choice by virtue of its widespread acceptance and various open source implementations that use it (e.g. OpenOffice.org)?<br/>
+<br/>
+<h2 id="toc5"><a name="x-Multimedia File Issues"></a><a class="wiki_link" href="Multimedia%20File%20Inclusion%20Issues.html">Multimedia File Issues</a></h2>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-15T15:07:58-08:00</div>
+<div class="title">ZIP?</div>
+<div class="text">Is there a reason why ZIP is not listed as an alternative? I understand that ZIP is used by the other formats, but I am talking about  using only some version of ZIP.</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-15T19:44:59-08:00</div>
+<div class="text">This is a wiki.<br/>
+<br/>
+If ZIP needs to be added, add it.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-16T05:19:46-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+I am asking a question. If there is no answer to that question, I may do as you suggest since I have so far not seen any arguments against zip. But there is no use in putting it on the page if someone comes along and removes it after a few hours. That is why I have asked this question?</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2010-11-21T22:10:05-08:00</div>
+<div class="text">I see no problem with zip as a container. I'm not familiar with the model used by ODF. I would be very leary of the model used by Microsoft. It is likely to be proprietary and perhaps encumbered by patents.<br/>
+<br/>
+Personally, I think the ODF format would be a good starting point. It is widely supported, and is open.<br/>
+I'm not sure about compression, but multimedia is likely to be compressed already.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-22T00:40:18-08:00</div>
+<div class="text">ODF file format is gzip'd (.gz, application/x-gzip)<br/>
+<a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=Generate_XML#Why_doesn.27t_GRAMPS_just_use_a_.gz_extension.3F" rel="nofollow">.gramps</a> is also a gzipped file format.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-22T00:52:13-08:00</div>
+<div class="text">Sorry, ODF seems to use zip...<br/>
+Gramps XML uses gzip (.gz, application/x-gzip)</div></div></div></body>
+</html>

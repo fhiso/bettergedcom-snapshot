@@ -1,0 +1,590 @@
+<html>
+<head>
+<title>BetterGedcom - BetterGEDCOM Attempt</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+Evidence Model Attempt:<br/>
+<br/>
+<br/>
+(I removed my original structure in favor of Geir's simplified, more readable version. Mike)<br/>
+<br/>
+<h3 id="toc0"><a name="Simple"></a></h3>
+<h3 id="toc1"><a name="x--A syntactically simplified version of the model:"></a>A syntactically simplified version of the model:</h3>
+<br/>
+<strong>source:</strong><br/>
+id="UUID"<br/>
+parentSource? (source ref)<br/>
+sourceDetail*<br/>
+<br/>
+<strong>sourceDetail:</strong><br/>
+type<br/>
+value<br/>
+<br/>
+<strong>extraction:</strong><br/>
+id="UUID"<br/>
+date_extracted<br/>
+extractor (source structure or source ref) required, and ONLY ONE)<br/>
+source (structure) required, and ONLY ONE<br/>
+person*<br/>
+event*<br/>
+place*<br/>
+note*<br/>
+<br/>
+<strong>person:</strong><br/>
+id="UUID"<br/>
+sourceDetail*<br/>
+gender* (TBD)<br/>
+name* (TBD)<br/>
+eventRoleRef*<br/>
+sameAsRef*<br/>
+note*<br/>
+<br/>
+<strong>eventRoleRef:</strong><br/>
+role ref="eventUUID"<br/>
+type="TYPE"<br/>
+<br/>
+<strong>sameAsRef:</strong><br/>
+sameAs ref="personUUID"<br/>
+<br/>
+<br/>
+<br/>
+This model has some interesting characteristics: <br/>
+1. A person only exists in context of an extraction and thus EVERY person is an "evidence" person. There is no distinction between an evidence person and a conclusion person. <br/>
+2. Because the model only allows (and requires) one source in an extraction, it puts the researcher contributions (and automated computer contributions) at the same level as any of the sources from which information is extracted. In other words, a researcher forming a "conclusion" is just another source and is on the same level as a census record.<br/>
+3. Because person, place, event etc records are all contained within an extraction, this model would easily support containing an entire gedcom file in a single extraction tag with the source being the gedcom file itself.<br/>
+<br/>
+<br/>
+Here is a concrete example:<br/>
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&lt;bettergedcom&gt;
+ &lt;source id="s00" type="COMPUTER_SYSTEM"&gt;
+ &lt;sourceDetail type="DESCRIPTION"&gt;FamilyPursuit.com&lt;/sourceDetail&gt;
+ &lt;sourceDetail type="URL"&gt;http://www.familypursuit.com&lt;/sourceDetail&gt;
+ &lt;/source&gt;
+ &lt;source id="s0" type="RESEARCHER"&gt;
+ &lt;sourceDetail type="DESCRIPTION"&gt;Michael Martineau&lt;/sourceDetail&gt;
+ &lt;sourceDetail type="EMAIL"&gt;mike at familypursuit dot com&lt;/sourceDetail&gt;
+ &lt;/source&gt;
+ &lt;source id="s1" type="WEBSITE"&gt;
+ &lt;description&gt;FamilySearch&lt;/description&gt;
+ &lt;sourceDetail type="URL"&gt;http://www.familysearch.org&lt;/sourceDetail&gt;
+ &lt;/source&gt;
+ &lt;source id="s2" type="CENSUS" parentSourceRef="s1"&gt;
+ &lt;sourceDetail type="DESCRIPTION"&gt;1880 US Federal Census&lt;/sourceDetail&gt;
+ &lt;sourceDetail type="JURISDICTION"&gt;United States&lt;/sourceDetail&gt;
+ &lt;sourceDetail type="YEAR"&gt;1880&lt;/sourceDetail&gt;
+ &lt;/source&gt;
+ &lt;source id="s3" parentSourceRef="s2" type="CENSUS"&gt;
+ &lt;sourceDetail type="JURISDICTION"&gt;North Carolina&lt;/sourceDetail&gt;
+ &lt;/source&gt;
+ &lt;source id="s4" parentSourceRef="s3" type="CENSUS"&gt;
+ &lt;sourceDetail type="JURISDICTION"&gt;Transylvania&lt;/sourceDetail&gt;
+ &lt;/source&gt;
+ &lt;source id="s5" parentSourceRef="s4" type="CENSUS"&gt;
+ &lt;sourceDetail type="JURISDICTION"&gt;Little River&lt;/sourceDetail&gt;
+ &lt;/source&gt;
+ &lt;source id="s6" type="CENSUS" parentSourceRef="s1"&gt;
+ &lt;sourceDetail type="DESCRIPTION"&gt;1870 US Federal Census&lt;/sourceDetail&gt;
+ &lt;sourceDetail type="JURISDICTION"&gt;United States&lt;/sourceDetail&gt;
+ &lt;sourceDetail type="YEAR"&gt;1870&lt;/sourceDetail&gt;
+ &lt;/source&gt;
+ &lt;source id="s7" parentSourceRef="s6" type="CENSUS"&gt;
+ &lt;sourceDetail type="JURISDICTION"&gt;South Carolina&lt;/sourceDetail&gt;
+ &lt;/source&gt;
+ &lt;source id="s8" parentSourceRef="s7" type="CENSUS"&gt;
+ &lt;sourceDetail type="JURISDICTION"&gt;Georgetown&lt;/sourceDetail&gt;
+ &lt;/source&gt;
+ &lt;source id="s9" parentSourceRef="s8" type="CENSUS"&gt;
+ &lt;sourceDetail type="JURISDICTION"&gt;Collins&lt;/sourceDetail&gt;
+ &lt;/source&gt;
+ 
+ 
+ &lt;extraction id="a0"&gt;
+ &lt;dateExtracted&gt;26 March 2011&lt;/dateExtracted&gt;
+ &lt;extractor ref="s0" /&gt;
+ &lt;source type="CENSUS" parentSourceRef="s5"&gt;
+ &lt;sourceDetail type="PAGE" value="222B"/&gt;
+ &lt;sourceDetail type="NARA_FILM_NUMBER" value="T9-0983"/&gt;
+ &lt;sourceDetail type="ENTRY" value="1339"/&gt;
+ &lt;sourceDetail type="FHL_FILM_NUMBER" value="1254983"/&gt;
+ &lt;/source&gt;
+ &lt;person id="p1"&gt;
+ &lt;sourceDetail type="LINE_NUMBER" value="5"/&gt;
+ &lt;gender type="MALE" /&gt;
+ &lt;name&gt;John Hunt&lt;/name&gt;
+ &lt;role ref="e1" type="CHILD" /&gt;
+ &lt;attribute type="AGE" value="22"/&gt;
+ &lt;attribute type="OCCUPATION" value="Farmer"/&gt;
+ &lt;/person&gt;
+ &lt;event id="e1" type="BIRTH"&gt;
+ &lt;role ref="p1" type="CHILD"/&gt;
+ &lt;role ref="p2" type="PARENT" /&gt;
+ &lt;role ref="p3" type="PARENT" /&gt;
+ &lt;date&gt;&lt;year&gt;1828&lt;/year&gt;&lt;/date&gt;
+ &lt;place&gt;South Carolina&lt;/place&gt;
+ &lt;/event&gt;
+ &lt;person id="p2"&gt;
+ &lt;sourceDetail type="LINE_NUMBER" value="5"/&gt;
+ &lt;gender type="MALE" /&gt;
+ &lt;role ref="e1" type="PARENT" /&gt;
+ &lt;role ref="e2" type="CHILD" /&gt;
+ &lt;/person&gt;
+ &lt;event id="e2" type="BIRTH"&gt;
+ &lt;role ref="p2" type="CHILD"/&gt;
+ &lt;place&gt;South Carolina&lt;/place&gt;
+ &lt;/event&gt;
+ &lt;person id="p3"&gt;
+ &lt;sourceDetail type="LINE_NUMBER" value="5"/&gt;
+ &lt;gender type="FEMALE" /&gt;
+ &lt;role ref="e1" type="PARENT" /&gt;
+ &lt;role ref="e3" type="CHILD" /&gt;
+ &lt;/person&gt;
+ &lt;event id="e3" type="BIRTH"&gt;
+ &lt;role ref="p3" type="CHILD"/&gt;
+ &lt;place&gt;South Carolina&lt;/place&gt;
+ &lt;/event&gt;
+ &lt;/extraction&gt;
+ 
+ 
+ &lt;extraction id="a1"&gt;
+ &lt;dateExtracted&gt;26 March 2011&lt;/dateExtracted&gt;
+ &lt;extractor ref="s0" /&gt;
+ &lt;source type="CENSUS" parentSourceRef="s9"&gt;
+ &lt;sourceDetail type="PAGE" value="75"/&gt;
+ &lt;sourceDetail type="ENUMERATED" value="1 July 1870"/&gt;
+ &lt;/source&gt;
+ &lt;person id="p4"&gt;
+ &lt;sourceDetail type="LINE_NUMBER" value="10"/&gt;
+ &lt;gender type="FEMALE" /&gt;
+ &lt;name&gt;Eliza Hunt&lt;/name&gt;
+ &lt;role ref="e4" type="CHILD" /&gt;
+ &lt;attribute type="AGE" value="20" units="YEARS" /&gt;
+ &lt;attribute type="OCCUPATION" value="Farmer" /&gt;
+ &lt;attribute type="VALUE_OF_REAL_ESTATE" value="320"/&gt;
+ &lt;/person&gt;
+ &lt;event id="e4" type="BIRTH"&gt;
+ &lt;role ref="p4" type="CHILD"/&gt;
+ &lt;role ref="p5" type="PARENT" /&gt;
+ &lt;role ref="p6" type="PARENT" /&gt;
+ &lt;place&gt;Carvers Bay, South Carolina&lt;/place&gt;
+ &lt;/event&gt;
+ &lt;person id="p5"&gt;
+ &lt;sourceDetail type="LINE_NUMBER" value="10"/&gt;
+ &lt;gender type="MALE" /&gt;
+ &lt;role ref="e4" type="PARENT" /&gt;
+ &lt;role ref="e5" type="CHILD" /&gt;
+ &lt;/person&gt;
+ &lt;event id="e5" type="BIRTH"&gt;
+ &lt;role ref="p5" type="CHILD"/&gt;
+ &lt;place&gt;United States&lt;/place&gt;
+ &lt;/event&gt;
+ &lt;person id="p6"&gt;
+ &lt;sourceDetail type="LINE_NUMBER" value="10"/&gt;
+ &lt;gender type="FEMALE" /&gt;
+ &lt;role ref="e4" type="PARENT" /&gt;
+ &lt;role ref="e6" type="CHILD" /&gt;
+ &lt;/person&gt;
+ &lt;event id="e6" type="BIRTH"&gt;
+ &lt;role ref="p6" type="CHILD"/&gt;
+ &lt;place&gt;United States&lt;/place&gt;
+ &lt;note&gt;Census indicated Eliza's parents were not foreign born.&lt;/note&gt;
+ &lt;/event&gt;
+ &lt;person id="p7"&gt;
+ &lt;sourceDetail type="LINE_NUMBER" value="11"/&gt;
+ &lt;gender type="MALE" /&gt;
+ &lt;name&gt;John Hunt&lt;/name&gt;
+ &lt;role ref="e7" type="CHILD" /&gt;
+ &lt;attribute type="AGE" value="12" units="YEARS" /&gt;
+ &lt;/person&gt;
+ &lt;event id="e7" type="BIRTH"&gt;
+ &lt;role ref="p7" type="CHILD"/&gt;
+ &lt;role ref="p4" type="PARENT" /&gt;
+ &lt;place&gt;Carvers Bay, South Carolina&lt;/place&gt;
+ &lt;/event&gt;
+ &lt;person id="p8"&gt;
+ &lt;sourceDetail type="LINE_NUMBER" value="12"/&gt;
+ &lt;gender type="FEMALE" /&gt;
+ &lt;name&gt;Catherine Hunt&lt;/name&gt;
+ &lt;role ref="e8" type="CHILD" /&gt;
+ &lt;attribute type="AGE" value="1" units="YEARS" /&gt;
+ &lt;/person&gt;
+ &lt;event id="e8" type="BIRTH"&gt;
+ &lt;role ref="p8" type="CHILD"/&gt;
+ &lt;role ref="p4" type="PARENT" /&gt;
+ &lt;place&gt;Carvers Bay, South Carolina&lt;/place&gt;
+ &lt;/event&gt;
+ &lt;/extraction&gt;
+ 
+ &lt;extraction id="a3"&gt;
+ &lt;dateExtracted&gt;26 March 2011&lt;/dateExtracted&gt;
+ &lt;extractor ref="s00" /&gt;
+ &lt;source ref="s00"/&gt;
+ &lt;basedon&gt;
+ &lt;extraction ref="a1"/&gt;
+ &lt;/basedon&gt;
+ &lt;person id="p200"&gt;
+ &lt;sameas ref="p7" /&gt;
+ &lt;role ref="e207" type="CHILD" /&gt;
+ &lt;/person&gt;
+ &lt;event id="e207" type="BIRTH"&gt;
+ &lt;role ref="p200" type="CHILD"/&gt;
+ &lt;date&gt;
+ &lt;year&gt;1858&lt;/year&gt;
+ &lt;note&gt;Based on age at time of 1870 census.&lt;/note&gt;
+ &lt;/date&gt;
+ &lt;/event&gt;
+ &lt;/extraction&gt;
+ 
+ &lt;extraction id="a4"&gt;
+ &lt;dateExtracted&gt;9 April 2011&lt;/dateExtracted&gt;
+ &lt;extractor ref="s0" /&gt;
+ &lt;source type="RESEARCHER" parentSourceRef="s0" /&gt;
+ &lt;basedon&gt;
+ &lt;extraction ref="a0"/&gt;
+ &lt;extraction ref="a1"/&gt;
+ &lt;/basedon&gt;
+ &lt;person id="p300"&gt;
+ &lt;sameas ref="p1" /&gt;
+ &lt;sameas ref="p200" /&gt;
+ &lt;note&gt;I think these two are the same individual because...&lt;/note&gt;
+ &lt;/person&gt;
+ &lt;/extraction&gt;
+&lt;/bettergedcom&gt;
+ </pre>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-04-12T04:10:13-07:00</div>
+<div class="title">Comment on your Example</div>
+<div class="text">First,  you've done a great job demonstrating how to use some of the ideas.<br/>
+<br/>
+Second, I'm happy that the DeadEnds model was able to help organize your approach.<br/>
+<br/>
+Third, I feel the "extraction" level concept might be a bit of an overkill. I hadn't thought about what you are using it for before. You use it as a way to capture when an extraction (the act of creating of a set of evidence records from real world evidence) was made and by whom it was made. I see your point, but wonder about its utility. How important is it to "glorify" an extraction activity as a major, high-level entity in a database? I think your example works just as well without that layer.<br/>
+<br/>
+Fourth, you don't yet address the person-based, conclusion-based world. I applaud your audacity in omitting the conclusion world, since most people only want the conclusion world and not the evidence world at all! Based on the objections I get from people who think the evidence level is an unnecessary, theoretical complication to the right way of doing conclusion-based genealogy (it brings some to tears), I hope you have a good sense of humor.<br/>
+<br/>
+Fifth, I think adding the conclusion world would be easy for you to do. I believe you only need to think of "justifications" or "proof statements" as another kind of "source", and you need to be able to bind persons together into higher level persons. The DeadEnds model gives you the mechanism needed for these.<br/>
+<br/>
+Sixth, if you added the conclusion world and didn't require the evidence world you would make everybody happy. You would only have to deal with having conclusion persons refer to sources, but that's all we do today.<br/>
+<br/>
+Neat stuff.<br/>
+<br/>
+Tom W.</div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-04-12T20:26:01-07:00</div>
+<div class="text">Having looked closer at the example, things became much more clear to me.<br/>
+<br/>
+The important thing that I see in the proposal is that you want some way to tell what info you have extracted from a source (identified by at least part of a citation). Requirement Admin07 in the Req Cat already talks about “BetterGEDCOM shall be able to record information about, or link to records representing, the findings and results produced by the task” – task being the lookup in one source. <br/>
+<br/>
+Assuming on one hand an Evidence Person  (Tom’s model) or a Persona (Gentech) based on the info from one lookup, and on the other hand a free text transcript, an image or a data structure recording eg. a census household record from a lookup task, this can be achieved by linking the task to the Evidence person or Personas created as a result of the task (rather than keeping the info in one Extraction structure). I may be failing to see some advantage of having it in one structure, since this is for me a new and unfamiliar way of structuring the data.<br/>
+<br/>
+I don’t see why the researcher making a conclusion should be modeled as a source, it is unnecessary complicated. I think researchers should be a separate record type, there are other needs for that -cf Admin0x. I don’t mind calling a program a researcher.<br/>
+<br/>
+Then there is a question about how transcribed info would look like if you download it from a database. I would get that as table structures from a relational database (Sorry Tom) operated by e.g. our National Archives,  so I would like my program to be able to store that as an “excerpt” – not interpreted in any way.  Archives have to have a general, not genealogy specific way, to store such info, and a table structure would be more genealogy-user-friendly. <br/>
+<br/>
+You could also convert the data to Gedcom/BG format, so there may be a need for both, but I am not sure an archive would take the responsibility for that conversion since it may require some interpretation of the original data – it is not always easy to derive the biological relationships from a census record. There is also a lot if info in a census that you would have to create special structures in Gedcom to handle. But if I can’t have a table structure for storage of my excerpt, I would have to use BG, and have separate “evidence BG files” for some simpler source types. (I already have all the census, church records and other stuff for my prime area transcribed, so I would love to have them in my genealogy program, it will be no extra typing work – cf. Tom’s comment – I don’t see his circular problem.)<br/>
+<br/>
+The hierarchical structure of sources – that is something that should be considered in the Sources&amp;Citation work of BG. I am not sure how useful it is, and don’t know if source meta data bases around the world have hierarchically linked sources? Maybe some have? <br/>
+<br/>
+Tom, as I said in the last Developers meeting, I think it would be a good idea to create (if it does not exist) an BG Evidence &amp; Conclusion page, and as a start populate it with links to the older/current discussions scattered all over – so interested parties could find the info more easy – cf. Mike’s comments.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-04-13T01:49:17-07:00</div>
+<div class="text">Gier said, "I don’t see why the researcher making a conclusion should be modeled as a source, it is unnecessary complicated. I think researchers should be a separate record type, there are other needs for that -cf Admin0x. I don’t mind calling a program a researcher."<br/>
+<br/>
+I didn't particularly like that either. But it solves the problem of giving a conclusion record a source and a justification.<br/>
+<br/>
+Every record, including a conclusion record, needs a source. In the conclusion-based world, each conclusion record typically has many sources, one for each of the separate items of information that have been collected together to form that person record (e.g., a source for the name, a source for each birth event, each death event, each residence event, ...). This misses the VERY IMPORTANT point that some agent, probably human, maybe software, made the decision that all those items of information refer to the same real person. Someone who believes in citations and sources would be appropriately shocked, I assume, when they realize that all those nice individual citations have nothing at all to say about the person as a whole! Yikes.<br/>
+<br/>
+In the evidence and conclusion approach, as shown in Mike's example, this situation is wholly rectified. Each person record, whether it is an evidence level thing or a conclusion level thing, has EXACTLY ONE source. For an evidence person it is the source that provided the evidence. For a conclusion person it is the human (or algorithmic!!) agent that chose to group the evidence persons together, along with the reason/proof statement/justification/algorithmic comparison score/resarch notes that state why those evidence persons were joined together.<br/>
+<br/>
+Requiring a person as a source might not be the best solution, but it works and solves the problem. If there are other alternatives we should certainly consider them.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-04-13T02:04:08-07:00</div>
+<div class="text"><br/>
+Gier said, "Then there is a question about how transcribed info would look like if you download it from a database. I would get that as table structures from a relational database (Sorry Tom) operated by e.g. our National Archives, so I would like my program to be able to store that as an “excerpt” – not interpreted in any way. Archives have to have a general, not genealogy specific way, to store such info, and a table structure would be more genealogy-user-friendly."<br/>
+<br/>
+Excellent example. An "excerpt" in this case, a "table structure from a database" plays the role of an item of evidence taken from a source (the national database). Well, it doesn't play the role, it actually is a real item of evidence from a real source.<br/>
+<br/>
+If one were using the conclusion-based (aka person-based) methodology one would take info from that excerpt and add it directly to a conclusion person in a database. That excerpt may be textually based, but you treat as you would any other item of evidence, for example a birth certificate or an image of a census record -- you are using it ONLY to extract information to add to a conclusion person record.<br/>
+<br/>
+If you were using the evidence-based (aka records-based) methodology one would take that excerpt and create an evidence person directly from it. That would then be a new evidence level person record in your database, that would be grouped eventually with other evidence person records to form a conclusion person. In this world we are talking about two things, the excerpt which is real evidence, and the evidence person that is extracted from the excerpt.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-04-13T04:01:54-07:00</div>
+<div class="text">Mike: <em>  If anyone can tell me how to get this wiki to maintain white space, I'll make the example more readable. </em><br/>
+Look at "Code" in the Wikitext help page.<br/>
+<!-- ws:start:WikiTextRawRule:0:``[[code]]`` -->[[code]]<!-- ws:end:WikiTextRawRule:0 --><br/>
+This is plaintext.<br/>
+<!-- ws:start:WikiTextRawRule:1:``[[code]]`` -->[[code]]<!-- ws:end:WikiTextRawRule:1 --></div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-04-13T07:47:28-07:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I don't se any problem with linking to two different entity types, sources and researchers.<br/>
+<br/>
+There is a need to look at how do we store "excerpts", and what do we link them to. <br/>
+<br/>
+Also, in order to have evidence records to link to, I assume we need to have evidence and conclusion groups, places, ships and what ever.<br/>
+<br/>
+Are we able to link to all interpreted (not exerpts) by including evidence persons/groups/places/etc? Have we covered everything every place that you wold record something?<br/>
+<br/>
+You have not responded to my suggestion to have a separate page for E&amp;C - I am tired of discussing it all over the place, repeating explanations of the model all the time.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-04-13T09:36:52-07:00</div>
+<div class="text">Gier,<br/>
+<br/>
+If a source reference can point to a researcher, we've got a solution.<br/>
+<br/>
+I see "excerpt" the same was I see a birth certificate image. It is a REPRESENTATION of  evidence that we MIGHT want to store in our database. In the case of Mike's excerpt example, it is the representation of a record that exists somewhere else in a database. Evidence person records can be extracted from this kind of excerpt exactly as an evidence person records can be extracted from an image of a birth certificate.<br/>
+<br/>
+Personally, I would be more likely to just look at the "excerpt" on my computer screen while searching a database, and extract the info from the except directly into an evidence person record in my database. (I have done lots of work with city directories, and this is exactly what I do.) I might be making a mistake by not also wanting the add the EXCERPT ITSELF to my database, but I am confident enough that when I create the evidence person from the excerpt, I will capture the data fully and completely so I won't need to check the excerpt again. If I did have to refer to it again I'd have to go query the database again!<br/>
+<br/>
+Here is an example. You are researching a person in city directories. You find persons with the names you are interested in a string of three annual directories. How would you capture that evidence (say it consists of a name, an address and an occupation).<br/>
+<br/>
+What I do -- create a source record for each of the three directories -- create an evidence person for each mention of a person with a name I am interested in. The result is a few source records and a few evidence person records that refer to the source records.<br/>
+<br/>
+Now I COULD have ALSO created an "excerpt" for these records. That is, I could have clipped an image of the pages where the persons are mentioned and added those images to my database. They would also point to the sources, and the evidence records would point to them. . For me that's overkill. I have faith that the evidence person records I create are sufficient. But I fully understand the desire that many genealogists might have to be able to store images of the sources in their databases for ultimate backup.<br/>
+<br/>
+What do you think? Would you have clipped those images of the directories and added them to your database?<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-04-13T12:37:00-07:00</div>
+<div class="text">If I could download the image automatically, cf. Zotero discussed elswhere, and/or if I could download a transcribed version of it in a table data structure, there is no doubt what I would do. There is in most cases no garanty that the link I have to the image will work in ten years.</div></div><div class="comment"><div class="from"><strong>mmartineau</strong> 2011-04-16T16:11:36-07:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I see your and Gier's point about the extraction level being overkill.  It also models better in a relational database to remove it. I'll update my example to get rid of that layer.</div></div><div class="comment"><div class="from"><strong>mmartineau</strong> 2011-04-16T16:47:29-07:00</div>
+<div class="text">Ok, I went to change the example, but couldn't decide what to do with the concept of &lt;dateExtracted&gt; and &lt;extractor&gt;.  I don't want to lose this information.  It is important to know who and when the information was extracted from the source.  The reason for this is down the road, this extraction may be the only evidence that exists because the original was destroyed or no longer available.  It's important to know who extracted it because the record they create now becomes part of the source provenance.  For example suppose I'm looking at an index to death records.  The index has some meaningful information that states conclusions or provides information from which to form conclusions. This index is an extraction of the original source. Ideally, I would then go get the source the index was created from, but if it no longer exists, I am stuck using the index and referencing it as the source of my information.   The problem with this is the person who created the index may have made a transcription mistake. The same can happen today if someone extracts information from a website, but that website later is not available.  I want to know who extracted that data and when so that I can be clear that the information they provide may not accurately represent what was on the original source they extracted from.<br/>
+<br/>
+With that in mind, where would you suggest I put that information without duplicating it on every person record?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-16T17:16:39-07:00</div>
+<div class="text">Err...<br/>
+<br/>
+BetterGEDCOM has a moderator for Evidence Explained and GPS--it's me. <br/>
+<br/>
+Can someone explain why there is another effort going on to redevelop the concepts?</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-04-16T18:12:37-07:00</div>
+<div class="text">Mike,<br/>
+<br/>
+When I read your original example it was clear that &lt;dataExtracted&gt; and &lt;extractor&gt; were new concepts that the &lt;extraction&gt; element added. I wondered about the value of those two things when trying to evaluate the importance of the &lt;extraction&gt; idea. My conclusion was that the ideas were not important enough to justify keeping the &lt;extraction&gt; concept. As far as I know there has been little concern about these two ideas. When getting data from Ancestry.com, you get the source info (the database the data was found in, and you can click on the "more info" button about that source to get a more detailed description of it), but you don't get any details as to who did the individual extractions or when they did it.<br/>
+<br/>
+If you get rid of the &lt;extraction&gt; element, you have to put the &lt;dateExtracted&gt; and &lt;extractor&gt; elements into the &lt;person&gt; records. (What's wrong with a little duplication? Smile, smile.)<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-04-16T21:07:30-07:00</div>
+<div class="text">Responding to Geir:<br/>
+<br/>
+"I don't se any problem with linking to two different entity types, sources and researchers."<br/>
+<br/>
+If you want to think of a researcher as different than a source in this context, fine. Just remember that we want a model to define our entites, attributes, and relationships. Having one kind of entity refer to another kind of entity in the "source reference" relationship would be a relationship we define in the model. It is up to us to specify the model entities that can occur at each end of the relationship.<br/>
+<br/>
+"There is a need to look at how do we store "excerpts", and what do we link them to. "<br/>
+<br/>
+There has been some discussion on this. I assume we are talking about excerpts that are in a form that can be stored on a computer as either a text or image file. Excerpts can therefore be on the web or in the local file system, so can all be specified by a URL. Most models allow references to these things. In the DeadEnds model they are currently called URLs, and references to URLs can be placed almost anywhere within DeadEnds records. GEDCOM allows the same idea.. There has been discussion here about how such things would be put into a Better GEDCOM transport file, most people thinking that the export file, if the user so desired, could be a container (bundle in Mac OS X terminology) that holds copies of those files along with the data.<br/>
+<br/>
+"Also, in order to have evidence records to link to, I assume we need to have evidence and conclusion groups, places, ships and what ever."<br/>
+<br/>
+At least persons and events, maybe families and groups if added. OpenGen is talking about the same idea for places, but I don't understand they would gain from that. (At last rumor they were thinking of doing it with DATES also; please God, help us poor mortals).<br/>
+<br/>
+"Are we able to link to all interpreted (not exerpts) by including evidence persons/groups/places/etc? Have we covered everything every place that you wold record something?"<br/>
+<br/>
+I think so.<br/>
+<br/>
+"You have not responded to my suggestion to have a separate page for E&amp;C - I am tired of discussing it all over the place, repeating explanations of the model all the time."<br/>
+<br/>
+It's fine with me. I have been discussing this stuff for seventeen years, repeating explanations, ad nauseum. I might be tired of it, but I'm also convinced it is necessary. I guarantee that an E&amp;C page will not put an end to these discussions!<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mmartineau</strong> 2011-04-12T07:33:07-07:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Thanks for your response.  <br/>
+<br/>
+"Third, I feel the "extraction" level concept might be a bit of an overkill."<br/>
+<br/>
+I disagree.  In fact, I think it is the most important (and radical) concept to what I have proposed as I will explain while addressing the rest of your points.  <br/>
+<br/>
+First let me say, the explanation part (first half) of what I proposed what not very complete.  I wrote it late last night and was running out of steam.  The concrete example I gave was more fleshed out as I had written it a couple days ago.<br/>
+<br/>
+In reality, the "extraction" is just another source.  In fact, I was thinking this morning that the person, event, etc records ought to just reside in a source structure.  I think it is VERY important to capture the result of extracting from a source, because what the researcher is doing, is in fact creating another source.  In my mind there is no difference between a researcher extracting a record from a source and then passing that extraction on (in the form of a gedcom file, etc) to another researcher.  The extraction (source) was created from another source, but then again, the source that the extraction was created from probably came from anther source as well.  And so it continues (if you are fortunate to find the complete chain of sources) until you arrive at a human being who originally created/provided information for a physical source (document etc).<br/>
+<br/>
+Because extracting information from a source actually creates a source, this recursive data structure can now be used to solve your Fourth point of addressing the "person-based, conclusion-based world" in a way that documents the creation of the conclusions (your Fifth point).<br/>
+<br/>
+If you look at &lt;extraction id="a3"&gt; and &lt;extraction id="a4"&gt; in the example, you can see a computer algorithm and a researcher forming and documenting a conclusion and creating a "top-level" conclusion person (personId p300).<br/>
+<br/>
+I apologize for the readability of the example.  If anyone can tell me how to get this wiki to maintain white space, I'll make the example more readable.<br/>
+<br/>
+<br/>
+Mike M.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-04-12T08:46:28-07:00</div>
+<div class="text">Mike,<br/>
+<br/>
+I still think the extraction element is overkill. I see it as a "sub-source" concept that's not needed. I've read your example carefully. You are putting additional source fields at the top of some of the extraction elements. Those things should in my opinion be in the source records directly. The persons and events only need the additional source details to get to the right place in the sources.<br/>
+<br/>
+I see one possible advantage of an extraction-like object, as a way of binding together a self-contained set of person records with the event record they are role players in, e.g., a census household or a marriage record. In my software, internally, I have found it useful to use a data type I call a cluster, to be this concept, but at the database level I haven't encountered that need. The event record points to the person records and the person records point to the event record. Nothing additional is needed to call attention to the fact that they form a self-contained unit. One of my absolute rules about evidence records is that they be permanent, so those pointers will never change.<br/>
+<br/>
+And you don't need the basedOn elements because they are redundant with the sameAs fields. From the sameAs fields you can get to the sub-persons via the sameAs pointers, and from the sub-persons you can get to their sourceRefDetails. I'm not terribly comfortable with the name "sameAs" but I don't know what would be better, "subPerson". In the DeadEnds model I think I just called it a personRef (too lazy to go look while I'm typing this, though not too lazy to say I'm too lazy).<br/>
+<br/>
+Without an enclosing extraction your person 300 could be:<br/>
+<br/>
+&lt;person id="p300"&gt;<br/>
+&lt;sourceRef id="s0"&gt;<br/>
+&lt;sourceRefDetail type="CONCLUSION"&gt;I think these two are the same individual because...&lt;/sourceRefDetail&gt;&lt;/sourceRef&gt;<br/>
+&lt;sameAs ref="p1" /&gt;<br/>
+&lt;sameAs ref="p200" /&gt;<br/>
+&lt;/person&gt;<br/>
+<br/>
+I have taken the liberty of adding the sourceRef and sourceRefDetail elements as a replacement and slight tweak on your sourceDetail element to better capture its structure as I feel it.<br/>
+<br/>
+Frankly, I've never been a fan of XML and I love to remove extraneous pointy thingies.<br/>
+<br/>
+I get from your message that you might be thinking about the extraction as an extracted form of the source itself. I've thought about this a bit in the past, wondering whether there should be a way to take a source and convert it into some kind of tagged, "marked up" text or computer file. Whenever I go there I end up feeling like I'm grabbing at an extreme idea and I back away from it. I have found that the idea of creating evidence level person and event records is already too extreme for many Better GEDCOM folk. If we try to add the idea of also creating text-based, internal records, out of the sources themselves, I think we would loose almost everybody. What confuses this whole thing, and makes it very difficult to explain to the lay person, is that some sources are already in digital form (e.g., GEDCOM files, FamilySearch index databases)! It gets circular and pretty nasty sorting out these things some times.<br/>
+<br/>
+I am super glad you have joined the discussion as someone else seriously thinking about the modeling problems of multi-tiered evidence and conclusion trees. I've been getting pretty pessimistic that Better GEDCOM will finally embrace this idea, so it's great to have some one new to add to the group of us who think it might be a good idea! I really don't care much that we are disagreeing on the extraction idea, since we are agreeing wholly on the multi-tiered needs of supporting the research process.<br/>
+<br/>
+Tom W.</div></div><div class="comment"><div class="from"><strong>mmartineau</strong> 2011-04-12T10:01:27-07:00</div>
+<div class="text">Tom,<br/>
+<br/>
+To be honest, I don't mind that we are disagreeing on extractions either.  I've had this "extreme" idea for sometime now and I suspect there are others who also agree that a major paradigm shift needs to occur in the genealogy data model sphere.  It is my belief that current models lend themselves by their very nature to corrupting genealogy data.  Only the very diligent and experienced can keep their personal databases untainted by their own conclusions and the conclusions of others because current data models make it so easy to add erroneous conclusions and yet VERY difficult to locate and remove those conclusions and replace them with new conclusions.<br/>
+<br/>
+My purpose in posting the model to BetterGedcom is to start a discussion about this in a concrete form that can allow people to discuss the model's merits and pitfalls.  Thus, I'm very pleased that you are taking what I have posted seriously and taking the time to really internalize it and offer valuable feedback.<br/>
+<br/>
+"I've been getting pretty pessimistic that Better GEDCOM will finally embrace this idea"<br/>
+I hope you are wrong and that other will embrace this paradigm shift.  I really don't understand why there is a disagreement at all to exploring alternative data models.  I haven't taken the time to read all the discussions on this website (there a lot and I don't have a lot of time), so maybe if I did, I would understand the disagreements.  Perhaps those who are disagreeing don't fully understand what you are proposing.  It is a rather radical shift in what everyone is used to.  My thought is this new data model can very easily offer everything an old model did, but add so much more along the lines of supporting real genealogy research.<br/>
+<br/>
+My thought is if others on the BetterGedcom website don't agree with our approach, perhaps they are willing to let us and those who are interested have our own little space on the website to continue to explore this evidence-based model.  In the end we may all find we are on the same page.  I could go off and write it on my own, but I would much rather have feedback, help, collaboration, support, adoption etc, etc.  BetterGEDCOM seems the right place to get this.  Plus, I find all the other activities on the website very valuable too.<br/>
+<br/>
+Mike M</div></div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-04-12T07:16:42-07:00</div>
+<div class="title">Why?</div>
+<div class="text">What I am missing is a statement about why the model looks at is does. Which requirements does it satisfy? What problem does it solve? I can guess, but it is better to have it explained.</div><div class="comment"><div class="from"><strong>mmartineau</strong> 2011-04-12T10:18:18-07:00</div>
+<div class="text">See this thread:<br/>
+<!-- ws:start:WikiTextUrlRule:1:https://bettergedcom.wikispaces.com/message/view/BetterGEDCOM+Attempt/37521656 --><a class="wiki_link_ext" href="https://bettergedcom.wikispaces.com/message/view/BetterGEDCOM+Attempt/37521656" rel="nofollow">https://bettergedcom.wikispaces.com/message/view/BetterGEDCOM+Attempt/37521656</a><!-- ws:end:WikiTextUrlRule:1 --></div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-04-13T06:59:49-07:00</div>
+<div class="title">Extraction Entities and Source Citations</div>
+<div class="text"><br/>
+Something Gier said on the Comment on Your Example thread:<br/>
+<br/>
+"Assuming on one hand an Evidence Person (Tom’s model) or a Persona (Gentech) based on the info from one lookup, and on the other hand a free text transcript, an image or a data structure recording eg. a census household record from a lookup task, this can be achieved by linking the task to the Evidence person or Personas created as a result of the task (rather than keeping the info in one Extraction structure). I may be failing to see some advantage of having it in one structure, since this is for me a new and unfamiliar way of structuring the data."<br/>
+<br/>
+I agree; I don't see the need for the extraction element either. It seems to add a level of indirection. As Mike explained it, it is really a "sub-source" or a representation of a source. But we already have a source record that handles the case.<br/>
+<br/>
+I saw on another thread the mention of trees of sources. I used to advocate this idea (e.g., a chapter or page in a book could be a sub-source of the book which would be the source. I used to wonder if we should get rid of the repository record and think of a repository as a super-source record at the root of a source tree.). The extraction entity could play the role of a sub-source in a tree of sources. My current thinking is that these trees are unnecessary, that all we need are the following:<br/>
+<br/>
+1. Repository records.<br/>
+2. Source records that may point to repository records.<br/>
+3. Source references, which are the references inside other records that point back to source records. Inside these source references are the "details" (a nice term that Mike uses) that specify where in the source the evidence was found.<br/>
+<br/>
+For example, a source reference could be something like this:<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;&amp;lt;sourceRef id=&amp;quot;abc876uxl8h6xh&amp;quot;&amp;gt;&lt;br/&gt;  &amp;lt;chapter value=&amp;quot;XXI&amp;quot;/&amp;gt; &amp;lt;page value=&amp;quot;54-57&amp;quot;/&amp;gt;&lt;br/&gt;&amp;lt;/sourceRef&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&lt;sourceRef id="abc876uxl8h6xh"&gt;
+  &lt;chapter value="XXI"/&gt; &lt;page value="54-57"/&gt;
+&lt;/sourceRef&gt;</pre>
+<!-- ws:end:WikiTextCodeRule:0 --><br/>
+Here "chapter" and "page" would correspond to tags in ESM-based or other standard citation templates. With this three level scheme we can fully support any standard source, evidence and citation requirements. The work being done in the citation area now will come up with the sets of tags/entities needed in source records and source references to support an approved set of citation templates.<br/>
+<br/>
+These are certainly not original ideas! They exist in some form in many genealogical systems.<br/>
+<br/>
+Tom Wetmore</div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-04-13T08:58:48-07:00</div>
+<div class="text">Yes, there are systems and models that have implemented hierarchical sources. As I have stated before, I think this should be discussed on the Source &amp; Sitation pages - currently the page title focus on EE - see left. I am not convinced about the benefits of a hierrarchical structure, but there has realy not been much discussion about it. There is a large real world context of solutions that it would have to fit into - and if you think E&amp;C is complex - look at that context.</div></div><div class="comment"><div class="from"><strong>mmartineau</strong> 2011-04-16T15:08:32-07:00</div>
+<div class="text">@Tom<br/>
+<br/>
+When you say:<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;&amp;lt;sourceRef id=&amp;quot;abc876uxl8h6xh&amp;quot;&amp;gt;&lt;br/&gt;  &amp;lt;chapter value=&amp;quot;XXI&amp;quot;/&amp;gt;&lt;br/&gt;  &amp;lt;page value=&amp;quot;54-57&amp;quot;/&amp;gt;&lt;br/&gt;&amp;lt;/sourceRef&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&lt;sourceRef id="abc876uxl8h6xh"&gt;
+  &lt;chapter value="XXI"/&gt;
+  &lt;page value="54-57"/&gt;
+&lt;/sourceRef&gt;</pre>
+<!-- ws:end:WikiTextCodeRule:0 --><br/>
+Does your model allow the id to reference more than one source within the same person record or does it require that the exact same (one and only one) source be referenced that was originally referenced at the root of a person record?<br/>
+<br/>
+In the DeadEnds model, you have source* under the person record, implying that a person can have more than one source.<br/>
+<br/>
+My intent is that a person record can ONLY have one source and it MUST have that source. This is because every piece of information in that person record came from the same source.  If a conclusion is formed that requires multiple sources to draw the conclusion, the source would be the researcher who formed the conclusion based on evidence from other sources (thus the basedon reference).  I'm sure there is a better way to do this than what I put out there, but it was an attempt.  Ultimately, what I want is to know where every conclusion came from whether it be from a physical artifact or from the thought process of a researcher or a computer algorithm.  I also want to have those components (person records) separate entities so they can be linked and re-linked as more needed and new evidence emerges.  In my opinion, there should NEVER be a reason to merge person records in a database.  The moment you merge an person, you have corrupted your database.  That is not to say that a software application should not "present" a merged view to a user, but that merged view is simply combining the data from all person records that are deemed to be the same at that time.</div></div><div class="comment"><div class="from"><strong>mmartineau</strong> 2011-04-16T15:32:22-07:00</div>
+<div class="text">@Tom<br/>
+<br/>
+The reason for multi-level sources is to maximize flexibility of the data model. The problem I see with 3 levels (repository, source, source reference) is it requires a rigid definition as to what goes in which of the three levels.  One vendor may decide that certain information should go in the source whereas another may decide that information goes in the source reference.  This makes it difficult to adapt to new situations and source types and makes it difficult to translate between multiple vendors.  I don't think a data model should dictate how these things are broken out.  <br/>
+<br/>
+There seems to be a lot of discussion about Evidence Explained.  According to my reading of EE, a source is a physical person or thing (EE 2007, pg24).  A citation is how we make reference to that physical thing.  In fact according to EE there is no such thing as a three level hierarchy, unless you consider the different ways to &lt;em&gt;display&lt;/em&gt; the citation (Source List Entry, First (Full) Reference Note, Subsequent (Short) Note).  <br/>
+<br/>
+My thought is to make the model flexible and then allow external definitions/applications interpret the model to produce different styles of source/citation output (e.g. EE style).</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-04-16T16:20:23-07:00</div>
+<div class="text">@Mike:<br/>
+<br/>
+As I think you know, we started to look at citations from the standpoint of different style guides and applications. This includes looking at Mills Evidence Explained and the trend in modern applications to enable her styles. See EE &amp; GPS Support.<br/>
+<br/>
+It sounds like you have worked with Mills styles. Have you also worked with say GenBox, which enabled the concept of higher/lower sources?<br/>
+<br/>
+I understood from Tom that he hadn't worked with Evidence Explained.<br/>
+<br/>
+In the work Geir and I were doing for EE &amp; GPS Support, we had not ruled out using higher/lower concepts to support standardizing the field names in Evidence Explained, and/or enabling a Zotero style to support Evidence Explained. <br/>
+It's even possible the higher lower concept would help bridge the gap between applications with larger source systems and those with comparatively smaller source systems.</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-04-16T17:17:24-07:00</div>
+<div class="text">On a one user system, if you create a conclusion person based on some underlying person records, you would today have only one person that could do that, so there is no reason to identify the researcher.<br/>
+<br/>
+If the program can do it, it is obviously a need to identify "the program", and you will the also have to identify "the user".<br/>
+<br/>
+If you are on a multiuser system, eg. FS, you want to know who created the new record. On such a system you will have records identifying the researchers/users. There are also at least one PC program that can handle several users, and internally labels all citations (and possibly other records) with the name of researcher that created the record.<br/>
+<br/>
+I see a need to identify who did the change, but what I don't like is to call that a source, it is not a big deal to be able to link to a researcher/user record rather than a source. I don't think I would like to see a citation in my report stating that the conclusion was drawn by a program, and in the rare event that I want to indicate that another user concluded something, I would add him as a source. In that way you would have control on when to identify the researcher. <br/>
+<br/>
+And, even if you don't model researchers as sources in BG, there is nothing preventing an implementation from having an option to treat researchers as sources in reports.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-04-16T17:49:29-07:00</div>
+<div class="text">Mike,<br/>
+<br/>
+You ask:<br/>
+<br/>
+"Does your model allow the id to reference more than one source within the same person record or does it require that the exact same (one and only one) source be referenced that was originally referenced at the root of a person record? ... In the DeadEnds model, you have source* under the person record, implying that a person can have more than one source. ... My intent is that a person record can ONLY have one source and it MUST have that source. This is because every piece of information in that person record came from the same source. If a conclusion is formed that requires multiple sources to draw the conclusion, the source would be the researcher who formed the conclusion based on evidence from other sources (thus the basedon reference). I'm sure there is a better way to do this than what I put out there, but it was an attempt. Ultimately, what I want is to know where every conclusion came from whether it be from a physical artifact or from the thought process of a researcher or a computer algorithm. I also want to have those components (person records) separate entities so they can be linked and re-linked as more needed and new evidence emerges. In my opinion, there should NEVER be a reason to merge person records in a database. The moment you merge an person, you have corrupted your database. That is not to say that a software application should not "present" a merged view to a user, but that merged view is simply combining the data from all person records that are deemed to be the same at that time."<br/>
+<br/>
+This is a point that has been brought up a few times.<br/>
+<br/>
+We live in the era of (towards the end of, I hope) "person-based" genealogy, where most users only want "final persons" or "conclusion persons" in their databases. They want these persons to be self-contained, to hold all the information they have found about that person, no matter where they found it. The majority of genealogists have this view; I know this from long experience of discussions and arguments. So in this particular world, in order for the conclusion persons to hold proper sources, you must allow genealogists to place a source substructure on every fact and attribute in the records. Without this you loose all information about sources.<br/>
+<br/>
+My goal in creating the DeadEnds model was to have a model that would support both person-based genealogy and record-based (evidence-based) genealogy. I therefore allow every attribute and other component of a record to have a source. If I didn't allow this the DeadEnds model would be useless for the current generation of genealogical applications.<br/>
+<br/>
+Once we are in the world of records-based genealogy then we are in the world where every record should have only one source -- for evidence records that source is where the record came from, for the records formed by combining other records it is the decision of conclusion that brought them together. Thus all records in this model need only one top level source. Once we have persons as "trees" everything works perfectly with single sources per record. Intellectually is is beautiful and it stands up to every situation -- it is simply the right way to do things.<br/>
+<br/>
+I have mentioned this idea a number of times, but there has been a good deal of opposition to it. Which is fine. The paradigm shift from person-based to record-based (it is REALLY a paradigm shift to a COMBINED records-based and person-based world), as in all paradigm shifts, is encountering lots of resistance from people who are so entrenched in the older paradigm that they cannot imagine the world after the shift. It talking about this stuff for the past 15 years I have encountered many people who simply cannot understand any other person concept except the conclusion person concept and think what I talk about is absolute rubbish. But then there is always the encouragement I get from reading stuff written by people like you who basically say, "yes, of course, it's obvious the world is that way." This is simply the way the world works.<br/>
+<br/>
+In my own research I use the LifeLines program that I wrote about twenty years ago. It uses GEDCOM as its database, but a GEDCOM that allows any tags I choose to use. When I first started doing genealogy, I was as naive and uncritical as the average beginner. Like most, I simply assumed the "person-based" approach. After all, I know who my parents are, who my grand parents were, who my great grandparents were, and even who some of my great great grandparents were. I didn't need to go off and research lots of records for this data; I just asked relatives and wrote down what they said. So my database records were these conclusion GEDCOM records that summarized all that I learned. At first, also like beginners, I didn't take seriously the need to add sources to the records. I mean, what is true is true, so why bother.<br/>
+<br/>
+But like many genealogists, I have been through two "crises" since then.<br/>
+<br/>
+First, that the farther back in time we go the more need we have to fully understand and use whatever sources our ingenuity leads us to. There are often minor conflicts in what we find, so if we want to carefully record all we learn, we need to keep track of the evidence, and we need to source it properly in our records. So now I have records in my database that have no to little sources, those created long ago, to records that have lots of sources, those created recently. First crisis is going back and reviewing all the evidence on those old records and getting things straightened out. Note that this crisis exists fully within the person-based world.<br/>
+<br/>
+But crisis two is much more significant. This is the crisis that occurs when you realize that you can't work in the simple world person-based genealogy any more. You know you are in this world when you start collecting lots of evidence and you realize you don't know what real persons it belongs to yet. You know it will eventually belong to a conclusion persons, but you don't know where to put it yet. I am solidly into this world now. The way I handle it with LifeLines is I just create "evidence person" records exactly as I create any other person record, but I just put in them the exact facts that come from a single source. If that source were a birth certificate, I create all the records implied, the three person records for the principals, and a family record for the parents. That is, I end up with three new INDI records and one new FAM record. Everybody could do this with their current genealogical systems and I imagine that many do.<br/>
+<br/>
+Since LifeLines allows any tags anywhere, I can put 1 INDI tags inside INDI records, to get the equivalence of the multi-tiered trees I talk about in the DeadEnds model. The only real issue is that I have not given LifeLines any user interface to understand what's going on. But I'm slowly rectifying that with the software I'm working on now.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-04-16T18:00:59-07:00</div>
+<div class="text">Mike,<br/>
+<br/>
+I believe my three levels (repository, source, source reference) support EE as intended, so I don't see your concern. I shouldn't call them "my" levels, since these are the three levels that show up, maybe in slightly different guises, in most models.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>mmartineau</strong> 2011-04-16T18:04:19-07:00</div>
+<div class="text">Tom, <br/>
+<br/>
+Thanks for the insight.  I have to say, I agree with you.<br/>
+<br/>
+Referring back to the reason you allow multiple sources per person record, I have some ideas on how old paradigm conclusion-based models can be put into the new paradigm without any problems and still only have one source per person.  As soon as I get a chance I'll post it so I can get your feedback.</div></div><div class="comment"><div class="from"><strong>mmartineau</strong> 2011-04-16T18:09:25-07:00</div>
+<div class="text">Ha ha that's funny.  I posted a response to your earlier (longer) post and then realized you posted again before I saved.<br/>
+<br/>
+I agree with you on your earlier post.  As to three levels to sources, I'm not yet convinced.  I'll have to see more discussion on it.</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-04-17T04:28:53-07:00</div>
+<div class="text">About identifying the one who made a change -<br/>
+GEDCOM has the "CHANged" structure, usually with only a DATE. So if we just add a reference to the researcher/author (or automatic program), that could be enough to keep everything documented.</div></div></div></body>
+</html>

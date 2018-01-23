@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>BetterGedcom - PERSON</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+This entity type represents some state of the research into an individual person. <br/>
+<br/>
+When a person is first entered into a BetterGEDCOM (BG) file, using the data from a single source, the person entity will clearly contain just the information extracted from that single source. When a second source, apparently for the same person, is obtained and entered to the BG file, the user can then proceed in one of two ways:<br/>
+<ul><li>Add the new information to the existing PERSON entity, so that the single PERSON entity always contains the current working hypothesis about an individual;</li><li>Create a second PERSON entity, using only the data from the second source. The first and second entities can be referred to as "evidence" entities. Then, assuming analysis justifies this, create a third PERSON entity containing the complete working hypothesis for this individual, manually selecting those accepted pieces of information from the first two "evidence" entities to put into the third PERSON, which we can refer to as a "hypothesis" person (or "conclusion" person providing we understand that these conclusions will probably be updated later).</li></ul><br/>
+The first method is employed by most users of GEDCOM today, and so must be present in BG to allow ease of conversion from GEDCOM to BG.<br/>
+<br/>
+The second method can be referred to as the "evidence and conclusion model" (or "evidence and working hypothesis model"). It allows the separation of evidence and conclusions / hypotheses for better examination of that process.<br/>
+<br/>
+It is clear that it will be <em>possible</em> to stack persons in a tree so that a hypothesis person on one layer, later becomes an evidence person for a later hypothesis person.<br/>
+<br/>
+The intention of the model is that (probably) all historical knowledge about a person be held against related entities and that this entity type should simply point to them.<br/>
+<br/>
+<strong>Attributes</strong>:<br/>
+To follow (this could be the appropriate place to save flags that control security of the IT application(s))<br/>
+<br/>
+<strong>Relationships</strong>:<br/>
+A PERSON may take evidence from 1 or more PERSONs<br/>
+A PERSON may provide evidence for 1 PERSON<br/>
+A PERSON may be characterised by 1 or more CHARACTERISTICs<br/>
+A PERSON may be involved in 1 or more EVENTs<br/>
+<ul><li>This relationship (PERSON - EVENT) needs an optional attribute to define the role of that PERSON in that EVENT - e.g. a role of biological mother in a birth event)</li></ul>A PERSON may belong to 1 or more GROUPs<br/>
+<ul><li>This relationship (PERSON - GROUP) needs an optional attribute to define the role of that PERSON in that GROUP)</li></ul>More to follow re sources, citations, etc.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-21T14:27:39-08:00</div>
+<div class="title">Person Discussion</div>
+<div class="text">I have a question about the Person Page. Please understand that I am a user of a software package. I want to be able to Share the information with another User, without loss of any information or any media files associated what my file.<br/>
+<br/>
+This page is talking about a Person, but has two options. I am trying to understand the need for two options.<br/>
+<br/>
+I may have one person or many persons in the file that I want to Share. <br/>
+<br/>
+I think that I can live with the first statement:<br/>
+<br/>
+- "conclusion mode" where the entity records the current conclusions about the whole history of this person;<br/>
+<br/>
+I am not sure I would use the term Conclusion Mode. All I hope we are talking about is "the whole history of this person". This would include any Facts or Events that involve this person AND any Source and Citation about this individual.<br/>
+<br/>
+As for the Evaluation of the Evidence in the Citations leads to a conclusion, then the Evidence Statements and any Conclusion Statements, how ever they are formatted should be passed along.<br/>
+<br/>
+The second part:<br/>
+<br/>
+- "evidence mode" where the entity records the evidence extracted from a single(??) source about an individual person appearing on that (those??) source(s);<br/>
+<br/>
+Is where the question comes in. Does this mean that a BetterGEDCOM file would start by sending the Source Citation (Evidence) with links to every person and events / facts that is linked to that citation?<br/>
+<br/>
+That is, for a Census Record, that I would be able to Select a Source Citation and send that Source Citation to the person I am sharing information with, along with every one, events or facts that are in that Source Citation?<br/>
+<br/>
+I am only trying to see if this is necessary, for the purpose of Sharing my research. This second part is more about me doing the work for someone else. The first entry is when I should share information about the person(s) AND where I received the information from, any Evidence Evaluation and perhaps a conclusion, but not the data from my research.<br/>
+<br/>
+Perhaps I am not understanding this 2nd piece.<br/>
+<br/>
+It is clear to me, that I must start with the Evidence, and create the facts or events for the person, and provide the documentation, but for sharing of that information, I would share what I have and let the person I am sharing the information "take it from there".<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-23T03:57:41-08:00</div>
+<div class="title">Some issues with the terms</div>
+<div class="text">This page reads like BG is a database that people interact with. It is not, but rather a file format for representing your database, and perhaps past operations.<br/>
+<br/>
+For example, one doesn't enter a Person into BG, one enters it into an application through some process or another. BG is representation of data that the application assembles. I think confusing these two things unnecessarily involves the process, which will be application specific. <br/>
+<br/>
+Of course, one could use process as an example for helping to explain specific details. But at its base, the PERSON object is a static representation of information devoid of any particular process.<br/>
+<br/>
+-Doug</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-23T09:31:48-08:00</div>
+<div class="text">True, Doug, but this is also a workspace specifically for Adrian's ideas, not the definitive BetterGEDCOM working proposal or anything.<br/>
+<br/>
+On the other hand, it is important to recognize that "data entry" for us will largely be how well data existing in today's genealogy apps fits into our model, not someone sitting at a computer working with their application. If the app they're using is junk, we can't fix that no matter what. But if our data model doesn't accommodate the data models of existing apps, then our work is junk, essentially.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-24T05:12:29-08:00</div>
+<div class="text">"one doesn't enter a Person into BG, one enters it into an application"<br/>
+<br/>
+I understand what you're driving at and I sympathise. However, some of what I've written has been to explain how the data is used, on the basis that simply studying an abstract model doesn't inform most people, and I found that "enter into BG" was a lot simpler to write than "enter into an application using the BG file format as an import / export or file-storage model!"</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-24T05:59:58-08:00</div>
+<div class="text">Yes, it is a shortcut. But I didn't realize that these were just your pages. You could just say "represented in" rather than "entered into" though. I think it is a good idea to keep in mind that the database can look very different from BG. There might even be two tools---the app and another process tool.</div></div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-23T09:01:15-08:00</div>
+<div class="title">Thoughts</div>
+<div class="text">Adrian,<br/>
+<br/>
+I certainly like what you're doing here overall, and I practically cheered when you posted your ideas.<br/>
+<br/>
+Anyway, as you progress in your thinking, I hope you'll work to dovetail your ideas into the other pages. Setting up your own section to work on concepts you think are important or interesting is great, but I am concerned that ideas discussed on these pages be assimilated, particularly in regard to things that everyone's pretty much in agreement about.<br/>
+<br/>
+Anyway, just a thought. Otherwise, like I said, I'm very excited to see what you work out.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2010-11-24T05:07:14-08:00</div>
+<div class="text">OK - let me get my thoughts straight first and then I can add in elsewhere.</div></div></div></body>
+</html>

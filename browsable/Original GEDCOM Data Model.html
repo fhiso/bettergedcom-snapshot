@@ -1,0 +1,516 @@
+<html>
+<head>
+<title>BetterGedcom - Original GEDCOM Data Model</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+The de facto GEDCOM standard actually comes in several versions, and all the standard versions are in fact backward compatible. Given the backward compatible nature of the previous versions, it seems unproductive to go into the minutia of older versions. Here the commonly recognized versions, which are version 5.5 and, to a lesser degree, version 5.5.1 are discussed. Also draft versions such as the XML-based version 6.0 draft and the GEDCOM (Future Directions) draft version will be discussed.<br/>
+<br/>
+Anyone with knowledge of previous versions that feels discussion of their development or other considerations are of value, please add your thoughts and information.<br/>
+<br/>
+Much of the data provided here is from the<a class="wiki_link_ext" href="https://devnet.familysearch.org/docs/gedcom" rel="nofollow" target="_blank"> FamilySearch Developer Network for Software Programmers GEDCOM Wiki Page</a>. Given that they are the original developer of this standard, I highly recommend study of their resources.<br/>
+<br/>
+<br/>
+<h3 id="toc0"><a name="x--GEDCOM Specifications"></a><span style="border-bottom-style: none; color: black; font-family: 'Lucida Grande',Verdana,Lucida,Helvetica,Arial,sans-serif; font-size: 14px; margin: 0.75em 0px 0.25em;"><strong>GEDCOM Specifications</strong></span></h3>
+<h3 id="toc1"> </h3>
+<span style="background-color: transparent; border-bottom: #cccccc 1px solid; color: #436976; text-decoration: none;">GEDCOM versions (that have been used by genealogy software):</span><br/>
+<ul><li><span style="background-color: transparent; border-bottom: #cccccc 1px solid; color: #436976; text-decoration: none;">GEDCOM 5.5 of 2 January 1996: (<a href="file/view/gedcom55.pdf" target="_blank">PDF Version</a>[official document]) (<a class="wiki_link_ext" href="http://homepages.rootsweb.ancestry.com/~pmcbride/gedcom/55gctoc.htm" rel="nofollow" target="_blank">HTML Version</a>[Not official but seems complete. Provided for convenience.])</span>- Most widely accepted specification of GEDCOM.</li><li><span style="background-color: transparent; border-bottom: #cccccc 1px solid; color: #436976; text-decoration: none;"><a href="file/view/ged551-5.pdf">GEDCOM 5.5.1 DRAFT</a></span>of 2 October 1999 - This specification introducing nine new tags, including WWW, EMAIL and FACT, and added UTF-8 as an approved character encoding. This draft has not been formally approved, but its provisions have been adopted in some part by a number of genealogy programs and is used by FamilySearch.org. It is the de-facto standard.</li><li><a class="wiki_link_ext" href="http://www.lege.com/gedcom54.html" rel="nofollow">GEDCOM 5.4 DRAFT</a> of 21 August 1995 was used by a few programs.</li><li><a class="wiki_link_ext" href="http://www.bartonstreet.com/deadends/LDS/gedcom5.3.txt" rel="nofollow" target="_blank">GEDCOM 5.3 DRAFT</a> of 4 November 1993 was used. Many GEDCOMs still exist that were created using this draft.</li></ul><br/>
+XML Versions (never used)<br/>
+<ul><li><a class="wiki_link_ext" href="http://www.bartonstreet.com/deadends/LDS/ged56xml.pdf" rel="nofollow" target="_blank">GEDCOM 5.6 DRAFT</a> of 18 December 2000, never released to the public, includes GEDXML format. <a class="wiki_link_ext" href="http://www.tamurajones.net/GEDCOM5.6.xhtml" rel="nofollow" target="_blank">Tamara Jones' Analysis of GEDCOM 5.6</a></li><li><a href="file/view/GedXML60.pdf" target="_blank">GEDCOM XML 6.0 DRAFT</a> - of 28 December 2001. Included is a cover letter from 23 January 2002, stating that this draft(beta) version of GEDCOM 6.0 was released for developers to study only as it was not a complete specification and recommended not to begin to implement in their software. For example, descriptions of the meaning and expected contents of tags were not included. GEDCOM 6.0 was to be the first released version to store data in XML format, and was to change the preferred character set from ANSEL to Unicode. There is <a class="wiki_link_ext" href="http://www.bartonstreet.com/deadends/LDS/GedXML60.pdf" rel="nofollow" target="_blank">an earlier version of the same draft</a>from 2 October 2000.</li><li><a href="file/view/Gedfmstr.pdf/181458665/Gedfmstr.pdf" target="_blank">GEDCOM "Future Direction" Document</a>of 7 July 1999 was a document presented for the purpose of fostering discussion toward the future direction of genealogical data communication.</li><li>GEDCOM XML Letter: "<a class="wiki_link_ext" href="http://www.bartonstreet.com/deadends/LDS/GedArtcl.pdf" rel="nofollow" target="_blank">Will GEDCOM Be Replaced By XML?</a>(date unknown but folloed the 6.0 DRAFT) includes the LDS work to move towards XML and includes a clear and interesting GEDXML Data Model diagram</li></ul><br/>
+Other:<br/>
+<span style="padding-left: 30px;"><span style="background-color: transparent; border-bottom: #cccccc 1px solid; color: #436976; text-decoration: none;"><a href="file/view/GEDCOMUniqueIdentifiers.pdf" target="_blank">GEDCOM Global Unique Identifier</a></span> (GUID) of 8 June 2007</span><br/>
+<br/>
+<h3 id="toc2"><a name="x--Use of ANSEL vs. UTF-8 Character Set"></a>Use of ANSEL vs. UTF-8 Character Set</h3>
+ The GEDCOM 5.5 specification uses the ANSEL character set, which is obsolete. The intermittently implemented 5.5.1 standard uses the UTF-8 character set that is now nearly universally used by computers. This issue must be resolved in any new standard. Use of UTF-8 character set should clearly be the new standard.<br/>
+<br/>
+<h3 id="toc3"><a name="x--Use of GEDCOM 5.x File Syntax vs. XML Language Syntax"></a>Use of GEDCOM 5.x File Syntax vs. XML Language Syntax</h3>
+ The file syntax of all used GEDCOM versions (i.e., 5.5.1 and below) is the same, and all those versions are consequently backward compatible (except for some largely inconsequential discontinued attributes). This file syntax is unique to GEDCOM, and it contains weaknesses that would make its future use ill advised. Moreover, the GEDCOM syntax is based on a hierarchical data model just as the XML language is, making the adoption of XML something that can be easily understood and accomplished by developers. XML is a widely used standard language, and thus adopting XML for widespread genealogical use could easily result in many more applications being available to the genealogist as developers discover how easily their products can be adapted for genealogical use.<br/>
+<br/>
+The downside to using XML is that BetterGEDCOM (BG) immediately ceases to be backward compatible. Tools could easily be developed to convert old GEDCOM files to the new BG format, but the two formats would be irrevocably separate. This is probably inevitable, but it is important to note this future incompatibility prominently and explicitly.<br/>
+<br/>
+<hr/>
+(The following was cut from a separate page on this WIKI and that page is now unlinked. The contents are better placed here. Original was by Greg Lambertson. Feel free to edit).<br/>
+<h1 id="toc4"><a name="GEDCOM 5.5 Discussion And Detail"></a>GEDCOM 5.5 Discussion And Detail</h1>
+<br/>
+<h2 id="toc5"><a name="GEDCOM 5.5 Discussion And Detail-Notes from reading through the GEDCOM 5.5 Standard"></a>Notes from reading through the GEDCOM 5.5 Standard</h2>
+<h3 id="toc6"><a name="GEDCOM 5.5 Discussion And Detail-Notes from reading through the GEDCOM 5.5 Standard-Cover Letter"></a>Cover Letter</h3>
+<br/>
+"Needed changes that would cause major compatibilities with prior implementations were postponed until release 6.0, some time in the future. Minor 5.x releases may occur in the interim." This tells me that even by the release of the 5.5 standard, FamilySearch recognized the existing GEDCOM standard's syntax caused limitations that could not be fixed within its framework.<br/>
+<br/>
+<h3 id="toc7"><a name="GEDCOM 5.5 Discussion And Detail-Notes from reading through the GEDCOM 5.5 Standard-Introduction"></a>Introduction</h3>
+<br/>
+The specification describes the standard at a low level in Chapter 1 and a high level in Chapter 2. The lower level is called the <em>GEDCOM data format,</em> and the high level is called a GEDCOM form (there can be many <em>GEDCOM forms</em>). The GEDCOM form for the purposes of the standard is specified as the <em>Lineage-Linked GEDCOM Form</em>.<br/>
+<br/>
+This table should be useful in seeing how these sections correspond with our future efforts.<br/>
+<table class="wiki_table">
+<tr>
+<th><br/>
+</th>
+<th>GEDCOM 5.5<br/>
+</th>
+<th>BetterGEDCOM (BG)<br/>
+</th>
+</tr>
+<tr>
+<th>Data Syntax (low level)<br/>
+</th>
+<td>Chapter 1: GEDCOM Data Format<br/>
+</td>
+<td>XML syntax<br/>
+</td>
+</tr>
+<tr>
+<th>Data Model (Genealogical Structure of data)<br/>
+</th>
+<td>Chapter 2: Lineage-Linked GEDCOM Form<br/>
+</td>
+<td>XML BetterGEDCOM namespace<br/>
+</td>
+</tr>
+</table>
+<br/>
+As illustrated by this table, BetterGEDCOM (BG) will benefit from using the existing XML data format by not having to define a custom low-level data syntax.<br/>
+<br/>
+<h3 id="toc8"><a name="GEDCOM 5.5 Discussion And Detail-Notes from reading through the GEDCOM 5.5 Standard-Chapter 1"></a>Chapter 1</h3>
+<br/>
+<h3 id="toc9"><a name="GEDCOM 5.5 Discussion And Detail-Notes from reading through the GEDCOM 5.5 Standard-Chapter 2"></a>Chapter 2</h3>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-03T19:23:43-07:00</div>
+<div class="title">Source citation mangling through GEDCOM </div>
+<div class="text"><!-- ws:start:WikiTextUrlRule:0:http://www.geneamusings.com/2010/10/source-citation-mangling-through.html --><a class="wiki_link_ext" href="http://www.geneamusings.com/2010/10/source-citation-mangling-through.html" rel="nofollow">http://www.geneamusings.com/2010/10/source-citation-mangling-through.html</a><!-- ws:end:WikiTextUrlRule:0 --></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T02:40:12-08:00</div>
+<div class="title">Two Important Points about the Gedcom Model</div>
+<div class="text">There are two points about the Gedcom model I think are important to point out and they both apply to a new genealogical model and a better Gedcom.<br/>
+<br/>
+First, Gedcom is both a syntactic language and a semantic one. At the syntactic level Gedcom is a set of rules for constructing and arranging into a tree a collection of Gedcom lines. There is nothing in this language that specifies what the tags are, what the tags mean, what tags are required, what formats values should have and so on.<br/>
+<br/>
+It is only at the semantic level that rules about tags, arrangements of tags, and values of lines mean anything. The Gedcom standards try to point this out by saying they primarily add "lineage linking semantics" to the Gedcom syntax.<br/>
+<br/>
+As a syntax Gedcom is essentially isomorphic to XML as a general purpose language for structuring information. They are both representations of the same things; you can transform back and forth between Gedcom and XML formats pretty much at will. As old computer scientists like myself say, "it's just syntactic sugar."<br/>
+<br/>
+Second point concerns whether Gedcom is a language for data interchange or a language for data storage and representation. If you read the Gedcom documents it is clear that the intention was the former. But if you look at how Gedcom has often been used it often includes the latter. A VERY important point lurking behind this issue is that if Gedcom is JUST a data transfer language, that data in a different format must be translated to Gedcom before a transfer, and translated from Gedcom to a third format after transfer. In almost all cases, and lamented by millions of genealogists around the world daily, both these translations are LOSSY operations. If Gedcom were the storage language at both ends of the transfer then no information would ever be lost. This is such an obvious point and screams you so insistently over the years, that at some point it pays to notice it and do something about it. As far as I know LifeLines and GeditCom are the only two programs that have listened.<br/>
+<br/>
+There are lessons from both these points to learn from when thinking about the better Gedcom. First the underlying textual format in which model objects eventually are represented in must have the same general purpose syntax equivalent to that of Gedcom or XML; it could have either format. Personally I would recommend a new syntax because 1) Gedcom syntax at this point in time just has too bad of a connotation/taste to too many peoples' mouths; they would think the better Gedcom effort had really not done something very useful or significant; and 2) XML has TOO MANY WORDS, TOO MANY POINTY THINGS, and IS TOO DARNED HARD TO READ. You don't have to read them you say, because that's what computers are for. Baloney. And anyway, it's just syntactic sugar after all.<br/>
+<br/>
+Tom Wetmore</div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-11T04:31:42-08:00</div>
+<div class="text">I am sure that every system that reads and writes GEDCOM is aware that the standard does not allow them to save all of their data. However, many vendors EXTEND GEDCOM in arbitrary ways so that it is no longer lossless. This is almost as bad as being lossless, because it is lossless for all other vendors.<br/>
+<br/>
+Gramps does not extend GEDCOM, nor does it read any other non-standard extensions of GEDCOM. We have documented all of the bits that we lose:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:10:http://www.gramps-project.org/wiki/index.php?title=Gramps_and_GEDCOM --><a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=Gramps_and_GEDCOM" rel="nofollow">http://www.gramps-project.org/wiki/index.php?title=Gramps_and_GEDCOM</a><!-- ws:end:WikiTextUrlRule:10 --><br/>
+<br/>
+To your points:<br/>
+<br/>
+1) Yes, theoretically, any syntax would work<br/>
+<br/>
+2) XML is the standard manner for representing this kind of data. There are many tools for processing general XML. Combined with UTF encoding, XML is the right choice in 2010 for representing any data to be shared, and archived.</div></div><div class="comment"><div class="from"><strong>Just.another.Gramps.user</strong> 2010-11-11T05:02:13-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Your text is clear and you make good points, albeit in a somewhat prevailing rough tone here. Somethings I'd like to consider:<br/>
+<br/>
+If Gedcom is isomorphic to XML, as you say, a 1:1 correspondence could easily be kept _if there were a solid Gedcom specification_. No loss would happen then -- at least nothing significative. What really bothers people is not Gedcom syntax, as you say. It even does have some advantages to XML. The real problem is the lack of proper semantics and semantic chaos emanating from various vendors adopting their own sets of rules.<br/>
+<br/>
+So would you reach a semantic consensus, there is no real reason why we should think of the translation operations as "LOSSY". They wouldn't be. Gramps is the proof. There is no loss whatsoever between Gramps XML and a Gramps Family Tree (BSDDB). At least I can't recall significative cases, because there is the 1:1 correpondence, because there is semantic consistency. That is not the case between Gramps and Gedcom or between Gedcom and Gedcom, thus the problem you're trying to solve. I don't see a case between Gedcom syntax and XML syntax, because the "LOSS" you mention wouldn't exist or significantly exist with proper semantic specifications.<br/>
+<br/>
+jagu</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-11T05:16:46-08:00</div>
+<div class="text">JAGU,<br/>
+<br/>
+GEDCOM 5.5 spec Chapter 1 = GEDCOM SYNTAX, anaogous to XML in function<br/>
+<br/>
+GEDCOM 5.5 spec Chapter 2 = GEDCOM Data Model, which is the real issue. <br/>
+<br/>
+The only reason XML is being thrown about so much is that people simply aren't familiar with it. I suggest you just ignore references to XML, as we will be using XML for this project, and any reference to any genealogical data whatsoever in relation to GEDCOM must be referring to the GEDCOM Data Model (i.e., that part of the spec in Chapter 2 above)<br/>
+<br/>
+The problem is that in mapping various data models to each other, data is lost due to either poor mapping, ambiguities in the data models, or simple incompatibilities. All reference to losing data has nothing to do whatsoever with XML being used (or not being used).</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-11T05:24:20-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Also I wanted to suggest you use the free XML editor referred to in the TOOLS section linked on the left if you want to read XML. We will be adding structure to BG, just as other formats have added complexity. <br/>
+<br/>
+You consider GEDCOM to be more "readable."  Well, I guess that's because you're used to it. I personally find XML more readable. But overall, go have a cookie or something. I don;t plan on reading either if I can help it, and neither do 99% of people using this or any other similarly formatted data.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T07:40:36-08:00</div>
+<div class="text">I concede the battle over XML; it was over before it began. I simply don't like XML. The amount of extra characters required to say trivial things stuns me. The plethora of pointy things and other character interrupt context so completely that reading is nearly impossible. The answers to my criticisms are that space doesn't matter any more, and you can use special readers. I concede. The rubber stamp argument that there are thousands of XML readers around and thousands of XML tools around, so you'd be an idiot to do anything else, holds no weight with me. Real programmers write parsers in their sleep. Oh, wait; I already conceded.<br/>
+<br/>
+But you still might like to take a look at the brand new book in the Addison Signature Computer Science Series, "Domain-Specific Languages," by Martin Fowler, who like me, feels that XML has turned into a tyranny that is preventing constructive thought about better representations in many areas. Genealogy is a very domain-specific area and warrants its own domain-specific languages. But I already did concede, didn't I?<br/>
+<br/>
+I hope you are learning to take my efflufiences with large grains of salt. No offense is ever meant.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>Just.another.Gramps.user</strong> 2010-11-11T07:57:31-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+You obviously haven't conceded, but as a Gramps user and supporter I couldn't care less whether you concede or not, because, please try to understand, we Gramps users don't really care whether you will use XML or not. Use Gedcom syntax, we don't mind. Let's keep the discussion to semantic similarities, trying to keep them to a maximum so as to facilitate interchange.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T08:15:14-08:00</div>
+<div class="text">What I have conceded is that if the better Gedcom project decides to define its data model as XML schemas I will happily accept that.<br/>
+<br/>
+You make it sound like Gramps users aren't all that interested in a new Gedcom effort since you already have an excellent solution to the problem. If that's the case the new Gedcom effort should take a close look at the Gramps model. It might be a good idea to have someone from Gramps actively advocate that position.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T08:23:43-08:00</div>
+<div class="text">Just.another.Gramps.user,<br/>
+<br/>
+Do you have any interest in sharing your Genealogy Research with someone who does not use Gramps?<br/>
+<br/>
+The purpose of this project is so that you and I could, if we found we had common research material, share our research in a way that we don't loose our research details being shared.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>Just.another.Gramps.user</strong> 2010-11-11T08:33:18-08:00</div>
+<div class="text">hrworth,<br/>
+<br/>
+Indeed I do and that is the point of my intercision. Focus on my main point: we shouldn't bother about syntax. That's not what's keeping us apart. We have to focus on semantics and aim for the best correspondence possible. Then we will be able to share information properly. XML vs GEDCOM syntax is like an Editor war or something, it will never end. We have to forget it. Gramps has it figured, never mind. Let Gramps developers bother about syntax. I think that is not a problem for them. Use Gedcom syntax, but please, make it more uniform. Semantic consistency, turn Gedcom into a better semantic standard. That will reduce data loss.<br/>
+<br/>
+JAGU</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T08:47:30-08:00</div>
+<div class="text">JAGU,<br/>
+<br/>
+I sign my messages, just for clarity. It's Russ.<br/>
+<br/>
+As a User, I don't care HOW the information is transported between two applications. But, I will help participate in getting us, this community, to where we can share our information without loss of data.<br/>
+<br/>
+Clearly the current GEDCOM "standard" no longer meets our needs.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T10:19:06-08:00</div>
+<div class="title">Quick Gedcom 5.5 Reference</div>
+<div class="text">Here is the contents of a file that I use in the DeadEnds program to check the validity of a Gedcom file against the 5.5 specification, which was the latest one to be officially sanctioned by the LDS. This file is the most succinct form I have found for showing all the allowed relationships between tags within 5.5. You can use this when you want to make a quick check of some fine point about the Gedcom rules when you don't want to open of the full document and go rooting around in it.<br/>
+<br/>
+<br/>
+header_record: HEAD [SOUR [VERS NAME CORP DATA [DATE COPR]] <br/>
+    DEST DATE [TIME] SUBM SUBN FILE COPR GEDC [VERS FORM] CHAR [VERS] LANG PLAC [FORM] NOTE [CONT CONC]];<br/>
+<br/>
+submission_record: SUBN [SUBM FAMF TEMP ANCE DESC ORDI RIN];<br/>
+<br/>
+family_record: FAM [family_event [HUSB [AGE] WIFE [AGE]] HUSB WIFE CHIL NCHI SUBM <br/>
+    sealing source medialink note REFN [TYPE] RIN change];<br/>
+<br/>
+individual_record: INDI [RESN name SEX individual_event attribute ordinance child_family spouse_family <br/>
+    SUBM association ALIA ANCI DESI source medialink note RFN AFN REFN [TYPE] RIN change];<br/>
+<br/>
+multimedia_record: OBJE [FORM TITL note BLOB [CONT] OBJE REFN [TYPE] RIN change];<br/>
+<br/>
+note_record: NOTE [CONC CONT source REFN [TYPE] RIN change];<br/>
+<br/>
+repository_record: REPO [NAME address note REFN [TYPE] RIN change];<br/>
+<br/>
+source_record: SOUR [DATA [EVEN [DATE PLAC] AGNC note] AUTH [CONT CONC] TITL [CONT CONC] ABBR <br/>
+    PUBL [CONT CONC] TEXT [CONT CONC] repository medialink note REFN [TYPE] RIN change];<br/>
+<br/>
+submitter_record: SUBM [NAME address medialink LANG REFN RIN change];<br/>
+<br/>
+address: ADDR [CONT ADR1 ADR2 CITY STAE POST CTRY] PHON;<br/>
+<br/>
+association: ASSO [TYPE RELA note source];<br/>
+<br/>
+change: CHAN [DATE [TIME] note];<br/>
+<br/>
+child_family: FAMC [PEDI note];<br/>
+<br/>
+event_detail: TYPE DATE place address AGE AGNC CAUS source medialink note;<br/>
+<br/>
+name: NAME [NPFX GIVN NICK SPFX SURN NSFX source note];<br/>
+<br/>
+family_event: (ANUL CENS DIV DIVF ENGA MARR MARB MARC MARL MARS EVEN) [event_detail];<br/>
+<br/>
+note: NOTE [CONC CONT source];<br/>
+<br/>
+place: PLAC [FORM source note];<br/>
+<br/>
+attribute: (CAST DSCR EDUC IDNO NATI OCCU PROP RELI RESI SSN TITL NCHI NMR) [event_detail];<br/>
+<br/>
+individual_event: indi_event1 indi_event2 indi_event3;<br/>
+<br/>
+indi_event1: (BIRT CHR) [event_detail FAMC];<br/>
+<br/>
+indi_event2: (DEAT BURI CREM BAPM BARM BASM BLES CHRA CONF FCOM ORDN NATU EMIG IMMI CENS PROB WILL GRAD RETI EVEN)<br/>
+    [event_detail];<br/>
+<br/>
+indi_event3: ADOP [event_detail FAMC [ADOP]];<br/>
+<br/>
+ordinance: ordinance1 ordinance2;<br/>
+<br/>
+ordinance1: (BAPL CONL ENDL) [STAT DATE TEMP PLAC source note];<br/>
+<br/>
+ordinance2: SLGC [STAT DATE TEMP PLAC FAMC source note];<br/>
+<br/>
+sealing: SLGS [STAT DATE TEMP PLAC source note];<br/>
+<br/>
+medialink: OBJE [FORM TITL FILE note];<br/>
+<br/>
+source: source1 source2;<br/>
+<br/>
+source1: SOUR [PAGE EVEN [ROLE] DATA [DATE TEXT [CONC CONT]] QUAY medialink note];<br/>
+<br/>
+source2: SOUR [CONC CONT TEXT [CONC CONT] note];<br/>
+<br/>
+repository: REPO [note CALN [MEDI]];<br/>
+<br/>
+spouse_family: FAMS [note];</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T11:05:35-08:00</div>
+<div class="title">Making Gedcom Support Evidence and Conclusions</div>
+<div class="text">A common criticism of Gedcom is that it is a conclusion only language, an argument I have made for twenty years. One of the main reasons (I believe) the better Gedcom effort exists is to encompass more of the evidence aspects of the genealogy process into its new model.<br/>
+<br/>
+That being said, let me take a brief devil's advocate position, and mention that there are some ways one can use current Gedcom to support the evidence model; certainly not as well as one would want, but we do live in a beggars can't be choosers world for genealogical standards right now.<br/>
+<br/>
+Consider a Gedcom INDI record and all the event substructures within it. Let's say we're careful researchers and for every event we discover for someone we record the source of that event. So a basic INDI record might have someone's name and his or her BIRT and DEAT events and each of the two events has its own 2 SOUR line. Later you find another source that gives a birth for the same person. You add a second BIRT event to the same INDI record with its own 2 SOUR line. The main issue that arises now is choosing the "preferred" birth event. The best solution I have found to this problem, now hold your criticism for a moment, is to add a THIRD BIRT event with a 2 SOUR line that indicates that it is your own conclusion. You then make that third BIRT event physically first in the record (assuming your software is sane enough to use the physically first birth event in a record to be the one that is displayed in windows and shown in reports). Now you have an INDI record containing one conclusion BIRT event and two evidence BIRT events.<br/>
+<br/>
+Admittedly there are problems with this approach. I suppose the main one is that most genealogical systems don't give you any say at all about the Gedcom that it will generate. But most programs do allow you to add more than one event of the same type to a person, and they might put them all in a Gedcom export file, so you could try this approach with your program and see.<br/>
+<br/>
+Another problem that comes from the approach involves names. What if the evidence for the two BIRT events have slightly different names for the person. How do you choose a preferred name and how do you encode it in your Gedcom? Well, I'll say how I do it in LifeLines. I stick a 2 NAME line (note the level 2) inside the 1 BIRT events, using the (excellent in my opinion) convention that a person's name should often be an attribute of an event (the name the person had when the event occurred), but 5.5 Gedcom does not allow a 2 NAME line. This is not a problem for me with LifeLines since there is no barfing with new conventions. Without this addition to Gedcom you would probably do do things -- first put a NOTE in each BIRT saying what the name recorded with the event was, and you would put in multiple 1 NAME lines at the start of the INDI record, with the physically first 1 NAME line being the one you feel is the preferred name for display and reports.<br/>
+<br/>
+Another problem with this approach, fairly serious in my opinion, is what happens when a user decides that some of those events in the INDI really happened to DIFFERENT people with the same name. Software could handle it, but it's pretty subtle, and I doubt any current software has tried to solve it this problem. For example, what would Gramps do if a user wanted to remove an event from one of the existing persons and create a new person with that event? Might work fine; I just don't know.<br/>
+<br/>
+The final problem with this stems from the basic fact that in Gedcom all events must be iniside INDI records and don't stand on their own. In the better Gedcom (presumably) there will be event records.<br/>
+<br/>
+Well, no, the real problem is that the "evidence records" are stuck inside the "conclusion records" (they're all part of one big INDI record), and therefore the "evidence records" have all lost their own identity and integrity.<br/>
+<br/>
+A reason to point this out in the better Gedcom context is that better Gedcom could presumably decide to simplify its model by finding analogous short-cuts for double-dutying the same entties to represent conclusions and evidence at the same time. I don't recommend this, but I guess concensus could end up flowing in that direction.<br/>
+<br/>
+It would be interesting if a Gramps user would explain how Gramps users have found ways to support evidence and conclusion within the Gramps context.<br/>
+<br/>
+Tom Wetmore</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T14:42:02-08:00</div>
+<div class="text">Doug,<br/>
+<br/>
+In my humble opinion, Gramps's approach of treating Events as first class citizens (that is, records), and keeping the Person and Event records separated at all times, were excellent choices in Gramps's design and implementation. It seems to me that the Gramps model is an excellent "model" for the better Gedcom effort key off from.<br/>
+<br/>
+And I think I am beginning to get a gut feel on how Gramps could deal with the evidence and conclusion issues out of the box. Not really sure though.<br/>
+<br/>
+On a less optimistic note, the version of Gramps that I downloaded off the site keeps crashing with messages about not being able to find a global variable in the display world. I can send you that message if you like. It does work for awhile between crashes and what I see looks great.<br/>
+<br/>
+By the way, I have been going through the Gramps schema this afternoon, and though it takes a bit of work trying to internalize it, and there are parts I probably won't be able to understand without asking some questions, it looks comprehensive. I've also been translating it into a context free grammar as that is a form that I can understand a bit better. (And it gets rid of all the pointy things!!!!!).<br/>
+<br/>
+Thanks so much for you explanations.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T16:37:26-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I am guessing we are hung up on the term Conclusion.<br/>
+<br/>
+To me, a conclusion record would come after I have evaluated all of the evidence that applied to an event.<br/>
+<br/>
+I do not rely on one source to reach a conclusion that an event took place as entered. <br/>
+<br/>
+I think your term "conclusion" is different than mine.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-11T17:40:38-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+If you would be willing to evaluate the GRAMPS data model and add the content to the GRAMPS Data model Page, perhaps scribbling a couple of boxes on a page and scanning it in to diagram or something, it would really go a long, long way towards presenting the GRAMPS model in a format that would help us evaluate it. Is there any chance I could talk you into that? You're clearly very good at understanding and explaining data models and their implications. <br/>
+<br/>
+As an open source data model GRAMPS is certainly one we could freely use and adapt. If it's a good data model for use in the real world, as everyone says it is, I would like to see how we might use it and map data from various applications and scenarios to it.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T18:11:18-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+I can't find any fault with your concept of conclusion. So I conclude (ahem) that my explanation was insufficient.<br/>
+<br/>
+For me a conclusion record comes into being at the time a researcher says to himself, "yes this collection of information all refers to the same real person." If that happens after a single piece of evidence has been found, fine. If that happens after twenty pieces of evidence have been examined that mention a John Smith and the researcher has decided to link seven of those together because he thinks they all refer to the same John Smith that he is interested in, the conclusion person comes into being then as either the physical merging (wrong in my opinion) or linking together (correct in my opinion) of the information takes place. Conclusions can be nullified, added to, removed from, as further research takes place.<br/>
+<br/>
+I believe there really is a continuum between pure evidence, info in primary records, to lofty conclusions. It may be that by trying to make a conclusion object have some strict boundary there is a problem.<br/>
+<br/>
+So here is an interesting point. If you look at the GenTech data model you will see that it is divided into three overall sub-models, Administration, Evidence, and Conclusions. What GenTech calls Evidence, however, is information directly in sources. As soon as any "markup" or "extraction" occurs the information is already into the realm of Conclusion. That is, even a simple Event record, created directly from an original parish register, is already Conclusion, presumably because some level of value added human interpretation of carbon marks on a piece of paper had to occur in creating that Event record. To my mind, such Event records (and the corresponding Person records) that are taken directly from physical evidence are still at the Evidence level, but I can certainly understand the GenTech position, and I can therefore certainly understand if the way I am using the terms causes confusion.<br/>
+<br/>
+In summary, for me Evidence records are the records extracted directly from a SINGLE item of genealogical evidence. Conclusion records are any records that link together information from two or more evidence records, because such conclusion records implicitly assume that the linked together evidence records refer to the same real person. So I guess you could have an operational definition of conclusion record that simply states that it is a record that contains information from more than one source. But this really isn't right (and is contrary to my definition of conclusion in the second paragraph above!) because for many of the people you are researching you only have one source of information, and you really don't want to have to stupidly consider those records to be just evidence records.  Look, genealogy is messy; it's humanistic which is always messy. If we get too hung up on formal definitions in a messy world we get caught in a gooey mess. Evidence comes from single items of evidence. Nothing combined from different items of evidence is evidence any more. Conclusions are things built up from evidence, even if only one item of evidence is involved. There, that's the answer. Whew!<br/>
+<br/>
+I have done another, probably poorer, job of explanation.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T18:29:09-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I have not looked at GenTech and don't know the terms used there.<br/>
+<br/>
+To me, a conclusion can't be reached until the Evidence has been evaluated. Usually, that Evidence is not one piece of information.<br/>
+<br/>
+I would not consider a Parish Register a Conclusion. Much of the information in a Parish Register is NOT primary source material. The person providing a Name, for example may say and spell out the full name accurately, but the recorder of that information may not record it as it was given to that person. One person may give all of the information in the Register, but that information my not be accurate or first hand information. For example: the wife was not present when her husband was born.<br/>
+<br/>
+I could not draw a conclusion of the Birth Date of the Husband based on the Parish Record.<br/>
+<br/>
+That is why I am raising the issue of the term Conclusion.<br/>
+<br/>
+I do NOT want may software program marking a record with a Conclusion indicator. I MUST do that.<br/>
+<br/>
+Oh, I may never have a final conclusion and I might change my conclusion as more information is found.<br/>
+<br/>
+I do agree that Conclusions are built from Evidence, but I need to evaluate the evidence and draw that conclusion.<br/>
+<br/>
+I don't thing we are too far off and it certainly can be messy. I am only responding to the Parish Register "is already Conclusion".<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T18:53:13-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+I have been analyzing the Gramps schema and am almost done writing a context free grammar for a language that expresses the same information in a non-XML, shorter form. When I have that in a reasonable shape I will either post it or try to describe it. I'm afraid that trying to understand the schema in its XML form is difficult for me (though Gramps folk and you yourself, based on earlier comments, might find it invigorating.) I like the CFG form for defining models and languages because they are considerably shorter, don't contain pointy things (it's a joke, guys), so therefore easier for my poor brain to wrap around.<br/>
+<br/>
+I can already see that it looks like a great model with many of the same ideas found in other modern (and therefore not Gedcom) models. And it's nothing like the GenTech model, which stinks pretty badly in my opinion. For example, Gramps has a nice set of record types and common sensical ways of linking records together. The record types include persons and event as first class citizens, but also other things that Gedcom does not make first class, such as places. I've noticed that more and more genealogical systems have also done this promotion of places, and I think it is the right thing to do.<br/>
+<br/>
+Here's an example of what I'm doing. My top level rule for a Gramps database in a CFG notation now looks like this:<br/>
+<br/>
+database: header name-formats?  tags?  events?  people?  families?  sources?  places?  objects?  repositories?<br/>
+<br/>
+This is basically a concept for concept conversion from the Gramps XML-based schema's definition of the overall structure of a Gramps database (or maybe it would better to say the structure of an external file that holds the contents of a Gramps database), to a context free grammar for another file format that would not be in XML but would still be concept for concept isomorphic with the Gramps file. This CFG rule says that a Gramps database or file consists of a header, an optional name-formats thingy, an optional tags thingy and then sets of event, people, family, source, place, object and repository records. I'm assuming that object records are catch-all records that can be used for any kind of thingy that comes up that isn't an event, person, family, source, place or repository. (A nearly unknown and probably never used feature of LifeLines is that it allows users to create top level Gedcom records with any level 0 tag you want so you can actually create your own sets of different types of records -- I put all that in but never really told anyone about it, because I didn't have time to fully debug it before I lost access to UNIX system). The only reason there are question marks after the labels for all the record types is because the schema/grammar must allow for the cases at the start of a database's life when records of any of the types might not exist yet. I haven't skull-dudged enough yet to know what the name-formats and tags thingies are, but I think the important thing to take away here is that we can see exactly what record types the Gramps designers decided to include in their model. As the Templar monk said to Indiana Jones, they choose wisely.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-11T19:23:25-08:00</div>
+<div class="text">Tom, thank you for the kind words re: gramps data model. I will pass those on to the team.<br/>
+<br/>
+I don't think we have a nice description like the grammar you are reconstructing, largely because the schema has grown organically from our non-relational database backend.<br/>
+<br/>
+However, as I have just recently written importers/exports to move gramps data to SQL tables, this does exist in a more readable format. Have you seen the page on the left here on the Gramps Data Model? That points to <!-- ws:start:WikiTextUrlRule:8:http://www.gramps-project.org/wiki/index.php?title=GEPS_013:_GRAMPS_Webapp --><a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=GEPS_013:_GRAMPS_Webapp" rel="nofollow">http://www.gramps-project.org/wiki/index.php?title=GEPS_013:_GRAMPS_Webapp</a><!-- ws:end:WikiTextUrlRule:8 --> which does have a low-res image of the relational db schema. I'm working to re-create that in a hi-res version. We also have two python versions describing the schema... one in Django (a Python-based web db system), and one in pure SQL.<br/>
+<br/>
+I'm on the road this weekend, but feel free to ask me, or gramps-dev mailing list any question. We are a friendly group, and love to discuss these items.<br/>
+<br/>
+-Doug</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T19:28:34-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+I really think we agree and I may now be beating a dead horse into the ground.<br/>
+<br/>
+I didn't intend to imply that it was the software that made the decisions about what is evidence and what is conclusion. In fact I now think (I've gone back and forth on this a million times in the past twenty years) that exactly the same person records (and event records) can/should be used to hold both evidence and conclusion records. Would you feel better if we could say that the there is nothing in the records that specifies whether they are evidence or conclusion, that it is only the mind of the user that they have the distinction.<br/>
+<br/>
+What I am concerned about is that we have a model that supports a process in which we gather lots of evidence, add it to our databases as different types of records, and as we make our own decisions in or own heads about which records refer to which real persons, we can choose to link those records into groups that represent those decisions. Before we start making these decisions we basically have stand alone evidence records. After we make these decisions, the records formed by grouping together information, the records that now embody our decisions, are conclusion records. The records are organic. We can add evidence records into the mix as we find more. We can regroup the evidence into different "partitions" as we reassess which evidence records really refer to the same persons, and so on. We decide the decision points, not software. When we are finally ready to declare, "These n (where n can be 1) records all refer to the same person" we have reached a conclusion. In order to record that conclusion we have to create a record (at least in the cases where n is greater than 1) that somehow groups together those n records. If we didn't have a way to do that grouping we wouldn't have a system that supports the process. In the Gramps model these groups are simply person records that link to a larger set of event records, so a Gramps person would say we've already got Wetmore's concerns covered, so why doesn't he just shut up already. Actually I don't think my concerns are fully covered, but Gramps is way along the way.<br/>
+<br/>
+Let me end by saying that evidence records are sacrosanct. The act of making a decision which causes evidence records to be linked together into conclusions or groups, should never physically change the evidence records. Evidence records should never be merged with other records (where two records in the database become one). Yeah, you can change an evidence record if you discover you transcribed it or recorded in incorrectly, but other than that it must retain its integrity forever.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-11T19:35:02-08:00</div>
+<div class="text">Yes, GenTech is great theory and awful practice.<br/>
+<br/>
+My understanding of their data model certainly makes me want to consider it. I would like to compare it to what the methodologists would like and see what gripes developers have about it. <br/>
+<br/>
+Back (sort of) to the original idea of this thread, my concepts for source/evidence stuff is all different.<br/>
+<br/>
+I consider Evidence to be a class of objects in which there are items: Evidence-item with subitems evidence-citation and evidence-element (which can have its own elements indicating authorship, veracity, etc.); Evidence-store; Theory; and Assertion.<br/>
+<br/>
+Evidence-item=source for most folks<br/>
+Evidence-store = repository.<br/>
+Assertion=conclusion for most folks<br/>
+Theory functions like an intermediate item between evidence-item and assertion. Whereas an evidence-item is a thing (like a book or an interview), a Theory is an item which provides a way to develop ideas in more free-form fashion. A Theory in my mind is something cited in an Assertion (conclusion) but is not itself equivalent to an assertion. In the same way sources are standalone items that exist but are not assertions/conclusions, so are theories.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-11T19:36:19-08:00</div>
+<div class="text">In the above post I said:<br/>
+<br/>
+"My understanding of their data model certainly makes me want to consider it. I would like to compare it to what the methodologists would like and see what gripes developers have about it."<br/>
+<br/>
+This statement refers to the GRAMPS Data Model, definitely NOT the GenTech Data Model.</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-11T19:47:15-08:00</div>
+<div class="text">Gramps developers would be the best ones to tell you what they don't like, would like to fix, change, and add, to the Gramps' XML. In the Gramps world, we live in a practical world (the XML is real, it has to work right now) but we have ideas of where we want it to go. See our Gramps Enhancement Proposals for some of these. Others are still in the minds of the devs.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-12T04:09:09-08:00</div>
+<div class="text"><em>"By the way, I have been going through the Gramps schema this afternoon, and though it takes a bit of work trying to internalize it, and there are parts I probably won't be able to understand without asking some questions, it looks comprehensive. I've also been translating it into a context free grammar as that is a form that I can understand a bit better. (And it gets rid of all the pointy things!!!!!)."</em><br/>
+<br/>
+If need, you can try to paste url like this <a class="wiki_link_ext" href="http://gramps.svn.sourceforge.net/viewvc/gramps/trunk/data/grampsxml.rng" rel="nofollow">one</a> into this <a class="wiki_link_ext" href="http://debeissat.nicolas.free.fr/RNGtoHTMLform.php" rel="nofollow">form</a>. This will generate a web for the Gramps data model with an alternate representation.<br/>
+<br/>
+Regards,<br/>
+Jérôme</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-11T11:47:34-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Being a User, I do have a question for clarification. You said:<br/>
+<br/>
+"evidence records" are stuck inside the "conclusion records"<br/>
+<br/>
+I am not sure I understand what that means in a GEDCOM, as we know it today.<br/>
+<br/>
+Today, as you so nicely pointed out, we would or could have SOUR statements in the GEDCOM file supporting the INDI and Events for that individual.<br/>
+<br/>
+What might I look for an Evidence Record or a Conclusion Record.<br/>
+<br/>
+Again, I am certainly not as familiar with the GEDCOM structure as yourself so it may be there, but I haven't seen it.<br/>
+<br/>
+I certainly have not seen anything like that in the program that I use.<br/>
+<br/>
+We DO, however, need to address these two issues. I think that they are two issues.<br/>
+<br/>
+We have a Source and Citation that would support the Individual or an Event for that Individual.<br/>
+<br/>
+Is a Source / Citation the same as your term "evidence records"?<br/>
+<br/>
+I know, after listening and reading Elizabeth Shown Mills speak, that at some point in time, I MUST Evaluate my Source / Citations, with hopes that I am able to draw a conclusion.<br/>
+<br/>
+It would appear to me, that you might have Source information, Evidence information, that helps me draw my conclusion. <br/>
+<br/>
+Right now, I don't have that tool.<br/>
+<br/>
+Thank you,<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-11T11:48:06-08:00</div>
+<div class="text">Tom said:<br/>
+<br/>
+"For example, what would Gramps do if a user wanted to remove an event from one of the existing persons and create a new person with that event?"<br/>
+<br/>
+No problem. These are independent objects, and can be shared, removed, added, merged as the user chooses.<br/>
+<br/>
+"It would be interesting if a Gramps user would explain how Gramps users have found ways to support evidence and conclusion within the Gramps context."<br/>
+<br/>
+Someone will probably have to ask that on the gramps-users or gramps-dev mailing lists. I hadn't heard that distinction until I met you. (There are people that preach the message of the Mill's approach, so perhaps others can answer let you know what is possible in Gramps).<br/>
+<br/>
+-Doug</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-11T14:31:58-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+By saying that evidence records are stuck inside conclusion records I mean that the overall INDI record with the added summary BIRT event is the conclusion record and the three other events (2 BIRT and 1 DEAT events in my example) are the evidence records. Of course the event sub-structures really aren't records, thus the quotes. The fact that Gedcom allows SOUR tags to be used in many places, including inside event sub-structures, means that separate sub-structures within the same overall INDI record can be come from different sources. Thus INDI records can be amalgamations of information taken from any number of items of evidence.<br/>
+<br/>
+I hope that is clear and that it does answer your question.<br/>
+<br/>
+Tom Wetmore</div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-20T20:45:39-08:00</div>
+<div class="title">Blogged about place properties transfer from FTM to TMG via GEDCOM</div>
+<div class="text">You can read the entry here:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:2:http://bettergedcom.blogspot.com/2010/12/bettergedcom-test1-ftm-to-tmg-place.html --><a class="wiki_link_ext" href="http://bettergedcom.blogspot.com/2010/12/bettergedcom-test1-ftm-to-tmg-place.html" rel="nofollow">http://bettergedcom.blogspot.com/2010/12/bettergedcom-test1-ftm-to-tmg-place.html</a><!-- ws:end:WikiTextUrlRule:2 --></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2010-12-20T23:44:33-08:00</div>
+<div class="text">So if one were entering Borrby in TMG Places one would enter:<br/>
+<br/>
+Detail: Borrby<br/>
+City: Simirishamn Municipality<br/>
+County: Sanke (County?)<br/>
+State: Sanke (Province?)<br/>
+Country: Sweden<br/>
+<br/>
+Correct?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-12-21T03:43:05-08:00</div>
+<div class="text">:)<br/>
+<br/>
+Since TMG lets you customize the template itself, I'd probably take the time to learn how Sweden's location name parts were and are used, so that I might have a "Swedish Place Styles." The Wikipedia entry indicates Sweden today is a "unitary state," divided into 21 counties .... <br/>
+<br/>
+Quite possibly:<br/>
+<br/>
+City: Borrby<br/>
+Municipality: Simrishamn <br/>
+County: Sanke<br/>
+Country: Sweden</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-11T16:57:10-08:00</div>
+<div class="title">Model in the Future Directions Document</div>
+<div class="text"><br/>
+I have been reading the GEDCOM Future Directions Document. On page 15 starts the description of the "Genealogical Information Model." It's kind of a kitchen-sink model; you get the idea the authors felt they couldn't let the GenTech Data Model outdo them!<br/>
+<br/>
+But once you select some of the key records types, and after you go off on a lot of tangents trying to figure out what it all means, it seems to me that the core model is consistent with points we have discussed for Better GEDCOM. And since it IS a GEDCOM model, Louis will be pleased.<br/>
+<br/>
+If you like pictures you can get an overview of the model starting on page 16. For any one planning to contribute to the Better GEDCOM model I think the model part of this document should be considered required reading.<br/>
+<br/>
+A few comments.<br/>
+<br/>
+The model has an Event record that can be used for multi-role events. The Event records don't point to their role players, but the role players point to the Events. Because the LDS created the model, of course they have to have special records for their LDS Ordinance events, which I find somewhat offensive, but so what.<br/>
+<br/>
+The model still has the family record, but it is now called the Family/Couple record. Interestingly this record no longer points to the father/husband, mother/wife, children, as done by GEDCOM, but the father, mother and children Individual records do still point to the Family/Couple records. This is the same as GEDCOM except that the links are just now one-way.<br/>
+<br/>
+But the model also has a Social Group record.<br/>
+<br/>
+Simple attributes have been turned in big characteristic substructures, but that's okay.<br/>
+<br/>
+The source model is interesting. There are three basic records in the source hierarchy, first Repository and Source, similar to GEDCOM. But then there is the Document record. This record represents specific information taken form a Source, so it's what we've been calling evidence. Note that all records that point to sources point to these Document records, so it is these Document records that serve the role of sources for all other records.<br/>
+<br/>
+But that's not all about sources. The model also has a record called the Extracted Detail record. This is a record that holds very specific information that is extracted from a Document, given a fourth level to the sourcing hierarchy. The Extracted Detail records refer to the Document records they come from. Other records can refer to the Extracted Detail records, indirectly referring to a Document, thus Source, thus Repository.<br/>
+<br/>
+Then there are a whole bunch of other record types that seem to be heading into gibberish land to me. It really looks like the authors were given free range to wander all over the place and they sure did. I think this was written at almost the same time the GenTech model was circulating and it seems this had a very unwelcome infulence. Frankly I think the author of this document just went a little nuts with all the power he temporarily possessed, and it's no wonder none of this stuff really made it to the light of day.<br/>
+<br/>
+Now comes a VERY INTERESTING feature of the model. Event and Individual records can have "BasedOn" structures that are defined as follows:<br/>
+<br/>
+"+0 BasedOn<br/>
+  +1 Ref=&lt;Record#&gt;      /* Record of the same type */   {1:1}<br/>
+When records which represent the same thing are merged, the original records and a history of how they were merged can be kept by: Merging the duplicate records into a  new record, Keeping the old duplicate records, or Linking the new record to the duplicate records from which it was derived. This process, called “merging forward”, uses the BasedOn Link substructure links the old records to the new record."<br/>
+<br/>
+Follow all that? It's pretty awkwardly stated but this is that link that I have in the DeadEnds model for allowing the building of evidence and conclusion trees of records. This is the first time (other than in the Assertion record of the GenTech model) have I seen this link, the one I find critical to implementing the genealogical process. I was rather pleased to find that. Note that the final statement in the quote they got wrong, it's the new records that point to the old ones, as it should be.<br/>
+<br/>
+Enough for now.<br/>
+<br/>
+Tom</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-01-11T17:34:58-08:00</div>
+<div class="text">@Tom <br/>
+Under discussions to page "Evidence and Conclusion Process," I'm going to post a few comments related to your posting</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-01-11T19:26:02-08:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+I love the direction you're taking.<br/>
+<br/>
+No complaints whatsoever. <br/>
+<br/>
+Of course, the Future Directions Document was a precursor to the GEDCOM XML 6.0 Spec which incorporated most of its ideas. <br/>
+<br/>
+Together all that is an excellent base to build upon and change what needs to be changed.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-01-13T15:15:48-08:00</div>
+<div class="text">"BasedOn" structures:<br/>
+In the later GEDOM XML 6.0 they use this only for &lt;family&gt; and &lt;LDSOrdinance&gt;, and these can only be based on &lt;event&gt;s:<br/>
+<ul class="quotelist"><li>&lt;!ELEMENT BasedOn</li><li>(Event*,</li><li>Note*)&gt;</li></ul><br/>
+But even if they didn't understand the possibilities (or they did, and got scared) - we need something like that to connect different pieces and build sustainable trees of conclusions.</div></div></div></body>
+</html>

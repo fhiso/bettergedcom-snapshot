@@ -1,0 +1,254 @@
+<html>
+<head>
+<title>BetterGedcom - Formatting Templates and MetaData</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+<span style="display: block; text-align: left;">I offered to present a simple example illustrating how the separation of citation elements from formatting templates might work for different styles and cultures. I don't think anyone really needs that now but I'll still post an illustration, though, in order to raise some important points about the interface between the BG representation of citations and the formatting templates. If we can agree on the "logical separation" of these two areas then we'll need to address how actual data values are passed through the interface to the formatting templates. By the "logical separation", I mean that the BG storage format need only be concerned with the representation of the citation meta-data and values, and the interface to a formatting-template system would be defined in a separate part of the BG standard. The physical implementation of the formatting-template system - of which there would be several - would then have to adhere to that part of the standard that prescribes the handling of our citation meta-data.<br/>
+<br/>
+In this small illustration, I'm using XML but not mandating it. I just needed to pluck something out of the air to help convey the end-to-end concept. Although I mention CSL, I'm also not mandating that as anything more than one possible physical implementation of a formatting-template system.<br/>
+<br/>
+Let's assume that the meta-data for source-types are defined in a central place. Each distinct source-type has some key associated with it - we'll use a URI here.<br/>
+<br/>
+</span><span style="display: block; text-align: left;"><span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;Sources&gt;<br/>
+...<br/>
+&lt;Source&gt;<br/>
+&lt;URI&gt; uri &lt;/URI&gt;<br/>
+&lt;Elements&gt;<br/>
+&lt;Element Name='Author' Type='Text'/&gt;<br/>
+&lt;Element Name='Title' Type='Text'/&gt;<br/>
+&lt;Element Name='Publisher' Type='Text'/&gt;<br/>
+&lt;Element Name='Place' Type='Text'/&gt;<br/>
+&lt;Element Name='Year' Type='Integer'/&gt;<br/>
+&lt;Element Name='Page' Type='Integer'/&gt;<br/>
+&lt;/Elements&gt;<br/>
+&lt;/Source&gt;<br/>
+...<br/>
+&lt;/Sources&gt;</span></span><span style="display: block; text-align: left;"><br/>
+</span><span style="display: block; text-align: left;">Note that this only contains computer-readable meta-data. None of the names or tags should appear on a screen. In principle they could all be just xyz1, etc., but that wouldn't be recommended.<br/>
+<br/>
+The associated data that is used on the screen in the User Interface is kept elsewhere, and keyed by the user's locale in addition the same source-type URI. This is standard practice in multinational software systems as the factoring-out of UI data greatly eases the application to multiple locales. This is a weakness in the currently documented CSL data model.<br/>
+<br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;UIData&gt;<br/>
+...<br/>
+&lt;Source Locale='en_US'&gt;<br/>
+&lt;URI&gt; uri &lt;/URI&gt;<br/>
+&lt;Description&gt; Basic Book Reference &lt;/Description&gt;<br/>
+&lt;Elements&gt;<br/>
+&lt;ElementTitle Name='Author'&gt; Author (or Compiler) &lt;/ElementTitle&gt;<br/>
+&lt;ElementTitle Name='Title'&gt; Book Title &lt;/ElementTitle&gt;<br/>
+&lt;ElementTitle Name='Publisher'&gt; Publisher Name &lt;/ElementTitle&gt;<br/>
+&lt;ElementTitle Name='Place'&gt; Place of Publication &lt;/ElementTitle&gt;<br/>
+&lt;ElementTitle Name='Year'&gt; Year Published &lt;/ElementTitle&gt;<br/>
+&lt;ElementTitle Name='Page'&gt; Page Number &lt;/ElementTitle&gt;<br/>
+&lt;/Elements&gt;<br/>
+&lt;/Source&gt;<br/>
+...<br/>
+&lt;/UIData&gt;</span></span><span style="display: block; text-align: left;"><br/>
+</span><br/>
+This contains the source description, as it might appear say in a drop-down list, and the individual element titles, as they might appear in a UI form.<br/>
+<br/>
+The formatting templates that generate the humanly-readable citation would be held in yet another place. These would also be keyed by the source-type URI and locale but also by the citation style. Each style would require a template for the type of reference to be generated (e.g. a source-list entry).<br/>
+<br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;Templates&gt;</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">...</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;Template Locale='en_US' Style='CMOS' Mode='SourceList'&gt;</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">${Author,0}. &lt;i&gt;${Title,0}&lt;/i&gt;. ${Place}: ${Publisher}, ${Year}.</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;/Template&gt;</span><br/>
+<br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;Template Locale='en_US' Style='CMOS' Mode='FullNote'&gt;</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">${Author,1}, &lt;i&gt;${Title,0}&lt;/i&gt; (${Place}: ${Publisher}, ${Year}), ${Page}.</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;/Template&gt;</span><br/>
+<br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;Template Locale='en_US' Style='CMOS' Mode='ShortNote'&gt;</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">${Author,2}, &lt;i&gt;${Title,1}&lt;/i&gt;, ${Page}.</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;/Template&gt;</span><br/>
+<br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;Template Locale='en_US' Style='CMOS' Mode='InText'&gt;</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">(${Author,2}, ${Year})</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;/Template&gt;</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">...</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">&lt;/Templates&gt;</span><br/>
+<br/>
+These Mickey-Mouse examples use HTML formatting to get the visual attributes such as italics. The elements are inserted at the right place using the ${name} place-holders. Note that the example assumes that the formatting templates know how to generate different elided variations of names and titles using a simple integer suffix in the place-holder that represents the required operation. We'll come to this again in a moment.<br/>
+<br/>
+Let's input some data for a citation now:<br/>
+<br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">Author (or Compiler): Smyth, Constantine Joseph</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">Book Title: A Complete Abstract of the Statutes of Nebraska, with Legal Forms</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">Publisher Name: Rees Printing Co.</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">Place of Publication: Omaha</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">Year Published: 1905</span><br/>
+<span style="color: #0000ff; font-family: 'Courier New',Courier,monospace;">Page Number: 123</span><br/>
+<br/>
+Here are some examples of what might be generated then for various citation modes in your chosen style and locale:<br/>
+<br/>
+<strong>Source List Entry</strong><br/>
+Smyth, Constantine Joseph. <em>A Complete Abstract of the Statutes of Nebraska, with Legal Forms</em>. Omaha: Rees Printing Co., 1905.<br/>
+<br/>
+<strong>First (Full) Reference Note</strong><br/>
+Constantine Joseph Smyth, <em>A Complete Abstract of the Statutes of Nebraska, with Legal Forms</em> (Omaha: Rees Printing Co., 1905), 123.<br/>
+<br/>
+<strong>Subsequent (Short) Note</strong><br/>
+Smyth, <em>Complete Abstract of the Statutes of Nebraska</em>, 123.<br/>
+<br/>
+<strong>Parenthetical In-text Reference</strong><br/>
+(Smyth, 1905)<br/>
+<br/>
+OK, so what are the issues to be raised here? Well, the simple element data-types in the meta-data are insufficient. Rather than just Text or Integer, the formatting templates need to have a little more semantic information such as the value being inserted is a personal name, or a place name, or a date, or a title, etc. Only then can it render dates according to the end-user's regional settings, or achieve the different levels of elided form.<br/>
+<br/>
+Note that the meta-data is effectively defining the data-type required by the formatting template, and this isn't the same as the actual value being stored for a citation reference. In many software systems, this corresponds to the difference between 'formal parameters' and 'actual parameters'. Some level of coercion is required to convert the actual data to the required data. In the case of a personal name, the above illustration provides a textual representation of the author's name but it could easily be that of a relative, or some other individual, represented in the body of the BG data. Hence, the actual value could be text or a Person reference.<br/>
+In the illustration, we saw a simple integer used (but not recommended) to achieve the diffent variations of the author's name, e.g.<br/>
+<br/>
+${Author,0} - "Smyth, Constantine Joseph"<br/>
+${Author,1} - "Constantine Joseph Smyth"<br/>
+${Author,2} - "Smyth"<br/>
+<br/>
+I believe these rules are built into CSL but that would be another weakness. In general, you cannot do this from the incoming text alone, and - as anyone reading the background material on Person Names will appreciate - any system that tries to identify forename/surname concepts is doomed to failure.<br/>
+<br/>
+Ideally, the formatting template system needs help from the stored BG data. For instance, rather than a single canonical name being held for an individual, it should support specific elided forms that can be requested by a report-writer or a citation formatting-template. This is in addition to some indication of the relevant sorting rules. Both of these issues were on my list to address for STEMMA but were never completed.<br/>
+<br/>
+There are related issues for Place names, and even the title of the cited source.<br/>
+<br/>
+Tony
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-01-09T09:35:41-08:00</div>
+<div class="title">Names</div>
+<div class="text">Thanks for this Tony - it helps me enormously, especially with the concept of detailing with different locations in that manner. <br/>
+<br/>
+Just to be clear on the names thing: If you had multiple authors, you'd have multiple Authors would you? Or would the single Author be extended to cover them all? Or is it up to the designer to decide? <br/>
+<br/>
+And then you're recommending, I believe that each Author is entered in 3(?) forms by the user rather than software attempting to shuffle the characters around? That would seem a sensible way of dealing with the complexities of the entirely fictional authors of "Bajoran Memories" by Ro Laren, Benjamin Sisko and Kira Nerys. Star Trek devotees will understand that Mesdames Ro and Kira have their names in the format family-name first already, so life would get complex trying to see which names would be inverted for the citation format with family-name first.</div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-09T10:48:56-08:00</div>
+<div class="text">I was discussing this with Neil earlier Adrian. The STEMMA specification suggested using a JSON-like 'list' syntax for multiple authors or page-numbers. It's a deviation from the XML ideal (e.g. &lt;Authors&gt;&lt;Author&gt;...&lt;/Authors&gt;) but it's also applicable even if we don't use XML.<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-09T11:17:57-08:00</div>
+<div class="text">I don't have a good scheme for dealing with the other issues you raise but I wanted to find a way of dealing with elided forms and sorting together.<br/>
+<br/>
+For instance, consider something like:<br/>
+<br/>
+"General Sir Anthony Cecil Hogmanay Melchett VC DSO KCB"<br/>
+<br/>
+...he of Blackadder fame  :-)<br/>
+<br/>
+We can break this down into name-parts like titles, givenname, middlenames, familyname, honaries, etc.<br/>
+<br/>
+Although those terms are very Western, something more generic might allow us to specify sorting and different forms by the token groups.<br/>
+<br/>
+For instance:<br/>
+fore-titles = 1 2<br/>
+given-name = 3<br/>
+middle-names = 4 5<br/>
+family-name = 6<br/>
+post-titles = 7 8 9<br/>
+<br/>
+Hence, different name forms might be<br/>
+<br/>
+family-name, fore-name middle-initials<br/>
+fore-name family-name<br/>
+family-name, fore-initial<br/>
+<br/>
+Similarly with a sort-order or collation-sequence.<br/>
+<br/>
+If we can break apart a name then it is practical to have standard combinations for different "name locales" (i.e. the locale that the name structure is relevant to rather than specifically that of the user). This would simply the whole argument.<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2012-01-09T14:21:17-08:00</div>
+<div class="text">As I have stated in my Data model for Sources and Citations, a standard transfer format must be able to handle a variable number of creators/authors/editors etc, and must be able to identify the type for each one. Several current programs does not handle that, but it should be the programs - not the standard - that is the limiting factor - if any.<br/>
+<br/>
+I assume you have had a look at the way names are handled in CSL. (It is interesting to note that it seems like Zotero does give you a way to enter the various parts specified in CSL.) <br/>
+<br/>
+I don't think a solution that will require entering the various variants of a name will survive long, c.f. Adrian's comment.<br/>
+<br/>
+Apart from that, I suggest we discuss the issues here as part of the Personal name discussion since I assume you will have the same requirements to sorting in e.g. an index of a report.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-09T14:34:47-08:00</div>
+<div class="text">Because I thought this might be interesting, I looked up _A vision of Britain : a personal view of Architecture_ in WorldCat; this published work was written by Charles, Prince of Wales. <br/>
+<br/>
+Here are some stylized bibliographic citations from WorldCat:<br/>
+<br/>
+APA 6th<br/>
+Charles, . (1989). _A vision of Britain: A personal view of architecture_. London: Doubleday.<br/>
+<br/>
+Harvard 18th<br/>
+CHARLES. (1989). _A vision of Britain: a personal view of architecture_. London, Doubleday.<br/>
+<br/>
+MLA 7th <br/>
+Charles, . _A Vision of Britain: A Personal View of Architecture_. London: Doubleday, 1989. Print.<br/>
+<br/>
+Turabian 6th<br/>
+Charles. _A Vision of Britain: A Personal View of Architecture_. London: Doubleday, 1989.</div></div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2012-01-09T14:42:47-08:00</div>
+<div class="title">Existing programs - Localization</div>
+<div class="text">Tony,<br/>
+<br/>
+First of all, what is described on the page is a subset of the functionality found in several programs - although as far as I know only one program has data types, RootsMagic. I think RM has a more user friendly syntax than what you are describing, and that is very important since it will be important that users are able to design templates. I suggest that you have a look at RM (free download).<br/>
+<br/>
+Note that RM uses a more user friendly syntax, and although strictly not required in a transfer format, it would not hurt to be able to use words rather than numbers in the transfer format also.<br/>
+<br/>
+The localization of Citation Element names, and also more information about CE Types (incl data types), is described in my document "A Data Model for Sources and Citations" where translations of CET sets can be defined. The only difference is that I repeat e.g. the data type, so that a set is autonomous – you don’t have to download the original definition.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-09T15:07:12-08:00</div>
+<div class="text">Hi Geir,<br/>
+<br/>
+RootsMagic's person names data type is similar to that of TMG. <br/>
+<br/>
+RootsMagic also has a "jurisdiction" data type; which we have discussed before. It also has any number of abbreviation defaults that might be considered data types (associated with the short footnote).</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2012-01-09T15:52:28-08:00</div>
+<div class="text">TMG has, as far as I know, no support for data types in it's template language. But ONE Citation Element - Author (or something similar) has hard wired support for reversing the words in a name so that the surname comes first in bibliographies. Gene - you pointed this out to me.<br/>
+<br/>
+RootsMagic handles this by codes in the template, e.g. something like [Fieldname:Reverse] where Fieldname could be Author, with data type Name.<br/>
+<br/>
+RootsMagic has a Place data type, not a jurisdiction data type.<br/>
+<br/>
+By abbreviation defaults I assume you mean e.g. "n.a." for no author  - that could, and should, easily be handled in the template with &lt;|&gt;. I assume that is what RM does use? I.e. &lt;[Author]|n.a.&gt;<br/>
+<br/>
+But RM also allow you to include both a long and short (abbreviated) value in a field for a CE, e.g.  long||short and you can select the one to be used in the template, e.g. [Fieldname:Abbrev] - usually used in the short reference note templates.</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-10T12:16:07-08:00</div>
+<div class="text">Re: "First of all, what is described on the page is a subset of the functionality found in several programs"<br/>
+<br/>
+Yes, it was an illustration to raise a point Geir.<br/>
+<br/>
+Re: "I think RM has a more user friendly syntax than what you are describing"<br/>
+<br/>
+Come on Geir.... The syntax is for software to manipulate, not users. If they have to mess with XML syntax then that's a very bad product.<br/>
+<br/>
+Re: " it would not hurt to be able to use words rather than numbers in the transfer format also"<br/>
+<br/>
+I'm not sure you really caught the gist of my post Geir. I appreciate English is not your first language but this is not only beside the point, it was acknowledged as a short-cut in the post.<br/>
+<br/>
+Tony</div></div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2012-01-09T15:05:23-08:00</div>
+<div class="title">Use of Citation Style Language</div>
+<div class="text">There have been several suggestions that we could use Citation Style Language (CSL) to direct the presentation of citations.<br/>
+<br/>
+(I think we should distinguish between CSL and "a citation style language".)<br/>
+<br/>
+It should be noted that CSL has a very different approach from templates in current programs. CSL specifies the layout for all source types in a large file and also use localization files.<br/>
+<br/>
+Using such an approach will in my view be far too complex for users, only programmers can understand CSL.<br/>
+<br/>
+Also, since CSL is very limited wrt to the source types and Citation Element types it supports, vendors would have to extend the CSL rendering program. Such an extension could easily be as complex as implementing a simple template language. If you want to wait until CSL supports genealogy by itself, that will be a long wait.<br/>
+<br/>
+Also, we do not currently know if a CSL approach will work, may depend on user requirements and certainly complexity of citations.<br/>
+<br/>
+I have therefore not chosen to base a solution on CSL - the most important reason being that the users will not be able to handle it.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-09T15:28:46-08:00</div>
+<div class="text">Hi Geir, Tony, <br/>
+<br/>
+Zotero receives requests regularly to add a genealogical style, and it's possible that based what we, it may be possible to define a high level genealogical mode that will meet Zotero's requirements.  <br/>
+<br/>
+Note that I said, "based on what we do," as I'm speaking directly to Geir's comment, " CSL is very limited wrt to the source types and Citation Element types it supports."<br/>
+<br/>
+Zotero is reference management software based on CSL, and Zotero supports more than 1500 "bibliographic" styles. In genealogy, the bibliographic style is quite different than the reference note, especially so when we drill down to a detail. <br/>
+<br/>
+When I last spoke with the Zotero folks, they suggested there might be room to add a couple of source types and perhaps a few elements to support a genealogical style. <br/>
+<br/>
+Another problem we have is how some of the popular styles are constructed. For example, Mills is based on Chicago, but we don't yet have a universal set of the variations between Mills and Chicago.</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-10T12:25:12-08:00</div>
+<div class="text">I agree that we should speak generically about citation formatting templates and not prescribe CSL. In fact I've posted elsewhere, already, that I believe we need a part of the BG standard that indicates how a compliant product should handle *our* meta-data. The idea being that they plug into our standard rather than our standard being tied to any one existing implementation.<br/>
+<br/>
+However, I have to raise a big red flag on the statement:<br/>
+<br/>
+"Using such an approach will in my view be far too complex for users, only programmers can understand CSL"<br/>
+<br/>
+This is a tool used by the software, not by the user. Products have had GUIs for over 20 years now - there's no excuse for expecting an end-user to edit files with a computer-readable syntax in them. Hence, that's a _red herring_ Geir.  :-)<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2012-01-10T19:07:00-08:00</div>
+<div class="text">Tony,<br/>
+<br/>
+I probably caused some confusion, I think we should talk about citation templates as seen in programs today, and CSL - the "standard".<br/>
+<br/>
+As far as templates are concerned, several leading programs allow the user to create templates using a reasonably simple language, and I think they should be able to transfer them between different programs.</div></div></div></body>
+</html>

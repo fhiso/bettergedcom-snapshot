@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>BetterGedcom - Data Model proposed by Adrian Bruce</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+This is my proposed draft for a data model for BetterGEDCOM (BG). This model is <em>not</em> complete as I intend to document just some of the entity types in each update to this page. This first part just examines the &quot;real world&quot; and leaves the sources, citations and assertions, etc of genealogy / family history / evidence management until later. Note that my experience of the entities in evidence management, conclusions, etc is limited so that will be the weakest area. <br />
+<br />
+Firstly, some comments on the mechanics of my data modelling. These are the terms I use in data modelling:<br />
+<ul><li>Entity Types - the types of things that we talk about;</li><li>Entities - the actual, individual things that we talk about;</li><li>Attributes - the properties of the entities;</li><li>Relationships - the ways in which entities may be linked.</li></ul>The terms &quot;Entity&quot; and &quot;Entity Type&quot; are a bit flaky and Entity is sometimes used vice Entity Type, but strictly the overall type is the &quot;Entity Type&quot;, and the individuals are the Entities (e.g. &quot;Entity Type&quot; = spaceship, &quot;Entity&quot; = NCC1701E USS Enterprise).<br />
+<br />
+Relationships have numbers associated with them - for instance, one person <em>may</em> be biological mother to <em>many</em> children - this is a relationship in the IT sense. In the opposite direction, each child <em>must</em> have one and only <em>one</em> biological mother. (Let's not worry here about how we document it in genealogy when we don't know all the facts - I'm just using the biological truth as an illustration). This is a one-to-many (or many-to-one if you look in the opposite direction) relationship - with a degree of optionality since while every child has a biological mother, not every person is a biological mother.<br />
+<br />
+Data Modelling comes up with one-to-one, one-to-many (or many-to-one) and many-to-many relationships. Adepts in data modelling will know that data modellers refine their models to eliminate many-to-many relationships by introducing new entity types. However, this is a logical model and so I have deliberately not eliminated my many-to-many relationships. Well, not yet.<br />
+<br />
+Note also that I mention only a few attributes for each entity type and that I have not added in attributes that document relationships. Yet.<br />
+<br />
+The model does attempt to incorporate the ability to <a class="wiki_link" href="evidence%20vs.%20conclusions.html" target="_blank">distinguish between evidence and conclusions</a> and I am especially indebted to Tom Wetmore for his thoughts on what I need. Any resulting issues, however, are mine.<br />
+<br />
+This is the list (so far) of my entity types:<br />
+<a class="wiki_link" href="PERSON.html" target="_blank">PERSON</a><br />
+<a class="wiki_link" href="EVENT%20%28AB%20model%29.html" target="_blank">EVENT</a><br />
+CHARACTERISTIC<br />
+GROUP<br />
+LOCATION<br />
+<br />
+The above list describes the real world that we investigate in family history - not how we do family history.
+    </div>
+  </body>
+</html>

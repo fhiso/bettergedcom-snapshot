@@ -1,0 +1,419 @@
+<html>
+<head>
+<title>BetterGedcom - GRAMPS Data Model</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+<br/>
+Gramps is an open source genealogy application that runs on all major operating systems (Windows, Mac, Linux, etc). The application is written in Python, uses BSDDB database and has been under active development for many years. Gramps can read, import and export genealogical data in a few formats including GEDCOM. Gramps has defined its own file format, called Gramps XML, for archive and data exchange. The data format is freely available in its various versions at <a class="wiki_link_ext" href="http://gramps-project.org/xml/" rel="nofollow">http://gramps-project.org/xml/</a> .<br/>
+<br/>
+Gramps actually has three file formats: <br/>
+<ol><li>Pure XML - just the genealogical data in XML textual format (.gramps extension)</li><li>Pure XML - just the genealogical data, in a single gzip, compressed file (.gramps extension)</li><li>XML + media - the genealogical data and media files, in a single tar, compressed file (.gpkg extension)</li></ol><br/>
+See the <a class="wiki_link" href="Outline%20Of%20The%20GRAMPS%20Data%20Model.html">Outline Of The GRAMPS Data Model</a> written by Tom Wetmore. Tom has also written an evaluation of how well the Gramps model support the <a class="wiki_link" href="Evidence%20and%20Conclusion%20Process.html">Evidence and Conclusion Process</a>. It is in the file <a href="files/EvaluateGramps.pdf">EvaluateGramps.pdf</a><br/>
+<br/>
+<h3 id="toc1"><a name="x--Schemas"></a>Schemas</h3>
+<br/>
+<ul><ul><li>RELAX NG formatted schema versions 1.3.0: <a class="wiki_link_ext" href="http://gramps-project.org/xml/1.3.0/grampsxml.rng" rel="nofollow">grampsxml.rng</a></li><li>RELAX NG (draft) formatted schema versions 1.4.0: <a class="wiki_link_ext" href="http://gramps.svn.sourceforge.net/viewvc/gramps/trunk/data/grampsxml.rng" rel="nofollow" target="_blank">grampsxml.rng (draft)</a></li><li>Document Type Definition (DTD): <a class="wiki_link_ext" href="http://gramps-project.org/xml/1.3.0/grampsxml.dtd" rel="nofollow">grampsxml.dtd</a></li><li>Draft Document Type Definition (DTD): <a class="wiki_link_ext" href="http://gramps.svn.sourceforge.net/viewvc/gramps/trunk/data/grampsxml.dtd" rel="nofollow" target="_blank">grampsxml.dtd</a> (for new version of Gramps due out in March 2010)</li></ul></ul><br/>
+The above are XML text documents which define a genealogy database with the following top-level components:<br/>
+<br/>
+<ul><ul><li>header - Information about the "owner" of the database</li><li>name-formats</li><li>people</li><li>families</li><li>events</li><li>places</li><li>sources</li><li>media objects</li><li>repositories</li><li>notes</li><li>bookmarks</li><li>namemaps</li><li>tags (new version)</li></ul></ul><br/>
+Gramps model is not person or family centric, it is a very flexible model in action since many years. <br/>
+Gramps XML can be an unique people and families database or events database, places database, sources database, media objects database, repositories database, notes database. We do not need to set a person for starting our genealogy. Some people use Gramps XML as a flat database with one type of object (events as an index, places with coordinates, list of sources, notes for transcriptions) !<br/>
+<br/>
+<h3 id="toc2"><a name="x--Additional data model"></a>Additional data model</h3>
+<br/>
+For more details on the relationships of the above entities, see <a class="wiki_link_ext" href="http://www.gramps-project.org/docs/gen/gen_lib.html" rel="nofollow" target="_blank">gen lib</a> and <a class="wiki_link_ext" href="http://gramps-project.org/wiki/images/2/2e/API.svg" rel="nofollow" target="_blank">summary</a>.<br/>
+<br/>
+The Gramps application has many tools for manipulating and exporting genealogical data. Recently, the Gramps developers have also developed fully relational data model imports and exports. For example, one can import and export to SQL tables (see <a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=GRAMPS_SQL_Database" rel="nofollow" target="_blank">GRAMPS_SQL_Database</a>). In addition, a relational website version is also under development (see <a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=GEPS_013:_GRAMPS_Webapp" rel="nofollow" target="_blank">GEPS_013:_GRAMPS_Webapp</a>).<br/>
+<br/>
+<h3 id="toc3"><a name="x--Quick history of Gramps XML"></a><span class="wiki_link_ext">Quick history</span> of Gramps XML</h3>
+<br/>
+Gramps <a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=History_of_GRAMPS" rel="nofollow" target="_blank">got started purely by accident</a> on 21 April 2001. Gramps XML was used as internal database.<br/>
+Since 2005, Gramps XML is only for archive, backup and data exchange. <br/>
+Gramps XML is <a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=GRAMPS_XML#Parsing_Gramps_XML_file" rel="nofollow" target="_blank">supported by some tools</a> and <a class="wiki_link_ext" href="http://www.cohsoft.com.au/tmg2gramps/" rel="nofollow" target="_blank">convertors</a>.<br/>
+<br/>
+<h3 id="toc4"><a name="x--Samples Databases in Gramps XML format:"></a>Samples Databases in Gramps XML format:</h3>
+<br/>
+<ul><ul><li><a class="wiki_link_ext" href="http://gramps.svn.sourceforge.net/viewvc/gramps/branches/maintenance/gramps32/example/gramps/example.gramps" rel="nofollow" target="_blank">Gramps XML 1.3.0</a></li><li><a class="wiki_link_ext" href="http://gramps.svn.sourceforge.net/viewvc/gramps/trunk/example/gramps/example.gramps" rel="nofollow" target="_blank">Gramps XML 1.4.0</a></li></ul></ul><br/>
+Anyone who wishes to elaborate, please do so.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-12T06:13:08-08:00</div>
+<div class="title">Family object</div>
+<div class="text">Hi,<br/>
+<br/>
+Perhaps you know about the family object controversies and different approacches. Bob Velke has particularly said he believes the family object to be redundant and that it has no special properties that can't be accommodated by an event object.<br/>
+<br/>
+What is GRAMPS's approach to this?</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-16T12:41:11-08:00</div>
+<div class="text">See _Numbering your genealogy ..._. Associating children with multiple families is not uncommon in modern genealogy (adoptions, parent marries again, etc.). <br/>
+<br/>
+Such children are assigned only one reference number. Cross-indexing by the reference number replaces what might otherwise be duplicate descendant reporting. <br/>
+<br/>
+Hope this helps. --GJ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-19T07:03:27-08:00</div>
+<div class="text">Is there a sample Gramps family file that those of us new to Gramps could load? It might help some of us get up to speed faster.<br/>
+<br/>
+Thanks. --GJ<br/>
+<br/>
+P.S. I'm a Mac user</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-19T07:07:39-08:00</div>
+<div class="text">Sure. You can download and import:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:4:http://gramps.svn.sourceforge.net/viewvc/gramps/branches/maintenance/gramps32/example/gramps/example.gramps?revision=14425 --><a class="wiki_link_ext" href="http://gramps.svn.sourceforge.net/viewvc/gramps/branches/maintenance/gramps32/example/gramps/example.gramps?revision=14425" rel="nofollow">http://gramps.svn.sourceforge.net/viewvc/gramps/branches/maintenance/gramps32/example/gramps/example.gramps?revision=14425</a><!-- ws:end:WikiTextUrlRule:4 --><br/>
+<br/>
+Of course, Gramps can import your GEDCOM file, too.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-19T07:25:53-08:00</div>
+<div class="text">TY DS.<br/>
+<br/>
+As to GEDCOM import, most of my current information is in TMG. Let's just say that in the GEDCOM process, my sources and citations turn into mashed potatoes.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-19T07:27:19-08:00</div>
+<div class="text">Oops ... that link takes me to an XML page. <br/>
+<br/>
+Maybe someone will hold my hand. --GJ</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-19T07:31:05-08:00</div>
+<div class="text">Yes, Gramps uses XML for its archive, sharing file format. Is that not what you wanted?</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-20T01:42:36-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+See [[GRAMPS+Data+Model|Gramps Data Model page]], there is an <a class="wiki_link_ext" href="http://gramps.svn.sourceforge.net/viewvc/gramps/branches/maintenance/gramps32/example/gramps/example.gramps" rel="nofollow">example for stable release (3.2.5)</a> and/or next major release. Also a sample of <a class="wiki_link_ext" href="http://www.cohsoft.com.au/tmg2gramps/" rel="nofollow">TMG2gramps</a> way for exporting more informations.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-20T06:31:01-08:00</div>
+<div class="text">What am I missing. <br/>
+<br/>
+Perhaps because I'm on Firefox/Mac, when I click on the links, I see only a coded page--I can save the page but not download a file that can then be loaded into Gramps on my system.<br/>
+<br/>
+Any assistance is appreciated. --GJ</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-20T08:26:32-08:00</div>
+<div class="text">If you need to see the "download" link, then try this <a class="wiki_link_ext" href="http://gramps.svn.sourceforge.net/viewvc/gramps/branches/maintenance/gramps32/example/gramps/example.gramps?view=log" rel="nofollow">page</a>.<br/>
+<br/>
+Hope this could help.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-20T08:31:43-08:00</div>
+<div class="text">Sigh ... still not being directed to a download.<br/>
+<br/>
+Here's the first part of what I see in both Firefox and Safari:<br/>
+<br/>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br/>
+&lt;!DOCTYPE database PUBLIC "-<em>GRAMPS</em>DTD GRAMPS XML 1.3.0//EN"<br/>
+"<!-- ws:start:WikiTextUrlRule:23:http://gramps-project.org/xml/1.3.0/grampsxml.dtd --><a class="wiki_link_ext" href="http://gramps-project.org/xml/1.3.0/grampsxml.dtd" rel="nofollow">http://gramps-project.org/xml/1.3.0/grampsxml.dtd</a><!-- ws:end:WikiTextUrlRule:23 -->"&gt;<br/>
+&lt;database xmlns="<!-- ws:start:WikiTextUrlRule:24:http://gramps-project.org/xml/1.3.0/ --><a class="wiki_link_ext" href="http://gramps-project.org/xml/1.3.0/" rel="nofollow">http://gramps-project.org/xml/1.3.0/</a><!-- ws:end:WikiTextUrlRule:24 -->"&gt;<br/>
+  &lt;header&gt;<br/>
+    &lt;created date="2009-02-11" version="3.1.0-0.SVN11800:11807M"/&gt;<br/>
+    &lt;researcher&gt;<br/>
+      &lt;resname&gt;Alex Roitman,,,&lt;/resname&gt;<br/>
+    &lt;/researcher&gt;<br/>
+    &lt;mediapath&gt;/home/cristina/programs/trunk/example/gramps&lt;/mediapath&gt;<br/>
+  &lt;/header&gt;<br/>
+  &lt;events&gt;<br/>
+    &lt;event id="E0002" handle="_a5af0eb698f29568502" change="1185438865"&gt;<br/>
+      &lt;type&gt;Birth&lt;/type&gt;<br/>
+      &lt;dateval val="1928-07-09"/&gt;<br/>
+      &lt;place hlink="_1GTJQCCXZ3YO5QOFS"/&gt;<br/>
+    &lt;/event&gt;<br/>
+    &lt;event id="E0080" handle="_a5af0eb71ab7a28986f" change="1185438865"&gt;<br/>
+      &lt;type&gt;Birth&lt;/type&gt;<br/>
+      &lt;dateval val="1969-12-03"/&gt;</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-20T10:20:38-08:00</div>
+<div class="text">Oh, try right button of the mouse (under MacOS ?) -&gt; save as... above the download link.</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-20T11:54:46-08:00</div>
+<div class="text">GeneJ,<br/>
+<br/>
+Download the XML file, and give it an extension of .gramps. If you have the extension associated with the Gramps application, you can just double-click it, or import the file from inside Gramps (create a family tree, then menu -&gt; Family Trees -&gt; Import). If you don't have .gramps associated with Gramps, then just select the type of import as "Gramps XML" and select the file from the import menu option.<br/>
+<br/>
+Hope that helps,<br/>
+<br/>
+-Doug</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-12T16:37:23-08:00</div>
+<div class="text">I have an open mind about this, and I am trying to understand the implications of doing it either way - with or without a family. What are the advantages of removing the family? What are the problems if we keep it?</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-12T17:16:23-08:00</div>
+<div class="text">Romjerome, I'm not sure what country you're in, but I doubt TMG is unknown there. This is a pretty well-known issue, at least in some quarters, so I am just curious to get your guys' take on it.<br/>
+<br/>
+I can certainly add a link to this recurring argument. Let me find one. <br/>
+<br/>
+Well, this blog posting is kind of funny to use, but here it is:<br/>
+<!-- ws:start:WikiTextUrlRule:11:http://solumslekt.org/forays/exodus.php --><a class="wiki_link_ext" href="http://solumslekt.org/forays/exodus.php" rel="nofollow">http://solumslekt.org/forays/exodus.php</a><!-- ws:end:WikiTextUrlRule:11 --><br/>
+<br/>
+In this posting, the person in question is actually making his own database but starting with a TMG database. He also has no family entity in his data model (read the Families section under the Data Model heading).<br/>
+<br/>
+I'm still looking, but suffice it to say there's a large number of people using software products that don't include a separate family entity as some do, and I'm not trying to put Bob Velke up as some great poobah that has to be listened to, but this is a fairly well-known issue when it comes to genealogical data modeling.<br/>
+<br/>
+gthorud, I also am trying to understand the implications either way. I have heard that eliminating a family entity removes some redundancy and works more elegantly, but I also like the idea of a relationship class of objects, of which the main one would probably be a biological family, that could also be used as I mention above.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-13T00:38:32-08:00</div>
+<div class="text">greglamberson,<br/>
+<br/>
+<em>I'm not sure what country you're in, but I doubt TMG is unknown there. This is a pretty well-known issue, at least in some quarters, so I am just curious to get your guys' take on it.</em> <br/>
+<br/>
+Sorry, TMG is far away to be a <a class="wiki_link_ext" href="http://fr.geneawiki.com/index.php/Logiciels_de_g%C3%A9n%C3%A9alogie" rel="nofollow">leader on my primary genealogical place</a> and <a class="wiki_link_ext" href="http://wiki-en.genealogy.net/Software" rel="nofollow">related</a>.<br/>
+<br/>
+<em>Well, this blog posting is kind of funny to use, but here it is:<br/>
+<!-- ws:start:WikiTextUrlRule:23:http://solumslekt.org/forays/exodus.php --><a class="wiki_link_ext" href="http://solumslekt.org/forays/exodus.php" rel="nofollow">http://solumslekt.org/forays/exodus.php</a><!-- ws:end:WikiTextUrlRule:23 --></em><br/>
+<br/>
+I remember this blog, <a class="wiki_link_ext" href="http://sourceforge.net/mailarchive/message.php?msg_name=200805112057.39953.leif%40solumslekt.org" rel="nofollow">he had also contacted gramps devs via devel mailing list</a>. Note, it is not the first time I see <a class="wiki_link_ext" href="http://www.cohsoft.com.au/tmg2gramps/" rel="nofollow">"TMG" noted on a page</a>. I am still learning how it works, some people have never use it...<br/>
+<br/>
+I have an other example of localized searchs.<br/>
+The soundex concept is an English ASCII concept. Sounds are not the same according differents places in the world and non-ASCII characters was never the priority for US softwares. Will BG support non-ASCII characters (media, names, list order) ? <br/>
+<br/>
+So, for the Gramps model, I suppose we can remove the idea of family object and use the idea of Relationship class. Current family object is used for displaying a group of persons. To flag/mark/tag some people related together should be the same. The biological lineage is something important, but does it mean that TMG ignores same sex relation as two persons related ? Or that adoption means this children is not of the family ? What about 'in law' or 'step' relations ? Genealogy should only be the timeline of the person ?<br/>
+<br/>
+For the redundancy, on my seizure, I rather set a source on a filiation than on an individual. This validate a mother/father/child relation and this could also avoid some duplicated data three individuals ...<br/>
+<br/>
+Note, opposite to 'TMG', <a class="wiki_link_ext" href="http://pauillac.inria.fr/~ddr/GeneWeb/" rel="nofollow">GeneWeb</a> ignores alone individual, without family there is no children and events. It creates a fake spouse if need!</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2010-11-13T14:43:31-08:00</div>
+<div class="text">This is another interesting discussion!<br/>
+My uneducated ideas on this topic:<br/>
+<br/>
+I think a "family"-object isn't really needed if you're only dealing with simple (traditional) family structures. Everything that a "family" has, could be expressed as "relationships", or maybe "roles" at an event. E.g., a marriage event has two persons in the main roles, a birth event has one main role (the child) and two secondary roles (the parents). In this way, the relevant people are all interconnected. The job of the software would be to show these connections in an sensible way.<br/>
+<br/>
+But I do suppose a relationship method that links two or more persons independently of an event would make sense. It could be useful, e.g. if two people are living together but are not married -- there's no "getting together" event like a marriage... or could one find an event for every possibility?<br/>
+So is this already the same as having a "family" object? I'd prefer the more neutral term "group", after all, it just collects persons. A "group" should have a "type", like "family", or "unmarried relationship". You could also let the users define their own types of groups. Then maybe users might come up with things like school classes, army units, sport clubs.... That could be cool -- or it could be a nightmare ;)</div></div><div class="comment"><div class="from"><strong>SueYA</strong> 2010-11-14T06:15:30-08:00</div>
+<div class="text">I think the parent-child relationships (e.g. mother-child) are the backbone from which you can derive many others (e.g. siblings, half siblings, step relationships).  <br/>
+<br/>
+I would want to be able to specify both genetic and social parent child relationships (e.g. adoptive, mother's partner who acts as a father). <br/>
+<br/>
+If you just want to represent a traditional family tree, then a family object duplicates data, which is usually not recommended.  There might be some performance advantages in storing who is included a particular tree for later retrieval.<br/>
+<br/>
+I may want to represent a family unit as collection of people with a variety of different genetic and social relationships (e.g. a household of a couple who have some children from that relationship and other children from previous relationships living with them).<br/>
+<br/>
+I would also like to be able to record people who are not family by are connected e.g. my grandmother's friend 'Aunty Tilly' who appears in numerous family photos.<br/>
+<br/>
+Perhaps the tree drawing program could then have an option to include certain types of relationship.  <br/>
+<br/>
+This area needs very carefull thought.  I am not sure it would be appropriate for wider groups like clubs etc. though.<br/>
+<br/>
+Sue</div></div><div class="comment"><div class="from"><strong>Just.another.Gramps.user</strong> 2010-11-14T06:30:11-08:00</div>
+<div class="text">Gramps has a family object. Gramps has had it for ten years maybe. I don't think there are many (or any) DB corruptions associated with the family object. This seems like theory exageration for me. Gedcom has redundantly duplicated infinitely more data, places, events, whereas Gramps has an almost normalized DB. Correct me if I'm wrong. So as far as data corruption goes this seems quite unexpressive, whereas it does seem to bring quite some advantages regarding organization and methods. Just an opinion.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-14T07:20:39-08:00</div>
+<div class="text">JAGU,<br/>
+<br/>
+Actually this is a very practical issue when it comes to data modeling. This is one of those weird areas that comes up when modeling data for databases that might freak a lot of people out. The concept of NOT having a family object, which several data models don't, of course has no effect on viewing a family within a database. I just am trying confirm there's no inherent property of this object that makes it vital. But as you can see from my ambivalence in the discussion, I don't have a firm commitment on the question either way.</div></div><div class="comment"><div class="from"><strong>Just.another.Gramps.user</strong> 2010-11-14T07:30:50-08:00</div>
+<div class="text">I beg to differ Greg. It seems to me the main concern of the data redundancy would be data corruption. As far as we're concerned through experimentation, this is actually a practical non-issue. Especially when compared to the fact that Gedcom has been functional for all this time with an incredibly higher amount of redundancy in its data model. So we see Gramps has normalized mostly everythingin its model, but in this aspect, the family object, even though the family object is not necessary or vital (if anything is), it brings important advantages and the Gramps developers decided to use it.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-14T07:34:17-08:00</div>
+<div class="text">Trying to get a handle on the Family Object.<br/>
+<br/>
+First, a "family" reflects Relationships between two or more people.<br/>
+<br/>
+These relationships are defined, and may change over time.<br/>
+<br/>
+Usually these Relationships come about because of an Event. Some Events should be Shared Events.<br/>
+<br/>
+Two people Meet. A Shared Event<br/>
+They may or may not marry.<br/>
+<br/>
+These two people of a child. That child has a Birth Event. (not shared). But a Relationship is established between the 'natural' parents.<br/>
+<br/>
+One of the two people dies, so that shared event would have a new entry, changing the status of that relationship.<br/>
+<br/>
+The surviving parent enters a new relationship. The new relationship either adopts or doesn't adopt the child. If the new relationship individual adopt that child, then the child has a new relationship with this new person.<br/>
+<br/>
+What is the Family Object in this example? I don't know, but I do know that this "object" changes.<br/>
+<br/>
+At this point, in this earlier discussion on this point, the Family Object is in the presentation to me, a user, in my software. The transportation of the information about these relationships is what I think (so far) the BetterGEDCOM project is trying to do. That is, trying to determine what information needs to be within the BetterGEDCOM 'requirements'.<br/>
+<br/>
+So far, we have individuals, relationships between individuals,  amd events (some of which are shared, others are not). Not going into other aspects of the information being shared.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>Just.another.Gramps.user</strong> 2010-11-14T07:41:21-08:00</div>
+<div class="text">There are two distinct family objects there, two families which have in common the surviving person from the first family. No object changes as far as I can tell. I'm not sure a child can be affiliated to multiple families in Gramps, haven't tried it.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-14T15:24:32-08:00</div>
+<div class="text"><em>Gramps has a family object. Gramps has had it for ten years maybe.</em><br/>
+<em>I'm not sure a child can be affiliated to multiple families in Gramps, haven't tried it.</em><br/>
+<br/>
+JaGu,<br/>
+<br/>
+A strange Gramps' user you are ...<br/>
+I hope Gramps will soon celebrate the ten years! I cannot imagine that you never used Family Editor ... Why as a person, a child will not be able to be "shared" between multiple families ? Maybe 'check data' tool will just warn you!</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-16T12:41:10-08:00</div>
+<div class="text">See _Numbering your genealogy ..._. Associating children with multiple families is not uncommon in modern genealogy (adoptions, parent marries again, etc.). <br/>
+<br/>
+Such children are assigned only one reference number. Cross-indexing by the reference number replaces what might otherwise be duplicate descendant reporting. <br/>
+<br/>
+Hope this helps. --GJ</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-12T06:43:44-08:00</div>
+<div class="text">Hi,<br/>
+<br/>
+<em>Perhaps you know about the family object controversies and different approacches</em><br/>
+<br/>
+What kind of controversies ?<br/>
+Family status ? Social studies ? Cultural differences ? <br/>
+<br/>
+<em>Bob Velke has particularly said he believes the family object to be redundant and that it has no special properties that can't be accommodated by an event object.</em><br/>
+<br/>
+It seems to me (I am not a coder), that we need family object for storing children and a simple kinship. So I cannot imagine that an event will handle a <a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=Gramps_3.2_Wiki_Manual_-_Entering_and_Editing_Data:_Detailed_-_part_1#Editing_information_about_relationships" rel="nofollow">relationship</a>. Father will still be a father we do not need to set time and place like an event. Does he wants to merge 'association' and 'relation' ? All stored like a census publication ? What kind of properties ? Sorry,  I missed Bob Velke publication ... I answered as a simple Gramps translator and non-professional (and non-english) genealogist.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-12T11:21:35-08:00</div>
+<div class="text">I can add the <a class="wiki_link_ext" href="http://www.gramps-project.org/docs/gen/gen_lib.html#module-gen.lib.family" rel="nofollow">direct link to the API (family object)</a> and a part of the content:<br/>
+<em>The Family record is the GRAMPS in-memory representation of the relationships between people. It contains all the information related to the relationship. Family objects are usually created in one of two ways: Creating a new Family object, which is then initialized and added to the database. Retrieving an object from the database using the records handle.</em><br/>
+<em>#{FamilyRelType.MARRIED} : indicates a legally recognized married relationship between two individuals. This may be either an opposite or a same sex relationship.<br/>
+#{FamilyRelType.UNMARRIED} : indicates a relationship between two individuals that is not a legally recognized relationship.<br/>
+#{FamilyRelType.CIVIL_UNION} : indicates a legally recongnized,non-married relationship between two individuals of the same sex.<br/>
+#{FamilyRelType.UNKNOWN} : indicates that the type of relationship between the two individuals is not know.<br/>
+#{FamilyRelType.CUSTOM} : indicates that the type of relationship between the two individuals does not match any of the other types</em><br/>
+<br/>
+I just wonder what the "<em>special properties</em>" on family are ? any clue ?</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-12T11:53:40-08:00</div>
+<div class="text">First off, Bob Velke is the owner, chief programmer and mastermind behind The Master Genealogist (TMG). TMG has never had a family object (or at least it hasn't for over 15 years, as I've been  using it that long.)<br/>
+<br/>
+I must admit that after using TMG for so long, I find it difficult to understand why a family object is needed. TMG is of course a pretty successful product, particularly in professional genealogist circles. On the other hand, I could imagine a need for a relationship class of objects which would allow definition of any combination of possible relationships. This family would be great for defining relationships that exist but that aren't known specifically through whom, form person to person, they derive.<br/>
+<br/>
+Anyway, it's certainly very easy to work with genealogical information without family objects. I just wondered what the GRAMPS folks thought about the issue and wondered whether we should have family/relationship objects or simply rely on event objects (e.g., parent-child events).<br/>
+<br/>
+This is actually a pretty big debate in some quarters, so I'm a little surprised to see your responses to my question so far.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-12T15:29:14-08:00</div>
+<div class="text">Sorry, are you saying that without TMG, I never really make genealogy ... TMG is unknown on my country.<br/>
+<br/>
+Sure, family object is just a person reunion but I do not know why it should be ignored and replaced by events! I can answer how Gramps model tries to handle a family object but I cannot say why it should be ignored. Most GRAMPS folks only aim to properly store their data. I wonder why you do not added a link for us, like an url pointed out what Bob Velke has said.<br/>
+<br/>
+Gramps model is an empiric model.<br/>
+One culture needs something, then we try to handle this. This does not work for an other cultural use : "what could be the best solution for both".<br/>
+<br/>
+Should family object be replaced by events ?<br/>
+It sounds like a metaphysics question !!!<br/>
+<br/>
+I am not aware of these quarters. Sorry.<br/>
+Anyway, I am practicing genealogy on one of the most active place in the world and I have some English relatives. Your <a href="http://bettergedcom.wikispaces.com/GOALS">goals</a> do not leave me indifferent. Should I stop to contribute with my small knowledges ?<br/>
+<br/>
+I added some information about Gramps data model as contributions. They are freely available via Gramps' wiki or a quick search. <br/>
+We help Gramps project but none of us make money with Gramps. Take some good idea (if exist) from Gramps model, contribute if you want, but I am pretty sure that most Gramps devs do not know what Bob Velke said about family object !!!</div></div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-14T00:44:13-08:00</div>
+<div class="title">Evidence support with Gramps model</div>
+<div class="text">Hi,<br/>
+<br/>
+Greg, I have lost the page where you asked for Evidence support into Gramps.<br/>
+<br/>
+According your <a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/GOALS/30149513" rel="nofollow">description</a>, Gramps tries to manage Evidence with its <a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=Gramps_3.2_Wiki_Manual_-_Entering_and_editing_data:_detailed_-_part_2#Editing_source_references" rel="nofollow">SourceReference</a>:<br/>
+<br/>
+<em>Confidence : Conveys the submitter's quantitative evaluation of the credibility of a piece of information, based upon its supporting evidence. It is not intended to eliminate the receiver's need to evaluate the evidence for themselves.</em><br/>
+<br/>
+   1. Very Low = Unreliable evidence or estimated data.<br/>
+   2. Low = Questionable reliability of evidence (interviews, census, oral genealogies, or potential for bias for example, an autobiography).<br/>
+   3. High = Secondary evidence, data officially recorded sometime after event.<br/>
+   4. Very High = Direct and primary evidence used, or by dominance of the evidence.</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-14T11:15:18-08:00</div>
+<div class="text">This is exactly the topic I am currently writing an article about. Some people talk about the concept as if it's as universal as breathing air. Others don't know what they're talking about.<br/>
+<br/>
+I admit to aping the concerns of my former colleagues to the latter ones without understanding the issue fully myself.<br/>
+<br/>
+I think I'm starting to get it.<br/>
+<br/>
+The issue is that even with what seem to many to be absolute, obvious fact, there needs to be a layer of the process that can be uniformly documented that allows for analysis of every bit of information. Period.<br/>
+<br/>
+Most genealogy software products today simply do not provide for a robust way to deal with analysis. Most of us have "our way" of dealing with more complicated issues related to evidence analysis. For beginners and many amateurs, this issue may not even come up or be a significant issue. However, it's almost a certainty that if you have an elaborate documentation scheme for your analysis worked out in the app you're using, you're going to have that analysis either mangled or destroyed if you try to transfer it to anyone else in any fashion other than a readable report.<br/>
+<br/>
+In some cases, the shortcomings of the old GEDCOM standard are related to ambiguities in the standard. In this case, the issue is related to database structure more than anything else: There is NOT a layer of structure in genealogical databases that provides for detailed analysis of information.<br/>
+<br/>
+Imagine you're a researcher that has spent years on a particular daunting problem of some famous person, and after many long years of work, you finally reach a thoughtful, analyzed theory that is a breakthrough on this particular person.<br/>
+<br/>
+Then your software vendor goes bankrupt. Then a couple years later, everybody is dumping the operating system your program with all that hard work in it runs on.<br/>
+<br/>
+Is this some esoteric debate? Absolutely not. Even if the problem isn't apparent to you now, this is one of those cases that you will benefit from solving even if you haven't considered it before.<br/>
+<br/>
+The group of people with whom I helped get this effort going realize that since solving this problem will likely mean adding a completely new, as-yet unknown layer of complexity to genealogy databases, it is unlikely we can solve this problem in a way that is consistent with the initial goal of providing an incrementally improved modern file format that will allow uniform transport of genealogy data between computer systems. However, it is still a long-term goal, and it is absolutely essential that we start to understand and devise solutions for this problem now whether or not such solutions are part of the most immediate project.<br/>
+<br/>
+I've talked about this in lots of different discussions, and one idea I've suggested is we merely provide stubs for classes of database elements to provide a roadmap for solving the problem without suggesting we're trying to force software vendors into changing the structure of their current databases. It's just a suggestion, but there it is.<br/>
+<br/>
+I hope this give some insight into the problem. We do need to define the issue and have an idea of what is possible and what is not within the current project, even if we can't really solve the problem now.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-14T12:26:20-08:00</div>
+<div class="text">Interesting topic. <br/>
+<br/>
+The Evaluation of Evidence is relatively new in the genealogy community from what I have seen. It certainly wasn't on my radar screen 2 years ago. I heard Elizabeth Shown Mills talk about the need for the Evaluation of our Evidence. Keep in mind that your Evidence Explained! had just come out.<br/>
+<br/>
+She gave us a 'standard' to shoot for in the formatting of our Source and Source-Citations. Up til that point we were all over the place and didn't have the tools to meet that 'standard'. Now software vendors are starting to provide the tools to create standard source-citations.<br/>
+<br/>
+This is when she started to talk about our need to Evaluate what we have collected. She may have talked about that and others may have, but it wasn't until I heard her talk that I started to get it. After transitioning my sources into the new standard format and started to look what I really had, did I get what she was talking about.<br/>
+<br/>
+Clearly, few software vendors have a platform for us to do this evaluation. <br/>
+<br/>
+But, since we started the BetterGEDCOM project, the thought of the Evaluation process, need, was "put out there" for consideration.<br/>
+<br/>
+To this point, the software vendors might want to look into this need, so it has been suggested that the BetterGEDCOM have it part of the discussion up front, not down the road a piece.<br/>
+<br/>
+Its not that the BetterGEDCOM do something with the Evaluation information / attribute but to be aware that is may be coming. OR, more importantly that folks have an opportunity to provide input as to where this evaluation should take place.<br/>
+<br/>
+At this point, I want to do the Evaluation of my Evidence, through source-citations. And, I don't want to use the Evaluation of another. That doesn't mean that I won't take the other persons evaluation into consideration.<br/>
+<br/>
+I need to be able to evaluate my Evidence against the evidence in information from another End User, and either agree with or disagree with the other persons evaluation.<br/>
+<br/>
+or<br/>
+<br/>
+Pass the Evaluation along, but do not act on it if there is an Evaluation presented.<br/>
+<br/>
+One User's opinion.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>Just.another.Gramps.user</strong> 2010-11-14T12:41:51-08:00</div>
+<div class="text">Every person is allowed to have their own views. Let's not forget that genealogy is an old, old science. I'm sure E. S. Mills' work must have qualities in order for so many of you to be commenting on it. I however find it very hard to accept that after thousands of years someone has actually come up with a groundbreaking view on source citations. Really, this is very old stuff. I don't believe it nor do I think I will. To each his opinion. Regards.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-14T12:51:21-08:00</div>
+<div class="text">Honestly, is it so odd that there are new theories or concepts in any discipline? In fact, please name me one discipline that is the same is it was even 50 years ago and that hasn't made significant advances. I don't think you can do it.<br/>
+<br/>
+I think  maybe the very mention of Elizabeth Shown Mills to some people is enough to get them to react negatively for some reason. Well, she's hardly the only one saying these things. In fact this is a pretty universally accepted concept within scholarly genealogy circles, so to write it off without even considering it carefully seems pretty silly to me.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-14T12:51:22-08:00</div>
+<div class="text">Just.another.Gramps.user.<br/>
+<br/>
+Absolutely !!!<br/>
+<br/>
+What Elizabeth Shown Mills did, however, it to put something in writing on how we should / might record our evidence. That has nothing to say, good or bad, for what has gone before.<br/>
+<br/>
+But I can tell you, that I am more likely to look at someone's research if there is documentation on the data that I am looking at. Its not a matter of how, but that it IS documented.<br/>
+<br/>
+Thank you for your input.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2010-11-14T13:54:11-08:00</div>
+<div class="text">FYI, My coated coy of Elizabeth Shown Mills, CG, CGL, FASG, "Evidence Analysis: A Research Process Map," is copyrighted 2006.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-16T06:53:26-08:00</div>
+<div class="text">Greg, <br/>
+<br/>
+Maybe, now I can answer as a user/searcher.<br/>
+Looking at <a href="http://bettergedcom.wikispaces.com/Evidence+and+Conclusion+Process">Evidence and Conclusion</a> it seems to me that Gramps data model already supports <a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=Events_manager" rel="nofollow">this way/method or (concept)</a>! Sources and Events are independant unlimited objects and can be shared. Sorry, nothing new for me (I am not "Gramps guys", only myself)...</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-16T07:22:33-08:00</div>
+<div class="text">romjerome,<br/>
+<br/>
+My questions in relation to the GRAMPS model and in fact all models are regarding its support of (that is, ABILITY TO DOCUMENT) theories and deliberations as separate from evidence and conclusions/assertions/facts/events. Also the concept of proofs, which more closely resemble today's use of conclusions/assertions/facts/events, are generally freeform written documents with extensive footnotes and other references, and there needs to be a way to accommodate these.<br/>
+<br/>
+All of us have probably developed workarounds within our own software packages for dealing with these problems, if they have come up for us. However, there is no uniform manner in which these items are documented, because the existing data models our programs are build upon do not have objects that represent these concepts.<br/>
+<br/>
+Regarding Tom Wetmore's &lt;a haref="<!-- ws:start:WikiTextUrlRule:6:http://bettergedcom.wikispaces.com/Evidence+and+Conclusion+Process --><a href="http://bettergedcom.wikispaces.com/Evidence+and+Conclusion+Process">http://bettergedcom.wikispaces.com/Evidence+and+Conclusion+Process</a><!-- ws:end:WikiTextUrlRule:6 -->"&gt;Evidence and Conclusion,&lt;/a&gt; I have not fully digested it, and I will allow Tom to comment on it related to GRAMPS, as he has been working on that extensively already.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-16T07:30:37-08:00</div>
+<div class="text">romjerome,<br/>
+<br/>
+I agree that Gramps goes far in supporting the Evidence and Conclusion process I proposed as a means for evaluating models. But I think there are a few issues still to discuss, and I intend to take my own medicine and try evaluating Gramps with respect to the process. I think the big question about Gramps is whether it can build conclusion level person records ("individuals") out of evidence level person records without having to merge or otherwise destroy the evidence level Person records. In other words, can a Gramps Person record refer to a group of other Gramps person records, where the lower level ones were built from evidence and the higher one represents the user's decision that the lower ones are evidence for the higher one? One must remember that merging is a destructive operation, representing a conclusion that cannot be rethought or undone. Can Gramps support a world in which there is a Person record intended to be the the final summary of a person, while still maintaining the Person records taken from the evidence that led the researcher to build up that final summary person? I think that any data model that is going to fully support the research process must be able to answer "yes" to that question. Sorry for the redundancy there. On rereading I think I asked the same question thrice.<br/>
+<br/>
+It looks to me like the "recommended" Gramps approach is to build up a Person record by having it refer to more and more Event records as the user concludes that the Events apply to that person. Such a Person record is a conclusion concept with a few problems. For example, say that some of the Events had the person with different names. You can add those alternate names to the growing Person Record but how can you properly attribute them to Sources? Easily that is? Say the Person records had conflicting birth dates or birth places. How would you choose the "best" birth information for the concluded Person and how would you document your decision to do that; especially if the birth event you choose for the final person was not identical to the birth event from any of the evidence sources?.<br/>
+<br/>
+I do believe that Gramps may have very good answers to these questions, no matter how many times I ask them, but they have to asked before we'll know for sure.<br/>
+<br/>
+Let me put in a shameless plug for the DeadEnds data model, since the main reason I developed it was to easily and naturally support the Evidence and Conclusion process. In the DeadEnds model a Person record can refer to either zero other Person records, making it a base level evidence Person, or it can refer to two or more other Person records. When this occurs the Person represents the decision on the part of the researcher that the sub-Persons provide the evidence used to build the super-person. The source of the super person is the researcher's justification for creating the the person group represented by the super-person. The research at this point has free reign to add attributes to the super person (e.g., name, references to events) that represents the researcher's conclusions about the true attributes of the Person. The DeadEnds model allows these trees of Person records to build up to any depth, that is a Person record can refer to sub-Person records that can in turn refer to sub-sub Person records.<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-16T07:44:37-08:00</div>
+<div class="text">There is nothing explicit in Gramps to especially promote the evidence/conclusion process. But, Gramps tries to be agnostic as to process.<br/>
+<br/>
+The manner that many people use Gramps (I think) is to use a Person object as the best working hypothesis. A Person object can contain any number of names (of various types), any number of events (with conflicting information), etc. <br/>
+<br/>
+Of course, one could also create different Person objects, each might represent working evidence. <br/>
+<br/>
+We had the idea of Marker, which was a way to mark people to a particular category. That has (for upcoming version 3.3) been replaced with the idea of tagging, and allows multiple tags for each object. One could develop their own categories of meaning so that when it comes time to share data with someone else, one could filter and export only data tagged "Conclusion".<br/>
+<br/>
+I think much of the ideas here at BG could be formalized and standardized usage of a core set of attributes, tags, etc., and their semantics.<br/>
+<br/>
+(Interestingly, Gramps has a current ban on tags being shown in reports, as we want to make sure that it is clear that the tags are for personal use, and do not become part of the genealogical data. This view may change over time, we acknowledge.)<br/>
+<br/>
+-Doug</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-16T07:49:33-08:00</div>
+<div class="text"><em>can a Gramps Person record refer to a group of other Gramps person records, where the lower level ones were built from evidence and the higher one represents the user's decision that the lower ones are evidence for the higher one?</em> Maybe that's why tags are planned for ?</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-16T07:52:48-08:00</div>
+<div class="text">Doug, you was there ... Sorry !</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-14T06:43:13-08:00</div>
+<div class="text">Actually, I haven't made reference to evidence support (I don't think) but rather support for the research process. This refers to the ability to add articles of analysis, theories, theory development, and proof arguments, which are all quite different from evidence. These things are different from confidence or surety schemes, and I think Doug equated these as well whereas I don't.<br/>
+<br/>
+The things I am concerned with address the "Why" of confidence or surety schemes, not the schemes themselves. These are concepts that professional, academic and scholarly genealogists are concerned with most of all, and the ability to support these concepts (at least in the future if not now) is what I'm concerned with.</div></div><div class="comment"><div class="from"><strong>Just.another.Gramps.user</strong> 2010-11-14T06:51:52-08:00</div>
+<div class="text">I think some people really don't see all the hype with evidence/conclusion. Genealogists have been providing this information as notes where they have felt necessary since the dawn of history. The need for a strictly structured pattern there is something I don't see. $0.02.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-14T09:33:55-08:00</div>
+<div class="text"><em>I think some people really don't see all the hype with evidence/conclusion</em><br/>
+<br/>
+Yes. I am one of them!<br/>
+Some Gramps devs do not really know what should be done with this concept... There is a simple description of source on Gramps' wiki <a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=Sources" rel="nofollow">page</a> and <a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=Sources_in_GRAMPS" rel="nofollow">common use into Gramps</a>.<br/>
+<br/>
+User stores source reference, sets the confidence, and secondary informations like page/volume, then they are displayed on tools or reports as EndNotes. Also, Sources can set multiple "call names" (repositories). Gramps does not "really" have a specific model or scheme, it displays and (if need) list/order references attached to a specific source or repository: the classical use of gedcom fields.<br/>
+<br/>
+We have already heard of evidence/conclusion concept, but as gedcom export of such data does not seem to be possible (properly, right ?) and that the interest is still not clear to some people, maybe Gramps will just fit it if it should be used or if something is missing!</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-17T04:53:50-08:00</div>
+<div class="title">Evaluation of the Gramps Model for BetterGedcom</div>
+<div class="text">I have just uploaded a file that contains my evaluation of how well Gramps and the Gramps data model supports the Evidence and Conclusion process, which is a process that I have proposed as one that the BetterGedcom model should fully support.<br/>
+<br/>
+Proviso One. That the BetterGedcom effort will decide that it should support the Evidence and Conclusion process is not a foregone conclusions.<br/>
+<br/>
+Proviso Two. I am not an experienced Gramps users, but the file does outline the efforts I went through to learn about Gramps before using and then evaluating it. I might have missed something important that might affect the evaluation. If that is the case, please discuss it on this thread and I will undertake any necessary changes.<br/>
+<br/>
+Tom Wetmore</div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-17T05:12:10-08:00</div>
+<div class="text">Tom, looks like a fairly accurate assessment. (Although, to be fair, Gramps doesn't advocate *any* process. But, we could have some examples in the documentation re: ECP, and could even make suggestions towards a standard, or best practice.)<br/>
+<br/>
+Also, see if there are any follow ups on the Gramps mailing lists:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:6:http://gramps.1791082.n4.nabble.com/Re-Gramps-devel-Hi-From-BetterGEDCOM-and-Methodology-Questions-td3046683.html --><a class="wiki_link_ext" href="http://gramps.1791082.n4.nabble.com/Re-Gramps-devel-Hi-From-BetterGEDCOM-and-Methodology-Questions-td3046683.html" rel="nofollow">http://gramps.1791082.n4.nabble.com/Re-Gramps-devel-Hi-From-BetterGEDCOM-and-Methodology-Questions-td3046683.html</a><!-- ws:end:WikiTextUrlRule:6 --><br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:7:http://gramps.1791082.n4.nabble.com/Hi-From-BetterGEDCOM-and-Methodology-Questions-td3039612.html --><a class="wiki_link_ext" href="http://gramps.1791082.n4.nabble.com/Hi-From-BetterGEDCOM-and-Methodology-Questions-td3039612.html" rel="nofollow">http://gramps.1791082.n4.nabble.com/Hi-From-BetterGEDCOM-and-Methodology-Questions-td3039612.html</a><!-- ws:end:WikiTextUrlRule:7 --></div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-17T05:18:23-08:00</div>
+<div class="text">Hi tom,<br/>
+<br/>
+Good analyse.<br/>
+Maybe just a minor mistake : association is not planned for tagging, only a link between two persons. It should be done by "marker" (3.2.4) or "tag" (advanced custom marker group on 3.3).<br/>
+<br/>
+I wonder if Gramps should add a source support on Date and Place ?<br/>
+<br/>
+Anyway, if Evidence and Conclusion process will be added on BG, I suppose Gramps will try to support it.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-17T05:49:18-08:00</div>
+<div class="text"><em>Gramps has no group record and no user interface support for evaluating a set of person records for the purpose of partitioning them into groups that the user believes represent the same real persons.</em><br/>
+<br/>
+Not on events but we can "mark" some persons with the 'ToDo/Complete/Customs/..' markers, use marker color on views, persons can be filtered (enable filter bar from View/Display menu) and we can generate a report (Menu -&gt; Text -&gt; Marker report). <a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=Gramps_3.2_Wiki_Manual_-_Navigation#Bookmarks" rel="nofollow">Bookmarking objects</a> is also possible.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-17T05:54:43-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Thank you for putting this "out there" for us to look at.<br/>
+<br/>
+As for Proviso #1, I think and hope that the BetterGEDCOM community can get behind this, as it is certainly something that is missing in the genealogy software that is available at this point in time, and may of us, I think, understand that it is missing.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-17T05:59:28-08:00</div>
+<div class="text">Hi,<br/>
+<br/>
+Having just now read all this, I think  it's pretty good work. I haven't yet had time to evaluate the evaluation process itself, thanks to external events, but one thing I do want to point out that jumps out at me about the results of the evaluation:<br/>
+<br/>
+From the standpoint of the BetterGEDCOM project, there is a huge difference between being able to find a way to support a process or function and there being recognizable, uniform structural support within a given system for that same process or function.</div></div><div class="comment"><div class="from"><strong>Just.another.Gramps.user</strong> 2010-11-17T06:13:47-08:00</div>
+<div class="text">Great work. Genealogy and Free/Libre/OpenSource Software are lucky to have people like Tom Wetmore. Thank you.</div></div></div></body>
+</html>

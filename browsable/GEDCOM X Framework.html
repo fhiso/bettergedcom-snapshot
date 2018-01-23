@@ -1,0 +1,934 @@
+<html>
+<head>
+<title>BetterGedcom - GEDCOM X Framework</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"> </h1>
+ This is the GEDCOM X file format, as best as can be extracted from the GEDCOM X site. All the RDF and standardization parts of the GEDCOM X definition have been removed so that the data structures themselves are clearly revealed and can be discussed.<br/>
+<br/>
+NOTE: This document is far from perfect. It needs the scrutiny and review of the primary GEDCOM X developers to see if it matches the spec. Such a review by them would be highly worthwhile, as this document was very difficult to produce from their specs, which are in places unclear, ambiguous, and incomplete.<br/>
+<br/>
+GEDCOM X has both Elements (that begin with a lower case letter) and Data Types (that begin with an upper case letter). In some cases the same name (e.g. Person) will be defined as both an element and a data type. Despite efforts of GEDCOM X to explain the difference, it is not clear in their examples and descriptions when to use which and it is confusing. This document will not differentiate and items will be named with their lower case versions. For GEDCOM X's definition of "Types and Elements", see: <a class="wiki_link_ext" href="http://www.gedcomx.org/Developers-Guide.html" rel="nofollow">http://www.gedcomx.org/Developers-Guide.html</a><br/>
+<br/>
+GEDCOM X assigns ID's to items, and defined with ID="...". Links to these ID's are through resource="...".<br/>
+<br/>
+Anything with "..." still needs to be discovered in GEDCOM X and expanded upon.<br/>
+<br/>
+Please comment on an appropriate discussion page. There is one for general discussion, as well as one for the various model parts, and one for each item of the model. If you want to discuss one item in the model, please make a new page for that.<br/>
+<br/>
+<br/>
+<hr/>
+<br/>
+In March 2012, the purpose of GEDCOM X was stated as:<br/>
+<ul class="quotelist"><li><span style="color: #ff0000;">"To define an open data model and an open serialization format for exchanging the components of the genealogical proof standard."</span></li><li><br/>
+</li></ul>When they talk about "the components of the genealogical proof standard," they mean these:<br/>
+<ul><li>Search Reliable Sources</li><li>Cite Each Source</li><li>Analyze Sources, Information, and Evidence</li><li>Resolve Conflicts</li><li>Make a Soundly-Reasoned Conclusion\\</li></ul><br/>
+See: <a class="wiki_link_ext" href="https://github.com/FamilySearch/gedcomx/issues/156#issuecomment-4848666" rel="nofollow">https://github.com/FamilySearch/gedcomx/issues/156#issuecomment-4848666</a><br/>
+<br/>
+<br/>
+On August 14, 2012, the one REQUIREMENT for GEDCOM X was stated as:<br/>
+<ul class="quotelist"><li><span style="color: #ff0000;">"GEDCOM X must be able to accommodate FamilySearch's Platform API."</span></li></ul><br/>
+See: <a class="wiki_link_ext" href="http://familysearch.github.com/gedcomx/2012/08/14/requirements.html" rel="nofollow">http://familysearch.github.com/gedcomx/2012/08/14/requirements.html</a><br/>
+<br/>
+<hr/>
+<br/>
+The Conclusion Model<br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/Conclusion-Model.html" rel="nofollow">http://www.gedcomx.org/Conclusion-Model.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc.html" rel="nofollow">http://www.gedcomx.org/gxc.html</a><br/>
+<br/>
+The Record Model:<br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/Record-Model.html" rel="nofollow">http://record.gedcomx.org/Record-Model.html</a><br/>
+<br/>
+Conclusion/Record Distinction:<br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/Conclusion-Record-Distinction.html" rel="nofollow">http://record.gedcomx.org/Conclusion-Record-Distinction.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/twomodels-whitepaper.pdf" rel="nofollow">http://record.gedcomx.org/twomodels-whitepaper.pdf</a><br/>
+<br/>
+<br/>
+In GEDCOMX, Conclusions link via the "source" item to the records in the Record Model. The "attribution" item contains the proof statement for conclusions. This document will includes both models.<br/>
+<br/>
+Note that some items are named the same in the two models but are not defined the same, e.g. name, gender, relationship. To distinguish, in this document, the similar items in the record model will be suffixed by "-record".<br/>
+<br/>
+<br/>
+Multimedia objects are somehow covered in the "source" item. That's not been expanded in this document.<br/>
+<br/>
+<br/>
+<hr/>
+<br/>
+There are three top-level records:<br/>
+person - in the conclusion model,<br/>
+relationship - in the conclusion model.<br/>
+record - in the record model.<br/>
+<br/>
+It likely can be argued whether there should be other top-level records that can have their own facts attached, e.g:<br/>
+place - in the conclusion model<br/>
+group - in the conclusion model (for a group of people, or an organization)<br/>
+<br/>
+<br/>
+PERSON :=<br/>
+<ul class="quotelist"><li>&lt;person ID="XREF:PERSON"&gt;<ul class="quotelist"><li>&lt;&lt;IDENTIFIER&gt;&gt; {0:M}</li><li>&lt;&lt;LIVING&gt;&gt; {0:1}</li><li>&lt;&lt;GENDER&gt;&gt; {0:1}</li><li>&lt;&lt;NAME&gt;&gt; {0:M}</li><li>&lt;&lt;FACT&gt;&gt; {0:M}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;NOTE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/person&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_person.html" rel="nofollow">http://www.gedcomx.org/gxc_el_person.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Person.html" rel="nofollow">http://www.gedcomx.org/gxc_Person.html</a><br/>
+<br/>
+<br/>
+RELATIONSHIP :=<br/>
+<ul class="quotelist"><li>&lt;relationship ID="XREF:RELATIONSHIP"&gt;<ul class="quotelist"><li>&lt;type&gt;&lt;&lt;RELATIONSHIP_TYPE&gt;&gt;&lt;/type&gt; {1:1}</li><li>&lt;person1 resource="XREF:PERSON" /&gt; {1:1}</li><li>&lt;person2 resource="XREF:PERSON" /&gt; {1:1}</li><li>&lt;&lt;FACT&gt;&gt; {0:M}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/relationship&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_relationship.html" rel="nofollow">http://www.gedcomx.org/gxc_el_relationship.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Relationship.html" rel="nofollow">http://www.gedcomx.org/gxc_Relationship.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RelationshipType.html#values" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RelationshipType.html#values</a>()<br/>
+<br/>
+RELATIONSHIP_TYPE :=<br/>
+<ul class="quotelist"><li>[ Couple | ParentChild | OTHER ]</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RelationshipType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RelationshipType.html</a><br/>
+<br/>
+RECORD :=<br/>
+<ul class="quotelist"><li>&lt;record ID="XREF:RECORD"&gt;<ul class="quotelist"><li>&lt;&lt;PERSISTENT_ID&gt;&gt; {0:1}</li><li>&lt;&lt;ALTERNATE_ID&gt;&gt; {0:M}</li><li>&lt;source-record resource="XREF:RECORD" /&gt; {0:M}</li><li>&lt;type&gt;&lt;&lt;RECORD_TYPE&gt;&gt;&lt;/type&gt; {0:1}</li><li>&lt;&lt;PERSONA&gt;&gt; {0:M}</li><li>&lt;&lt;RELATIONSHIP_RECORD&gt;&gt; {0:M}</li><li>&lt;&lt;FACT_RECORD&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/record&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_el_record.html" rel="nofollow">http://record.gedcomx.org/gxr_el_record.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Record.html" rel="nofollow">http://record.gedcomx.org/gxr_Record.html</a><br/>
+Note: Not sure why there would be attribution here. Attribution is only for conclusions.<br/>
+<br/>
+RECORD_TYPE :=<br/>
+<ul class="quotelist"><li>[ Bank | Birth | Census | Death | Draft | Land | Legal | Marriage | Migration</li><li>| Military | Pension | Probate | Roll | Tax | Vital | OTHER ]</li></ul><br/>
+<a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RecordType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RecordType.html</a><br/>
+<br/>
+<br/>
+<hr/>
+<br/>
+Below are the substructures of GEDCOM X that could be identified.<br/>
+<br/>
+<br/>
+AGE_PART_TYPE :=<br/>
+<ul class="quotelist"><li>[ Days | Hours | Minutes | Months | Years | OTHER ]</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/AgePartType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/AgePartType.html</a><br/>
+<br/>
+<br/>
+AGE_RECORD :=<br/>
+<ul class="quotelist"><li>&lt;age ID="XREF:AGE_RECORD"&gt;<ul class="quotelist"><li>&lt;&lt;AGE_RECORD_PART&gt;&gt; {0:M}</li><li>&lt;original&gt;...&lt;/original&gt; {0:1}</li><li>&lt;interpreted&gt;...&lt;/interpreted&gt; {0:1}</li><li>&lt;&lt;FORMAL&gt;&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/age&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Name.html" rel="nofollow">http://record.gedcomx.org/gxr_Name.html</a><br/>
+<br/>
+<br/>
+AGE_RECORD_PART :=<br/>
+<ul class="quotelist"><li>&lt;part ID=XREF:AGE_RECORD_PART&gt;<ul class="quotelist"><li>&lt;type&gt;&lt;&lt;AGE_PART_TYPE&gt;&gt;&lt;/type&gt; {0:1}</li><li>&lt;original&gt;...&lt;/original&gt; {0:1}</li><li>&lt;interpreted&gt;...&lt;/interpreted&gt; {0:1}</li><li>&lt;&lt;FORMAL&gt;&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li></ul></li><li>&lt;/part&gt;</li></ul><br/>
+<a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Age.html" rel="nofollow">http://record.gedcomx.org/gxr_Age.html</a><br/>
+<br/>
+<br/>
+ALTERNATEID :=<br/>
+<ul class="quotelist"><li>&lt;alternateId&gt; {1:1}<ul class="quotelist"><li>&lt;type&gt;...&lt;/type&gt; {1:1}</li><li>&lt;value&gt;...&lt;/value&gt; {1:1}</li></ul></li><li>&lt;/alternateId&gt; {1:1}</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_el_record.html" rel="nofollow">http://record.gedcomx.org/gxr_el_record.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Record.html" rel="nofollow">http://record.gedcomx.org/gxr_Record.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Persona.html" rel="nofollow">http://record.gedcomx.org/gxr_Persona.html</a><br/>
+<br/>
+<br/>
+ATTRIBUTION :=<br/>
+<ul class="quotelist"><li>&lt;attribution&gt; {1:1}<ul class="quotelist"><li>&lt;modified&gt;{datetime}&lt;/modified&gt; {0:1}</li><li>&lt;proofStatement&gt;{string}&lt;/proofStatement&gt; {0:1}</li><li>&lt;confidence resource="&lt;&lt;CONFIDENCE_LEVEL&gt;&gt;" /&gt; {0:1}</li><li>&lt;contributor resource="..." /&gt; {0:1}</li></ul></li><li>&lt;/attribution&gt; {1:1}</li></ul><br/>
+<a class="wiki_link_ext" href="http://www.gedcomx.org/gx_Attribution.html" rel="nofollow">http://www.gedcomx.org/gx_Attribution.html</a><br/>
+Note: Why would the proof statement appear in the Document model?<br/>
+Note: Confidence is a subjective part of a conclusion.<br/>
+Note: Why would the confidence appear in the Document model?<br/>
+Note: Likely, only modified and contributor should be in the Document model.<br/>
+<br/>
+<br/>
+CONCLUSION :=<br/>
+<ul class="quotelist"><li>&lt;conclusion ID="..."&gt;<ul class="quotelist"><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/conclusion&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Conclusion.html" rel="nofollow">http://www.gedcomx.org/gxc_Conclusion.html</a><br/>
+Note: Haven't found where this is used in the rest of the grammer yet.<br/>
+<br/>
+CONFIDENCE_LEVEL :=<br/>
+<ul class="quotelist"><li>[ Certainly | Probably | Possibly | Likely | Apparently | Perhaps | OTHER ]</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gx_confidenceLevel.html" rel="nofollow">http://www.gedcomx.org/gx_confidenceLevel.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/ConfidenceLevel.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/ConfidenceLevel.html</a><br/>
+Note: They should probably add the negatives of each, i.e. Certainly not, Probably not, etc.<br/>
+<br/>
+<br/>
+DATE :=<br/>
+<ul class="quotelist"><li>&lt;date&gt;<ul class="quotelist"><li>&lt;original&gt;...&lt;/original&gt;</li><li>&lt;formal resource="..." datatype="..."&gt;{string}&lt;/formal&gt;</li></ul></li><li>&lt;/date&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Date.html" rel="nofollow">http://www.gedcomx.org/gxc_Date.html</a><br/>
+<br/>
+<br/>
+DATE_PART_TYPE :=<br/>
+<ul class="quotelist"><li>[ Days | Months | Years | OTHER ]</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/DatePartType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/DatePartType.html</a><br/>
+<br/>
+<br/>
+DATE_RECORD :=<br/>
+<ul class="quotelist"><li>&lt;date ID="XREF:DATE_RECORD"&gt;<ul class="quotelist"><li>&lt;&lt;DATE_RECORD_PART&gt;&gt; {0:M}</li><li>&lt;original&gt;...&lt;/original&gt; {0:1}</li><li>&lt;interpreted&gt;...&lt;/interpreted&gt; {0:1}</li><li>&lt;&lt;FORMAL&gt;&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/date&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Date.html" rel="nofollow">http://record.gedcomx.org/gxr_Date.html</a><br/>
+<br/>
+<br/>
+DATE_RECORD_PART :=<br/>
+<ul class="quotelist"><li>&lt;datePart ID="XREF:DATE_RECORD_PART"&gt;<ul class="quotelist"><li>&lt;type&gt;&lt;&lt;DATE_PART_TYPE&gt;&gt;&lt;/type&gt; {0:1}</li><li>&lt;original&gt;...&lt;/original&gt; {0:1}</li><li>&lt;interpreted&gt;...&lt;/interpreted&gt; {0:1}</li><li>&lt;&lt;FORMAL&gt;&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/datePart&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_DatePart.html" rel="nofollow">http://record.gedcomx.org/gxr_DatePart.html</a><br/>
+<br/>
+<br/>
+FACT :=<br/>
+<ul class="quotelist"><li>&lt;fact ID="XREF:FACT"&gt;<ul class="quotelist"><li>&lt;type&gt;FACT_TYPE&lt;/type&gt; {1:1}</li><li>&lt;&lt;DATE&gt;&gt; {0:1}</li><li>&lt;&lt;PLACE&gt;&gt; {0:1}</li><li>&lt;original&gt;...&lt;/original&gt; {0:1}</li><li>&lt;formal&gt;...&lt;/formal&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/fact&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_fact.html" rel="nofollow">http://www.gedcomx.org/gxc_el_fact.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Fact.html" rel="nofollow">http://www.gedcomx.org/gxc_Fact.html</a><br/>
+Note: No distinction is made between events and facts. They are all called facts.<br/>
+Note: That is a good thing!<br/>
+<br/>
+<br/>
+FACT_RECORD :=<br/>
+<ul class="quotelist"><li>&lt;fact ID="XREF:FACT_RECORD"&gt;<ul class="quotelist"><li>&lt;type&gt;FACT_TYPE&lt;/type&gt; {1:1}</li><li>&lt;&lt;DATE_RECORD&gt;&gt; {0:1}</li><li>&lt;&lt;PLACE_RECORD&gt;&gt; {0:1}</li><li>&lt;original&gt;...&lt;/original&gt; {0:1}</li><li>&lt;interpreted&gt;...&lt;/interpreted&gt; {0:1}</li><li>&lt;formal&gt;...&lt;/formal&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/fact&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Fact.html" rel="nofollow">http://record.gedcomx.org/gxr_Fact.html</a><br/>
+Note: No distinction is made between events and facts. They are all called facts.<br/>
+<br/>
+<br/>
+FACT_TYPE := { FACT_TYPE_PERSON | FACT_TYPE_COUPLE | FACT_TYPE_PARENT_CHILD }<br/>
+<br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gx_factType.html" rel="nofollow">http://www.gedcomx.org/gx_factType.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/FactType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/FactType.html</a><br/>
+<br/>
+<br/>
+FACT_TYPE_PERSON :=<br/>
+<ul class="quotelist"><li>[ Adoption | AdultChristening | Affiliation | Age | Baptism | BarMitzvah | BatMitzvah | Birth</li><li>| Blessing | Burial | CasteName | Census | Christening | Circumcision | Citizenship | ClanName</li><li>| Confirmation | CountOfChildren | CountOfMarriages | Cremation | Death | DiedBeforeEight</li><li>| Dwelling | Emigration | Ethnicity | Excommunication | FirstCommunion | Flourish | Funeral</li><li>| GedcomUUID | Graduation | Illness | Immigration | Interment | Living | MaritalStatus</li><li>| MilitaryAward | MilitaryCompany | MilitaryDischarge | MilitaryRank | MilitaryRegiment</li><li>| MilitaryService | MilitaryServiceBranch | Mission | Move | NameOfShip | Naturalization</li><li>| Namesake | NationalId | NationalOrigin | NeverHadChildren | NeverMarried | NotAccountable</li><li>| Occupation | Ordinance | Ordination | PhysicalDescription | PortOfDeparture | PreviousResidence</li><li>| Probate | Possessions | Race | RelationshipToHead | ReligiousAffiliation | Residence</li><li>| Retirement | ScholasticAchievement | SocialSecurityNumber | Stillborn | TitleOfNobility</li><li>| TribeName | Twin | Will ]</li></ul><br/>
+Ref:<a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/FactType.Person.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/FactType.Person.html</a><br/>
+<br/>
+<br/>
+FACT_TYPE_COUPLE :=<br/>
+<ul class="quotelist"><li>[ Annulment | CommonLawMarriage | CurrentlySpouses | Divorce | DivorceFiling | Engagement</li><li>| Marriage | MarriageBanns | MarriageContract | MarriageIntent | MarriageLicense</li><li>| MarriageNotice | MarriageSettlement | NumberOfChildren | Separation | UniversalId ]</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/FactType.Couple.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/FactType.Couple.html</a><br/>
+<br/>
+<br/>
+FACT_TYPE_PARENT_CHILD :=<br/>
+<ul class="quotelist"><li>[ Biological | Adopted | Step | Foster | Guardianship ]</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/FactType.ParentChild.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/FactType.ParentChild.html</a><br/>
+<br/>
+<br/>
+FORMAL :=<br/>
+<ul class="quotelist"><li>&lt;formalValue resource="..." datatype="..."&gt;...&lt;/formalValue&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gx_FormalValue.html" rel="nofollow">http://www.gedcomx.org/gx_FormalValue.html</a><br/>
+<br/>
+<br/>
+GENDER :=<br/>
+<ul class="quotelist"><li>&lt;gender&gt;<ul class="quotelist"><li>&lt;type&gt;&lt;&lt;GENDER_TYPE&gt;&gt;&lt;/type&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/gender&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_gender.html" rel="nofollow">http://www.gedcomx.org/gxc_el_gender.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Gender.html" rel="nofollow">http://www.gedcomx.org/gxc_Gender.html</a><br/>
+<br/>
+<br/>
+GENDER_RECORD :=<br/>
+<ul class="quotelist"><li>&lt;gender ID="XREF:GENDER_RECORD"&gt;<ul class="quotelist"><li>&lt;type&gt;&lt;&lt;GENDER_TYPE&gt;&gt;&lt;/type&gt; {0:1}</li><li>&lt;original&gt;...&lt;/original&gt; {0:1}</li><li>&lt;interpreted&gt;...&lt;/interpreted&gt; {0:1}</li><li>&lt;&lt;FORMAL&gt;&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/gender&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_gender.html" rel="nofollow">http://www.gedcomx.org/gxc_el_gender.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Gender.html" rel="nofollow">http://www.gedcomx.org/gxc_Gender.html</a><br/>
+<br/>
+<br/>
+GENDER_TYPE :=<br/>
+<ul class="quotelist"><li>[ Female | Male | Unknown | OTHER ]</li></ul><br/>
+<a class="wiki_link_ext" href="http://www.gedcomx.org/gx_genderType.html" rel="nofollow">http://www.gedcomx.org/gx_genderType.html</a><br/>
+<a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/GenderType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/GenderType.html</a><br/>
+<br/>
+<br/>
+IDENTIFIER :=<br/>
+<ul class="quotelist"><li>&lt;identifier&gt;<ul class="quotelist"><li>&lt;type&gt;&lt;&lt;IDENTIFIER_TYPE&gt;&gt;&lt;/type&gt;</li><li>&lt;value&gt;...&lt;/value&gt;</li></ul></li><li>&lt;/identifier&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gx_Identifier.html" rel="nofollow">http://www.gedcomx.org/gx_Identifier.html</a><br/>
+<br/>
+<br/>
+IDENTIFIER_TYPE :=<br/>
+<ul class="quotelist"><li>[ Primary | Forwarded | OTHER ]</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gx_identifierType.html" rel="nofollow">http://www.gedcomx.org/gx_identifierType.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/IdentifierType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/IdentifierType.html</a><br/>
+<br/>
+<br/>
+LIVING :=<br/>
+<ul class="quotelist"><li>&lt;living&gt;[ true | false ]&lt;/living&gt; {1:1}</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Person.html" rel="nofollow">http://www.gedcomx.org/gxc_Person.html</a><br/>
+<br/>
+<br/>
+NAME :=<br/>
+<ul class="quotelist"><li>&lt;name ID="XREF:NAME"&gt;<ul class="quotelist"><li>&lt;type&gt;&lt;&lt;NAME_TYPE&gt;&gt;&lt;/type&gt; {0:1}</li><li>&lt;preferred&gt;[ true | false ]&lt;/preferred&gt; {0:1}</li><li>&lt;&lt;NAME_FORM_PRIMARY&gt;&gt; {0:1}</li><li>&lt;&lt;NAME_FORM_ALTERNATE&gt;&gt; {0:M}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/name&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_name.html" rel="nofollow">http://www.gedcomx.org/gxc_el_name.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Name.html" rel="nofollow">http://www.gedcomx.org/gxc_Name.html</a><br/>
+<br/>
+<br/>
+NAME_FORM_ALTERNATE :=<br/>
+<ul class="quotelist"><li>&lt;alternateForm&gt;<ul class="quotelist"><li>&lt;fullText&gt;...&lt;/fullText&gt; {0:1}</li><li>&lt;&lt;NAME_PART&gt;&gt; {0:M}</li></ul></li><li>&lt;/alternateForm&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_name.html" rel="nofollow">http://www.gedcomx.org/gxc_el_name.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_NameForm.html" rel="nofollow">http://www.gedcomx.org/gxc_NameForm.html</a><br/>
+<br/>
+<br/>
+NAME_FORM_PRIMARY :=<br/>
+<ul class="quotelist"><li>&lt;primaryForm&gt;<ul class="quotelist"><li>&lt;fullText&gt;...&lt;/fullText&gt; {0:1}</li><li>&lt;&lt;NAME_PART&gt;&gt; {0:M}</li></ul></li><li>&lt;/primaryForm&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_name.html" rel="nofollow">http://www.gedcomx.org/gxc_el_name.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_NameForm.html" rel="nofollow">http://www.gedcomx.org/gxc_NameForm.html</a><br/>
+<br/>
+<br/>
+NAME_PART :=<br/>
+<ul class="quotelist"><li>&lt;part&gt;<ul class="quotelist"><li>&lt;type&gt;&lt;&lt;NAME_PART_TYPE&gt;&gt;&lt;/type&gt; {0:1}</li><li>&lt;text&gt;...&lt;/type&gt; {0:1}</li></ul></li><li>&lt;/part&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_name.html" rel="nofollow">http://www.gedcomx.org/gxc_el_name.html</a><br/>
+<br/>
+<br/>
+NAME_PART_TYPE :=<br/>
+<ul class="quotelist"><li>[ Given | Prefix | Suffix | Surname | OTHER ]</li></ul><br/>
+Ref:<a class="wiki_link_ext" href="http://www.gedcomx.org/gx_namePartType.html" rel="nofollow">http://www.gedcomx.org/gx_namePartType.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/NamePartType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/NamePartType.html</a><br/>
+<br/>
+<br/>
+NAME_RECORD :=<br/>
+<ul class="quotelist"><li>&lt;name ID="XREF:NAME_RECORD"&gt;<ul class="quotelist"><li>&lt;type&gt;&lt;&lt;NAME_RECORD_TYPE&gt;&gt;&lt;/type&gt; {0:1}</li><li>&lt;preferred&gt;[ true | false ]&lt;/preferred&gt; {0:1}</li><li>&lt;&lt;NAME_RECORD_PART&gt;&gt; {0:M}</li><li>&lt;original&gt;...&lt;/original&gt; {0:1}</li><li>&lt;interpreted&gt;...&lt;/interpreted&gt; {0:1}</li><li>&lt;&lt;FORMAL&gt;&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/name&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Name.html" rel="nofollow">http://record.gedcomx.org/gxr_Name.html</a><br/>
+<br/>
+<br/>
+NAME_RECORD_PART :=<br/>
+<ul class="quotelist"><li>&lt;part ID=XREF:NAME_RECORD_PART&gt;<ul class="quotelist"><li>&lt;type&gt;NAME_PART_TYPE&lt;/type&gt; {0:1}</li><li>&lt;original&gt;...&lt;/original&gt; {0:1}</li><li>&lt;interpreted&gt;...&lt;/interpreted&gt; {0:1}</li><li>&lt;&lt;FORMAL&gt;&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/part&gt;</li></ul><br/>
+<a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_NamePart.html" rel="nofollow">http://record.gedcomx.org/gxr_NamePart.html</a><br/>
+<br/>
+<br/>
+NAME_TYPE :=<br/>
+<ul class="quotelist"><li>[ Adoptive | AlsoKnownAs | BirthName | DeathName | Formal | MaidenName</li><li>| MarriedName | Name | Nickname | Religious | OTHER ]</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gx_nameType.html" rel="nofollow">http://www.gedcomx.org/gx_nameType.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/NameType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/NameType.html</a><br/>
+<br/>
+<br/>
+NOTE :=<br/>
+<ul class="quotelist"><li>&lt;note ID="XREF:NOTE"&gt; {1:1}<ul class="quotelist"><li>&lt;text&gt;...&lt;/text&gt; {0:1}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/note&gt; {1:1}</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gx_el_note.html" rel="nofollow">http://www.gedcomx.org/gx_el_note.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gx_Note.html" rel="nofollow">http://www.gedcomx.org/gx_Note.html</a><br/>
+Note: In the GEDCOM X Common Model, presumably can be added anywhere.<br/>
+<br/>
+<br/>
+PERSISTENT_ID :=<br/>
+<ul class="quotelist"><li>&lt;persistentId&gt;...&lt;/persistentId&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Record.html" rel="nofollow">http://record.gedcomx.org/gxr_Record.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Persona.html" rel="nofollow">http://record.gedcomx.org/gxr_Persona.html</a><br/>
+<br/>
+<br/>
+PERSONA :=<br/>
+<ul class="quotelist"><li>&lt;persona principal="..." ID="XREF:PERSONA"&gt;<ul class="quotelist"><li>&lt;&lt;PERSISTENT_ID&gt;&gt; {0:1}</li><li>&lt;&lt;ALTERNATE_ID&gt;&gt; {0:M}</li><li>&lt;&lt;GENDER_RECORD&gt;&gt; {0:1}</li><li>&lt;&lt;AGE_RECORD&gt;&gt; {0:1}</li><li>&lt;&lt;NAME_RECORD&gt;&gt; {0:M}</li><li>&lt;&lt;FACT_RECORD&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/persona&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Persona.html" rel="nofollow">http://record.gedcomx.org/gxr_Persona.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Record.html" rel="nofollow">http://record.gedcomx.org/gxr_Record.html</a><br/>
+Note: Not sure why there would be attribution here. Attribution is only for conclusions.<br/>
+<br/>
+<br/>
+PLACE :=<br/>
+<ul class="quotelist"><li>&lt;place&gt;<ul class="quotelist"><li>&lt;original&gt;...&lt;/original&gt;</li><li>&lt;formal resource="..." datatype="..."&gt;{string}&lt;/formal&gt;</li></ul></li><li>&lt;/place&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Place.html" rel="nofollow">http://www.gedcomx.org/gxc_Place.html</a><br/>
+<br/>
+<br/>
+PLACE_PART_TYPE :=<br/>
+<ul class="quotelist"><li>[ Address | Cemetery | Church | City | Country | County | District</li><li>| Hospital | Island | MilitaryBase | Mortuary | Parish | PlotNumber</li><li>| PostalCode | PostOffice | Prison | Province | Section | Ship</li><li>| State | Territory | Town | Township | Ward ]</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/PlacePartType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/PlacePartType.html</a><br/>
+<br/>
+<br/>
+PLACE_RECORD :=<br/>
+<ul class="quotelist"><li>&lt;place ID="XREF:PLACE_RECORD"&gt;<ul class="quotelist"><li>&lt;&lt;PLACE_RECORD_PART&gt;&gt; {0:M}</li><li>&lt;original&gt;...&lt;/original&gt; {0:1}</li><li>&lt;interpreted&gt;...&lt;/interpreted&gt; {0:1}</li><li>&lt;&lt;FORMAL&gt;&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/place&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Date.html" rel="nofollow">http://record.gedcomx.org/gxr_Date.html</a><br/>
+<br/>
+<br/>
+PLACE_RECORD_PART :=<br/>
+<ul class="quotelist"><li>&lt;placePart ID="XREF:PLACE_RECORD_PART"&gt;<ul class="quotelist"><li>&lt;type&gt;&lt;&lt;PLACE_PART_TYPE&gt;&gt;&lt;/type&gt; {0:1}</li><li>&lt;original&gt;...&lt;/original&gt; {0:1}</li><li>&lt;interpreted&gt;...&lt;/interpreted&gt; {0:1}</li><li>&lt;&lt;FORMAL&gt;&gt; {0:1}</li><li>&lt;&lt;SOURCE&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/placePart&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_PlacePart.html" rel="nofollow">http://record.gedcomx.org/gxr_PlacePart.html</a><br/>
+<br/>
+<br/>
+RELATIONSHIP_RECORD :=<br/>
+<ul class="quotelist"><li>&lt;relationship ID="XREF:RELATIONSHIP_RECORD"&gt;<ul class="quotelist"><li>&lt;type&gt;&lt;&lt;RELATIONSHIP_TYPE&gt;&gt;&lt;/type&gt; {1:1}</li><li>&lt;person1 resource="XREF:PERSONA" /&gt; {1:1}</li><li>&lt;person2 resource="XREF:PERSONA" /&gt; {1:1}</li><li>&lt;&lt;FACT_RECORD&gt;&gt; {0:M}</li><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li></ul></li><li>&lt;/relationship&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Relationship.html" rel="nofollow">http://record.gedcomx.org/gxr_Relationship.html</a><br/>
+<br/>
+<br/>
+RELATIONSHIP_TYPE :=<br/>
+<ul class="quotelist"><li>[ Couple | ParentChild | OTHER ]</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gx_relationshipType.html" rel="nofollow">http://www.gedcomx.org/gx_relationshipType.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RelationshipType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RelationshipType.html</a><br/>
+<br/>
+<br/>
+SOURCE :=<br/>
+<ul class="quotelist"><li>&lt;source resource="XREF:RECORD"&gt;<ul class="quotelist"><li>&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}</li><li>&lt;description resource="..." /&gt; {0:1}</li><li>&lt;type&gt;...&lt;/type&gt; {0:1}</li></ul></li><li>&lt;/source&gt;</li></ul><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_source.html" rel="nofollow">http://www.gedcomx.org/gxc_el_source.html</a><br/>
+Ref: <a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_SourceReference.html" rel="nofollow">http://www.gedcomx.org/gxc_SourceReference.html</a><br/>
+Note: The data type "sourcereference" seems to be the same thing as the element "source" and is being treated as the same.<br/>
+<br/>
+<br/>
+<br/>
+<hr/>
+<br/>
+Primitive types<br/>
+<br/>
+{datetime} :=<br/>
+<ul class="quotelist"><li>...</li></ul><br/>
+{string} :=<br/>
+<ul class="quotelist"><li>...</li></ul>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-11T17:20:30-07:00</div>
+<div class="title">General Discussion</div>
+<div class="text">Place General Discussion about the GEDCOM X Framework here</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-06-11T19:16:30-07:00</div>
+<div class="text">Hi Louis, <br/>
+<br/>
+Thank you for setting this up. <br/>
+<br/>
+I'm still reading through the materials. <br/>
+<br/>
+Do you know if there is a "research process" outline (or a similar set of assumptions) associated with GedcomX? <br/>
+<br/>
+The one we worked on is here:<br/>
+<!-- ws:start:WikiTextUrlRule:11:http://bettergedcom.wikispaces.com/Research+Process%2C+Evidence+%26+GPS --><a href="http://bettergedcom.wikispaces.com/Research+Process%2C+Evidence+%26+GPS">http://bettergedcom.wikispaces.com/Research+Process%2C+Evidence+%26+GPS</a><!-- ws:end:WikiTextUrlRule:11 --><br/>
+<br/>
+I'm asking in part because I'm interested and it would probably help me understand some of the objectives. Also, though, because I assume there are particular requirements behind GedcomX that are unique to FS and/or FS-like organizations that administer these large multi-user trees.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-11T20:01:25-07:00</div>
+<div class="text"><br/>
+GeneJ:<br/>
+<br/>
+Right on their home page: <!-- ws:start:WikiTextUrlRule:7:http://www.gedcomx.org/Home.html --><a class="wiki_link_ext" href="http://www.gedcomx.org/Home.html" rel="nofollow">http://www.gedcomx.org/Home.html</a><!-- ws:end:WikiTextUrlRule:7 -->  they state they want to support the genealogical proof standard (which I presume is through their "attribution" mechanism).<br/>
+<br/>
+On that page, they also show off Mark Tucker's Genealogy Research Process Map, but you'll notice that they state: "Note that a model for defining research goals is not currently within the scope of the core GEDCOM X project, but it might be a good candidate for a future GEDCOM X extension."<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-06-11T20:51:39-07:00</div>
+<div class="text">Hi Louis, <br/>
+<br/>
+Thank you. <br/>
+<br/>
+I have seen their reference to Mark Tucker's map, but I had forgotten the note "... not currently within the scope ..." <br/>
+<br/>
+From FS's perspective, I suppose their administrators aren't setting focused goals. per se. <br/>
+<br/>
+Maybe because we considered so different viewpoints in developing it, I rather like Adrian's outline. These kinds of diagrams do seem to help keep the work grounded in genealogy, too. <br/>
+<br/>
+Other than in "general questions" is there a place questions about the assumed process should go in our outline? --GeneJ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-12T04:30:52-07:00</div>
+<div class="text">Louis,<br/>
+<br/>
+You've done a great job distilling out the model underneath GEDCOMX. Thanks.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-12T09:18:40-07:00</div>
+<div class="text">Thanks are seconded from me.<br/>
+<br/>
+Adrian</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-06-12T14:17:57-07:00</div>
+<div class="text">This relates to the white paper supporting "Conclusion/Record Distinction," but I'm getting at the general requirements/motivations for GedcomX, so I'm posting it here.  <br/>
+<!-- ws:start:WikiTextUrlRule:10:http://bettergedcom.wikispaces.com/message/view/GEDCOM+X+Framework/54954018 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/GEDCOM+X+Framework/54954018" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/GEDCOM+X+Framework/54954018</a><!-- ws:end:WikiTextUrlRule:10 --><br/>
+<br/>
+Reading "Two Genealogy Models" (twomodels-whitepaper.pdf), n.d. [cApril 2012], I'm led to believe someone boils down issues to two problems. <br/>
+<!-- ws:start:WikiTextUrlRule:11:http://record.gedcomx.org/twomodels-whitepaper.pdf --><a class="wiki_link_ext" href="http://record.gedcomx.org/twomodels-whitepaper.pdf" rel="nofollow">http://record.gedcomx.org/twomodels-whitepaper.pdf</a><!-- ws:end:WikiTextUrlRule:11 --><br/>
+<br/>
+The first is the lack of "a common repository of conclusions." The second problem expressed seemed to confuse a "bibliographic citation" with a reference note, so it seemed at best a badly devised "problem." [See Evidence Explained (2007), p. 820 for "citation" (including the forms thereof) and p. 819 for "bibliography."] So that brings us back to the first problem, which is bothersome to me. <br/>
+<br/>
+Does anyone else question that the lack of a common repository of conclusions is a problem? What is the business about "a" common repository.  --GeneJ<br/>
+<br/>
+P.S. Does anyone know who collaborated on and/or authored the document? The work does refer to we, they, etc. When was it written? Where are the materials, references, documentation that support the many premise set out in the white paper? Ha! Where's the body of evidence?</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-13T12:12:34-07:00</div>
+<div class="text">Smile from me... On the GEDCOMX GITHUB issue 165 ( <!-- ws:start:WikiTextUrlRule:0:https://github.com/FamilySearch/gedcomx/issues/165 --><a class="wiki_link_ext" href="https://github.com/FamilySearch/gedcomx/issues/165" rel="nofollow">https://github.com/FamilySearch/gedcomx/issues/165</a><!-- ws:end:WikiTextUrlRule:0 --> )  user "jralls" comments "I wonder if, given that Conclusion and Record are now split, you should reconsider using RDF in the conclusion model. It makes a some sense in a web services context but it's awfully cumbersome in a self-contained data interchange file where external links will be too fragile."</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-13T16:09:59-07:00</div>
+<div class="text">Three cheers for Mr. Rails, "Hip hip ..."<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-06-13T17:22:39-07:00</div>
+<div class="text">I keep coming back to the requirements. <br/>
+<br/>
+Assume GedcomX originates as the API to access the yet to be public FamilySearch version of the online world tree. FamilySearch has said they want that to have a better reputation than its predessesor, but that is not necessarily saying too much as far as genealogical practices are concerned. <br/>
+<br/>
+The whitepaper defines "modern technologies" as web services. <br/>
+<br/>
+I've heard officials with FamilySearch say more than once that meeting 80% of users needs is a target. It is an outstanding question about how they define that 80% (and after all, they are the dictators). <br/>
+<br/>
+I wonder if FamilySearch intends for GedcomX to much support desktop software. Maybe GedcomX mostly about getting your conclusion data into FamilySearch's online tree.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-15T09:03:04-07:00</div>
+<div class="text">You can follow the issues being tracked by the GEDCOMX designers by going to their web site:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:6:http://www.gedcomx.org/ --><a class="wiki_link_ext" href="http://www.gedcomx.org/" rel="nofollow">http://www.gedcomx.org/</a><!-- ws:end:WikiTextUrlRule:6 --><br/>
+<br/>
+then clicking the Community link, and from the Community page clicking the Issues link.<br/>
+<br/>
+I have posted here a few times with opinions and questions. There's a lot of GEDCOMX's "historical thinking" available here.</div></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-11T17:21:18-07:00</div>
+<div class="title">The Conclusion Model</div>
+<div class="text">Talk about the Conclusion Model here.</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-12T09:17:11-07:00</div>
+<div class="text">Not quite sure where I should post this, but re Dates - it is not explained in the GEDCOMX stuff (cue British irony - "Now there's a surprise") but dates can be expressed in (at least) 2 forms. In one manner, they can be quoted (in formal form) according to the ISO standard of yyyy-mm-dd (gross over-simplification) but they can, I believe, also be quoted (in formal form) according to the GEDCOM method (e.g. BTW mmmm and nnnn). Part of the RDF stuff that we're trying to ignore (perhaps not always sensibly) would be some sort of declaration which system was in use, and possibly(???) the dating system could change by fact because it's all labelled by fact.<br/>
+<br/>
+(a) this actually seems a good idea<br/>
+(b) clearly I failed Citation 101 because I can't find the example again.</div></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-11T17:21:46-07:00</div>
+<div class="title">The Record Model</div>
+<div class="text">Talk about the Record Model here.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-11T17:22:23-07:00</div>
+<div class="title">Conclusion/Record Distinction</div>
+<div class="text">Talk about Conclusion/Record Distinction here.</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-13T08:38:37-07:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+The only area where contrasting the conclusion and record models causes me much concern, is the fact that the record model has 3 "high level" things, person (called persona), record and relationship; whereas the conclusion model has only two of them, person and relationship, and omits an analog of the record record, which I believe should be the multi-role event.<br/>
+<br/>
+The record record (sorry, it was their name choice, not mine), is roughly what I have been calling an evidence event record. GEDCOMX doesn't adequately handle the concept of a role, however, since the record record has only direct pointers to persons. Therefore the type of the role and attributes of the role player (e.g., age, marriage status) don't fit well in the model. If they gave those attributes to the persona record, which <em>does not</em> have a pointer back to the record, all context for these facts (e.g., the date and place when and where they were valid) is blowing in the wind. The DeadEnds model has the fix for this in the notion of a person reference which carries this information.<br/>
+<br/>
+Because the conclusion model does not have an record analog to the record record, we know that GEDCOMX has a limited view as to what an event is. You can tell from their model that they have relegated events to the status of facts that are subsumed in the bodies of person and relationship objects. Therefore the model has no corollary to a multi-rule event at the conclusion level. I don't think that is a good idea.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-06-13T08:50:52-07:00</div>
+<div class="text">@ Tom, <br/>
+<br/>
+Last para ... "... multi-rule event." <br/>
+<br/>
+Did you intend multi-role event?</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-13T11:54:45-07:00</div>
+<div class="text">Tom,<br/>
+Re "persona record, which does not have a pointer back to the record". Oh. If that were an entity relationship diagram on <!-- ws:start:WikiTextUrlRule:11:http://record.gedcomx.org/Record-Model.html --><a class="wiki_link_ext" href="http://record.gedcomx.org/Record-Model.html" rel="nofollow">http://record.gedcomx.org/Record-Model.html</a><!-- ws:end:WikiTextUrlRule:11 --> (which it isn't) and I were designing a relational (sorry!) DB from it (which I'm not), I'd have just stuck the appropriate keys in the appropriate tables, regardless of what columns had been put in the entity boxes in the ERD. So I hadn't given that a thought. But if you click through from that page to the Record Data Type ( <!-- ws:start:WikiTextUrlRule:12:http://record.gedcomx.org/gxr_Record.html --><a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Record.html" rel="nofollow">http://record.gedcomx.org/gxr_Record.html</a><!-- ws:end:WikiTextUrlRule:12 --> ) , you find that the details for the personas and relationships are physically within the XML for the "record". So doesn't that suffice? No key necessary because it's physically within? Which means that persona isn't, after all, a top-level entity in the record-model doesn't it?<br/>
+<br/>
+Nevertheless, your point that the "Record record" is missing something genealogically useful is important. Among the bits from GEDCOM 5.5's "SOURCE_RECORD" that I personally never use are tags for:<br/>
+ - event recorded, <br/>
+ - date of event recorded,<br/>
+ - place of event recorded,<br/>
+ - agency recording it<br/>
+<br/>
+But in a decent system these would sound useful. Maybe the "facts" listed as attributes of the Record entity (substitute your own terms there) are meant to record those 4 things? Because as someone said, ANY record exists only because of an event. Even a record of a semi-permanent characteristic / attribute etc. And somehow the idea seems elegant that a Record of a wedding ceremony be mapped over to the Multi-role Event record of type "marriage ceremony". Though I'm not sure it's always quite as simple and elegant as that. A Record of a birth-registration would include facts about the birth. That should be mapped over to a Multi-role Event of type "birth". Which is an important realisation in itself because you're forced to think that you might just have a secondary source at this point.<br/>
+<br/>
+It just seems more elegant to remove these differences.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-13T12:00:05-07:00</div>
+<div class="text">Just realised: The UML diagram on <!-- ws:start:WikiTextUrlRule:4:http://record.gedcomx.org/Record-Model.html --><a class="wiki_link_ext" href="http://record.gedcomx.org/Record-Model.html" rel="nofollow">http://record.gedcomx.org/Record-Model.html</a><!-- ws:end:WikiTextUrlRule:4 --> includes facts:Fact[] within the Record "entity", as it does personas and relationships - but while there is a drawn "relationship" from Record to Persona and Relationship there isn't one from Record to Fact, so surely either the line is missing to Fact or the facts:Fact[] within the Record shouldn't be there.<br/>
+<br/>
+But I'm being logical rather than UML-wise so maybe I'm wrong.<br/>
+<br/>
+Adrian</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-13T16:07:25-07:00</div>
+<div class="text">Adrian said,<br/>
+<br/>
+&gt;But if you click through from that page to the Record Data Type ( <!-- ws:start:WikiTextUrlRule:8:http://record.gedcomx.org/gxr_Record.html --><a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Record.html" rel="nofollow">http://record.gedcomx.org/gxr_Record.html</a><!-- ws:end:WikiTextUrlRule:8 --> ) , you find that the details for the personas and relationships are physically within the XML for the "record". So doesn't that suffice? No key necessary because it's physically within? Which means that persona isn't, after all, a top-level entity in the record-model doesn't it?<br/>
+<br/>
+Adrian, I completely missed that! Thanks for looking deeper and setting it straight. So the record record is a "container" object that contains its personas and relationships internally. Louis will <em>love</em> this because his view has always been to subsume the person information into a more general evidence record. Now it does make sense for the age info to be left in the persona sub-structure, and it also makes sense to let the role the person has in the event to be another fact associated with the person.<br/>
+<br/>
+I'm not against the idea of having a container object for the personas, but it will still be important to be able to search among all the personas in all the records without first finding the records. Therefore there will need to be some way to identify the persona substructures that can be used from outside the record record container.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-17T14:10:56-07:00</div>
+<div class="text"><br/>
+Yes, Tom. That's exactly why I like what they've done. <br/>
+<br/>
+What I see is if a repository has recorded all the information it has as Record records (I also think the double-r is unfortunate), then they'll be able to create external indexes with all the names in the personas and all the dates and places in the fact_records. Then you be able to search for all people whose names sound like xxxx who lived in yyyy between certain dates. The search will show the Records that have the closest matches.  <br/>
+<br/>
+The external indexes would solve the need you identified.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-17T14:12:20-07:00</div>
+<div class="text"><br/>
+Adrian,<br/>
+<br/>
+Yes, they left off the connection in the diagram. <br/>
+<br/>
+Their Records have facts which are: "Facts described by the record outside the scope of a persona or relationship."<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-17T17:41:00-07:00</div>
+<div class="text">Louis,<br/>
+<br/>
+Don't know if you follow many of the GEDCOMX issues, but a number of the posters, once they realized that the record record was a container for persons, didn't like it. Whether that will impact the model is something we will have to wait on. I think anyone can post over there, so you might like to post yours ideas.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-17T17:55:29-07:00</div>
+<div class="text">For my concept of how software should fully support the genealogical research process, the software must be able to build multi-layer trees of persons. It will be possible to do this for persons that are structures inside record records rather than (and in addition to) persons that are top level entities.<br/>
+<br/>
+My next generation of genealogical software supports person trees in its database (which instead of being a custom database as has been the case for my previous software, is now MongoDB, which is prefect for storing and indexing genealogical information). If the GEDCOMX model does not support multi-tier persons then I will have to flatten trees to two levels on GEDCOMX export (which looses some of the historical research process), and only import two level trees. It would be unfortunate if the archival format weren't powerful enough to hold the full structure of my database, but so will be it.<br/>
+<br/>
+To get what is really needed to support these ideas, necessary for full support of research, GEDCOMX will have to either merge their conclusion and record models or push the multi-tier concept into the conclusion model, which would be quite easy to do. I wonder if they have the vision.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-17T18:01:57-07:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+I've been fairly active at GEDCOM X and we've posted on the same issues there a few times. I hadn't seen the Record record discussions though.<br/>
+<br/>
+To me, their "persona" is definitely not nothing like your "persona".  Theirs is  just a placeholder for a person in the Record record.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-17T21:43:28-07:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+Don't just speak about your concepts. Do it! Get your program going and prove to everyone it's the right way. <br/>
+<br/>
+You probably have a good chance of finishing your program before a new GEDCOM standard is ever finalized. And if your program proves to people that your concept is important, then it WILL influence the standard. Until then, out of hundreds of genealogy programs, none use your idea of multi-layer trees of persons. It is illogical to build into a standard something that no program needs, because all other programs would have to support it if it is in the standard - even if they don't use it.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-18T06:18:26-07:00</div>
+<div class="text">Louis,<br/>
+<br/>
+You're a great guy! Thanks. I am currently diverted in a fascinating area. It is a project that reads natural language genealogical text (e.g., obituaries) and extracts person records with events and relationships. Imagine pasting text from an on-line newspaper into a program and getting back a [B]GEDCOM[X] file of the persons mentioned!</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-12T08:14:40-07:00</div>
+<div class="text">I think it would help if we understood what "two models" actually means. Does (e.g.) it mean a bit of software would only operate in/on one model?<br/>
+<br/>
+It would also help if we could see some actual issues that having one model results in. I see a list of dichotomies, most of which simply make me say, "Yes, so what?" E.g. Fundamental Unit in one is the Record, Fundamental Unit in the other is the Person. What's wrong with having two fundamental units? Yes, the goals of the processes using the data are different. Again, so what? Process does not equal data. <br/>
+<br/>
+The linked document states "Combining these domains would make for a smaller, more generic model which would confuse the “person existed” assertion with the “record existence” documentation." Wouldn't one be labelled "person" and the other "record"? And, to take an example, if Name is defined differently in the two models, then the possibility of incompatibility arises. Bad. <br/>
+<br/>
+For me, I feel that a legitimate issue - different viewpoints - has been built up into something huge.<br/>
+<br/>
+BUT I also worry that we _might_ be making too much of this ourselves. Is there is a danger that we're going round thinking the distinction has genealogical significance when it doesn't? If the coders want to hack the "real-world" stuff about and parcel it up behind the scenes, fine, but don't bother me about it. Might this be the case? I dunno. I can't understand enough of the implications yet.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-06-12T08:31:15-07:00</div>
+<div class="text">Ha! I'm writing out a comment on the same thing, Adrian. <br/>
+<br/>
+Will post shortly.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-12T09:01:48-07:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+The conclusion model only holds conclusions, which are persons and relationships, supported by facts (that are ALSO conclusions), that include dates and places. That's all.<br/>
+<br/>
+The source model holds source metadata. The conclusion model allows its objects to refer to objects in the source model via source references. With these two models working together you reach GEDCOM equivalence. Any software that deals with genealogical data like today's systems do, would implement the conclusion and source metadata models.<br/>
+<br/>
+Neither the conclusion model nor the source model supports transcribed evidence records. That is the purpose of the record model, which is not part of the first release of GEDCOMX. Think of the record model as what you would need to support data extraction projects like the 1940 census indexing project.<br/>
+<br/>
+I believe that any software that supports the research process must support the extraction of evidence from sources and its storage in evidence records. For me the ability to use and manipulate evidence records is key. And this is exactly what the GEDCOMX record model is for -- its records are the evidence records, including my hobby horse, the persona record.<br/>
+<br/>
+So I would answer that any software system designed to support the full research process needs all three models.<br/>
+<br/>
+Unfortunately, GEDCOMX gives no hints on how the similarly named records from the conclusion and record models would actually relate in a system that used them both. I have had that worked out in the DeadEnds model for years.<br/>
+<br/>
+I believe that it would be much simpler and effective for the conclusion and record models to be combined into one, and let the person, etc, records do double duty. I argued that strongly when I was asked to comment on GEDCOMX many months ago, but the idea of the two models was so deeply ingrained by them, that I didn't have a chance. I don't like the strict black and white view of the world that the two models enforce. By combining the models one reaches the much more realistic, and often very gray, world in which genealogical data actually lives. Combining the models importantly allows the multi-layer person trees that I believe are key to managing a complex genealogical research project. (Disclaimer: Louis believes I am completely off my rocker (!!) about this.)<br/>
+<br/>
+Hope that helps a little, while also allowing me to rock back and forth on my horse.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-12T09:23:03-07:00</div>
+<div class="text">"GEDCOMX gives no hints on how the similarly named records from the conclusion and record models would actually relate in a system that used them both"<br/>
+That's where I can't see it clealry either. Again, it depends on whether the 2 models carry through into the software - if they do, and there's a clash, what then? <br/>
+<br/>
+Maybe it's as simple as "RECORD.NAME" and "CONCLUSION.NAME" - but why can't it be written down?</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-12T11:00:38-07:00</div>
+<div class="text">Adrian,<br/>
+<br/>
+With respect to GEDCOMX the software's job is to import and export files in its format. If the GEDCOMX file contained both conclusion and record model data, the software would know the difference because the models would hold different formats for the two types of records.<br/>
+<br/>
+Presumably the software could use the same data classes for the two GEDCOMX person entities, but the software has to at least keep a tag so it can keep them segregated. I would use the same classes or at least base classes. In reality I already have the classes that I use for genealogical entities, and they are flexible enough to import and export GEDCOMX formatted data.<br/>
+<br/>
+I don't know what you mean by a clash. Presumably the software would always know which objects belong to which model, and would operate accordingly.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-12T12:02:43-07:00</div>
+<div class="text">Tom - when I referred to "clash", I meant something along the lines of (say) DATE in the record and conclusion model being defined differently - e.g. the first allowing textual stuff like "last summer" but the second demanding it be in ISO / numeric format. With the result that if someone wrote some logic to auto format the ISO / numeric date and it turned out to contain "last summer" instead, things might go awry. If indeed, "the software would always know which objects belong to which model, and would operate accordingly" then that's fine by me - it's simply that I don't know this and so am going into maximum suspicion mode when presented with two models. <br/>
+<br/>
+Adrian</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-12T18:25:40-07:00</div>
+<div class="text">My view on dates are unconventional. I don't believe there should be any standards for dates in genealogical databases. I am anti the trend towards standardization in most genealogical contexts, including personal names and places.<br/>
+<br/>
+My LifeLines program has been in use by Unix-based genealogists for over twenty years. LifeLines users enter dates in any format they like, and the LifeLines date parser figures them out. When LifeLines generates display screens or writes reports users can choose their preferred output formats for dates, and LifeLines will put them in that format.<br/>
+<br/>
+My current big genealogical project is a natural language processor that reads obituaries and other notices in natural English and extracts genealogical information from the text. This project recognizes dates in essentially every format that they appear in English text. Such things as " He will be buried next Thursday..." or "In your notice of the 3rd inst. ..." or "in January last year" have to be understood and resolved. It is surprisingly easy to understand what a date means in almost any format someone wishes to express it in. After all that's we express them in those ways so others can understand them!<br/>
+<br/>
+My opinions are so far off the mainstream tracks that I harp on them for no particular reason. To try to answer Adrian's question, I would expect that GEDCOMX must choose the same date standard for both models.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-13T02:53:04-07:00</div>
+<div class="text">Tom said "I would expect that GEDCOMX must choose the same date standard for both models."<br/>
+<br/>
+I would also expect that to be the default choice. My concerns are really that I still don't fully understand the implications of having two models - if it's only affecting the documentation, not the software or genealogy, I can't be bothered about it. However, I suspect it's a bit more than that - I suspect decisions have to be made manually that have implications on the software and I worry about the risks of mismatching decisions.<br/>
+<br/>
+I believe, Tom, that both you and I think the idea of two models is bad as it increases risk - I have absolutely no feel for how that risk works out in reality, you seem more relaxed that getting round the risk is do-able. <br/>
+<br/>
+Adrian <br/>
+PS - the date issue is separate - I only chose it here as one example I could think of where issues between two forms might creep in.</div></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-11T17:23:45-07:00</div>
+<div class="title">Relationship record</div>
+<div class="text">RELATIONSHIP :=<br/>
+ &lt;relationship ID="XREF:RELATIONSHIP"&gt;&lt;type&gt;&lt;&lt;RELATIONSHIP_TYPE&gt;&gt;&lt;/type&gt; {1:1}<br/>
+&lt;person1 resource="XREF:PERSON" /&gt; {1:1}<br/>
+&lt;person2 resource="XREF:PERSON" /&gt; {1:1}<br/>
+&lt;&lt;FACT&gt;&gt; {0:M}<br/>
+&lt;&lt;SOURCE&gt;&gt; {0:M}<br/>
+&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}<br/>
+<br/>
+&lt;/relationship&gt;<br/>
+<br/>
+ Ref: <!-- ws:start:WikiTextUrlRule:12:http://www.gedcomx.org/gxc_el_relationship.html --><a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_relationship.html" rel="nofollow">http://www.gedcomx.org/gxc_el_relationship.html</a><!-- ws:end:WikiTextUrlRule:12 --><br/>
+ Ref: <!-- ws:start:WikiTextUrlRule:13:http://www.gedcomx.org/gxc_Relationship.html --><a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Relationship.html" rel="nofollow">http://www.gedcomx.org/gxc_Relationship.html</a><!-- ws:end:WikiTextUrlRule:13 --><br/>
+ Ref: <!-- ws:start:WikiTextUrlRule:14:http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RelationshipType.html#values --><a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RelationshipType.html#values" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RelationshipType.html#values</a><!-- ws:end:WikiTextUrlRule:14 -->()</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-11T17:24:22-07:00</div>
+<div class="title">Record record</div>
+<div class="text">RECORD :=<br/>
+ &lt;record ID="XREF:RECORD"&gt;&lt;&lt;PERSISTENT_ID&gt;&gt; {0:1}<br/>
+&lt;&lt;ALTERNATE_ID&gt;&gt; {0:M}<br/>
+&lt;source-record resource="XREF:RECORD" /&gt; {0:M}<br/>
+&lt;type&gt;&lt;&lt;RECORD_TYPE&gt;&gt;&lt;/type&gt; {0:1}<br/>
+&lt;&lt;PERSONA&gt;&gt; {0:M}<br/>
+&lt;&lt;RELATIONSHIP_RECORD&gt;&gt; {0:M}<br/>
+&lt;&lt;FACT_RECORD&gt;&gt; {0:M}<br/>
+&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}<br/>
+<br/>
+&lt;/record&gt;<br/>
+<br/>
+ Ref: <!-- ws:start:WikiTextUrlRule:20:http://record.gedcomx.org/gxr_el_record.html --><a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_el_record.html" rel="nofollow">http://record.gedcomx.org/gxr_el_record.html</a><!-- ws:end:WikiTextUrlRule:20 --><br/>
+ Ref: <!-- ws:start:WikiTextUrlRule:21:http://record.gedcomx.org/gxr_Record.html --><a class="wiki_link_ext" href="http://record.gedcomx.org/gxr_Record.html" rel="nofollow">http://record.gedcomx.org/gxr_Record.html</a><!-- ws:end:WikiTextUrlRule:21 --><br/>
+ Note: Not sure why there would be attribution here. Attribution is only for conclusions.<br/>
+<br/>
+RECORD_TYPE :=<br/>
+ [ Bank | Birth | Census | Death | Draft | Land | Legal | Marriage | Migration<br/>
+| Military | Pension | Probate | Roll | Tax | Vital | OTHER ]<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:22:http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RecordType.html --><a class="wiki_link_ext" href="http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RecordType.html" rel="nofollow">http://www.gedcomx.org/java/apidocs/org/gedcomx/types/RecordType.html</a><!-- ws:end:WikiTextUrlRule:22 --></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-12T08:34:22-07:00</div>
+<div class="text">Two pet ideas of mine:<br/>
+1. Name - looking at the UML diagram of the Record Model, I see the possibility that a Persona has multiple names. Good. If it's a document recording someone's change of name, then we want 2 names (at least). <br/>
+<br/>
+But where's the ability to date them? <br/>
+<br/>
+To give a concrete example - the Petition for Naturalization for my GG Aunt gives 3 names. She's A B BRUCE also known as B BRUCE. And she entered the USA under the name A BRUCE on 26 June 1909. And she wants her name to be changed formally to B BRUCE. Now there are several facts there but no way of linking the Immigration fact (whatever you want to call it) with the name, not even by implication of the two dates being the same, because the Name isn't dated.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-12T08:48:15-07:00</div>
+<div class="text">Idea 2: Relationships (or something similar) need more than 2 personas. <br/>
+<br/>
+Suppose I have a list of the 6 (say) partners in the BG import-export partnership of San Francisco. How do I record that in this Record Model? <br/>
+<br/>
+I would clearly have a list of 6 personas, each with 1 name. Now I could give each a dated occupation fact - the occupation would be "partner", the agency (presupposing that's agreed and added) would be "BG of San Francisco" or whatever the written name is. That's how I'd do it now. But this misses an essential element of partnership and treats it just like another job. That element is that the 6 of them are, in various ways, mutually reliant on each other to stump up cash and to receive profits. I'd like therefore to create a single relationship that includes the 6 of them and has a type of Business-Partnership, or something like that.<br/>
+<br/>
+This is less important than dates for names because it can currently be done by occupation and by linking notes all over the place, but that then loses structure and requires the human to read all those notes.</div></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-11T17:25:35-07:00</div>
+<div class="title">Person record</div>
+<div class="text">PERSON :=<br/>
+ &lt;person ID="XREF:PERSON"&gt;&lt;&lt;IDENTIFIER&gt;&gt; {0:M}<br/>
+&lt;&lt;LIVING&gt;&gt; {0:1}<br/>
+&lt;&lt;GENDER&gt;&gt; {0:1}<br/>
+&lt;&lt;NAME&gt;&gt; {0:M}<br/>
+&lt;&lt;FACT&gt;&gt; {0:M}<br/>
+&lt;&lt;SOURCE&gt;&gt; {0:M}<br/>
+&lt;&lt;NOTE&gt;&gt; {0:M}<br/>
+&lt;&lt;ATTRIBUTION&gt;&gt; {0:1}<br/>
+<br/>
+&lt;/person&gt;<br/>
+<br/>
+ Ref: <!-- ws:start:WikiTextUrlRule:13:http://www.gedcomx.org/gxc_el_person.html --><a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_el_person.html" rel="nofollow">http://www.gedcomx.org/gxc_el_person.html</a><!-- ws:end:WikiTextUrlRule:13 --><br/>
+ Ref: <!-- ws:start:WikiTextUrlRule:14:http://www.gedcomx.org/gxc_Person.html --><a class="wiki_link_ext" href="http://www.gedcomx.org/gxc_Person.html" rel="nofollow">http://www.gedcomx.org/gxc_Person.html</a><!-- ws:end:WikiTextUrlRule:14 --></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-18T18:37:39-07:00</div>
+<div class="title">The Purpose of GEDCOM X</div>
+<div class="text"><br/>
+I've added to the GEDCOM X Framework, the Purpose of GEDCOM X, which Ryan Heaton posted at the GEDCOM X site. It is:<br/>
+<br/>
+The purpose of GEDCOM X has been stated as:<br/>
+ To define an open data model and an open serialization format for exchanging the components of the genealogical proof standard.<br/>
+<br/>
+<br/>
+When they talk about "the components of the genealogical proof standard," they mean these:<br/>
+ •Search Reliable Sources<br/>
+•Cite Each Source<br/>
+•Analyze Sources, Information, and Evidence<br/>
+•Resolve Conflicts<br/>
+•Make a Soundly-Reasoned Conclusion\\<br/>
+<br/>
+ See: <!-- ws:start:WikiTextUrlRule:16:https://github.com/FamilySearch/gedcomx/issues/156#issuecomment-4848666 --><a class="wiki_link_ext" href="https://github.com/FamilySearch/gedcomx/issues/156#issuecomment-4848666" rel="nofollow">https://github.com/FamilySearch/gedcomx/issues/156#issuecomment-4848666</a><!-- ws:end:WikiTextUrlRule:16 --><br/>
+<br/>
+My question to everybody is: How well does this purpose fit in with the goals of BetterGEDCOM and FHISO?</div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-08-15T14:00:28-07:00</div>
+<div class="text"><br/>
+Thank you Ryan, for expressing your views. I personally appreciate what you are doing and where you're trying to take it. Your post you just published at GEDCOM X:  Whence FHISO? <!-- ws:start:WikiTextUrlRule:7:http://familysearch.github.com/gedcomx/2012/08/15/whence-fhiso.html --><a class="wiki_link_ext" href="http://familysearch.github.com/gedcomx/2012/08/15/whence-fhiso.html" rel="nofollow">http://familysearch.github.com/gedcomx/2012/08/15/whence-fhiso.html</a><!-- ws:end:WikiTextUrlRule:7 --> makes your views very clear.  <br/>
+<br/>
+If you were the person with the authority behind GEDCOM X, then I'd feel very good indeed. But you've got a big gorilla behind you, who needs to come out and be more cooperative with the FHISO people, because ultimately, all parties are after the same thing - the ability to exchange data.<br/>
+<br/>
+The fact that FamilySearch has not come to an agreement with FHISO, when it was FamilySearch who initiated the push to get FHISO formed, is in my opinion as an interested developer, dragging everyone's feet in the ground, causing much friction, and needs to be resolved as soon as possible. Only then, will both parties be able to work cooperatively, and FHISO will be able to spend their time and resources to aid the initiative.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-08-15T14:12:22-07:00</div>
+<div class="text"><br/>
+Also see this new post by Tamura Jones:<br/>
+<!-- ws:start:WikiTextUrlRule:2:http://www.tamurajones.net/GEDCOMXFamilySearchFirst.xhtml --><a class="wiki_link_ext" href="http://www.tamurajones.net/GEDCOMXFamilySearchFirst.xhtml" rel="nofollow">http://www.tamurajones.net/GEDCOMXFamilySearchFirst.xhtml</a><!-- ws:end:WikiTextUrlRule:2 --></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-08-16T07:21:04-07:00</div>
+<div class="text">Ryan,<br/>
+<br/>
+Thanks for the correction -- you are doing the Conclusion model  first.<br/>
+<br/>
+Quick followon then -- since you are doing the CM first I assume its main application will be the on-line pedigree projects, the model to be behind the new NFS.<br/>
+<br/>
+NFS has a revolutionary feature, IMHO, even if it were not expressed in that way. That was the ability to join together person records from different sources into groups that users could manage, bringing together records that the user believes to be the same person, or splitting groups that the user believes containes more than one real person. Because groups can be joined, merged, broken apart, etc, the individual records must maintain their integrity -- they can never be merged with other records, or merged into a higher level type concept object (meaning merging in a destructive way, as in giving up your essence to be part of something bigger).<br/>
+<br/>
+This is one form of the Persona/Person record dichotomy that I have been espousing for 20 years. At least in the limited application of on-line pedigrees, I felt that NFS really got it right by using using this dual-level concept. Of course the practical issues came to the fore, 1st being the HORRIBLE quality of the vast number of records that were used to seed the NFS, and 2nd the merge/split/re-merge/re-split wars that can occur when different users disagree on interpretations of the records. However, I believe that NFS now allows each user to maintain their own groupings of the "Personae."<br/>
+<br/>
+All this is leading up to the point, that in the CM I don't see the facilities that could be used to support the dual level nature of the NFS tree. And since the dual nature of the NFS is, even with its problems is, IMHO, the most important concept behind it, I am a concerned that the CM would support the feature.<br/>
+<br/>
+Contrast the NFS with WikiTree. I joined WikiTree last night and tried to upload a GEDCOM file. The file had more persons in it than the general WikiTree guidelines (though not all that many, a few % points too many), and they would not upload it. The reason is that WikiTree wants a FULLY MERGED tree -- if two or more people add the same persons, they are responsible for immediately merging their data into a single record. If someone adds a large GEDCOM they are overly concerned with the potential problem of introducing duplicates. You can certainly understand their concerns, but do they really have the right solution? If I introduce duplicates into a tree that has some fundamental disagreements with my interpretation of the facts, there are some major ramifications. I either rearrange people and royally p*ss someone else off, or I merge my data into a structure that I fundamentally disagree with.<br/>
+<br/>
+Is the CM going to allow the dual nature of person records required to support NFS?</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-08-16T07:35:22-07:00</div>
+<div class="text">@Tom, after our recent differences on the family-units in a separate thread, I did make a note that a generalised SET/GROUP feature could be used to model both family-units (however subjective) and personae. As well as not mandating either concept, it would be open-ended to accommodate other types of group, including work units.<br/>
+<br/>
+If this were done as a non-merging group (e.g. collected links rather than actual merged records) then the same persons could be present in multiple groups at the same time.<br/>
+<br/>
+I know this is OT, and only marginally relevant to this thread, but this seemed to good opportunity to mention that I want to investigate it further.<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>heatonra</strong> 2012-08-16T08:05:57-07:00</div>
+<div class="text">@ttwetmore:<br/>
+<br/>
+<ul class="quotelist"><li>Is the CM going to allow the dual nature of person records required to support NFS?</li></ul><br/>
+I hope so, yes. The reason for my equivocation is I'm not sure I completely understand your definition of the feature. But I hope you'll we willing to help us get it right.</div></div><div class="comment"><div class="from"><strong>heatonra</strong> 2012-08-16T09:02:35-07:00</div>
+<div class="text">@louiskessler<br/>
+<br/>
+<ul class="quotelist"><li>Also see this new post by Tamura Jones:</li></ul><br/>
+Tamura's always a fun read, isn't he? I feel bad for him sometimes, though. He likes to put on a blindfold and throw grenades, which gets him a lot of attention (and even some elation from people who have personal grievances that get hit by the shrapnel), but it doesn't make him very many friends.<br/>
+<br/>
+Anyway, most of his post is just rantings about his prejudices and false assumptions about the project that don't merit comment. <br/>
+<br/>
+But I think it's probably worth pointing out how ridiculous it is for him to imply that GEDCOM X isn't/won't consider the needs and feedback from the community. I think anybody who has actually participated in the project can see the sincere effort we're making to incorporate the suggestions and feedback we're getting. For example, <a class="wiki_link_ext" href="https://github.com/FamilySearch/gedcomx/pull/182#issuecomment-7079951" rel="nofollow">here's</a> a comment from community member jralls who is surprised at how many changes we're willing to take on as a result of the feedback and comments on the source description model. Tamura himself has made a big impact on the direction of the file format and serialization format by his own post that mocks the initial draft.<br/>
+<br/>
+His implications that the project isn't really "open" are pretty silly, too. Every little change we make is fully visible and open for comment from the public. The word "proprietary" might be debatable, as is whether the project is really a "community" project, but I think it's weak to imply that the project isn't open.<br/>
+<br/>
+I'd make those comments on his blog, too, if it wasn't "proprietary" and was "open" for comments by the "community". :-)<br/>
+<br/>
+I'd really like to meet him personally some day, to get to know him and get familiar with what drives him and motivates him. I'd love to have some more insight as to why he's got the prejudices that he's got and what his personal hopes are for the genealogical industry as a whole. My impression is that he's got a wall there that is hard to penetrate.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-08-16T09:11:05-07:00</div>
+<div class="text"><br/>
+Personally, I think every person should have their own data kept separate, and they should be allowed to "virtually merge" other people's to their data the way they see fit. <br/>
+<br/>
+To me, the concept of a world tree (or Borg Tree as TJ likes to call it) is impossible and even idiotic to attempt, because everyone has their own subjective concept of what is correct and what is wrong. <br/>
+<br/>
+And any attempt to make that world tree will ALWAYS result in merge/split/re-merge/re-split wars. NFS is attempting to prevent that by requiring source documentation, and making the m/s/rm/rs process more onerous. But there are contradictory sources, sources that are plain wrong, and people who are adamant about what they believe despite overwhelming evidence against them. You can't stop this. World trees will never be able to contain the "truth". All it will contain is are the conclusions of the people most willing to slog through the trenches.<br/>
+<br/>
+Now add the complication of having not one representation for a conclusion person, but having many - dozens, hundreds, even thousands of possible people representing my grandfather, who I have to now slog through to try to see who I believe are the correct ones. Forget that, I say. What I want is to be simply given the source data that I can look through directly for names and places that might have info on my grandfather and his family. If I find sources that I think pertain to my grandfather, I will add them to my ONE conclusion person, and I will document those sources properly.<br/>
+<br/>
+That will be in my personal data file. Someone should be able to find MY conclusions in NFS and be able to "virtually" merge them into their <br/>
+own if they believe we have the same people. Maybe I can be notified of this and we share information personally between each other like true genealogists should - and we can both improve the quality of our separate conclusion datasets. The virtual merge will then be easier next time, because there will be fewer conflicts after the collaboration.<br/>
+<br/>
+I was at RootsTech 2012. I heard Jay Verkler talk about the NFS concepts, and I heard Ron Tanner go into detail about the merging and conflict resolution process in all its gory details. I completely disagree with merging the actual conclusions. I think everything each researcher does should remain as a separate entity, and virtual merging should be the method of combining other peoples information into ones own.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-08-16T09:23:01-07:00</div>
+<div class="text"><br/>
+Ryan:<br/>
+<br/>
+Re Tamura, all I can suggest is: Make love, not war.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-08-16T12:01:20-07:00</div>
+<div class="text">Ryan,<br/>
+<br/>
+I believe the NFS approach to person records and conclusions is as good as it is possible to be for a cooperative on-line tree. Having good records for many persons, and often many records for the same person from different sources (what I call Personae) and then bags to put them in (what I call Persons) to represent your conclusions is the best one can hope for. The NFS, as faulty as it may be, bases its infrastructure on this duality of concepts, and in my opinion it is the only infrastructure than can lead to success.<br/>
+<br/>
+Then allowing each user to define the bags in their own way, but to easily access and see how other have defined their bags, make cooperative work as as easy as I believe it can be. There are no split/merge/re-split/re-merge wars if everyone can have their own bags. You don't end up the single, Star Trekkian family tree of all human kind, but you end of with an easily traversable network of the overall collective wisdom about the entire family tree.<br/>
+<br/>
+In other words, as I interpret things, the NFS is a "classic" Persona/Person system. My main concern with the Conclusion model is that it support this duality in the person concept. I personally believe that the Persona concept is the key concept necessary to enable the next generation of genealogical software, so I'm always looking at models to see if they encompass the concept.<br/>
+<br/>
+As you know I go much further than this is my own thinking, believing that a full, unrestricted, tree of "Person bags" be embraced. I have used this concept in a project that has successfully recognized 100,000s of Persons from an input set of billions of "Personae," so I probably have more experience with the efficacy of the idea most. And all that is needed to add this power to any model is to allow Person/Persona objects to have references to other sub-Person/Persona objects.</div></div><div class="comment"><div class="from"><strong>heatonra</strong> 2012-08-18T10:54:08-07:00</div>
+<div class="text">Thanks for everybody's comments. It's enriching to hear everybody's philosophies.<br/>
+<br/>
+<ul class="quotelist"><li>"all I can suggest is: Make love, not war."</li></ul><br/>
+Excellent suggestion. Like I said, I'd be eager for the opportunity to get to know him personally. Maybe I'll send him a personal e-mail or something.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-08-18T14:37:23-07:00</div>
+<div class="text"><br/>
+Ryan,<br/>
+<br/>
+Then come to the BetterGEDCOM Developer's Meeting on Monday from 12 noon to 1 p.m. CDT. You're MDT aren't you, so it would be 11 a.m. to 12 noon for you. <br/>
+<br/>
+I should be there this week and Tamura is almost always there.<br/>
+<br/>
+The GoToMeeting link is at:<br/>
+<!-- ws:start:WikiTextUrlRule:14:http://bettergedcom.wikispaces.com/Developers+Meeting --><a href="http://bettergedcom.wikispaces.com/Developers+Meeting">http://bettergedcom.wikispaces.com/Developers+Meeting</a><!-- ws:end:WikiTextUrlRule:14 --><br/>
+<br/>
+The BetterGEDCOM meetings are somewhat informal, with GeneJ coordinating. <br/>
+<br/>
+We'd love to have you.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-08-18T19:19:48-07:00</div>
+<div class="text">Randy Seaver's blog featured an article yesterday, "What are FamilySearch's Intentions for GEDCOM X?" <br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:32:http://www.geneamusings.com/2012/08/what-are-familysearchs-intentions-for.html --><a class="wiki_link_ext" href="http://www.geneamusings.com/2012/08/what-are-familysearchs-intentions-for.html" rel="nofollow">http://www.geneamusings.com/2012/08/what-are-familysearchs-intentions-for.html</a><!-- ws:end:WikiTextUrlRule:32 --><br/>
+<br/>
+Have posted a response, more or less as below:<br/>
+<br/>
+Thank you +Randy Seaver and +Russ Worthington . A few thoughts below, mostly following those I posted on your blog.  <br/>
+<br/>
+I hope folks who read "Whence FHISO?" will then read, or read again, "Why FHISO?"<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:33:http://fhiso.org/2012/07/why-fhiso/ --><a class="wiki_link_ext" href="http://fhiso.org/2012/07/why-fhiso/" rel="nofollow">http://fhiso.org/2012/07/why-fhiso/</a><!-- ws:end:WikiTextUrlRule:33 --> <br/>
+<br/>
+I'm among the international group of volunteers working on FHISO. This independent group is actively communicating with vendors and genealogical organizations all over the world about FHISO. From time to time, we are asked to explain the difference between FHISO and FamilySearch's effort on GEDCOMX. To that end, there were a couple of things in Ryan Heaton's posts this week that are helpful. <br/>
+<br/>
+(1) Ryan wrote, "[W]e need to figure out how to best work together to get the work done." [a]<br/>
+<br/>
+Ryan's talking to all of us. The way forward for our diverse community IS along the path of multi-stakeholder governance already followed by most business sectors. It is a brightly lit path--see the Why FHISO? document (link above).<br/>
+<br/>
+(2) "[All] of the requirements for the [GEDCOMX] project can be summarized into a single statement: GEDCOM X must be able to accommodate FamilySearch's Platform API."[b]<br/>
+<br/>
+While that might be disappointing, was it ever reasonable to assume the proprietary development effort of one vendor, in this case, FamilySearch, would have fairly considered everyone's needs/every competitive interest? <br/>
+<br/>
+From Why FHISO? (section three), "The Family History Information Standards Organisation (<!-- ws:start:WikiTextUrlRule:34:http://fhiso.org/ --><a class="wiki_link_ext" href="http://fhiso.org/" rel="nofollow">http://fhiso.org/</a><!-- ws:end:WikiTextUrlRule:34 -->) was created to develop international standards based on the principles of diversity and due process. Standards developed by the organization will better meet the different and competitive needs of all service providers, program developers and users--globally."<br/>
+<br/>
+Equally important, from the same section, "Developers will be able to adopt a single [FHISO] standard with the confidence that their product meets expressed community requirements."  In FHISO's case, requirements are documented from the get-go. "Identify needs" is the first step in the standards development cycle.<br/>
+<br/>
+Elaborating on Russ' comment to your article, it is time. Some of us have been waiting at least 16 years. Let's do it. <!-- ws:start:WikiTextUrlEmailRule:37:fhiso@fhiso.org --><a class="wiki_link_ext" href="mailto:fhiso@fhiso.org" rel="nofollow">fhiso@fhiso.org</a><!-- ws:end:WikiTextUrlEmailRule:37 --> --GeneJ<br/>
+<br/>
+[a] "Whence FHISO?"<br/>
+<!-- ws:start:WikiTextUrlRule:35:http://familysearch.github.com/gedcomx --><a class="wiki_link_ext" href="http://familysearch.github.com/gedcomx" rel="nofollow">http://familysearch.github.com/gedcomx</a><!-- ws:end:WikiTextUrlRule:35 -->//2012/08/15/whence-fhiso.html <br/>
+[b] "GEDCOMX Requirements" <br/>
+<!-- ws:start:WikiTextUrlRule:36:http://familysearch.github.com/gedcomx/2012/08/14/requirements.html --><a class="wiki_link_ext" href="http://familysearch.github.com/gedcomx/2012/08/14/requirements.html" rel="nofollow">http://familysearch.github.com/gedcomx/2012/08/14/requirements.html</a><!-- ws:end:WikiTextUrlRule:36 -->﻿ <br/>
+Collapse this comment</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2012-06-19T04:38:29-07:00</div>
+<div class="text">My understanding of BG's goals is this:<br/>
+ - BetterGEDCOM will be a file format for the exchange and long-term storage of genealogical data.<br/>
+ - It will be more comprehensive than existing formats and so become the format of choice.<br/>
+<br/>
+(See <!-- ws:start:WikiTextUrlRule:27:http://bettergedcom.wikispaces.com/Introduction+to+Goal+and+Requirements --><a href="http://bettergedcom.wikispaces.com/Introduction+to+Goal+and+Requirements">http://bettergedcom.wikispaces.com/Introduction+to+Goal+and+Requirements</a><!-- ws:end:WikiTextUrlRule:27 --> )<br/>
+<br/>
+This is clearly a higher level pair of goals than Ryan's. My issue with the goals that Louis has copied, is that if you need to explain it, with cross references, it ain't working as a goal. As Tom said on the cross referenced page, "If you can't say it in a single sentence, I'm not all that interested. Sorry." (That may not be the exact context, but it's a sentiment I concur with as far as a _statement_ of goals goes. Except my quote of BG's goals needs 2 sentences. Sorry. &lt;grin&gt;)<br/>
+<br/>
+OK - so, having established that I'm not keen on the language, does that actually matter? Is the GEDCOMX goal actually OK even if it's not concise? I'm not keen on it for the following reasons:<br/>
+<br/>
+ - "To define an open data model". I like "open" and I guess it ought to have been in our goals. "Data model" I don't like. A data model is simply a means to an end, a way of communicating between IT geeks. After all, GEDCOM doesn't have an officially agreed data model and that's worked (sort of) for years. <br/>
+<br/>
+ - "an open serialization format". Again, "open" is good. But why "serialization format"? That is geek-speak. What's worse is that it's geek-speak that only a sub-class of IT geeks understand. To most of us, it's a "file format". I see absolutely no reason why I can't talk about the file formats of lumps of data inside a zipped file, even though having files within files is illogical from a strict viewpoint. Most of us IT geeks understand recursion and virtual concepts, we can cope with files inside files. I'd prefer this to be stated as "an open file format" for general consumption, and the technical documents can say, "Of course, we mean serialization format, here." Nevertheless, this point is perhaps more about me having a moan than anything serious - once you've tweaked the words, it becomes like our "file format", so it's a minor point.<br/>
+<br/>
+Now, what's the format for? <br/>
+BetterGEDCOM is "for the exchange and long-term storage of genealogical data";<br/>
+GEDCOMX is "for exchanging the components of the genealogical proof standard".<br/>
+<br/>
+I have an issue with the omission of "long-term storage" from GEDCOMX's goals. If you omit it, and you have omitted the term "file", then you have absolutely no aim to produce a chunk of data that can be saved off for future use. In other words, press the &lt;enter&gt; button, it's there, it's transmitted to the mother ship, it's gone. Where's my copy to keep? Where's the copy in case the mother ship crashes and burns because someone's bought it out who doesn't like the finances? All that is why I want a copy to keep and the term "long-term storage" is designed to give me that copy _and_ to ensure that copy is readable in the future by someone with different software.<br/>
+<br/>
+Carrying on with, "what's the format for?", BG has "genealogical data"<br/>
+GEDCOMX has "components of the genealogical proof standard". Again, I don't like this - the GPS is about how you do genealogy if you're a serious student of it. In the USA. And a few other places. I'd been working on my family history for a couple of years before I heard of the GPS. Does that mean GEDCOMX would have had nothing to offer me? This is a genuine concern - there's a world of difference between  "genealogical data _including_ components of the genealogical proof standard" and "components of the genealogical proof standard" because the first allows the possibility that the user might actually not be working to the GPS. <br/>
+<br/>
+The worlds potentially collide with how (to use sort-of-GEDCOM terminology) to link "facts" to the "sources". In GEDCOM there's the concept of a pointer which gets called "citation" (Yes, I know, please don't argue with that as a name, I'm just saying what GEDCOM type folks often call it) and this "citation" says which source contains the data, where in the source, whether it's primary, secondary for that fact, etc, etc.<br/>
+<br/>
+If you want to work to the GPS you _MIGHT_ say that this link actually contains a proof (proof statement, proof argument, whatever) and from _there_ we point to the relevant source records. Aside from the fact that the source records relevant to a proof might include many more than just the one for the fact, just what do you do if you're like 99.9% of the GEDCOM files in existence and don't have a formally recognised proof to put in that potential thing that GEDCOMX might require at this point? <br/>
+<br/>
+So, yes, I absolutely would want both BG and GEDCOMX to _include_ the GPS components but the goal has to be aimed at genealogical data as a whole first.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-06-19T16:31:59-07:00</div>
+<div class="text"><br/>
+Adrian,<br/>
+<br/>
+That's an excellent explanation!<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-06-24T12:24:16-07:00</div>
+<div class="text">(1) Information about the Genealogical Proof Standard (GPS) <br/>
+<br/>
+From the _The BCG Genealogical Standards Manual_, 2000 (herein, BCG Manual), p. 1 ("The Genealogical Proof Standard") wherein, "The ultimate goal for all genealogists is to assemble (and perhaps share with others) a reconstructed family history that is as close to the truth as possible."<br/>
+<br/>
+The text continues, saying that "to achieve that goal, we adhere to an overall standard by which we measure the credibility of the statements we make about ancestral identities, relationships, life events, and biographical details. This credibility standard is called the Genealogical Proof Standard. … "<br/>
+<br/>
+(2) Perhaps some clarification/context. <br/>
+<br/>
+(a) The "Genealogical Proof Standard" (GPS) is published by the Board for Certification of Genealogists (BCG). <br/>
+<!-- ws:start:WikiTextUrlRule:19:http://www.bcgcertification.org/resources/standard.html --><a class="wiki_link_ext" href="http://www.bcgcertification.org/resources/standard.html" rel="nofollow">http://www.bcgcertification.org/resources/standard.html</a><!-- ws:end:WikiTextUrlRule:19 --><br/>
+<br/>
+I know Ryan and others at FamilySearch have put a lot of hard work into the goals of GedcomX, but when referring to the standard, it might have been better to link to its presentation on the BCG site rather than risk interpretation of it in a summary. For example, from my perspective, there is a difference between "components of" and "elements of" (the published GPS is made up of "elements"). Ditto, "Search Reliable Sources" is not an element of the GPS. The element is, "Reasonably exhaustive search" … And the element is not "Cite each Source," it is "Complete and accurate citation of sources…." <br/>
+<br/>
+(b) While presented as an "overall goal," the GPS itself is _one_ of a group of BCG published "Research Standards." [_BCG Manual_] In addition to the GPS, there are 18 "Data Collection" standards; 16 "Evidence-Evaluation" standards; and 22 "Compilation" standards. [Observation of _BCG Manual_]<br/>
+<br/>
+(c) Most of us probably think of the BCG as a US organization, and fairly so as it has probably certified more individuals there than in other places. The BCG does, however, conduct certification world-wide. See their site for the page, "Find a Genealogist." There are eighteen different countries listed in the drop down box, "country." <br/>
+<br/>
+From my outsider perspective, GedcomX is first and foremost an API supporting FamilySearch's proprietary effort on its new tree … and I suspect the requirements behind GedcomX are probably driven mostly by that same proprietary effort. What is said about the tree (and GedcomX) probably might tell us more about how the church wants to market the tree, as opposed to the problems GedcomX is will solve when introduced. <br/>
+<br/>
+I'd like to see a real community standard developed, ala, FHISO. As part of FHISO, I'm among those who hope there will be _a_ FHISO project team in which those who practice the GPS engaged with technologists and the community to determine an initial set of related data requirements supportive of the GPS. I believe we would learn from the open discussions and benefit from the results.</div></div><div class="comment"><div class="from"><strong>Alex-Anders</strong> 2012-06-24T14:52:22-07:00</div>
+<div class="text"><ul class="quotelist"><li>From my outsider perspective, GedcomX is first and foremost an API supporting FamilySearch's proprietary effort on its new tree</li></ul><br/>
+This is how I see GECOM-X.<br/>
+<br/>
+But I also see no other viable alternative at present.<br/>
+<br/>
+GEDCOM 7 from Louis Kessler is my next looked into option.</div></div><div class="comment"><div class="from"><strong>bamcphee</strong> 2012-06-24T21:29:07-07:00</div>
+<div class="text"><ul class="quotelist"><li>The purpose of GEDCOM X has been stated as:</li></ul>To define an open data model and an open serialization format for exchanging the components of the genealogical proof standard.<br/>
+<br/>
+My question: With whom, what will this exchange be? Is it FS to softawre or will it be as individuals hope, between software or individuals? Will FS need to be in the loop for this to work?<br/>
+<br/>
+Alex said: GedcomX is first and foremost an API supporting FamilySearch's proprietary effort on its new tree.<br/>
+<br/>
+Is this true or not???</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-06-25T14:38:56-07:00</div>
+<div class="text">GEDCOMX is <strong>NOT</strong> an API. It is a file format based on a data model. For some gobbledegooky reason, file formats are now called serialization formats. The only reason to say serialization rather than file, is that a GEDCOMX transmission might simply squirt through a wire or a cloud from one application to another without ever manifesting itself as a file along the way. It's still a file format.<br/>
+<br/>
+The files are exchanged between programs, possibly desktop genealogy applications, possibly on-line family tree archiving programs, possibly on-line services that provide records in response to your search requests. Any software that might want to provide, consume, store or exchange genealogical data are the "with whoms" you are asking about. Even your lowly text editor is one of the "with whoms" if you choose to look at a GEDCOMX file with it.<br/>
+<br/>
+FamilySearch systems will be able to accept data in GEDCOMX format, and they will be able to provide data in GEDCOMX format. Imagine going to the FamilySearch site and searching for information. If good results are found you'll be able to push a button and get the records sent to you in GEDCOMX format. Other programs that decide to support the GEDCOMX format will be able to import and export data in GEDCOMX format. The systems that support GEDCOMX are simply the systems that choose to. Nothing more nothing less.<br/>
+<br/>
+The objects stored in GEDCOMX files, so therefore defined by the model, are objects of genealogical interest. For some other gobbledegooky reason, these objects were called "components of the genealogical proof standard" in the sentence quoted above. You can chalk that up entirely to the author of that sentence wanting to sound politically correct. Components of the genealogical proof standard simply means persons, dates, places, sources, events, evidence, records, relationships, conclusions, etc, that can be organized logically in such a way to as to provide good justification as to why you believe the persons in your database are who you say they are. The model provides the specifications for all these types of objects and how they must relate to one another.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-08-14T17:09:07-07:00</div>
+<div class="text"><br/>
+Revision!<br/>
+<br/>
+GEDCOM X has just ONE requirement:<br/>
+<br/>
+"GEDCOM X must be able to accommodate FamilySearch's Platform API."<br/>
+<br/>
+See: <!-- ws:start:WikiTextUrlRule:9:http://familysearch.github.com/gedcomx/2012/08/14/requirements.html --><a class="wiki_link_ext" href="http://familysearch.github.com/gedcomx/2012/08/14/requirements.html" rel="nofollow">http://familysearch.github.com/gedcomx/2012/08/14/requirements.html</a><!-- ws:end:WikiTextUrlRule:9 --><br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-08-14T17:36:37-07:00</div>
+<div class="text"><br/>
+... So the purpose is to define an Open Data Model<br/>
+<br/>
+... and the requirement implies that this Data Model only need serve FamilySearch.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-08-14T21:29:41-07:00</div>
+<div class="text">Louis,<br/>
+<br/>
+Thanks for posting the link. That requirement is not surprising, though a little disconcerting. Ryan softens the blow with the rest of the note.<br/>
+<br/>
+I would like to know whether FS is still breaking GEDCOM-X down into two separate Record and Conclusion models, or whether they might try to integrate them before the first release. Both must refer to sources so I would expect that if they keep 'em separate they might split out the "Source Metadata" model as well. Three models.<br/>
+<br/>
+The last I read they were coming out with the Record model first. In that model the Person objects are really the same concept as the DeadEnds Persona object, so I'm pleased about that. But the entire rest of the genealogical software industry needs the Conclusion model, since that is the type of data they deal with the vast majority of the time. Without a Conclusion model it makes almost no sense for any non-FS organization to convert to GEDCOM-X (other than as a way to import purely evidence data from a data service provider).<br/>
+<br/>
+Or maybe they are coming out with the Conclusion model first, though I don't think so. I think their first order of business is establishing the model they need to hold the massive amounts of data they are now "computerizing" from their microfilm collection -- all record related stuff.<br/>
+<br/>
+And of course I am most interested in how FS intends to make the two models fit together. I fear they might keep the two model independent of each other, but I don't think they are obtuse enough to do that. Which means there will have to be some way to relate the Person objects in the Conclusion model with the Person (Persona) objects of the Record model. Will that be a two-level relationship (required) or the multi-layer relationship (best)? Hope they decide my way is the way. I harp on that issue a lot, but the GEDCOM-X folk have yet to make a firm statement about any of this double model stuff.<br/>
+<br/>
+I really hope they will steer clear of the all the RDF/URL/semantic stuff, as it will turn off anyone who has to deal with the archive format. Will it just remain an anecdote or will it rear its ugly head once again? I've pointed out to them that any semantic guru wonk would be able to convert from a simple archive format into an RDF format by a simple translation process, as long as the tags used are mapped to the proper semantic domains in the model specifications. It can ALL be handled by good specifications. I think they went the RDF/URI direction to prove that they knew how to be modern and politically correct, and look really smart, and maybe, just maybe, they really thought it was a good idea, but I hope and pray that common sense is now prevailing.<br/>
+<br/>
+ Tom, CBW, DeadEnds Software</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-08-14T22:19:39-07:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+If nothing else, Ryan seems to have been trying to digest all the comments and criticisms (whether constructive or not) that have come his way.<br/>
+<br/>
+He's found that he can't please everyone. And he's realized that the only one he needs to please is Family Search.<br/>
+<br/>
+In order to start making progress again, he/they are going to have to start making some decisions.<br/>
+<br/>
+So I'm sure that this new "requirement" will now become the basis on which the decisions are made.<br/>
+<br/>
+Not judging. Just saying.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-08-15T02:14:50-07:00</div>
+<div class="text">Ryan has been very honest in that post, and I applaud FS for supporting it. GEDCOM-X always has been a proprietary venture, and has very specific requirements within FS. There's nothing wrong with that, of course, as long as its requirements and goals are stated clearly and honestly.<br/>
+<br/>
+One potential advantage of this positioning is that it would allow FS to participate more freely with true community projects without having to defend their internal deadlines and requirements. Any community project is bound to take longer, and must accommodate the requirements from multiple stakeholders, so it's easy to see why that would have been hard to marry with the GEDCOM-X project.<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>heatonra</strong> 2012-08-15T09:45:52-07:00</div>
+<div class="text">Hi guys.<br/>
+<br/>
+I was just lurking a bit. Thanks for your comments.<br/>
+<br/>
+@louiskessler, this requirement isn't new, it's always been there. It just was never said out loud until now. So when you say that you're sure this "new" requirement will be the basis on which other decisions are made, I just don't see it that way. To use a sports analogy, every game has some boundary lines. <br/>
+<br/>
+For the game of GEDCOM X, that's one of the boundaries. It's not as restrictive as you think. It's still a pretty cool game.<br/>
+<br/>
+@ttwetmore The conclusion model is our primary focus right now and it will be established first. We're making significant progress in accommodating the record-based research that you need in the conclusion model. Still a lot of work to do, but we'll get there eventually. See issues <a class="wiki_link_ext" href="https://github.com/FamilySearch/gedcomx/issues/144" rel="nofollow">144</a> and <a class="wiki_link_ext" href="https://github.com/FamilySearch/gedcomx/pull/182" rel="nofollow">182</a> and the (still open) issue <a class="wiki_link_ext" href="https://github.com/FamilySearch/gedcomx/issues/202" rel="nofollow">202</a>.<br/>
+<br/>
+Also, when I say we're getting rid of the RDF noise in the serialization model, I mean we're really getting rid of it. You should see some pull requests coming through soon that will do that. If it ever comes back, it will be in the form of another distinct and separate serialization format as you describe.</div></div></div></body>
+</html>

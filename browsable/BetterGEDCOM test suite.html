@@ -1,0 +1,802 @@
+<html>
+<head>
+<title>BetterGedcom - BetterGEDCOM test suite</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h4 id="toc0"><a name="x---Home &gt; Sandbox &gt; Test Suite"></a><a class="wiki_link" href="Home.html">Home</a> &gt; <a class="wiki_link" href="Sandbox.html">Sandbox</a> &gt; Test Suite</h4>
+<br/>
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+//<![CDATA[
+function googleTranslateElementInit() {
+ new google.translate.TranslateElement({
+   pageLanguage: 'en'
+ }, 'google_translate_element');
+}
+//]]>
+</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
+</script><br/>
+<br/>
+As formulated on the GOALS page, we think it would help to offer a test suite of data for software programmers.<br/>
+To show off the features and possibilities of Better GEDCOM, we should write/create separate files for various features. This way, it will be easier to see what the importing application did with the information in the BG-file.<br/>
+<br/>
+<h2 id="toc1"><a name="x-What should be in a BetterGEDCOM Testsuite? (please edit / add your ideas!)"></a>What should be in a BetterGEDCOM Testsuite? (please edit / add your ideas!)</h2>
+<ul><li>A "sources and evidence only" BG file.<br/>
+This should demonstrate how one can use BG to share sources and the directly derived evidence. It should include media files (like JPGs, PDFs, DjVu, TXT, MP3...), the transcriptions of the sources, and the evidence persons and events that one can extract from the sources. The sources should be given varying "surety/quality" assessment. There should be "primary" sources (or more likely copies of such) and "secondary" sources, down to simple notes of a conversation or similar. The sources should be organized in a tree so that a citation can be derived easily.</li></ul><br/>
+<ul><li>A nested BG file<br/>
+This should show that one can import a GEDCOM or another BG into a BG as a source, and that the imported file will not be changed. This could also show how UUIDs for persons work.</li></ul><br/>
+<ul><li>A "straight from old GEDCOM" file<br/>
+Showing how an example GEDCOM file will translate into BG if "assimilated" and not used as a source. This could show how a "conclusion only" way of working is still possible with BG.<br/>
+The GEDCOM should also be provided. It should use all allowed tags and some user-defined tags. It should have all possible variations in structure (e.g. NOTEs inline and as records...)</li></ul><br/>
+<ul><li>A simple demonstration of the handling of evidence-conclusion with reasoning<br/>
+This would need only a few conclusion persons and events, but a few more (conflicting) evidence persons and events. There should probably be sources included for the evidence, but maybe a few unsourced/un-explained conclusions could be interesting.</li></ul><br/>
+<ul><li>A demonstration of complex families and multi-role events<br/>
+Showing adoptions, half-siblings, multiple marriages / divorces / re-marriages, non-married couples, missing persons, missing dates, names, PACTs and probably much more.<br/>
+Other "groups" (ships?) could possibly go here, too.</li></ul><br/>
+<ul><li>A "farm history"<br/>
+Showing how people, groups, events and dates can be linked with a place</li></ul><br/>
+<ul><li>A "places only" file<br/>
+Showing how places can be linked (or not), and the way to record places over time.</li></ul><br/>
+<ul><li>more ideas?</li></ul><hr/>
+I believe a really well thought-out test suite would be of enormous value for programmers and would help BG become successful.<br/>
+I also think that building this suite will be an enormous task!<br/>
+<br/>
+End-users should try and think of difficult real-life (and imagined) examples and just write them down. Try to "condense" as many difficulties into a few constructed "cases".<br/>
+Techies would then build these examples into BG-files. The specification doesn't have to be finished for this. Working on examples while formulating the definitions of BG will help with finding and fixing problems.<br/>
+<br/>
+<hr/>
+<h3 id="toc2"><a name="x-What should be in a BetterGEDCOM Testsuite? (please edit / add your ideas!)-Test Cases"></a>Test Cases</h3>
+<ol><li><a class="wiki_link" href="The%20mystery%20Aunt.html">The mystery Aunt</a></li><li><a class="wiki_link" href="GJ%20Cases.html">GJ Cases</a></li></ol><br/>
+<hr/>
+<h3 id="toc3"><a name="x-What should be in a BetterGEDCOM Testsuite? (please edit / add your ideas!)-Discussions"></a>Discussions</h3>
+<ul class="quotelist"><li><a class="wiki_link_ext" href="message/view/Data/46036528" rel="nofollow">Benchmark Cases</a></li><li><a class="wiki_link_ext" href="message/view/Better+GEDCOM+Requirements+Catalog/47575402" rel="nofollow">TestSuite01 - Test Data Format</a></li><li><a class="wiki_link_ext" href="message/view/home/40670829" rel="nofollow">Case posted: Sheriff William Preston's identity crisis</a></li><li><a class="wiki_link_ext" href="message/view/GOALS/32199220" rel="nofollow">**DM GOAL 4: ... test suite of data that will allow software suppliers and users to assess compliance of software, diagnose issues and assist in their resolution</a></li></ul>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>testuser42</strong> 2011-01-09T05:37:32-08:00</div>
+<div class="title">Collect case studies!</div>
+<div class="text">Please think about interesting problems that have come up during your family research. <br/>
+<br/>
+Then just write the whole "case" down in plain text, either on this page or on a new sub-page (but please don't use the discussion pages). You don't have to give all the source data or the true names and places, just as much as is needed to understand the problem(s) and your reasoning on the way to a possible conclusion.<br/>
+<br/>
+<br/>
+Then the techies (Tom, Louis, Mike, Adrian, Christoffer, someone from GRAMPS,...) can show how this case would end up looking in their file format. <br/>
+<br/>
+Then we can discuss differences and hopefully see what works best.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2012-01-21T07:46:14-08:00</div>
+<div class="text">A few thoughts about the requirements for cases: <br/>
+<br/>
+1. Cases that follow the research model--these should begin with a focused goal (a question that seeks the answer to a genealogically relevant question; these are questions of identity or relationship) and proceed through the research cycle to a conclusion. <br/>
+<br/>
+2. Cases that follow the research model, but take very different paths:<br/>
+<br/>
+(a) Cases where the genealogically relevant question is solved by relying only on the application of direct evidence<br/>
+(b) Cases where the genealogically relevant question is solved by relying on the application of direct and indirect evidence<br/>
+(c) Cases that involve where the genealogically relevant question is solved by relying on the application of all forms of evidence--direct, indirect, circumstantial, negative <br/>
+<br/>
+3. Cases that involve conflicting evidence (of all forms), such that the genealogically relevant question may be solved only by weighing all forms of evidence--direct, indirect, circumstantial, negative.<br/>
+<br/>
+4. Cases, as above, more specific to materials in increasing or different degrees of complexity:<br/>
+<br/>
+(a) Materials intended to provide particular information directly, from within the four corners of the document. For example, a birth records is intended to answer specific questions that are genealogically relevant about a birth fact, a death record is intended to answer specific questions about the death fact.   <br/>
+(b) Materials intended to provide particular information, but from within the four corners of the document, that information either does not, or is not intended to answer genealogically relevant questions. For example, estate documents, deeds/real estate transactions; some census. These should range from simple to more complex.<br/>
+(c) Materials that rely on the identity of the creator, event, annotation and provenience or some other context in order to make some determination about information therein. Of particular interest would be cases that contain multiple references or perspectives on what might or could be the same person or event. These should range from simple to more complex.</div></div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-04-21T02:59:59-07:00</div>
+<div class="title">"Left 11 children"</div>
+<div class="text">From <!-- ws:start:WikiTextUrlRule:6:http://bettergedcom.wikispaces.com/message/view/Defining+E%26C+for+BetterGEDCOM/37924068#37977562 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Defining+E%26C+for+BetterGEDCOM/37924068#37977562" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/Defining+E%26C+for+BetterGEDCOM/37924068#37977562</a><!-- ws:end:WikiTextUrlRule:6 --><br/>
+GeneJ says:<br/>
+<ul class="quotelist"><li><em>(a) Ancestor's obituary ... Left 11 children to morn. If the children aren't named, how is the evidence entered--are you adding 11 surviving personas?? When you scour the vital records, if you only find 11 vital records, what happens to that first entry? When you then find a 12th record--do you create a persona for one child then deceased (or do you just divorce the family at this point)?</em></li></ul></div><div class="comment"><div class="from"><strong>testuser42</strong> 2011-04-21T04:03:28-07:00</div>
+<div class="text">My idea would be to record just what the source says. Thats what Personas=Evidence Person Records do. <br/>
+In this case, it would be a "Persona" Record for the deceased, and in that Record the 11 surviving children would be mentioned. This could be in a Note of some type, or, maybe better in a special tag. Something like <br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;&amp;lt;FACT type=&amp;quot;Number of children&amp;quot;&amp;gt;11&amp;lt;/FACT&amp;gt;&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">&lt;FACT type="Number of children"&gt;11&lt;/FACT&gt;</pre>
+<!-- ws:end:WikiTextCodeRule:0 -->I would not want to have eleven empty "Persona" Records.<br/>
+<br/>
+<ul class="quotelist"><li><em>When you scour the vital records, if you only find 11 vital records, what happens to that first entry?</em></li></ul><br/>
+That first entry will never be changed, since it only contains what that specific Source contained. <br/>
+If I now have evidence of the 11 children, then each of these children will be getting their own "Persona" (linked to the source it came from, and only containing the information that is in that source).<br/>
+If I want to link the children to the father, this should also follow the evidence:<br/>
+<ul><li>Say I have the birth record that mentions child, father and mother. This will produce 3 new Evidence Persons (=Personas) and one Evidence Birth Event. The Birth Event will link the three Personas.</li><li>Then, after making conclusion that the father from the birth record source is the same person as in the obituary source, a new Person Record will be created to link both these "Personas". This is then a "Conclusion Person Record". In this Record, I can place my reasons for coming to the conclusion that the two people from the sources are in fact the same real life people.</li><li>Now repeat 10 times ;) Create a new Persona for every child, containing just what the source says. Then link the child Persona to the latest Conclusion Person for the father via a new higher level Person Record. This will make a big tree for the father, but that's not a problem for computers. You will always see just the same display with more and more children added. You only extract information from sources, creating new "Personas" and "Events" from these sources. Then, you click on a button like "connect persons" and maybe then give a reason why you want this connection established. The rest happens "under the hood".</li><li>Alternatively, using a 2-tier Model, there would only be one Conclusion Person for the father, and links to the kids and reasoning would be added one after another. This might be more "human readable", but may be a bit more difficult to dis-entangle(?) if you want to undo a conclusion - or is there no difference?</li></ul><br/>
+In short, if I find things that change my understanding of the real life human being that the obituary was about, then <br/>
+<ol><li>these things will be recorded in their own specific Persona linked to their specific Source, and</li><li>the new Persona and the old one will be linked with a Person Record that's one level higher. In this Person Record I can put my new findings or problems, maybe linked to an Administratory/Research Log Record.</li></ol><br/>
+<ul class="quotelist"><li><em>When you then find a 12th record--do you create a persona for one child then deceased (or do you just divorce the family at this point)?</em></li></ul>The first thing. You create a Persona, entering only what the source is telling you about that human being. All your conclusions will be in the next level, by linking the new persona to other Person Records. <br/>
+If that 12th record doesn't say anything about the death, but you conclude that at the time of the father's obituary, this child was not alive anymore, then I would create a new Conclusion Person for the child that only says "died before date x" and give my reasoning linked to the Source "obituary", pointing out the 11 surviving children.<br/>
+<br/>
+I've never mentioned a "Family Record" because there is no need for one. Of course, if the evidence in the source warrants a "Family" then you can or should create one. E.g. the obituary will probably speak of his family, so this would be a good reason to create one. It should only contain the information from the obituary! So, kind of like<br/>
+<!-- ws:start:WikiTextCodeRule:1:
+&lt;pre class=&quot;text&quot;&gt;0 FAM @f1@&lt;br/&gt;  1 SOUR @s1@&lt;br/&gt;  1 PersonRef @p1@&lt;br/&gt;    2 ROLE father&lt;br/&gt;  1 NumChildren 11 &lt;br/&gt;    2 NOTE Left 11 children to morn.&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">0 FAM @f1@
+  1 SOUR @s1@
+  1 PersonRef @p1@
+    2 ROLE father
+  1 NumChildren 11 
+    2 NOTE Left 11 children to morn.</pre>
+<!-- ws:end:WikiTextCodeRule:1 -->which would solve the NumChildren very elegantly.<br/>
+<br/>
+phooo, long post. hope it's clear.</div></div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-01-15T12:15:47-08:00</div>
+<div class="title">Simple Test Cases for starting out and comparing</div>
+<div class="text">In <a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/Better+GEDCOM+Requirements+Catalog/47575402#47675234" rel="nofollow">TestSuite01 - Test Data Format</a>, Tony said: <em>I imagined a fictitious family (or set thereof) that embraced all the real-world situations and vagaries that we want to support.<br/>
+Given that we may make the cases public (e.g. to show vendors something they cannot handle at present), or produce real test-date later on that's based on the test-cases, then I think the names and d.o.b can be invented at least :-)<br/>
+I think a good start is an informal list of all the things BG must support or handle properly. We can then expand on those to create associarted test cases.</em> and <em>I have a think balloon above my head with a picture of the Munsters posing for a family protrait !!</em><br/>
+I don't know the Munsters that well, so I can't say if they'd be perfect as an example family ;)<br/>
+<br/>
+But, for starters, I think it would be good to put down on this page the informal list Tony mentioned. It would probably be condensed from the <a class="wiki_link" href="/Better+GEDCOM+Requirements+Catalog">Better GEDCOM Requirements Catalog</a>.<br/>
+<br/>
+Also, I think examples that follow the possible step-by-step real-life process  would be helpful:  <br/>
+- First there's a small bit of data you want to put into your program, let's say something you wrote down during a conversation with your grandma. How would an exported BG look at that point? <br/>
+- Then you do some research about the topic, and find new sources and extract more pieces of evidence, and add these. How does the exported BG look now? (Would it look different if you added data in a few sessions and not in one chunk?) <br/>
+- Later, maybe you'll find that one of the pieces you added before is not about the person you are researching. So you get rid of these conections, in whatever way your software provides. How might the exported BG look after this operation?<br/>
+<br/>
+...and so forth, following the developments as they might happen.</div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-05-15T08:35:13-07:00</div>
+<div class="text">Re: "Your example is very interesting and leaves me with a very positive opinion. The only significant difference between your model and mine seems to be the extra evidence layer, which acts to provide a "bag" of personas and places and the source information that describes where the evidence is from."<br/>
+<br/>
+This is not a "model", though, Tom. I was merely trying to come up with a way of expressing test-cases that didn't presume a particular model or data-format. If the separation of evidence away from all reasoning and conclusion helps inspire a future direction for model development then that's good but it's not my main thought here. I've rushed a description of the units of evidence for the test-case we're discussing - I say "rushed" because I'm afraid I've left some of the inferences in the notes.<br/>
+<br/>
+Louis - I apologise for mentioning that word [smiling here]. This notation was to be a semi-formal way of depicting just the evidence, separately from reasoning and conclusion, which obviously meant that each person that was referenced was merely an "evidence person". I think I should have left it at that since I don't want to confuse this notation with any existing data models or entity concepts. If a particular data-format has some concept of personae (...and there's a whole grey-scale of what that might entail) then there would be an easy way of generating them from this notation.<br/>
+<br/>
+However, as I said, this shouldn't presume any particular data model or technique. In describing the "pure" evidence separately from the "thought parts" of the data, it was trying to find a completely neutral approach for describing a fundamental part of any data. I feel that we all get so focused or attached to specific models, formats, or entity concepts that it's quite refreshing to strip it all bare.<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;Evidence&lt;br/&gt;    Source: Conversation with Grandma&lt;br/&gt;    Confidence: not so high. Grandma wasn't so sure herself&lt;br/&gt;    Person&lt;br/&gt;        Name: John Doe&lt;br/&gt;        Note: her grandfather, my g-g-grandfather&lt;br/&gt;        Death: between 1904 and 1906 in Ourtown, Alabama. She was not yet in school, and she started school in 1906&lt;br/&gt;        Birth: around 1830 in Histown, Connecticut. He was in his seventies&lt;br/&gt;    End Person&lt;br/&gt;End Evidence&lt;br/&gt; &lt;br/&gt; &lt;br/&gt;Evidence&lt;br/&gt;    Source: Handwritten note by Jane Doe, daughter of John Doe&lt;br/&gt;    Note: High quality scan of note available&lt;br/&gt;    Confidence: high&lt;br/&gt;    Person&lt;br/&gt;        Name: John Doe&lt;br/&gt;        Death: John died of a heart attack on the 3rd of April 1905, in the front yard of his home in Ourtown, while carrying groceries he just brought from the store&lt;br/&gt;    End Person&lt;br/&gt;End Evidence&lt;br/&gt; &lt;br/&gt; &lt;br/&gt;Evidence&lt;br/&gt;    Source: Copy of death cert for John D Doe&lt;br/&gt;    Confidence: looks official but have to find out more about the burial&lt;br/&gt;    Person&lt;br/&gt;        Name: John D Doe&lt;br/&gt;        Death: 1905-04-03 at 11am in Ourtown, Alabama aged 74&lt;br/&gt;        CauseOfDeath: Heart attack, confirmed by Dr Doctor&lt;br/&gt;        Note: Handwritten note on death certificate saying &amp;quot;Buried 3 days later, St. Michael's&amp;quot;&lt;br/&gt;    End Person&lt;br/&gt;End Evidence&lt;br/&gt; &lt;br/&gt;Evidence&lt;br/&gt;    Source: Birth cert of Johann Doe&lt;br/&gt;    Note: this is the only J. Doe to be found in Histown, Connecticut that was born in 1830 +-1&lt;br/&gt;    Confidence: The data is trustworthy, and it's a really good fit. Could be my John D Doe, but needs more proof!&lt;br/&gt;    Person&lt;br/&gt;        Name: Johann Doe&lt;br/&gt;        Birth: 21st December 1830&lt;br/&gt;        Parents: Hans and Marie Doe&lt;br/&gt;        PlaceofBirth: Histown, Connecticut&lt;br/&gt;        Baptised: 25th Dec, Catholic&lt;br/&gt;    End Person&lt;br/&gt;End Evidence&lt;br/&gt; &lt;br/&gt; &lt;br/&gt;Evidence&lt;br/&gt;    Source: Birth cert of John Dorian Doe&lt;br/&gt;    Note: Grandma found this in a drawer with other family documents&lt;br/&gt;    Confidence: quite high&lt;br/&gt;    Note: Grandma says that she wasn't sure about the &amp;quot;Connecticut&amp;quot; anyhow&lt;br/&gt;    Person&lt;br/&gt;        Name: John Dorian Doe&lt;br/&gt;        Birth: 3/3/1830&lt;br/&gt;        Parents: Stephen Doe and his wife Hilda, née Schmidt&lt;br/&gt;        PlaceOfBirth: Histown, Massachusetts&lt;br/&gt;        Note: he was their 2nd child&lt;br/&gt;    End person&lt;br/&gt;End Evidence&lt;br/&gt; &lt;br/&gt; &lt;br/&gt;Evidence&lt;br/&gt;    Source: Death of Johann Doe. Article in the Histown (Connecticut) Paper, 8th Sept 1834&lt;br/&gt;    Text &amp;quot;A fire consumed Doe's smithy yesterday, one of the oldest buildings in town...&amp;quot;&lt;br/&gt;    Text &amp;quot;the blacksmith Hans Doe couldn't save his youngest son, Johann, age 3 and 3/4...&amp;quot;&lt;br/&gt;    Note: this is to show that Johann Doe of Histown Connecticut is not my John D Doe&lt;br/&gt; &lt;br/&gt;    Person&lt;br/&gt;        Name: Johann Doe&lt;br/&gt;        Death: 7 September 1834 aged about 3 years, 9 months&lt;br/&gt;        PlaceOfDeath: Histown, Connecticut&lt;br/&gt;        Birth: 1830 or 1831, subtracting age from date-of-death&lt;br/&gt;    End Person&lt;br/&gt;End Evidence&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">Evidence
+    Source: Conversation with Grandma
+    Confidence: not so high. Grandma wasn't so sure herself
+    Person
+        Name: John Doe
+        Note: her grandfather, my g-g-grandfather
+        Death: between 1904 and 1906 in Ourtown, Alabama. She was not yet in school, and she started school in 1906
+        Birth: around 1830 in Histown, Connecticut. He was in his seventies
+    End Person
+End Evidence
+ 
+ 
+Evidence
+    Source: Handwritten note by Jane Doe, daughter of John Doe
+    Note: High quality scan of note available
+    Confidence: high
+    Person
+        Name: John Doe
+        Death: John died of a heart attack on the 3rd of April 1905, in the front yard of his home in Ourtown, while carrying groceries he just brought from the store
+    End Person
+End Evidence
+ 
+ 
+Evidence
+    Source: Copy of death cert for John D Doe
+    Confidence: looks official but have to find out more about the burial
+    Person
+        Name: John D Doe
+        Death: 1905-04-03 at 11am in Ourtown, Alabama aged 74
+        CauseOfDeath: Heart attack, confirmed by Dr Doctor
+        Note: Handwritten note on death certificate saying "Buried 3 days later, St. Michael's"
+    End Person
+End Evidence
+ 
+Evidence
+    Source: Birth cert of Johann Doe
+    Note: this is the only J. Doe to be found in Histown, Connecticut that was born in 1830 +-1
+    Confidence: The data is trustworthy, and it's a really good fit. Could be my John D Doe, but needs more proof!
+    Person
+        Name: Johann Doe
+        Birth: 21st December 1830
+        Parents: Hans and Marie Doe
+        PlaceofBirth: Histown, Connecticut
+        Baptised: 25th Dec, Catholic
+    End Person
+End Evidence
+ 
+ 
+Evidence
+    Source: Birth cert of John Dorian Doe
+    Note: Grandma found this in a drawer with other family documents
+    Confidence: quite high
+    Note: Grandma says that she wasn't sure about the "Connecticut" anyhow
+    Person
+        Name: John Dorian Doe
+        Birth: 3/3/1830
+        Parents: Stephen Doe and his wife Hilda, née Schmidt
+        PlaceOfBirth: Histown, Massachusetts
+        Note: he was their 2nd child
+    End person
+End Evidence
+ 
+ 
+Evidence
+    Source: Death of Johann Doe. Article in the Histown (Connecticut) Paper, 8th Sept 1834
+    Text "A fire consumed Doe's smithy yesterday, one of the oldest buildings in town..."
+    Text "the blacksmith Hans Doe couldn't save his youngest son, Johann, age 3 and 3/4..."
+    Note: this is to show that Johann Doe of Histown Connecticut is not my John D Doe
+ 
+    Person
+        Name: Johann Doe
+        Death: 7 September 1834 aged about 3 years, 9 months
+        PlaceOfDeath: Histown, Connecticut
+        Birth: 1830 or 1831, subtracting age from date-of-death
+    End Person
+End Evidence</pre>
+<!-- ws:end:WikiTextCodeRule:0 --><br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-05-15T11:29:18-07:00</div>
+<div class="text">Tony,<br/>
+<br/>
+For me, every example I see or create has a data model behind it, either real or imaginary. So I would never say that it's not time to be thinking about models. I believe an important aspect of human intelligence is the constantly executing model-maker that runs in the background of our brains, always trying to find the patterns that make the world make sense . When I did my example, I had the DeadEnds model in mind, even though it is still mostly a figment of my imagination. My example is, of course, not a model, but for me, it is the expression of something that fits the model.<br/>
+<br/>
+When I read your example I inferred certain things about your model, for example that your model will allow you to represent evidence as bags of person and place "records"/sub-structures with accompanying source material. When I read Louis's example I think I am seeing into his ideas about his model, where his bags are potentially even bigger, with substructures from what would be, for me, many items of evidence. You and I definitely have personas in our models. I also have multi-level personas up to conclusion persons. In your case I'm not yet sure about other person concepts. Louis has a single person concept, the conclusion person, and he seems to cut and paste and annotate information from his source records to build those conclusion persons. Louis's model of a source includes the information that is in the source, while yours and mine separates the sources from their contents. For me these are all aspects of the underlying models that are in our minds.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-05-15T11:43:14-07:00</div>
+<div class="text">Tom said: "Louis's model of a source includes the information that is in the source, while yours and mine separates the sources from their contents."<br/>
+<br/>
+Tom. You said it perfectly. That's exactly the difference.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-05-15T12:48:34-07:00</div>
+<div class="text">Louis,<br/>
+<br/>
+What is interesting about these discussions is that we all know what the important information is, and we all record that important information. The differences come in how we design the "containers" to hold the information. From the 50,000 foot level it sometimes doesn't seem all that important what the containers are, as long as all the information exists and the important links between information of different types exist and are consistent.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-05-15T12:53:03-07:00</div>
+<div class="text">Well, I'm glad we got that sorted  ;-)<br/>
+<br/>
+Back to this test-case now...<br/>
+<br/>
+What's everyones opinion on the idea of separating the evidence from the reasoning/conclusion in a test-case, and making it semi-formal like this?<br/>
+<br/>
+I realise my examples here are very "fluid" but that could be tightened up a bit. There must be a wealth of potential torture cases and basic unit-level test cases, all of which we'd need to represent in a way that people can follow.<br/>
+<br/>
+As well as seeing them represented in existing data models, we'd also need to check their representation in each refinement of a new data model.<br/>
+<br/>
+Tom - I don't want to get bogged down in semantics but there is no real storage data model in this notation. It simply acknowledges that each source (or "unit") of evidence contains facts about a number of people and/or places.<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2012-05-15T14:48:05-07:00</div>
+<div class="text">Glad to see discussion on this but...<br/>
+Being a non-tech person my head is spinning following this and also trying to read Tony's Stemma write-up at:<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:7:http://www.parallaxview.co/familyhistorydata/ --><a class="wiki_link_ext" href="http://www.parallaxview.co/familyhistorydata/" rel="nofollow">http://www.parallaxview.co/familyhistorydata/</a><!-- ws:end:WikiTextUrlRule:7 --><br/>
+<br/>
+Ah well- at least it keeps me off the streets!<br/>
+<br/>
+;)</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-05-15T19:23:49-07:00</div>
+<div class="text"><br/>
+Tony:<br/>
+<br/>
+Yes, the reasoning/conclusion and all subjective things should be completely separated from the source and source details which should only be facts without interpretation.<br/>
+<br/>
+Also, I don't like your liberal use of the word "evidence". Evidence doesn't just exist on its own. Sources and source details exist on their own. Sources and source details become evidence ONLY when they are used to support (or counter) some reasoning/conclusion.<br/>
+<br/>
+A birth certificate (source) states: "John Doe, born in Chicago in 1850" is a source detail. It is not evidence unto its own. <br/>
+<br/>
+Once you have added the birth date and place to the information for your John Doe, then you have used the birth certificate as evidence about your John Doe's birth.<br/>
+<br/>
+See the subtle use of evidence. It is like the linkage between the conclusion and the source.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-05-15T19:33:40-07:00</div>
+<div class="text">Tony said, "Tom - I don't want to get bogged down in semantics but there is no real storage data model in this notation. It simply acknowledges that each source (or "unit") of evidence contains facts about a number of people and/or places."<br/>
+<br/>
+No need to respond, but I don't know what a real storage data model is, nor do I understand how it bears on this discussion.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-05-15T20:06:00-07:00</div>
+<div class="text">Tony, Louis,<br/>
+<br/>
+I agree that reasoning and conclusions should be separated from sources. However, I believe that evidence extracted from sources can be subject to a little editorial patching. For example, if a record contains a blatant error, I believe the data as it exists in the evidence should be recorded, but the corrected information should also be included in the evidence record, maybe it should even be the main information, with the actual data subsumed into a note. You might argue that correcting a blatant error in evidence is the wrong thing to do, but I feel we must be driven by pragmatics and common sense as much as by anything.<br/>
+<br/>
+I have seen arguments that the first layer of conclusions is just coming to an understanding of what the evidence actually means (e.g., whether the marks on the certificate that seem to say "New London, Conn", mean the actual city of New London, in New London County, in the State of Connecticut), before then using that evidence to make any conclusions about persons. Yeah, yeah, these are understandable arguments, but in the larger scheme I see them as silly, confusing to almost everyone, and of little to no practical use.<br/>
+<br/>
+I understand the argument that facts aren't evidence until used in making a conclusion, but I call facts evidence immediately, and I don't seee any reason to worry about it. It doesn't change anything about how we record information, or how we construct a model. When I am researching someone, and I am collecting facts about every person with the same name who might potentially be that person, a purist would argue that my facts aren't evidence until I make an explicit decision from them. Okay, I agree, but I also ask, why does it matter? If it does it's too subtle for me to understand. I collect facts to make conclusions, and I am willing to go out on the limb and believe that I will be able to use the information for conclusions one way or another soon. And the facts don't even have to be about people that might be people I am currently interested in. I'm comfortable calling any fact gleaned from anywhere evidence, as I can recognize that every fact is always on the verge of its own incipient evidence-hood, and I'd rather have one word to describe all the facts I collect, rather than two. <br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-05-15T20:08:53-07:00</div>
+<div class="text">Louis said, "See the subtle use of evidence. It is like the linkage between the conclusion and the source."<br/>
+<br/>
+It's not subtle at all in my opinion, It is what evidence is.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-05-15T20:39:10-07:00</div>
+<div class="text"><br/>
+Tom,<br/>
+<br/>
+What you say makes sense. I especially like your statement of "incipient evidence-hood" which is true.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-05-16T09:24:16-07:00</div>
+<div class="text">Re: "Also, I don't like your liberal use of the word 'evidence'"<br/>
+<br/>
+Louis - let's just agree that it's an emotive word. In general discussions, I'm not totally happy with the word either, and have already written about it at <a class="wiki_link_ext" href="http://www.parallaxview.co/familyhistorydata/research-notes/evidence-conclusion" rel="nofollow">E&amp;C</a>.<br/>
+<br/>
+In the context of defining test cases, though, the word is more appropriate since this is the "evidence" that the reasoning &amp; conclusion parts will be referring to. Unlike a real-life case, this notation need only present examples of useful data for the test case, i.e. data which will be referred to and which is likely to contribute to a conclusion in some positive or negative way.<br/>
+<br/>
+Tom - The same can be said of "blatant errors in source records". As we're discussing test cases, and the representation of the data for test cases, we can assume that all data is an authentic transcription of some records (which may even be fictitious ones), except in the case of unit tests that specifically wants to test the way that such discrepancies [between what's written and what's read back] are handled.<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-05-13T12:46:04-07:00</div>
+<div class="text">At soc.genealogy.computing, Ian Goddard has a lengthy historical example of wrong conclusions that lead to a long rat tail of wrong conclusions.<br/>
+Message-ID: &lt;a0vl9vFn85U1@mid.individual.net&gt;<br/>
+"Recycling conclusions as evidence - a counter-example"<br/>
+I'm not going to copy-and-paste the whole thing, but I was wondering if this could be another test case.<br/>
+<br/>
+The gist of the case: Someone makes a wrong conclusion: X is a daughter of Y and Z. This is put down in books and others take it for the truth and connect their work to this (faulty) evidence. <br/>
+<br/>
+I think there are a few questions here.<br/>
+If people build their trees from the known to the unknown, the error of connecting to a wrong person should be easily undone. Cut off that branch, it's wrong. Everything else is still right.<br/>
+How would this be reflected in a BG file, in 1, 2, n-tiers?<br/>
+<br/>
+Also, how did we find out that there is an error? What are the steps to disprove the conclusion that we found in a book? How would a BG look before and after? Or in between, when we were collecting evidence that disagrees with the old conclusion?</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-05-13T13:58:22-07:00</div>
+<div class="text">Here is the DeadEnds version for the example evidence.<br/>
+<br/>
+1. Source: Conversation with Grandma<br/>
+Person of interest: John Doe (her grandfather, my g-g-grandfather)<br/>
+PFACTs:<br/>
+- Death: between 1904 and 1906 in Ourtown, Alabama (she was not yet in school, and she started school in 1906)<br/>
+- Birth: around 1830 in Histown, Connecticut (he was in his seventies)<br/>
+Confidence: not so high, Grandma wasn't so sure herself<br/>
+<br/>
+person: {<br/>
+    id: aaaaa<br/>
+    name: John /Doe/<br/>
+    death: {<br/>
+        date: between 1904 and 1906 { note: He died before the source began school in 1906. }<br/>
+        place: Ourtown, Alabama, United States<br/>
+    }<br/>
+    birth: {<br/>
+        date: about 1830 { note: Source states John was in his seventies when he died. }<br/>
+        place: Histown, Connecticut, United States<br/>
+    };<br/>
+    source: {<br/>
+        type: conversation;<br/>
+        person: ... name of Grandma ... { note: She is a grandaughter of John Doe. }<br/>
+        quality: medium { note: Source is not sure of this information. }<br/>
+    }<br/>
+}<br/>
+<br/>
+<br/>
+2. Source: Handwritten note by Jane Doe, daughter of John Doe<br/>
+Person: John Doe<br/>
+PFACTs:<br/>
+- John Doe died of a heart attack on the 3rd of April 1905, in the front yard of his home in Ourtown, while carrying groceries he just brought from the store.<br/>
+File: scan of the note.<br/>
+Confidence: pretty good.<br/>
+<br/>
+person: {<br/>
+    id: bbbbb<br/>
+    name: John /Doe/<br/>
+    death: {<br/>
+        date: 3 April 1905<br/>
+        place: Ourtown, Alabama, United States<br/>
+        cause: heart attack<br/>
+        note: He died in the front yard of his home while carrying groceries.<br/>
+    }<br/>
+    source: {<br/>
+        type: note<br/>
+        author: Jane Doe { note: Source is a daughter of John Doe. }<br/>
+        quality: high<br/>
+        media: ... URI or file path of the scanned note ...<br/>
+    }<br/>
+}<br/>
+<br/>
+3. Source: Copy of death cert for John D Doe<br/>
+- John D Doe died 1905-04-03 at 11 a.m. in Ourtown, Ala.<br/>
+- aged 74<br/>
+- Cause of death: Heartattack, confirmed by Dr Doc.<br/>
+- Handwritten note: "Buried 3 days later, St. Michael's"<br/>
+File: scanned document.<br/>
+Confidence: looks official, but have to find out more about the burial.<br/>
+<br/>
+person: {<br/>
+    id: ccccc<br/>
+    name: John D /Doe/<br/>
+    death: {<br/>
+        name: John D Doe<br/>
+        age: 74 years<br/>
+        date: 3 April 1905<br/>
+        time: 11:00 am<br/>
+        place: Ourtown, Alabama, United States<br/>
+        cause: Heart attack { note: Cause confirmed by doctor on the death certificate. }<br/>
+    }<br/>
+    burial: {<br/>
+        date: 6 April 1905<br/>
+        cemetery: Saint Michael's<br/>
+        note: This information comes from a hand written note on the death certificate.<br/>
+    }<br/>
+    source: {<br/>
+        type: death certificate<br/>
+        ... other properties if avaiable to identify source of the certificate ...<br/>
+        media: ... URI or file path to scanned copy ...<br/>
+        quality: high<br/>
+    }<br/>
+}<br/>
+<br/>
+4. Source: Birth cert of Johann Doe<br/>
+Note: this is the only J. Doe to be found in Histown, Conn that was born in 1830 +-1<br/>
+Person: Johann Doe<br/>
+- Born 21st December 1830<br/>
+- Parents Hans and Marie Doe<br/>
+- in Histown, Conn<br/>
+- baptised 25th Dec, catholic<br/>
+File: scan<br/>
+Confidence: The data is trustworthy, and it's a really good fit. Could be my John D Doe, but needs more proof!<br/>
+<br/>
+person: {<br/>
+    id: ddddd<br/>
+    name: Johann /Doe/<br/>
+    born: {<br/>
+        date: 21 December 1830<br/>
+        place: Histown, Connecticut, United States<br/>
+    }<br/>
+    father: { name: Hans /Doe/ }<br/>
+    mother: { name: Marie }<br/>
+    baptism: {<br/>
+        date: 25 December 1830<br/>
+        denomination: Catholic<br/>
+    }<br/>
+    note: This is the only J. Doe that was found to be born in Histown, Connecticut, between 1829 and 1831.<br/>
+    source: {<br/>
+        type: birth certificate<br/>
+        media: ... URI or filepath of sanned copy ...<br/>
+        quality: high<br/>
+    }<br/>
+}<br/>
+<br/>
+5. Source: Birth cert of John Dorian Doe<br/>
+Grandma found this in a drawer with other family documents.<br/>
+Person: John Dorian Doe<br/>
+- Born 3/3/1830<br/>
+- to Stephen Doe and his wife Hilda, née Schmidt<br/>
+- in Histown, Massachussetts<br/>
+- he was their 2nd child<br/>
+File: Scan<br/>
+Confidence: quite high.<br/>
+Note: Grandma says that she wasn't sure about the "Conn" anyhow.<br/>
+<br/>
+person: {<br/>
+    id: eeeee<br/>
+    name: John Dorian /Doe/<br/>
+    birth: {<br/>
+        date: 3 March 1930<br/>
+        place: Histown, Massachusetts, United States<br/>
+    }<br/>
+    father: { name: Stephen /Doe/ }<br/>
+    mother: { name: Hilda /Schmidt/ }<br/>
+    note: He was the second child in his family.<br/>
+    source: {<br/>
+        type: birth certificate<br/>
+        repository: Grandma's house<br/>
+        quaility: high<br/>
+        media: ... URI or filepath ...<br/>
+        note: Gradma was sure about Connecticut.<br/>
+    }<br/>
+}<br/>
+<br/>
+6. Source: Death of Johann Doe<br/>
+Article in the Histown (Conn) Paper, 8th Sept 1834<br/>
+"A fire consumed Doe's smithy yesterday, one of the oldest buildings in town..."<br/>
+"the blacksmith Hans Doe couldn't save his youngest son, Johann, age 3 and 3/4..."<br/>
+Note: this is to show that Johann Doe of Histown Conn is not my John D Doe.<br/>
+<br/>
+person: {<br/>
+    id: fffff<br/>
+    name: Johann /Doe/<br/>
+    death: {<br/>
+        name: Johann /Doe/<br/>
+        age: about 3 years, 9 months<br/>
+        date: 7 September 1834<br/>
+        place: Histown, Connecticut, United States<br/>
+    }<br/>
+    birth: {<br/>
+        date: 1830 or 1831<br/>
+        note: Date computed from age at death.<br/>
+    }<br/>
+    father: { Hans /Doe/ }<br/>
+    source: {<br/>
+        type: newspaper article<br/>
+        text: A fire consumed Doe's smithy yesterday, one of the oldest buildings in town..." "the blacksmith Hans Doe couldn't save his youngest son, Johann, age 3 and 3/4..."<br/>
+        quality: high<br/>
+    }<br/>
+    note: This proves that Johann Doe of Histown, Connecticut, is not the John Doe of Histown, Connecticut.<br/>
+}<br/>
+<br/>
+After creating these six evidence level persona records we would create a conclusion person that refers to (links to using ids) the personas that we conclude refer to the John Doe of interest. It would be the researcher's choice as to whether they'd get rid of the two personas for Johann Doe. Software would refer to the four personas to retrieve other data about John Doe. Note that I put his name and birth and death info in the conclusion record. This is done in order to choose which information from the evidence personas should be used to summarize the person at the conclusion level.<br/>
+<br/>
+person: {<br/>
+    id: zzzzz<br/>
+    name: John Dorian /Doe/<br/>
+    birth: {<br/>
+        date: 3 March 1930<br/>
+        place: Histown, Massachusetts, United States<br/>
+    }<br/>
+    death: {<br/>
+        date: 3 April 1905<br/>
+        place: Ourtown, Alabama, United States<br/>
+    }<br/>
+    person: { id: aaaaa }<br/>
+    person: { id: bbbbb }<br/>
+    person: { id: ccccc }<br/>
+    person: { id: ddddd }<br/>
+    source: {<br/>
+        type: conclusion;<br/>
+        proofStatement: ... Proof statement that explains why these four personas are the ones that refer to the John Doe of interest ...<br/>
+    }<br/>
+}<br/>
+<br/>
+At this point I would create two persona records for the parents, and two person records for the parents. There would also be a conclusion level family record to link the three conclusion level person records, basically just like GEDCOM.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-05-13T13:58:53-07:00</div>
+<div class="text">Sorry the indentation got all messed up.</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-05-14T02:29:29-07:00</div>
+<div class="text">That <a class="wiki_link_ext" href="https://groups.google.com/d/msg/soc.genealogy.computing/02yCkN4B3G4/O_1T1W1Mhh0J" rel="nofollow">example of Ian's</a> is interesting, but the narrative style takes a few goes to read and fully assimilate [well, it did for me].<br/>
+<br/>
+I agree with Klemens [testuser42] that it would make a good test case. What's the best way of representing its essence though? If you could have a program that would crank-out a Dead Ends or GedcomX version then you'd need a formal representation of the case that it could read as input Even then, there might be variations of how a format might represent the same test case.<br/>
+<br/>
+Given the different approaches to handling E&amp;C (and the intermediate "reasoning"), I would suggest we could start with a generic notation for just representing the evidence (i.e. the transcribed PFACTs, citations, etc) with no interpretation.<br/>
+<br/>
+All the reasoning and conclusions could be represented as simple narrative text that refers back to the evidence notation.<br/>
+<br/>
+It feels like that could give us some flexibility for translating the case into specific models &amp; data-formats, some of which are more different than others. I still think that has to be a manual process though.<br/>
+<br/>
+<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-05-14T04:23:18-07:00</div>
+<div class="text">Tom, thank you for your DeadEnds version! If you want the indentation to work, I think you need to use <!-- ws:start:WikiTextRawRule:0:``[[code]]`` -->[[code]]<!-- ws:end:WikiTextRawRule:0 --> tags (when using these you need to add manual line breaks for long lines).<br/>
+<br/>
+I see you are putting the Source inside the Person. I guess this is an alternate way, as long as the source really is only about one person. It definitely is "smooth" for a human looking at the file... But might this be a little inconvenient for the programmer?<br/>
+<br/>
+I can guess at how theoutput would look like after every step, before you have any of the later information. Maybe you could still show how the conclusion person would look after step 4 (if you concluded that this "Johann" was the "John" you're looking at, but still recording your low confidence) and then after step 5 (where you discard the last conclusion because of the new evidence. Maybe keep a note to remind you of the wrong lead, to follow up with more definite evidence)</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-05-14T04:27:54-07:00</div>
+<div class="text">Tony, I agree, it is not easy to work through narrative examples. A simple notation would be very helpful. Some kind of Tag-Value system should be sufficient? I tried that with the list above, but even there I did not stay consistent...</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-05-14T05:23:24-07:00</div>
+<div class="text">I'm trying to imagine a way of writing-up a test case that formalises the representation of evidence (to some degree) but not the reasoning or conclusions related to it. It's an interesting exercise to try and banish all thoughts of existing models or data-formats and just represent what's there, and then talk about it in a free-form way. It's hard to not try and create mental data structures too early<br/>
+<br/>
+That would mean we'd need to forget about any tree representation, forget about FAM records and offspring linkages, forget about the mechanics of citation-elements/sources, forget about Event entities, etc.<br/>
+<br/>
+This is totally off-the-cuff so I may change my mind before lunch but imagine something like a unit of evidence...<br/>
+<br/>
+Evidence tag<br/>
+    Source  description-of-where-it-came from<br/>
+<br/>
+    Person tag<br/>
+        PFACTs ...<br/>
+        notes ...<br/>
+    End Person<br/>
+    Place tag<br/>
+        PFACTs ...<br/>
+        notes ...<br/>
+    End Place<br/>
+End Evidence<br/>
+<br/>
+The source description could be as formal or informal as necessary as long as all the information is there. Each bit of evidence says something about people or places, but - since it's only evidence - we shouldn't rush to create real Persons, or join them to similarly-named  people in other units of evidence. In effect, the Person/End-Person is an evidence-person (or persona), and the Place/End-Place is a similar concept for the place.<br/>
+<br/>
+Note that this is only a written notation and shouldn't be mistaken for a data-format, or even a model.<br/>
+<br/>
+The tags would be some unique names that could be referenced in some narrative analysis of the evidence.<br/>
+<br/>
+I know I probably need to create an example to explain this more clearly. I think Tom's Dead Ends data could be easily factored into this style<br/>
+<br/>
+What do you think folks?<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-05-14T08:37:05-07:00</div>
+<div class="text">Sorry, I messed up my indentation too. I'll have another go..<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:0:
+&lt;pre class=&quot;text&quot;&gt;Evidence tag&lt;br/&gt;    Source: description-of-where-it-came-from&lt;br/&gt;&lt;br/&gt;    Person tag&lt;br/&gt;        PFACTs ...&lt;br/&gt;        notes ...&lt;br/&gt;    End Person&lt;br/&gt;    ...more persons mentioned...&lt;br/&gt;&lt;br/&gt;    Place tag&lt;br/&gt;        PFACTs ...&lt;br/&gt;        notes ...&lt;br/&gt;    End Place&lt;br/&gt;    ...more places mentioned...&lt;br/&gt;End Evidence&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">Evidence tag
+    Source: description-of-where-it-came-from
+ 
+    Person tag
+        PFACTs ...
+        notes ...
+    End Person
+    ...more persons mentioned...
+ 
+    Place tag
+        PFACTs ...
+        notes ...
+    End Place
+    ...more places mentioned...
+End Evidence</pre>
+<!-- ws:end:WikiTextCodeRule:0 --><br/>
+Here's a simple example of a birth registration. It also presents global properties, i.e. ones not specifically related to a single person or place:<br/>
+<br/>
+<!-- ws:start:WikiTextCodeRule:1:
+&lt;pre class=&quot;text&quot;&gt;Evidence birthRegMKirk&lt;br/&gt;    Source: certificate of civil birth registration [1840/Q1/14/387]&lt;br/&gt;    Informant: pWilliam&lt;br/&gt;    DateOfReg: 1840-03-28&lt;br/&gt;&lt;br/&gt;    Person pMelicent&lt;br/&gt;        Name: Melicent Kirk&lt;br/&gt;        DateOfBirth: 1840-03-17&lt;br/&gt;        PlaceOfBirth: plGrantham&lt;br/&gt;        Sex: girl&lt;br/&gt;        Father: pWilliam&lt;br/&gt;        Mother: pHelen&lt;br/&gt;    End Person&lt;br/&gt;&lt;br/&gt;    Person pWilliam&lt;br/&gt;        Name: William Kirk&lt;br/&gt;        Occupation: Labourer&lt;br/&gt;        Residence: plGrantham&lt;br/&gt;    End Person&lt;br/&gt; &lt;br/&gt;    Person pHellen&lt;br/&gt;        Name: Hellen Kirk&lt;br/&gt;        MaidenName: Hill&lt;br/&gt;    End Person&lt;br/&gt;&lt;br/&gt;    Place plGrantham&lt;br/&gt;        Address: Grantham, Lincolnshire&lt;br/&gt;    End Place&lt;br/&gt;End Evidence&lt;/pre&gt;
+ -->
+<style type="text/css"><!--
+/**
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ */
+.text  {font-family:monospace;}
+.text .imp {font-weight: bold; color: red;}
+.text span.xtra { display:block; }
+
+-->
+</style><pre class="text">Evidence birthRegMKirk
+    Source: certificate of civil birth registration [1840/Q1/14/387]
+    Informant: pWilliam
+    DateOfReg: 1840-03-28
+ 
+    Person pMelicent
+        Name: Melicent Kirk
+        DateOfBirth: 1840-03-17
+        PlaceOfBirth: plGrantham
+        Sex: girl
+        Father: pWilliam
+        Mother: pHelen
+    End Person
+ 
+    Person pWilliam
+        Name: William Kirk
+        Occupation: Labourer
+        Residence: plGrantham
+    End Person
+ 
+    Person pHellen
+        Name: Hellen Kirk
+        MaidenName: Hill
+    End Person
+ 
+    Place plGrantham
+        Address: Grantham, Lincolnshire
+    End Place
+End Evidence</pre>
+<!-- ws:end:WikiTextCodeRule:1 --><br/>
+If there are several units of evidence - as in the example of Ian Goddard - then the reasoning and conclusion narrative can use the tags such as pWilliam to point to the relevant data without cluttering up the case being made.<br/>
+<br/>
+I imagined that narrative could be in the form of short paragraphs, or even setences, each making a distinct point.<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-05-14T10:05:46-07:00</div>
+<div class="text">TestUser said, "I see you are putting the Source inside the Person. I guess this is an alternate way, as long as the source really is only about one person. It definitely is "smooth" for a human looking at the file... But might this be a little inconvenient for the programmer?"<br/>
+<br/>
+I think it is important to deal with two kinds of sources. The "one-of's" like a note from grandmother, and a big one, like a book or a register.<br/>
+<br/>
+In DeadEnds I want the user to be able to either have the source be self-contained information at the place where the source reference is required, or have the source reference point off to a separate, self-contained source record. DeadEnds allows both approaches. In this case, for simplicity, I choose to keep the sources self contained in the persona records. I could have done the example with external source records instead.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-05-14T22:58:09-07:00</div>
+<div class="text">Tony,<br/>
+<br/>
+Your example is very interesting and leaves me with a very positive opinion. The only significant difference between your model and mine seems to be the extra evidence layer, which acts to provide a "bag" of personas and places and the source information that describes where the evidence is from.<br/>
+<br/>
+If there are not going to be independent source records then your solution is more efficient because the personas and the places in the evidence bags don't need explicit references to the source information since they get it all for free by simply being in their bag.<br/>
+<br/>
+If there are only going to independent source records they my solution is more efficient, especially when many persona are extracted from the the same sources.<br/>
+<br/>
+If we support both independent source records and source information embedded in personas and places (or in evidence bags as you do it), which is the DeadEnds approach, then how we trade off between those two types of sources will determine which solution is more efficient.<br/>
+<br/>
+I think your solution is close to Louis's preferences. Both our solutions have full bodied personas which is absolutely critical in my opinion.<br/>
+<br/>
+In the DeadEnds model I also allow places to be independent records or self-contained structures within other records. In my example I made all the places internal substructures. In your example you made all places independent records. (I'm defining "independent record" to mean anything that needs to have an id so it can be referred to from an external place.) I could have made Ourtown, Alabama, and Histown, Massachusetts, two independent place records, but to limit the number of records in the example I choose not too.<br/>
+<br/>
+From this you can see that I have no qualms with allowing the same information to be represented in more than one way depending upon user preference. There was a Better GEDCOM requirement that said this was a bad thing. I'll never agree with that!<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2012-05-14T23:13:30-07:00</div>
+<div class="text">Testuser42 said, "I can guess at how the output would look like after every step, before you have any of the later information. Maybe you could still show how the conclusion person would look after step 4 (if you concluded that this "Johann" was the "John" you're looking at, but still recording your low confidence) and then after step 5 (where you discard the last conclusion because of the new evidence. Maybe keep a note to remind you of the wrong lead, to follow up with more definite evidence)"<br/>
+<br/>
+In my opinion the researcher can wait until there are many persona level evidence records before ever committing to join subsets of them into conclusion persons. From your comment I get the idea that you think I would create a conclusion person immediately after talking to Grandma, and that at each step along the way I would update that conclusion person by either linking to another persona or by removing a link to a persona that I now believe does not pertain to the conclusion person.<br/>
+<br/>
+I believe that either approach, and every one in between is acceptable, and whichever is chosen would be based on both the details of the cases being evaluated and on the preferences of the users. What I would want to insist on is that the user have the flexibility to do it any way they think best.<br/>
+<br/>
+I don't know at what stage in the research process described by the example I would have decided to first create the conclusion record for John Doe. I think I would have created it right at the beginning, because the first persona came from a direct descendent of the person of interest. That is, in the example case, you can be nearly 100% sure (except that Grandma could be senile and have completely forgotten everything about her grandfather) that the first persona record that you collected pertains to exactly the person you are interested in. Even though Grandma is not sure of the exact details of the vital events, she is sure of the existence of the person, and that is much more important than having dates and places.<br/>
+<br/>
+Maybe I should try to do as you wonder, as I would indeed almost assuredly been updating the conclusion person as the facts unfolded.<br/>
+<br/>
+Tom</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-05-15T00:07:14-07:00</div>
+<div class="text"><br/>
+Testuser, et al.<br/>
+<br/>
+I have posted on my blog what I propose Behold, with source-based data entry, would be like and how it would handle your six sources step-by-step:<br/>
+<!-- ws:start:WikiTextUrlRule:12:http://www.beholdgenealogy.com/blog/?p=1094 --><a class="wiki_link_ext" href="http://www.beholdgenealogy.com/blog/?p=1094" rel="nofollow">http://www.beholdgenealogy.com/blog/?p=1094</a><!-- ws:end:WikiTextUrlRule:12 --><br/>
+<br/>
+That will help you see how the data is processed by Behold, but to me that doesn't have any relationship to how it would be exported. Behold would be able to export to BetterGEDCOM, GEDCOM X or even GEDCOM 5.5 (with a just few custom tags) <br/>
+<br/>
+Tony: Not sure if my ideas are at all compatible with yours.<br/>
+<br/>
+Tom: Our acknowledged disagreement is over personas. No need to rehash.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-01-15T13:11:40-08:00</div>
+<div class="text">I'll try a simple example for the step-by-step idea:<br/>
+<br/>
+1. Source: Conversation with Grandma<br/>
+<ul class="quotelist"><li>Person of interest: John Doe  (her grandfather, my g-g-grandfather)</li><li>PFACTs:</li><li>- Death: between 1904 and 1906 in Ourtown, Alabama (she was not yet in school, and she started school in 1906)</li><li>- Birth: around 1830 in Histown, Connecticut (he was in his seventies)</li><li>Confidence: not so high, Grandma wasn't so sure herself</li></ul><br/>
+2. Source: Handwritten note by Jane Doe, daughter of John Doe<br/>
+<ul class="quotelist"><li>Person: John Doe</li><li>PFACTs:</li><li>- John Doe died of a heart attack on the 3rd of April 1905, in the front yard of his home in Ourtown, while carrying groceries he just brought from the store.</li><li>File: scan of the note.</li><li>Confidence: pretty good.</li></ul><br/>
+3. Source: Copy of death cert for John D Doe<br/>
+<ul class="quotelist"><li>- John D Doe died 1905-04-03 at 11 a.m. in Ourtown, Ala.</li><li>- aged 74</li><li>- Cause of death: Heartattack, confirmed by Dr Doc.</li><li>- Handwritten note: "Buried 3 days later, St. Michael's"</li><li>File: scanned document.</li><li>Confidence: looks official, but have to find out more about the burial.</li></ul><br/>
+4. Source: Birth cert of Johann Doe<br/>
+<ul class="quotelist"><li>Note: this is the only J. Doe to be found in Histown, Conn that was born in 1830 +-1</li><li>Person: Johann Doe</li><li>- Born 21st December 1830</li><li>- Parents Hans and Marie Doe</li><li>- in Histown, Conn</li><li>- baptised 25th Dec, catholic</li><li>File: scan</li><li>Confidence: The data is trustworthy, and it's a really good fit. Could be my John D Doe, but needs more proof!</li></ul><br/>
+5. Source: Birth cert of John Dorian Doe<br/>
+<ul class="quotelist"><li>Grandma found this in a drawer with other family documents.</li><li>Person: John Dorian Doe</li><li>- Born 3/3/1830</li><li>- to Stephen Doe and his wife Hilda, née Schmidt</li><li>- in Histown, Massachussetts</li><li>- he was their 2nd child</li><li>File: Scan</li><li>Confidence: quite high.</li><li>Note: Grandma says that she wasn't sure about the "Conn" anyhow.</li></ul><br/>
+6. Source: Death of Johann Doe<br/>
+<ul class="quotelist"><li>Article in the Histown (Conn) Paper, 8th Sept 1834</li><li>"A fire consumed Doe's smithy yesterday, one of the oldest buildings in town..."</li><li>"the blacksmith Hans Doe couldn't save his youngest son, Johann, age 3 and 3/4..."</li><li>Note: this is to show that Johann Doe of Histown Conn is not my John D Doe.</li></ul></div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-01-15T13:15:48-08:00</div>
+<div class="text">Are the above good for a starting test case? <br/>
+If not, can we tweak them? <br/>
+If they're OK, let's put them on the page and then see how the data would look in DeadEnds, Behold's model, STEMMA, etc.</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-16T09:28:31-08:00</div>
+<div class="text">Thanks for starting this thread. We should have a stock of these examples in an easily found location, and associated implementations and discussion under each one.<br/>
+<br/>
+Is this the best place though, given that discussions are not backed up? We don't have any hierarchical support on this wiki otherwise. <br/>
+<br/>
+The phrase "catch 22" comes to mind  :-(<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-02-18T07:27:36-08:00</div>
+<div class="text">I think we can use a regular page (which does back up) and just simulate a hierarchy with indentations. Kind of like the wikipedia discussion pages. I tried to do something like that for the <a class="wiki_link" href="/List+of+main+Citation+Elements">List of main Citation Elements</a>.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-02-18T08:46:52-08:00</div>
+<div class="text">That's a good idea. I could write up what I believe my evidence/conclusion modeling would look like. <br/>
+<br/>
+But your examples above are all too simplistic. They are all simple pieces of evidence that can be handled similarly. Only the conclusions are a bit different which really only has to be a text string. So those examples don't show the failings in any system that disaggregates data. <br/>
+<br/>
+You should add examples of a Census record which includes multiple generations and side-relatives of a family with piles of info in the one record. <br/>
+<br/>
+Or how about something like a seating list at your grandfathers wedding which shows one interesting table of people sitting together that leads you to believe they may have been relatives of each other or had some other relationship (friends, coworkers).<br/>
+<br/>
+How about a clipping about a town fire you didn't know about that destroyed your ancestors neighbor's homes and that makes you believe it affected their life causing them and possibly other relatives to move to a different city. But nothing specific about your ancestor is mentioned in the article. <br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-05-13T12:28:18-07:00</div>
+<div class="text">Hi again...<br/>
+Louis, sure, more complex examples are definitely needed, too. <br/>
+<br/>
+The idea behind the list above (Jan 15) was that these simple examples would make it easier to see how the data is processed and exported. I'm thinking of a hypothetical program in which you enter the data of the first step. Then you export to "BG". Then you add more, export again. Repeat... A "step-by-step" example might show where the differences are between a n-tier model and a 1 or 2-tier model. The first step would probably result in pretty similar BG output. But when more evidence is added, the models start to differ. When conclusions are made, how do these look? And when a conclusion is unmade?<br/>
+<br/>
+I had you and Tom in mind... How would Behold handle these simple cases, how would the exported BG look? And what would Deadends do? Or Tony's Stemma? Or the current GedcomX, if anyone is able to answer that already. These are the very basic building blocks, I think we should compare and understand them before going to the possibly harder details.</div></div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-05-13T13:10:50-07:00</div>
+<div class="title">GEDCOM Test File</div>
+<div class="text">The developers at the German GEDCOM-L mailing list have started building an example GEDCOM file that is intended to show what they have agreed to. It will have every possible tag in Gedcom 5.5.1 and the (few) custom tags that they want to use. They want to include a number of special and difficult cases. This file is supposed to be used by the developers as a reference and as a test of their program's import and export capabilites.<br/>
+It's not going to be full of dummy-persons: they are building a storyboard to develop a more realistic data set.<br/>
+<br/>
+The wiki page is <br/>
+<!-- ws:start:WikiTextUrlRule:9:http://wiki-de.genealogy.net/GEDCOM_Musterdatei --><a class="wiki_link_ext" href="http://wiki-de.genealogy.net/GEDCOM_Musterdatei" rel="nofollow">http://wiki-de.genealogy.net/GEDCOM_Musterdatei</a><!-- ws:end:WikiTextUrlRule:9 --><br/>
+which has links to a number of to-do-lists and the current state of the example GEDCOM:<br/>
+<!-- ws:start:WikiTextUrlRule:10:http://wiki-de.genealogy.net/GEDCOM_Musterdatei/Musterdatei --><a class="wiki_link_ext" href="http://wiki-de.genealogy.net/GEDCOM_Musterdatei/Musterdatei" rel="nofollow">http://wiki-de.genealogy.net/GEDCOM_Musterdatei/Musterdatei</a><!-- ws:end:WikiTextUrlRule:10 --><br/>
+(right now, there's only this text on the wiki, no file yet to download)<br/>
+The storyboard is at<br/>
+<!-- ws:start:WikiTextUrlRule:11:http://wiki-de.genealogy.net/GEDCOM_Musterdatei/Storyboard --><a class="wiki_link_ext" href="http://wiki-de.genealogy.net/GEDCOM_Musterdatei/Storyboard" rel="nofollow">http://wiki-de.genealogy.net/GEDCOM_Musterdatei/Storyboard</a><!-- ws:end:WikiTextUrlRule:11 --></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2012-05-13T15:14:55-07:00</div>
+<div class="text">Too bad they don't put the Google Translate widget on their website, it would certainly help those of us who are interested but are linguistically challenged.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2012-05-13T21:25:02-07:00</div>
+<div class="text">Nice find!</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-05-14T02:39:54-07:00</div>
+<div class="text">I apologise for my ignorance here. What exactly is GEDCOM-L? I haven't come across it before.<br/>
+<br/>
+Is it an attempt to enhance GEDCOM in a particular way?<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>theKiwi</strong> 2012-05-14T04:11:47-07:00</div>
+<div class="text">GEDCOM-L is a mailing list (L) about GEDCOM - in this instance it's a German one apparently. There is also an English one here <!-- ws:start:WikiTextUrlRule:2:https://listserv.nodak.edu/cgi-bin/wa.exe?A0=GEDCOM-L --><a class="wiki_link_ext" href="https://listserv.nodak.edu/cgi-bin/wa.exe?A0=GEDCOM-L" rel="nofollow">https://listserv.nodak.edu/cgi-bin/wa.exe?A0=GEDCOM-L</a><!-- ws:end:WikiTextUrlRule:2 --><br/>
+<br/>
+Roger</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-05-14T04:40:38-07:00</div>
+<div class="text">Yes, it's a list where a number of German developers (I guess around 15-20 people) discuss how they can get their programs to understand each other. They went through all the GEDCOM 5.5.1 tags and explored how they should be used according to the standard. If there was any uncertainty, they developed a preferred solution and voted on it. They also agreed on a number of custom tags, like a level 0 _PLAC.<br/>
+The tags that have been voted on are found here:<br/>
+<!-- ws:start:WikiTextUrlRule:4:http://wiki-de.genealogy.net/Kategorie:GEDCOM-Tag-Fertig_abgestimmt --><a class="wiki_link_ext" href="http://wiki-de.genealogy.net/Kategorie:GEDCOM-Tag-Fertig_abgestimmt" rel="nofollow">http://wiki-de.genealogy.net/Kategorie:GEDCOM-Tag-Fertig_abgestimmt</a><!-- ws:end:WikiTextUrlRule:4 --><br/>
+<br/>
+Andy, you can use <!-- ws:start:WikiTextUrlRule:5:http://translate.google.com/ --><a class="wiki_link_ext" href="http://translate.google.com/" rel="nofollow">http://translate.google.com/</a><!-- ws:end:WikiTextUrlRule:5 --> and put the URL into the translation field. Then click the link that shows up in the field at the right. If the translation is too terrible, I can try and help out ;)</div></div><div class="comment"><div class="from"><strong>testuser42</strong> 2012-05-14T04:50:05-07:00</div>
+<div class="text">Just found this wiki page for an introduction to the list:<br/>
+<!-- ws:start:WikiTextUrlRule:3:http://wiki-de.genealogy.net/GEDCOM-l --><a class="wiki_link_ext" href="http://wiki-de.genealogy.net/GEDCOM-l" rel="nofollow">http://wiki-de.genealogy.net/GEDCOM-l</a><!-- ws:end:WikiTextUrlRule:3 --><br/>
+- they started 30. 11. 2009<br/>
+- there are about 25 people involved.</div></div><div class="comment"><div class="from"><strong>Andy_Hatchett</strong> 2012-05-14T06:16:09-07:00</div>
+<div class="text">"Andy, you can use <!-- ws:start:WikiTextUrlRule:4:http://translate.google.com/ --><a class="wiki_link_ext" href="http://translate.google.com/" rel="nofollow">http://translate.google.com/</a><!-- ws:end:WikiTextUrlRule:4 --> and put the URL into the translation field. Then click the link that shows up in the field at the right. If the translation is too terrible, I can try and help out ;) "<br/>
+<br/>
+Thanks, I finally added the Translate widget to my Browser bar so now one copy/paste lets me translate any website.<br/>
+<br/>
+Andy</div></div></div></body>
+</html>

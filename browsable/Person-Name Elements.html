@@ -1,0 +1,199 @@
+<html>
+<head>
+<title>BetterGedcom - Person-Name Elements</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+A person-name element has many components. How many components are needed? 12? This seems like about the right number, but maybe not. Also, person-name elements need a date/time component. What other components are needed with person-names?<br/>
+<br/>
+<a class="wiki_link_ext" href="http://gramps-project.org/wiki/index.php?title=GEPS_021:_Additional_Name_Fields" rel="nofollow" target="_blank">Here</a> is a link to a discussion of name issues that GRAMPS users have encountered in different cultures.<br/>
+<br/>
+Please also see the <a class="wiki_link" href="Use%20Of%20Templates.html">Use Of Templates</a> page for discussion regarding how to handle name elements using different name styles.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-25T15:56:49-08:00</div>
+<div class="title">A list of person names issues</div>
+<div class="text">So far what has been written about person names have focused on templates. There is an item on the Individual Data Elements Discussion page called Use of Templates.<br/>
+It is also discussed in a separate topic called Use of Templates  and there is also a separate page here <!-- ws:start:WikiTextUrlRule:61:http://bettergedcom.wikispaces.com/Use+Of+Templates --><a href="http://bettergedcom.wikispaces.com/Use+Of+Templates">http://bettergedcom.wikispaces.com/Use+Of+Templates</a><!-- ws:end:WikiTextUrlRule:61 --><br/>
+<br/>
+Templates may in some circumstances reduce the size of a file, but beyond that there is no precise description of the problems that templates solves, or the user needs that are satisfied. <br/>
+<br/>
+The only program I know about that has functionality similar to templates is TMG, which has styles for Person names and Place-hierarchies. Styles control how names are presented and sorted in reports and various lists in the program. But the proposed templates provides no way to transfer information that is defined by a style in TMG - the name of a template in it self provides no knowledge about the senders configuration, and depending on the senders configuration, the name could appear very differently on the receivers system (There is no standard for the name parts of medieval kings and their sorting.) This may be handled manually, but that requires that the recipient also uses TMG or a program with the same functionality.<br/>
+<br/>
+Before we decide if templates should be used, it might be better to first describe the functionality, and associated information, that users need in the context of person names - and then see if templates fit those requirements or if there are other solutions.<br/>
+<br/>
+Some requirements that a solution should/could satisfy, and some possible ways to satisfy them, are described below. These bullets should be subject to further discussion.<br/>
+<br/>
+1. The sender may split a name into several name parts<br/>
+<br/>
+2. Name parts are transferred in the same sequence as they are expected to be presented on paper e.g. as recorded in a source (if not, there must be an algorithm that can be used to obtain the correct sequence)<br/>
+<br/>
+3. Name parts may be assigned a name-part type, e.g. given name, title, patronymic, surname, prefix, postfix etc. There may be several name parts of the same name part type. (Comment: Since names are usually output in charts or reports without the name part type labels, and since these labels often are not used in sources, the value of developing a large and very detailed/precise set of name part types is questionable. For example, is there really a need for Patronymic as long as it is possible to have several surnames? Does such a distinction serve any practical purpose?). Several published specifications list possible name part types, e.g. GenXML.<br/>
+<br/>
+4. Name part types should preferably be standardized, but a user may also define other types (these types could be included in a later version of the standard). Standardized types will most likely be translated into the language of a programs user interface.<br/>
+<br/>
+5. A name part may be split into sub-parts in order to facilitate sorting on a part of a word. This could be used for names such as "d'Hondt" where one wants to sort on "Hondt".<br/>
+<br/>
+6. A (complete) name may be assigned a Name Type, e.g. Birth name, Alias, Name changed etc. The difference between Name types and Name part types should be discussed, e.g., an Alias will by many be seen as a Name part type rather than a Name type. What practical purpose do Name Types serve?<br/>
+<br/>
+7. It should be possible to specify (suggest to the recipient) if a name part (or sub part) should be used for sorting, if it sorts as a given name or surname (could sort as e.g. a surname even if it may by some be considered not to be a surname), and the relative sort order for name parts when the sort is performed on several parts (the order could be specified by a number, possibly with several parts having the same number, one series of numbers for surnames (and maybe also one for given names)). These values allow the recipient to perform a proper sorting without knowledge of the name part types in the name, and without the need to assign a type to a name part. The functionality in programs becomes independent of rules for (or the users' knowledge about) classification of name parts - rules that could to some extent vary from country to country. For example, when there are several surnames, some countries consider the last surname to be most "significant" while others considers the first to be the most significant. This feature is inspired by the "draft Gedcom 6"<br/>
+<br/>
+8. It should be possible to sort on several name parts, e.g. two surnames, that may be separated by other name parts. Each part could result in a separate entry in a sorted list, e.g. two surnames results in two entries in the list. Or, one surname is considered more important than the other - cf. sort order above. <br/>
+<br/>
+9. Name (sub-)parts may be separated by a space, an empty string, a dash or other character(s) - the default is space. A dash is for example used to separate the two name parts that may be constructed from "Berg-Hansen". Separators, other than the default space, could be considered a special name (sub-)part.<br/>
+<br/>
+10. For reasons of backward compatibility, or other reasons?, there may be a need to classify name part types as being a 1) given name (first name), 2) surname or 3) other ? For example a patronymic may be classified as a surname (a sub class of surname). This classification could also be helpful in interworking between programs supporting different name part types. A program could for example define special notation in order to reduce the number of fields needed to show or input a name on screen. A program may therefore have problems displaying all name part types, and may show one of the three more general classes instead. (If this classification is needed, it may be necessary to encode the class together with a non-standard name type.) Are the three classes sufficient?<br/>
+<br/>
+11. Is there a need to identify the language used in a name ((and name part?)) What is the purpose? Is there such a thing as a language for a person name? Unless a name part has a specific general meaning, is it possible to translate a name? "John Miller" could be translated into the German name Johan Müller, but is that a name for John Miller? - in most cases it is not.<br/>
+<br/>
+12. It should be possible to choose one name as a preferred name - the meaning "preferred" must be defined. One possibility is in the case when a person has several names, but one name must be chosen for that person in a list or report. Similarly there may be a use for preferred given name and/or surname, when a person normally uses only one of several names, but this could also be a name type.<br/>
+<br/>
+13. It must be allowed to encode more than one word in a name part, e.g. several surnames in one name part, but this is likely to reduce the functionality in the receiving system, and could cause problems if the words are not all of the same type. Several given names could also be encoded in one name part.<br/>
+<br/>
+14. It must be possible to identify the event/source where the name is used - but how this is done is most likely a separate - more structural - issue.<br/>
+<br/>
+15. It could be possible to assign a unique identifier to a name (unique in what context?)<br/>
+<br/>
+16. Could identifiers used in e.g. public registers (e.g. SSN) also be considered a name? <br/>
+<br/>
+17. There may be a need to identify the time period when the name was used, (if this can not be deduced from an event?).<br/>
+<br/>
+18. A standard language independent value should be defined to denote "Unknown name"<br/>
+<br/>
+19. Gramps has a field called "derivation". One of it's values is "inherited". It is not clear to me what the purpose of this field is.  Is this really something that should be part of a name?<br/>
+<br/>
+20. A problem could be conventions for presentation of e.g. an alias, in some cases parenthesis are used, in others hyphens or even italics. (Similar conventions may be relevant for e.g. maiden name or married name.) The notation should not be encoded in a BG-file, it should be the recipients choice. <br/>
+<br/>
+21. Max number of name parts? Or max number of specific types/classes of name parts?? <br/>
+<br/>
+22. Templates can be implemented in many ways. Each piece of information related to a name (name types etc) can be transferred in the template, or it can be transferred with each name, or a default could be in the template. Templates will suite some programs better than others, the generating program could choose whether to use templates or not, i.e. transfer the info with each name if templates are not used. A template could be identified by a name, or just a number - the latter carrying no information. (Transfer of the names of a name part types in a template makes the info in the xml file more difficult to understand.)  If templates are chosen, it must be specified what functionality templates are supposed to control - otherwise they will be a source of incompatibility.<br/>
+<br/>
+23. Which requirements come from cultures where the family name is the first name?<br/>
+<br/>
+24. There may be a need to indicate that a name is sensitive information.<br/>
+<br/>
+It is likely that the flexibility above will require changes to many of the current genealogy programs. A discussion that tries to fit the requirements above to one current program is not likely to be successful, but ideas from various programs may be useful.<br/>
+<br/>
+It is very unlikely that the above reflects all requirements in all cultures. We need to educate each other about the needs in various cultures.</div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-26T05:30:25-08:00</div>
+<div class="text">gthorud, <br/>
+<br/>
+Way to complicated for this end user.<br/>
+<br/>
+My simple question is, If I am not given fields to put these piece parts of a 'name', how will the application that I am using do that?<br/>
+<br/>
+I enter data that I find, the way I find it. I may or may not know how to translate what I find into those fields, IF I were giving the piece part fields.<br/>
+<br/>
+I do, however, have to distinguish the difference between a Name vs a Title, like King of England. That isn't a name but a title or an AKA. I know how to handle that.<br/>
+<br/>
+If I don't have separate fields, then the application has to break apart what I enter into those fields.<br/>
+<br/>
+BUT, Isn't a Name really a string of characters? The application can associate that string of characters and attach some sort of identifier to what this string of characters is then pass that Identifier to the String of Characters and pass it to the BetterGEDCOM file? At the other end, that Identifier and string would be broken out by the other application.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2010-11-26T11:39:57-08:00</div>
+<div class="text">Unfortunately, if you try to cater for many naming practices around the world, things become a little complex, but not very complex. If you don’t like the complexity, you can just pick a few geographical areas or cultures that you think the standard should not apply to – unfortunately those areas tend to become very large. <br/>
+<br/>
+I am not proposing to have only one field in a program where the complete name should be entered.<br/>
+<br/>
+It is very difficult to do genealogical research if one is not able to separate a name into a given name and a surname – at least in most cases. However, I agree that there may be cases where you may not be able to tell if a part of a name is e.g. a given name or a surname. So there is a need to allow the complete name to be encoded in one name part, perhaps with a name part type “unknown”. But in my experience, such cases are rare, and they should not prevent users from splitting the name into several name parts.<br/>
+<br/>
+Do I understand you correctly, if you want to let the program sort out the various parts of a name? If the program is designed to handle the customs of many countries, this would require an expert system that most program vendors will not be able to implement, the only ones that would be able to do this are the big actors in the genealogy industry. I don’t want this, I want a solution that can also be implemented by small vendors and used by users that at least try to understand the cultures they are working with.<br/>
+<br/>
+Unfortunately many of today’s program vendors ignore (or do not understand) these user requirements around the world, and thus their programs can only be used in a few countries, without problems. I hope BG will not have such a limitation. If you want to come up with a standard that is “international”, you have to dig into the details. Fortunately, this is not very much more complex than what a few programs are able to handle today.<br/>
+<br/>
+What we must do first is to write a list of user requirements that is as complete as possible.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-26T12:01:22-08:00</div>
+<div class="text">Actual I think a pull down selection say like "Census, Birth, Marraige, Military..."<br/>
+Then  secon pull down "certificate, Document, Film,.." those selected name which are fitted in the TEXT area of the tag.<br/>
+<br/>
+It is easy to parse or filter a table matching Census, or Birth" than having to create complex parse FOR EACH type of NODE TAG NAMe we create INSIDE the xml structure.<br/>
+<br/>
+Don't make it more complex just becuase we can do it and xml allows it.<br/>
+<br/>
+Also it is easy to import iformation and have the option to correct a TEXT tag name than it is to REWRITE all the unique TAG inside the xml struture than to have made them a universal format for all plateforms to read the xml TEXT tags.</div></div><div class="comment"><div class="from"><strong>mstransky</strong> 2010-11-26T12:18:21-08:00</div>
+<div class="text">What we must do first is to write a list of user requirements that is as complete as possible."- gthorud,<br/>
+<br/>
+ I Agree with that, that is whta I am looking for a list of "ALL the variuos WANTS of the users"<br/>
+<br/>
+ Then to examine how all those can be incorperated to a univeral commomn <br/>
+<br/>
+&lt;NODE&gt;"TEXT LABEL HERE"<br/>
+  &lt;universal needed data TAGS&gt;title of, type, date, place, roll, name, ect...&lt;/TAGS&gt;<br/>
+&lt;/NODE&gt;  <br/>
+<br/>
+Tags that are universal to what ever is placed in them. <br/>
+<br/>
+I think a list of user WANTS would be good to view for various reasons for both parties looking at the technical side and/or functional side. Form that we can caome to a common ground to make everyone happy.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-26T12:25:07-08:00</div>
+<div class="text">gthorud,<br/>
+<br/>
+You said:<br/>
+<br/>
+"What we must do first is to write a list of user requirements that is as complete as possible."<br/>
+<br/>
+My 'requirements' are simple. Get the data from my research to another End User without messing it up.<br/>
+<br/>
+Do the software vendors listen to their End Users? I think so, as far as the Software to the User interface is concerned. The sharing of information, not so much. That's what we are trying to do.<br/>
+<br/>
+Also, we are trying to bring to the table some sound Genealogical Best Practices. I submit to you, that they are also currently in discussion.<br/>
+<br/>
+I hope that this Wiki helps use have a platform to discusses these issues AND to get at the end result, sharing of information.<br/>
+<br/>
+This, again in my humble opinion, can't be done with One set of users talking to their Vendor, another set of users talking to their Vendor, and in some cases, ignoring the good practices that are "under construction", or better stated, becoming better understood.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-26T13:23:04-08:00</div>
+<div class="text">gthorud,<br/>
+<br/>
+The reason nothing else had been previously said about person names is you didn't say it. Nothing on this site is a concluded. Much of this site is made up of unexplored topics like this one.<br/>
+<br/>
+Use of Templates is an idea I have put forward that has likewise received almost no comment. In regard to names, one problem templates seek to solve is to allow name elements to be defined differently according to varying needs. That's all.<br/>
+<br/>
+It's important to keep recognizing the difference between providing capability to developers by providing a robust data model and designing the application itself. It's very easy to veer off the data model path and into software design on a topic like this.<br/>
+<br/>
+How will developers use this sort of functionality? That's up to them. Can such a complicated scheme still easily map to what we have and everyone is used to? Sure.<br/>
+<br/>
+gthorud brings up an excellent list of some of the issues. I can't wait to see where this discussion leads.</div></div><div class="comment"><div class="from"><strong>paulzag</strong> 2011-01-07T00:19:55-08:00</div>
+<div class="text">I'm not sure where to start here but names are important to me.<br/>
+<br/>
+I am setting aside Spanish and Portuguese naming conventions as I do not understand them fully.<br/>
+<br/>
+I have a name at birth in English, I also have a name at baptism in Greek. I have a patrynomic name that is different to the name on my birth certificate. Those are all "me"<br/>
+<br/>
+In Greek (as in many languages), family names change according the gender of the individual. Plus the ending changes due to geographic location of the family. <br/>
+<br/>
+My mother has had at least 9 legal names (plus alternate spellings/misspellings) and who knows how many more to come.<br/>
+<br/>
+Within 4 generations my family history currently spans Greece, Turkey, Romania, Austria, Australia, New Zealand, Brasil, Israel, Venezuela and Italy. Documents exist in many languages.<br/>
+<br/>
+GEDCOM allows this by having multiple NAME attributes. This is poorly implemented by vendors.<br/>
+<br/>
+However GEDCOM does not allow me to associate a date range with a name.<br/>
+<br/>
+As an exercise, try creating a family tree of the Julio-Claudian dynasty of Ancient Rome. Heck just try to enter Augustus as he is named according to Wikipedia...<br/>
+<br/>
+Gaius Julius Caesar Augustus (23 September 63 BC – 19 August AD 14) is considered the first emperor of the Roman Empire, which he ruled alone from 27 BC until his death in AD 14.[note 1] Born Gaius Octavius Thurinus, he was adopted posthumously by his great-uncle Gaius Julius Caesar in 44 BC via his last will and testament, and between then and 27 BC was officially named Gaius Julius Caesar. In 27 BC the Senate awarded him the honorific Augustus ("the revered one"), and thus consequently he was Gaius Julius Caesar Augustus.[note 2] Because of the various names he bore, it is common to call him Octavius when referring to events between 63 and 44 BC, Octavian (or Octavianus) when referring to events between 44 and 27 BC, and Augustus when referring to events after 27 BC. In Greek sources, Augustus is known as Ὀκτάβιος (Octavius), Καῖσαρ (Caesar), Αὔγουστος (Augustus), or Σεβαστός (Sebastos), depending on context.<br/>
+<br/>
+The idea that one individual has only one name is a modern, mainly North American, bias.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-01-07T01:03:48-08:00</div>
+<div class="text">My belief is that a name is one of the most important PACTs (property/attribute/characteristic/trait) that apply to persons. We all do, of course. Our data model must allow all PACTS to be dated, so the dating issue Paul brings up is one we handle.<br/>
+<br/>
+A person should be able to have as many name PACTs as real names they had or were known by. Most "evidence" persons bring one name to the table, because most evidence persons are taken from evidence about an event that occurred at a fixed point in time that mentions the person who he/she was called at the time. When conclusion persons are built up from these evidence persons, the conclusion persons accumulate all the different names taken from the evidence. All this is consistent with Paul's wonderful analysys of Ceasar Octavius, and consistent with all we've said about the upcoming BG model.<br/>
+<br/>
+In many cases it is best to think of a name as simply a string of characters that act as a label to represent a person. The important organizing concept of surname and given names now so important in the west, should be thought of as a way of interpreting these string labels, NOT as what the name labels intrinsically are.<br/>
+<br/>
+The only two important things about names that I believe must be captured in genealogical software are:<br/>
+<br/>
+1. The ability to index and search based on them.<br/>
+2. The ability to recognized when persons are likely closely related via naming patterns.<br/>
+<br/>
+The ability to index and search is the only place where the concept of a western surname is really important. Basically, when you want to list a bunch of people, you need a way to sort them so the list is just not a random jumble of names. It might be even better to get rid of the surname as a special concept and just think of every name as having a "sort key." (see my comment on the GEDCOM approach to names below.)<br/>
+<br/>
+There is the question of name display. In most genealogical screens and reports there is only enough room to show a single name for a person. The issue is which name to use. In my LifeLines program I always choose the first in the record as the convention. So this is the "display string" for the person.<br/>
+<br/>
+And a very quick word about the GEDCOM name string. I actually think that the GEDCOM name string was an excellent invention. Here is what is looks like:<br/>
+<br/>
+1 NAME namepart ... / namepart ... / namepart ...<br/>
+<br/>
+This means that there are zero or more name parts between two slashes, and there can be any number of name parts before and after the slashes. What GEDCOM will tell you is that the name parts between the slashes are the surname, and that the names outside the slashes are the given names. To this I say "bosh." What I so say is that the name parts between the slashes are the primary index/sort key for the name and the name parts outside the slashes are the secondary name keys in the order of the external name parts. You don't need to even say the words first name, middle name, last name, surname, given name, paytrynymic, married name, maiden name in this context. You get the name, you get it indexed nicely, you get it sorted nicely, you get it easily searchable, without ever having to utter those incendiary name words!<br/>
+<br/>
+Sometimes I feel that the need to fully analyze every name into its fixed components based on templates from every culture is simply geekhood overkill. Think about this very simplistic GEDCOM approach and see if it fits the bill in your mind.<br/>
+<br/>
+Tom Wetmore</div></div></div></body>
+</html>

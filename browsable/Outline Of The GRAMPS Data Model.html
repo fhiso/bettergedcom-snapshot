@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>BetterGedcom - Outline Of The GRAMPS Data Model</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"><a name="Outline Of The GRAMPS Data Model"></a>Outline Of The GRAMPS Data Model</h1>
+<hr/>
+<span style="font-family: Arial; font-size: 14px;">This describes aspects of the Gramps data model for genealogical information. It was taken from the Relax NG file of version 1.4.0 of the Gramps specification.</span><br/>
+<span style="font-size: 14px;">Certain parts of the Gramps model are not covered here if they don’t apply directly to the different Gramps records, their contents and their interactions. The Gramps Relax NG file can be inspected for the full specifications.</span><br/>
+<br/>
+<span style="font-size: 14px;">All Types are either from a defined, preset collection, or user-defined, custom type.</span><br/>
+<hr/>
+<h2 id="toc1"><a name="Outline Of The GRAMPS Data Model-Record Types"></a>Record Types</h2>
+<span style="font-family: Arial; font-size: 14px;">Gramps uses eight record types: Events, Persons, Families, Sources, Places, Objects, Repositories, and Notes.</span><br/>
+<hr/>
+<h3 id="toc2"><a name="Outline Of The GRAMPS Data Model-Record Types-Event Records"></a>Event Records</h3>
+<span style="font-family: Arial; font-size: 14px;">Event records represent happenings in peoples’ lives. Here is the how Gramps structures Event records:</span><br/>
+<ul><li><span style="font-family: Arial; font-size: 14px;">ID (optional; required) – Every Gramps record has two identifiers: a short, possibly non-unique, optional string that users can see and modify; and a long, required, permanent, unique string that the user cannot change and that other records use to refer to this record. The unique identifier (called a "handle" in Gramps vocabulary) is currently not as long as a typical UUID, but plays the same role that a UUID would. However, turning the handle into a proper UUID is <a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=GEPS_009:_Import_Export_Merge#UID.2C_GUID_and_UID.2C_what_is_needed_in_GRAMPS.3F" rel="nofollow">under consideration</a>.</span></li><li><span style="background-color: #ffffff; color: #000000;">Event Type (required) - One of a preset collection of types, or a user-define, custom, type.</span></li><li><span style="font-family: Arial; font-size: 14px;">Date (optional) – Date when the event occurred. Gramps has a specific format for writing dates, and can convert many calendars into this format. Gramps also has a method for representing years with alternate New Year days, and other date variations.</span></li><li><span style="font-family: Arial; font-size: 14px; line-height: 21px;">Place (optional) – Place where the event occurred. Note that Gramps has stand-alone Place records, but this field seems to be a way of placing a full Place directly inside the Event record, rather than having the Event record refer to a Place record. TODO: Ask why this is so. =&gt; Maybe because there is no internal place database, place is a new object, which can be shared. So we share, or if need, to edit (there is a button for adding a new place on place list).</span></li><li><span style="font-family: Arial; font-size: 14px; line-height: 21px;">Description (optional) – Text that describes the event.</span></li><li><span style="font-family: Arial; font-size: 14px;">Attributes (any number) – Key and value pairs the user can add to describe any pertinent attribute of the event.</span><span style="font-size: 14px;"> User defined keys allow any number of custom attributes</span><span style="color: #000000; font-size: 14px;">.</span></li><li><span style="font-size: 14px;">Note references (any number) – References to Gramps Note records that provide information about the Event. </span><span style="color: #000000; font-size: 14px;">Unlimited attached records.</span></li><li><span style="font-family: Arial; font-size: 14px;">Source references (any number) – References to Gramps Source records that provide information about the source of the Event. </span><span style="color: #000000; font-size: 14px;">Only one reference but unlimited attached records.</span></li><li><span style="font-family: Arial; font-size: 14px;">Object references (any number) – References to external files that contain information, e.g., images, about this Event. </span><span style="color: #000000; font-size: 14px;">Only one reference but unlimited attached records.</span></li></ul><br/>
+<span style="font-family: Arial; font-size: 14px;">Event records do not conatin references to other Event records or to Person or Family records, so Event records cannot reference the Person records who play the roles in the Event. However, Person records and Family records have Event references that refer to Event records and also specify the roles they play in the Event.</span><br/>
+<hr/>
+<h3 id="toc3"><a name="Outline Of The GRAMPS Data Model-Record Types-Person Records"></a><span style="font-family: Arial; font-size: 14px;">Person Records</span></h3>
+<h3 id="toc4"><a name="Outline Of The GRAMPS Data Model-Record Types-Gramps Person records represent persons. Gramps does not explicitly distinguish between Person records taken directly from evidence versus Person records built up through research to hold a combination of information from many sources. Gramps Person records can exist anywhere along the evidence/conclusion continuum, and can move back and forth in this continuum based on user actions. The format of the Gramps Person record is:"></a><span style="font-family: Arial; font-weight: normal; line-height: 19px;">Gramps Person records represent persons. Gramps does not explicitly distinguish between Person records taken directly from evidence versus Person records built up through research to hold a combination of information from many sources. Gramps Person records can exist anywhere along the evidence/conclusion continuum, and can move back and forth in this continuum based on user actions. </span><span style="font-weight: normal; line-height: 19px;">The format of the Gramps Person record is:</span></h3>
+<ul><li><span style="font-size: 14px;">ID – see Event record.</span></li><li><span style="font-size: 14px;">Gender (required) – M, F or U.</span></li><li><span style="font-size: 14px;">Name (required) – Person’s name. Gramps has a specific sub-structure format for writing names.</span></li><li><span style="font-size: 14px;">Event references (any number) – These are references to Event records that this Person plays a role in. An event reference has its own internal structure:</span><ul><li><span style="font-size: 14px;">Id (required) – the index value of the Event record referred to.</span></li><li><span style="font-size: 14px;">Priv (optional) – a value that is either 0 or 1 (1 means the record is private, 0 public)</span></li><li><span style="font-size: 14px;">Role (optional) – the role this Person has in the Event. All types are either one of a predefined set, or a custom, user-defined type.</span></li><li><span style="font-size: 14px;">Attributes (any number) – see Event record.</span></li><li><span style="font-size: 14px;">Note references – See Event record.</span></li></ul></li><li><span style="font-size: 14px; line-height: 21px;">LDS Ordinations (optional) – See the NG Relax specifications for more information.</span></li><li><span style="font-size: 14px; line-height: 21px;">Object references – See Event record.</span></li><li><span style="font-size: 14px; line-height: 19px;"> Addresses (any number) – Address values have their own internal structure. They are used to specify different places the Person has lived and the time they lived there. Other models treat this concept differently, dealing with it as another kind of event usually called Residence.</span></li><li><span style="font-family: Symbol;"><span style="font-family: arial,helvetica,sans-serif; font-size: 14px; line-height: 21px;">Attributes – see Event record.</span><br/>
+</span></li><li><span style="font-family: Symbol;"><span style="font-family: arial,helvetica,sans-serif; font-size: 14px; line-height: 21px;">URLs (any number) – URL values are simple structures that refer to URLs that have information pertaining to the person.</span><br/>
+</span></li><li><span style="font-family: Symbol;"><span style="font-family: arial,helvetica,sans-serif; font-size: 14px; line-height: 21px;">Child-of references (any number) – References to Family records this Person is a child of.</span><br/>
+</span></li><li><span style="font-family: Symbol;"><span style="font-family: arial,helvetica,sans-serif; font-size: 14px; line-height: 21px;">Parent-in references (any number) – References to Family records this Person is a parent in.</span><br/>
+</span></li><li><span style="font-family: Symbol;"><span style="font-family: arial,helvetica,sans-serif; font-size: 14px; line-height: 21px;">Person references (any number) – References to other Person records. Person references have a relationship tag to specify the relationship between this Person record and the the referenced Person record.</span><br/>
+</span></li><li><span style="font-family: Symbol;"><span style="font-family: arial,helvetica,sans-serif; font-size: 14px; line-height: 21px;">Note references – See Event record.</span><br/>
+</span></li><li><span style="font-family: Symbol;"><span style="font-family: arial,helvetica,sans-serif; font-size: 14px; line-height: 21px;">Source references – See Event record.</span><br/>
+</span></li><li><span style="font-family: arial,helvetica,sans-serif; font-size: 14px; line-height: 21px;">Tag references (any number) – Tags are user-defined strings that can be assigned to records for any purpose. They do not appear in reports or GEDCOM exports.</span></li></ul><br/>
+<hr/>
+<br/>
+<h3 id="toc5"><a name="Outline Of The GRAMPS Data Model-Record Types-Family Records"></a>Family Records</h3>
+<span style="font-family: Arial; font-size: 14px; line-height: 19px;">Gramps has Family records. There has been a controversy for many years about whether Family records are necessary or not, but most models decide they are. The Gramps Family record has the format:</span><br/>
+<br/>
+<ul><li><span style="font-size: 14px;">ID</span><span style="font-family: Arial; font-size: 14px;"> – See Event record.</span></li><li><span style="font-family: Arial; font-size: 14px;">Rel (optional) – This is a tag that indicates the type of relation between the parent/spouse people.</span></li><li><span style="font-family: Arial; font-size: 14px;">Father (optional) – This is a reference to a Person record that has the father role for the Family.</span></li><li><span style="font-family: Arial; font-size: 14px;">Mother (optional) – This is a reference to a Person record that has the mother role for the Family.</span></li><li><span style="font-family: Arial; font-size: 14px;">Event References – See Person record. These are events of the family (such as marriage).</span></li><li><span style="font-family: Arial; font-size: 14px;">LDS Ordinances – See Person record.</span></li><li><span style="font-family: Arial; font-size: 14px;">Object References – See Person record.</span></li><li><span style="font-family: Arial; font-size: 14px;">Child References (any number) – These are the references to the Persons who are children in the family.</span></li><li><span style="font-family: Arial; font-size: 14px; line-height: 21px;">Attributes – See Event record.</span></li><li><span style="font-family: Arial; font-size: 14px;">Note References – See Event record</span></li><li><span style="font-family: Arial; font-size: 14px; line-height: 21px;">Source References – See Event record.</span></li><li><span style="font-family: Arial; font-size: 14px;">Tag References – See Person record.</span></li></ul><br/>
+<hr/>
+<br/>
+<h3 id="toc6"><a name="Outline Of The GRAMPS Data Model-Record Types-Source Records"></a>Source Records</h3>
+<span style="font-family: Arial; font-size: 14px;">Gramps Source records are used to describe sources of genealogical information. Source records have the following format:</span><br/>
+<br/>
+<ul><li><span style="font-size: 14px;">ID – See Event record.</span></li><li><span style="font-size: 14px;">Title (optional) – Title of the source.</span></li><li><span style="font-size: 14px;">Author (optional) – Author of the source.</span></li><li><span style="font-size: 14px;">Publishing Info (optional) – Publication information about the source.</span></li><li><span style="font-size: 14px;">Abbreviation (optional) – Abbreviation for the source.</span></li><li><span style="font-size: 14px;">Note References – See Event record.</span></li><li><span style="font-size: 14px;">Object References – See Event record.</span></li><li><span style="font-size: 14px;">Data Items (any number) – Data items are key/value text pairs, allowing any number of attributes be given to the Source record.</span></li><li><span style="font-size: 14px;">Repository references (any number) – A Repository reference points to a Repository and can contain additional information, including a call number code and medium code for the source.</span></li></ul><hr/>
+<h3 id="toc7"><a name="Outline Of The GRAMPS Data Model-Record Types-Place Records"></a>Place Records</h3>
+<span style="font-family: Arial; font-size: 14px;">Gramps employs Place records to represent places where genealogical events occurred. Having Places be records allow single Place records to be referred to by many other records, saving space and simplifying updates. The migration of places from being attributes of events (as in Gedcom) to being stand-alone records (as here in Gramps) has happened in many genealogical models. The format of a Gramps Place record is:</span><br/>
+<br/>
+<ul><li><span style="font-size: 14px;">ID – See Event record.</span></li><li><span style="font-size: 14px;">Title (optional) – A title/short description of the place.</span></li><li><span style="font-size: 14px;">Coordinates (optional) – The latitude and longitude of the place.</span></li><li><span style="font-size: 14px;">Locations (any number) – A location is a value with a substructure that can include values for any of the following location components:</span><ul><li><span style="font-size: 14px;">Street</span></li><li><span style="font-size: 14px;">City</span></li><li><span style="font-size: 14px;">Parish</span></li><li><span style="font-size: 14px;">County</span></li><li><span style="font-size: 14px;">State</span></li><li><span style="font-size: 14px;">Country</span></li><li><span style="font-size: 14px;">Postal Code</span></li><li><span style="font-size: 14px;">Phone Number</span></li></ul></li><li><span style="font-size: 14px;">Object References – See Event record.</span></li><li><span style="font-size: 14px;">URLs – See Person record.</span></li><li><span style="font-size: 14px;">Note References – See Event record.</span></li><li><span style="font-size: 14px;">Source References – See Event record.</span></li></ul><hr/>
+<h3 id="toc8"><a name="Outline Of The GRAMPS Data Model-Record Types-Object Records"></a>Object Records</h3>
+<h3 id="toc9"><a name="Outline Of The GRAMPS Data Model-Record Types-Gramps refers to information outside the model through Object records. Each Object record refers to a file on the local computer. The format of an Object record is:"></a><span style="font-weight: normal;">Gramps refers to information outside the model through Object records. Each Object record refers to a file on the local computer. The format of an Object record is:</span></h3>
+<br/>
+<ul><li><span style="font-size: 14px;">ID – See Event record.</span></li><li><span style="font-size: 14px;">File (required) – Name of the file, presumably in a full path representation, so it can be found on the local machine.</span></li><li><span style="font-size: 14px;">Type (required) – The MIME type of the file.</span></li><li><span style="font-size: 14px;">Description (required) – A description of the file.</span></li><li><span style="font-size: 14px;">Note References – See Event record.</span></li></ul><br/>
+<br/>
+<hr/>
+<h2 id="toc10"><a name="Outline Of The GRAMPS Data Model-Repository Records"></a><span style="font-size: 14px;">Repository Records</span></h2>
+<span style="font-size: 14px;"> Repository records represent repositories that hold sources. A Gramps Repository record has the format:</span><br/>
+<ul><li><span style="font-size: 14px;">ID – See Event record.</span></li><li><span style="font-size: 14px;">Name (optional) – Name of the repository.</span></li><li><span style="font-size: 14px;">Type (optional) – The type of the repository.</span></li><li><span style="font-size: 14px;">Addresses – See Person record.</span></li><li><span style="font-size: 14px;">URLs – See Person record.</span></li><li><span style="font-size: 14px;">Note References – See Event record.</span></li></ul><br/>
+<hr/>
+<br/>
+<h2 id="toc11"><a name="Outline Of The GRAMPS Data Model-Note Records"></a><span style="font-family: Arial; font-size: 14px;">Note Records</span></h2>
+<span style="font-size: 14px;"> The Gramps model has notes represented in their own Note records. This allows any number of other records to refer to the same Note record. The format of a Gramps Note record is:</span><br/>
+<ul><li><span style="font-size: 14px;">ID – See Event record.</span></li><li><span style="font-size: 14px;">Format (optional) – A code with value of 0 or 1 representing whether the note is preformatted.</span></li><li><span style="font-size: 14px;">Type (required) – An indication of the type of this note.</span></li><li><span style="font-size: 14px;">Styled Text (required) – The text of the note itself. Note that Gramps has the notion of styled text that allows basic level of text formatting including font, font size, color and so on.</span></li><li><span style="font-size: 14px;">Tag References – See Person record.</span></li></ul>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-12T18:40:10-08:00</div>
+<div class="title">Intro to Gramps Data Model Outline</div>
+<div class="text">I just created the initial version this page for the Outline of the Gramps Data Model. I made this from the Relax NS 1.4.0 specification of the Gramps Data Model. I am not associated with Gramps so there were a number of points I didn't fully understand, so the original version has some to-dos scattered throughout. I hope someone from Gramps will be able to vet this and make changes to clarify the bits I've been vague about.<br/>
+<br/>
+What is the purpose of this outline? There is an informal goal as part of the better Gedcom effort to investigate and analyze existing data models for genealogy. The analysis is intended to both educate better Gedcom participants about the nature of genealogical data models, and also to analyze the models to see how well they support the genealogical process models that the better Gedcom team hope their formats will enable. Gramps claims that they have a very general purpose model that is used successfully by many users in many different ways and that it supports the processes that they believe their users use. Frankly, the Gramps attitude (that I have detected -- I'm not speaking for the better Gedcom effort at all, so just get mad at me if you get mad at anyone) has been rather condescending toward the better Gedcom effort. Kind of a "try me last" kind of attitude as if the better Gedcom effort, after stumbling around in the wilderness for awhile, will realize that Gramps had the answer all along. Let me be a nasty and say that although I think this is an excellent model, I believe it needs a modicum of tweak before it will fully support the Evidence and Conclusion Process. I will soon be describing this process so Gramps folk and tear it apart if they believes it deserves it. So let's get about and see if Gramps really is the answer.<br/>
+<br/>
+For better Gedcom to do the full evaluation, better Gedcom will need to have some definition of the process they want to support. They don't have this yet. This is similar to a current buzz word in the software industry -- use case analysis. Better Gedcom will have to come up with something in this domain soon or arguing will go no where since no one will know when anything is right. My proposed Evidence and Conclusion Process will be my first attempt to get some use case like specfications on the table.<br/>
+<br/>
+Tom Wetmore</div><div class="comment"><div class="from"><strong>Just.another.Gramps.user</strong> 2010-11-12T23:53:47-08:00</div>
+<div class="text">Seems like excellent work Tom. It is my understanding that the Gramps model is somewhat of a superset of standard Gedcom, so that Gramps can import mostly everything from Gedcom, and export to Gedcom is lossy, with all losses theoretically specified in documentation. Now that you from betterGedcom know the precise Gramps model specification, I predict you will want to adopt similar extensions which should make conversion between Gramps DB and Gedcom better. Gramps can parse and generate Gedcom quite well already, so it's not like it has a particular preference for XML syntax, apart from it being free maybe, and Gedcom proprietary? Regards.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-13T01:12:47-08:00</div>
+<div class="text">ttwetmore,<br/>
+<br/>
+It seems I do not fully understand all sentences. But you know the free software philosophy. You are free to study the model, in addition, there is a well [<!-- ws:start:WikiTextUrlRule:4:http://www.gramps-project.org/wiki/index.php?title=Gramps_3.2_Wiki_Manual_-_Entering_and_editing_data:_detailed --><a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=Gramps_3.2_Wiki_Manual_-_Entering_and_editing_data:_detailed" rel="nofollow">http://www.gramps-project.org/wiki/index.php?title=Gramps_3.2_Wiki_Manual_-_Entering_and_editing_data:_detailed</a><!-- ws:end:WikiTextUrlRule:4 -->|documented manual], this also gives an overview of the model. I will try to clarify (where you was not certain) your work on the dedicated page. <br/>
+<br/>
+Relax NS 1.4.0 is the draft model, which should be used for next major release.</div></div><div class="comment"><div class="from"><strong>romjerome</strong> 2010-11-13T01:48:58-08:00</div>
+<div class="text">Some questions about the model are around the gramps types, attributes, events. The general answer might be Gramps model allows unlimited custom event, attribute and type. So, number is limited (default), user will extend for its own use. Only the bridge/relation (reference) between two primary objects is unique.<br/>
+<br/>
+Priority is the user choice.<br/>
+Gramps does not force anyone to use one form or seizure. That's why there is a name format selector, no internal place database, no source model (Gedcom fields).<br/>
+<br/>
+For date, it seems to be that Gramps store into ISO format (YYYY-MM-DD). There is also some localized date handlers. Same idea for relationships.<br/>
+<br/>
+Often generic methods (less specific form) and let the user use the model for its needs.<br/>
+<br/>
+<em>Gramps can parse and generate Gedcom quite well already</em><br/>
+<br/>
+If you study its Gedcom parser. Please before saying that is is not legal according an x years old specification, try to ask them (or look at code). Some people stopped to develop Gramps because Gedcom issues were too tiring/boring. Gedcom validator does not exist and most of devs will love to see a BetterGedcom.<br/>
+<br/>
+I just speak for myself and English is not my mother tongue. So do not worry if there is some misunderstandings about Gramps project goal or Gramps XML future. We try to make our best for keeping documentation up-to-date but do not have a lot of free time. Most of them will firstly improve the program, we cannot make long debates for a specification. To add some urls, quick descriptions about curent Gramps data model is maybe the most useful for your project, but we cannot stay tuned/connected every days.</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-13T05:11:42-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I think what you are doing is a wise approach: study each of the existing data models, see what they have, what is missing, and then make a recommendation about what BG should be. That is not the general approach that I get from the rest of BG. It seems to be: "let's discuss from scratch what should go into a file format without being tainted by other data models." That's the part that I personally don't have time or energy for. <br/>
+<br/>
+(Also, do not read too much into one developer's comments... gramps is a community, just like this one. I would not say that "BetterGEDCOM's attitude is that..." and the same is true for Gramp's) <br/>
+<br/>
+Gramps model is an on-going compromise between what would be perfect, what we can implement right now, and what will work given that GEDCOM is always lurking in the background. That is, many developers have an idea of what would be ideal, what we have time to do, and that we can't be completely disconnected from the current de facto standard. Gramps data model is a living process of continual development, created by those who participate in that process. Nothing more, or less.<br/>
+<br/>
+Greg has started a conversation on gramps-dev re BG:<br/>
+<!-- ws:start:WikiTextUrlRule:23:http://gramps.1791082.n4.nabble.com/Hi-From-BetterGEDCOM-and-Methodology-Questions-td3039612.html#a3039612 --><a class="wiki_link_ext" href="http://gramps.1791082.n4.nabble.com/Hi-From-BetterGEDCOM-and-Methodology-Questions-td3039612.html#a3039612" rel="nofollow">http://gramps.1791082.n4.nabble.com/Hi-From-BetterGEDCOM-and-Methodology-Questions-td3039612.html#a3039612</a><!-- ws:end:WikiTextUrlRule:23 --><br/>
+<br/>
+But many threads over there are about related data model issues and XML.<br/>
+<br/>
+I see BG going in one of two ways:<br/>
+<br/>
+1) BG is discussed at length, perfected, decided, and then fades into oblivion as an interesting academic exercise because no vendor had buy-in and it wasn't adopted.<br/>
+<br/>
+2) The people behind BG decide that the only way to make a difference is to make sure that their ideas are incorporated into some application. So they join or create open source, like-minded communities, and build all that they want or need themselves.<br/>
+<br/>
+If all of the open source/API groups (WeRelate, Gramps, FamilySearch, etc) banded together, then I think something might result from this.<br/>
+<br/>
+I'm not the data model expert at Gramps, but I'll try to fill in some gaps on your outline. <br/>
+<br/>
+-Doug</div></div><div class="comment"><div class="from"><strong>Just.another.Gramps.user</strong> 2010-11-13T08:46:17-08:00</div>
+<div class="text">Perhaps this is off-topic here but maybe you will be able to clarify the licensing state of Gedcom syntax and how using it would differ from using open formats like e.g. YAML. I'm sorry to bring this back, I really have no preference on the topic regarding the syntaxes themselves, but I think copyright law has some important nuances which shouldn't be missed. I also think Gedcom syntax could be open-sourced if it is proprietary, something to consider.<br/>
+This is not a direct proposal for betterGedcom, rather a "possibilities exist" which could be developed in parallel. I think YAML might fit Tom Wetmore's idea of a more readable format in comparison to XML, so someday writing a YAML-syntaxed version of a genealogy data model might be an interesting exercise -- someday. Again, I'm not saying drop Gedcom syntax for this, just consider parallel possibilities under the light of copyright differences. Regards.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-13T08:49:18-08:00</div>
+<div class="text">Doug,<br/>
+<br/>
+Tom's approach is exactly what BetterGEDCOM would like to see happen. In fact, as I'm sure tom will tell you, I personally asked him to to this exact evaluation to post here in order to encourage others to do the same. This is a wiki, however, and one that's been open for less than four days.  Also, this is supposed to be a discussion about the Gramps Data Model, not about predictions of what BetterGEDCOM turns into here on its fourth day. On a community wiki, no less, and not be shaped by its participants, not its organizers.<br/>
+<br/>
+My big question about the GRAMPS data model is how it can handle evidence and theory development. Really, I must have time to study this to speak intelligently, so hopefully you<br/>
+guys will work out some of the more salient points here.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-11-13T08:58:35-08:00</div>
+<div class="text">Obviously the above should have read that this is a community wiki, intended "to be shaped by its participants, not its organizers." <br/>
+<br/>
+Anyway, GRAMPS Data Model...?</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-14T12:43:46-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Thank you for the GRAMPS Data Model.<br/>
+<br/>
+I only have, at this early stage, of one question about "Family".<br/>
+<br/>
+One of the issues in a couple of software packages has to do with terms that we see on screens and in reports.<br/>
+<br/>
+Since we are trying to get this project started and some of run into the 'not so traditional' families should we start changing some of the traditional terms or add additional terms now rather then down the road a piece.<br/>
+<br/>
+I am talking about the two terms Mother and Father as two people that make up the family. I think we need to consider a Family is made up of Relationships. There is a relationship between two people. That relationship may expand to a relationship between these to people and another person. (Parents adding a Child).<br/>
+<br/>
+One of the attributes to these three people is the sex of these people, another the relationship between any one of the three individuals and the other two. Oh, and those relationships may change. (won't get into the change of the sex that might be changed over time)<br/>
+<br/>
+I realize that you are presenting the Gramps Data Model, but in moving into a BetterGEDOM Data Model I hope that these issues be addressed in that Data Model.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-16T00:31:23-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+Concerning family. Whether a data model should contain the family object or not has turned into a controversial point. Frankly I don't see all the fuss. Most family researchers come from cultures based on the father/mother/children family structure. So for the vast majority of researchers and the vast majority of the persons they research, this family structure is an important and organizing concept. I always question the sanity of persons who campaign to throw out well established and well understood concepts simply because they don't handle 100% of all situations that arise in the real world. I uncharitably considered such persons to be over-opinionated nuisances, sort of like myself.<br/>
+<br/>
+Bob Velke's point that a family record type is not required in a genealogical database is an oft-quoted statement. But if you read the context you will find that he is not throwing out the family concept. He is merely stating that family records are not physically required in a database because families can be reconstructed on the fly by software if the database model supports the father/mother/child relationship, which if they don't, they aren't genealogical programs to begin with.<br/>
+<br/>
+Personally I think it would be wrong (and downright disastrously stupid and the best way to get your genealogy program to reach the point of zero sales) to get rid of the family concept.  I think the solution is better support for non-traditional family forms.<br/>
+<br/>
+And sticking this comment right here in this GRAMPs discussion points out one the my pet peeves about the way Wikis distribute discussion topics all over the place. I know this family to be or not to be discussion is going on somewhere else in this Wiki, and that this response should be there or there also, but I'm too lazy to go look through the discussions going on on all the pages to discover where it's happening.<br/>
+<br/>
+Tom Wetmore, over-opinionated nuisance</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2010-11-16T00:57:34-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+Where did I throw out the Family Object or record? I am only trying to understand, at a very high level, what GRAMPS is an does.<br/>
+<br/>
+Also, sharing some of the things that are being discussed outside of GRAMPS and the BetterGEDCOM project.<br/>
+<br/>
+We certainly need to keep the Family Record / Object. Relationships within the record are what keeps the family together.<br/>
+<br/>
+I do suppose that any deviation from Mother / Father / Child terms might through any deviations from those terms out of the scope of Genealogy. The reality is, that Mother / Father / Child is changing or at the change is surfacing where, Mother / Mother / Child or Father / Father / Child is becoming a reality. Do we not consider this as part of our discussion?<br/>
+<br/>
+A BetterGEDCOM file might be impacted of the sending or receiving application either accepts or rejects data based on a same sex 'family'.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>dsblank</strong> 2010-11-16T03:28:57-08:00</div>
+<div class="text">I'm not an expert in the Gramps data model, but I believe that it exists so that we can have things (such as notes, events, sources, attributes, and media) attached to it. The family is elevated to a first-class entity to make that possible.<br/>
+<br/>
+There are decisions to made with this choice: what are family events vs individual events? Where is the marriage type (civil union, marriage) stored? How are relationships represented (eg, married, divorced, remarried)? Gramps has solutions for each of those, and plans for others (for example, <!-- ws:start:WikiTextUrlRule:4:http://www.gramps-project.org/wiki/index.php?title=GEPS_001:_Relationship_type_event_link --><a class="wiki_link_ext" href="http://www.gramps-project.org/wiki/index.php?title=GEPS_001:_Relationship_type_event_link" rel="nofollow">http://www.gramps-project.org/wiki/index.php?title=GEPS_001:_Relationship_type_event_link</a><!-- ws:end:WikiTextUrlRule:4 -->).<br/>
+<br/>
+-Doug</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-11-16T04:47:37-08:00</div>
+<div class="text">Russ,<br/>
+<br/>
+Sorry, didn't mean to imply intent on your part. I was just being my usual obnoxious pontificatory self.<br/>
+<br/>
+Tom Wetmore</div></div></div></body>
+</html>

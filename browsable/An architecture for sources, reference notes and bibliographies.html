@@ -1,0 +1,1111 @@
+<html>
+<head>
+<title>BetterGedcom - An architecture for sources, reference notes and bibliographies</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+AKA, Geir Thorud's working document. His comments follow. <br/>
+<br/>
+I have uploaded a document that tries to piece together an information architecture for<br/>
+<h1 id="toc0"><a name="x﻿"></a>﻿</h1>
+ - Exchange of information about sources, reference notes (incl. citations) and bibliographies<br/>
+- Exchange of information about Source Types, Citation elements and templates<br/>
+- A solution that can download data from source meta data in databases (this is currently not discussed in detail in the document)<br/>
+﻿<br/>
+<br/>
+<br/>
+<br/>
+A sub-goal is also to handle Evidence Explained, but the proposal goes much further in terms of internationalization and laying the ground for a solution that I hope will work in cooperation with internet services that are not dedicated to genealogy only.<br/>
+<br/>
+﻿<br/>
+<br/>
+<br/>
+<br/>
+The work is not complete, but there is little point in doing more work before the fundamental direction has been agreed.<br/>
+<br/>
+I realize that work on defining the details of the architecture, and especially the definition of “General CitationElements” will require a lot of work. In addition to discussing the details of the architecture, it is important to discuss if it is realistic to start work on this and how to proceed – see especially clause 22 in the documents which lists a number of issues on this.<br/>
+<br/>
+I have created two initial discussions<br/>
+- Questions and clarifications on version 0.4<br/>
+- Do we want to do this work – How - Prioritization of work items<br/>
+<br/>
+In addition to these, I suggest that you create separate discussions on details in the solution, so that we can avoid one mega discussion.<br/>
+<br/>
+I hope to revise the document in order to clarify things, and take note of comments.<br/>
+<br/>
+Version 0.4 can be found here<br/>
+<a class="wiki_link_ext" href="file/detail/An+architecture+for+sources%2C+reference+notes+and+bibliographies+-+version+0.4.pdf" rel="nofollow">file/detail/An+architecture+for+sources%2C+reference+notes+and+bibliographies+-+version+0.4.pdf</a><br/>
+.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>gthorud</strong> 2011-08-01T13:30:22-07:00</div>
+<div class="title">Questions and clarifications on version 0.4</div>
+<div class="text">Post any questions or requists for clarificati9ons here.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-01T16:57:16-07:00</div>
+<div class="text">p. 2. Geir writes, "I have retained the term Citation Element as used on the BetterGEDCOM wiki." <br/>
+<br/>
+I've gotten accustomed to the term "citation elements." <br/>
+I believe Zotero uses the more generic term "fields"--do we want to stick with the term citation elements or make a change?</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-08-02T11:22:00-07:00</div>
+<div class="text">"fields" is so generic as to be meaningless outside a very specific context. Everything entered into a database, any database, any file, _can_ be referred to as being entered into a field.<br/>
+<br/>
+Unless there is clear evidence of confusion, (and I mean _confusion_, not criticism), we should not change terminology from GEDCOM where the concept itself has not changed. So let's carry on using Citation Element.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-05T09:08:17-07:00</div>
+<div class="text">In your discussion about style guides, at p. 5, you wrote, "It may be that most genealogists, in many countries, would be satisfied by a style based on The Chicago manual of style (as EE is)."<br/>
+<br/>
+While there may be others, differences between the US and the UK are substantial enough that WhollyGenes produces a UK edition with 82 custom source categories (including Apprenticeshop records, GRO indexes, and others); includes a UK versioned sample file  <br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:4:http://www.whollygenes.com/Merchant2/merchant.mvc?Screen=TMGUK --><a class="wiki_link_ext" href="http://www.whollygenes.com/Merchant2/merchant.mvc?Screen=TMGUK" rel="nofollow">http://www.whollygenes.com/Merchant2/merchant.mvc?Screen=TMGUK</a><!-- ws:end:WikiTextUrlRule:4 --></div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-08-08T15:36:41-07:00</div>
+<div class="text">I should probably have written Style Guide Rule Set rather than "style", although it is not a good term. What I meant by "style" is the rules for how the citations are written, not the source types/categories.<br/>
+<br/>
+I plan to retain the term Citation Element, but extend it slightly by including elements that are strictly not ALWAYS used for citation - e.g. a text field that would contain the text of a Reference note that does not reference any sources.</div></div><div class="comment"><div class="from"><strong>DearMYRTLE</strong> 2011-08-10T18:05:52-07:00</div>
+<div class="text">Is there a correlation between Geir's document and John H. Yates's work listed at:<br/>
+<!-- ws:start:WikiTextUrlRule:3:http://jytangledweb.org/genealogy/evidencestyle/ --><a class="wiki_link_ext" href="http://jytangledweb.org/genealogy/evidencestyle/" rel="nofollow">http://jytangledweb.org/genealogy/evidencestyle/</a><!-- ws:end:WikiTextUrlRule:3 --><br/>
+<br/>
+Is it possible to work together?</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-10T18:18:25-07:00</div>
+<div class="text">Have corresponded with John, and the link to his work is posted in the EE section of the Wiki <br/>
+<!-- ws:start:WikiTextUrlRule:9:http://bettergedcom.wikispaces.com/Mills+550+-+_Evidence+Explained_+and+related+field+descriptions --><a href="http://bettergedcom.wikispaces.com/Mills+550+-+_Evidence+Explained_+and+related+field+descriptions">http://bettergedcom.wikispaces.com/Mills+550+-+_Evidence+Explained_+and+related+field+descriptions</a><!-- ws:end:WikiTextUrlRule:9 --><br/>
+<br/>
+John's effort underscores the need to fix the field descriptions (citation elements) issue.<br/>
+<br/>
+If you count every spelling, every atomic part, I seem to recall there were over 500 citation elements in John's rendering of Mills QuickSheet templates. <br/>
+<br/>
+From discussion with John in December-January, he agrees with the issue.  <br/>
+<br/>
+When Geir's document talks about the need to have general citation elements, and a reasonable number of them, he is harkening back to the same issue.</div></div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-08-01T13:31:17-07:00</div>
+<div class="title">Do we want to do this work – How - Prioritization of work items</div>
+<div class="text">See clause 22 in version 0.4</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-01T15:31:31-07:00</div>
+<div class="text">Source Types. <br/>
+<br/>
+See the discussion here ...<br/>
+<!-- ws:start:WikiTextUrlRule:11:http://bettergedcom.wikispaces.com/message/view/About+Citations/40973369 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/About+Citations/40973369" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/About+Citations/40973369</a><!-- ws:end:WikiTextUrlRule:11 --><br/>
+<br/>
+In exchanges on the Zotero forums, folks refer to "item types" as a high level grouping of citation elements.  So, for example, Zotero sets up item types called artwork, audioRecording, bill (legislative), blogPost, book ... newspaperArticle ... website, etc. <br/>
+<br/>
+Perhaps one priority would be to identify a list of the genealogical item types lacking in Zotero. For example, three might be censusRecord, vitalRecord, landRecord.  Another might be burialRecord (broader than cemetery record). Do we also need churchRecord?<br/>
+<br/>
+Do we need an item type for "database," or would that be an overlap? --GJ<br/>
+<br/>
+P.S. As above, recognizing that some vital records, church records, etc. were also published in book here in the states (as were many Massachusetts town records).</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-05T10:14:33-07:00</div>
+<div class="text">Citation elements seem to be a high priority, but elements are easier to establish in the context of examples. <br/>
+<br/>
+Perhaps we want to begin a wiki page to catalog, by country, various principal sources by source type?</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-08-05T14:07:24-07:00</div>
+<div class="text">Again, I'm leaping ahead without having read all of Geir's work (I have started it) - but when you suggest a Wiki page to establish elements, are we talking just a sample list of elements or what? And, in the nicest possible way - why? Because I remember several hundred elements in that spreadsheet just from examining the ESM definitions...</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-05T14:26:03-07:00</div>
+<div class="text">Hi Adrian,<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:16:http://bettergedcom.wikispaces.com/message/view/About+Citations/40973369#41215937 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/About+Citations/40973369#41215937" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/About+Citations/40973369#41215937</a><!-- ws:end:WikiTextUrlRule:16 --><br/>
+<br/>
+Geir wrote, "Some of the source types listed in the first posting above are probably independent of country (e.g. book), but in general I think you will find many types that does not exactly match a similar source in another country, incl. source types that only exists in one country. I think it will be very difficult to harmonize most the majority of types across countries. My guess is that a good first criteria for selecting a source type is “Country” (probably the program will let the user select a default). If you try to use class/type (I have used class in the Architecture document) e.g. census, as the first selection criteria, you will end up with a long list to select from if you have all possible record types from several countries. If it turns out that there are many sources that have the same definition and citation elements internationally, you can define a country “international” and set the default to 'My country + international'."<br/>
+<br/>
+See Geir's document, p. 12+, "If all style guides were to define specific citation elements for a large number of Source Types, worldwide, there would be a huge number of elements – many thousand. It would be very difficult to map elements from one style to those of another style, and also difficult to exchange data with other solutions for citations or databases holding source meta data.<br/>
+It is therefore desirable to develop a set of General Citation Elements for BetterGEDCOM, that are independent of Style Guides, Source Types and cultures. Since CSL has about 50 elements, it might be possible to limit this set to about 80 elements (this is just a guesstimate!)."<br/>
+<br/>
+He also says, "It is necessary to define a plan for how general elements can be developed, so we don’t embark on work that we cannot finish." <br/>
+<br/>
+So, we're hoping to identify the source types that are general to cultures, and source types that are unique to cultures, and design a set of say 80 general citation elements about the whole. <br/>
+<br/>
+<br/>
+I'm suggesting one way to begin is to create a wiki page to establish this tree of source types for which we want to define standardized elements.<br/>
+<br/>
+We could link to examples of the source type from that page.  --GJ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-14T21:54:29-07:00</div>
+<div class="text">I know you are looking for more input on the project plan for Architecture for Sources.  <br/>
+<br/>
+Anything specific I can do? --GJ</div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-02T06:38:43-07:00</div>
+<div class="title">Data about existing software</div>
+<div class="text">Sure would be nice to have a listing of the application level citation templates, citation elements in existing software.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-02T11:52:56-07:00</div>
+<div class="text">TMG's list of elements (not the more limited real elements), is pretty accessible. RootsMagic's elements are accessible by Lists &gt; Source Templates.</div></div><div class="comment"><div class="from"><strong>DearMYRTLE</strong> 2011-10-13T17:26:57-07:00</div>
+<div class="text">Interesting reading from Tamura Jones' blog where he states <br/>
+<br/>
+"The Dutch do not only like multi-lingual applications because of support for Dutch,<br/>
+but also because it allows them to use the same application as distant cousins in other countries.<br/>
+<br/>
+The Netherlands has a rich history of immigration and emigration, so there are plenty of such distant cousins."<br/>
+<br/>
+Get to the article via Tamura's tweet:<br/>
+<br/>
+#genealogy #software Dutch Genealogy Application Popularity; one application has almost 50% market share. <!-- ws:start:WikiTextUrlRule:9:http://t.co/9vhKW73W --><a class="wiki_link_ext" href="http://t.co/9vhKW73W" rel="nofollow">http://t.co/9vhKW73W</a><!-- ws:end:WikiTextUrlRule:9 --></div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-07T12:06:44-07:00</div>
+<div class="title">Rintze M. Zelle, "Citation Style Language 1.0: Primer" (2011)</div>
+<div class="text"><br/>
+<!-- ws:start:WikiTextUrlRule:1:http://citationstyles.org/downloads/primer.html --><a class="wiki_link_ext" href="http://citationstyles.org/downloads/primer.html" rel="nofollow">http://citationstyles.org/downloads/primer.html</a><!-- ws:end:WikiTextUrlRule:1 --></div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-08-12T11:00:33-07:00</div>
+<div class="title">Program vendor defined Source Type Sets</div>
+<div class="text">It has been suggested that each vendor could define their own Source Type Sets that could be transferred to other programs.<br/>
+<br/>
+I have rephrased the 2'nd paragraph in clause 6 in the "Arcitecture ..." document to reflect my meaning about this (and a bit more):<br/>
+<br/>
+"It is assumed that various organizations may develop Source Type Sets, and at least one Template Set for it. It is important that these organizations has the authority and necessary participation to set a standard, otherwise many “standards” could be developed, creating a very difficult situation for users that would have to choose between these “standards”. This needs further consideration. Special cases are those Source Type Sets defined by users. <br/>
+<br/>
+It has been suggested that program vendors could Source Type Sets according to their current implementations – such an approach would mean that users would have to handle source types that are “almost” the same (perhaps with the same name) and a similar situation for Specialized CEs and most likely Templates – it would most likely create a chaos, and will make it more difficult to merge sources."<br/>
+<br/>
+Viewpoints on this are welcome.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-13T05:17:30-07:00</div>
+<div class="text">Hi Geir,<br/>
+<br/>
+I posted thoughts about standardized metadata and reference management software on a page. <br/>
+<br/>
+Here is the link to that page:<br/>
+<!-- ws:start:WikiTextUrlRule:5:http://bettergedcom.wikispaces.com/Standardized+Metadata+and+Reference+Management+Software+concepts --><a href="http://bettergedcom.wikispaces.com/Standardized+Metadata+and+Reference+Management+Software+concepts">http://bettergedcom.wikispaces.com/Standardized+Metadata+and+Reference+Management+Software+concepts</a><!-- ws:end:WikiTextUrlRule:5 --></div></div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-14T03:11:18-07:00</div>
+<div class="title">High level Universal Source Type Classes</div>
+<div class="text">Proposed list is below:<br/>
+<br/>
+Artifacts<br/>
+Audio or Video recording<br/>
+Bible<br/>
+Book (published or previously published), Series, Compendium, e-Book<br/>
+Computer Software<br/>
+Correspondence (letters, listserve, instant message)<br/>
+Database - Index - Finding Aid<br/>
+Diary or Personal Journal<br/>
+Dissertation, Thesis<br/>
+GEDCOM, BetterGEDCOM, Electronic Family File<br/>
+Interview (private holding)<br/>
+Journal, Periodical<br/>
+LDS Genealogical Compilations (Ancestral File, nFS, etc.)<br/>
+Lecture, Presentation<br/>
+Manuscripts (unpublished or not previously published)<br/>
+Maps<br/>
+Newspaper items<br/>
+Passenger Lists (Ship registers, etc.)<br/>
+Passports (including applications)<br/>
+Patent<br/>
+Photographs, Portraits, Illustrations<br/>
+Radio Broadcast, Podcast, TV Program<br/>
+Research Reports</div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-10-11T21:17:09-07:00</div>
+<div class="text">@Tom,<br/>
+<br/>
+You misinterpreted what I was saying. I am fully aware of the failings of key/value pairings. I specifically stated they needed to be defined and managed by a central authority. Certainly, vendors will add their own. It is inevitable, and those that are useful would get added to the standard. <br/>
+<br/>
+Theoretically speaking.<br/>
+<br/>
+I had hopes coming into the project, but it's TOO democratic. In fact it goes beyond democratic to the realm of anarchy. No one is in charge, except to control too few things. No deadlines. No set timelines. No project management. In short utter chaos. <br/>
+<br/>
+An open source model would have been better. With one or a few benevolent dictators, and a lower category of democratic volunteers, with goals and tasks and target dates. Limiting discussion, etc.<br/>
+<br/>
+This is the reason Linux is a success. Open sourced, but run by a select few. The most important part of Open Source success people miss is that all the successful projects are the result of one or a few people making something, and then opening up for the world for input.<br/>
+<br/>
+BG would have been better served in taking YOUR model and saying here make it better if you can. Or really anyone's model, and then having a handful of technical people slicing and dicing the ideas and incorporating what works, and limiting the different aspects.<br/>
+<br/>
+This one was too free form to begin with. I understand the reason for it. Brainstorming, but it's just too big to brainstorm. People need tasks in bite size bites. this is like the world's largest hoagie. Where to start.<br/>
+<br/>
+If this project really wants a BG, then it really needs to look at what is actually out there and used. Combine the best of them, and toss the rest. There is your base standard. Add to it from there to make it better.<br/>
+<br/>
+Ground up approaches generally suck.<br/>
+Unless approached the right way. Very hard to do, over the Internet and with too diverse a group.<br/>
+<br/>
+The voting part on what goes in, is really the only keeper. In case anyone's interested in my opinion. ;')</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-12T03:14:02-07:00</div>
+<div class="text">In this day and age a data standard which doesn't lend itself to localisation won't be counted as a better anything.  It won't even be counted as good.  And localisation isn't just a matter of specifying UTF8 and making sure the right currency symbols are used.  Nor is it something that can be bolted on later.<br/>
+<br/>
+Take a simple example.<br/>
+<br/>
+If you have a data field called "Name" that isn't a problem, at least not to anyone apart from S/W authors.  The S/W can ensure that user interfaces and reports caption the field as "Nom" for a francophone user.<br/>
+<br/>
+If there's a situation in which I might need to write "Name" as the content of a data field then the francophone user will need to write "Nom" in the same situation.  Provided we can both do that it's not a problem.  The consequence may be that there are data sets with terminology written in a language I can't understand.  The fact that I couldn't understand the terminology would, however, be a minor irritation beside the fact that I almost certainly wouldn't be able to understand the sources or the cultural background of the material included in the data set.  Genealogists need to be able to understand the language of the material they're working on &amp; will expect to be able to use the same language for their terminology; if they can then they'll consider the system localised for their needs.<br/>
+<br/>
+If, however, when I need to enter "Name" as the contents of a data field the system insists that that's the only acceptable word with that meaning then the francophone user won't be able to enter "Nom" instead.  If a particular vocabulary is built into the system in that way you are committing yourselves to an architecture which is going to be quite resistant to localisation.<br/>
+<br/>
+Localisation isn't something that you can just bolt on afterwards if you didn't plan for it.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-10-12T05:22:20-07:00</div>
+<div class="text">@Brian,<br/>
+<br/>
+I apologize for misunderstanding your point.<br/>
+<br/>
+I agree with everything you said in your last post.<br/>
+<br/>
+Thanks for saying it.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-10-12T09:38:56-07:00</div>
+<div class="text">@Ian,<br/>
+<br/>
+I'm not sure what your issue is. Nor what your experience is. Localization is trivial. Look at any size Open Source project and you'll see localization is everywhere. When Linus created Linux, he didn't write it in Finnish or Swedish or Norwegian. He wrote it in English. Because English is widely spoken and understood by more people than Finnish is. Yet Linux had been localized to nearly every language on he planet. There are over 100 localizations here on my computer. I can read and write 12 languages. But I'm fairly sure almost no one on this list will understand me if I begin communicating in Ukrainian.<br/>
+<br/>
+I'm also fairly sure we'd get even less accomplished if we each begin communicating in a different language. <br/>
+<br/>
+But, I'm game which language should we use to communicate in? Even though I think most of the members here are native speakers of some form of English. The process of localization requires no more than to have a local or expert fluent speaker of a language to translate it. But we HAVE to have at ONE common language for communicating.<br/>
+<br/>
+Certainly some languages will be harder to localize than others. There is no way around that. Unless by some miracle you've found a way to do it effortlessly. If you have, I will certainly do my part and nominate you for a Nobel prize or something.<br/>
+<br/>
+And just to finish up my point, localization is EXACTLY something to bolt on afterwards. It's the only logical solution and the one used by every major software package in existence.<br/>
+<br/>
+It's almost as if you're trolling on this point, but I think we get it. You're concerned about users who will need to have the final specification in their own language. So one requirement of BG is to have localization of the final standard into every feasible language. Are you volunteering to do the localization for a particular set of languages? I don't consider myself fluent enough to do localizations. Remember that is the product we are producing, a standard. A simple document indicating a format for communicating genealogical data between disparate software and hardware. How that is implemented is up to each individual software maker. That is where the real localization needs to happen. So in our final product, if we get there, all that need happen at the end is to translate a single document into the many hundreds of languages used on this planet. I will volunteer to to the Vulcan, Klingon and Bork! Bork! translations. ;')<br/>
+<br/>
+Although, I'll probably use Google Translate for the Bork! Bork! version, which I'm really not fluent in.</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-12T11:22:28-07:00</div>
+<div class="text">Linux as a kernel isn't something the user accesses directly.  If you're thinking of the applications which surround it localisation is greatly assisted by making provision for it in the initial design such as by use of gettext.  The translations may be added later but the architecture makes provision to do so easily.<br/>
+<br/>
+I may have misunderstood what's going on here when I see word lists being drawn up but I get the impression that it's intended to build into the standard a required vocabulary for some data items.  As I said before, if that's not the situation I stand to be corrected.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-10-12T13:40:08-07:00</div>
+<div class="text">True, Linux as a kernel isn't accessed much by users. Linux as an OS is (an overloaded use of the word, which is technically incorrect but is in common use). Also correct, about the architecture. But we're not building an architecture here. Much as this thread implies it is. Lots of poor choices in words used here.<br/>
+<br/>
+Now, I understand your confusion.<br/>
+<br/>
+What BG is building is a standard. A standard has really only one product. That product being a document, or a set of documents, that defines what data is supported and how it is defined and communicated.<br/>
+<br/>
+All of the real architecture comes from those who write programs that implement the standard. So really all we will create is a bunch of words, that need to be defined in each language that developers and users need.<br/>
+<br/>
+Sorry, if I got rude or obnoxious. Was not my intent, but it's been a long, sleepless, aching, hard week (still working on last week). I may be a bit cranky and testy. ;')<br/>
+<br/>
+Although, thinking more on it. Having the standard implemented in multiple languages might also be an issue.<br/>
+Say you have your db in English and your German cousin has hers in Swiss German (don't ask why).<br/>
+Your BG supported application only reads English, French and High German BG files.<br/>
+<br/>
+Now you'll need a third party utility to translate her file just to load it. Whereas, if the specification were implemented only in say English, you'd never have to worry about it, and every software vendor would be more likely to implement the BG standard.<br/>
+<br/>
+I'm not sure I've ever seen a gedcom file that didn't do it like this:<br/>
+<br/>
+0 INDI ...<br/>
+1 NAME ...<br/>
+1 BIRT ...<br/>
+1 FAMC ...<br/>
+1 FAMS ...<br/>
+...<br/>
+<br/>
+I don't think I've ever seen a German, Russian or Chinese version.<br/>
+<br/>
+So I would tend to say that BG should implement it like this:<br/>
+<br/>
+&lt;event type="Birth"&gt;...&lt;/event&gt;<br/>
+...<br/>
+<br/>
+or in any format(s) we settle on.<br/>
+<br/>
+Then the standard can explain every element in the standard in any language one wants. Users should not be looking at or digging into the data files anyway. Sure we all do today. But some of that is because no two applications implement it the same way and there's likely useful data being ignored by our preferred application.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-10-12T13:42:42-07:00</div>
+<div class="text">That also means any word list that becomes part of the standard would also be stored in English, and it would be the job of applications to translate them where appropriate.</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-12T15:07:09-07:00</div>
+<div class="text">I know the goal is a standard for an information transfer format but that format itself implies a data model as does Gedcom.  And that is an architectural construct.<br/>
+<br/>
+All I've been cautioning against is making that architecture too limiting.  I think it's a good principle to start be assuming that you don't, in fact can't, know what data your eventual users will need to transfer.  My favourite example in this regard would be to ask where would we be today if TCP/IP had been designed for just the types of network traffic known at the time?  No WWW!</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-10-12T16:22:32-07:00</div>
+<div class="text">This has really diverged from the original topic, but what the hey?<br/>
+<br/>
+I thought I would point out another flexibility that I put in LifeLines that is germane to recent posts.<br/>
+<br/>
+Out of the blocks LifeLines "understands" four types of records: INDIs, FAMs, SOURs, and EVENs.<br/>
+<br/>
+However, users are free to create any other types of records. All a user has to do is start building a new record with a 0 XXXX tag (where XXXX can be anything), and a new record of type XXXX gets added to the database.<br/>
+<br/>
+So LifeLines, 22 years plus old now, had full flexibility of key/value pairs and full flexibility for creating new record types. Might be time to go back and revamp that system with the DeadEnds model underpinning it with a more modern user interface.</div></div><div class="comment"><div class="from"><strong>DearMYRTLE</strong> 2011-10-13T17:19:43-07:00</div>
+<div class="text">Having trouble making my postings stay LIVE for some reason -- I switched computers, and am reworking the other one. Every page I've touched gets "deleted" instead of edited.<br/>
+<br/>
+HERE is what was deleted:<br/>
+<br/>
+BRIAN SAYS: [...] this never-ending bickering and talking past each other doesn't look promising to ever reach a conclusion.<br/>
+<br/>
+TOM SAYS: I have given up on BG doing anything real, now hoping it can still serve as a source of ideas, and maybe stand as a warning for others who think democracies can solve technical problems. Though I still come by and read what's going on, because I still harbor hope something might be made from the chaos.<br/>
+<br/>
+I COULDN'T AGREE MORE. Moderating the arguments at Developer Meetings isn't fun. I am unaccustomed to operating in adversarial situations.<br/>
+<br/>
+There is no power or creativity in arguing and definitely no forward momentum.<br/>
+<br/>
+I rather enjoy working with the sub-group SourceTemplates.org.<br/>
+<br/>
+Perhaps some of the BG folks will enjoy this work as well. It is being designed using initially US-based software and EE Citations, with plans to expand. But then there are the detractors in the wider community who feel we should spend more time up front to ensure international compatibility is defined from the get go.<br/>
+<br/>
+All I know is that we've taken nearly 11 months to argue this out. In the mean time, AncestorSync has devised a workable solution for data sharing, with the option for end-user to end-user in the 4th version.<br/>
+<br/>
+And the AncestorSync spin-off of SourceTemplates.org as open-source demonstrates a positive approach to solving citation issues.<br/>
+<br/>
+I don't care who gets these two jobs done, just that it gets done.<br/>
+<br/>
+Well, let me amend that -- I don't think FamilySearch or Ancestry.com or any big commercial company should dictate the standard, as it will be self-serving. Ancestry.com doesn't like to share except to FTM2012, and FamilySearch has a track record of not updating the standard for 14 years.<br/>
+<br/>
+There are different points of view, and always will be. I just don't like being in the middle anymore.<br/>
+<br/>
+I have great respect for the participants at BetterGEDCOM. A mountain of time and effort has gone into the postings made here.<br/>
+<br/>
+Would that I had money to fund payroll, hire a project manager, and work through a series of steps to get a new file sharing protocol out there. Unfortunately in the real world, it takes money to make a product. Money to ensure timely contribution and cooperation. And that money has to be recouped, and so I guess AncestorSync is entitled to its rewards.<br/>
+<br/>
+I think AncestorSync has beat us to the punch, because they saw the problem with data transfer, and they have the money to get the programming done. My only hope is that this company will keep the cost of their product down. <br/>
+<br/>
+As you know, AncestorSync isn't a standard -- it is a more universal mechanism for transferring data as those data elements are currently defined by myriad software programs.<br/>
+<br/>
+I erred in thinking volunteers could be expected to accomplish as much.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-10-13T17:33:12-07:00</div>
+<div class="text">Dear MYRTLE,<br/>
+<br/>
+Amen. <br/>
+<br/>
+Thank you for posting this.<br/>
+<br/>
+You mentioned FTM2012. I can only suggest that it is a step forward and that Ancestry.com and Family Tree Maker can finally, actually "talk" to one another. I view that TreeSync™ feature as a step in the right direction.<br/>
+<br/>
+The bad news is that FTM2012 has some GEDCOM 5.5.1 features that are being addressed on the Family Tree Maker message board and on a couple of Blogs.<br/>
+<br/>
+I have had to refer folks, on this issue, back to the testing we put on the Blog. So, I am guessing we will be seeing some more activity. <br/>
+<br/>
+I keep trying to get these EndUsers to come here and get their feet wet, but so far, no shows.<br/>
+<br/>
+Hope you are feeling better soon.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>gthorud</strong> 2011-10-15T14:30:45-07:00</div>
+<div class="text">Genealogy programs need a complete solution for exchange of citation data and templates. There will be many specifications of source types and templates implementing more than one citation style. BG should come up with a transport structure for the citation data, and there must be a way to transfer the definitions and template definitions. BG can not specify all the source types around the world and the templates for the various styles (but there is nothing preventing us from specifying some of them). BGs primary task should be to create a technical and organizational environment where specifications can be developed and transferred. Also, users will need to "convert" data from one style to another, and the need to produce a citation in a different language from that used by the system used to enter the data, and they need (to some extent) to have the definitions of source types used in another country presented in their own language. BG has to come up with a solution that allows this, and more.<br/>
+<br/>
+These are some of the issues discussed in the document introduced on the wiki page of this discussion. I suggest that those of you who have not read the document, do so. It will not give you all the answers, but at least a lot of issues.<br/>
+<br/>
+Simple type/key – value pairs will be part of this (many genealogy programs have implemented such a solution), but they will not be sufficient, and there need to be rules for their use. The world (but not Gedcom) has long ago moved on from discussion of having these pairs or not.<br/>
+<br/>
+Re. organization of the work. If BG does not redefine its scope into something that relates to its capabilities, and does not make a serious effort to get organized as something that allows people who want to work together towards a clearly specified limited (sub-)goal, rather than being than an open discussion club, it may end up as the marketing department of a company.</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-08T03:13:22-07:00</div>
+<div class="text">For how many languages is it proposed to provide templates.  This whole project is getting hung up on one?  Is it going to take an equally long time to decide on the French list and then on the German, the Spanish, the Swedish....  It's neither a tree level problem nor a forest level problem.  It's a planet level problem.<br/>
+<br/>
+This whole presentation domain - lists, templates, the lot - belongs to applications.  BG should concern itself with what sort of data to transfer to those applications and how to do it, not the content.<br/>
+<br/>
+Let's work through a use case:<br/>
+<hr/>
+Source organisation publishes top level record containing the organisation type, name and shortened form of name suitable for citation.<br/>
+<br/>
+Source organisation publishes further chain of similar lower level records.<br/>
+<br/>
+Source organisation publishes a number of data records linked to this chain.<br/>
+<br/>
+Genealogist loads these records.<br/>
+<br/>
+Genealogist uses some of them to construct a genealogy.<br/>
+<br/>
+Genealogist submits the appropriate subset of original data plus the source chain to a bibliography function [this might be part of the genealogist's main S/W or a free-standing application].<br/>
+<br/>
+Happy path:<br/>
+Bibliography function finds each of the source types in its vocabulary and applies it to the appropriate template and produces a bibliography.<br/>
+<br/>
+Alternative path:<br/>
+Bibliography function fails to find one or more source types [possibly because the source is in a different language] in its vocabulary.<br/>
+<br/>
+Bibliography function throws up dialog asking genealogist to choose a word from existing vocabulary which would be treated the same way.<br/>
+<br/>
+Genealogist chooses a word.<br/>
+<br/>
+Bibliography function adds word to vocabulary and proceeds as normal.<br/>
+<hr/>
+BG doesn't need the vocabulary.  The application needs it and if a particular word escapes the list maker's attention the user can provide the necessary information at application run-time.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-10-08T05:44:12-07:00</div>
+<div class="text">Maybe I'm misunderstanding what templates are intended to provide, but I've always thought of them as listing the data linking a source to a conclusion. I _personally_ have never viewed them as providing the template for how a printed citation should look. Therefore the language (almost) doesn't matter. <br/>
+<br/>
+(The bit where it does matter comes when you have "source-of-a-source" information - the link might be "citing" / "transcribing" / "imaging", etc. Logically, those ought to be represented by code values in BG, not written out in natural language, but I'm not quite certain we can define the exact values.)<br/>
+<br/>
+These templates tend to get referred to as citation templates because they provide the data to go into a citation. Or at least, that's my take on things.<br/>
+<br/>
+There is a need to understand source types at a detailed level in order to know what values to prompt the user to provide. That understanding will vary across the globe - e.g. the significance of a Norwegian church wedding ceremony is different from one in England, I now know. That's a cultural issue rather than a linguistic one. <br/>
+<br/>
+And the huge range of items means that we need to be able to template that sort of stuff _outside_ BG's definitions in a user-definable way. However, unless we work through at least some items in detail, I'll have no confidence that the ideas work.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-10-08T08:14:41-07:00</div>
+<div class="text">Of course, it does occur to me (as usual, after posting) that a template could do both jobs if intelligently formatted.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-10-08T08:33:14-07:00</div>
+<div class="text">@Adrian, Sounds like it's time for a definition! For me a template has always been a pattern that specifies how to combine specific fields from source records and format them into "rich" strings that can be used in a word processor as a footnote, bibliographic entry, etc. If this ISN'T what is meant by a template then you can ignore everything I've written about them!!<br/>
+<br/>
+Here is an example of a template. This comes from one of Elizabeth Shown Mills's templates for citing a journal article. The notation is just something I made up to show the idea of a pattern language. The curly braces hold pattern elements together. The question mark means optional. The square brackets specify fields from source records. The quote marks and other punctuation marks are literal and specify where they marks are inserted. And the &lt;i&gt; means italic.<br/>
+<br/>
+[Author.Last], [Author.First]. "[Title]{: [Subtitle]}?." &lt;i&gt;[Journal]&lt;i&gt; [Volume] ([Date]){: [Pages]}?.<br/>
+<br/>
+Applying this template to an example in a BG file might yield something like:<br/>
+<br/>
+Wetmore, Thomas. "John Wetmore: His Later Years." <em>Holy Mackerel Journal of Genealogy</em> xxvi (1998): 33-54.<br/>
+<br/>
+@Ian, I continue to agree with most of what you say. Templates are not part of BG. They are used by a "bibliographic" function in a application. But, and this is the BG point, the BG source records must have the fields necessary so the bibliographic function can find the values needed to create the citations. Deciding what those fields should be most definitely is a BG task, since those fields have to be used in BG source fields. There are two directions this can happen. Either BG (or some other organization) defines the fields and the template writers use those fields. Or the template writers define the templates first, along with the fields they need, and BG adopts them. Somebody has to move first.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-10-08T09:27:39-07:00</div>
+<div class="text">Tom - OK - I can live with that definition of a template. My interest has always been in the analysis of the data and, as you point out in your last para above and I belatedly realised, the analysis falls out of the output format. Hence, output formats are not irrelevant to BG, rather they are INdirectly relevant because they provide a user requirement spec'n for the data that needs to be captured. I'm simply anxious that our attitude to citation templates (for output formats) does not throw the (user-requirements-for-input-data) baby out with the (output-format) bath-water, i.e. I'm agreeing with you.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-10-08T12:18:59-07:00</div>
+<div class="text">Based on a recent conversation I realize I am not using the providing the proper panache in my posts. What I call "source fields" are now being called "structural metadata." Frankly I find using such trumped up terminology for "the name of a book" and "the author of a book" too embarrassing to utter; it would make me sound like Alexander Haig. But for those of you more used to the current patois maybe this explanation will make what I say a little easier to ken.</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-09T05:11:35-07:00</div>
+<div class="text">OK let's try to work out what's feasible, what should be in scope etc.<br/>
+<br/>
+A means of conveying the a template such as the example in Tom's post.  Feasible, worth including in scope.<br/>
+<br/>
+Specifying what should be in the template.  Not feasible.  It means defining a vocabulary up-front.  This assumes you're going to be able to enumerate all possible sources.  It also means that as soon as you decide that the acceptable term for the a book is "book" then you immediately cut yourself off from all the potential users whose language is not English and who would, therefore, use some other term to say that their source was a book.  And it it's not feasible it shouldn't be in scope.<br/>
+<br/>
+And yet here we have a thread which contains several posts which seem to be attempting to define such a vocabulary.  Maybe I'm misinterpreting the purpose of such posts.  Please tell me if I am.  <br/>
+<br/>
+But one of my concerns is that this is a project without a clear idea of its scope or with a scope which is not feasible.  My other concern is that it's a project which doesn't seem to have any process to deliver a product except, maybe, an implicit waterfall process.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-10-09T08:49:13-07:00</div>
+<div class="text">I have to say the logic in the previous argument is a counsel of despair. Let me re-iterate but altering a word or two....<br/>
+<br/>
+"It also means that as soon as you decide that the acceptable term for a BIRTH is "BIRTH" then you immediately cut yourself off from all the potential users whose language is not English and who would, therefore, use some other term to say that their EVENT was a BIRTH. And if it's not feasible it shouldn't be in scope."<br/>
+<br/>
+In other words, we shouldn't be defining events, either. Now that doesn't seem very helpful does it? What's wrong with translation stuff? <br/>
+<br/>
+Second point - at what stage did BetterGEDCOM become a "project"? It's &gt;&gt;a Wiki&lt;&lt; It's never had any process to deliver a product. I agree with your final para - but it's been thus from the beginning. And since no-one else has actually come up with a proper project, it's a touch unfair to criticise it for not being what it never can be.</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-09T09:13:43-07:00</div>
+<div class="text">"as soon as you decide that the acceptable term for a BIRTH is "BIRTH" then you immediately cut yourself off from all the potential users whose language is not English and who would, therefore, use some other term to say that their EVENT was a BIRTH"<br/>
+<br/>
+If you constrain the names of events to be in English then you would indeed do just that.<br/>
+<br/>
+It's not so much a counsel of despair as a warning against trying to define acceptable values for data items.<br/>
+<br/>
+'at what stage did BetterGEDCOM become a "project"?'<br/>
+<br/>
+Take a look at the page header.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-10-11T02:54:23-07:00</div>
+<div class="text">This is really sad.<br/>
+I thought that the BG wiki was a project designed to deliver a Better Gedcom Standard. If that is not the purpose of the wiki, then there's really no reason for me to be here.<br/>
+<br/>
+Secondly, this never-ending bickering and talking past each other doesn't look promising to ever reach a conclusion.<br/>
+<br/>
+Thirdly, it's a good thing that the GCompris program didn't worry about defining temrs in one language, but instead used one language for designing and then translated all the term into each implemented language. You have to basically choose a language to communicate in. That does not preclude translating the final specification into every language on the planet. Last I checked, every language on the planet Earth has a native term for "birth" and "book". Let's stop fighting over silly things.<br/>
+<br/>
+A template needs to know what data fields it needs, and it needs to be able to pull these out of some database, running on some language.<br/>
+<br/>
+Ergo, any implementation of BG will require:<br/>
+1) a specification in a specific language,<br/>
+2) a field indicating the language of the implementation,<br/>
+3) a set of templates in a specific language.<br/>
+<br/>
+Now on, item number 3, this can be in essence an infinite set, if the implementing program and the specification are properly done. There is no need to define every conceivable template or even know in advance every conceivable field which we need to capture to support said template. Y'all have to think bigger, wider, LESS specific.<br/>
+<br/>
+I will explain. First we know a lot of the fields we will want to capture for storing genealogy queries. Defining these are fine.<br/>
+Defining all the types of data we will want for doing a fancy schmancy formatted string are not needed to be defined.<br/>
+<br/>
+Here's why. I'm going to get all programmer language on you. It's called key-value pairs.<br/>
+So say you need to capture for one template: the author, the date published, the publisher, the page number, the line number on the page, and the volume in the book set.<br/>
+So we have fields the template needs of: author, date_pub,publisher,page_num,line-num,and volume.<br/>
+<br/>
+We have a version of these fieldnames in separate files for every language on the planet ready to use by everyone WorldWide, because we're that good at translating every possible word and abbreviation. We're like word ninjas.<br/>
+<br/>
+So how do we implement these field names in BG? We don't!!!!! We use key-value pairs and let the community define them!!!!!!<br/>
+<br/>
+Here's how.<br/>
+In the example, we would have something similar to this:<br/>
+&lt;citation value="@112"&gt;<br/>
+&lt;field name="author.last"&gt;"Jones"&lt;/field&gt;<br/>
+&lt;field name="author.first"&gt;"Tom"&lt;/field&gt;<br/>
+...<br/>
+&lt;/citation&gt;<br/>
+.<br/>
+<br/>
+Ok, so what does the program need to do to read and store such data?<br/>
+It's freaking easy!<br/>
+<br/>
+declare citationfield as array(1) of string<br/>
+<br/>
+in other words <br/>
+citationfield looks like this ("author.last","Jones").<br/>
+<br/>
+The name of the data field is buried in the data.<br/>
+<br/>
+The user never freaking see it. It's a programming issue, ok?<br/>
+<br/>
+The community defines what fields are needed and BG never needs to know. It's just some great big long household inventory list.<br/>
+<br/>
+Household item List<br/>
+(sofa, 2)<br/>
+(chair, 8)<br/>
+(dinner plate, 12)<br/>
+(fork, 12)  <br/>
+(computer, 6)<br/>
+(book, 13,456)<br/>
+...<br/>
+.<br/>
+<br/>
+Yes, I actually have more books than that, some are digital books. <br/>
+<br/>
+Now of course a program could get way fancier in defining the citationfield, but in the end it will be at least a two item array of something and something. Yes, I realize this means storing anme of the field and the BG declares citation elements to be composed of fields which include defining the name of the field, and possibly more. We could also store the type of data it is storing.<br/>
+<br/>
+However, this still means we need define no more than three things.<br/>
+1) a generic fieldname field,<br/>
+2) a generic fieldtype field,<br/>
+3) a generic fieldvalue field.<br/>
+<br/>
+We need know no more than that.<br/>
+It is up to the people who want the citation fields to build that list. But BG isn't constrained by it. It doesn't need to change when a new kind of field comes out. Only the programs that implement the standard need change with every new kind of citation field. THAT is what makes a ROBUST standard. If done right there would NEVER be a need for a BGv2. Or a BBG.<br/>
+<br/>
+That's all I have to say further on this subject. Can we agree, work on refining my crude example and move on now? Or take someone else's better idea, and move on?</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-10-11T03:16:10-07:00</div>
+<div class="text">A clarification. I'm not saying that the BG Project doesn't need to define a working list to begin with. Obviously we would have to build a list as a base set to start with. We don't want individual vendors coming up with such lists. So there needs to be one BG "Standards Body" authorized list. But building that list can happen in parallel with other BG project goals, or even put off to the end of the project. Or even passed off to the final Standards Body that will maintain BG.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-10-11T04:06:12-07:00</div>
+<div class="text">@Brian,<br/>
+I have given up on BG doing anything real, now hoping it can still serve as a source of ideas, and maybe stand as a warning for others who think democracies can solve technical problems. Though I still come by and read what's going on, because I still harbor hope something might be made from the chaos.<br/>
+<br/>
+The DeadEnds model has the Attribute entity, which is your key/value pair, which has other optional properties (e.g., it can have a date/place, it can have sub-attributes, media references, notes, but those these are just frosting on the cake). (The DeadEnds model solves every issue discussed here at BG since its beginning, a year ago now, and as yet BG has not been able to produce a model even approaching it in completeness and consistency and cohesiveness).<br/>
+<br/>
+I agree we need the notion of the generic key/value pair, and I allow them in my LifeLines program (which uses GEDCOM as its internal format, which therefore basically means that the user is able to define new GEDCOM tags for any purpose to any depth with any complexity of sub-tags). So if anyone has experience with genealogical software that allows arbitrary key/value pairs, it is me and the many users of LifeLines.<br/>
+<br/>
+You are claiming key/value pairs as the answer to many problems. I have to point out a significant problem with them, born out over twenty years of LifeLines history. LifeLines exports and imports its databases, which are GEDCOM syntax, so every LifeLines program can input GEDCOM from everywhere without loosing anything. However, if users want to actually USE these arbitrary key/value pairs (which I hope you can now recognize as being in the form of arbitrary structures of GEDCOM lines with custom tags) in their reports in some way, they have to program that knowledge specifically into their reports. If you think about it, there is no other way.<br/>
+<br/>
+The bottom line is simple. If one user doesn't use the same set of additional key/value pairs that another user has adopted, then, though they can share their data, with the internal forms unaffected, one user still can't get down to the meaning of these additional imported key/value pairs without significant work. Your idea of allowing templates to be based on arbitrary key/value pairs would be a nightmare. For another user to use one of these custom templates, they would have to go into their data and add all the key/value pairs necessary for the new template to operate. Any such template would be useless and dead on arrival. The templates must be based on a preassigned set of key/value pairs.<br/>
+<br/>
+By the way, these preassigned key/value pairs now have a new, very hifalutin' name. They're now being called metadata!! (Well, come on, Tom, they are data about a source. Well, yeah they are, but metadata should be data about source as a class, not about a source as an instance.) Another great example of the goobledegooking of the English language, taking a simple concept and trying to make sound much more than it is. Sorry, pet peeve showing.<br/>
+<br/>
+The point is, though having the extendability and the "escape valve" to arbitrary key/value pairs can be important, it still behooves the designers of data models to capture as much of the universe being modeled as possible, because arbitrary key/value pairs introduce many complications.</div></div><div class="comment"><div class="from"><strong>Andy3rd</strong> 2011-10-01T08:48:59-07:00</div>
+<div class="text">Can someone explain why so many Source Types are needed? Just as an example I've taken Gene J's list and want to know why re-grouping them as I've shown wouldn't work.<br/>
+<br/>
+Artifact (Any physical entity that is not some type of document)<br/>
+Audio or Video recording<br/>
+Bible-(Document-published or unpublished)since we are concerned with the written entries and not the book itself.<br/>
+Book (published or previously published), Series, Compendium, e-Book<br/>
+Computer Software<br/>
+Correspondence (letters, listserve, instant message)-(Document-published or unpublished)<br/>
+Database - Index - Finding Aid-(Document-published or unpublished)<br/>
+Diary or Personal Journal-(Document-published or unpublished)<br/>
+Dissertation, Thesis-(Document-published or unpublished)<br/>
+GEDCOM, BetterGEDCOM, Electronic Family File-Document<br/>
+Interview (private holding)-Document or Audio/Video-depending on type)<br/>
+Journal, Periodical-(Document-published or unpublished)<br/>
+LDS Genealogical Compilations (Ancestral File, nFS, etc.)-(Document-published or unpublished)<br/>
+Lecture, Presentation<br/>
+Manuscripts (unpublished or not previously published)<br/>
+Maps-(Document-published or unpublished)<br/>
+Newspaper items-(Document-published or unpublished)<br/>
+Passenger Lists (Ship registers, etc.)-(Document-published or unpublished)<br/>
+Passports (including applications)-(Document-published or unpublished)<br/>
+Patent (Document-published or unpublished)<br/>
+Photographs, Portraits, Illustrations (Artifact)<br/>
+Radio Broadcast, Podcast, TV Program (Audio/Video recording)<br/>
+Research Reports (Document-published or unpublished)</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-01T09:12:29-07:00</div>
+<div class="text">Hands up all those who have a copy of the Mythical Man Month.<br/>
+<br/>
+Whilst you hands are in the air use them to reach for your copy.<br/>
+<br/>
+Look at the picture opposite P3 and read the first two paras on P4.<br/>
+<br/>
+Does the scenery depicted seem familiar?<br/>
+<br/>
+I don't happen round here very often but then it doesn't seem necessary.  You seem to have spent months arguing about what should be the contents of a simple attribute:<br/>
+<br/>
+&lt;Source type=whatever&gt;<br/>
+......<br/>
+&lt;/Source&gt;<br/>
+<br/>
+If you continue long enough we'll all be using quantum computers and you'll still be arguing.<br/>
+<br/>
+Sorry to be so blunt but it seems someone needs to be and I'm a Yorkshireman so I seem to fit the job description.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-10-01T10:01:30-07:00</div>
+<div class="text">Andy - the possible justification for the number of Source Types is to answer the question - "What data do I need to collect to define the source?" Sure you could have a census form recorded under type "Document-published or unpublished". But this gives absolutely no hint to anyone what data should be collected about that census form. Do I collect the Enumeration District etc? Or do I collect the document reference in the National Archives at Kew (if it's an English census)? Or do I record the URL of the image on Ancestry? <br/>
+<br/>
+If we are trying to exchange information between ourselves, it's going to be no use to me if you follow Scots practice and record the EDs for all your census forms, English ones included, while I work off the TNA Class and Piece references. That, in my view, is one good reason to have a number of source types - to define the data to be collected about the sources.</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-01T12:06:45-07:00</div>
+<div class="text">But the type of source - census or whatever - is just a data item, not structural.<br/>
+<br/>
+Here's how it could work:<br/>
+<br/>
+&lt;wrapper&gt;<br/>
+    &lt;Source type="archive" ID="660f78b6-ec5a-11e0-b261-001636e96075"&gt;<br/>
+        &lt;ParentID/&gt;<br/>
+        &lt;SourceName&gt;Yorkshire Archaeological Society Archive&lt;/SourceName&gt;<br/>
+        &lt;ShortName&gt;Yorks Arch Soc Archive&lt;/ShortName&gt;<br/>
+        &lt;BriefName&gt;YAS Archive&lt;/BriefName&gt;<br/>
+        &lt;AdHoc&gt;<br/>
+            &lt;Item Name="Address" Value="Claremont"/&gt;<br/>
+            &lt;!-- Add as many Items as required --&gt;<br/>
+        &lt;/AdHoc&gt;<br/>
+    &lt;/Source&gt;<br/>
+    &lt;Source type ="collection" ID="2a2ffc84-ec5b-11e0-a2f8-001636e96075"&gt;<br/>
+        &lt;ParentID&gt;660f78b6-ec5a-11e0-b261-001636e96075&lt;/ParentID&gt;<br/>
+        &lt;SourceName&gt;H. L. Bradfer-Lawrence Collection&lt;/SourceName&gt;<br/>
+        &lt;ShortName&gt;Bradfer-Lawrence Collctn&lt;/ShortName&gt;<br/>
+    &lt;/Source&gt;<br/>
+    &lt;Source type="collection" ID="9b4a55ea-ec5b-11e0-a42e-001636e96075"&gt;<br/>
+        &lt;ParentID&gt;2a2ffc84-ec5b-11e0-a2f8-001636e96075&lt;/ParentID&gt;<br/>
+        &lt;SourceName&gt;Millar Collection&lt;/SourceName&gt;<br/>
+    &lt;/Source&gt;<br/>
+    &lt;Evidence ID="0a77ffee-ec5c-11e0-b798-001636e96075"&gt;<br/>
+        &lt;ParentID&gt;9b4a55ea-ec5b-11e0-a42e-001636e96075&lt;/ParentID&gt;<br/>
+        &lt;EvidenceName&gt;Gift with warranty  MD335/5/108&lt;/EvidenceName&gt;<br/>
+        &lt;Date&gt;13th century&lt;/Date&gt;<br/>
+        &lt;References&gt;<br/>
+            &lt;Reference source="2a2ffc84-ec5b-11e0-a2f8-001636e96075"&gt;MD335/5/108&lt;/Reference&gt;<br/>
+            &lt;Reference source="9b4a55ea-ec5b-11e0-a42e-001636e96075"&gt;Box 64 Millar 108&lt;/Reference&gt;<br/>
+        &lt;/References&gt;<br/>
+        &lt;EvidentialObject mimeType="text/plain"&gt;<br/>
+            Gift with warranty  MD335/5/108  [13th century]<br/>
+<br/>
+            Contents:<br/>
+            1. William de Fonte of Hennesale 2. Michael son of John de Heck William has given to Michael one toft in the vill of Hennesale (description given). To hold to Michael, rendering yearly to William 6 d. for all services. Witnesses: William son of Thomas de Povlington, John de Heck, Henry de Goudale, Hugh his brother, John son of Adam de Wittelay, William son of Adam of the same, William son of Mabel de Snaith, Gamel son of Richard of the same, Ylard clerk of the same, Thomas son of Godard de Mora. Bag for seal. Former number, in pencil '202' [Former ref: Box 64 Millar 108]<br/>
+<br/>
+        &lt;/EvidentialObject&gt;<br/>
+    &lt;/Evidence&gt; <br/>
+&lt;/wrapper<br/>
+<br/>
+At the very least this should serve as an idea for prototyping.  You could want to define more fields.  With experience you might want to subclass Source to, say ArchiveSource and CollectionSource to define some expected elements.<br/>
+<br/>
+But at the very least I've given you an example of how you can flexibly build a source hierarchy, flexible enough, in this instance, to handle a collection subsumed by another collection.  It illustrates how you can give an item's collection reference number, even, in this case, when the collection has been taken over.<br/>
+<br/>
+I've shown you have you can have flexibility in the payload of an evidential object by using mime types although if the object were binary it would have to be encoded to printable characters &amp; you'd have to add an attribute for encoding type.<br/>
+<br/>
+But it would be great if this project were to produce something usable before I fill in the links between Godard and myself.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-10-01T12:33:07-07:00</div>
+<div class="text">"But the type of source - census or whatever - is just a data item"<br/>
+<br/>
+Agreed. Andy seemed to be contending that we didn't need source-type. Period. I explained why I thought we needed it. You used it ("&lt;Source type ="collection" ").</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-10-04T05:28:27-07:00</div>
+<div class="text">This is the recursive structure of Sources and SourceReferences that I've been promoting in the DeadEnds model for 15 years. And not just me. Another bandwagon that passed in the night when all the musicians were asleep.<br/>
+<br/>
+The practical reason why a source type is necessary is so that stylesheets (aka templates) can look for specific attributes in the source data in order to format them into citation strings and other presentation formats.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-10-04T15:09:19-07:00</div>
+<div class="text">@Tom, Adrian, others,<br/>
+<br/>
+There is also research process concept-ala, "Have I reviewed a wide range of source types/record groups?" In one form or another, that concept finds its way to the GPS (as a part of reasonably exhaustive search). See also Adrian's Research Process, "Useful data about types of sources?" Ditto, above, information we "collect to define the source.<br/>
+<br/>
+Perhaps when folks on the SourceTemplates.org bandwagon see their "standard" is devised of thousands and thousands of rigid source types (the stated "preferred" vendor has 104 pre-packaged source types for a "book")--a few will wonder why no one thought about data types, recursive structure, separated stylesheets, etc. Then this thread will begin to mean something. --GJ</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-10-04T15:16:50-07:00</div>
+<div class="text">P.S. I might add, the 104 are all in a single named style and none are intentionally set up for splitter.</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-05T09:17:16-07:00</div>
+<div class="text">"The practical reason why a source type is necessary is so that stylesheets (aka templates) can look for specific attributes in the source data in order to format them into citation strings and other presentation formats."<br/>
+<br/>
+Drawing up long enumerations of possible values does not, however, seem to be an economical way of doing this.  It's also locale dependant unless the lists are to be translated.<br/>
+<br/>
+In my example I suggested a ShortName element with the thought that this could be used in citations.  A more economical way of what you're trying to achieve would be to have an attribute of this element to hint to a formatter.  The range of terms to describe a source type might be huge, and essentially indeterminable; the number of ways in which one might use them in citations would be much smaller and, perhaps, one which might be better left to the data originator to suggest.<br/>
+<br/>
+Nevertheless ISTM that if the purpose of a Gedcom replacement is the interchange of data between programs then presentation issues do not fit well with that, particularly as it involves making assumptions at to how the various consumers may want to present data.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-10-05T12:51:28-07:00</div>
+<div class="text"><br/>
+Ian,<br/>
+<br/>
+It always seems a cop out when someone says this, but there are lots of devils in the details surrounding sources and source references. Suggesting that a shortName is a way to introduce a major simplification to the source model is really a non starter. Most models indeed have the idea. I believe we will find that the final complexity of source records to be considerably more complex than you feel it needs to be, but far less complex than 850 pages of Elizabeth Shown Mills may make us fear.<br/>
+<br/>
+You said this, "Nevertheless ISTM that if the purpose of a Gedcom replacement is the interchange of data between programs then presentation issues do not fit well with that, particularly as it involves making assumptions at to how the various consumers may want to present data."<br/>
+<br/>
+I agree and disagree. I obviously agree (since I have said it time and time again) that stylistic and presentation information should not be in Better GEDCOM files. But this is a far different thing than saying that Better GEDCOM files do not need to contain the information necessary for an application program to create a stylized presentation. IMHO it is important that the Better GEDCOM data hold everything needed to create professional level, publication level presentations.<br/>
+<br/>
+Some here on Better GEDCOM want to be able to use our genealogical applications to produce research quality reports, and nothing has more stylistic requirements than those.<br/>
+<br/>
+Of course, if all an application program does is deal with persons at a conclusion level, printing cute pedigree charts and basic family group sheets, there really is no professional level outputs implied so all this is lost on them (and good ole regular GEDCOM is fine). But for the next generation of genealogical applications, those that (I very much want to) support the full research process, it is important that the underlying data hold all the information needed to hold all important data and generate all needed outputs.</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-06T03:11:11-07:00</div>
+<div class="text">"Suggesting that a shortName is a way to introduce a major simplification to the source model is really a non starter. "<br/>
+<br/>
+Example:<br/>
+Full name of Journal:<br/>
+Philosophical Transactions of the Royal Irish Academy Series B<br/>
+<br/>
+Normal form used in citations:<br/>
+Phil. Trans. Roy. Ir. Acad. B<br/>
+<br/>
+How is your formatter, style sheet, etc. going to use the latter if it's only given the former?  Clearly you need both.<br/>
+<br/>
+"Some here on Better GEDCOM want to be able to use our genealogical applications to produce research quality reports, and nothing has more stylistic requirements than those."<br/>
+<br/>
+I understand that well.  The question is, how to do that.  Clearly the starting point is the value of some variable indicating the particular link in the source chain and, as I just pointed out, a string giving the citation form of the source name.  But this does not require an enumeration of alternative values as part of the protocol - and if such an enumeration isn't being proposed why is there so much effort devoted to discussing it?<br/>
+<br/>
+Apart from anything else such a list is never going to satisfy everyone and it's going to be useless to everyone except those working in English.<br/>
+<br/>
+If you have a good way of exchanging data then it opens up scope for specialist programs such as bibliography generators.<br/>
+<br/>
+Such a generator would have a list of names (in the relevant language) of possible links in the source chain mapped onto concepts and a set of rules to arrange and format the text for each concept for the style is question.  If the list lacks a particular term used in the data to be formatted the user can be asked to provide a mapping.<br/>
+<br/>
+It's my belief that one of the techniques of design is to postpone making decisions as late as possible in order that they can be made in light of the fullest possible information and only to make those decisions which can be avoided as far as possible.<br/>
+<br/>
+The issues which surround citations seem to be reducing this project to paralysis by analysis and yet they largely involve decisions which almost certainly can be avoided.  The amount of information which needs to be included in the data protocol is minimal.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-10-06T07:43:47-07:00</div>
+<div class="text"><br/>
+Ian,<br/>
+<br/>
+My point about shortName was not that it is a bad idea, only that it is not a panacea. It is needed and I have not implied differently. It solves the problem you give in your example, but not others. Thus my comment about the devils in the details. There are a lot more than just this one.<br/>
+<br/>
+''Some here on Better GEDCOM want to be able to use our genealogical applications to produce research quality reports, and nothing has more stylistic requirements than those.''<br/>
+<br/>
+'I understand that well. The question is, how to do that. Clearly the starting point is the value of some variable indicating the particular link in the source chain and, as I just pointed out, a string giving the citation form of the source name. But this does not require an enumeration of alternative values as part of the protocol - and if such an enumeration isn't being proposed why is there so much effort devoted to discussing it?'<br/>
+<br/>
+I agree the source name is needed, and in different forms, including the short form. I don't understand what you mean by an enumeration of alternative values.<br/>
+<br/>
+'If you have a good way of exchanging data then it opens up scope for specialist programs such as bibliography generators.'<br/>
+<br/>
+I agree and this my exact point. The BG data needs to have within it the values necessary for a bibliography generator to do its job. Our research quality genealogical applications should provide such generators. And the obvious form of these bibliography generators is simple -- it has templates for different citation types, where a template specifies the values it needs (e.g., longName, shortName, author, editor, pageNumber, pubYear, volNumber, issueNumber, ...), how to format each value (italics, quoted, boldface, ...), and it builds the final rich-text strings by applying the templates to the values. It is obvious that the BG data must hold the values necessary to match the templates. In my opinion deciding what these values are, and which of a relatively small number of source types require which values, is the entirety of the citation and source problem we should be working on.<br/>
+<br/>
+'Such a generator would have a list of names (in the relevant language) of possible links in the source chain mapped onto concepts and a set of rules to arrange and format the text for each concept for the style is question. If the list lacks a particular term used in the data to be formatted the user can be asked to provide a mapping.'<br/>
+<br/>
+And you are saying exactly the same thing. Seems we have the same picture in our heads about this.<br/>
+<br/>
+'It's my belief that one of the techniques of design is to postpone making decisions as late as possible in order that they can be made in light of the fullest possible information and only to make those decisions which can be avoided as far as possible.'<br/>
+<br/>
+Motherhood and apple pie. How does it apply here? We know we need templates; we know we need to have values to fill the slots in the templates; there is thus a problem to solve now. It's clear to me the problem is fully understood, which seems to mean it's the right time to solve it.<br/>
+<br/>
+'The issues which surround citations seem to be reducing this project to paralysis by analysis...'<br/>
+<br/>
+I agree 150% with this observation. BG has been dead in the water for months now, all because of the decision, if there actually were one, to put all else on hold until the source citation problems were addressed. There has been no important disscussion of other aspects of the data model in the interim. And, in my highly opinionated view, the DeadEnds model, and others, already have the full set of concepts needed to handle these source and citation issues.<br/>
+<br/>
+'... and yet they largely involve decisions which almost certainly can be avoided...'<br/>
+<br/>
+I disagree if you mean the decisions as to what values must be available in the BG data to enable citation generation. I agree that making the decisions should not be stalling all other work on BG.<br/>
+<br/>
+'... The amount of information which needs to be included in the data protocol is minimal...'<br/>
+<br/>
+I believe the data that needs to be included is more than you think, but a lot less than others think. If you read some sources it seems there are hundreds and hundreds of templates, and each of many standards bodies (e.g. Chicago Manual of Sytle, Elizabeth Shown Mills, major universities, major journals) require their own versions of some of them. BG seems to be trying to deal with this as a "tree" level problem rather than as a "forest" level problem.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-09-24T06:37:31-07:00</div>
+<div class="text">@ Brian<br/>
+<br/>
+My personal three census "master source templates" recognize the major changes in how the material was organized/who and what was actually recorded. So, I have one master source template for US 1790-1840, another for US 1850-1870 and a third for US 1880-1930. <br/>
+<br/>
+"In the beginning" the "master source templates" helped me recall the way I was recording the data. As I get a little older, well, it's not bad to access those same recall features. :)<br/>
+<br/>
+@Tom,<br/>
+<br/>
+You wrote, "The rest of Better GEDCOM work is pending while those interested are enumerating all the source types, deciding which of those should be on "master source lists," and which properties of each sub-sub-type should be a "citation element", are preparing those lists."<br/>
+<br/>
+That's not quite my understanding. You can check the meeting minutes going back to July, but as I recall, just prior to the time Geir's document was posted, a decision was made to try to split the whole BetterGEDCOM effort into four phases. During the time that was being discussed, AncestorSync made a proposal. Myrt described it in her blog. See <!-- ws:start:WikiTextUrlRule:18:http://bit.ly/qFJJJU --><a class="wiki_link_ext" href="http://bit.ly/qFJJJU" rel="nofollow">http://bit.ly/qFJJJU</a><!-- ws:end:WikiTextUrlRule:18 --><br/>
+<br/>
+I didn't attend the meeting when matters about AncestorSync's collaboration were discussed, but there were two Developers meetings that day and some minutes are posted. <br/>
+<br/>
+As far as "sources" are concerned, I believe AncestorSync's collaboration is now called SourceTemplates.org, and it's said that in collaboration with BetterGEDCOM, the effort woud include one or more large vendors. it's probably fair to say the SourceTemplates.org features and benefits differ from the proposal Geir made. <br/>
+<br/>
+SourceTemplates.org's approach has been generally overviewed in some Developer's meetings.  <br/>
+<br/>
+Hope this helps.--GJ</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-09-24T06:40:18-07:00</div>
+<div class="text">Tom, yes, I get that ESM is popular, and I get the desire for having professional quality citations. I do however have to wonder why you would need a different template for the exact same source but produced in a different year. Regardless of the fact that it captures different data. Source citations should not be about the data but about the source. That is what they are by definition. <br/>
+<br/>
+So when Gene says he has 3 bibliographic templates and leaning towards 4 for US Census data, I'm troubled by this. Does he also have a different bibliographic template for every municipality from which he has gotten a birth/marriage/death certificate? Is this what ESM is advocating? It just seems wrong.<br/>
+<br/>
+I could see one template for each of the following sources: census data obtained from viewing the originals at the local municipality, FHL film, Heritage Quest online, NARA copies, and NARA films. These are distinct sources and while the data is technically the same are certainly different sources. Added to that is the local copies are likely originals, and the NARA copies are actually handmade copies of the originals and sometimes are quite different, with in some cases entire pages of the originals skipped over. The FHL and Ancestry versions are mixed between originals and copies. I can spot in most cases the originals and the copies. So it can be an important distinction.<br/>
+<br/>
+I agree with you, that citation template work is important, as a side task. There is, I think a need to understand what the range of data is necessary to capture for the different templates. The data model needs to be able to support capturing it.<br/>
+<br/>
+But I think it is mostly a recursive list. One will capture:<br/>
+a title, a date of creation of the source, an entity who created it (which may be a list or group of entries like author, editor, publisher, etc), a place where the work was created, a location where the work can be found, and then there may be all manner of sub-categories for each of the above.<br/>
+<br/>
+So a suitable data model representing a structure to capture any conceivable citation coud be like this:<br/>
+Def:: Citation<br/>
+field name; data type; quantity; importance <br/>
+title; string; 1; required<br/>
+subtitle; array; 1 or more; optional<br/>
+  requires:<br/>
+     subtitle; string; 1; required<br/>
+     subtitle classification; string?; 1; desired<br/>
+author; string or array; 1 or more; desired<br/>
+citation date; date; 1; desired<br/>
+where published; string; 1; desired<br/>
+where located; string; 1; optional<br/>
+location in source where found; array; 1; required<br/>
+  requires:<br/>
+     location text; string; 1 or more; required<br/>
+     location category; string/code; desired<br/>
+<br/>
+Not the best definition, but should give an idea of what the BG model needs to capture. There may be thousands of different citation recipes but they all capture essentially the same data. Some capture a slew of sub fields and sub sub fields. This is a recursive refinement of the same basic information. Much like an outline is clearly defined by levels (I.A.1.a.ii.[bullet]...), a citation data model ought to be so also. You only need to know what knowledge needs to be captured and what knowledge is recursive in nature. If you define that structure, you'll be able to accommodate ANY conceivable citation. <br/>
+<br/>
+This continual side tracking, is what keeps me from participating in more depth. But I consider it important work, and don't wish to entirely abandon it, but I've gotten so frustrated by it all, I've begun designing my own genealogical program. One that speeds data entry, and has a design in mind to generate human readable output complete with bibliographies, and indexes and tables, and formatting for publication. Perhaps, there is something there already, but in Linux I'm somewhat limited in choice. I'm currently working on my formatter, which will take Gramps XML data as input. But, Gramps is lacking in functionality for me.<br/>
+For example, I often work on a single source for a time period and have numerous entries to make. Being able to set a default source, or a default action would be a boon. I have twelve children to enter from birth records from Urloffen births, FHL 949966. THe only pieces of data I need to enter are names, dates, witnesses, and specific page/image locations within the source. It'd be nice to also be able to link the witnesses if I already have them entered in my db. Gramps falls down on that. It's possible, but not from the same data screen where the child is entered. Adrian's goal is neat, in that he plans to build the final product during data entry, but I wonder how speedy the data entry will be. It seems to be a level of difficulty he is doomed to fail on. But he has a vision. I see a picture in my mind on how to accomplish it, but not the technique to make it work in as speedy a manner as data entry. But, if he had a way to do it, I'd buy it (if it ran on Linux). I'd buy a Gramps version or plug-in too if it added the features I want. I'm only here due to my frustration with Gedcom and Gramps limitations. But this process is producing as much frustration as the original problem.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-09-24T06:57:36-07:00</div>
+<div class="text">Ugh, sorry. Not Adrian, Louis.</div></div><div class="comment"><div class="from"><strong>hrworth</strong> 2011-09-24T07:07:56-07:00</div>
+<div class="text">Brian,<br/>
+<br/>
+You simple citation is missing a point, which may show you why Citations are more complicated then it would appear and why there may appear to be too many templates.<br/>
+<br/>
+My Question to you is What are you looking at when you that document in front of you?<br/>
+<br/>
+Is it a physical record?<br/>
+Is it in a Court House?<br/>
+Is it in the Archives?<br/>
+Is it Online?<br/>
+Is it part of a collection at a historical society (for example)<br/>
+<br/>
+The problem with this issues is that for years, it has been simple. You went to a Court House (example). Today you have many options.<br/>
+<br/>
+The GEDCOM that has been used for years at back in the Court House, where we, today are not.<br/>
+<br/>
+This project needs to sent along enough information so that the receiving application can tell the user exactly where this piece of information came from, in detail.<br/>
+<br/>
+Russ</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-09-24T09:10:32-07:00</div>
+<div class="text">No, I included where the source was located in my example. See, the where located data item. That piece of information can be very important. It can mean the difference in viewing a handwritten copy vs. an original. It is also possible to view both types (original and copy) in the same place. Are you looking at the copy made by the court in some ledger or the actual papers filed in the case?<br/>
+ so just knowing it was accessed at the Court won't give you a fine enough detail. Something which your point misses. It's not as simple as "going to the Courthouse". But the citation itself is a simple recursive format.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-09-24T09:23:44-07:00</div>
+<div class="text"><br/>
+Brian said: "Source citations should not be about the data but about the source."<br/>
+<br/>
+I agree with this statement, but there has been some controversy surrounding this idea. Some people do indeed wish to put some of their data into their citations, especially footnotes. Certainly citations should show the LOCATION of the data within the source. For an example, consider a book, where you might want the page number in your citation. How do you want to do this? Well, one thing for sure is that none of us would want is a separate source record for each page in the same book that we extract evidence from. For me this is a trivial issue -- you create a source record for the book, and when you place references to that source record within one of your other records, you attach the page number, IF YOU WISH, to the source reference. No fuss, no muss.<br/>
+<br/>
+But indeed some people want to go further. Not only do they want to be able to add the location within a source to their citations/footnotes, they also want to be able to add a summary of the data they extracted from that location in the citation/footnote. For example:<br/>
+<br/>
+"1892 Hoyt's City Directory of Norwich, Connecticut," ed. Charles Hoyt, Norwich News Corp, 1892: Pg 354, Daniel L Wetmore, ship carpenter, boards New London Turnpike.<br/>
+<br/>
+Handling this type of entry has been stymying Better GEDCOM for months. Some insist that Better GEDCOM be able to store data that can be used to generate footnotes that look like this. My solution to this is as simple as the page number solution. There is obviously going to be a source record for the 1892 city directory. In the particular source reference to that city directory, say within Daniel L Wetmore's person record, the user adds, IF HE/SHE WISHES, a custom string to be appended to the source description when IT IS GENERATED BY A TEMPLATE into a formatted footnote to be associated with that record. Again, no muss, no fuss.<br/>
+<br/>
+I have frustration here also. If we simply had decided on how a model would hold a source and how a model would hold source references, and what belongs to each, and what the relationship between the two is, this stumbling block would have been solved months ago. And the solution I describe here has been the solution in the DeadEnds model since its inception.<br/>
+<br/>
+Quoting Adrian, there is no rocket science here. Source records describe sources. Source references refer to sources and can provide more specific information about where and what particular information was extracted from the source. There can obviously be many source references pointing to the same source.<br/>
+<br/>
+And of course, IF YOU WISH, source records are sometimes recursive. For example, take an article in a journal that has volumes and issues. One should have the freedom to "assign sourcehood" in different ways. Some would want to create a source record for each key ARTICLE in the JOURNAL they get information from. If they do this their source reference to the ARTICLE could hold the PAGE number. But the ARTICLE source record ITSELF should then point to a JOURNAL source record, and in the SOURCE REFERENCE that the ARTICLE source uses to point to the JOURNAL source would be placed the VOLUME and the ISSUE numbers. So now there is one clean source record for each JOURNAL (e.g., the "The New England Historical and Genealogical Register") as a whole, and a nice clean source record for each ARTICLE of interest from the JOURNAL as a whole, with all the specific information about page numbers, volume numbers and issue numbers, available from source references at exactly the right spots in a comprehensive source model.<br/>
+<br/>
+And of course the the JOURNAL can point to a LIBRARY source record, of if you wish, you can call that a Repository record. And in the source reference in the JOURNAL source that points to the LIBRARY record, you can add the call number, or the floor number in the library, or anything else you might decide is important to let you find that journal in that library. The source reference would also be the right place to mention what volumes are actually in the holdings of that library for the journal. And of course, you might actually sit down to read articles from that journal in two different libraries, so you can, if you are anal enough, have two source references in the Journal's source record, one to each library that you use to read the journal.<br/>
+<br/>
+Better GEDCOM is only involved here in providing the architecture needed to hold source records and source references. Everything else is stylistic frosting we should not be concerned with.</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-09-24T09:37:58-07:00</div>
+<div class="text">Brian said: "Source citations should not be about the data but about the source."<br/>
+<br/>
+I also agree with this statement.<br/>
+<br/>
+That's why I feel an Evidence record is required. The source data, which now has noplace to go in GEDCOM, can be attached to the Evidence record.<br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-09-24T09:48:09-07:00</div>
+<div class="text">I also believe sources can refer to other sources, but at the source level. <br/>
+<br/>
+e.g. I have a photocopy of a birth record. I made the copy from (1) the copy my Aunt Hilda made. She got it from (2) a book of compiled birth records at her local library. The book got it from (3) a certain microfilm tape. The microfilm tape was made from (4) original documents at a certain public records office.<br/>
+<br/>
+My data would include 4 sources with the data linking to the first source and each of the first three sources linking to the next as their source.<br/>
+<br/>
+If I have all that linkage, then I can track down the original if I needed to. <br/>
+<br/>
+Louis</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-09-24T09:49:48-07:00</div>
+<div class="text">Louis wrote, "4 sources with the data linking to the first source and each of the first three sources linking to the next as their source."<br/>
+<br/>
+Cool concept. How would it work? Need a new thread?--GJ</div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-09-24T10:07:57-07:00</div>
+<div class="text">New thread: <!-- ws:start:WikiTextUrlRule:0:http://bettergedcom.wikispaces.com/message/view/An+architecture+for+sources%2C+reference+notes+and+bibliographies/43091574 --><a class="wiki_link_ext" href="http://bettergedcom.wikispaces.com/message/view/An+architecture+for+sources%2C+reference+notes+and+bibliographies/43091574" rel="nofollow">http://bettergedcom.wikispaces.com/message/view/An+architecture+for+sources%2C+reference+notes+and+bibliographies/43091574</a><!-- ws:end:WikiTextUrlRule:0 --></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-09-24T10:25:51-07:00</div>
+<div class="text"><br/>
+So we have some definitions:<br/>
+<br/>
+"Source Records" describe sources.<br/>
+<br/>
+"Source References" refer to sources (e.g. where within source)<br/>
+<br/>
+"Evidence" is a Source Reference used by someone for their research. They are the same thing except from point of view. Source References can be posted by a Repository objectively and made available to researchers to search through. But the researcher turns the source reference into their evidence when they use it to strengthen their genealogical proof. <br/>
+<br/>
+"Citation" is the way of displaying a source reference / evidence based on some formal style.<br/>
+<br/>
+"Source Citation" is an unfortunate terminology used in GEDCOM that has caused BetterGEDCOM no end of confusion. They should have used the term "Source Reference" instead.</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-01T08:12:21-07:00</div>
+<div class="text">IMV there are two approaches to developing systems.  One is to look at the requirement and ask "What's the biggest field of which this can be viewed as a corner?" and then work out how to do that.<br/>
+<br/>
+The other is to find a corner and paint yourself into it.<br/>
+<br/>
+Starting out with a detailed list of source types is an example of the latter.<br/>
+<br/>
+Is it a good idea?<br/>
+<br/>
+Imagine that that had been the approach when TCP/IP was designed.  It could have handled UUCP applications so we'd have the equivalent of email, news &amp; ftp.  It could also have provided something like tip.<br/>
+<br/>
+But then imagine the situation some years later.  "World wide web?  Great idea, Tim but the internet can't do that.  It wasn't designed for it."<br/>
+<br/>
+Here's an alternative view.<br/>
+<br/>
+We have a source data type.  It has a UUID.  It includes some text fields. These might include the source type and description.  If a useful description isn't compact enough to contribute to a citation then it can include that.  It also has a further field to point to a higher level record.  Somewhere at the top, maybe an archive, maybe a publisher or whatever, there's a record with a null in that higher level pointer.<br/>
+<br/>
+Ideally the archive or whatever would publish the root record and those under its control (e.g. the YAS archive could publish its own record, a record for the Bradfer Lawrence collection within it and another record for the Millar collection which was absorbed into the BL collection.<br/>
+<br/>
+We then have a further data type, Evidence, which is, in fact, a sub-class of the Source class to which a collection has been added.  Because its a Source subclass it can point to the bottom end of the hierarchy I've just described.<br/>
+<br/>
+The collection can have multiple objects within it - images, texts, or whatever.  Each is wrapped with its mime type so the application receiving it knows whether it can display it itself, hand it over to a helper program or throw up its hands in despair - just like a browser in the same situation.  The fact that we have multiple objects at this stage means we can cope with:<br/>
+- Multiple page docs, either as image or text<br/>
+- Image and transcript<br/>
+- Transcript &amp; translation<br/>
+<br/>
+Rules:<br/>
+1.  When you pass on an object you don't modify its content, change its UUID or any other nasty thing.<br/>
+<br/>
+2.  If you want to add to it, e.g. commentary, an alternative reading or a translation, you create a new Evidence object and its parent pointer points to the object being added to.<br/>
+<br/>
+You can also have another Source subclass.  This handles sections of the hierarchy being moved.  If the Little Dunny-on-the-Wold village archive, which has its own root record but is then incorporated in the Dunshire archive the existing chain is left intact so everything that uses it is intact but an object of the new type is added.  It has an additional pointer, NewParent.  The normal parent pointer points to the old root and the new pointer points to either the Dunshire Archive root or some subordinate record with that archive.<br/>
+<br/>
+And nobody has to second-guess what sort of sources we'll need to handle in the future.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-08-14T07:53:04-07:00</div>
+<div class="text">I did some work a week ago on the type, "Interview (private holding)." Should I just hold on to that or do you want it posted. If so, then were is the best place to post the data. It's organized as ...<br/>
+<br/>
+Description xxxx<br/>
+<br/>
+Alternative Source Type Classes: XXX<br/>
+<br/>
+Proposed Field Descriptions (with fields described as necessary)<br/>
+XXX<br/>
+XXX<br/>
+XXX - XXXXX<br/>
+XXX<br/>
+<br/>
+<br/>
+References XXX</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-08-16T09:03:59-07:00</div>
+<div class="text">Gene - re the proposed list of "High level Universal Source Type Classes". <br/>
+<br/>
+I think I'm having a hard time in understanding why some of those merit their own Source Type Class. For instance, why should a Passport (including application) be considered so radically different from a US Social Security Application (say)? Certainly, the applications are both, well, applications. Both come from central government. (Actually, if you want to be picky, the passport application is much closer to the Social Security application, than it is to the passport itself, because both are held by central government, whereas the passport itself might be.... Anywhere, I guess....<br/>
+<br/>
+In similar fashion- why would "Dissertation, Thesis" be different from "Manuscript"? Go down a level or two into detail and it may be so but at the top level?<br/>
+<br/>
+I think the essential question that needs to be asked is - what makes one High level Universal Source Type Class different to another? <br/>
+<br/>
+Is it the details that we will be capturing for citations? Or is it the use that the (original) source was once put to? (I know we're aiming at citation capturing but it might be convenient to get there by asking - at a very high level, what was it once used for?)</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-09-23T15:06:57-07:00</div>
+<div class="text">Taking Adrian's idea and extending it.<br/>
+For a top level general source type class, I can't see how any document is different from any other individual document. A single document: stands on it's own, is not part of a compiled work, may be a page or many pages. This would cover: passports, applications of all kinds, birth certificates, death certificates, etc.<br/>
+Plus, I'm not sure what an "artifact" is or why I'd be citing one? Unless it was my 50th gr-grandfather King Nebuchadnezzar's funerary coin. Sorry, had to throw that in. I'm also not sure why one would want to cite a piece of software as a source. You don't get data from the software, but rather the underlying data source. If I saw a citation for software, I'd go looking in the source code for the record.<br/>
+Also, isn't a bible also a book? <br/>
+<br/>
+Not sure why so many want to complicate things. You have: books, magazines, newspapers, documents, recordings, internet, digital media, graphic media, personal knowledge, personal interviews, and genealogical trees (includes LDS and single person and event trees).<br/>
+<br/>
+Everything else is a sub-category of that. The first three could arguably be combined in "[un]published print" sources. I've separated them for historical reasons only. They may also overlap with digital media now, with all this scanning of old books and whatnot. <br/>
+From those 11 categories all of the sub-categories will require the same citation format. Unless someone can prove me wrong.<br/>
+Now whether one wants to break those categories down for end users as opposed to how they should be coded and stored, that's another issue, but as far as the spec goes that is all that is needed at the top level.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-09-23T15:12:48-07:00</div>
+<div class="text">I sure wish there was an edit function. I forgot a category, "other" for all those other oddball sources which don't fit. Like artifacts, and what have you. Because, you'll always find some oddball source that doesn't fit anywhere.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-09-23T19:35:07-07:00</div>
+<div class="text">Hi Brian ...<br/>
+<br/>
+This topic was transferred from the page of another, unrelated, wiki. I failed to bring over the first line, which provided a better explanation. These were examples of "universal" source types--as opposed to what Geir's document envisioned as "country specific." (Sigh, like you, I can't edit either.) Adrian's question was, nonetheless, right on. As is yours.<br/>
+<br/>
+We did some more work on this off-wiki. Somewhat as you have written, there are probably two "super classes" of sources--all things published and everything else. Most government and quasi-government documents fall into the latter.<br/>
+<br/>
+Published materials, generally, would be universal source types. Guidance on how published source types should be further divided is not considered a major challenge--folks around the world have been cataloging this stuff for a long time.<br/>
+<br/>
+Unpublished materials are more of a challenge. As for documents, I looked at it a little bit differently. Take all manuscripts, census and vital records/parish records away, what other key unpublished source types do we need to supply? Certainly deeds, interviews, tombstones, photographs, grampa's coin :). How many others? (P.S. the items in the original post were drawn from some existing source type lists.) BUT… is there a more logical way to develop that list?<br/>
+<br/>
+FYI, Zotero was mentioned earlier, it offers just over 30 source types: artwork, audioRecording, bill, blogPost, book, bookSection, case, computerProgram, conferencePaper, dictionaryEntry, document, email, encyclopediaArticle, film, forumPost, hearing, instantMessage, interview, journalArticle, letter, magazineArticle, manuscript, map, newspaperArticle, patent, podcast, presentation, radiobroadcast, report, statute, thesis, tvBroadcast, videoRecording, webpage.<br/>
+<br/>
+Zotero has just over 30, but we find thousands of source types in modern software. Why?<br/>
+<br/>
+(1) Pure style. Source types tend to be associated with a single citation style, and the style list only grows. Take the example of a book--substance/what do you want to record/what might go into a citation--it's all reasonably straightforward. Lackey had preferences, Register has preferences, etc. Mills has preferences in both _Evidence!_ and _Evidence Explained_. What happens when Mills updates _Evidence Explained? For other materials, there's even a NARA style. Overseas? <br/>
+<br/>
+Geir's document suggested we work to eliminate the need to create a new source type to support a different style. <br/>
+<br/>
+(2) Nuanced Characteristics ("digital media ... all this scanning of old books and whatnot")/When is a book not a book? Rather than consider film and digital images as essential source types with lesser characteristics that *some* citation styles output, modern software tends to create different source types to distinguish between the various forms. <br/>
+<br/>
+Geir's document suggests that where possible, we have a single source type provide the data about film/digital image, CD, etc.... The data could then feed the citation.<br/>
+<br/>
+(3) Citation mechanics and style interpretation differences. Some of the source types in FTM, RM and Legacy are actually setting out to interpret the very same example in Evidence Explained--but they all go about it a little differently. The variables in the UI (sorry, there is probably a better term) are not the same and data types are not the same (see Geir's document). Not all the same information is gathered at the level of the master source (GEDCOM's SOURCE_RECORD). For a given example, the native output from those three different programs is not always the same. <br/>
+<br/>
+There are other reasons, like customization.  <br/>
+<br/>
+I blogged recently about how standardized metadata, more and more, supports "drop and drag" information about sources. <!-- ws:start:WikiTextUrlRule:34:http://bit.ly/oNGlfe --><a class="wiki_link_ext" href="http://bit.ly/oNGlfe" rel="nofollow">http://bit.ly/oNGlfe</a><!-- ws:end:WikiTextUrlRule:34 -->  Standardized metadata is twice in the schedule for RootsTech 2012. (While not on the formal schedule last year, it was mentioned in the session "Genealogical Data Standards.") <br/>
+<br/>
+<br/>
+<br/>
+P.S. Bibles are published sources, but much of the time we are actually citing old Aunt Nellie's entry in that bible. Her entry might have little to do with the bible's actual publication date (though I pray Aunt Nellie indeed survived beyond it's publication date.) So, bibles and other annotated stuff, at least in my thought, is deserving of a class. <br/>
+<br/>
+Artifacts. Yes, the coin, quilt, civil war rifle, etc. From Mills, EE, page 124, "Historical artifacts vary widely in nature, but the basic citation format is fairly standard. You will include most of the elements that you cite for manuscripts. Additionally, you will add descriptive material that conveys a graphic sense of the item and/or explains the item’s connection to the subject you are researching." There follows an example about Aunt Ella's quilt. <br/>
+<br/>
+Another P.S. I don't use software that came loaded with the Mills' style, but I am a fan. FYI, in my own software, I have only three templates for US Census (I do feel a 4th coming on with 1940). I have several vital records source types--but that's because I took to creating a source type for each vendors' presentation (FamilySearch, American Ancestors, ma-vitalrecords.org, Missouri SOS, etc.) I have one main template for items from a collection and a couple for newspapers. If I had more real fields available, I'd probably have three templates for books. I have a separate template for journal articles.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-09-23T23:28:44-07:00</div>
+<div class="text">Hmm, I have one "template" for US Census citations. Why would you need three or four?<br/>
+US Census; &lt;year&gt;; &lt;locale&gt;; &lt;position where found&gt;; &lt;archive, etc&gt;...<br/>
+<br/>
+ex:<br/>
+US Census; 1920; NY; Queens 3d ED 1st AD 5th Ward, image 535 (p 261, ll 7-11); Heritage Quest.<br/>
+<br/>
+The "..." for those who like to go to deeper detail. Why? I don't know. He's on third, and I don't care if I don't care is the shortstop or not.<br/>
+<br/>
+I've clearly stated all the information need for any person to find the record easily in the Census in any format. Who cares if it's not up to snuff to some arcane approved format. The point of the citations is to make them readable so others can find and verify the information! It boggles the mind on how pedantic our society has gotten over trivial matters. I'm not picking on anyone.<br/>
+<br/>
+In school, I was taught one citation style (grades 2-12). In college I learned two more. One for English class and one for everything else. I haven't used any of them ever again. I just wing it, or copy the style from the back of the nearest print book (I'm never far from one). But mostly, I just wing it. My favorite citation being "Myself; Personal knowledge; I was there". If I ever publish that'll have to change to include my name in full.<br/>
+<br/>
+But in the end, none of this matters. What matters is what information is being captured, and how many different definitions do we need to encompass all of those types of citations. I'm betting the answer is, ONE. We may wind up with a million format templates. But that's really not relevant to the standard. Only to implementations.<br/>
+<br/>
+Think about it. You have a title, a date the source came into existence, perhaps an author, where in the source to find it, etc. Some citations will have more data. That is easily handled by using a paired list of attributes and citation element types.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-09-24T04:09:28-07:00</div>
+<div class="text">Brian,<br/>
+<br/>
+Many want their genealogical applications to be able to generate final quality reports, complete with footnotes and bibliographic entries. They want those entries to adhere to standards. The templates of Elizabeth Shown Mills are popular for genealogists. She describes different templates for each kind of source and sub-source and sub-sub-source, and templates for the first occurrence of each sub-sub-type in a footnote, in later footnote occurrences, occurrences in bibliographies, and so on. This is where the need for multiple templates comes from. And this is where the erroneous notion that Better GEDCOM must be able to somehow generate all the footnotes and entries with all the stylistic nuances of ESM comes from. The idea that templates for footnotes are no different in principle than templates for pedigree reports, family group sheet reports, and other reports, seems to have been lost in the shuffle. I don't think anyone would want Better GEDCOM to be defined in terms of all those different reports. Better GEDCOM should define content only, and applications then define presentation through templates or whatever other means they decide to implement.<br/>
+<br/>
+The rest of Better GEDCOM work is pending while those interested are enumerating all the source types, deciding which of those should be on "master source lists," and which properties of each sub-sub-type should be a "citation element", are preparing those lists. This work is being treated as a prerequisite for working on the Better GEDCOM data model for genealogical information, so that model work has been on hold for months. Along the way the source work has gone off on a few style based tangents, and I posted my thoughts about that yesterday. Would we want the work on Better GEDCOM to be put on hold while we decide on the full list of report formats that should be produced by genealogical software? Of course not. But that's exactly what we are doing with respect to citation formats.<br/>
+<br/>
+Personally I feel that some of the source work is important, but all that is needed is a basic list of source types, and a basic list of properties to be used in describing those sources. Issues of templates and style are wholly outside the Better GEDCOM domain. And this is a straightforward sub-task that could have been handled by a few people in parallel with other Better GEDCOM sub-efforts. And frankly the long hiatus we've been on while working this issue has, in my opinion at least, derailed Better GEDCOM from its real purpose of coming up with a modern data model needed by the next generation of genealogical applications. The main question about Better GEDCOM in my mind right now is whether it will ever be able to recover the momentum it had when we were dealing with the data model issues that are the core of the effort.<br/>
+<br/>
+Tom</div></div></div><div class="comment"><div class="from"><strong>DearMYRTLE</strong> 2011-09-23T12:21:56-07:00</div>
+<div class="title">Avoiding Citation Software - CMOS and others</div>
+<div class="text">Thanks to Russ for find this...<br/>
+<br/>
+Michael Hait, CG, “Why citation software should be avoided,” Planting the Seeds: Genealogy as a Profession blog, posted 21 Sep 2011 (<!-- ws:start:WikiTextUrlRule:2:http://michaelhait.wordpress.com/2011/09/21/no-citation-softare/ --><a class="wiki_link_ext" href="http://michaelhait.wordpress.com/2011/09/21/no-citation-softare/" rel="nofollow">http://michaelhait.wordpress.com/2011/09/21/no-citation-softare/</a><!-- ws:end:WikiTextUrlRule:2 --> accessed [23 Sep 2011].</div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-09-23T17:43:53-07:00</div>
+<div class="text">Brian,<br/>
+<br/>
+I agree with you that the source area is being treated as more complicated than it needs to be.<br/>
+<br/>
+There is a classic content versus style confusion behind some of the discussion. Better GEDCOM should only hold the information that identifies the sources, by which I mean what you mean, the title, author, publisher, volume, page, url, the fields needed to identify a source. How that information should be displayed, and where that information should be displayed, has nothing to do with Better GEDCOM. Any application that is going to display sources in a citation or footnote or bibliographic entry needs to be able to fit the content/information fields from the Better GEDCOM source records into style sheets, aka templates, that the user selects as his desired way of seeing the source information formatted.<br/>
+<br/>
+As soon as the word "citation" crops up in a discussion of Better GEDCOM's record model, a giant red flag should be raised. A "citation" is nothing more than a formatted string that meets somebody's formatting criteria or style guide. The analogy between content and style sheets that we find between HTML and CSS or between XML and XSLT are exact here. Better GEDCOM should deal with content, as HTML and XML should, and source templates should be external add-ons for Better GEDCOM as are CSS and XSLT style sheets today. Sorry to be beating this dead horse into the ground.<br/>
+<br/>
+We need a short list of source types, and a short list of the information fields that are appropriate for each. Then template authors can go off and define sets of style sheets that will build those formatted citation strings, adhering to ESM or whatever.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-09-23T18:30:52-07:00</div>
+<div class="text">Right, again Tom has cut to the meat better than me. The standard we are reaching for is about what information to capture. How it is to be presented is an entirely separate issue.<br/>
+<br/>
+I do however have no problem, and agree with Tom's idea in making the standard more powerful by creating some sort of collection(s) of format related templates which can be loaded into actual BG data file(s). By creating template placeholders for different aspects of the BG model we are free to expand and allow different cultures to create and plug in their own particular particulars.<br/>
+<br/>
+It would add robustness to the model, while all the while reducing it's overall complexity. If a new way of doing something comes up or a new culture needs to be added in, templates can be created for it, without a need to alter the standard. This way we separate the data from the presentation. This approach would work quite well for other types of data we need to capture such as location information, and date information and especially names. Different cultures have different needs for saving and displaying names with different pieces of information. By moving the internationalization and presentation level requirements off to a template type system, we simplify the overall model.<br/>
+<br/>
+In fact it would be great, to have the BG have a data section and a template section. Then getting at the data is easy and putting the data into the preferred culture is as easy as switching templates.</div></div><div class="comment"><div class="from"><strong>theKiwi</strong> 2011-09-24T05:42:23-07:00</div>
+<div class="text">Thanks Tom - this explains clearly what my brain thinks but is unable to articulate!!<br/>
+<br/>
+There is enormous confusion between the words  "Source" and "Citation".</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-09-24T08:04:29-07:00</div>
+<div class="text">Living on the eastern side of the Atlantic, I can't get too excited about citations. However, I feel it's also possible to over-simplify matters. <br/>
+<br/>
+Brian proposes "&lt;the title of my source is this&gt;;&lt;title of the containing work&gt;;&lt;this is the author&gt;;&lt;volume, page(s) where found&gt;;&lt;date published&gt;;&lt;publisher&gt;;&lt;where you can find it&gt;.<br/>
+<br/>
+And then asks "Seriously, what else do you really *NEED* to capture"<br/>
+<br/>
+Well, as a definition of what's needed to capture a published work, OK. And that can serve as the inspiration for a lot more. But...<br/>
+<br/>
+If it's part of the Requirements Spec'n for an application that it outputs reference notes in a format like that of (say) Chicago Manual of Style, then the Requirements Spec'n for BG imposes the need to store the data at an appropriate level. One of the CMoS requirements is that authors be written out as either "Doe, John", "Doe", or "John Doe". So we need to break "author" down. This is hardly a difficult step, but it's one that needs to be taken.<br/>
+<br/>
+Similarly, are you content with "&lt;publisher&gt;" or do you need to split that up in case the first journal wanting your article needs it as "place, name" and the second as "name, place"? Again, nothing difficult about this.<br/>
+<br/>
+Then there's the issue of dates and web-sites. Whereas with a paper source, we can be reasonably sure that the source hasn't changed since the "publication date", we'd be foolish to rely on any date written on a web-site. Hence we tend to use "date web-site accessed" as a substitute for "date published". Yet it's the height of folly to actually misuse the "date published" item by inserting the access date in there - no-one will really be certain what's where. So we need a new item - call it, "access date". Might be useful for anything, that. Again, guess what?, nothing tricky about it.<br/>
+<br/>
+What else might we need?<br/>
+<br/>
+Well, there's the case of the transcript of the parish register, where we want to store details about the transcript (which we used) and the original (which indicates the value of the transcript). Two sets of authors / creators here. Do we cram everything into one source record or (as I personally prefer) create two source-records linked by a (say) "transcription" relationship. Either way we need to build on that original simple list from Brian. And, by the way, the way I want to record stuff, this last is different from a microfilm of the parish register, where I _think_ we've actually got just one source-record - for the parish register - that is sort-of-published on the microfilm. (Except, there's still two creators.... Bother)<br/>
+<br/>
+Now, none of this is rocket science, as Brian says (how geek-cool is that? A rocket-scientist saying "It's not Rocket Science"?), and I'm agreeing with much of what's said above. I simply want to point out that in just a few minutes typing (and a lot more thought, of course), I've come up with a list of extensions and so I'm sure there must be others that I'm missing. We do, I suggest, therefore need to be able to extend the list of items that BG captures about sources compared to GEDCOM. It doesn't look hard but it does need to be done.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-09-24T09:05:25-07:00</div>
+<div class="text">I'd disagree Adrian. While what I gave was a high level "spec", none of what you further delineated is more than a sub-category, or more finely grained element. I never said the Author needed to should be a single string field. What I gave is major categories. <br/>
+<br/>
+How the data is formatted is entirely NOT the job of a specification. that is strictly presentation level logic in some program implementing the specification. People really need to get their head wrapped around this most basic of software concepts.<br/>
+<br/>
+Using the majority opinion on the subject. Consider an XML implementation.<br/>
+&lt;name type="author"&gt;&lt;attribute first="Edgar" middle="Allan" last="Poe"&gt;<br/>
+<br/>
+That could just as easily contain any kind of name sub element. Change type to "publisher", or "archive", or ... ad infinitum.<br/>
+<br/>
+Name is an open ended definition, you shouldn't assume I meant a single homogeneous string, where a complex data structure is equally possible. Any data item I posited is equally true for any level of recursion and sub-categorization. but it still comes down to the same basic structure. As to access date needing to be it's own element. I say no, it doesn't. A date is a date is a date. I never said it had to be a single date, or that the date couldn't have a qualifier declaring the type of date it is.<br/>
+So this works as well:<br/>
+&lt;citationdate type="accessed" class="internet" value="20110915 9:15am"&gt;.<br/>
+<br/>
+There are other possible implementation, but it's still just a date. I was merely using explicit examples and not declaring an actual spec. Just delineating the top level structure. Citations are merely an outline structure with the same types of data repeating to Nth degree sub-categories.<br/>
+<br/>
+Well, I'm off to the archives. I have research to do. So enough banter for one day. Burning daylight.</div></div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-09-24T12:35:20-07:00</div>
+<div class="text">Brian said "none of what you further delineated is more than a sub-category, or more finely grained element" - oh, I totally agree. In fact, I was trying to make that very point. It's just that I'm literal-minded enough that when a single item is listed, without clarification that it can explode into finer detail, then I don't assume it can. With that clarification about what you meant, then we are actually in violent agreement about the way forward. Ditto when you explain that "&lt;date published&gt;" actually means "a list of dates qualified as accessed, published, etc." Absolutely fine.<br/>
+<br/>
+The one thing I'd still add to your list is the necessity to link - in some fashion - source records. E.g. linking a transcript to its original manuscript. I'd really want to see BG create those 2 source records on the same "level" and certainly not have one embedded somehow inside the other. The latter is a recipe for programming disaster. Perhaps especially given that the software community seems unable to find any XML parsing routines and therefore really doesn't want to consider anything other than GEDCOM.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-09-24T13:00:45-07:00</div>
+<div class="text">Michael Hait is a gifted genealogist and blogger. I am but a humble researcher and occasional blogger. Michael recently posted an article [3] to make a point that Mills' _Evidence Explained_ is 800 pages in length, "concerned as much with principles of evidence analysis as with source citation." He writes, "this book is named _Evidence Explained_, not _Citations Explained_." <br/>
+<br/>
+I agree with his point, but in the spirit of "words matter," believe we need to acknowledge the same twist of reasoning in his critical article about the products EndNote, RefWorks and Zotero. [1] Michael refers to Zotero and the other programs as "citation software."  His article is titled, "Why citation software should be avoided."  <br/>
+<br/>
+Here's the twist, I don't think of Zotero the other programs as "citation software," but as REFERENCE MANAGEMENT software. Check out the Wikipedia article.<br/>
+<br/>
+"Reference Management Software," _Wikipedia_.  <br/>
+<!-- ws:start:WikiTextUrlRule:32:http://bit.ly/nPqktf --><a class="wiki_link_ext" href="http://bit.ly/nPqktf" rel="nofollow">http://bit.ly/nPqktf</a><!-- ws:end:WikiTextUrlRule:32 --><br/>
+<br/>
+At least as far as I know, Zotero is mostly capturing bibliographic data via  Standardize Metadata.  I'm a Zotero user, happy with the work it does with references from WorldCat and Blogger. <br/>
+<br/>
+Once you've captured and/or edited the metadata, Zotero will permit you to drag a bibliographic level citation into other programs. Below is a  citation to my own blog posting.  (In Word, the blog title would render in italics).  <br/>
+<br/>
+1. Genej, “Zotero and Blogger: Love at first sight,” They Came Before, May 27, 2011, <!-- ws:start:WikiTextUrlRule:33:http://theycamebefore.blogspot.com/2011/05/zotero-and-blogger-love-at-first-sight.html --><a class="wiki_link_ext" href="http://theycamebefore.blogspot.com/2011/05/zotero-and-blogger-love-at-first-sight.html" rel="nofollow">http://theycamebefore.blogspot.com/2011/05/zotero-and-blogger-love-at-first-sight.html</a><!-- ws:end:WikiTextUrlRule:33 -->.<br/>
+<br/>
+<br/>
+[1] Michael Hait, "Why citation software should be avoided," 21 Sept 2011, _Planting the seeds_. <!-- ws:start:WikiTextUrlRule:34:http://bit.ly/pAvUuK --><a class="wiki_link_ext" href="http://bit.ly/pAvUuK" rel="nofollow">http://bit.ly/pAvUuK</a><!-- ws:end:WikiTextUrlRule:34 --><br/>
+[2] Michael Hait "Why we don't always need source citation templates," 23 Sept 2011, _Planting the seeds_. <!-- ws:start:WikiTextUrlRule:35:http://bit.ly/n1UtWT --><a class="wiki_link_ext" href="http://bit.ly/n1UtWT" rel="nofollow">http://bit.ly/n1UtWT</a><!-- ws:end:WikiTextUrlRule:35 --><br/>
+[3] Michael's third article is, "... but we do need Evidence Explained," 23 Sept 2011, _Planting the seeds_. <!-- ws:start:WikiTextUrlRule:36:http://bit.ly/pAvUuK --><a class="wiki_link_ext" href="http://bit.ly/pAvUuK" rel="nofollow">http://bit.ly/pAvUuK</a><!-- ws:end:WikiTextUrlRule:36 --><br/>
+<br/>
+<br/>
+<br/>
+P.S. Few of the extracts from Zotero's website ... <br/>
+<br/>
+"Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources. It lives right where you do your work—in the web browser itself."<br/>
+<br/>
+"Zotero ... [allows] you to add [references] to your personal library with a single click. Whether you're searching for a preprint on arXiv.org, a journal article from JSTOR, a news story from the New York Times, or a book from your university library catalog ..."<br/>
+<br/>
+Zotero ... [lets you add] add PDFs, images, audio and video files, snapshots of web pages, and really anything else. Zotero automatically indexes the full-text content of your library, enabling you to find exactly what you're looking for with just a few keystrokes.<br/>
+<br/>
+"Zotero organizes your research into collections that act like iTunes playlists ..."<br/>
+<br/>
+"Assign tags to your library items to organize your research using your own keywords. The tag selector enables you to filter your library instantly to view matching items. Zotero can even use database and library data to tag items automatically as you add them."</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-09-24T13:10:03-07:00</div>
+<div class="text">P.S. It's technology. It doesn't bite.</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-09-24T18:12:37-07:00</div>
+<div class="text">Adrian, has a very good point there. It's useful to link citations that are related. It could be very useful to some researcher coming up later. Of course that's something that really only can be done in the digital versions of a genealogy.<br/>
+<br/>
+Gene, you're completely right about Michael. He's a very gifted person, from what little I've seen of his writing so far. I think he definitely fell down in that article, though. Especially concerning Zotero.  <br/>
+<br/>
+The interesting thing, is you're using a url shortening trick, which hides the real url. What happens if the url shortening service folds or gets bought out and shut down? What happens to the shortened url if the original site or page goes away? At least with the original url one can seek it in google's cache or the internet archive.<br/>
+<br/>
+I would even go as far as saying the citations are not place for shortened urls. Even if that means writing some horrendously long url.<br/>
+A shortened url is almost like making a summarization of a vital record.<br/>
+<br/>
+Just food for thought.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-09-24T19:57:00-07:00</div>
+<div class="text">Hi Brian,<br/>
+<br/>
+Totally guilty here on shortened URLs. Find myself using them on in e-mail correspondence and that seems to be carrying over to internet postings. :) --GJ</div></div><div class="comment"><div class="from"><strong>igoddard</strong> 2011-10-01T07:28:33-07:00</div>
+<div class="text">Citation styles belong to the presentation domain.  Doesn't BGC have enough on its hands working on the data domain.<br/>
+<br/>
+I'd suggest that anything "above" the actual evidence objects should have two roles.  One is to provide a provenance for the data object and the other is to help another researcher find it.<br/>
+<br/>
+For instance the provenance for the evidence that, despite a number of claims in IGI, the wife of John Goddard wasn't called Christiana and wasn't baptised on 27 Mar 1788 would be a page in the Holmfirth chapel register of Christenings and Churchings.<br/>
+<br/>
+In order to help a researcher find it I need to go on and say that the volume is in the West Yorks Archives.<br/>
+<br/>
+We don't need a citation style to convey those things.  If we were wanting to provide this information as a reference in a published article we would, of course, need to abide by a citation style.  But IME, at least as far as journals are concerned the style would be mandated by the publisher.  And they're not all the same.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-10-04T05:10:09-07:00</div>
+<div class="text">here here</div></div><div class="comment"><div class="from"><strong>brianjd</strong> 2011-09-23T14:27:40-07:00</div>
+<div class="text">I'm probably a lone voice here. I really hate the idea of needing an 800 page book to explain how to do a citation. If it takes more than two pages to describe how to cite every feasible type of source document then someone is spending WAY too much time thinking about the subject.<br/>
+<br/>
+It's really very simple and should be basic, but I know there's literally thousands of ways to cite something and every discipline has it's own way. Physicists do it like this, and psychologists do it like that and to make it worse psychiatrists do it somehow else.<br/>
+<br/>
+How freaking hard is it to say:<br/>
+&lt;the title of my source is this&gt;;&lt;title of the containing work&gt;;&lt;this is the author&gt;;&lt;volume, page(s) where found&gt;;&lt;date published&gt;;&lt;publisher&gt;;&lt;where you can find it&gt;.<br/>
+<br/>
+Seriously, what else do you really *NEED* to capture. Granted, I'm not making a proper citation, by probably any standard.<br/>
+<br/>
+I'm betting I've captured every important detail there. Who, what when and where. Now, the only thing left to do is to have a key at the beginning of the bibliography so people know how to read it.<br/>
+<br/>
+Seriously, this isn't rocket science. I know because that was my major in college (rocket science, not bibliographic science/art). There is in my not so humble opinion no place in this world for an 800+ page tome on how to write a freaking citation.<br/>
+<br/>
+But, like I said - I'm sure I'm a lone voice in the wilderness of bibliographic art. I saw nothing wrong with the citation software in the examples. They all looked quite capable, but I note all the example videos were for Endnote. Not one failed video for Zotero or RefWorks.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-09-23T14:33:22-07:00</div>
+<div class="text">I like Tamura's line, "Secondly, the number of templates keeps increasing. I'm only half-joking when I say that citation templates make citing sources easy, but that you now need a Wizard to help you find the right template."<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:2:http://bit.ly/pQxbuc --><a class="wiki_link_ext" href="http://bit.ly/pQxbuc" rel="nofollow">http://bit.ly/pQxbuc</a><!-- ws:end:WikiTextUrlRule:2 --></div></div></div><div class="comment"><div class="from"><strong>louiskessler</strong> 2011-09-24T10:07:24-07:00</div>
+<div class="title">Sources Referring To Other Sources</div>
+<div class="text">Example:<br/>
+<br/>
+I have a photocopy of a birth record. I made the copy from (1) the copy my Aunt Hilda made. She got it from (2) a book of compiled birth records at her local library. The book got it from (3) a certain microfilm tape. The microfilm tape was made from (4) original documents at a certain public records office.<br/>
+<br/>
+Implementation (GEDCOM-ish):<br/>
+<br/>
+0 @S1@ SOUR<br/>
+1 TITL Photocopy of Birth Record of XXX<br/>
+1 REPO @R1@ <br/>
+1 SOUR @S2@<br/>
+<br/>
+0 @S2@ SOUR<br/>
+1 TITL Book of Birth Records<br/>
+1 REPO @R2@<br/>
+1 SOUR @S3@<br/>
+<br/>
+0 @S3@ SOUR<br/>
+1 TITL Microfilm Tape #xxxx<br/>
+1 SOUR @S4@<br/>
+<br/>
+0 @S4@ SOUR<br/>
+1 TITL Birth Records<br/>
+1 REPO @R4@<br/>
+<br/>
+0 @R1@ REPO<br/>
+1 NAME Aunt Hilda<br/>
+<br/>
+0 @R2@ REPO<br/>
+1 NAME Local Library<br/>
+<br/>
+0 @R4@ REPO<br/>
+1 NAME Public Records Office<br/>
+<br/>
+The implementation is done by having a Source link within a Source record.<br/>
+<br/>
+I believe I've seen this implemented at least one level deep in some program before, but I can't recall which one.<br/>
+<br/>
+Louis</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-09-24T10:16:39-07:00</div>
+<div class="text">I see. Yes. Cool. TYTY.</div></div></div></body>
+</html>

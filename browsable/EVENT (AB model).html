@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>BetterGedcom - EVENT (AB model)</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">This entity type represents the current information known about an event that may have affected or involved one or more persons, groups or locations. E.g. it might contain information about: the San Francisco earthquake; an individual's birth - with details of their parents; the residence of a group of people in a location; a marriage ceremony; the merger of several railroads; the split of a US Territory location into State locations, etc.</span><br />
+<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;"> Note this is not designed to record comprehensive data about historical events - rather to summarise them in relation to family history.</span><br />
+<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">Note 2 - I have concerns if an EVENT can affect entities of mixed types - e.g. if an event can affect both PERSONs and LOCATIONs, say. This might make the data model tricky to negotiate. I am inclined to place a restriction on them to say an EVENT can only affect one type at once.</span><br />
+<br />
+<span style="font-size: 13px; font-weight: normal; line-height: 19px;">Attributes</span><br />
+<ul><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Event-type - mandatory - defines what type of event this is, e.g. &quot;birth&quot;, &quot;residence&quot;, &quot;merger&quot;. Values need to be defined by BG standard to accommodate all GEDCOM attributes or events that map over to BG EVENTs. In addition, BG must allow the user to extend this list of definitions as per current GEDCOM. User extensions must be identified in such a way as to be permanently safe from confusion with any new event-types defined by future BG standards (e.g. user extension values <em>might</em> be prefixed by underscore as in current GEDCOM).</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Event-name - optional - name or short description of this event - in some instances, no name is necessary because the type and the related people etc (with their roles) is sufficient to define the event. In other cases, a name (e.g. &quot;San Francisco earthquake&quot;) may be of use.</span></li><li><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Date</span> - optional - date or date range (coded up somehow), during or between which the event is believed to happen.</li><li>Location-pointer - optional - points to the LOCATION entity for the location at which this event takes place.</li><li>Location-qualifier - optional - if omitted, assume that the event takes place at the location in question. Possible values are codes corresponding to &quot;at&quot;, &quot;near&quot;, &quot;from&quot; or &quot;to&quot;.</li><li>Additional-location-pointer - optional - points to the LOCATION entity for an additional location of relevance to this event. For instance, &quot;emigration&quot; really requires two locations, to define from where someone emigrates and to where.</li><li>Additional-location-qualifier - optional - if omitted, assume that the event takes place at the additional location in question. Possible values are codes corresponding to &quot;at&quot;, &quot;near&quot;, &quot;from&quot; or &quot;to&quot;.<br />
+<br />
+</li></ul><span style="font-size: 13px; font-weight: normal; line-height: 19px;">Relationships</span><br />
+<ul><li>An EVENT may involve one or more PERSONs</li><li>An EVENT may involve one or more GROUPs</li><li>An EVENT may involve one or more LOCATIONs</li></ul>(<em>Possible</em> restriction that only one of the above three relationship types may hold at once for one EVENT - see above)<br />
+<ul><li>An EVENT may take place at one LOCATION (note attribute to define this relationship is already written above - location-pointer)</li><li>An EVENT may additionally take place at one LOCATION (note attribute to define this relationship is already written above - additional-location-pointer)</li></ul><br />
+<h1 id="toc0"> </h1>
+
+    </div>
+  </body>
+</html>

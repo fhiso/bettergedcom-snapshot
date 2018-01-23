@@ -1,0 +1,154 @@
+<html>
+<head>
+<title>BetterGedcom - Personal Name Data Standard</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<div class="includeError includeBody">[Invalid Include: Page not found: ]</div> <a class="wiki_link" href="HOME.html">HOME</a> &gt; <a class="wiki_link" href="Personal%20Names.html">Personal Names</a> &gt; Personal Name Data Standard<br/>
+(By Neil Parker)<br/>
+<h5 id="toc0"> </h5>
+<h5 id="toc1"><a name="x----Personal Names"></a><strong>Personal Names</strong></h5>
+ Currently there are no comprehensive data standards on PersonalNames that take into consideration Internationalization and the different naming customs of different cultures and languages. This draft proposed Personal Names Data Standard attempts to meet that goal.<br/>
+<br/>
+In additon there are six supporting documents for this:<br/>
+<ul><li>Personal Name Background</li><li>Personal Name Problems</li><li>Personal Name User Requirements</li><li>Personal Name Data Standard Rationale</li><li>Personal Name Standard Implementation Guide</li><li>Personal Name outstanding Issues</li></ul><br/>
+These documents are being updated and will be added about January 16, 2011.<br/>
+<br/>
+They are available as a .pdf or Microsoft Word 2010 .docx files<br/>
+<br/>
+These documents are written generically; not necesarily just to meet GEDCOM needs althought it attempts to do this. They will need rework once everyone has had an opportunity to critique them.<br/>
+<br/>
+Also hopefully some ideas are presented that may be useful for other data standard topics, i.e.<br/>
+<ul><li>do we want to publish both a data standard and a data standard rationale</li><li>do we need to publish our standards using a data represention language, if so, which one is easiest ot everyone to understand: BNF, EBNF, ISO BNF ...?</li><li>do we need ot publish a data naming standard</li><li>Should we not start developing other subsets of GEDCOM II, i.e a Date Standard (perhaps using Tom's Deadend data standards as a first draft), a Place Standard, a Note Standard, an Event standard, A Fact Standard etc?</li></ul><br/>
+Personal Name Data Standard contains a Logical Data Model of PersonName, its attributes, domains and link tables. The standard itself is described in ISO (International Standards Organization) Extended Backus-Naur Form (EBMF) Data Representation Language along with an explanatory narrative of the data standard. EBCD is described in Chapter 02 for those not familiar with it.<br/>
+<br/>
+Personal Name Background contains an outline of GEDCOM 5.5 features, but only as it pertains to PersonName<br/>
+<br/>
+Personal Name Problems contains a summary of Naming Conventions and their difference used thoughout the world and Problems with GEDCOM 5.5.<br/>
+<br/>
+Personal Name User Requirements attempt to list all known requirements for Personal Name.<br/>
+<br/>
+The Personal Name Data Standard Rationale attemps to explain why certain alternatives were adopted and this approach should facilitate the review process.<br/>
+<br/>
+Implementation Guide is a working paper and documents my personal comments on implementation issues.<br/>
+<br/>
+Personal Name Outstanding Issue is a working paper and document Outstanding issues.<br/>
+Note a new version Personal Name Data Standard V0.02 replace previous Versions. It contains about 50 small changes to improve the accuracy of text including remove of many Space in EBNF production rules which I missunderstood.<br/>
+<br/>
+<a href="files/Personal%20Name%20Data%20Standard%20V0.03.pdf">Personal Name Data Standard V0.03.pdf</a><br/>
+<br/>
+<a href="files/Personal%20Name%20Data%20Standard%20V0.03.docx">Personal Name Data Standard V0.03.docx</a><br/>
+<br/>
+Previous Obsolete Versions<br/>
+<a href="files/Personal%20Name%20Data%20Standard%20V0.02.pdf">Personal Name Data Standard V0.02.pdf</a><br/>
+<br/>
+<a href="files/Personal%20Name%20Data%20Standard%20V0.02.docx">Personal Name Data Standard V0.02.docx</a><br/>
+<br/>
+<a class="wiki_link" href="Personal%20Name%20Data%20Standard.pdf.html">Personal Name Data Standard.pdf</a><br/>
+<br/>
+<a href="file/view/Personal%20Name%20Data%20Standard.docx">Personal Name Data Standard.docx</a><br/>
+<br/>
+<a href="file/view/Personal%20Name%20Data%20Standard%20Rationale.pdf">Personal Name Data Standard Rationale.pdf</a><br/>
+<br/>
+<a href="file/view/Personal%20Name%20Data%20Standard%20Rationale.docx">Personal Name Data Standard Rationale.docx</a><br/>
+<br/>
+<a href="file/view/Personal%20Name%20Implementation%20Guidelines.pdf">Personal Name Implementation Guidelines.pdf</a><br/>
+<br/>
+<a href="file/view/Personal%20Name%20Implementation%20Guidelines.docx">Personal Name Implementation Guidelines.docx</a><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-16T11:38:54-08:00</div>
+<div class="title">Comments on V0.03</div>
+<div class="text">I have a few recommendations on this subject Neil. Some of these are already in the STEMMA model so I'll reference it, but some go beyond that too.<br/>
+<br/>
+1) Although using a BNF parser is powerful, that would be an approach more appropriate for a formal language such as programming languages. We should treat input of names (or "name acceptance") in a relaxed way, both in terms of character equivalences and token separators (aka punctuation). STEMMA does a relaxed tokenisation before matching the tokens against a sequence of patterns. The output name (or "generated name") would have standardised punctuation as you'd want it to appear. Your handling of input and output as separate parts is therefore in line with my own my thinking.<br/>
+<br/>
+2) Can we avoid terms like given-name or family-name and make it dependent on "name schemes" (see other posts under 'Personal Names')? Not all names have a family-name for instance. If the tokens of a name can be categorised according to the terms defined for a given name-scheme then we can use the categories to define sort-order and elided-forms (within each scheme) without burning specific terms like family-name into the standard. I'm not sure about using a locale in the standard since a given locale may still represent people of different cultures or religions with different name rules. A name-scheme could be a registerable meta-data entity in its own right. STEMMA avoids the Western terms but doesn't use name-schemes, and so it has missing functionality.<br/>
+<br/>
+2) We need a way of representing date-dependencies for changes of name (e.g. marriage, adoption, deed-poll, etc). I thought this was in your standard but I can only see one reference to "Date" and it's not in the context of To/From. Apologies if I'm missing it. STEMMA does this by adding From/Until attributes to a set of patterns that can be matched on input, plus one canonical name (i.e. the standardised output version)<br/>
+<br/>
+3) Can we define something that copes with Place names too? STEMMA tries this to take advantage of the similarities in needing to handle input versus output, and date dependencies. This similarity doesn't include (2) which is why STEMMA didn't do it.<br/>
+<br/>
+Tony</div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-16T11:40:04-08:00</div>
+<div class="text">Sorry, I obviously can't count :-) My 4 sections are 1,2,2,3. Arrgg!!<br/>
+<br/>
+Tony</div></div><div class="comment"><div class="from"><strong>ACProctor</strong> 2012-01-17T09:16:35-08:00</div>
+<div class="text">Neil, please don't view this as in any way a suggested design. However, I just wanted to illustrate better what I meant by a "name scheme" so that we can discuss it a little when you're next online. People may feel it's a little too involved in terms of management but I can't see how we're going to support all cultural variations otherwise, and still keep the standard usable by the existing vendors. I would hate to see this part of the standard go the same way as the ANSEL character set in GEDCOM because vendors either thought it was irrelevant to their market, too complicated to implement, or simply that they didn't follow it.<br/>
+<br/>
+Here's an illustration of a scheme for a typical "Western" name. Notice that the terminology is parameterised and not burnt in.<br/>
+<br/>
+&lt;NameScheme Id="Western"&gt;<br/>
+    &lt;Part Id="PreTitle" Min='0'/&gt;<br/>
+    &lt;Part Id="Given" Min='1' Max='1'/&gt;<br/>
+    &lt;Part Id="Middle" Min='0'/&gt;<br/>
+    &lt;Part Id="Family" Min='1' Max='1'/&gt;<br/>
+    &lt;Part Id="PostTitle" Min='0'/&gt;<br/>
+<br/>
+    &lt;Order Id="Formal"&gt;<br/>
+        &lt;Part Id="PreTitle"/&gt;<br/>
+        &lt;Part Id="Given"/&gt;<br/>
+        &lt;Part Id="Middle"/&gt;<br/>
+        &lt;Part Id="Family"/&gt;<br/>
+        &lt;Part Id="PostTitle"/&gt;<br/>
+    &lt;/Order&gt;<br/>
+<br/>
+    &lt;Order Id="Informal"&gt;<br/>
+        &lt;Part Id="Given"/&gt;<br/>
+        &lt;Part Id="Family"/&gt;<br/>
+    &lt;/Order&gt;<br/>
+<br/>
+    &lt;Order Id="SemiFormal"&gt;<br/>
+        &lt;Part Id="Given"/&gt;<br/>
+        &lt;Part Id="Middle" Initial='1' "Postfix="."/&gt;<br/>
+        &lt;Part Id="Family"/&gt;<br/>
+    &lt;/Order&gt;<br/>
+<br/>
+    &lt;Order Id="Listing"&gt;<br/>
+        &lt;Part Id="PostTitle" Postfix=","/&gt;<br/>
+        &lt;Part Id="PreTitle"/&gt;<br/>
+        &lt;Part Id="Given"/&gt;<br/>
+        &lt;Part Id="Middle"/&gt;<br/>
+        &lt;Part Id="Family"/&gt;<br/>
+    &lt;/Order&gt;<br/>
+&lt;/NameScheme&gt;<br/>
+<br/>
+As well as saying that our Western name tokens can be divided into 5 groupings, each with their own cardinality, it then goes on to indicate 4 possibly-standard scenarios for rendering a name from those tokens.<br/>
+<br/>
+If there were a second part of this definition that indicated what field titles to display in a form for data entry then the categorisation could be done automatically during that phase. I saw the registration and management of these resources having a lot in common with the Source+Citation area. I know it involves a lot of "hand waving" but bear with me.<br/>
+<br/>
+Let go back to my favourite name from the Blackadder TV series:<br/>
+<br/>
+"General Sir Anthony Cecil Hogmanay Melchett VC DSO KCB"<br/>
+<br/>
+The tokens in this name would be put in the following groups (somehow):<br/>
+<br/>
+PreTitle = 1 2<br/>
+Given = 3<br/>
+Middle = 4 5<br/>
+Family = 6<br/>
+PostTitle = 7 8 9<br/>
+<br/>
+Hence, the different name forms might be:<br/>
+<br/>
+Formal = "General Sir Anthony Cecil Hogmanay Melchett VC DSO KCB"<br/>
+Informal = "Anthony Melchett"<br/>
+SemiFormal = "Anthony C. H. Melchett"<br/>
+Listing = "Melchett, General Sir Anthony Cecil Hogmanay VC DSO KCB"<br/>
+<br/>
+Gene gave an example somewhere of a British royal where the family name wasn't used. This could be done by a different scheme, e.g. "BritishRoyaly" or something.<br/>
+<br/>
+What do you think?<br/>
+<br/>
+Tony</div></div></div></body>
+</html>

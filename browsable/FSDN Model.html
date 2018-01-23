@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>BetterGedcom - FSDN Model</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+<h1 id="toc0"><a name="FSDN (Family Search Developer Network, part of the LDS)"></a><span style="font-size: 13px; font-weight: normal; line-height: 19px;">FSDN (Family Search Developer Network, part of the LDS)</span></h1>
+<br/>
+FSDN is rumored to have a genealogical data model that it may make public at some future point.<br/>
+<br/>
+After the RootsTech meeting of February 2011 there was a large flurry of activity on the FSDN mail group about genealogical data models.<br/>
+<br/>
+Most of the posts to the mailing list are typical naive huff and puff about what the model MUST be and what the industry MUST do and so forth, but among the chaff there are a few thought provoking points to read. You can join the FSDN and get on the mailing list by visiting <a class="wiki_link_ext" href="https://devnet.familysearch.org/" rel="nofollow">https://devnet.familysearch.org/</a><br/>
+<br/>
+<h3 id="toc1"><a name="FSDN (Family Search Developer Network, part of the LDS)--Valuable analysis by twetmore:"></a>Valuable analysis by twetmore:</h3>
+<br/>
+If you register at FSDN you can read their API documentation. There is a great deal of info here that discusses both the details of their APIs and the details of their data model. The model is all described around an XML schema.<br/>
+<br/>
+The current FSDN API is based on allowing client programs to access and modify the FamilySearch's Family Tree. This is FS's answer to other attempts to define the family tree of humankind. Warning: the FS big family tree is just as junky as everybody else's. GIGO all the way.<br/>
+<br/>
+They define their API around three modules:<br/>
+<br/>
+Family Tree -- this is the API that accesses the big family tree.<br/>
+Authorities -- this is the API that lets you access "experts" in the areas of personal names, dates and calendars, and geographical places.<br/>
+Identity -- this is the API that allows a client program to gain access to the Family Search back end services.<br/>
+<br/>
+So the API allows you to download info from the tree, add new persons to the tree, add new facts about persons already in the tree, and so forth. The API for all of these operations involve downloading or uploading information about persons to the FSDN servers. All this information is transmitted in XML format adhering to the FSDN data model. Yes, there is an FSDN data model and you can read about it in detail in their documentation.<br/>
+<br/>
+That data model is fairly conventional. Its glossary is fun reading to see how they have chosen words and how they contrast to the words we use on Better GEDCOM. For example they use the term "assertion" as the overall word for all PFACTs in the Better GEDCOM terminology. That category is then broken down into different kinds of PFACTs like characteristics, citations (a term they completely wrongly, as a synonym for source), events, and so forth.<br/>
+<br/>
+Two very interesting things about their model. First includes a "two-tier" system for combining person records. They use the terms "person" and "persona" for this. A "person" can either be a collection of "assertions" or it can be a collection of "personas". Personas are created when users believe that two persons in the family tree are the same person so they request them to be combined. Instead of merging the info from the two persons together, a new person record consisting of the two personas is created. This is really orthogonal to the "evidence and conclusion" process in a strange way.<br/>
+<br/>
+Second they continue GEDCOM's ultra-simple concept of event as a single-role attribute of a person. In other words the model is still in the dark ages. Every person, even when not made up of multiple personas, is a conclusion object. You can create persons that are in effect evidence persons (from one source), but there is no requirement to do this, so evidence records are really not a concept in this model at all. It therefore is pretty useless as a serious model for research. But then again there is no attempt or apparently economic need to make these large, garbage-based, family trees of all mankind rigorous. It's too bad that Family Search is taking this route, when they could be working on building these mega family trees based on their own combination of information from all the raw evidence sources now available in their databases. Such family trees could be built up using the firm foundation of bedrock data before their contents are tweaked by data coming from untrusted sources. I have written an article about how these very rigorous trees can be build with automatic combination techniques, an article you can find on my DeadEnds web page.<br/>
+<br/>
+Well, I don't want to go down the path of writing a long description of their model and API, but it is easy to read about, and after awhile you can get used to the documentation. I would recommend anyone interested to register as a FSDN developer. It's free and puts you under no obligation. Once you register you have free access to all their documentation.
+    </div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>sharkey42</strong> 2011-03-13T23:37:59-07:00</div>
+<div class="title">API == model</div>
+<div class="text">Why don't we assume that the xml schema returned by the API <em>is</em> the model and critique that?</div><div class="comment"><div class="from"><strong>AdrianB38</strong> 2011-03-14T03:41:32-07:00</div>
+<div class="text">For me, 2 essential points:<br/>
+1. We don't - so far as I know - have details of the API at the necessary level of detail (correct me if I'm wrong!)<br/>
+2. Critiquing something without a target of your own to hand is risky as that thing determines your agenda. You can get tied up in (possibly useful) discussions about detail but miss a huge element that you yourself wanted when you thought back to it.</div></div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-14T08:45:41-07:00</div>
+<div class="text">Hi Sharkey:<br/>
+<br/>
+Is that something you can add to the dialog. Perhaps look at the navigation tab, "Comparisons." That wiki page explains how to access the BetterGEDCOM comparisons worksheet. <br/>
+<br/>
+Once you've gotten access to the worksheet, you can add information to it. The discussion tab to the comparisons page further supports the worksheet. <br/>
+<br/>
+Hope this helps. --GJ</div></div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-14T05:30:42-07:00</div>
+<div class="title">FSDN Model == XML Schema</div>
+<div class="text">If you register at FSDN you can read their API documentation. There is a great deal of info here that discusses both the details of their APIs and the details of their data model. The model is all described around an XML schema.<br/>
+<br/>
+The current FSDN API is based on allowing client programs to access and modify the FamilySearch's Family Tree. This is FS's answer to other attempts to define the family tree of humankind. Warning: the FS big family tree is just as junky as everybody else's. GIGO all the way.<br/>
+<br/>
+They define their API around three modules:<br/>
+<br/>
+Family Tree -- this is the API that accesses the big family tree.<br/>
+Authorities -- this is the API that lets you access "experts" in the areas of personal names, dates and calendars, and geographical places.<br/>
+Identity -- this is the API that allows a client program to gain access to the Family Search back end services.<br/>
+<br/>
+So the API allows you to download info from the tree, add new persons to the tree, add new facts about persons already in the tree, and so forth. The API for all of these operations involve downloading or uploading information about persons to the FSDN servers. All this information is transmitted in XML format adhering to the FSDN data model. Yes, there is an FSDN data model and you can read about it in detail in their documentation.<br/>
+<br/>
+That data model is fairly conventional. Its glossary is fun reading to see how they have chosen words and how they contrast to the words we use on Better GEDCOM. For example they use the term "assertion" as the overall word for all PFACTs in the Better GEDCOM terminology. That category is then broken down into different kinds of PFACTs like characteristics, citations (a term they completely wrongly, as a synonym for source), events, and so forth.<br/>
+<br/>
+Two very interesting things about their model. First includes a "two-tier" system for combining person records. They use the terms "person" and "persona" for this. A "person" can either be a collection of "assertions" or it can be a collection of "personas". Personas are created when users believe that two persons in the family tree are the same person so they request them to be combined. Instead of merging the info from the two persons together, a new person record consisting of the two personas is created. This is really orthogonal to the "evidence and conclusion" process in a strange way.<br/>
+<br/>
+Second they continue GEDCOM's ultra-simple concept of event as a single-role attribute of a person. In other words the model is still in the dark ages. Every person, even when not made up of multiple personas, is a conclusion object. You can create persons that are in effect evidence persons (from one source), but there is no requirement to do this, so evidence records are really not a concept in this model at all. It therefore is pretty useless as a serious model for research. But then again there is no attempt or apparently economic need to make these large, garbage-based, family trees of all mankind rigorous. It's too bad that Family Search is taking this route, when they could be working on building these mega family trees based on their own combination of information from all the raw evidence sources now available in their databases. Such family trees could be built up using the firm foundation of bedrock data before their contents are tweaked by data coming from untrusted sources. I have written an article about how these very rigorous trees can be build with automatic combination techniques, an article you can find on my DeadEnds web page.<br/>
+<br/>
+Well, I don't want to go down the path of writing a long description of their model and API, but it is easy to read about, and after awhile you can get used to the documentation. I would recommend anyone interested to register as a FSDN developer. It's free and puts you under no obligation. Once you register you have free access to all their documentation.</div><div class="comment"><div class="from"><strong>GeneJ</strong> 2011-03-14T07:13:24-07:00</div>
+<div class="text">Just an fyi about the term "citation."<br/>
+<br/>
+Some ppl do refer to individual entries in a source list (bibilogarphy) as "source list citations."<br/>
+<br/>
+Although it's different than terminology in TMG, I'm trying now to use the Evidence Explained Quicksheet terminology--ala, full reference note, subsequent reference note and source list entry.</div></div><div class="comment"><div class="from"><strong>sharkey42</strong> 2011-03-15T10:08:37-07:00</div>
+<div class="text">Tom, <br/>
+your statement about the 2-level FSDN model being orthogonal (or diagonal actually) to the e-c model is interesting, and I would like to understand the difference better.  Can you elaborate on that?<br/>
+<br/>
+I can see how the FSDN merge process creates a lot of unjustified garbage.  But the e-c model also involves merging of personas (tree or no tree).  Is there something in the model which helps, or is this just a processing issue?</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2011-03-16T20:57:28-07:00</div>
+<div class="text">Sharkey,<br/>
+<br/>
+Orthogonal wasn't such a good choice of word.<br/>
+<br/>
+The joining of personas into persons in the FSDN model, and the joining of evidence persons into conclusion persons in the DeadEnds model, are quite similar in some respects, but I guess the strictness is a little different. (I said DeadEnds because the DeadEnds model exists with the multi-tier system, and the same approach may not become part of the Better GEDCOM model).<br/>
+<br/>
+(And I think I've learned something more about the FSDN model. A person can be made up of many personas and also assertions of its own. I also learned a bit that the FSDN supports a way of prioritizing information when a person gets complex and might contain much similar info, for example if its different personas have multiple births or names or other things.)<br/>
+<br/>
+First difference is that the FSDN model is two-tier. Personas can be added to persons and taken away again. Persons can contains personas and assertions but not more persons. So a person is like a bag that can hold any number of personas. Personas can be moved from bag to bag. New person bags can be created at any time and personas from other bags put in them. The second difference is that when a persona is put inside a person or moved to another person the user doing it doesn't have to say why or give any justification. It's simply an operation the API supports. (So it is no wonder that these mega trees get so junky inside.)<br/>
+<br/>
+The DeadEnds model is multi-tiered. It does this by having only a single person concept -- there is no persona. Multiple persons can be grouped together and when this happens another person is created to hold (not by containment by by simple references/pointers) the persons that were grouped together. And the new person, because it is just another person, can be further grouped into other persons. This is the multi-tier concept. And instead of being allowed to just group the persons for no particular reason, in the DeadEnds model each one of these grouping steps is considered to be based on a specific conclusion made by the user as to why that particular group of persons should be brought together. There has to be a specific reason why that particular group of persons can be concluded to be the same real person. At least there SHOULD BE -- when you sell applications to the public, you have to be pretty careful forcing users to obey rules!) When the user makes that conclusion he "must" add a conclusion or proof note to the new person to say why the combination was made.<br/>
+<br/>
+Usually the two models would work the same way, as in most cases in the DeadEnds model there would be a layer of evidence persons, and they would be grouped together into just one higher level of conclusion person records. But I know from experience, having written all the software for an internet company that uses automatic combination algorithms to combine evidence, that the multi-tier approach can be useful often. By using only one data type, the multi-tier approach is easy. It is a bit ironic that using a two data type (person and persona) approach leads to a severe limitation (two-tiers), while simplifying the data down to one structure opens up the possibility of unlimited structuring, even though you'd rarely go beyond two tiers.<br/>
+<br/>
+Tom W.</div></div></div></body>
+</html>

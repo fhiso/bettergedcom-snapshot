@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>BetterGedcom - Model Fragment - Mashup Of Evidence &amp; Conclusion Models</title>
+<link href="static/style.css" rel="stylesheet" type="text/css"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<div class="wiki" id="content_view" style="display: block;">
+How do we support an evidence model while still fully supporting today’s software? This has been my concern. <br/>
+<br/>
+This concept accommodates conclusion-based data and software seamlessly. No change is required for conclusion-based software to continue to function just as it does now. This model also allows a robust and complete evidence-based model to be developed and used. Further, this concept allows a granular conversion of conclusion-based data to an evidence model, if desired, while maintaining the distinction between the two types of data throughout the process. Lastly, this idea allows users to choose how, or indeed if, they wish to change the way they enter information into their database.<br/>
+<br/>
+<h2 id="toc0"> </h2>
+<h2 id="toc1"><a name="x-Statement Entity"></a>Statement Entity</h2>
+ A Statement entity is a piece of data that functions as either evidence or an event/characteristic, depending upon conditions. A Statement entity has three different modes, each of which is: individually definable; functionally different; and distinct within the data model. This sort of Statement can be expressed as one entity with different options in a relational database and as different sub-entities of a Statement class in XML. The three modes are:<br/>
+<ol><li>Evidence-Statement mode</li><li>Passthrough-Statement mode</li><li>Compatibility-Statement mode</li></ol><br/>
+<u><strong>Evidence-Statement:</strong></u> Information extracted from a source that is relevant to a problem or question in one’s research. Evidence-Statements have exactly one source and can be referenced by zero to many Events, Characteristics or Individuals.<br/>
+<h3 id="toc2"><a name="x-Statement Entity-Makeup"></a>Makeup</h3>
+ Evidence Text – transcription – verbatim<br/>
+Originating source record reference (one and only one required)<br/>
+<span style="margin: 0px; padding: 0px;">-Evidence Location (used in source citation) – (needs further substructure like page, item or other subcategories)</span><br/>
+<span style="margin: 0px; padding: 0px;">-Evidence Notes- freeform text for analysis and use as endnote/footnote (do these functions need to be subcategorized?)</span><br/>
+<span style="margin: 0px; padding: 0px;">Evidence Linkage – container objects that house this evidence. There can be zero to many linkages to Individuals or other container objects. Linkage between evidence and Individuals does not indicate the Individual record linked plays a role in any part of the evidence.</span><br/>
+<br/>
+<u><strong>Passthrough-Statement:</strong></u> An Evidence-Statement that asserts an event or characteristic without further clarification. Passthrough statements can function in both Evidence-Statement and Passthrough-Statement mode at the same time. Passthrough-Statements cannot express a relationship independently since names in a statement have no linkage to Individuals in a database.<br/>
+<h3 id="toc3"><a name="x-Statement Entity-Makeup"></a>Makeup</h3>
+ Evidence Text – transcription – verbatim<br/>
+Originating source record reference (one and only one required)<br/>
+<span style="margin: 0px; padding: 0px;">-Evidence Location (used in source citation) – (does this need further substructure like page, item or other subcategories?)</span><br/>
+<span style="margin: 0px; padding: 0px;">-Evidence Notes- freeform text for analysis and use as endnote/footnote (do these functions need to be subcategorized?)</span><br/>
+<span style="margin: 0px; padding: 0px;">Evidence Linkage – container objects that house this evidence. There can be zero to many linkages to Individuals or other container objects. Linkage between evidence and Individuals does not indicate the Individual record linked plays a role in any part of the evidence.</span><br/>
+<span style="margin: 0px; padding: 0px;">Event Substructure (USE OF WHICH IS MANDATORY)</span><br/>
+<span style="margin: 0px; padding: 0px;">-Name substructure</span><br/>
+<span style="margin: 0px; padding: 0px;">-Date substructure</span><br/>
+<span style="margin: 0px; padding: 0px;">-Place substructure</span><br/>
+<br/>
+<u><strong>Compatibility-Statement:</strong></u> Conclusional information that may be unsourced or derived from one or many sources that asserts an event or characteristic.<br/>
+<h3 id="toc4"><a name="x-Statement Entity-Makeup"></a>Makeup</h3>
+ Evidence Text – transcription – verbatim<br/>
+Originating source record reference (there can be zero to many such references)<br/>
+<span style="margin: 0px; padding: 0px;">-Evidence Location (used in source citation) – (does this need further substructure like page, item or other subcategories?)</span><br/>
+<span style="margin: 0px; padding: 0px;">-Evidence Notes- freeform text for analysis and use as endnote/footnote (do these functions need to be subcategorized?)</span><br/>
+<span style="margin: 0px; padding: 0px;">Evidence Linkage – container objects that house this evidence. There can be zero to many linkages to Individuals or other container objects. Linkage between evidence and Individuals does not indicate the Individual record linked plays a role in any part of the evidence.</span><br/>
+<span style="margin: 0px; padding: 0px;">Event Substructure (USE OF WHICH IS MANDATORY)</span><br/>
+-Name substructure<br/>
+<span style="margin: 0px; padding: 0px;">-Date substructure</span><br/>
+<span style="margin: 0px; padding: 0px;">-Place substructure</span><br/>
+<br/>
+<br/>
+<span style="font-size: 15px; line-height: 18px;"><strong>Other Definitions</strong></span><br/>
+<u><strong>Individual:</strong></u> A record representing a real person in a database. <br/>
+<br/>
+<u><strong>Event/Characteristic:</strong></u> Two types of assertions not specifically described here that describe an Individual or Individuals being or doing something. <br/>
+<br/>
+<h1 id="toc5"><a name="Source: A record representing a physical or logical thing (e.g., a book, database, article, newspaper, etc.) from which information is gathered. Sources can reference other sources (i.e., sources can be recursive)."></a><span style="font-size: 14px; font-weight: normal; line-height: 16px;"><u><strong>Source:</strong></u> A record representing a physical or logical thing (e.g., a book, database, article, newspaper, etc.) from which information is gathered. Sources can reference other sources (i.e., sources can be recursive).</span></h1>
+<br/>
+<u><strong>Place:</strong></u> A record representing a locality that is not further defined for use in this concept.<br/>
+<br/>
+<span style="font-size: 14px; font-weight: normal; line-height: 16px;">Sorry, duty has been calling. This is as far as I've managed to document my ideas, but I'd rather you guys adapt this concept than develop it myself.</span><br/>
+<br/>
+<h2 id="toc6"><a name="Source: A record representing a physical or logical thing (e.g., a book, database, article, newspaper, etc.) from which information is gathered. Sources can reference other sources (i.e., sources can be recursive).-Problems:"></a>Problems:</h2>
+<span style="font-size: 14px; font-weight: normal; line-height: 16px;">How are roles and relationships and documentation for them expressed properly, particularly in the case of Passthrough-Statements?</span>
+</div>
+<hr/><h1>Comments</h1><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-08T18:31:49-08:00</div>
+<div class="title">Statement</div>
+<div class="text">Greg,<br/>
+<br/>
+I hope you can clarify what you mean by your statement types.<br/>
+<br/>
+I understand what you mean by evidence-statement. Do you think an evidence-statement would be represented in the model? I have wondered about this a lot. In my version one DeadEnds model you will see an Evidence class that I believe is exactly what you mean by an evidence-statement. I even described it is some detail in that document. In version 2 I left it out because I was thinking that an evidence-statement is the most granular type of source so it could be covered by a source record.<br/>
+<br/>
+As far as the passthrough- and compatibility-statements go, I hardly have a clue as to what you're talking about.<br/>
+<br/>
+Tom W.</div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-12-08T18:47:38-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+This is what happens when you've about 6 days behind on your commitments.<br/>
+<br/>
+My presentation of this is painfully bad. Give me a day or so.<br/>
+<br/>
+Yes, an Evidence-Statement would be an entity. It would include a whole bunch of stuff. I see that my ideas as posted doesn't even show anything. I'll give this some time in the next couple of hours.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-09T20:21:20-08:00</div>
+<div class="text">Greg writes:<br/>
+<br/>
+"Passthrough-Statement<br/>
+Evidence Text – transcription – verbatim<br/>
+Originating source record reference (one and only one required)<br/>
+-Evidence Location (used in source citation) – (does this need further substructure like page, item or other subcategories?)<br/>
+-Evidence Notes- freeform text for analysis and use as endnote/footnote (do these functions need to be subcategorized?)<br/>
+Evidence Linkage – container objects that house this evidence. There can be zero to many linkages to Individuals or other container objects. Linkage between evidence and Individuals does not indicate the Individual record linked plays a role in any part of the evidence.<br/>
+Event Substructure (USE OF WHICH IS MANDATORY)<br/>
+-Name substructure<br/>
+-Date substructure<br/>
+-Place substructure"<br/>
+<br/>
+Greg,<br/>
+<br/>
+Thanks for more clarification; I am still have trouble understanding. For example, what is a "mode"? What is "Evidence linkage"? What is a "container object." What is a "Name substructure"? In linkages, what links to what and why? In container objects what contains what and why? And especially, what does "passthrough" mean? Without answers to these questions I am without a paddle.<br/>
+<br/>
+I have read the page a number of times trying translate into the terms I understand, so I'll try to do a little intepretation in hopes you can see where I am going wrong and how to set me on the path to enlightenment. My wife would sure love it if you could do that.<br/>
+<br/>
+To my mind there are five record level concepts wrapped up in your definition of a Passthrough-Statement -- Evidence, Source, Event, Person (though not explicitly named) and Place -- and two major sub-structure concepts -- Name and Date. Frankly I think you've got them all mashed together and they should be separated into a group of objects that reference each other (sorry, you do have Source outside the hash). But it's just my opinion, and I probably misundertand what you are trying to say anyway.<br/>
+<br/>
+First is Evidence, which to me is the actual item of final information that one finds that has data that is of interest -- it mentions persons by name, it mentions events that have occurred, it mentions relationships between people. For me this is indeed an Entity object, and I think of it as a subtype of a Source. (A Source is simply something that you get information from and they are naturally arranged hierarchically. Evidence is "just" the leaves of the Source hierarchy where the the final "carbon marks on paper" are read an interpreted and turned into genealogical data objects.) In my first DeadEnds document I described in detail what an Evidence record could contain. Check out page 5 in<br/>
+<br/>
+<!-- ws:start:WikiTextUrlRule:35:http://deadendssoftware.com/DeadEndsDataModel.pdf --><a class="wiki_link_ext" href="http://deadendssoftware.com/DeadEndsDataModel.pdf" rel="nofollow">http://deadendssoftware.com/DeadEndsDataModel.pdf</a><!-- ws:end:WikiTextUrlRule:35 --><br/>
+<br/>
+Second is a Source, which is where the Evidence comes from. Each Source can refer to another Source which describes where that Source comes from, and so on. To me "Evidence Location" is "just" the source chain, and not an attribute of the Passthrough-Statement.<br/>
+<br/>
+[I know you are completely against the idea of using a single Source entity to handle evidence, books, libraries, and so on. But you don't seem to mind using the concept of a Group to handle families, clubs, regiments and so on. All it takes is a type attribute to discriminate the different Source types, just as it takes a type attribute to discriminate Group types.]<br/>
+<br/>
+Third is an Event Substructure -- it looks like you are putting the Event substructure inside the Passthrough-Statement, which to me means you don't consider an Event entity taken from Evidence to be a "first class citizen." The Event entity is one of the fundamental genealogical concepts and and should, in my opinion, stand on its own two feet. Certainly every model (except GEDCOM itself, though EVENT GEDCOM fixed this) we've seen makes Events first class citizens. If you reversed this a bit, and were defining an Event entity and included the evidence text within the Event object, then it would make a lot more sense to me. Or if you defined the Passthrough-Statement to have a reference to an independent Event object this would be fine-ish. Though in that case I'd say the pointers are in the wrong direction. I think it would be better for an Event to refer to the Evidence it came from, rather than have the Evidence refer to the Event/s and Person/s that the Evidence mentions.<br/>
+<br/>
+Fourth is Person (in case that's what you mean by Name) -- this confuses me the most, primarily because you haven't defined Event in enough detail yet. Especially what is a Name substructure -- is this the name of the Event or the name of a Person role player in the Event? If the former, where are the Person entities playing the roles; if the latter why is there only one role player? Are the Person entites what you mean by the name substructures? If so you would have demoted Persons to a tertiary level in the model. But I'm pretty sure my interpretation is all wrong here. If the Evidence mentioned the age of a Person, or the occupation of a Person, or a medical condition of a Person, or the national origin of a person, or the native language of a person, where would that information go in your structures? In my opinion the evidence-level Person is the right place to put all this stuff, but it's not covered in the part of your model we can see; hope you'll cover that part soon.<br/>
+<br/>
+Sorry to be such a hound dog, but I would like to understand.<br/>
+<br/>
+Tom W.</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-12-09T21:14:31-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+It's not your fault you don't understand. This is an extremely badly expressed idea.<br/>
+<br/>
+A mode refers to the idea that this can be expressed as one type of data entity with different rules based upon if-then statements. (Yay RDBMS).<br/>
+<br/>
+Evidence linkage only refers to container objects like Individuals that can house Evidence-Statements. Such housing of Evidence-Statements is merely a convenience, as such housing has no other relational purpose beyond convenience when viewing potentially useful information together.<br/>
+<br/>
+A container object is simply a type of data entity that is capable of having certain other entities like Evidence-Statements  nested under it.<br/>
+<br/>
+Name substructure is meant to refer to a commonly used framework used for person names that should be plugged in. In other words, I'm indicating a person name be used without giving details about how that name is structures or what it contains.<br/>
+<br/>
+Individuals are presumed to be container object. There might be others, but discussing what they might be only complicates an already messy concept.<br/>
+<br/>
+"Passthrough" is my bootleg way of allowing lazy people to enter information about a piece of evidence that is clear enough to be inferred directly as an event itself. Otherwise Events are separate entities akin to what exists now. <br/>
+<br/>
+"To my mind there are five record level concepts wrapped up in your definition of a Passthrough-Statement " Yeah, you've got it about right. I'm just trying to provide three modes. This was working less and less as I worked on it, and I am now sick and not thinking too clearly, and I had worked on it one day, thinking I had finished it to a degree, only to realize that must've been a dream. This passthough concept might need chucking into the trash entirely. I was simply trying to make a way for people to cheat. Maybe this needs to be expressed as an event with "filler" records in the evidence slot as suggested in GenTech? (By the way, I know several people would love to hear your opinion of GenTech and how your ideas which embrace a lot of basic concepts of GenTech actually differ significantly.)<br/>
+<br/>
+A source and evidence have different data elements regarding notes and referential information such as page or other specific locating information (at least potentially). But yes, they're very similar.<br/>
+<br/>
+Yes, Tom, these data types in many cases can be nearly identical. However, they do serve different purposes. They also do have some different (if sometimes minute) aspects. These differences, however, are critical and are crucial to specify.<br/>
+<br/>
+"it looks like you are putting the Event substructure inside the Passthrough-Statement, which to me means you don't consider an Event entity taken from Evidence to be a 'first class citizen.'" Yeah, it's a crappy solution. If you can see what I tried to accomplish, I'll be happy in spite of my miserable failure in achieving my goals.<br/>
+<br/>
+Overall, in spite of the well-deserved pain, I love your comments. Posting this at all embarrassed me when I actually went back and read it.</div></div><div class="comment"><div class="from"><strong>ttwetmore</strong> 2010-12-10T07:20:33-08:00</div>
+<div class="text">Greg,<br/>
+<br/>
+Thanks for more info. We are likely having trouble making our vocabularies synch up.<br/>
+<br/>
+For example, container object. You imply that one entity can contain other entities, with the example of an Individual housing an Evidence-Statement; you also used the term "nested under" for this. For me an entity is a more stand-alone, record-like, indexable thing, so entities don't contain each other, they refer to each other. I tend to use the term structure or sub-structure for "big" things that are inside/contained-by entities (e.g., name structures, date structures).<br/>
+<br/>
+In most models there are entities, and the entities refer to one another, not by containment, but by using keys to refer to each other. In other words they don't contain one another, they "point" to one another; think of all the key columns in relational tables. I'm guessing you have a more expansive view of containment than I do, and that you might therefore include this reference type of relationship within your idea of containment. If this is so then your ideas make a lot of sense to me.<br/>
+<br/>
+In data models we normally talk about there being two types of important relationships -- <br/>
+<br/>
+is-a -- when one entity type is a type of another -- examples for us would be an overall entity type that provides the idea of keys and general attributes, and then entities like Persons that extend this overall entity to have a set of PACTs appropriate for persons. Another example that comes up in BG is the notion of a Family and a Group. Most people seem to feel that Family is-a Group is-a Entity. And you can see that I have often argued that Evidence is-a Source is-a Entity.<br/>
+<br/>
+has-a -- when one entity type contains other values, often PACTs, but also often big substructures and references -- examples for us would be a Person has-a Name, an Event has-a Date, an Event has-a RoleReference.<br/>
+<br/>
+But there are different types of has-a's. For example, in something like a simple attribute, has-a just means that the entity has the attribute directly inside of itself. However, if the thing "being had" is a more complex object, it may be physically contained within the outer object, or it may be referred to by key by the outer object. Both are possible in the same model. For example, in the DeadEnds model, a Note sub-structure can be placed almost anywhere within any entity or its sub-structures, but there can also be separate Note eitities so they can be referred to by many objects. So an entity can has-a Note substructure or it can has-a reference to a Note entity.<br/>
+<br/>
+I think that it is in understanding what you and I mean about the has-a relationship that might explain my confusion.<br/>
+<br/>
+When you say Individuals are presumed to be container objects I guess you might mean they can contain Events, Evidence, Names, Notes, and so on. If your notion of containment does include has-a external references then this seems right to me. I wonder if you also mean that an Individual could contain/has-a other Person objects that provide the evidence of the Individual? This is one of the key items of genealogical data modeling that I always look for and strees the most, as I think it is the key for models to be able to support handling evidence as well as conclusions. And is it safe to assume you are using the term Individual as an explict way of separating a conclusion-based Person from an evidence-based Person?<br/>
+<br/>
+So when you say container object I now think of it as being any entity that refers to any other entity, no matter what kind of reference it is.<br/>
+<br/>
+The ideas of modes and passthrough still elude me so I will stop thinking about them!<br/>
+<br/>
+Tom Wetmore</div></div><div class="comment"><div class="from"><strong>greglamberson</strong> 2010-12-10T10:01:09-08:00</div>
+<div class="text">Tom,<br/>
+<br/>
+I was having difficulty with that language but didn't know why. You've hit the nail on the head. I should be referring to Individuals as pointing to Evidence (although, again, this does not imply a relationship between them).<br/>
+<br/>
+In the specific case of evidence linkage, this is a more expansive view of a relationship (which is layman's terms is something like a possible association).<br/>
+<br/>
+You're spot-on in your unmangling of my language: Individual records point to events, evidence, etc. I have not embraced the idea that an Individual can "has-a" another Individual since individuals are defined as representing real persons. Combining people is thus destructive. However, I prefer this to linkage of personas (to use a GenTech term) because I don't like your idea of linkage without a clear audit trail and I don't think GenTech's usage of a group association is realistic. Besides, genealogists are going to expect a representation of a real person that they can resolve other things to. A lot of this may be my prejudices related to a lack of understanding, or not.<br/>
+<br/>
+I do not confer personage on evidence as you do, so yes, you're right. This is a way in which i differentiate between evidence and conclusion persons.<br/>
+<br/>
+I'm half a hair from chucking the passthrough idea entirely, as it's a mess. I've got lots going on, but I'll go through and correct my language later. Do you have an idea of how one might allow a user to convert very explicit evidence into an equivalent event without re-entering the info? Should there just be "implied" evidence (passthrough evidence was an attempt at doing this, but perhaps I have focused too much on evidence being absolutely central and maybe this is simply not the world we live in)? GenTech suggests implied evidence, but I have not embraced this (obviously).<br/>
+<br/>
+My attempts to add ideas are focused on distinction of data (particularly evidence) and data definitions. I think these aspects will help address previous problems. I think it'll be more productive to address these concerns in relation to others' ideas rather than trying to develop my own ideas, but I still want to illustrate what I'm thinking.</div></div></div></body>
+</html>
