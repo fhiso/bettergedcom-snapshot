@@ -4,3 +4,4 @@
 .comment .from strong { color: black; }
 .comment + .comment { margin-top: 2em; }
 .comment .comment + .comment { margin-top: 1em; }
+.comment .text { font-family: inherit; } /* needed to override common inline css in files (picked back class name in comment inliner, apparently) */
