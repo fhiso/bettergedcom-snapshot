@@ -1,42 +1,42 @@
-http://archive.fhiso.org/BetterGEDCOM/About Citations.html
+http://archive.fhiso.org/BetterGEDCOM/About%20Citations.html
 http://archive.fhiso.org/BetterGEDCOM/ACProctor.html
-http://archive.fhiso.org/BetterGEDCOM/A Data Model for Sources and Citations.html
-http://archive.fhiso.org/BetterGEDCOM/Add footnotes to pages.html
+http://archive.fhiso.org/BetterGEDCOM/A%20Data%20Model%20for%20Sources%20and%20Citations.html
+http://archive.fhiso.org/BetterGEDCOM/Add%20footnotes%20to%20pages.html
 http://archive.fhiso.org/BetterGEDCOM/AdrianB38.html
 http://archive.fhiso.org/BetterGEDCOM/amannp.html
-http://archive.fhiso.org/BetterGEDCOM/An architecture for sources, reference notes and bibliographies.html
-http://archive.fhiso.org/BetterGEDCOM/Ancestors for Sale.html
-http://archive.fhiso.org/BetterGEDCOM/Ancestral Quest.html
+http://archive.fhiso.org/BetterGEDCOM/An%20architecture%20for%20sources%2C%20reference%20notes%20and%20bibliographies.html
+http://archive.fhiso.org/BetterGEDCOM/Ancestors%20for%20Sale.html
+http://archive.fhiso.org/BetterGEDCOM/Ancestral%20Quest.html
 http://archive.fhiso.org/BetterGEDCOM/Andy_Hatchett.html
-http://archive.fhiso.org/BetterGEDCOM/Andy_s Test Page.html
-http://archive.fhiso.org/BetterGEDCOM/Anita Stuever.html
+http://archive.fhiso.org/BetterGEDCOM/Andy_s%20Test%20Page.html
+http://archive.fhiso.org/BetterGEDCOM/Anita%20Stuever.html
 http://archive.fhiso.org/BetterGEDCOM/AnitaStuever.html
-http://archive.fhiso.org/BetterGEDCOM/Application Data.html
-http://archive.fhiso.org/BetterGEDCOM/Application Details - TMG.html
-http://archive.fhiso.org/BetterGEDCOM/Application overview.html
-http://archive.fhiso.org/BetterGEDCOM/Approaches To Standardization.html
+http://archive.fhiso.org/BetterGEDCOM/Application%20Data.html
+http://archive.fhiso.org/BetterGEDCOM/Application%20Details%20-%20TMG.html
+http://archive.fhiso.org/BetterGEDCOM/Application%20overview.html
+http://archive.fhiso.org/BetterGEDCOM/Approaches%20To%20Standardization.html
 http://archive.fhiso.org/BetterGEDCOM/AQ.html
 http://archive.fhiso.org/BetterGEDCOM/Archive.html
-http://archive.fhiso.org/BetterGEDCOM/A request for help compiling GEDCOM DATE information.html
+http://archive.fhiso.org/BetterGEDCOM/A%20request%20for%20help%20compiling%20GEDCOM%20DATE%20information.html
 http://archive.fhiso.org/BetterGEDCOM/bamcphee.html
 http://archive.fhiso.org/BetterGEDCOM/baptismal.html
 http://archive.fhiso.org/BetterGEDCOM/BeardedManinAHat.html
 http://archive.fhiso.org/BetterGEDCOM/Behold.html
-http://archive.fhiso.org/BetterGEDCOM/Best Practices.html
-http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM Attempt.html
-http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM Citation Elements.html
-http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM Comparisons.html
-http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM Developers Meeting 2012-07-02 (July 02).html
-http://archive.fhiso.org/BetterGEDCOM/BetterGedcom E_C Specification.html
-http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM Readership Statistics.html
-http://archive.fhiso.org/BetterGEDCOM/Better GEDCOM Requirements Catalog.html
-http://archive.fhiso.org/BetterGEDCOM/BetterGedcom Rules and Guidelines.html
-http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM Sandbox.html
-http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM test suite.html
-http://archive.fhiso.org/BetterGEDCOM/BG Data Model Discussion.html
-http://archive.fhiso.org/BetterGEDCOM/BG Requirements Catalog Index.html
-http://archive.fhiso.org/BetterGEDCOM/BG Specific Terminology.html
-http://archive.fhiso.org/BetterGEDCOM/BG Terminology proposals.html
+http://archive.fhiso.org/BetterGEDCOM/Best%20Practices.html
+http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM%20Attempt.html
+http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM%20Citation%20Elements.html
+http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM%20Comparisons.html
+http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM%20Developers%20Meeting%202012-07-02%20(July%2002).html
+http://archive.fhiso.org/BetterGEDCOM/BetterGedcom%20E_C%20Specification.html
+http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM%20Readership%20Statistics.html
+http://archive.fhiso.org/BetterGEDCOM/Better%20GEDCOM%20Requirements%20Catalog.html
+http://archive.fhiso.org/BetterGEDCOM/BetterGedcom%20Rules%20and%20Guidelines.html
+http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM%20Sandbox.html
+http://archive.fhiso.org/BetterGEDCOM/BetterGEDCOM%20test%20suite.html
+http://archive.fhiso.org/BetterGEDCOM/BG%20Data%20Model%20Discussion.html
+http://archive.fhiso.org/BetterGEDCOM/BG%20Requirements%20Catalog%20Index.html
+http://archive.fhiso.org/BetterGEDCOM/BG%20Specific%20Terminology.html
+http://archive.fhiso.org/BetterGEDCOM/BG%20Terminology%20proposals.html
 http://archive.fhiso.org/BetterGEDCOM/bhippe.html
 http://archive.fhiso.org/BetterGEDCOM/Bib2008.html
 http://archive.fhiso.org/BetterGEDCOM/brantgurga.html
@@ -44,290 +44,290 @@ http://archive.fhiso.org/BetterGEDCOM/brianjd.html
 http://archive.fhiso.org/BetterGEDCOM/Calendar.html
 http://archive.fhiso.org/BetterGEDCOM/cawhite07.html
 http://archive.fhiso.org/BetterGEDCOM/cdchapman.html
-http://archive.fhiso.org/BetterGEDCOM/C from E.html
-http://archive.fhiso.org/BetterGEDCOM/CHARACTERISTIC (BJD).html
-http://archive.fhiso.org/BetterGEDCOM/Characteristic entity.html
-http://archive.fhiso.org/BetterGEDCOM/Citation Elements.html
-http://archive.fhiso.org/BetterGEDCOM/Citation Entity.html
-http://archive.fhiso.org/BetterGEDCOM/Citation Graphics.html
-http://archive.fhiso.org/BetterGEDCOM/Citation Mechanics.html
-http://archive.fhiso.org/BetterGEDCOM/Citation Specific Fields.html
+http://archive.fhiso.org/BetterGEDCOM/C%20from%20E.html
+http://archive.fhiso.org/BetterGEDCOM/CHARACTERISTIC%20(BJD).html
+http://archive.fhiso.org/BetterGEDCOM/Characteristic%20entity.html
+http://archive.fhiso.org/BetterGEDCOM/Citation%20Elements.html
+http://archive.fhiso.org/BetterGEDCOM/Citation%20Entity.html
+http://archive.fhiso.org/BetterGEDCOM/Citation%20Graphics.html
+http://archive.fhiso.org/BetterGEDCOM/Citation%20Mechanics.html
+http://archive.fhiso.org/BetterGEDCOM/Citation%20Specific%20Fields.html
 http://archive.fhiso.org/BetterGEDCOM/clarkroots.html
 http://archive.fhiso.org/BetterGEDCOM/Clustermap.html
-http://archive.fhiso.org/BetterGEDCOM/Container _ File Issues.html
+http://archive.fhiso.org/BetterGEDCOM/Container%20_%20File%20Issues.html
 http://archive.fhiso.org/BetterGEDCOM/Data.html
-http://archive.fhiso.org/BetterGEDCOM/Data Model proposed by Adrian Bruce.html
-http://archive.fhiso.org/BetterGEDCOM/Data Model proposed by Brian J Densmore.html
-http://archive.fhiso.org/BetterGEDCOM/Data Models.html
-http://archive.fhiso.org/BetterGEDCOM/Date _ Time Elements.html
-http://archive.fhiso.org/BetterGEDCOM/DeadEnds Model.html
-http://archive.fhiso.org/BetterGEDCOM/Defining E_C for BetterGEDCOM.html
+http://archive.fhiso.org/BetterGEDCOM/Data%20Model%20proposed%20by%20Adrian%20Bruce.html
+http://archive.fhiso.org/BetterGEDCOM/Data%20Model%20proposed%20by%20Brian%20J%20Densmore.html
+http://archive.fhiso.org/BetterGEDCOM/Data%20Models.html
+http://archive.fhiso.org/BetterGEDCOM/Date%20_%20Time%20Elements.html
+http://archive.fhiso.org/BetterGEDCOM/DeadEnds%20Model.html
+http://archive.fhiso.org/BetterGEDCOM/Defining%20E_C%20for%20BetterGEDCOM.html
 http://archive.fhiso.org/BetterGEDCOM/Definitions.html
 http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting14Nov2011OfficialStatement.html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting 2012-01-30 (Jan 30).html
-http://archive.fhiso.org/BetterGEDCOM/Developers Meeting.html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-01-03 (Jan 03).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-01-17 (Jan 17).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-01-31 (Jan 31).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-02-14 (Feb 17).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-02-21 (Feb 21).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-02-28 (Feb 28).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-03-21 (Mar 21).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-03-28 (Mar 28).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-04-04 (Apr 04).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-04-11 (Apr 11).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-05-02 (May 2).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-05-09 (May 09).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-05-16 (May 16).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-06-06 (Jun 06).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-06-20 (Jun 20).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-06-27 (Jun 27).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-07-11 (Jul 11).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-07-18 (Jul 18).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-07-25 (Jul 25).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-08-01 (Aug 01).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-08-08 (Aug 8).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-08-22 (Aug 22).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-08-29 (Aug 29).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-09-19 (Sep 19).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-09-26 (Sep 26).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-10-17 (Oct 17).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-10-24 (Oct 24).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-10-31 (Oct 31).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-11-07 (Nov 07).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-11-21 (Nov 21).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-11-28 (Nov 28).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-12-12 (Dec 12).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2011-12-19 (Dec 19).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes 2012-01-02 (Jan 02).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting Notes 2012-01-09 (Jan 09).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting Notes 2012-01-16 (Jan 16).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting Notes 2012-01-23 (Jan 23).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting Notes 2012-02-03 (Feb 13).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting Notes 2012-02-06 (Feb 06).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting Notes 2012-02-20 (Feb 20).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting Notes 2012-03-05 (Mar 05).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting Notes 2012-03-12 (Mar 12).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting Notes 2012-03-26 (Mar 26).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting Notes 2012-04-09 (Apr 09).html
-http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting Notes 2012-08-20 (Aug 20).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%202012-01-30%20(Jan%2030).html
+http://archive.fhiso.org/BetterGEDCOM/Developers%20Meeting.html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-01-03%20(Jan%2003).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-01-17%20(Jan%2017).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-01-31%20(Jan%2031).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-02-14%20(Feb%2017).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-02-21%20(Feb%2021).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-02-28%20(Feb%2028).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-03-21%20(Mar%2021).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-03-28%20(Mar%2028).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-04-04%20(Apr%2004).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-04-11%20(Apr%2011).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-05-02%20(May%202).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-05-09%20(May%2009).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-05-16%20(May%2016).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-06-06%20(Jun%2006).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-06-20%20(Jun%2020).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-06-27%20(Jun%2027).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-07-11%20(Jul%2011).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-07-18%20(Jul%2018).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-07-25%20(Jul%2025).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-08-01%20(Aug%2001).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-08-08%20(Aug%208).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-08-22%20(Aug%2022).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-08-29%20(Aug%2029).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-09-19%20(Sep%2019).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-09-26%20(Sep%2026).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-10-17%20(Oct%2017).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-10-24%20(Oct%2024).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-10-31%20(Oct%2031).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-11-07%20(Nov%2007).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-11-21%20(Nov%2021).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-11-28%20(Nov%2028).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-12-12%20(Dec%2012).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202011-12-19%20(Dec%2019).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes%202012-01-02%20(Jan%2002).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%20Notes%202012-01-09%20(Jan%2009).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%20Notes%202012-01-16%20(Jan%2016).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%20Notes%202012-01-23%20(Jan%2023).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%20Notes%202012-02-03%20(Feb%2013).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%20Notes%202012-02-06%20(Feb%2006).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%20Notes%202012-02-20%20(Feb%2020).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%20Notes%202012-03-05%20(Mar%2005).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%20Notes%202012-03-12%20(Mar%2012).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%20Notes%202012-03-26%20(Mar%2026).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%20Notes%202012-04-09%20(Apr%2009).html
+http://archive.fhiso.org/BetterGEDCOM/DevelopersMeeting%20Notes%202012-08-20%20(Aug%2020).html
 http://archive.fhiso.org/BetterGEDCOM/DevelopersMeetingNotes24October2011.html
-http://archive.fhiso.org/BetterGEDCOM/Developing the Organization.html
-http://archive.fhiso.org/BetterGEDCOM/Drew Smith Appointed Chair of FHISO.html
+http://archive.fhiso.org/BetterGEDCOM/Developing%20the%20Organization.html
+http://archive.fhiso.org/BetterGEDCOM/Drew%20Smith%20Appointed%20Chair%20of%20FHISO.html
 http://archive.fhiso.org/BetterGEDCOM/drhent.html
-http://archive.fhiso.org/BetterGEDCOM/DTO Forward Looking.html
-http://archive.fhiso.org/BetterGEDCOM/DTO Starting Summary.html
-http://archive.fhiso.org/BetterGEDCOM/DTO Wiki Links.html
-http://archive.fhiso.org/BetterGEDCOM/EE _ GPS Support.html
-http://archive.fhiso.org/BetterGEDCOM/Evaluation Of Existing Data Models.html
-http://archive.fhiso.org/BetterGEDCOM/EVENT (AB model).html
-http://archive.fhiso.org/BetterGEDCOM/EVENT (BJD model).html
-http://archive.fhiso.org/BetterGEDCOM/Event entity.html
-http://archive.fhiso.org/BetterGEDCOM/Event Gedcom.html
-http://archive.fhiso.org/BetterGEDCOM/Evidence and Conclusion Process.html
-http://archive.fhiso.org/BetterGEDCOM/evidence vs. conclusions.html
+http://archive.fhiso.org/BetterGEDCOM/DTO%20Forward%20Looking.html
+http://archive.fhiso.org/BetterGEDCOM/DTO%20Starting%20Summary.html
+http://archive.fhiso.org/BetterGEDCOM/DTO%20Wiki%20Links.html
+http://archive.fhiso.org/BetterGEDCOM/EE%20_%20GPS%20Support.html
+http://archive.fhiso.org/BetterGEDCOM/Evaluation%20Of%20Existing%20Data%20Models.html
+http://archive.fhiso.org/BetterGEDCOM/EVENT%20(AB%20model).html
+http://archive.fhiso.org/BetterGEDCOM/EVENT%20(BJD%20model).html
+http://archive.fhiso.org/BetterGEDCOM/Event%20entity.html
+http://archive.fhiso.org/BetterGEDCOM/Event%20Gedcom.html
+http://archive.fhiso.org/BetterGEDCOM/Evidence%20and%20Conclusion%20Process.html
+http://archive.fhiso.org/BetterGEDCOM/evidence%20vs.%20conclusions.html
 http://archive.fhiso.org/BetterGEDCOM/Examples.html
-http://archive.fhiso.org/BetterGEDCOM/Family, Group and Relationship entities.html
-http://archive.fhiso.org/BetterGEDCOM/Family Tree Maker.html
+http://archive.fhiso.org/BetterGEDCOM/Family%2C%20Group%20and%20Relationship%20entities.html
+http://archive.fhiso.org/BetterGEDCOM/Family%20Tree%20Maker.html
 http://archive.fhiso.org/BetterGEDCOM/FAQ.html
-http://archive.fhiso.org/BetterGEDCOM/FHISO Board Announced.html
-http://archive.fhiso.org/BetterGEDCOM/FHISO Call for Papers.html
-http://archive.fhiso.org/BetterGEDCOM/FHISO Chairman Drew Smith Interview.html
-http://archive.fhiso.org/BetterGEDCOM/FHISO is happy to announce the formation of the Sources and Citations Exploratory Group..html
-http://archive.fhiso.org/BetterGEDCOM/FHISO News 2013.html
-http://archive.fhiso.org/BetterGEDCOM/FHISO News.html
-http://archive.fhiso.org/BetterGEDCOM/FHISO on FGS Radio.html
-http://archive.fhiso.org/BetterGEDCOM/FHISO Open Discussion.html
-http://archive.fhiso.org/BetterGEDCOM/FHISO Operations and Policy Manual.html
-http://archive.fhiso.org/BetterGEDCOM/FHISO receives Special Recognition 2012 GeneAward.html
-http://archive.fhiso.org/BetterGEDCOM/Fix the Transfer Problem.html
-http://archive.fhiso.org/BetterGEDCOM/Formatting Templates and MetaData.html
-http://archive.fhiso.org/BetterGEDCOM/Formulation Of The BetterGEDCOM Data Model.html
-http://archive.fhiso.org/BetterGEDCOM/FSDN Model.html
+http://archive.fhiso.org/BetterGEDCOM/FHISO%20Board%20Announced.html
+http://archive.fhiso.org/BetterGEDCOM/FHISO%20Call%20for%20Papers.html
+http://archive.fhiso.org/BetterGEDCOM/FHISO%20Chairman%20Drew%20Smith%20Interview.html
+http://archive.fhiso.org/BetterGEDCOM/FHISO%20is%20happy%20to%20announce%20the%20formation%20of%20the%20Sources%20and%20Citations%20Exploratory%20Group..html
+http://archive.fhiso.org/BetterGEDCOM/FHISO%20News%202013.html
+http://archive.fhiso.org/BetterGEDCOM/FHISO%20News.html
+http://archive.fhiso.org/BetterGEDCOM/FHISO%20on%20FGS%20Radio.html
+http://archive.fhiso.org/BetterGEDCOM/FHISO%20Open%20Discussion.html
+http://archive.fhiso.org/BetterGEDCOM/FHISO%20Operations%20and%20Policy%20Manual.html
+http://archive.fhiso.org/BetterGEDCOM/FHISO%20receives%20Special%20Recognition%202012%20GeneAward.html
+http://archive.fhiso.org/BetterGEDCOM/Fix%20the%20Transfer%20Problem.html
+http://archive.fhiso.org/BetterGEDCOM/Formatting%20Templates%20and%20MetaData.html
+http://archive.fhiso.org/BetterGEDCOM/Formulation%20Of%20The%20BetterGEDCOM%20Data%20Model.html
+http://archive.fhiso.org/BetterGEDCOM/FSDN%20Model.html
 http://archive.fhiso.org/BetterGEDCOM/FTM.html
-http://archive.fhiso.org/BetterGEDCOM/Gathering Information.html
-http://archive.fhiso.org/BetterGEDCOM/GEDCOM 5.5 Discussion and Detail.html
-http://archive.fhiso.org/BetterGEDCOM/GEDCOM X Framework.html
+http://archive.fhiso.org/BetterGEDCOM/Gathering%20Information.html
+http://archive.fhiso.org/BetterGEDCOM/GEDCOM%205.5%20Discussion%20and%20Detail.html
+http://archive.fhiso.org/BetterGEDCOM/GEDCOM%20X%20Framework.html
 http://archive.fhiso.org/BetterGEDCOM/GEDCOMX.html
-http://archive.fhiso.org/BetterGEDCOM/GedML Data Format.html
-http://archive.fhiso.org/BetterGEDCOM/Geir Thorud’s personal notes on Genealogy in Norway.html
-http://archive.fhiso.org/BetterGEDCOM/Genealogy Practice and Methods.html
+http://archive.fhiso.org/BetterGEDCOM/GedML%20Data Format.html
+http://archive.fhiso.org/BetterGEDCOM/Geir%20Thorud’s%20personal%20notes%20on%20Genealogy%20in%20Norway.html
+http://archive.fhiso.org/BetterGEDCOM/Genealogy%20Practice%20and%20Methods.html
 http://archive.fhiso.org/BetterGEDCOM/GeneJ.html
-http://archive.fhiso.org/BetterGEDCOM/GenTech Data Model.html
+http://archive.fhiso.org/BetterGEDCOM/GenTech%20Data%20Model.html
 http://archive.fhiso.org/BetterGEDCOM/GenXML.html
-http://archive.fhiso.org/BetterGEDCOM/GJ Cases.html
-http://archive.fhiso.org/BetterGEDCOM/Glossary Of Terms.html
-http://archive.fhiso.org/BetterGEDCOM/Goal Oriented Research.html
+http://archive.fhiso.org/BetterGEDCOM/GJ%20Cases.html
+http://archive.fhiso.org/BetterGEDCOM/Glossary%20Of%20Terms.html
+http://archive.fhiso.org/BetterGEDCOM/Goal%20Oriented%20Research.html
 http://archive.fhiso.org/BetterGEDCOM/Goals1.html
 http://archive.fhiso.org/BetterGEDCOM/GOALS.html
 http://archive.fhiso.org/BetterGEDCOM/google01f4193e25a2a50e.html
-http://archive.fhiso.org/BetterGEDCOM/Google Doc Comparison Worksheet.html
-http://archive.fhiso.org/BetterGEDCOM/GRAMPS Data Model.html
+http://archive.fhiso.org/BetterGEDCOM/Google%20Doc%20Comparison%20Worksheet.html
+http://archive.fhiso.org/BetterGEDCOM/GRAMPS%20Data%20Model.html
 http://archive.fhiso.org/BetterGEDCOM/greglamberson.html
-http://archive.fhiso.org/BetterGEDCOM/GROUP (BJD).html
-http://archive.fhiso.org/BetterGEDCOM/Guidelines for posting or editing.html
+http://archive.fhiso.org/BetterGEDCOM/GROUP%20(BJD).html
+http://archive.fhiso.org/BetterGEDCOM/Guidelines%20for%20posting%20or%20editing.html
 http://archive.fhiso.org/BetterGEDCOM/hausa84.html
 http://archive.fhiso.org/BetterGEDCOM/HISTORY.html
 http://archive.fhiso.org/BetterGEDCOM/home.html
 http://archive.fhiso.org/BetterGEDCOM/HOME.html
 http://archive.fhiso.org/BetterGEDCOM/hrworth.html
-http://archive.fhiso.org/BetterGEDCOM/Illustration Of Evidence-Hypothesis Model.html
+http://archive.fhiso.org/BetterGEDCOM/Illustration%20Of%20Evidence-Hypothesis%20Model.html
 http://archive.fhiso.org/BetterGEDCOM/index.html
-http://archive.fhiso.org/BetterGEDCOM/Individual Data Elements Discussions.html
-http://archive.fhiso.org/BetterGEDCOM/Introduction to Goal and Requirements.html
-http://archive.fhiso.org/BetterGEDCOM/ISO and ISO Code of conduct for the technical work.html
+http://archive.fhiso.org/BetterGEDCOM/Individual%20Data%20Elements%20Discussions.html
+http://archive.fhiso.org/BetterGEDCOM/Introduction%20to%20Goal%20and%20Requirements.html
+http://archive.fhiso.org/BetterGEDCOM/ISO%20and%20ISO%20Code%20of%20conduct%20for%20the%20technical%20work.html
 http://archive.fhiso.org/BetterGEDCOM/jbeverett.html
-http://archive.fhiso.org/BetterGEDCOM/Joseph Miller Challenge.html
+http://archive.fhiso.org/BetterGEDCOM/Joseph%20Miller%20Challenge.html
 http://archive.fhiso.org/BetterGEDCOM/LFT.html
-http://archive.fhiso.org/BetterGEDCOM/List of main Citation Elements.html
-http://archive.fhiso.org/BetterGEDCOM/Location entity.html
+http://archive.fhiso.org/BetterGEDCOM/List%20of%20main%20Citation%20Elements.html
+http://archive.fhiso.org/BetterGEDCOM/Location%20entity.html
 http://archive.fhiso.org/BetterGEDCOM/louiskessler.html
 http://archive.fhiso.org/BetterGEDCOM/ManagementIssues.html
-http://archive.fhiso.org/BetterGEDCOM/Master Source.html
-http://archive.fhiso.org/BetterGEDCOM/Meeting Agenda Policy.html
+http://archive.fhiso.org/BetterGEDCOM/Master%20Source.html
+http://archive.fhiso.org/BetterGEDCOM/Meeting%20Agenda%20Policy.html
 http://archive.fhiso.org/BetterGEDCOM/MEETINGS.html
-http://archive.fhiso.org/BetterGEDCOM/Member Profiles.html
-http://archive.fhiso.org/BetterGEDCOM/Membership Survey-2011-Results to Date.html
-http://archive.fhiso.org/BetterGEDCOM/Mike_s Model.html
-http://archive.fhiso.org/BetterGEDCOM/Mills 20 Basic Elements from Evidence! 1997.html
-http://archive.fhiso.org/BetterGEDCOM/Mills 550 - _Evidence Explained_ and related field descriptions.html
-http://archive.fhiso.org/BetterGEDCOM/Mills, The Evidence Series.html
-http://archive.fhiso.org/BetterGEDCOM/Model Fragment - Mashup Of Evidence _ Conclusion Models.html
-http://archive.fhiso.org/BetterGEDCOM/Modern Style Guides.html
+http://archive.fhiso.org/BetterGEDCOM/Member%20Profiles.html
+http://archive.fhiso.org/BetterGEDCOM/Membership%20Survey-2011-Results%20to%20Date.html
+http://archive.fhiso.org/BetterGEDCOM/Mike_s%20Model.html
+http://archive.fhiso.org/BetterGEDCOM/Mills%2020%20Basic%20Elements%20from%20Evidence!%201997.html
+http://archive.fhiso.org/BetterGEDCOM/Mills%20550%20-%20_Evidence%20Explained_%20and%20related%20field%20descriptions.html
+http://archive.fhiso.org/BetterGEDCOM/Mills%2C%20The%20Evidence%20Series.html
+http://archive.fhiso.org/BetterGEDCOM/Model%20Fragment%20-%20Mashup%20Of%20Evidence%20_%20Conclusion%20Models.html
+http://archive.fhiso.org/BetterGEDCOM/Modern%20Style%20Guides.html
 http://archive.fhiso.org/BetterGEDCOM/mommouthb.html
-http://archive.fhiso.org/BetterGEDCOM/Monday 11 Jun 2012 Meeting Notes.html
-http://archive.fhiso.org/BetterGEDCOM/Monday 17 Sep 2012.html
-http://archive.fhiso.org/BetterGEDCOM/Monday 18 Jun 2012 Meeting Notes.html
-http://archive.fhiso.org/BetterGEDCOM/Monday 23 Jul 2012 Meeting Notes.html
-http://archive.fhiso.org/BetterGEDCOM/Monday 28 May 2012 Meeting Notes.html
-http://archive.fhiso.org/BetterGEDCOM/Monday 30 Jul 2012 Meeting Notes.html
-http://archive.fhiso.org/BetterGEDCOM/Monday 4 Jun 2012 Meeting Notes.html
-http://archive.fhiso.org/BetterGEDCOM/Monday 6 Aug 2012 Meeting Notes.html
-http://archive.fhiso.org/BetterGEDCOM/Multimedia File Inclusion Issues.html
-http://archive.fhiso.org/BetterGEDCOM/MultiMedia Specific.html
-http://archive.fhiso.org/BetterGEDCOM/My dream genealogy software.html
-http://archive.fhiso.org/BetterGEDCOM/NAME (BJD).html
+http://archive.fhiso.org/BetterGEDCOM/Monday%2011%20Jun%202012%20Meeting%20Notes.html
+http://archive.fhiso.org/BetterGEDCOM/Monday%2017%20Sep%202012.html
+http://archive.fhiso.org/BetterGEDCOM/Monday%2018%20Jun%202012%20Meeting%20Notes.html
+http://archive.fhiso.org/BetterGEDCOM/Monday%2023%20Jul%202012%20Meeting%20Notes.html
+http://archive.fhiso.org/BetterGEDCOM/Monday%2028%20May%202012%20Meeting%20Notes.html
+http://archive.fhiso.org/BetterGEDCOM/Monday%2030%20Jul%202012%20Meeting%20Notes.html
+http://archive.fhiso.org/BetterGEDCOM/Monday%204%20Jun%202012%20Meeting%20Notes.html
+http://archive.fhiso.org/BetterGEDCOM/Monday%206%20Aug%202012%20Meeting%20Notes.html
+http://archive.fhiso.org/BetterGEDCOM/Multimedia%20File%20Inclusion%20Issues.html
+http://archive.fhiso.org/BetterGEDCOM/MultiMedia%20Specific.html
+http://archive.fhiso.org/BetterGEDCOM/My%20dream%20genealogy%20software.html
+http://archive.fhiso.org/BetterGEDCOM/NAME%20(BJD).html
 http://archive.fhiso.org/BetterGEDCOM/NeilJohnParker.html
-http://archive.fhiso.org/BetterGEDCOM/New Page Test after WikiSpaces update.html
+http://archive.fhiso.org/BetterGEDCOM/New%20Page%20Test%20after%20WikiSpaces%20update.html
 http://archive.fhiso.org/BetterGEDCOM/nick-mat.html
-http://archive.fhiso.org/BetterGEDCOM/OBJECT (BJD).html
-http://archive.fhiso.org/BetterGEDCOM/OBJECTIVE (BJD).html
-http://archive.fhiso.org/BetterGEDCOM/Oh, those Millers.html
-http://archive.fhiso.org/BetterGEDCOM/Online Citations and More.html
-http://archive.fhiso.org/BetterGEDCOM/OpenGen Data Model.html
-http://archive.fhiso.org/BetterGEDCOM/Organizers Meeting Minutes.html
+http://archive.fhiso.org/BetterGEDCOM/OBJECT%20(BJD).html
+http://archive.fhiso.org/BetterGEDCOM/OBJECTIVE%20(BJD).html
+http://archive.fhiso.org/BetterGEDCOM/Oh%2C%20those%20Millers.html
+http://archive.fhiso.org/BetterGEDCOM/Online%20Citations%20and%20More.html
+http://archive.fhiso.org/BetterGEDCOM/OpenGen%20Data%20Model.html
+http://archive.fhiso.org/BetterGEDCOM/Organizers%20Meeting%20Minutes.html
 http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes17Jan2011.html
-http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes 2010-12-27 (Dec 27).html
-http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes 2011-01-10 (Jan 10).html
-http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes 2011-01-17 (Jan 17).html
-http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes 2011-01-24 (Jan 24).html
-http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes 2011-01-31 (Jan 31).html
-http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes 2011-02-21 (Feb 21).html
-http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes 2011-02-28 (Feb 28).html
-http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes 2011-03-121(Mar 21).html
-http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes 2011-03- (Mar 28).html
-http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes 2011-12-13 (Dec 13).html
-http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes 2011-12-20 (Dec 20).html
-http://archive.fhiso.org/BetterGEDCOM/Original GEDCOM Data Model.html
-http://archive.fhiso.org/BetterGEDCOM/Outline Of The GRAMPS Data Model.html
-http://archive.fhiso.org/BetterGEDCOM/Patrick L. Jones remarks.html
-http://archive.fhiso.org/BetterGEDCOM/Pending Definitions.html
-http://archive.fhiso.org/BetterGEDCOM/Personal Name Data Standard.html
-http://archive.fhiso.org/BetterGEDCOM/Personal Names and Rigour.html
-http://archive.fhiso.org/BetterGEDCOM/Personal Names.html
-http://archive.fhiso.org/BetterGEDCOM/personal notes on Family History in the UK.html
-http://archive.fhiso.org/BetterGEDCOM/PERSON (BJD).html
-http://archive.fhiso.org/BetterGEDCOM/Person entity.html
+http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes%202010-12-27%20(Dec%2027).html
+http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes%202011-01-10%20(Jan%2010).html
+http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes%202011-01-17%20(Jan%2017).html
+http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes%202011-01-24%20(Jan%2024).html
+http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes%202011-01-31%20(Jan%2031).html
+http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes%202011-02-21%20(Feb%2021).html
+http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes%202011-02-28%20(Feb%2028).html
+http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes%202011-03-121(Mar%2021).html
+http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes%202011-03-%20(Mar%2028).html
+http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes%202011-12-13%20(Dec%2013).html
+http://archive.fhiso.org/BetterGEDCOM/OrganizersMeetingNotes%202011-12-20%20(Dec%2020).html
+http://archive.fhiso.org/BetterGEDCOM/Original%20GEDCOM%20Data%20Model.html
+http://archive.fhiso.org/BetterGEDCOM/Outline%20Of%20The%20GRAMPS%20Data%20Model.html
+http://archive.fhiso.org/BetterGEDCOM/Patrick%20L.%20Jones%20remarks.html
+http://archive.fhiso.org/BetterGEDCOM/Pending%20Definitions.html
+http://archive.fhiso.org/BetterGEDCOM/Personal%20Name%20Data%20Standard.html
+http://archive.fhiso.org/BetterGEDCOM/Personal%20Names%20and%20Rigour.html
+http://archive.fhiso.org/BetterGEDCOM/Personal%20Names.html
+http://archive.fhiso.org/BetterGEDCOM/personal%20notes%20on%20Family%20History%20in%20the%20UK.html
+http://archive.fhiso.org/BetterGEDCOM/PERSON%20(BJD).html
+http://archive.fhiso.org/BetterGEDCOM/Person%20entity.html
 http://archive.fhiso.org/BetterGEDCOM/PERSON.html
-http://archive.fhiso.org/BetterGEDCOM/Person-Name Elements.html
-http://archive.fhiso.org/BetterGEDCOM/PLACE (BJD).html
-http://archive.fhiso.org/BetterGEDCOM/Press Releases.html
-http://archive.fhiso.org/BetterGEDCOM/Project Frameworks.html
-http://archive.fhiso.org/BetterGEDCOM/Proposal for BetterGEDCOM to C.A.R.E.html
+http://archive.fhiso.org/BetterGEDCOM/Person-Name%20Elements.html
+http://archive.fhiso.org/BetterGEDCOM/PLACE%20(BJD).html
+http://archive.fhiso.org/BetterGEDCOM/Press%20Releases.html
+http://archive.fhiso.org/BetterGEDCOM/Project%20Frameworks.html
+http://archive.fhiso.org/BetterGEDCOM/Proposal%20for%20BetterGEDCOM%20to%20C.A.R.E.html
 http://archive.fhiso.org/BetterGEDCOM/ras52.html
 http://archive.fhiso.org/BetterGEDCOM/Repositories-repositories.html
-http://archive.fhiso.org/BetterGEDCOM/REPOSITORY (BJD).html
-http://archive.fhiso.org/BetterGEDCOM/Requirements on Syntax.html
-http://archive.fhiso.org/BetterGEDCOM/RESEARCHER (BJD).html
-http://archive.fhiso.org/BetterGEDCOM/Research Process, Evidence _ GPS Data Model.html
-http://archive.fhiso.org/BetterGEDCOM/Research Process, Evidence _ GPS Definitions.html
-http://archive.fhiso.org/BetterGEDCOM/Research Process, Evidence _ GPS.html
+http://archive.fhiso.org/BetterGEDCOM/REPOSITORY%20(BJD).html
+http://archive.fhiso.org/BetterGEDCOM/Requirements%20on%20Syntax.html
+http://archive.fhiso.org/BetterGEDCOM/RESEARCHER%20(BJD).html
+http://archive.fhiso.org/BetterGEDCOM/Research%20Process%2C%20Evidence%20_%20GPS%20Data%20Model.html
+http://archive.fhiso.org/BetterGEDCOM/Research%20Process%2C%20Evidence%20_%20GPS%20Definitions.html
+http://archive.fhiso.org/BetterGEDCOM/Research%20Process%2C%20Evidence%20_%20GPS.html
 http://archive.fhiso.org/BetterGEDCOM/riegelbaum.html
 http://archive.fhiso.org/BetterGEDCOM/rmburkhead.html
-http://archive.fhiso.org/BetterGEDCOM/Roger_s Test.html
-http://archive.fhiso.org/BetterGEDCOM/ROLE (BJD).html
-http://archive.fhiso.org/BetterGEDCOM/RootsTech 2012 WebCast Schedule.html
-http://archive.fhiso.org/BetterGEDCOM/RootsTech 2013 -Who_s Going_.html
+http://archive.fhiso.org/BetterGEDCOM/Roger_s%20Test.html
+http://archive.fhiso.org/BetterGEDCOM/ROLE%20(BJD).html
+http://archive.fhiso.org/BetterGEDCOM/RootsTech%202012%20WebCast%20Schedule.html
+http://archive.fhiso.org/BetterGEDCOM/RootsTech%202013%20-Who_s%20Going_.html
 http://archive.fhiso.org/BetterGEDCOM/RootsTech.html
-http://archive.fhiso.org/BetterGEDCOM/Russell 1964 extract.html
-http://archive.fhiso.org/BetterGEDCOM/Seeking Co-coordinator for FHISO Technical Standing Committee.html
-http://archive.fhiso.org/BetterGEDCOM/Shortcomings of GEDCOM.html
+http://archive.fhiso.org/BetterGEDCOM/Russell%201964%20extract.html
+http://archive.fhiso.org/BetterGEDCOM/Seeking%20Co-coordinator%20for%20FHISO%20Technical%20Standing%20Committee.html
+http://archive.fhiso.org/BetterGEDCOM/Shortcomings%20of%20GEDCOM.html
 http://archive.fhiso.org/BetterGEDCOM/smithwil.html
-http://archive.fhiso.org/BetterGEDCOM/Software Citations.html
-http://archive.fhiso.org/BetterGEDCOM/SOURCE (BJD).html
-http://archive.fhiso.org/BetterGEDCOM/Source Entity.html
-http://archive.fhiso.org/BetterGEDCOM/Source of the Source.html
-http://archive.fhiso.org/BetterGEDCOM/Sources and Citations.html
-http://archive.fhiso.org/BetterGEDCOM/Sources and Citations in GEDCOM.html
-http://archive.fhiso.org/BetterGEDCOM/Sources and Reference Notes-Goals _ Purpose.html
+http://archive.fhiso.org/BetterGEDCOM/Software%20Citations.html
+http://archive.fhiso.org/BetterGEDCOM/SOURCE%20(BJD).html
+http://archive.fhiso.org/BetterGEDCOM/Source%20Entity.html
+http://archive.fhiso.org/BetterGEDCOM/Source%20of%20the%20Source.html
+http://archive.fhiso.org/BetterGEDCOM/Sources%20and%20Citations.html
+http://archive.fhiso.org/BetterGEDCOM/Sources%20and%20Citations%20in%20GEDCOM.html
+http://archive.fhiso.org/BetterGEDCOM/Sources%20and%20Reference%20Notes-Goals%20_%20Purpose.html
 http://archive.fhiso.org/BetterGEDCOM/space.blankPage.html
-http://archive.fhiso.org/BetterGEDCOM/space.discussion.BetterGEDCOM Sandbox.html
-http://archive.fhiso.org/BetterGEDCOM/space.discussion.BG Data Model Discussion.html
+http://archive.fhiso.org/BetterGEDCOM/space.discussion.BetterGEDCOM%20Sandbox.html
+http://archive.fhiso.org/BetterGEDCOM/space.discussion.BG%20Data%20Model%20Discussion.html
 http://archive.fhiso.org/BetterGEDCOM/space.discussion.GOALS.html
 http://archive.fhiso.org/BetterGEDCOM/space.discussion.home.html
-http://archive.fhiso.org/BetterGEDCOM/space.discussion.Individual Data Elements Discussions.html
+http://archive.fhiso.org/BetterGEDCOM/space.discussion.Individual%20Data%20Elements%20Discussions.html
 http://archive.fhiso.org/BetterGEDCOM/space.menu.html
-http://archive.fhiso.org/BetterGEDCOM/space.template.Member Profile.html
-http://archive.fhiso.org/BetterGEDCOM/space.template.New Page.html
+http://archive.fhiso.org/BetterGEDCOM/space.template.Member%20Profile.html
+http://archive.fhiso.org/BetterGEDCOM/space.template.New%20Page.html
 http://archive.fhiso.org/BetterGEDCOM/space.template.Requirement.html
-http://archive.fhiso.org/BetterGEDCOM/space.template.Vendor Profile Page.html
-http://archive.fhiso.org/BetterGEDCOM/Standardized Metadata and Reference Management Software concepts.html
+http://archive.fhiso.org/BetterGEDCOM/space.template.Vendor%20Profile%20Page.html
+http://archive.fhiso.org/BetterGEDCOM/Standardized%20Metadata%20and%20Reference%20Management%20Software%20concepts.html
 http://archive.fhiso.org/BetterGEDCOM/steelman52.html
-http://archive.fhiso.org/BetterGEDCOM/STEMMA Model.html
-http://archive.fhiso.org/BetterGEDCOM/Sub-Project SourceTemplates.html
-http://archive.fhiso.org/BetterGEDCOM/Supplemental Glossary from _Evidence Explained_, 2007.html
-http://archive.fhiso.org/BetterGEDCOM/Survey Results - 3 Jan 2011 Developers Meeting.html
+http://archive.fhiso.org/BetterGEDCOM/STEMMA%20Model.html
+http://archive.fhiso.org/BetterGEDCOM/Sub-Project%20SourceTemplates.html
+http://archive.fhiso.org/BetterGEDCOM/Supplemental%20Glossary%20from%20_Evidence%20Explained_%2C%202007.html
+http://archive.fhiso.org/BetterGEDCOM/Survey%20Results%20-%203%20Jan%202011%20Developers%20Meeting.html
 http://archive.fhiso.org/BetterGEDCOM/susiecanuck.html
-http://archive.fhiso.org/BetterGEDCOM/Sync tag table.html
-http://archive.fhiso.org/BetterGEDCOM/TASK (BJD).html
-http://archive.fhiso.org/BetterGEDCOM/Taylor and the Tipton Papers.html
-http://archive.fhiso.org/BetterGEDCOM/Technical tips on how to do things on the wiki.html
-http://archive.fhiso.org/BetterGEDCOM/Test of New Page Template.html
-http://archive.fhiso.org/BetterGEDCOM/Test page.html
-http://archive.fhiso.org/BetterGEDCOM/The George Ely Russell.html
+http://archive.fhiso.org/BetterGEDCOM/Sync%20tag%20table.html
+http://archive.fhiso.org/BetterGEDCOM/TASK%20(BJD).html
+http://archive.fhiso.org/BetterGEDCOM/Taylor%20and%20the%20Tipton%20Papers.html
+http://archive.fhiso.org/BetterGEDCOM/Technical%20tips%20on%20how%20to%20do%20things%20on%20the%20wiki.html
+http://archive.fhiso.org/BetterGEDCOM/Test%20of%20New%20Page%20Template.html
+http://archive.fhiso.org/BetterGEDCOM/Test%20page.html
+http://archive.fhiso.org/BetterGEDCOM/The%20George%20Ely%20Russell.html
 http://archive.fhiso.org/BetterGEDCOM/theKiwi.html
 http://archive.fhiso.org/BetterGEDCOM/TheLadyClaire.html
-http://archive.fhiso.org/BetterGEDCOM/The mystery aunt.html
-http://archive.fhiso.org/BetterGEDCOM/Thoughts of Greg Lamberson.html
-http://archive.fhiso.org/BetterGEDCOM/Thoughts on BetterGEDCOM as of Feb 2011.html
-http://archive.fhiso.org/BetterGEDCOM/TMG Research Log Images.html
-http://archive.fhiso.org/BetterGEDCOM/To All non-member BetterGEDCOM Wiki Readers.html
-http://archive.fhiso.org/BetterGEDCOM/To Do.html
-http://archive.fhiso.org/BetterGEDCOM/Tom_s Goal and Requirements.html
-http://archive.fhiso.org/BetterGEDCOM/Tom_s Goals and Requirements.html
+http://archive.fhiso.org/BetterGEDCOM/The%20mystery%20aunt.html
+http://archive.fhiso.org/BetterGEDCOM/Thoughts%20of%20Greg%20Lamberson.html
+http://archive.fhiso.org/BetterGEDCOM/Thoughts%20on%20BetterGEDCOM%20as%20of%20Feb%202011.html
+http://archive.fhiso.org/BetterGEDCOM/TMG%20Research%20Log%20Images.html
+http://archive.fhiso.org/BetterGEDCOM/To%20All%20non-member%20BetterGEDCOM%20Wiki%20Readers.html
+http://archive.fhiso.org/BetterGEDCOM/To%20Do.html
+http://archive.fhiso.org/BetterGEDCOM/Tom_s%20Goal%20and%20Requirements.html
+http://archive.fhiso.org/BetterGEDCOM/Tom_s%20Goals%20and%20Requirements.html
 http://archive.fhiso.org/BetterGEDCOM/Tools.html
-http://archive.fhiso.org/BetterGEDCOM/Use Of Existing XML DTDs _ Schema.html
-http://archive.fhiso.org/BetterGEDCOM/Use Of Templates.html
-http://archive.fhiso.org/BetterGEDCOM/Vendor Profile Pages.html
+http://archive.fhiso.org/BetterGEDCOM/Use%20Of%20Existing%20XML%20DTDs%20_%20Schema.html
+http://archive.fhiso.org/BetterGEDCOM/Use%20Of%20Templates.html
+http://archive.fhiso.org/BetterGEDCOM/Vendor%20Profile%20Pages.html
 http://archive.fhiso.org/BetterGEDCOM/Vision.html
-http://archive.fhiso.org/BetterGEDCOM/What IS BetterGEDCOM.html
-http://archive.fhiso.org/BetterGEDCOM/Who Are We_.html
-http://archive.fhiso.org/BetterGEDCOM/Why FHISO_ v01-04.html
-http://archive.fhiso.org/BetterGEDCOM/Wiki Members Attending RootsTech 2012.html
-http://archive.fhiso.org/BetterGEDCOM/Wiki Practice Pages.html
-http://archive.fhiso.org/BetterGEDCOM/Working Solution.html
-http://archive.fhiso.org/BetterGEDCOM/Working with an Evidence-Conclusion-Model.html
-http://archive.fhiso.org/BetterGEDCOM/XML Data Syntax.html
-http://archive.fhiso.org/BetterGEDCOM/Zotero blogPost graphic-example.html
+http://archive.fhiso.org/BetterGEDCOM/What%20IS%20BetterGEDCOM.html
+http://archive.fhiso.org/BetterGEDCOM/Who%20Are%20We_.html
+http://archive.fhiso.org/BetterGEDCOM/Why%20FHISO_%20v01-04.html
+http://archive.fhiso.org/BetterGEDCOM/Wiki%20Members%20Attending%20RootsTech%202012.html
+http://archive.fhiso.org/BetterGEDCOM/Wiki%20Practice%20Pages.html
+http://archive.fhiso.org/BetterGEDCOM/Working%20Solution.html
+http://archive.fhiso.org/BetterGEDCOM/Working%20with%20an%20Evidence-Conclusion-Model.html
+http://archive.fhiso.org/BetterGEDCOM/XML%20Data%20Syntax.html
+http://archive.fhiso.org/BetterGEDCOM/Zotero%20blogPost%20graphic-example.html
 http://archive.fhiso.org/BetterGEDCOM/files/About-FHISO-v00-13.png
-http://archive.fhiso.org/BetterGEDCOM/files/An architecture for sources, reference notes and bibliographies - version 0.4.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/An%20architecture%20for%20sources%2C%20reference%20notes%20and%20bibliographies%20-%20version%200.4.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/avatar.gif
 http://archive.fhiso.org/BetterGEDCOM/files/BetterGEDCOM_Care.png
-http://archive.fhiso.org/BetterGEDCOM/files/BetterGEDCOM Developers Meeting 2012-06-04 (Jun 4).doc
-http://archive.fhiso.org/BetterGEDCOM/files/Better GEDCOM Requirements Catalog snapshot 2may2011.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/BetterGEDCOM%20Developers%20Meeting%202012-06-04%20(Jun%204).doc
+http://archive.fhiso.org/BetterGEDCOM/files/Better%20GEDCOM%20Requirements%20Catalog%20snapshot%202may2011.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/bg-schema.jpg
 http://archive.fhiso.org/BetterGEDCOM/files/bg-schema.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Bib 2008.png
+http://archive.fhiso.org/BetterGEDCOM/files/Bib%202008.png
 http://archive.fhiso.org/BetterGEDCOM/files/Blog-Graphic-v00-02.png
 http://archive.fhiso.org/BetterGEDCOM/files/Call-for-papers-r4-website-750.png
 http://archive.fhiso.org/BetterGEDCOM/files/CG_101-1840_Census.png
@@ -342,10 +342,10 @@ http://archive.fhiso.org/BetterGEDCOM/files/CG-119-Iowa_Deaths_and_Burials.png
 http://archive.fhiso.org/BetterGEDCOM/files/CG-120-VR_Hardwick_BTH.png
 http://archive.fhiso.org/BetterGEDCOM/files/CG-121-VR_Hardwick_MAR.png
 http://archive.fhiso.org/BetterGEDCOM/files/CG-122-Michigan_Marriages_database.png
-http://archive.fhiso.org/BetterGEDCOM/files/Citation Style language Summary.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Comments on the page research process Evidence and GPS as of 15may2011.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/E&C and Extract and Task and Citation etc Records v.002.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/E&C with Evidence - permutations.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Citation%20Style%20language%20Summary.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Comments%20on%20the%20page%20research%20process%20Evidence%20and%20GPS%20as%20of%2015may2011.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/E%26C%20and%20Extract%20and%20Task%20and%20Citation%20etc%20Records%20v.002.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/E%26C%20with%20Evidence%20-%20permutations.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/EvaluateGramps.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/FB-Image.jpg
 http://archive.fhiso.org/BetterGEDCOM/files/FHISO-FMSeal-Ancestry-8b256.png
@@ -360,7 +360,7 @@ http://archive.fhiso.org/BetterGEDCOM/files/FHISO-FMSeal-RootsMagic-8b-256.png
 http://archive.fhiso.org/BetterGEDCOM/files/FHISO-FMSeal-WikiTree-8b-512.png
 http://archive.fhiso.org/BetterGEDCOM/files/FHISO-Seal6Main-FHISO-Hatchett-2012-568.png
 http://archive.fhiso.org/BetterGEDCOM/files/FHISO-Seal6Main-FHISO-Megan-HOA1-568.png
-http://archive.fhiso.org/BetterGEDCOM/files/From repository meta data to BetterGEDCOM and reports.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/From%20repository%20meta%20data%20to%20BetterGEDCOM%20and%20reports.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/FTM-Mac.png
 http://archive.fhiso.org/BetterGEDCOM/files/FTM_Source_Groups.png
 http://archive.fhiso.org/BetterGEDCOM/files/ged551-5.pdf
@@ -372,9 +372,9 @@ http://archive.fhiso.org/BetterGEDCOM/files/gedml-dist.zip
 http://archive.fhiso.org/BetterGEDCOM/files/GedML.zip
 http://archive.fhiso.org/BetterGEDCOM/files/GedXML60.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/GeirComments.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Geir -- Person - Extract - Lookup - Task - Citation etc Records.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Geir's high level considerations on citations in BetterGEDCOM.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Geir - Storage of information from sources.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Geir%20--%20Person%20-%20Extract%20-%20Lookup%20-%20Task%20-%20Citation%20etc%20Records.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Geir's%20high%20level%20considerations%20on%20citations%20in%20BetterGEDCOM.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Geir%20-%20Storage%20of%20information%20from%20sources.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/GenericTeamCharterTemplate.doc
 http://archive.fhiso.org/BetterGEDCOM/files/GENTECH-DataModelV11.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/GenXML30.pdf
@@ -388,33 +388,33 @@ http://archive.fhiso.org/BetterGEDCOM/files/kennedy.xml
 http://archive.fhiso.org/BetterGEDCOM/files/Legacy7.4.png
 http://archive.fhiso.org/BetterGEDCOM/files/Legacy_Master_Source.png
 http://archive.fhiso.org/BetterGEDCOM/files/Me.jpg
-http://archive.fhiso.org/BetterGEDCOM/files/Monday-6_Jun_2012-Meeting Notes.txt
+http://archive.fhiso.org/BetterGEDCOM/files/Monday-6_Jun_2012-Meeting%20Notes.txt
 http://archive.fhiso.org/BetterGEDCOM/files/multi-events.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/multi-events.png
 http://archive.fhiso.org/BetterGEDCOM/files/multilevel2.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/multilevel2.png
 http://archive.fhiso.org/BetterGEDCOM/files/multilevel.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/multilevel.png
-http://archive.fhiso.org/BetterGEDCOM/files/Name Template Drawing 1.odg
+http://archive.fhiso.org/BetterGEDCOM/files/Name%20Template%20Drawing%201.odg
 http://archive.fhiso.org/BetterGEDCOM/files/Name_Template_Drawing_1.png
 http://archive.fhiso.org/BetterGEDCOM/files/Name_Template_Drawing_2.png
 http://archive.fhiso.org/BetterGEDCOM/files/Name_Template_Drawing_3.png
 http://archive.fhiso.org/BetterGEDCOM/files/Neil.jpg
 http://archive.fhiso.org/BetterGEDCOM/files/New_Eneclann_Logo-2011.jpg
-http://archive.fhiso.org/BetterGEDCOM/files/OpenGen Charter - FinDraft.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/OpenGen%20Charter%20-%20FinDraft.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/OpenGenDataModelEarly.jpg
-http://archive.fhiso.org/BetterGEDCOM/files/Page - Research Process & Evidence & GPS 11Apr 2011.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Personal Name Data Standard.docx
-http://archive.fhiso.org/BetterGEDCOM/files/Personal Name Data Standard.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Personal Name Data Standard Rationale.docx
-http://archive.fhiso.org/BetterGEDCOM/files/Personal Name Data Standard Rationale.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Personal Name Data Standard V0.02.docx
-http://archive.fhiso.org/BetterGEDCOM/files/Personal Name Data Standard V0.02.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Personal Name Data Standard V0.03.docx
-http://archive.fhiso.org/BetterGEDCOM/files/Personal Name Data Standard V0.03.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Personal Name Implementation Guidelines.docx
-http://archive.fhiso.org/BetterGEDCOM/files/Personal Name Implementation Guidelines.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Personal Names Map.txt
+http://archive.fhiso.org/BetterGEDCOM/files/Page%20-%20Research%20Process%20%26%20Evidence%20%26%20GPS%2011Apr%202011.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Personal%20Name%20Data%20Standard.docx
+http://archive.fhiso.org/BetterGEDCOM/files/Personal%20Name%20Data%20Standard.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Personal%20Name%20Data%20Standard%20Rationale.docx
+http://archive.fhiso.org/BetterGEDCOM/files/Personal%20Name%20Data%20Standard%20Rationale.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Personal%20Name%20Data%20Standard%20V0.02.docx
+http://archive.fhiso.org/BetterGEDCOM/files/Personal%20Name%20Data%20Standard%20V0.02.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Personal%20Name%20Data%20Standard%20V0.03.docx
+http://archive.fhiso.org/BetterGEDCOM/files/Personal%20Name%20Data%20Standard%20V0.03.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Personal%20Name%20Implementation%20Guidelines.docx
+http://archive.fhiso.org/BetterGEDCOM/files/Personal%20Name%20Implementation%20Guidelines.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Personal%20Names%20Map.txt
 http://archive.fhiso.org/BetterGEDCOM/files/p_l_start_forming.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/Preston_Butler_1820_Marriage_image.png
 http://archive.fhiso.org/BetterGEDCOM/files/Refnote_data_model.jpg
@@ -435,11 +435,11 @@ http://archive.fhiso.org/BetterGEDCOM/files/Rootsmagic4.png
 http://archive.fhiso.org/BetterGEDCOM/files/RootsMagic_Master_Sourceb.png
 http://archive.fhiso.org/BetterGEDCOM/files/RootsMagic_Master_Source.png
 http://archive.fhiso.org/BetterGEDCOM/files/RootsTech_2015-Fhiso.png
-http://archive.fhiso.org/BetterGEDCOM/files/RootsTech Program.xlsx
-http://archive.fhiso.org/BetterGEDCOM/files/Snapshot of Research+Process,+Evidence+&+GPS 15may2011.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/RootsTech%20Program.xlsx
+http://archive.fhiso.org/BetterGEDCOM/files/Snapshot%20of%20Research+Process%2C+Evidence+%26+GPS%2015may2011.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/SoftwareComparisons_SourceType_FTM-RMb.png
 http://archive.fhiso.org/BetterGEDCOM/files/SourceFH4.jpg
-http://archive.fhiso.org/BetterGEDCOM/files/Sources and Citation data model DRAFT v 0.4 27nov2011.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Sources%20and%20Citation%20data%20model%20DRAFT%20v%200.4%2027nov2011.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/SS_TMG7_Source_Elements-Edit_Source_Types.png
 http://archive.fhiso.org/BetterGEDCOM/files/SS_TMG7_Source_Types-Edit_Source_Types.png
 http://archive.fhiso.org/BetterGEDCOM/files/STEMMA-2.JPG
@@ -466,9 +466,9 @@ http://archive.fhiso.org/BetterGEDCOM/files/TransferProblemVisualized_RM1880_US_
 http://archive.fhiso.org/BetterGEDCOM/files/VersionSummaryResponse9.xlsx
 http://archive.fhiso.org/BetterGEDCOM/files/view
 http://archive.fhiso.org/BetterGEDCOM/files/WDYTYA-Live-2013.png
-http://archive.fhiso.org/BetterGEDCOM/files/Who Is John Smith.pdf
-http://archive.fhiso.org/BetterGEDCOM/files/Why FHISO v01-04.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Who%20Is%20John%20Smith.pdf
+http://archive.fhiso.org/BetterGEDCOM/files/Why%20FHISO%20v01-04.pdf
 http://archive.fhiso.org/BetterGEDCOM/files/Zotero_blogPost_graphic-example.png
-http://archive.fhiso.org/BetterGEDCOM/files/Zotero Fields_alpha_97-04v.xls
+http://archive.fhiso.org/BetterGEDCOM/files/Zotero%20Fields_alpha_97-04v.xls
 http://archive.fhiso.org/BetterGEDCOM/files/Zotero-SpoonerIAed2.png
 http://archive.fhiso.org/BetterGEDCOM/files/Zotero-SpoonerIA.png
